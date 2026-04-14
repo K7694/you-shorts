@@ -1,0 +1,107 @@
+{
+  "generated": "2026-04-13T00:11:52.509430",
+  "analysis": {
+    "market_pulse": {
+      "top_3_trending_topics": [
+        "space and astronomy",
+        "human body and brain",
+        "unconventional science facts"
+      ],
+      "top_3_trending_hook_styles": [
+        "using a question to pique curiosity",
+        "making a bold statement",
+        "using a surprising statistic"
+      ],
+      "avg_engagement_rate": "2.35%",
+      "best_performing_content_type": "short, engaging videos with a mix of visuals and interesting facts",
+      "viral_trigger": "using a combination of surprise, curiosity, and intrigue to capture viewers' attention"
+    },
+    "competitor_intelligence": {
+      "winning_channels": [
+        "Kurzgesagt \u2013 In a Nutshell",
+        "The Slow Mo Guys"
+      ],
+      "their_secret": "creating high-quality, engaging content that is both informative and entertaining",
+      "title_patterns": [
+        "using action words like 'let's' or 'discover'",
+        "including interesting or surprising facts",
+        "using hashtags like #shorts"
+      ],
+      "hook_patterns": [
+        "starting with a question or a bold statement",
+        "using a surprising statistic or fact",
+        "creating a sense of curiosity or intrigue"
+      ],
+      "topics_they_avoid": [
+        "sensitive or controversial topics",
+        "overly complex or technical subjects"
+      ]
+    },
+    "my_channel_diagnosis": {
+      "best_performing_video": "N/A",
+      "worst_performing_video": "N/A",
+      "my_strengths": [
+        "no strengths identified yet"
+      ],
+      "my_gaps": [
+        "lack of content",
+        "no established audience"
+      ],
+      "retention_problem": "no data available to identify a retention problem"
+    },
+    "content_opportunities": [
+      {
+        "rank": 1,
+        "topic": "the science behind a common phenomenon",
+        "why": "high engagement rates on similar topics, such as 'The Science Behind Why You REPEAT Songs'",
+        "hook": "Have you ever wondered why you always seem to repeat the same songs over and over?",
+        "title": "The Science Behind Your Favorite Songs",
+        "estimated_performance": "high",
+        "urgency": "this topic is relevant to many people's daily lives and can be tied to current music trends"
+      },
+      {
+        "rank": 2,
+        "topic": "a surprising fact about space or astronomy",
+        "why": "high views and engagement on space-related topics, such as 'If You Cry In Space... THIS Happens!'",
+        "hook": "You won't believe what happens to your body when you cry in space",
+        "title": "The Shocking Truth About Crying in Space",
+        "estimated_performance": "viral",
+        "urgency": "space and astronomy topics are consistently popular and can be tied to current events or discoveries"
+      },
+      {
+        "rank": 3,
+        "topic": "a mind-blowing fact about the human body",
+        "why": "high engagement rates on topics like 'Your Hand Moves Before Your Brain Knows'",
+        "hook": "Your body is capable of doing something that will blow your mind",
+        "title": "The Crazy Thing Your Body Can Do Without You Even Realizing It",
+        "estimated_performance": "high",
+        "urgency": "interesting facts about the human body are always in demand and can be tied to current health or wellness trends"
+      }
+    ],
+    "next_video_brief": {
+      "topic": "the science behind a common phenomenon, such as why we repeat songs",
+      "hook": "Have you ever caught yourself repeating the same song over and over and wondered why?",
+      "script_direction": "create a engaging and informative video that explores the psychological and scientific reasons behind this phenomenon, including interesting facts and statistics",
+      "title": "The Science Behind Your Favorite Songs",
+      "tags": [
+        "science",
+        "music",
+        "psychology",
+        "interesting facts",
+        "mind-blowing"
+      ],
+      "hashtags": [
+        "#shorts",
+        "#music",
+        "#science"
+      ],
+      "thumbnail_concept": "a visually appealing image that represents the topic, such as a person listening to music with a thought bubble",
+      "confidence_score": 85
+    },
+    "strategic_recommendations": [
+      "create high-quality, engaging content that is both informative and entertaining",
+      "use a combination of surprise, curiosity, and intrigue to capture viewers' attention",
+      "utilize relevant hashtags and tags to increase discoverability and reach a wider audience"
+    ]
+  }
+}

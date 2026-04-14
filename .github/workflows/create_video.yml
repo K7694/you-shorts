@@ -1,0 +1,98 @@
+name: YOU — Auto YouTube Shorts
+
+on:
+  schedule:
+    # Times in UTC — adjust these for your timezone
+    # IST (India) = UTC+5:30
+    - cron: '30 3 * * *'   # 9:00 AM IST
+    - cron: '30 9 * * *'   # 3:00 PM IST
+    - cron: '30 15 * * *'  # 9:00 PM IST
+
+  # Lets you click "Run workflow" in GitHub UI anytime
+  workflow_dispatch:
+
+jobs:
+  create-video:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    # Allow workflow to push state files back to the repo
+    permissions:
+      contents: write
+
+    steps:
+
+      # ── 1. Get the code (includes persisted state files) ──────
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      # ── 2. Python setup ───────────────────────────────────────
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      # ── 3. Cache pip packages ─────────────────────────────────
+      - name: Cache pip
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: pip-${{ hashFiles('requirements.txt') }}
+          restore-keys: pip-
+
+      # ── 4. Cache Whisper model (base, ~150MB) ─────────────────
+      - name: Cache Whisper model
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: whisper-base-v1
+
+      # ── 5. Install system dependencies ───────────────────────
+      - name: Install FFmpeg + fonts
+        run: |
+          sudo apt-get update -q
+          sudo apt-get install -y ffmpeg fonts-liberation fonts-freefont-ttf
+
+      # ── 6. Install Python dependencies ───────────────────────
+      - name: Install Python packages
+        run: pip install -r requirements.txt
+
+      # ── 7. Write credentials from GitHub Secrets ─────────────
+      #    These files are never stored in the repo.
+      #    They are written fresh on every run from your secrets.
+      - name: Write credentials
+        run: |
+          echo '${{ secrets.CLIENT_SECRETS_JSON }}' > client_secrets.json
+          echo '${{ secrets.YOUTUBE_TOKEN_JSON }}' > youtube_token.json
+
+      # ── 8. Run the pipeline ───────────────────────────────────
+      - name: Create and upload video
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          YOUTUBE_DATA_API_KEY: ${{ secrets.YOUTUBE_DATA_API_KEY }}
+          PYTHONIOENCODING: utf-8
+        run: python you.py
+
+      # ── 9. Save state back to repo ───────────────────────────
+      #    Saves: used topics list, token refresh, feedback logs,
+      #    analyzer brief and top performers (for self-improvement).
+      #    [skip ci] prevents this commit from triggering the workflow again.
+      - name: Save state to repo
+        if: always()
+        run: |
+          git config user.name "YOU Bot"
+          git config user.email "you-bot@automation.local"
+
+          # Stage state files (credentials are gitignored and never committed)
+          git add used_topics.json 2>/dev/null || true
+          git add analyzer/        2>/dev/null || true
+          git add feedback/        2>/dev/null || true
+
+          # Only commit if something actually changed
+          git diff --staged --quiet && echo "No state changes." || \
+            git commit -m "auto: update state [skip ci]"
+
+          git push || echo "Push failed — nothing to push or no changes"

@@ -1,0 +1,38 @@
+# Credentials — store these as GitHub Secrets, NEVER commit
+client_secrets.json
+youtube_token.json
+.env
+
+# Old notes / auth helper
+PRD.md
+auth_youtube.py
+setup.sh
+
+# Generated content
+output/
+temp/
+logs/
+
+# Analyzer timestamped reports (keep state files, not big logs)
+analyzer/report_*.json
+analyzer/trends.json
+analyzer/competitors.json
+
+# Python
+__pycache__/
+*.pyc
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# Claude Code session data
+.claude/
+
+# Test files
+test_*.py
+test_*.mp3
+test_*.wav
+*.mp3
+*.wav
