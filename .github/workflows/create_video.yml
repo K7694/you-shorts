@@ -67,7 +67,20 @@ jobs:
           echo '${{ secrets.CLIENT_SECRETS_JSON }}' > client_secrets.json
           echo '${{ secrets.YOUTUBE_TOKEN_JSON }}' > youtube_token.json
 
-      # ── 8. Run the pipeline ───────────────────────────────────
+      # ── 8a. Refresh Analyzer brief if stale (>20 hrs old) ────
+      #    Keeps the content brief fresh so scripts don't recycle
+      #    the same prescribed topic/hook across runs.
+      #    Falls through on failure — the pipeline has its own fallback.
+      - name: Refresh Analyzer brief (if stale)
+        continue-on-error: true
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          YOUTUBE_DATA_API_KEY: ${{ secrets.YOUTUBE_DATA_API_KEY }}
+          PYTHONIOENCODING: utf-8
+        run: python refresh_brief.py
+
+      # ── 8b. Run the pipeline ───────────────────────────────────
       - name: Create and upload video
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}

@@ -337,22 +337,56 @@ def generate_script(topic: str = None) -> dict:
     used = _load_used_topics()
     used_list = "\n".join(f"- {t['topic']}" for t in used[-50:]) if used else "None yet."
 
-    # Use Analyzer brief if no topic given and a brief exists
+    # Use Analyzer brief if no topic given, brief is fresh, and topic isn't already used
     if not topic:
+        brief_topic_part = None
         try:
-            from analyzer import get_latest_brief
+            from analyzer import get_latest_brief, BRIEF_DB
             brief = get_latest_brief()
-            if brief.get("topic"):
-                print(f"   📊 Using Analyzer brief: {brief['topic']}")
-                topic_part = (
-                    f'The topic is: "{brief["topic"]}"\n'
-                    f'Use this exact opening hook: "{brief.get("hook", "")}"\n'
-                    f'Script direction: {brief.get("script_direction", "")}'
-                )
-            else:
-                topic_part = f'Come up with a UNIQUE, surprising, viral-worthy topic about "{CHANNEL_NICHE}".'
-        except Exception:
-            topic_part = f'Come up with a UNIQUE, surprising, viral-worthy topic about "{CHANNEL_NICHE}".'
+
+            # Check brief age — skip if > 24 hours old
+            brief_age_hrs = 999
+            if BRIEF_DB.exists():
+                try:
+                    brief_data = json.loads(BRIEF_DB.read_text(encoding="utf-8"))
+                    gen = datetime.fromisoformat(brief_data["generated"])
+                    brief_age_hrs = (datetime.now() - gen).total_seconds() / 3600
+                except Exception:
+                    pass
+
+            if brief.get("topic") and brief_age_hrs < 24:
+                # Skip brief if topic was already used
+                used_topics_lc = {t['topic'].lower() for t in used}
+                if brief["topic"].lower() in used_topics_lc:
+                    print(f"   ⏭️  Brief topic already used — generating fresh topic instead")
+                else:
+                    # Score the prescribed hook — if weak, ignore it
+                    brief_hook = brief.get("hook", "")
+                    brief_hook_score = _score_hook(brief_hook) if brief_hook else 0
+
+                    if brief_hook_score >= 6:
+                        print(f"   📊 Using Analyzer brief: \"{brief['topic']}\" (hook score {brief_hook_score}/10)")
+                        brief_topic_part = (
+                            f'The topic is: "{brief["topic"]}"\n'
+                            f'Use this exact opening hook: "{brief_hook}"\n'
+                            f'Script direction: {brief.get("script_direction", "")}'
+                        )
+                    else:
+                        print(f"   ⚠️  Brief hook weak (score {brief_hook_score}/10) — using topic only, generating fresh hook")
+                        brief_topic_part = (
+                            f'The topic is: "{brief["topic"]}"\n'
+                            f'Write your own stronger hook — do NOT use: "{brief_hook}" (too cliché).\n'
+                            f'Script direction: {brief.get("script_direction", "")}'
+                        )
+            elif brief.get("topic"):
+                print(f"   ⚠️  Analyzer brief is {brief_age_hrs:.0f}hrs old — ignoring, generating fresh")
+        except Exception as e:
+            print(f"   ⚠️  Could not load brief: {e}")
+
+        topic_part = brief_topic_part or (
+            f'Come up with a UNIQUE, surprising, viral-worthy topic about "{CHANNEL_NICHE}".\n'
+            f'The topic MUST be different from anything in the "TOPICS ALREADY USED" list below.'
+        )
     else:
         topic_part = f'The topic is: "{topic}"'
 
