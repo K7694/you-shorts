@@ -222,5 +222,21 @@
       "food"
     ],
     "stats_fetched": false
+  },
+  {
+    "id": "G761W9LP9ww",
+    "title": "\ud83d\udd0d Kitchen Hacks: The Secret Science",
+    "uploaded_at": "2026-04-19T10:16:03.732899",
+    "hook": "Your kitchen is a lab",
+    "script": "Your kitchen is a lab. Chemical reactions unfold. Heat, pressure, molecules collide. Flavors emerge, textures shift. The sizzle of onions, the crunch of crackers. It's not cooking, it's chemistry. Every ingredient a variable, every technique an experiment. The perfect recipe: a delicate balance of forces. And at the heart of it all, a hidden code. Your kitchen is a lab, and the science is just beginning. Your kitchen is a lab",
+    "topic": "Secret Science of Kitchen Hacks",
+    "tags": [
+      "kitchen hacks",
+      "science",
+      "cooking",
+      "chemistry",
+      "food"
+    ],
+    "stats_fetched": false
   }
 ]
