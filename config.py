@@ -145,7 +145,7 @@ AUTOPILOT_INTERVAL = 360  # 6 hours
 
 AFFILIATE_LINKS = {
     # ── ACTIVE (IDs filled in) ─────────────────────────────────
-    "systeme":     "https://systeme.io/?sa=sa026901352",                # 60% lifetime recurring ✅
+    "systeme":     "https://systeme.io/?sa=026901352",                  # 60% lifetime recurring ✅
     "beehiiv":     "https://www.beehiiv.com/?via=rajan-kale",           # 50% recurring 12 mo ✅
     "elevenlabs":  "https://try.elevenlabs.io/llb0lne6yo43",            # 22% recurring 12 mo ✅
     "submagic":    "https://www.submagic.co/?via=rajan44",              # 30% lifetime recurring ✅
