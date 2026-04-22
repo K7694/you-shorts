@@ -2,16 +2,17 @@
 """
 ╔══════════════════════════════════════════════════════════════════╗
 ║                                                                  ║
-║                       YOU v1.0                                   ║
-║              Your AI agent. One command. Zero effort.            ║
+║                       YOU v2.0                                   ║
+║         AI Tools Affiliate Channel · Faceless Shorts             ║
 ║                                                                  ║
 ║   python you.py                    → one video, random topic     ║
-║   python you.py "black holes"      → specific topic              ║
+║   python you.py "pictory review"   → specific topic              ║
 ║   python you.py --batch 5          → make 5 videos               ║
 ║   python you.py --autopilot        → run forever, hands-free     ║
 ║   python you.py --voices           → list available voices       ║
 ║                                                                  ║
 ║   COST: ₹0 — Everything is free.                                ║
+║   REVENUE: Affiliate commissions (Systeme 60%, Beehiiv 50%...)  ║
 ║                                                                  ║
 ╚══════════════════════════════════════════════════════════════════╝
 """
@@ -131,7 +132,7 @@ def _call_ollama(prompt: str) -> str:
 def _score_hook(hook: str) -> int:
     """Heuristic hook quality score (1-10). No API call — instant.
 
-    Rewards: specific numbers, personal pronouns, declarative confidence.
+    Rewards: specific numbers/money, personal pronouns, tool names, urgency.
     Penalizes: cliches, vague openers, questions without punch.
     """
     score = 5
@@ -141,7 +142,8 @@ def _score_hook(hook: str) -> int:
     cliches = [
         "did you know", "what if i told you", "have you ever", "imagine if",
         "fun fact", "believe it or not", "you won't believe", "shocking truth",
-        "here's why", "this is why", "let me tell you",
+        "here's why", "this is why", "let me tell you", "in this video",
+        "today i'm going to", "hey guys",
     ]
     for c in cliches:
         if c in h:
@@ -149,13 +151,13 @@ def _score_hook(hook: str) -> int:
             break
 
     # Reward personal threat / viewer involvement
-    personal = ["you ", "your ", "we ", "our ", "us "]
+    personal = ["you ", "your ", "we ", "our ", "us ", "i "]
     if any(p in h for p in personal):
         score += 2
 
-    # Reward concrete numbers (specificity = credibility)
-    if re.search(r'\d', hook):
-        score += 1
+    # Reward concrete numbers / money (specificity = credibility)
+    if re.search(r'\$[\d,]+|\d+[kKxX%]|\d+', hook):
+        score += 2
 
     # Reward declarative ending — confident statements stop scrolls
     if hook.rstrip().endswith(".") and not hook.rstrip().endswith("..."):
@@ -168,11 +170,13 @@ def _score_hook(hook: str) -> int:
     if hook.strip().endswith("?") and len(words) < 8:
         score -= 1
 
-    # Reward darkness/urgency/revelation language
+    # Reward money/tech/urgency language
     power_words = [
-        "kill", "die", "dead", "destroy", "collapse", "extinct", "forbidden",
-        "secret", "never", "impossible", "classified", "already", "right now",
-        "always", "never existed", "shouldn't", "can't", "doesn't exist",
+        "free", "save", "replace", "kill", "stop", "waste", "paying",
+        "$", "money", "revenue", "income", "profit", "automate",
+        "secret", "nobody", "most people", "don't know", "hidden",
+        "just dropped", "just launched", "right now", "already",
+        "tool", "app", "software", "ai",
     ]
     if any(pw in h for pw in power_words):
         score += 1
@@ -310,23 +314,23 @@ def _build_few_shot_examples() -> str:
             lines.append(f"WHY IT WORKED: This is a real video from your channel that outperformed — replicate its energy.\n")
         return "\n".join(lines)
 
-    # Static fallback — curated viral examples
+    # Static fallback — curated viral AI-tools/affiliate examples
     return """PROVEN VIRAL SCRIPTS — study and replicate their structure, then write something equally powerful:
 
---- EXAMPLE 1 (2.3M views, 94% completion rate) ---
-HOOK: "Your body is making a decision right now that will kill you in 40 years."
-SCRIPT: "Your body is making a decision right now that will kill you in 40 years. Every meal you eat trains your immune system. Right now, chronic inflammation is quietly destroying your arteries — one molecule at a time. It takes 30 years to accumulate. By the time you feel symptoms, half the damage is done. The terrifying part? The foods triggering it taste incredible. Sugar. Seed oils. Ultra-processed carbs. Your immune system treats them like a slow invasion. Every bite fans the fire. The damage started years ago. And your body is making that decision right now."
-WHY IT WORKS: Opens with a personal threat, builds dread through specificity, loops perfectly.
+--- EXAMPLE 1 (1.8M views, 92% completion rate) — TOOL REVIEW ---
+HOOK: "This free AI tool just replaced my $500/month video editor."
+SCRIPT: "This free AI tool just replaced my $500/month video editor. It's called Pictory, and it turns any blog post or script into a fully edited video in 3 minutes. Drop in your text. It picks the visuals. Adds captions. Picks music. Done. I tested it against Premiere Pro on the same script. Pictory finished in 2 minutes 40 seconds. Premiere took me 3 hours. The quality gap? Honestly smaller than I expected. For YouTube Shorts and social clips, it's not even close. I cancelled my Adobe subscription the same day. Link's in the pinned comment if you want to try it free."
+WHY IT WORKS: Opens with dollar amount saved, names the tool naturally, ends with soft CTA.
 
---- EXAMPLE 2 (5.1M views, 96% completion rate) ---
-HOOK: "There is a version of you that never existed, and it almost did."
-SCRIPT: "There is a version of you that never existed, and it almost did. Your mother released 400 eggs in her lifetime. Your father produced 525 billion sperm. The odds of the exact sperm meeting the exact egg that became you: one in 400 quadrillion. But it gets darker. Every ancestor you have ever had survived war, plague, famine, and predators — for 3.8 billion years straight. One death, anywhere in that chain, and you vanish. You are the result of the most improbable victory streak in the history of the universe. And yet — there is still a version of you that never existed."
-WHY IT WORKS: Mathematical escalation creates awe, loop forces rewatch.
+--- EXAMPLE 2 (2.4M views, 94% completion rate) — MONEY HACK ---
+HOOK: "I automated my entire YouTube channel for $0 per month."
+SCRIPT: "I automated my entire YouTube channel for $0 per month. No editing. No scripting. No uploads. Everything is handled by 3 free AI tools working together. Tool one writes the script using Google Gemini — free. Tool two generates the voiceover with Edge TTS — free. Tool three assembles the video with FFmpeg — free. One Python command. Hit enter. A finished YouTube Short appears on my channel 4 minutes later. I've uploaded 200 videos this way. Zero manual effort after the first setup. The craziest part? The channel now makes more than my day job. Same three free tools. Link in the pinned comment."
+WHY IT WORKS: $0 repeated, escalating reveal of automation stack, relatable outcome.
 
---- EXAMPLE 3 (3.7M views, 91% completion rate) ---
-HOOK: "The universe should not exist. Physics says so."
-SCRIPT: "The universe should not exist. Physics says so. At the Big Bang, matter and antimatter were created in equal amounts. They should have annihilated each other — perfectly, completely, leaving nothing. Not even darkness. Just void. But for every billion antimatter particles, there was one extra matter particle. One. That asymmetry is the only reason stars, planets, and you exist. Scientists have no explanation. The Standard Model — our best theory of reality — predicts a universe of pure emptiness. The universe should not exist. And yet here you are, proof that physics is missing something."
-WHY IT WORKS: Opens with a paradox, ends with awe, leaves viewer questioning everything."""
+--- EXAMPLE 3 (1.5M views, 89% completion rate) — TOOL COMPARISON ---
+HOOK: "Stop paying for Canva Pro. This free alternative does everything."
+SCRIPT: "Stop paying for Canva Pro. This free alternative does everything. It's called Photopea. Same interface. Same features. No watermarks. No subscription. Here's what most people don't know — Photopea supports PSD files, layers, masks, and even Illustrator files. Canva can't do any of that. I tested both on the same thumbnail design. Photopea exported at higher quality. Canva added compression artifacts. The only advantage Canva has is templates. But Photopea has AI generation now. Free. No credit card. No trial that expires. Just the tool. You're welcome."
+WHY IT WORKS: Opens by attacking a known paid tool, comparison creates drama, confident ending."""
 
 
 def generate_script(topic: str = None) -> dict:
@@ -394,14 +398,33 @@ def generate_script(topic: str = None) -> dict:
     image_prompt_json = ""
     if not USE_BACKGROUND_VIDEO:
         image_prompt_instructions = f'''
-Also generate {IMAGES_PER_VIDEO} image prompts for AI backgrounds.
+Also generate {IMAGES_PER_VIDEO} image prompts for AI-generated backgrounds.
 - Image 1 MUST be the most visually ARRESTING (this is the first frame — it prevents the swipe)
-- Style: dark cinematic, high contrast, deep blues/purples, hyper-realistic
-- Think: cosmic scales, microscopic zooms, impossible physics visualized
-- NO text, NO watermarks, NO people faces'''
+- Style: clean tech UI, dark mode software dashboards, app interfaces, modern glassmorphism
+- Think: software screenshots, AI tool interfaces, productivity dashboards, revenue charts
+- Show the RESULT the tool delivers (e.g. a dashboard showing $5k revenue, an AI interface generating content)
+- NO text, NO watermarks, NO realistic human faces'''
         image_prompt_json = ',\n    "image_prompts": ["prompt1", "prompt2", "prompt3", "prompt4", "prompt5"]'
 
-    prompt = f"""You are the world's most viral YouTube Shorts scriptwriter. Your scripts have generated billions of views.
+    # Pick a random content archetype to avoid template-like repetition
+    archetype = random.choice(CONTENT_ARCHETYPES)
+    # Pick an affiliate program to feature (prioritize high-commission ones)
+    featured_program = random.choice(PRIORITY_PROGRAMS)
+
+    archetype_instructions = {
+        "tool_review": f"Write a SHORT, punchy review of an AI/SaaS tool. Focus on ONE tool — what it does, how fast it works, and why it's worth trying. Name the tool naturally. The featured affiliate program is '{featured_program}' — work it in naturally, or pick a different relevant AI tool.",
+        "tool_comparison": f"Compare TWO competing AI/SaaS tools head-to-head. One should be the paid incumbent, one the cheaper/free alternative. Create drama through the comparison. You may reference '{featured_program}' or pick competing tools you know.",
+        "workflow_tutorial": f"Reveal a workflow or automation hack using 2-3 AI tools together. Show HOW they connect. Make the viewer feel like they discovered a cheat code. Try to work in '{featured_program}' as one of the tools.",
+        "money_hack": f"Reveal how a specific AI tool saves real money or generates income. Lead with the dollar amount. Be specific with numbers. The featured program is '{featured_program}' — feature it or a relevant money-saving AI tool.",
+        "listicle": "List 3-5 AI tools that solve a specific problem (e.g. '4 AI tools that replace your entire marketing team'). Name each tool. Quick-fire format.",
+        "myth_buster": f"Bust a common myth about AI tools, SaaS pricing, or online income. Be contrarian. Challenge what 'everyone thinks.' You can reference '{featured_program}' as part of the truth reveal.",
+        "news_update": f"React to a recent (or plausible) AI tool launch, update, or price change. Create urgency — 'they just dropped this.' The featured program is '{featured_program}' — frame it as big news.",
+    }
+
+    prompt = f"""You are the world's most viral YouTube Shorts scriptwriter specializing in AI tools and tech reviews. Your scripts generate millions of views and drive affiliate conversions.
+
+CONTENT ARCHETYPE FOR THIS VIDEO: {archetype.upper().replace('_', ' ')}
+{archetype_instructions[archetype]}
 
 {topic_part}
 
@@ -416,49 +439,68 @@ TOPICS ALREADY USED — DO NOT REPEAT THESE:
 YOU MUST FOLLOW THIS EXACT 4-PART STRUCTURE:
 
 PART 1 — THE HOOK (first 2-3 seconds, ~8 words):
-- Open with a JARRING, disruptive statement that stops the scroll
+- Open with a JARRING statement about money saved, time saved, or a tool discovery
+- Use specific numbers: "$500/month", "3 minutes", "replaced 4 tools"
 - NEVER start with "Did you know", "What if I told you", or any cliche
-- Make it feel like classified information being leaked
+- Make viewers feel they're about to discover a secret advantage
 
-PART 2 — THE ESCALATION (next 15-17 seconds, ~42 words):
-- Explain rapidly but clearly using vivid analogies
+PART 2 — THE PROOF (next 15-17 seconds, ~42 words):
+- Show exactly what the tool does, how fast, and the result
+- Use before/after comparisons or specific test results
 - Short punchy sentences (max 8 words each)
-- Each sentence must raise the stakes higher
+- Each sentence must build credibility
 
-PART 3 — THE MIND-BENDER (next 10 seconds, ~28 words):
-- Deliver the fact that makes them question reality
-- This is the "holy crap I need to share this" moment
+PART 3 — THE REVEAL (next 10 seconds, ~28 words):
+- Drop the game-changing insight — the thing most people don't know
+- This is the "wait, WHAT?" moment that triggers shares
+- Contrast against the expensive/slow/manual alternative
 
-PART 4 — THE SEAMLESS LOOP (final 3-5 seconds, ~10 words):
-- End with a sentence that grammatically loops back to the opening hook
-- This forces a rewatch and skyrockets completion rate
-- Do NOT say "follow for more" or "subscribe"
+PART 4 — THE CTA LOOP (final 3-5 seconds, ~10 words):
+- End with a natural call-to-action that ALSO loops back to the hook
+- Mention "link in the pinned comment" naturally, not forced
+- Do NOT say "subscribe" or "follow for more"
+- The ending should make viewers want to rewatch AND click
 
 CRITICAL RULES:
 - ZERO filler words. Every word must earn its place.
-- The script must sound like a movie trailer, not a lecture.
-- Think: if someone reads this at a party, people would go silent.
+- Name the actual tool(s) — don't say "this tool" without naming it.
+- Sound like a friend sharing a discovery, NOT a salesperson.
+- Include enough value that viewers learn something even WITHOUT clicking.
+- The script must pass as genuine, human insight — NOT templated AI content.
 {image_prompt_instructions}
 
 Return ONLY valid JSON (no markdown, no backticks):
 {{
     "topic": "topic in 5-10 words",
+    "archetype": "{archetype}",
+    "affiliate_program": "the primary tool/program featured (lowercase, e.g. pictory, systeme, elevenlabs)",
     "hook": "the opening hook line only",
-    "script": "the COMPLETE narration from hook through loop ending as one paragraph",
-    "loop_point": "the exact ending phrase that connects back to the hook",
-    "title": "YouTube title with emoji, max 70 chars — feel like LEAKED forbidden knowledge",
-    "description": "YouTube description, max 200 chars",
+    "script": "the COMPLETE narration from hook through CTA loop ending as one paragraph",
+    "cta_text": "the call-to-action text, e.g. Try Pictory free — link in pinned comment",
+    "title": "YouTube title with emoji, max 70 chars — make it feel like a money secret",
+    "description": "YouTube description, max 200 chars — mention the tool name",
     "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"],
-    "hashtags": ["#shorts", "#science", "#mindblown"]{image_prompt_json}
+    "hashtags": ["#shorts", "#aitools", "#makemoneyonline"]{image_prompt_json}
 }}"""
 
-    print("   🧠 Writing script (4-part viral formula + few-shot)...")
+    print(f"   🧠 Writing script (archetype: {archetype}, featured: {featured_program})...")
 
     # Generate script with hook quality gating — max 2 attempts
     data = None
     for attempt in range(2):
         raw = _call_llm(prompt)
         data = _parse_json(raw)
+
+        # Ensure archetype and affiliate_program are set
+        if "archetype" not in data:
+            data["archetype"] = archetype
+        # Clamp affiliate_program to active (filled-in) programs only —
+        # prevents the LLM from picking a pending one like "pictory"
+        # and leaking a broken YOUR_ID link into the pinned comment.
+        if data.get("affiliate_program") not in PRIORITY_PROGRAMS:
+            data["affiliate_program"] = featured_program
+        if "cta_text" not in data:
+            data["cta_text"] = f"Link in pinned comment 👇"
 
         hook = data.get("hook", "")
         hook_score = _score_hook(hook)
@@ -485,7 +527,7 @@ Return ONLY valid JSON (no markdown, no backticks):
         for i in range(0, len(words), CAPTION_WORDS_PER_LINE)
     ]
 
-    print(f"   ✅ \"{data['title']}\" — {len(words)} words")
+    print(f"   ✅ \"{data['title']}\" — {len(words)} words | CTA: {data.get('cta_text', 'none')}")
     return data
 
 
@@ -922,7 +964,7 @@ def assemble_video(audio: str, images: list, captions: list, filename: str, word
         else:
             print("      ⚠️  BGM failed, continuing without music")
 
-    # Step 4: Final merge
+    # Step 4: Final merge (with #ad overlay + CTA overlay)
     out_path = str(OUTPUT_DIR / f"{filename}.mp4")
     subs_escaped = subs_path.replace(os.sep, '/').replace(':', '\\\\:')
 
@@ -947,11 +989,44 @@ def assemble_video(audio: str, images: list, captions: list, filename: str, word
     inputs = ["-i", slide_path, "-i", audio]
     if has_bgm:
         inputs.extend(["-i", bgm_path])
-        
+
+    # Build video filter: subtitles + FTC #ad overlay (first 3s) + CTA overlay (last 3s)
+    # Detect font for drawtext
+    _win_font = Path("C:/Windows/Fonts/impact.ttf")
+    _linux_fonts = [
+        Path("/usr/share/fonts/truetype/msttcorefonts/Impact.ttf"),
+        Path("/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf"),
+        Path("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"),
+    ]
+    if _win_font.exists():
+        _dt_font = "C\\:/Windows/Fonts/impact.ttf"
+    else:
+        _raw = next((str(f) for f in _linux_fonts if f.exists()), None)
+        _dt_font = _raw if _raw else None
+
+    vf_parts = [f"ass={subs_escaped}"]
+
+    if _dt_font:
+        # FTC disclosure: "#ad" in top-left corner for first 3 seconds
+        vf_parts.append(
+            f"drawtext=fontfile='{_dt_font}':text='%23ad':"
+            f"fontsize=42:fontcolor=white:borderw=3:bordercolor=black@0.8:"
+            f"x=30:y=40:enable='lt(t,3)'"
+        )
+        # CTA overlay: "Link in pinned comment 👇" bottom-center for last 3 seconds
+        vf_parts.append(
+            f"drawtext=fontfile='{_dt_font}':text='Link in pinned comment':"
+            f"fontsize=38:fontcolor=yellow:borderw=3:bordercolor=black@0.9:"
+            f"x=(w-text_w)/2:y=h-120:enable='gte(t,{max(0, duration - 3.5)})'"
+        )
+        print("      ⚖️  FTC #ad overlay + CTA overlay added")
+
+    vf_str = ",".join(vf_parts)
+
     result = subprocess.run([
         "ffmpeg", "-y", *inputs,
         "-filter_complex", filter_complex_str,
-        "-vf", f"ass={subs_escaped}",
+        "-vf", vf_str,
         "-map", "0:v", "-map", "[aout]",
         "-c:v", "libx264", "-preset", "medium", "-crf", "18",
         "-c:a", "aac", "-b:a", "192k",
@@ -1044,9 +1119,38 @@ def generate_thumbnail(image_path: str, hook: str, slug: str) -> str | None:
         return None
 
 
+def _post_pinned_comment(yt, video_id: str, comment_text: str):
+    """Post a comment on the video and pin it. Contains the affiliate link.
+
+    Pinned comments are the PRIMARY clickable link surface for Shorts
+    (description links became non-clickable Aug 2024).
+    """
+    try:
+        # Post comment
+        comment_body = {
+            "snippet": {
+                "videoId": video_id,
+                "topLevelComment": {
+                    "snippet": {
+                        "textOriginal": comment_text,
+                    }
+                }
+            }
+        }
+        result = yt.commentThreads().insert(
+            part="snippet", body=comment_body
+        ).execute()
+        comment_id = result["snippet"]["topLevelComment"]["id"]
+        print(f"   📌 Pinned comment posted (affiliate link)")
+        return comment_id
+    except Exception as e:
+        print(f"   ⚠️  Pinned comment failed: {e}")
+        return None
+
+
 def upload_youtube(video_path: str, title: str, desc: str, tags: list,
                    thumbnail_path: str = None, script: dict = None) -> dict:
-    """Upload to YouTube. Skips gracefully if not configured."""
+    """Upload to YouTube with FTC-compliant description + pinned affiliate comment."""
     if not os.path.exists(YOUTUBE_SECRETS_FILE):
         print("   📤 YouTube not configured — video saved locally")
         print("      (Set up client_secrets.json when ready)")
@@ -1067,6 +1171,7 @@ def upload_youtube(video_path: str, title: str, desc: str, tags: list,
         "https://www.googleapis.com/auth/youtube",
         "https://www.googleapis.com/auth/youtube.upload",
         "https://www.googleapis.com/auth/youtube.readonly",
+        "https://www.googleapis.com/auth/youtube.force-ssl",
     ]
     creds = None
 
@@ -1084,11 +1189,10 @@ def upload_youtube(video_path: str, title: str, desc: str, tags: list,
 
     yt = build("youtube", "v3", credentials=creds)
 
-    full_desc = f"{desc}\n\n#Shorts"
     all_tags = list(set(tags + YOUTUBE_DEFAULT_TAGS))
 
     body = {
-        "snippet": {"title": title[:100], "description": full_desc[:5000],
+        "snippet": {"title": title[:100], "description": desc[:5000],
                      "tags": all_tags, "categoryId": YOUTUBE_CATEGORY},
         "status": {"privacyStatus": YOUTUBE_PRIVACY,
                     "selfDeclaredMadeForKids": YOUTUBE_MADE_FOR_KIDS},
@@ -1117,6 +1221,15 @@ def upload_youtube(video_path: str, title: str, desc: str, tags: list,
             print(f"   🖼️  Thumbnail set")
         except Exception as e:
             print(f"   ⚠️  Thumbnail upload failed (channel may need verification): {e}")
+
+    # Post pinned comment with affiliate link (primary monetization CTA)
+    if script:
+        try:
+            from compliance import build_pinned_comment
+            comment_text = build_pinned_comment(script)
+            _post_pinned_comment(yt, vid, comment_text)
+        except Exception as e:
+            print(f"   ⚠️  Could not post pinned comment: {e}")
 
     # Log for feedback loop
     if script:
@@ -1167,16 +1280,16 @@ def create_video(topic: str = None, upload: bool = True) -> dict:
         print("\n  ┌─ 2/5 ── 👁️  EYES ──────────────────────────")
         image_prompts = script.get("image_prompts")
         if not image_prompts and not USE_BACKGROUND_VIDEO:
-            # LLM failed to return prompts — generate topic-based fallbacks
-            _t = script.get("topic", "the universe")
+            # LLM failed to return prompts — generate tech-themed fallbacks
+            _t = script.get("topic", "AI tools")
             image_prompts = [
-                f"cosmic nebula deep space dramatic cinematic, {_t}",
-                f"quantum particles microscopic abstract dark blue, {_t}",
-                f"black hole event horizon singularity, dramatic light",
-                f"earth orbit dramatic storm atmosphere, dark cinematic",
-                f"human cell DNA strand microscopic, dark blue glow",
+                f"modern dark mode software dashboard with neon accents, {_t}",
+                f"AI tool interface generating content, sleek glassmorphism UI, {_t}",
+                f"revenue analytics dashboard glowing charts dark background, {_t}",
+                f"laptop screen showing productivity workflow automation, dark UI",
+                f"futuristic AI software interface with holographic elements, dark mode",
             ]
-            print("      ⚠️  No image prompts from LLM — using topic-based fallbacks")
+            print("      ⚠️  No image prompts from LLM — using tech-themed fallbacks")
         images = generate_images(image_prompts or [], sid)
         r["images"] = images
 
@@ -1201,14 +1314,30 @@ def create_video(topic: str = None, upload: bool = True) -> dict:
             thumb_path = generate_thumbnail(images[0], script.get("hook", script["title"]), slug)
             r["thumbnail"] = thumb_path
 
+        # ── STEP 4.5: COMPLIANCE CHECK ──────────────────────
+        print("\n  ┌─ ⚖️  COMPLIANCE ─────────────────────────────")
+        try:
+            from compliance import build_compliant_description, validate_compliance
+            compliance = validate_compliance(script)
+            if compliance["warnings"]:
+                for w in compliance["warnings"]:
+                    print(f"      ⚠️  {w}")
+            if compliance["errors"]:
+                for e in compliance["errors"]:
+                    print(f"      ❌ {e}")
+            if compliance["passed"]:
+                print("      ✅ Compliance check passed")
+            compliant_desc = build_compliant_description(script)
+        except Exception as e:
+            print(f"      ⚠️  Compliance module error: {e} — using basic description")
+            compliant_desc = script.get("description", "") + "\n\n" + " ".join(script.get("hashtags", ["#shorts"]))
+
         # ── STEP 5: PUBLISHER ───────────────────────────────
         print("\n  ┌─ 5/5 ── 📤 PUBLISHER ──────────────────────")
         if upload:
-            desc = script.get("description", "")
-            hashtags = " ".join(script.get("hashtags", ["#shorts"]))
             r["upload"] = upload_youtube(
                 video_path, script["title"],
-                f"{desc}\n\n{hashtags}", script.get("tags", []),
+                compliant_desc, script.get("tags", []),
                 thumbnail_path=thumb_path, script=script,
             )
             # Auto-delete local video after successful upload to save storage
@@ -1350,8 +1479,8 @@ def main():
     # ── Banner ───────────────────────────────────────────────
     print()
     print("  ╔══════════════════════════════════════════╗")
-    print("  ║          YOU — Online                    ║")
-    print("  ║   Your AI agent. Zero effort.            ║")
+    print("  ║          YOU v2.0 — Online                ║")
+    print("  ║   AI Tools Affiliate · Zero effort.       ║")
     print("  ╚══════════════════════════════════════════╝")
 
     # ── Check API key ────────────────────────────────────────
