@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-24T05:55:57.794116",
+  "last_updated": "2026-04-25T05:28:20.232503",
   "videos": {
     "gZIO6_23b0I": {
       "id": "gZIO6_23b0I",
@@ -27,31 +27,6 @@
       "duration_secs": 27,
       "thumbnail": "https://i.ytimg.com/vi/gZIO6_23b0I/hqdefault.jpg"
     },
-    "-ZrIk9AWQc4": {
-      "id": "-ZrIk9AWQc4",
-      "title": "\ud83d\udd2e Black Holes: The Void Within \ud83c\udf00",
-      "channel": "KnowMore-Dailyday",
-      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
-      "published": "2026-04-18T10:15:20Z",
-      "views": 568,
-      "likes": 15,
-      "comments": 0,
-      "engagement_rate": 2.641,
-      "views_per_day": 114,
-      "tags": [
-        "astronomy",
-        "black holes",
-        "cosmology",
-        "facts",
-        "science",
-        "shorts",
-        "space",
-        "viral"
-      ],
-      "description": "Uncover the dark truth behind black holes\n\n#shorts #science #mindblown #blackholes #space\n\n#Shorts",
-      "duration_secs": 21,
-      "thumbnail": "https://i.ytimg.com/vi/-ZrIk9AWQc4/hqdefault.jpg"
-    },
     "F6zEu1_Wn1Q": {
       "id": "F6zEu1_Wn1Q",
       "title": "\ud83d\udd2a Kitchen Secrets: The Dark Science \ud83c\udf73",
@@ -78,30 +53,30 @@
       "duration_secs": 29,
       "thumbnail": "https://i.ytimg.com/vi/F6zEu1_Wn1Q/hqdefault.jpg"
     },
-    "GF7E-npIDM4": {
-      "id": "GF7E-npIDM4",
-      "title": "\ud83d\udd2e Black Holes: Cosmic Killers",
+    "-ZrIk9AWQc4": {
+      "id": "-ZrIk9AWQc4",
+      "title": "\ud83d\udd2e Black Holes: The Void Within \ud83c\udf00",
       "channel": "KnowMore-Dailyday",
       "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
-      "published": "2026-04-20T16:51:54Z",
-      "views": 265,
-      "likes": 7,
+      "published": "2026-04-18T10:15:20Z",
+      "views": 568,
+      "likes": 15,
       "comments": 0,
-      "engagement_rate": 2.642,
-      "views_per_day": 88,
+      "engagement_rate": 2.641,
+      "views_per_day": 95,
       "tags": [
+        "astronomy",
         "black holes",
-        "cosmos",
+        "cosmology",
         "facts",
-        "gravity",
         "science",
         "shorts",
         "space",
         "viral"
       ],
-      "description": "Uncover the dark secrets of black holes\n\n#shorts #science #mindblown #blackholes #space\n\n#Shorts",
-      "duration_secs": 23,
-      "thumbnail": "https://i.ytimg.com/vi/GF7E-npIDM4/hqdefault.jpg"
+      "description": "Uncover the dark truth behind black holes\n\n#shorts #science #mindblown #blackholes #space\n\n#Shorts",
+      "duration_secs": 21,
+      "thumbnail": "https://i.ytimg.com/vi/-ZrIk9AWQc4/hqdefault.jpg"
     },
     "ERhoFeabX3w": {
       "id": "ERhoFeabX3w",
@@ -113,7 +88,7 @@
       "likes": 14,
       "comments": 0,
       "engagement_rate": 2.724,
-      "views_per_day": 86,
+      "views_per_day": 73,
       "tags": [
         "astronomy",
         "black holes",
@@ -128,31 +103,6 @@
       "duration_secs": 29,
       "thumbnail": "https://i.ytimg.com/vi/ERhoFeabX3w/hqdefault.jpg"
     },
-    "GNdBew-G_Kg": {
-      "id": "GNdBew-G_Kg",
-      "title": "\ud83d\udd0d The Dark Science of Kitchen Hacks",
-      "channel": "KnowMore-Dailyday",
-      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
-      "published": "2026-04-19T16:14:29Z",
-      "views": 328,
-      "likes": 2,
-      "comments": 0,
-      "engagement_rate": 0.61,
-      "views_per_day": 82,
-      "tags": [
-        "Maillard reaction",
-        "chemistry",
-        "cooking",
-        "facts",
-        "kitchen hacks",
-        "science",
-        "shorts",
-        "viral"
-      ],
-      "description": "The secret science behind kitchen hacks revealed\n\n#shorts #science #mindblown #kitchenhacks #cooking\n\n#Shorts",
-      "duration_secs": 32,
-      "thumbnail": "https://i.ytimg.com/vi/GNdBew-G_Kg/hqdefault.jpg"
-    },
     "PhtesaWw_5A": {
       "id": "PhtesaWw_5A",
       "title": "\ud83d\udd25 Black Holes: The Cosmic Abyss \ud83c\udf00",
@@ -163,7 +113,7 @@
       "likes": 5,
       "comments": 0,
       "engagement_rate": 1.244,
-      "views_per_day": 80,
+      "views_per_day": 67,
       "tags": [
         "astrophysics",
         "black holes",
@@ -179,6 +129,56 @@
       "duration_secs": 18,
       "thumbnail": "https://i.ytimg.com/vi/PhtesaWw_5A/hqdefault.jpg"
     },
+    "GF7E-npIDM4": {
+      "id": "GF7E-npIDM4",
+      "title": "\ud83d\udd2e Black Holes: Cosmic Killers",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-04-20T16:51:54Z",
+      "views": 265,
+      "likes": 7,
+      "comments": 0,
+      "engagement_rate": 2.642,
+      "views_per_day": 66,
+      "tags": [
+        "black holes",
+        "cosmos",
+        "facts",
+        "gravity",
+        "science",
+        "shorts",
+        "space",
+        "viral"
+      ],
+      "description": "Uncover the dark secrets of black holes\n\n#shorts #science #mindblown #blackholes #space\n\n#Shorts",
+      "duration_secs": 23,
+      "thumbnail": "https://i.ytimg.com/vi/GF7E-npIDM4/hqdefault.jpg"
+    },
+    "GNdBew-G_Kg": {
+      "id": "GNdBew-G_Kg",
+      "title": "\ud83d\udd0d The Dark Science of Kitchen Hacks",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-04-19T16:14:29Z",
+      "views": 328,
+      "likes": 2,
+      "comments": 0,
+      "engagement_rate": 0.61,
+      "views_per_day": 66,
+      "tags": [
+        "Maillard reaction",
+        "chemistry",
+        "cooking",
+        "facts",
+        "kitchen hacks",
+        "science",
+        "shorts",
+        "viral"
+      ],
+      "description": "The secret science behind kitchen hacks revealed\n\n#shorts #science #mindblown #kitchenhacks #cooking\n\n#Shorts",
+      "duration_secs": 32,
+      "thumbnail": "https://i.ytimg.com/vi/GNdBew-G_Kg/hqdefault.jpg"
+    },
     "jQn0rKxwhAk": {
       "id": "jQn0rKxwhAk",
       "title": "\ud83d\udd2e Black Holes: The Void in Space",
@@ -189,7 +189,7 @@
       "likes": 25,
       "comments": 0,
       "engagement_rate": 5.643,
-      "views_per_day": 74,
+      "views_per_day": 63,
       "tags": [
         "astronomy",
         "black holes",
@@ -205,6 +205,30 @@
       "duration_secs": 21,
       "thumbnail": "https://i.ytimg.com/vi/jQn0rKxwhAk/hqdefault.jpg"
     },
+    "XImCXqfecvY": {
+      "id": "XImCXqfecvY",
+      "title": "The Multiverse Mind Hack",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-04-14T09:34:16Z",
+      "views": 497,
+      "likes": 7,
+      "comments": 0,
+      "engagement_rate": 1.408,
+      "views_per_day": 50,
+      "tags": [
+        "facts",
+        "mindblown",
+        "multiverse",
+        "quantum",
+        "science",
+        "shorts",
+        "viral"
+      ],
+      "description": "Your mind might be connected to parallel universes. #Shorts #science #multiverse #mindblown #facts\n\n#Shorts",
+      "duration_secs": 24,
+      "thumbnail": "https://i.ytimg.com/vi/XImCXqfecvY/hqdefault.jpg"
+    },
     "vbbAFitH3Hs": {
       "id": "vbbAFitH3Hs",
       "title": "\ud83d\udd0d Kitchen Secrets Revealed",
@@ -215,7 +239,7 @@
       "likes": 2,
       "comments": 0,
       "engagement_rate": 0.522,
-      "views_per_day": 55,
+      "views_per_day": 48,
       "tags": [
         "chemistry",
         "cooking",
@@ -230,30 +254,6 @@
       "description": "The dark science behind kitchen hacks\n\n#shorts #science #mindblown #kitchenhacks #foodscience\n\n#Shorts",
       "duration_secs": 29,
       "thumbnail": "https://i.ytimg.com/vi/vbbAFitH3Hs/hqdefault.jpg"
-    },
-    "XImCXqfecvY": {
-      "id": "XImCXqfecvY",
-      "title": "The Multiverse Mind Hack",
-      "channel": "KnowMore-Dailyday",
-      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
-      "published": "2026-04-14T09:34:16Z",
-      "views": 497,
-      "likes": 7,
-      "comments": 0,
-      "engagement_rate": 1.408,
-      "views_per_day": 55,
-      "tags": [
-        "facts",
-        "mindblown",
-        "multiverse",
-        "quantum",
-        "science",
-        "shorts",
-        "viral"
-      ],
-      "description": "Your mind might be connected to parallel universes. #Shorts #science #multiverse #mindblown #facts\n\n#Shorts",
-      "duration_secs": 24,
-      "thumbnail": "https://i.ytimg.com/vi/XImCXqfecvY/hqdefault.jpg"
     },
     "x9VpwqbHngk": {
       "id": "x9VpwqbHngk",
@@ -306,57 +306,6 @@
       "duration_secs": 32,
       "thumbnail": "https://i.ytimg.com/vi/rX5GXLrXfEc/hqdefault.jpg"
     },
-    "G761W9LP9ww": {
-      "id": "G761W9LP9ww",
-      "title": "\ud83d\udd0d Kitchen Hacks: The Secret Science",
-      "channel": "KnowMore-Dailyday",
-      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
-      "published": "2026-04-19T10:16:31Z",
-      "views": 132,
-      "likes": 0,
-      "comments": 0,
-      "engagement_rate": 0.0,
-      "views_per_day": 33,
-      "tags": [
-        "chemistry",
-        "cooking",
-        "facts",
-        "food",
-        "kitchen hacks",
-        "science",
-        "shorts",
-        "viral"
-      ],
-      "description": "Uncover the hidden science behind kitchen hacks\n\n#shorts #science #mindblown #kitchenhacks #cooking\n\n#Shorts",
-      "duration_secs": 30,
-      "thumbnail": "https://i.ytimg.com/vi/G761W9LP9ww/hqdefault.jpg"
-    },
-    "bPyEoqsorTs": {
-      "id": "bPyEoqsorTs",
-      "title": "\ud83d\udd01 The Dark Secret Behind Song Repetition",
-      "channel": "KnowMore-Dailyday",
-      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
-      "published": "2026-04-15T10:51:49Z",
-      "views": 230,
-      "likes": 8,
-      "comments": 0,
-      "engagement_rate": 3.478,
-      "views_per_day": 29,
-      "tags": [
-        "brain function",
-        "dopamine",
-        "facts",
-        "music",
-        "psychology",
-        "science",
-        "shorts",
-        "song repetition",
-        "viral"
-      ],
-      "description": "Discover the psychological trap behind song repetition\n\n#shorts #science #music\n\n#Shorts",
-      "duration_secs": 26,
-      "thumbnail": "https://i.ytimg.com/vi/bPyEoqsorTs/hqdefault.jpg"
-    },
     "44M9ua1_SXI": {
       "id": "44M9ua1_SXI",
       "title": "\ud83d\udd0d Kitchen Hacks: The Dark Science",
@@ -383,6 +332,57 @@
       "duration_secs": 34,
       "thumbnail": "https://i.ytimg.com/vi/44M9ua1_SXI/hqdefault.jpg"
     },
+    "G761W9LP9ww": {
+      "id": "G761W9LP9ww",
+      "title": "\ud83d\udd0d Kitchen Hacks: The Secret Science",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-04-19T10:16:31Z",
+      "views": 132,
+      "likes": 0,
+      "comments": 0,
+      "engagement_rate": 0.0,
+      "views_per_day": 26,
+      "tags": [
+        "chemistry",
+        "cooking",
+        "facts",
+        "food",
+        "kitchen hacks",
+        "science",
+        "shorts",
+        "viral"
+      ],
+      "description": "Uncover the hidden science behind kitchen hacks\n\n#shorts #science #mindblown #kitchenhacks #cooking\n\n#Shorts",
+      "duration_secs": 30,
+      "thumbnail": "https://i.ytimg.com/vi/G761W9LP9ww/hqdefault.jpg"
+    },
+    "bPyEoqsorTs": {
+      "id": "bPyEoqsorTs",
+      "title": "\ud83d\udd01 The Dark Secret Behind Song Repetition",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-04-15T10:51:49Z",
+      "views": 230,
+      "likes": 8,
+      "comments": 0,
+      "engagement_rate": 3.478,
+      "views_per_day": 26,
+      "tags": [
+        "brain function",
+        "dopamine",
+        "facts",
+        "music",
+        "psychology",
+        "science",
+        "shorts",
+        "song repetition",
+        "viral"
+      ],
+      "description": "Discover the psychological trap behind song repetition\n\n#shorts #science #music\n\n#Shorts",
+      "duration_secs": 26,
+      "thumbnail": "https://i.ytimg.com/vi/bPyEoqsorTs/hqdefault.jpg"
+    },
     "75NxDsNfXvc": {
       "id": "75NxDsNfXvc",
       "title": "The Ocean Is Secretly Expanding",
@@ -393,7 +393,7 @@
       "likes": 2,
       "comments": 0,
       "engagement_rate": 0.905,
-      "views_per_day": 25,
+      "views_per_day": 22,
       "tags": [
         "earth",
         "facts",
@@ -418,7 +418,7 @@
       "likes": 1,
       "comments": 0,
       "engagement_rate": 0.543,
-      "views_per_day": 20,
+      "views_per_day": 18,
       "tags": [
         "facts",
         "mindblown",
@@ -442,7 +442,7 @@
       "likes": 0,
       "comments": 0,
       "engagement_rate": 0.0,
-      "views_per_day": 14,
+      "views_per_day": 12,
       "tags": [
         "cooking secrets",
         "dark science",
@@ -464,11 +464,11 @@
       "channel": "KnowMore-Dailyday",
       "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
       "published": "2026-04-15T16:49:01Z",
-      "views": 99,
+      "views": 100,
       "likes": 0,
       "comments": 0,
       "engagement_rate": 0.0,
-      "views_per_day": 12,
+      "views_per_day": 11,
       "tags": [
         "dopamine",
         "facts",
@@ -494,7 +494,7 @@
       "likes": 1,
       "comments": 0,
       "engagement_rate": 0.901,
-      "views_per_day": 10,
+      "views_per_day": 9,
       "tags": [
         "brain function",
         "earworms",
@@ -520,7 +520,7 @@
       "likes": 0,
       "comments": 1,
       "engagement_rate": 100.0,
-      "views_per_day": 1,
+      "views_per_day": 0,
       "tags": [
         "ai software",
         "ai tools",
@@ -549,7 +549,7 @@
       "likes": 0,
       "comments": 0,
       "engagement_rate": 0.0,
-      "views_per_day": 1,
+      "views_per_day": 0,
       "tags": [
         "astronomy",
         "black holes",
