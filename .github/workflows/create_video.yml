@@ -55,7 +55,12 @@ jobs:
           key: whisper-base-v1
 
       # ── 5. Install system dependencies ───────────────────────
+      #    Step-level 5min timeout so an Ubuntu mirror hang fails
+      #    fast (we lost a full 30-min budget once when apt-get
+      #    update hung). Without this cap, transient apt issues
+      #    eat the whole workflow timeout.
       - name: Install FFmpeg + fonts
+        timeout-minutes: 5
         run: |
           sudo apt-get update -q
           sudo apt-get install -y ffmpeg fonts-liberation fonts-freefont-ttf
