@@ -906,5 +906,23 @@
     "affiliate_program": "submagic",
     "archetype": "tool_review",
     "stats_fetched": false
+  },
+  {
+    "id": "uvcueldmuTM",
+    "title": "\ud83d\ude80 Made 30 Videos in 1 Weekend with Fliki",
+    "uploaded_at": "2026-05-02T18:38:41.634698+00:00",
+    "hook": "Made 30 videos in 1 weekend",
+    "script": "Made 30 videos in 1 weekend. Fliki turns scripts into videos with AI voiceovers, stock footage, and captions in minutes. No editing software needed. I used Fliki to create 30 videos in just one weekend, saving me hours of editing time. The result? High-quality videos without the hassle. Try Fliki free \u2014 link in pinned comment",
+    "topic": "Fliki text-to-video AI",
+    "tags": [
+      "text-to-video",
+      "ai",
+      "fliki",
+      "video creation",
+      "faceless youtube"
+    ],
+    "affiliate_program": "fliki",
+    "archetype": "news_update",
+    "stats_fetched": false
   }
 ]
