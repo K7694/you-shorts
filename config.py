@@ -125,7 +125,7 @@ BACKGROUND_VIDEO_VOLUME = 0.0   # Mute gameplay audio — keeps voiceover clean
 #  the layout becomes 50/50 split: mascot on top, brainrot on
 #  bottom — like a Twitch streamer's face-cam over gameplay.
 # ══════════════════════════════════════════════════════════════
-USE_MASCOT_OVERLAY = True
+USE_MASCOT_OVERLAY = False  # Disabled — running brainrot-only for the week-long test
 
 # The character — Pixar-style 3D animated tech entrepreneur.
 # Prepended to EVERY image prompt so the same character appears

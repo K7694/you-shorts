@@ -1,19 +1,17 @@
 name: YOU — Auto YouTube Shorts
 
 on:
-  # ── PHASE 1: cron disabled while we lock the content recipe ──
-  # The 3x daily schedule was producing hallucinated content
-  # (e.g. ElevenLabs "optimising recipes"). Re-enable below once
-  # the product-first generator is producing clean reference
-  # videos for each affiliate. Manual workflow_dispatch only
-  # for now.
-  #
-  # schedule:
-  #   - cron: '30 3 * * *'   # 9:00 AM IST
-  #   - cron: '30 9 * * *'   # 3:00 PM IST
-  #   - cron: '30 15 * * *'  # 9:00 PM IST
+  # ── PHASE 2: 3x daily cron re-enabled — week-long test ──
+  # Recipe locked: product-first generation + Subway Surfers
+  # brainrot + on-screen URL overlay + pinned affiliate comment.
+  # Mascot overlay disabled to save image-gen tokens.
+  # Goal: 21 videos in 7 days, then review analytics + iterate.
+  schedule:
+    - cron: '30 3 * * *'   # 9:00 AM IST
+    - cron: '30 9 * * *'   # 3:00 PM IST
+    - cron: '30 15 * * *'  # 9:00 PM IST
 
-  # Lets you click "Run workflow" in GitHub UI anytime
+  # Manual trigger always available
   workflow_dispatch:
 
 jobs:
