@@ -115,7 +115,7 @@ BGM_VOLUME = 0.12  # Volume relative to voiceover (0.0-1.0, subtle at 12%)
 #  🟣 GAMEPLAY/BACKGROUND VIDEO OVERLAY
 # ══════════════════════════════════════════════════════════════
 USE_BACKGROUND_VIDEO = True
-BACKGROUND_VIDEO_FILE = str(ASSETS_DIR / "Subway_surfers_1_hour_Gameplay_no_commentary_free_to_use.mp4")
+BACKGROUND_VIDEO_FILE = str(ASSETS_DIR / "subway_surfers_1hr_gameplay.mp4")
 BACKGROUND_VIDEO_VOLUME = 0.0   # Mute gameplay audio — keeps voiceover clean
 
 # ══════════════════════════════════════════════════════════════
