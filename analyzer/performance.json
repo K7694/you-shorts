@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-29T06:12:37.212323",
+  "last_updated": "2026-04-29T00:20:00.326817",
   "videos": {
     "gZIO6_23b0I": {
       "id": "gZIO6_23b0I",
@@ -11,7 +11,7 @@
       "likes": 35,
       "comments": 1,
       "engagement_rate": 2.853,
-      "views_per_day": 115,
+      "views_per_day": 126,
       "tags": [
         "black holes",
         "cosmic collapse",
@@ -37,7 +37,7 @@
       "likes": 3,
       "comments": 0,
       "engagement_rate": 0.341,
-      "views_per_day": 68,
+      "views_per_day": 73,
       "tags": [
         "cooking tips",
         "dark science",
@@ -210,10 +210,10 @@
       "channel": "KnowMore-Dailyday",
       "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
       "published": "2026-04-20T16:51:54Z",
-      "views": 266,
+      "views": 265,
       "likes": 7,
       "comments": 0,
-      "engagement_rate": 2.632,
+      "engagement_rate": 2.642,
       "views_per_day": 33,
       "tags": [
         "black holes",
@@ -265,7 +265,7 @@
       "likes": 7,
       "comments": 0,
       "engagement_rate": 1.867,
-      "views_per_day": 27,
+      "views_per_day": 29,
       "tags": [
         "cognitive bias",
         "facts",
@@ -280,6 +280,31 @@
       "description": "Discover the dark science behind song repetition\n\n#shorts #science #mindblown #music #psychology\n\n#Shorts",
       "duration_secs": 24,
       "thumbnail": "https://i.ytimg.com/vi/x9VpwqbHngk/hqdefault.jpg"
+    },
+    "rX5GXLrXfEc": {
+      "id": "rX5GXLrXfEc",
+      "title": "\ud83d\udd25 Kitchen Hacks: The Dark Science \ud83c\udf73",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-04-19T05:52:57Z",
+      "views": 169,
+      "likes": 3,
+      "comments": 0,
+      "engagement_rate": 1.775,
+      "views_per_day": 19,
+      "tags": [
+        "chemistry",
+        "cooking",
+        "facts",
+        "food",
+        "kitchen hacks",
+        "science",
+        "shorts",
+        "viral"
+      ],
+      "description": "Uncover the secret science behind kitchen hacks\n\n#shorts #science #mindblown #kitchenhacks #cooking\n\n#Shorts",
+      "duration_secs": 32,
+      "thumbnail": "https://i.ytimg.com/vi/rX5GXLrXfEc/hqdefault.jpg"
     },
     "bPyEoqsorTs": {
       "id": "bPyEoqsorTs",
@@ -306,31 +331,6 @@
       "description": "Discover the psychological trap behind song repetition\n\n#shorts #science #music\n\n#Shorts",
       "duration_secs": 26,
       "thumbnail": "https://i.ytimg.com/vi/bPyEoqsorTs/hqdefault.jpg"
-    },
-    "rX5GXLrXfEc": {
-      "id": "rX5GXLrXfEc",
-      "title": "\ud83d\udd25 Kitchen Hacks: The Dark Science \ud83c\udf73",
-      "channel": "KnowMore-Dailyday",
-      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
-      "published": "2026-04-19T05:52:57Z",
-      "views": 169,
-      "likes": 3,
-      "comments": 0,
-      "engagement_rate": 1.775,
-      "views_per_day": 17,
-      "tags": [
-        "chemistry",
-        "cooking",
-        "facts",
-        "food",
-        "kitchen hacks",
-        "science",
-        "shorts",
-        "viral"
-      ],
-      "description": "Uncover the secret science behind kitchen hacks\n\n#shorts #science #mindblown #kitchenhacks #cooking\n\n#Shorts",
-      "duration_secs": 32,
-      "thumbnail": "https://i.ytimg.com/vi/rX5GXLrXfEc/hqdefault.jpg"
     },
     "75NxDsNfXvc": {
       "id": "75NxDsNfXvc",
@@ -416,7 +416,7 @@
       "likes": 0,
       "comments": 0,
       "engagement_rate": 0.0,
-      "views_per_day": 10,
+      "views_per_day": 11,
       "tags": [
         "cooking science",
         "dark science",

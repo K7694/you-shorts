@@ -261,10 +261,12 @@ FEEDBACK_DIR = BASE_DIR / "feedback"
 FEEDBACK_DIR.mkdir(exist_ok=True)
 _UPLOADS_LOG      = FEEDBACK_DIR / "uploaded.json"
 _TOP_PERFORMERS_F = BASE_DIR / "analyzer" / "top_performers.json"
+_ANALYZER_DIR     = BASE_DIR / "analyzer"
 
 
 def _log_upload(video_id: str, script: dict, title: str):
     """Record a successful upload so the feedback loop can pull 48hr stats later."""
+    from datetime import timezone as _tz
     uploads = []
     if _UPLOADS_LOG.exists():
         try:
@@ -274,14 +276,117 @@ def _log_upload(video_id: str, script: dict, title: str):
     uploads.append({
         "id": video_id,
         "title": title,
-        "uploaded_at": datetime.now().isoformat(),
+        # Store timezone-aware UTC timestamp so the 48hr feedback loop
+        # can compare it correctly with datetime.now(timezone.utc)
+        "uploaded_at": datetime.now(_tz.utc).isoformat(),
         "hook":   script.get("hook", ""),
         "script": script.get("script", ""),
         "topic":  script.get("topic", ""),
         "tags":   script.get("tags", []),
+        # Track which affiliate was featured + archetype so the analyzer
+        # can correlate revenue/views back to programs and content types
+        "affiliate_program": script.get("affiliate_program", ""),
+        "archetype":         script.get("archetype", ""),
         "stats_fetched": False,
     })
     _UPLOADS_LOG.write_text(json.dumps(uploads, indent=2), encoding="utf-8")
+
+
+# ── Analyzer brief + market intelligence ──────────────────────────
+
+def _load_full_brief() -> dict:
+    """Load the most recent analyzer report and return the full analysis dict.
+
+    Returns a dict with keys: next_video_brief, market_pulse,
+    competitor_intelligence, my_channel_diagnosis, content_opportunities.
+    Returns empty dict if no report is found or it is stale (>24 hrs).
+    """
+    brief_db = _ANALYZER_DIR / "latest_brief.json"
+    if not brief_db.exists():
+        return {}
+    try:
+        data = json.loads(brief_db.read_text(encoding="utf-8"))
+        generated = data.get("generated", "")
+        if generated:
+            from datetime import timezone as _tz
+            gen_dt = datetime.fromisoformat(generated)
+            # Make naive datetimes comparable
+            if gen_dt.tzinfo is None:
+                age_hrs = (datetime.now() - gen_dt).total_seconds() / 3600
+            else:
+                age_hrs = (datetime.now(_tz.utc) - gen_dt).total_seconds() / 3600
+            if age_hrs > 24:
+                print(f"   ⚠️  Analyzer brief is {age_hrs:.0f}hrs old — ignoring, run analyzer.py to refresh")
+                return {}
+        analysis = data.get("analysis", {})
+        return analysis
+    except Exception as e:
+        print(f"   ⚠️  Could not load brief: {e}")
+        return {}
+
+
+def _build_market_intel_section(analysis: dict) -> str:
+    """Format the analyzer's market intelligence as an LLM prompt block.
+
+    This gives the script-writing LLM real, current data about what's
+    working on YouTube this week — hook styles, viral triggers, competitor
+    patterns, and your channel's specific weaknesses to fix.
+    """
+    if not analysis:
+        return ""
+
+    mp   = analysis.get("market_pulse", {})
+    ci   = analysis.get("competitor_intelligence", {})
+    diag = analysis.get("my_channel_diagnosis", {})
+
+    lines = ["\n══ MARKET INTELLIGENCE (from today's YouTube analysis — calibrate every word to this) ══"]
+
+    if mp.get("viral_trigger"):
+        lines.append(f"VIRAL TRIGGER RIGHT NOW: {mp['viral_trigger']}")
+
+    if mp.get("top_3_trending_hook_styles"):
+        lines.append("HOOK STYLES CURRENTLY WINNING:")
+        for s in mp["top_3_trending_hook_styles"]:
+            lines.append(f"  • {s}")
+
+    if mp.get("top_3_trending_topics"):
+        topics = ", ".join(mp["top_3_trending_topics"])
+        lines.append(f"TRENDING TOPICS THIS WEEK: {topics}")
+
+    if mp.get("best_performing_content_type"):
+        lines.append(f"BEST PERFORMING FORMAT: {mp['best_performing_content_type']}")
+
+    if ci.get("their_secret"):
+        lines.append(f"WHAT TOP COMPETITORS ARE DOING: {ci['their_secret']}")
+
+    if ci.get("title_patterns"):
+        lines.append("TITLE PATTERNS GETTING CLICKS: " + " | ".join(ci["title_patterns"]))
+
+    if ci.get("hook_patterns"):
+        lines.append("HOOK PATTERNS GETTING VIEWS: " + " | ".join(ci["hook_patterns"]))
+
+    if diag.get("retention_problem"):
+        lines.append(f"YOUR CHANNEL'S RETENTION PROBLEM TO FIX IN THIS VIDEO: {diag['retention_problem']}")
+
+    if diag.get("my_gaps"):
+        lines.append("YOUR CONTENT GAPS TO ADDRESS: " + " | ".join(diag["my_gaps"]))
+
+    lines.append("══ END MARKET INTELLIGENCE — use the above to make every creative decision ══\n")
+    return "\n".join(lines)
+
+
+def _pop_content_opportunity(analysis: dict, used_topics: list) -> dict | None:
+    """Return the highest-ranked unused content opportunity from the analyzer.
+
+    Iterates content_opportunities in rank order and returns the first one
+    whose topic hasn't been used yet. Returns None if all are used.
+    """
+    opportunities = analysis.get("content_opportunities", [])
+    used_lc = {t["topic"].lower() for t in used_topics}
+    for opp in sorted(opportunities, key=lambda x: x.get("rank", 99)):
+        if opp.get("topic", "").lower() not in used_lc:
+            return opp
+    return None
 
 
 def _load_top_performers() -> list:
@@ -341,51 +446,76 @@ def generate_script(topic: str = None) -> dict:
     used = _load_used_topics()
     used_list = "\n".join(f"- {t['topic']}" for t in used[-50:]) if used else "None yet."
 
-    # Use Analyzer brief if no topic given, brief is fresh, and topic isn't already used
+    # ── Load the full analyzer report for market intelligence ─────
+    analysis      = _load_full_brief()          # market_pulse, competitor_intel, diagnosis, opportunities
+    market_intel  = _build_market_intel_section(analysis)  # formatted LLM block
+    brief         = analysis.get("next_video_brief", {})   # the specific video recommendation
+
+    # Preferred title + tags from analyzer research (LLM refines, not reinvents)
+    preferred_title    = brief.get("title", "")
+    preferred_tags     = brief.get("tags", [])
+    preferred_hashtags = brief.get("hashtags", [])
+
+    # ── Build the topic+hook direction for the prompt ──────────────
     if not topic:
         brief_topic_part = None
-        try:
-            from analyzer import get_latest_brief, BRIEF_DB
-            brief = get_latest_brief()
 
-            # Check brief age — skip if > 24 hours old
-            brief_age_hrs = 999
-            if BRIEF_DB.exists():
-                try:
-                    brief_data = json.loads(BRIEF_DB.read_text(encoding="utf-8"))
-                    gen = datetime.fromisoformat(brief_data["generated"])
-                    brief_age_hrs = (datetime.now() - gen).total_seconds() / 3600
-                except Exception:
-                    pass
+        # First: try to use the ranked content opportunity queue (supports batch)
+        if analysis:
+            opp = _pop_content_opportunity(analysis, used)
+            if opp:
+                opp_topic = opp["topic"]
+                opp_hook  = opp.get("hook", "")
+                opp_score = _score_hook(opp_hook) if opp_hook else 0
+                opp_why   = opp.get("why", "")
+                opp_urgency = opp.get("urgency", "")
 
-            if brief.get("topic") and brief_age_hrs < 24:
-                # Skip brief if topic was already used
-                used_topics_lc = {t['topic'].lower() for t in used}
-                if brief["topic"].lower() in used_topics_lc:
-                    print(f"   ⏭️  Brief topic already used — generating fresh topic instead")
+                rank_label = f"(Rank #{opp.get('rank',1)} opportunity, {opp.get('estimated_performance','?').upper()} estimated performance)"
+                print(f"   📊 Using Analyzer opportunity {rank_label}: \"{opp_topic}\"")
+
+                # Override preferred outputs with this opportunity's data if available
+                if opp.get("title"):
+                    preferred_title = opp["title"]
+
+                if opp_score >= 6:
+                    brief_topic_part = (
+                        f'The topic is: "{opp_topic}" {rank_label}\n'
+                        f'Use this exact opening hook: "{opp_hook}"\n'
+                        f'Why this topic is hot right now: {opp_urgency}\n'
+                        f'Data-backed reason to cover it: {opp_why}'
+                    )
                 else:
-                    # Score the prescribed hook — if weak, ignore it
-                    brief_hook = brief.get("hook", "")
-                    brief_hook_score = _score_hook(brief_hook) if brief_hook else 0
+                    print(f"   ⚠️  Opportunity hook weak (score {opp_score}/10) — using topic, generating fresh hook")
+                    brief_topic_part = (
+                        f'The topic is: "{opp_topic}" {rank_label}\n'
+                        f'Write your own stronger hook — do NOT use: "{opp_hook}" (too weak).\n'
+                        f'Why this topic is hot right now: {opp_urgency}\n'
+                        f'Data-backed reason to cover it: {opp_why}'
+                    )
 
-                    if brief_hook_score >= 6:
-                        print(f"   📊 Using Analyzer brief: \"{brief['topic']}\" (hook score {brief_hook_score}/10)")
-                        brief_topic_part = (
-                            f'The topic is: "{brief["topic"]}"\n'
-                            f'Use this exact opening hook: "{brief_hook}"\n'
-                            f'Script direction: {brief.get("script_direction", "")}'
-                        )
-                    else:
-                        print(f"   ⚠️  Brief hook weak (score {brief_hook_score}/10) — using topic only, generating fresh hook")
-                        brief_topic_part = (
-                            f'The topic is: "{brief["topic"]}"\n'
-                            f'Write your own stronger hook — do NOT use: "{brief_hook}" (too cliché).\n'
-                            f'Script direction: {brief.get("script_direction", "")}'
-                        )
-            elif brief.get("topic"):
-                print(f"   ⚠️  Analyzer brief is {brief_age_hrs:.0f}hrs old — ignoring, generating fresh")
-        except Exception as e:
-            print(f"   ⚠️  Could not load brief: {e}")
+        # Fallback: use next_video_brief topic directly
+        if not brief_topic_part and brief.get("topic"):
+            brief_topic = brief["topic"]
+            brief_hook  = brief.get("hook", "")
+            brief_score = _score_hook(brief_hook) if brief_hook else 0
+            used_topics_lc = {t['topic'].lower() for t in used}
+
+            if brief_topic.lower() in used_topics_lc:
+                print(f"   ⏭️  Brief topic already used — generating fresh topic instead")
+            elif brief_score >= 6:
+                print(f"   📊 Using Analyzer brief topic: \"{brief_topic}\" (hook score {brief_score}/10)")
+                brief_topic_part = (
+                    f'The topic is: "{brief_topic}"\n'
+                    f'Use this exact opening hook: "{brief_hook}"\n'
+                    f'Script direction: {brief.get("script_direction", "")}'
+                )
+            else:
+                print(f"   ⚠️  Brief hook weak (score {brief_score}/10) — using topic only, generating fresh hook")
+                brief_topic_part = (
+                    f'The topic is: "{brief_topic}"\n'
+                    f'Write your own stronger hook — do NOT use: "{brief_hook}" (too cliché).\n'
+                    f'Script direction: {brief.get("script_direction", "")}'
+                )
 
         topic_part = brief_topic_part or (
             f'Come up with a UNIQUE, surprising, viral-worthy topic about "{CHANNEL_NICHE}".\n'
@@ -421,6 +551,15 @@ Also generate {IMAGES_PER_VIDEO} image prompts for AI-generated backgrounds.
         "news_update": f"React to a recent (or plausible) AI tool launch, update, or price change. Create urgency — 'they just dropped this.' The featured program is '{featured_program}' — frame it as big news.",
     }
 
+    # Build preferred title/tags hint for the prompt
+    preferred_output_hint = ""
+    if preferred_title:
+        preferred_output_hint += f'\nPREFERRED TITLE (from market research — refine but keep the direction): "{preferred_title}"'
+    if preferred_tags:
+        preferred_output_hint += f'\nPREFERRED TAGS (from trending data — use these): {json.dumps(preferred_tags)}'
+    if preferred_hashtags:
+        preferred_output_hint += f'\nPREFERRED HASHTAGS (from trending data): {json.dumps(preferred_hashtags)}'
+
     prompt = f"""You are the world's most viral YouTube Shorts scriptwriter specializing in AI tools and tech reviews. Your scripts generate millions of views and drive affiliate conversions.
 
 CONTENT ARCHETYPE FOR THIS VIDEO: {archetype.upper().replace('_', ' ')}
@@ -430,10 +569,10 @@ CONTENT ARCHETYPE FOR THIS VIDEO: {archetype.upper().replace('_', ' ')}
 
 Write a {TARGET_DURATION}-second script (~{target_words} words).
 Language: {LANGUAGE}. Tone: {CONTENT_TONE}.
-
+{market_intel}
 TOPICS ALREADY USED — DO NOT REPEAT THESE:
 {used_list}
-
+{preferred_output_hint}
 {_build_few_shot_examples()}
 
 YOU MUST FOLLOW THIS EXACT 4-PART STRUCTURE:
@@ -443,12 +582,14 @@ PART 1 — THE HOOK (first 2-3 seconds, ~8 words):
 - Use specific numbers: "$500/month", "3 minutes", "replaced 4 tools"
 - NEVER start with "Did you know", "What if I told you", or any cliche
 - Make viewers feel they're about to discover a secret advantage
+- MATCH the winning hook styles from the MARKET INTELLIGENCE above
 
 PART 2 — THE PROOF (next 15-17 seconds, ~42 words):
 - Show exactly what the tool does, how fast, and the result
 - Use before/after comparisons or specific test results
 - Short punchy sentences (max 8 words each)
 - Each sentence must build credibility
+- ADDRESS the retention problem identified in MARKET INTELLIGENCE
 
 PART 3 — THE REVEAL (next 10 seconds, ~28 words):
 - Drop the game-changing insight — the thing most people don't know
@@ -467,6 +608,7 @@ CRITICAL RULES:
 - Sound like a friend sharing a discovery, NOT a salesperson.
 - Include enough value that viewers learn something even WITHOUT clicking.
 - The script must pass as genuine, human insight — NOT templated AI content.
+- Use the MARKET INTELLIGENCE data above — do not ignore it.
 {image_prompt_instructions}
 
 Return ONLY valid JSON (no markdown, no backticks):
@@ -477,7 +619,7 @@ Return ONLY valid JSON (no markdown, no backticks):
     "hook": "the opening hook line only",
     "script": "the COMPLETE narration from hook through CTA loop ending as one paragraph",
     "cta_text": "the call-to-action text, e.g. Try Pictory free — link in pinned comment",
-    "title": "YouTube title with emoji, max 70 chars — make it feel like a money secret",
+    "title": "YouTube title with emoji, max 70 chars — refine the PREFERRED TITLE if given, keep its direction",
     "description": "YouTube description, max 200 chars — mention the tool name",
     "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"],
     "hashtags": ["#shorts", "#aitools", "#makemoneyonline"]{image_prompt_json}
@@ -1050,32 +1192,13 @@ def assemble_video(audio: str, images: list, captions: list, filename: str, word
 def generate_thumbnail(image_path: str, hook: str, slug: str) -> str | None:
     """Generate a YouTube thumbnail: first AI image + hook text overlay.
 
-    Uses FFmpeg drawtext with Impact font for the dark-cinematic look.
-    Text is written to a temp file to avoid shell-escaping issues.
+    Uses FFmpeg drawtext with Impact font. Embeds text directly via text=
+    parameter to avoid Windows path-in-filtergraph escaping issues.
     """
     if not image_path or not Path(image_path).exists():
         return None
 
     out_path = str(OUTPUT_DIR / f"thumb_{slug}.jpg")
-    text_file = str(TEMP_DIR / f"thumb_text_{slug}.txt")
-
-    # Wrap hook text at ~32 chars per line (looks good at 1280px wide)
-    words = hook.split()
-    lines, cur = [], []
-    for w in words:
-        if sum(len(x) for x in cur) + len(cur) + len(w) > 32 and cur:
-            lines.append(" ".join(cur))
-            cur = [w]
-        else:
-            cur.append(w)
-    if cur:
-        lines.append(" ".join(cur))
-
-    try:
-        with open(text_file, "w", encoding="utf-8") as f:
-            f.write("\n".join(ln.upper() for ln in lines[:3]))
-    except Exception:
-        return None
 
     # Detect font path — Windows vs Linux (GitHub Actions)
     win_font = Path("C:/Windows/Fonts/impact.ttf")
@@ -1086,36 +1209,69 @@ def generate_thumbnail(image_path: str, hook: str, slug: str) -> str | None:
         Path("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"),
     ]
     if win_font.exists():
-        font = "C\\:/Windows/Fonts/impact.ttf"  # Windows — colon must be escaped
+        font_arg = "C\\\\:/Windows/Fonts/impact.ttf"
     else:
         raw = next((str(f) for f in linux_fonts if f.exists()), None)
         if not raw:
             print("      ⚠️  No font found for thumbnail — skipping")
             return None
-        font = raw  # Linux — no escaping needed
-    txt_escaped = text_file.replace("\\", "/").replace(":", "\\\\:")
+        font_arg = raw
 
-    result = subprocess.run([
-        "ffmpeg", "-y", "-i", image_path,
-        "-vf",
-        f"scale=1280:720:force_original_aspect_ratio=increase,"
-        f"crop=1280:720,"
-        # dark gradient bar at bottom
-        f"drawbox=x=0:y=ih-170:w=iw:h=170:color=black@0.78:t=fill,"
-        # hook text centred inside the bar
-        f"drawtext=fontfile='{font}':textfile='{txt_escaped}':"
-        f"fontsize=54:fontcolor=yellow:borderw=5:bordercolor=black@0.95:"
-        f"line_spacing=8:"
-        f"x=(w-text_w)/2:y=h-155+((155-text_h)/2)",
-        "-q:v", "2", out_path,
-    ], capture_output=True, text=True, timeout=30)
+    # Wrap hook to max 32 chars per line, strip non-ASCII (emojis break drawtext)
+    hook_ascii = hook.encode("ascii", errors="ignore").decode("ascii").strip()
+    words = hook_ascii.split()
+    text_lines, cur = [], []
+    for w in words:
+        if sum(len(x) for x in cur) + len(cur) + len(w) > 32 and cur:
+            text_lines.append(" ".join(cur).upper())
+            cur = [w]
+        else:
+            cur.append(w)
+    if cur:
+        text_lines.append(" ".join(cur).upper())
+    text_lines = text_lines[:3]
 
-    if result.returncode == 0:
+    # Escape special chars for FFmpeg drawtext text= value:
+    #   \ → \\,  ' → \',  : → \:
+    def _esc(s: str) -> str:
+        return s.replace("\\", "\\\\").replace("'", "\\'").replace(":", "\\:")
+
+    # Build one drawtext filter per line, positioned vertically within the dark bar
+    filters = [
+        f"scale=1280:720:force_original_aspect_ratio=increase",
+        f"crop=1280:720",
+        f"drawbox=x=0:y=ih-170:w=iw:h=170:color=black@0.78:t=fill",
+    ]
+    n = len(text_lines)
+    line_h = 60   # approx pixels per line at fontsize 54
+    total_h = n * line_h + (n - 1) * 8
+    start_y = f"h-155+((155-{total_h})/2)"
+    for i, line in enumerate(text_lines):
+        y_expr = f"{start_y}+{i*(line_h+8)}" if i > 0 else start_y
+        filters.append(
+            f"drawtext=fontfile='{font_arg}':text='{_esc(line)}':"
+            f"fontsize=54:fontcolor=yellow:borderw=5:bordercolor=black@0.95:"
+            f"x=(w-text_w)/2:y={y_expr}"
+        )
+
+    vf = ",".join(filters)
+
+    # Use forward-slash input path (FFmpeg reads these fine on Windows)
+    # Use native path for output — forward-slash output paths fail on Windows
+    img_path_fwd = str(Path(image_path).resolve()).replace("\\", "/")
+    out_path_native = str(Path(out_path).resolve())   # keeps backslashes on Windows
+
+    result = subprocess.run(
+        ["ffmpeg", "-y", "-i", img_path_fwd, "-vf", vf, "-q:v", "2", out_path_native],
+        capture_output=True, text=True, timeout=30,
+    )
+
+    if result.returncode == 0 and Path(out_path).exists():
         size_kb = Path(out_path).stat().st_size / 1024
         print(f"      🖼️  Thumbnail ready ({size_kb:.0f} KB)")
         return out_path
     else:
-        print(f"      ⚠️  Thumbnail FFmpeg error: {result.stderr[-120:]}")
+        print(f"      ⚠️  Thumbnail failed: {result.stderr[-200:]}")
         return None
 
 
@@ -1243,7 +1399,9 @@ def upload_youtube(video_path: str, title: str, desc: str, tags: list,
 # ═══════════════════════════════════════════════════════════════
 
 def _slug(name: str) -> str:
-    return re.sub(r'[\s]+', '_', re.sub(r'[^\w\s-]', '', name)).strip('_')[:50].lower()
+    # Strip non-ASCII first (removes emojis that break FFmpeg on Windows paths)
+    ascii_name = name.encode("ascii", errors="ignore").decode("ascii")
+    return re.sub(r'[\s]+', '_', re.sub(r'[^\w\s-]', '', ascii_name)).strip('_')[:50].lower()
 
 
 def _clean_temp():
@@ -1527,10 +1685,40 @@ def main():
                 print("\n  ⏳ Cooling down 10s...")
                 time.sleep(10)
         print_summary(results)
+        _exit_with_status(results, upload)
 
     else:
         result = create_video(topic=args.topic, upload=upload)
         print_summary([result])
+        _exit_with_status([result], upload)
+
+
+def _exit_with_status(results: list, upload: bool):
+    """Exit non-zero if any video failed or (when uploading) failed to upload.
+
+    Without this, create_video()'s try/except would swallow upload errors
+    silently and the GitHub Actions job would falsely report success — which
+    is exactly how we missed 10 days of revoked-token failures.
+    """
+    if not results:
+        return
+    failed = [r for r in results if r.get("status") == "error"]
+    if upload:
+        not_uploaded = [
+            r for r in results
+            if r.get("status") != "error"
+            and r.get("upload", {}).get("status") not in ("uploaded", "skipped")
+        ]
+    else:
+        not_uploaded = []
+
+    if failed or not_uploaded:
+        print("\n  ❌ Pipeline finished with failures:")
+        for r in failed:
+            print(f"     · pipeline error: {r.get('error', 'unknown')}")
+        for r in not_uploaded:
+            print(f"     · upload failed: {r.get('upload', {})}")
+        sys.exit(1)
 
 
 if __name__ == "__main__":

@@ -610,13 +610,24 @@ def run_feedback_loop() -> list:
         print("   Could not read uploads log.")
         return []
 
+    def _parse_iso_utc(ts: str) -> datetime:
+        """Parse an ISO timestamp; assume UTC if it's tz-naive.
+
+        Old upload records (pre-tz-fix) stored naive timestamps like
+        '2026-04-14T14:13:49.374853'. Comparing those with a tz-aware
+        `now` raises TypeError. Treating them as UTC is the safest
+        retroactive default.
+        """
+        dt = datetime.fromisoformat(ts.replace("Z", "+00:00"))
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=timezone.utc)
+        return dt
+
     now = datetime.now(timezone.utc)
     pending = [
         u for u in uploads
         if not u.get("stats_fetched")
-        and (now - datetime.fromisoformat(
-            u["uploaded_at"].replace("Z", "+00:00")
-        )).total_seconds() > 48 * 3600
+        and (now - _parse_iso_utc(u["uploaded_at"])).total_seconds() > 48 * 3600
     ]
 
     if not pending:
@@ -624,9 +635,7 @@ def run_feedback_loop() -> list:
         # Show what's coming
         for u in uploads:
             if not u.get("stats_fetched"):
-                age_hrs = (now - datetime.fromisoformat(
-                    u["uploaded_at"].replace("Z", "+00:00")
-                )).total_seconds() / 3600
+                age_hrs = (now - _parse_iso_utc(u["uploaded_at"])).total_seconds() / 3600
                 remaining = max(0, 48 - age_hrs)
                 print(f"      \"{u['title'][:50]}\" — {remaining:.1f}hrs until ready")
         return []
