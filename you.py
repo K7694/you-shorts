@@ -1094,8 +1094,8 @@ def assemble_video(audio: str, images: list, captions: list, filename: str, word
     # Step 1: Slideshow or Background Video
     slide_path = str(TEMP_DIR / f"{filename}_slides.mp4")
     if USE_BACKGROUND_VIDEO:
-        print(f"      🎞️  Using background video: {BACKGROUND_VIDEO_FILE}")
-        
+        print(f"      🎞️  Using background video: {Path(BACKGROUND_VIDEO_FILE).name}")
+
         # Get duration of the background video
         bg_result = subprocess.run(
             ["ffprobe", "-v", "quiet", "-show_entries", "format=duration", "-of", "csv=p=0", BACKGROUND_VIDEO_FILE],
@@ -1105,27 +1105,37 @@ def assemble_video(audio: str, images: list, captions: list, filename: str, word
             bg_duration = float(bg_result.stdout.strip())
         except ValueError:
             raise RuntimeError(f"Could not read duration of {BACKGROUND_VIDEO_FILE}")
-        
-        start_time = 0
-        if bg_duration > duration:
-            import random
+
+        # Two regimes:
+        #  (a) bg longer than target → random offset for variety per video
+        #  (b) bg shorter than target → loop with -stream_loop -1
+        import random
+        loop_args = []
+        if bg_duration > duration + 1:  # +1s margin to avoid edge frames
             start_time = random.uniform(0, bg_duration - duration)
-            
-        print(f"      🔀 Slicing from {start_time:.1f}s to {start_time+duration:.1f}s")
-        # Center-crop landscape to 9:16 vertical and scale to correct resolution
-        # And ensure audio stream is present if volume > 0
-        crop_args = []
-        if BACKGROUND_VIDEO_VOLUME > 0:
-            crop_args = ["-c:a", "aac"]
+            print(f"      🔀 Random slice from {start_time:.1f}s to {start_time+duration:.1f}s (of {bg_duration:.0f}s source)")
         else:
-            crop_args = ["-an"]
-            
+            start_time = 0
+            loop_args = ["-stream_loop", "-1"]
+            print(f"      🔁 Looping {bg_duration:.0f}s clip to fill {duration:.0f}s")
+
+        # Center-crop to 9:16 vertical and scale to target resolution.
+        # crop=ih*(9/16):ih covers landscape sources; for already-vertical
+        # sources (like Subway Surfers) this just trims sides slightly,
+        # then scale brings it to 1080x1920.
+        if BACKGROUND_VIDEO_VOLUME > 0:
+            audio_args = ["-c:a", "aac"]
+        else:
+            audio_args = ["-an"]
+
         subprocess.run([
-            "ffmpeg", "-y", "-ss", str(start_time), "-t", str(duration),
+            "ffmpeg", "-y",
+            *loop_args,
+            "-ss", str(start_time), "-t", str(duration),
             "-i", BACKGROUND_VIDEO_FILE,
-            "-vf", f"crop=ih*(9/16):ih,scale={VIDEO_WIDTH}:{VIDEO_HEIGHT}",
+            "-vf", f"crop='min(iw,ih*9/16)':'min(ih,iw*16/9)',scale={VIDEO_WIDTH}:{VIDEO_HEIGHT}",
             "-c:v", "libx264", "-pix_fmt", "yuv420p", "-r", str(VIDEO_FPS),
-            *crop_args,
+            *audio_args,
             slide_path
         ], capture_output=True, check=True)
         print("      ✅ Background segment ready")
@@ -1205,13 +1215,29 @@ def assemble_video(audio: str, images: list, captions: list, filename: str, word
             f"fontsize=42:fontcolor=white:borderw=3:bordercolor=black@0.8:"
             f"x=30:y=40:enable='lt(t,3)'"
         )
-        # CTA overlay: "Link in pinned comment 👇" bottom-center for last 3 seconds
+        # On-screen URL overlay (last 7 seconds) — solves the
+        # "pinned comment isn't clickable on new channels" problem
+        # by giving viewers a short URL they can type. Linktree
+        # is the funnel; the featured affiliate is at the top.
+        # Strip protocol so it fits and reads as a typeable handle.
+        _link_display = LINKTREE_URL.replace("https://", "").replace("http://", "")
+        # Escape ':' (FFmpeg drawtext meta-char) so the URL renders cleanly
+        _link_display_safe = _link_display.replace(":", r"\:")
+        _cta_start = max(0, duration - 7)
+        # Yellow eyebrow above the link
         vf_parts.append(
-            f"drawtext=fontfile='{_dt_font}':text='Link in pinned comment':"
-            f"fontsize=38:fontcolor=yellow:borderw=3:bordercolor=black@0.9:"
-            f"x=(w-text_w)/2:y=h-120:enable='gte(t,{max(0, duration - 3.5)})'"
+            f"drawtext=fontfile='{_dt_font}':text='ALL TOOLS BELOW':"
+            f"fontsize=44:fontcolor=yellow:borderw=4:bordercolor=black:"
+            f"x=(w-text_w)/2:y=h-220:enable='gte(t,{_cta_start})'"
         )
-        print("      ⚖️  FTC #ad overlay + CTA overlay added")
+        # Big readable URL — typeable when YouTube doesn't make it clickable
+        vf_parts.append(
+            f"drawtext=fontfile='{_dt_font}':text='{_link_display_safe}':"
+            f"fontsize=64:fontcolor=white:borderw=5:bordercolor=black:"
+            f"box=1:boxcolor=black@0.55:boxborderw=18:"
+            f"x=(w-text_w)/2:y=h-150:enable='gte(t,{_cta_start})'"
+        )
+        print("      ⚖️  FTC #ad overlay + on-screen URL overlay added")
 
     vf_str = ",".join(vf_parts)
 

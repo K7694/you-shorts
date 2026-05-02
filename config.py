@@ -114,9 +114,9 @@ BGM_VOLUME = 0.12  # Volume relative to voiceover (0.0-1.0, subtle at 12%)
 # ══════════════════════════════════════════════════════════════
 #  🟣 GAMEPLAY/BACKGROUND VIDEO OVERLAY
 # ══════════════════════════════════════════════════════════════
-USE_BACKGROUND_VIDEO = False
-BACKGROUND_VIDEO_FILE = str(ASSETS_DIR / "Brainrot.mov")
-BACKGROUND_VIDEO_VOLUME = 0.05  # Volume of gameplay audio (0.0 to mute)
+USE_BACKGROUND_VIDEO = True
+BACKGROUND_VIDEO_FILE = str(ASSETS_DIR / "Subway_surfers_1_hour_Gameplay_no_commentary_free_to_use.mp4")
+BACKGROUND_VIDEO_VOLUME = 0.0   # Mute gameplay audio — keeps voiceover clean
 
 # ══════════════════════════════════════════════════════════════
 #  🟢 YOUTUBE UPLOAD (set up when ready)
