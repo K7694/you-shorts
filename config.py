@@ -150,7 +150,7 @@ CHANNEL_MASCOT = (
 
 YOUTUBE_SECRETS_FILE = str(BASE_DIR / "client_secrets.json")
 YOUTUBE_TOKEN_FILE = str(BASE_DIR / "youtube_token.json")
-YOUTUBE_PRIVACY = "unlisted"   # ⚠️ Change to "public" when ready to launch!
+YOUTUBE_PRIVACY = "public"   # Live — videos go to public channel feed for real metrics   # ⚠️ Change to "public" when ready to launch!
 YOUTUBE_CATEGORY = "28"      # 28 = Science & Tech (correct for AI tools)
 YOUTUBE_DEFAULT_TAGS = ["shorts", "ai tools", "make money online", "saas", "tech review", "ai software", "creator tools", "side hustle"]
 YOUTUBE_MADE_FOR_KIDS = False
