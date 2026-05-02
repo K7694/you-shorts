@@ -1374,11 +1374,16 @@ def upload_youtube(video_path: str, title: str, desc: str, tags: list,
         return {"status": "missing_deps", "path": video_path}
 
     SCOPES = [
-        "https://www.googleapis.com/auth/youtube",
         "https://www.googleapis.com/auth/youtube.upload",
-        "https://www.googleapis.com/auth/youtube.readonly",
         "https://www.googleapis.com/auth/youtube.force-ssl",
     ]
+    # NOTE: keeping the scope list minimal so it matches what
+    # auth_youtube.py grants. Adding scopes here without re-auth
+    # would trigger google-auth to request a broader scope at
+    # refresh time, and Google rejects with 'invalid_scope'.
+    # youtube.upload covers videos.insert; youtube.force-ssl
+    # covers thumbnails.set, commentThreads.insert, and comment
+    # pinning — that's all we need.
     creds = None
 
     if os.path.exists(YOUTUBE_TOKEN_FILE):
