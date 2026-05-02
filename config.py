@@ -119,6 +119,27 @@ BACKGROUND_VIDEO_FILE = str(ASSETS_DIR / "Subway_surfers_1_hour_Gameplay_no_comm
 BACKGROUND_VIDEO_VOLUME = 0.0   # Mute gameplay audio — keeps voiceover clean
 
 # ══════════════════════════════════════════════════════════════
+#  🧑 AI MASCOT (channel host character)
+#  When USE_MASCOT_OVERLAY=True, AI images show this same
+#  character in every scene. Combined with USE_BACKGROUND_VIDEO,
+#  the layout becomes 50/50 split: mascot on top, brainrot on
+#  bottom — like a Twitch streamer's face-cam over gameplay.
+# ══════════════════════════════════════════════════════════════
+USE_MASCOT_OVERLAY = True
+
+# The character — Pixar-style 3D animated tech entrepreneur.
+# Prepended to EVERY image prompt so the same character appears
+# across all 5 scenes within a video. Builds brand recognition.
+CHANNEL_MASCOT = (
+    "ARIA — a friendly Pixar-style 3D animated young woman in her late 20s, "
+    "South Asian, shoulder-length wavy black hair, round translucent glasses, "
+    "wearing a soft orange oversized hoodie, expressive warm brown eyes, "
+    "subtle confident smile. Modern minimalist home office setting. "
+    "Bright warm cinematic lighting, shallow depth of field. "
+    "IMPORTANT: this is the SAME consistent character in every scene of the video."
+)
+
+# ══════════════════════════════════════════════════════════════
 #  🟢 YOUTUBE UPLOAD (set up when ready)
 # ══════════════════════════════════════════════════════════════
 # Videos save locally by default. To enable auto-upload:

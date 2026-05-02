@@ -573,8 +573,31 @@ def generate_script(topic: str = None) -> dict:
 
     image_prompt_instructions = ""
     image_prompt_json = ""
-    if not USE_BACKGROUND_VIDEO:
-        image_prompt_instructions = f'''
+    # Need image prompts when EITHER:
+    #  - not using brainrot background (images are the slideshow), OR
+    #  - mascot overlay is on (mascot images sit on top of brainrot)
+    needs_images = (not USE_BACKGROUND_VIDEO) or USE_MASCOT_OVERLAY
+    if needs_images:
+        if USE_MASCOT_OVERLAY:
+            image_prompt_instructions = f'''
+Also generate {IMAGES_PER_VIDEO} image prompts. Each prompt MUST feature
+the channel's mascot character (see CHANNEL_MASCOT below) doing
+something relevant to the script's beat at that moment.
+
+CHANNEL MASCOT (use the SAME character in every prompt — do not redesign her):
+{CHANNEL_MASCOT}
+
+For each of the {IMAGES_PER_VIDEO} prompts:
+- Show ARIA in a different scene that matches what the script is saying at that moment
+  (e.g. Aria looking shocked at her laptop, Aria celebrating with arms raised,
+  Aria pointing at a chart on screen, Aria sipping coffee while typing, etc.)
+- Keep her appearance, outfit, and Pixar-style 3D rendering CONSISTENT across all 5
+- The setting should vary slightly (different desk angle, different window light)
+  but the character must be unmistakably the SAME Aria
+- NO text overlays, NO watermarks
+- Image 1 must be the MOST eye-catching (it's the swipe-stopper)'''
+        else:
+            image_prompt_instructions = f'''
 Also generate {IMAGES_PER_VIDEO} image prompts for AI-generated backgrounds.
 - Image 1 MUST be the most visually ARRESTING (this is the first frame — it prevents the swipe)
 - Style: clean tech UI, dark mode software dashboards, app interfaces, modern glassmorphism
@@ -729,7 +752,14 @@ Return ONLY valid JSON (no markdown, no backticks):
 
 def _download_ai_image(prompt: str, path: str, index: int) -> bool:
     """Download one AI image from Pollinations.ai (free, no key)."""
-    full_prompt = f"{prompt}, {IMAGE_STYLE}, vertical 9:16, no text, no watermark"
+    # Belt-and-suspenders: prepend the mascot string even if the LLM
+    # forgot to include it, so the character stays consistent across
+    # all 5 scenes. Use the same seed within a video for character
+    # consistency (just bump it per index for scene variation).
+    if USE_MASCOT_OVERLAY:
+        full_prompt = f"{CHANNEL_MASCOT}. Scene: {prompt}. {IMAGE_STYLE}, vertical 9:16, no text, no watermark"
+    else:
+        full_prompt = f"{prompt}, {IMAGE_STYLE}, vertical 9:16, no text, no watermark"
     encoded = urllib.parse.quote(full_prompt)
     url = (
         f"https://image.pollinations.ai/prompt/{encoded}"
@@ -760,9 +790,12 @@ def _make_fallback_image(path: str):
 
 def generate_images(prompts: list, session_id: str) -> list:
     """Generate all AI images for a video."""
-    if USE_BACKGROUND_VIDEO:
+    # Skip image gen ONLY when brainrot is on AND mascot overlay is off.
+    # When mascot overlay is on we need the mascot images even if
+    # brainrot is also enabled (split-screen layout uses both).
+    if USE_BACKGROUND_VIDEO and not USE_MASCOT_OVERLAY:
         return []
-        
+
     print(f"   👁️  Generating {len(prompts)} AI images...")
     img_dir = TEMP_DIR / session_id
     img_dir.mkdir(exist_ok=True)
@@ -1145,6 +1178,39 @@ def assemble_video(audio: str, images: list, captions: list, filename: str, word
             print("      ⚠️  Falling back to simple slideshow...")
             _make_simple_slideshow(images, duration, slide_path)
         print("      ✅ Slideshow done")
+
+    # Step 1b: SPLIT-SCREEN COMPOSITE — Aria (top) + brainrot (bottom)
+    # Active when both flags are on AND we successfully generated images.
+    # Layout: 1080x960 mascot on top, 1080x960 brainrot on bottom.
+    # Captions overlay across the seam in step 4.
+    if USE_BACKGROUND_VIDEO and USE_MASCOT_OVERLAY and images:
+        print("      🪞 Building split-screen: Aria (top) + brainrot (bottom)...")
+        half_h = VIDEO_HEIGHT // 2  # 960
+
+        # Build the mascot slideshow at full size (we'll downscale in vstack)
+        mascot_path = str(TEMP_DIR / f"{filename}_mascot.mp4")
+        if not _make_slideshow(images, duration, mascot_path):
+            print("      ⚠️  Mascot slideshow fallback...")
+            _make_simple_slideshow(images, duration, mascot_path)
+
+        stacked_path = str(TEMP_DIR / f"{filename}_stacked.mp4")
+        subprocess.run([
+            "ffmpeg", "-y",
+            "-i", mascot_path,    # input 0: mascot (top)
+            "-i", slide_path,     # input 1: brainrot (bottom)
+            "-filter_complex",
+            f"[0:v]scale={VIDEO_WIDTH}:{half_h}:force_original_aspect_ratio=increase,"
+            f"crop={VIDEO_WIDTH}:{half_h}[top];"
+            f"[1:v]scale={VIDEO_WIDTH}:{half_h}:force_original_aspect_ratio=increase,"
+            f"crop={VIDEO_WIDTH}:{half_h}[bot];"
+            f"[top][bot]vstack=inputs=2[v]",
+            "-map", "[v]",
+            "-c:v", "libx264", "-pix_fmt", "yuv420p", "-r", str(VIDEO_FPS),
+            "-t", str(duration),
+            stacked_path
+        ], capture_output=True, check=True)
+        slide_path = stacked_path
+        print("      ✅ Split-screen composite ready")
 
     # Step 2: Captions (word-synced via Whisper, or fallback)
     subs_path = str(TEMP_DIR / f"{filename}_subs.ass")
