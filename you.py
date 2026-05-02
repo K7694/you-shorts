@@ -438,6 +438,90 @@ SCRIPT: "Stop paying for Canva Pro. This free alternative does everything. It's 
 WHY IT WORKS: Opens by attacking a known paid tool, comparison creates drama, confident ending."""
 
 
+def _pick_featured_program(used_topics: list) -> str:
+    """Pick the next affiliate to feature using least-recently-used rotation.
+
+    Looks at the last 10 uploads and picks whichever PRIORITY_PROGRAM
+    has been featured least recently. Prevents the random.choice() bias
+    that was concentrating impressions on one program.
+    """
+    if not PRIORITY_PROGRAMS:
+        return ""
+
+    # Build recency map from feedback log (newer = larger index)
+    recency = {p: -1 for p in PRIORITY_PROGRAMS}
+    try:
+        if _UPLOADS_LOG.exists():
+            uploads = json.loads(_UPLOADS_LOG.read_text(encoding="utf-8"))
+            for i, u in enumerate(uploads[-20:]):
+                p = u.get("affiliate_program", "")
+                if p in recency:
+                    recency[p] = i
+    except Exception:
+        pass
+
+    # Lowest recency wins (never-used = -1, oldest used = small int)
+    return min(recency, key=recency.get)
+
+
+def _pick_topic_angle(program: str, product: dict, used_topics: list) -> str | None:
+    """Pick the next-up topic angle for this product, skipping ones already used."""
+    angles = product.get("topic_angles", [])
+    if not angles:
+        return None
+
+    used_lc = {t.get("topic", "").lower() for t in used_topics}
+    # Also check against angles already used recently for THIS program
+    for angle in angles:
+        if angle.lower() not in used_lc and not any(angle.lower() in u for u in used_lc):
+            return angle
+
+    # All angles used recently — return the oldest one (cycle restart)
+    return angles[0] if angles else None
+
+
+def _build_product_fact_sheet(program: str, product: dict) -> str:
+    """Render a structured fact sheet so the LLM cannot hallucinate the product."""
+    if not product:
+        return ""
+
+    features_str = "\n  - ".join(product.get("key_features", []))
+    angles_str = "\n  - ".join(product.get("topic_angles", []))
+
+    return f"""━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🎯 PRODUCT FACT SHEET — YOU MUST FEATURE THIS PRODUCT
+   (program key: {program})
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+NAME: {product.get('name', program)}
+CATEGORY: {product.get('category', '')}
+
+WHAT IT ACTUALLY DOES (do NOT invent features beyond this):
+{product.get('what_it_does', '')}
+
+TARGET AUDIENCE (write FOR these people):
+{product.get('audience', '')}
+
+REAL FEATURES (only mention these):
+  - {features_str}
+
+PAIN IT SOLVES (lead with this in the hook):
+{product.get('pain_solved', '')}
+
+PRICING:
+{product.get('pricing', '')}
+
+PROVEN TOPIC ANGLES (your script must align with the chosen one):
+  - {angles_str}
+
+⚠️  HARD CONSTRAINTS:
+  - Do NOT claim {product.get('name', program)} does anything outside the
+    "WHAT IT ACTUALLY DOES" description. No hallucinated features.
+  - The script must make sense to someone who already uses this product.
+  - Set "affiliate_program" in your output to exactly: "{program}"
+"""
+
+
 def generate_script(topic: str = None) -> dict:
     """Generate a complete script using the 4-part viral formula."""
     target_words = int(TARGET_DURATION * WORDS_PER_SECOND)
@@ -456,71 +540,34 @@ def generate_script(topic: str = None) -> dict:
     preferred_tags     = brief.get("tags", [])
     preferred_hashtags = brief.get("hashtags", [])
 
-    # ── Build the topic+hook direction for the prompt ──────────────
+    # ── PRODUCT-FIRST topic selection ──────────────────────────────
+    # We invert the old "pick random topic, jam an affiliate in" flow
+    # (which produced "ElevenLabs optimises recipes" hallucinations).
+    # Now: pick the affiliate first, then pick a topic from its
+    # pre-vetted angle list. The LLM gets a real product fact sheet
+    # so it cannot hallucinate what the product does.
+    featured_program = _pick_featured_program(used)
+    product = AFFILIATE_PRODUCTS.get(featured_program, {})
+    product_fact_sheet = _build_product_fact_sheet(featured_program, product)
+
     if not topic:
-        brief_topic_part = None
-
-        # First: try to use the ranked content opportunity queue (supports batch)
-        if analysis:
-            opp = _pop_content_opportunity(analysis, used)
-            if opp:
-                opp_topic = opp["topic"]
-                opp_hook  = opp.get("hook", "")
-                opp_score = _score_hook(opp_hook) if opp_hook else 0
-                opp_why   = opp.get("why", "")
-                opp_urgency = opp.get("urgency", "")
-
-                rank_label = f"(Rank #{opp.get('rank',1)} opportunity, {opp.get('estimated_performance','?').upper()} estimated performance)"
-                print(f"   📊 Using Analyzer opportunity {rank_label}: \"{opp_topic}\"")
-
-                # Override preferred outputs with this opportunity's data if available
-                if opp.get("title"):
-                    preferred_title = opp["title"]
-
-                if opp_score >= 6:
-                    brief_topic_part = (
-                        f'The topic is: "{opp_topic}" {rank_label}\n'
-                        f'Use this exact opening hook: "{opp_hook}"\n'
-                        f'Why this topic is hot right now: {opp_urgency}\n'
-                        f'Data-backed reason to cover it: {opp_why}'
-                    )
-                else:
-                    print(f"   ⚠️  Opportunity hook weak (score {opp_score}/10) — using topic, generating fresh hook")
-                    brief_topic_part = (
-                        f'The topic is: "{opp_topic}" {rank_label}\n'
-                        f'Write your own stronger hook — do NOT use: "{opp_hook}" (too weak).\n'
-                        f'Why this topic is hot right now: {opp_urgency}\n'
-                        f'Data-backed reason to cover it: {opp_why}'
-                    )
-
-        # Fallback: use next_video_brief topic directly
-        if not brief_topic_part and brief.get("topic"):
-            brief_topic = brief["topic"]
-            brief_hook  = brief.get("hook", "")
-            brief_score = _score_hook(brief_hook) if brief_hook else 0
-            used_topics_lc = {t['topic'].lower() for t in used}
-
-            if brief_topic.lower() in used_topics_lc:
-                print(f"   ⏭️  Brief topic already used — generating fresh topic instead")
-            elif brief_score >= 6:
-                print(f"   📊 Using Analyzer brief topic: \"{brief_topic}\" (hook score {brief_score}/10)")
-                brief_topic_part = (
-                    f'The topic is: "{brief_topic}"\n'
-                    f'Use this exact opening hook: "{brief_hook}"\n'
-                    f'Script direction: {brief.get("script_direction", "")}'
-                )
-            else:
-                print(f"   ⚠️  Brief hook weak (score {brief_score}/10) — using topic only, generating fresh hook")
-                brief_topic_part = (
-                    f'The topic is: "{brief_topic}"\n'
-                    f'Write your own stronger hook — do NOT use: "{brief_hook}" (too cliché).\n'
-                    f'Script direction: {brief.get("script_direction", "")}'
-                )
-
-        topic_part = brief_topic_part or (
-            f'Come up with a UNIQUE, surprising, viral-worthy topic about "{CHANNEL_NICHE}".\n'
-            f'The topic MUST be different from anything in the "TOPICS ALREADY USED" list below.'
-        )
+        # Pick a topic angle from the product's curated list (rotate)
+        chosen_angle = _pick_topic_angle(featured_program, product, used)
+        if chosen_angle:
+            print(f"   🎯 Featuring {product.get('name', featured_program)} — angle: \"{chosen_angle}\"")
+            topic_part = (
+                f'The topic angle for this video is: "{chosen_angle}"\n'
+                f'This angle was hand-picked because it fits the featured product.\n'
+                f'You may rephrase the angle into a sharper hook, but keep its direction.'
+            )
+        else:
+            # Last-resort fallback: let LLM pick from product's domain
+            print(f"   ⚠️  No fresh angle for {featured_program} — letting LLM riff within product's domain")
+            topic_part = (
+                f'Come up with a topic that genuinely fits the featured product\'s category: '
+                f'"{product.get("category", CHANNEL_NICHE)}".\n'
+                f'The topic MUST be different from anything in the "TOPICS ALREADY USED" list below.'
+            )
     else:
         topic_part = f'The topic is: "{topic}"'
 
@@ -536,19 +583,20 @@ Also generate {IMAGES_PER_VIDEO} image prompts for AI-generated backgrounds.
 - NO text, NO watermarks, NO realistic human faces'''
         image_prompt_json = ',\n    "image_prompts": ["prompt1", "prompt2", "prompt3", "prompt4", "prompt5"]'
 
-    # Pick a random content archetype to avoid template-like repetition
-    archetype = random.choice(CONTENT_ARCHETYPES)
-    # Pick an affiliate program to feature (prioritize high-commission ones)
-    featured_program = random.choice(PRIORITY_PROGRAMS)
+    # Pick a content archetype that fits the chosen product
+    # (listicle is the only one that doesn't naturally feature ONE product —
+    # so we exclude it when product-first to keep the affiliate front and centre)
+    product_friendly_archetypes = [a for a in CONTENT_ARCHETYPES if a != "listicle"]
+    archetype = random.choice(product_friendly_archetypes)
 
+    product_name = product.get("name", featured_program)
     archetype_instructions = {
-        "tool_review": f"Write a SHORT, punchy review of an AI/SaaS tool. Focus on ONE tool — what it does, how fast it works, and why it's worth trying. Name the tool naturally. The featured affiliate program is '{featured_program}' — work it in naturally, or pick a different relevant AI tool.",
-        "tool_comparison": f"Compare TWO competing AI/SaaS tools head-to-head. One should be the paid incumbent, one the cheaper/free alternative. Create drama through the comparison. You may reference '{featured_program}' or pick competing tools you know.",
-        "workflow_tutorial": f"Reveal a workflow or automation hack using 2-3 AI tools together. Show HOW they connect. Make the viewer feel like they discovered a cheat code. Try to work in '{featured_program}' as one of the tools.",
-        "money_hack": f"Reveal how a specific AI tool saves real money or generates income. Lead with the dollar amount. Be specific with numbers. The featured program is '{featured_program}' — feature it or a relevant money-saving AI tool.",
-        "listicle": "List 3-5 AI tools that solve a specific problem (e.g. '4 AI tools that replace your entire marketing team'). Name each tool. Quick-fire format.",
-        "myth_buster": f"Bust a common myth about AI tools, SaaS pricing, or online income. Be contrarian. Challenge what 'everyone thinks.' You can reference '{featured_program}' as part of the truth reveal.",
-        "news_update": f"React to a recent (or plausible) AI tool launch, update, or price change. Create urgency — 'they just dropped this.' The featured program is '{featured_program}' — frame it as big news.",
+        "tool_review": f"Write a SHORT, punchy review of {product_name}. Stick to what it ACTUALLY does (see PRODUCT FACT SHEET below). Name it naturally. Do not invent features it doesn't have.",
+        "tool_comparison": f"Compare {product_name} against ONE direct competitor in its space. Use ONLY real features from the PRODUCT FACT SHEET. Create drama through the comparison.",
+        "workflow_tutorial": f"Reveal a workflow that uses {product_name} as the centrepiece. You may mention 1-2 other tools, but {product_name} must be the hero. Stay within its real capabilities (PRODUCT FACT SHEET).",
+        "money_hack": f"Reveal how {product_name} saves real money or generates income. Lead with the dollar amount. Use only the real value props from the PRODUCT FACT SHEET.",
+        "myth_buster": f"Bust a common myth in {product_name}'s category. Use {product_name} as the truth reveal. Stay grounded in its real capabilities.",
+        "news_update": f"Frame {product_name} as a recent discovery — something the audience just needs to know about. Use only its real features from the PRODUCT FACT SHEET.",
     }
 
     # Build preferred title/tags hint for the prompt
@@ -561,6 +609,8 @@ Also generate {IMAGES_PER_VIDEO} image prompts for AI-generated backgrounds.
         preferred_output_hint += f'\nPREFERRED HASHTAGS (from trending data): {json.dumps(preferred_hashtags)}'
 
     prompt = f"""You are the world's most viral YouTube Shorts scriptwriter specializing in AI tools and tech reviews. Your scripts generate millions of views and drive affiliate conversions.
+
+{product_fact_sheet}
 
 CONTENT ARCHETYPE FOR THIS VIDEO: {archetype.upper().replace('_', ' ')}
 {archetype_instructions[archetype]}

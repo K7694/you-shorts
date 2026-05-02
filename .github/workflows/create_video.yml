@@ -1,12 +1,17 @@
 name: YOU — Auto YouTube Shorts
 
 on:
-  schedule:
-    # Times in UTC — adjust these for your timezone
-    # IST (India) = UTC+5:30
-    - cron: '30 3 * * *'   # 9:00 AM IST
-    - cron: '30 9 * * *'   # 3:00 PM IST
-    - cron: '30 15 * * *'  # 9:00 PM IST
+  # ── PHASE 1: cron disabled while we lock the content recipe ──
+  # The 3x daily schedule was producing hallucinated content
+  # (e.g. ElevenLabs "optimising recipes"). Re-enable below once
+  # the product-first generator is producing clean reference
+  # videos for each affiliate. Manual workflow_dispatch only
+  # for now.
+  #
+  # schedule:
+  #   - cron: '30 3 * * *'   # 9:00 AM IST
+  #   - cron: '30 9 * * *'   # 3:00 PM IST
+  #   - cron: '30 15 * * *'  # 9:00 PM IST
 
   # Lets you click "Run workflow" in GitHub UI anytime
   workflow_dispatch:

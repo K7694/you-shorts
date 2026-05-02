@@ -171,6 +171,95 @@ LINKTREE_URL = "https://linktr.ee/7694rk"
 PRIORITY_PROGRAMS = ["systeme", "beehiiv", "elevenlabs", "submagic", "fliki"]
 
 # ══════════════════════════════════════════════════════════════
+#  🧠 PRODUCT KNOWLEDGE BASE
+#  Fixes the "ElevenLabs optimises recipes" hallucination by
+#  giving the LLM a real fact sheet for each affiliate.
+#  Every script must be grounded in this dict — no exceptions.
+# ══════════════════════════════════════════════════════════════
+AFFILIATE_PRODUCTS = {
+    "systeme": {
+        "name": "Systeme.io",
+        "category": "All-in-one online business platform",
+        "what_it_does": "Build sales funnels, send email campaigns, host courses, run an affiliate program — all in one tool. Replaces ClickFunnels + Mailchimp + Kajabi + Teachable.",
+        "audience": "Solopreneurs, course creators, info-product sellers, side-hustlers tired of juggling 5 tools",
+        "key_features": ["Drag-drop funnel builder", "Unlimited emails on free plan", "Course hosting", "Built-in affiliate manager", "Automation workflows"],
+        "pain_solved": "Tool stack costs $300/mo across ClickFunnels + Kajabi + Mailchimp. Systeme replaces all of them.",
+        "pricing": "Free forever (up to 2,000 contacts). Paid from $27/mo.",
+        "topic_angles": [
+            "I cancelled $300/mo of tools and replaced them with one (free)",
+            "How I launched a digital course in 24 hours with zero tech skills",
+            "Why ClickFunnels users are switching to this free alternative",
+            "Free sales funnel builder that's actually good in 2026",
+            "How a teacher made $5k/mo selling a PDF using Systeme.io",
+        ],
+    },
+    "beehiiv": {
+        "name": "Beehiiv",
+        "category": "Newsletter platform with built-in monetisation",
+        "what_it_does": "Send newsletters, grow them with referrals, monetise with their built-in ad network. Built by ex-Morning Brew team.",
+        "audience": "Newsletter creators, indie publishers, content marketers escaping Substack's 10% cut and Mailchimp's bloat",
+        "key_features": ["Free up to 2,500 subs", "Built-in ad network (you get paid)", "Referral program built in", "Boost program (paid sub recommendations)", "No transaction fees"],
+        "pain_solved": "Substack takes 10% of every paid sub. Mailchimp punishes you with high prices once you grow. Beehiiv keeps the money with the creator.",
+        "pricing": "Free up to 2,500 subs. Paid from $39/mo.",
+        "topic_angles": [
+            "How I made $4k from a 1,000-subscriber newsletter (no paid subs)",
+            "Substack vs Beehiiv — the $1,200/year difference nobody talks about",
+            "Newsletter monetisation in 2026 — what actually pays",
+            "How Morning Brew alumni built the Substack killer",
+            "Start a newsletter that pays you from day one (no audience needed)",
+        ],
+    },
+    "elevenlabs": {
+        "name": "ElevenLabs",
+        "category": "AI voice generation & cloning",
+        "what_it_does": "Turn text into ultra-realistic AI voiceover. Clone your own voice in 60 seconds. Generates voiceover in 30+ languages.",
+        "audience": "YouTubers, podcasters, faceless-channel creators, audiobook producers, video editors, TikTokers who hate their voice",
+        "key_features": ["Voice cloning from 60s of audio", "29 languages with same voice", "Free tier 10k chars/month", "Indistinguishable from human", "API for automation"],
+        "pain_solved": "Recording voiceover takes hours. Hiring voice actors costs $200+/video. Robotic TTS kills retention. ElevenLabs sounds human.",
+        "pricing": "Free 10k chars/mo. Paid from $5/mo (Starter) to $330/mo.",
+        "topic_angles": [
+            "I cloned my voice in 60 seconds — listen to this",
+            "How faceless YouTube channels make $10k/mo (the secret tool)",
+            "ElevenLabs vs Murf vs Speechify — which AI voice wins in 2026",
+            "I made an entire YouTube video without recording a single word",
+            "AI voice that's indistinguishable from human — try it free",
+        ],
+    },
+    "submagic": {
+        "name": "Submagic",
+        "category": "AI auto-captions for short-form video",
+        "what_it_does": "Upload a short video, get viral-style animated captions in 30 seconds. The captions style used by every top TikToker / Reels creator.",
+        "audience": "TikTok / Reels / Shorts creators, social media managers, agencies running multiple accounts",
+        "key_features": ["Auto-generated word-by-word captions", "Viral templates (MrBeast, Hormozi style)", "Emoji + B-roll auto-suggestions", "Background music sync", "Export in seconds"],
+        "pain_solved": "Manual captioning takes 30 min/video. YouTube auto-captions look bad. Hand-styled captions are why some Shorts go viral and others don't.",
+        "pricing": "From $16/mo for solo creators.",
+        "topic_angles": [
+            "Why every viral Short uses these captions (and yours doesn't)",
+            "How MrBeast's caption style boosts retention by 80%",
+            "I tested 5 caption tools — only one was worth it",
+            "Submagic vs CapCut — which gets more views in 2026",
+            "30-second caption hack that doubled my Reels views",
+        ],
+    },
+    "fliki": {
+        "name": "Fliki",
+        "category": "Text-to-video AI for faceless creators",
+        "what_it_does": "Paste a script (or blog URL), get a complete video with AI voiceover + matching stock footage + captions. The full faceless-YouTube pipeline in one tool.",
+        "audience": "Faceless YouTubers, content repurposers, blog-to-video creators, anyone who doesn't want to film themselves",
+        "key_features": ["Blog post → video in 1 click", "2,000+ AI voices in 75+ languages", "Built-in stock footage library", "Auto-captions", "ChatGPT integration"],
+        "pain_solved": "Editing a YouTube video takes 4-8 hours. Faceless creators need 30 videos/month to compete. Fliki collapses the workflow.",
+        "pricing": "Free tier (5 min/mo). Paid from $21/mo.",
+        "topic_angles": [
+            "I made 30 YouTube videos in one weekend (no editing software)",
+            "Turn any blog post into a YouTube video in 60 seconds",
+            "ChatGPT + Fliki = automated faceless YouTube channel",
+            "Faceless YouTube blueprint that scales to $5k/mo (free tools)",
+            "Why faceless channels are the best side hustle of 2026",
+        ],
+    },
+}
+
+# ══════════════════════════════════════════════════════════════
 #  ⚖️ FTC COMPLIANCE (DO NOT CHANGE)
 # ══════════════════════════════════════════════════════════════
 # These are legally required disclosures. Removing them violates
