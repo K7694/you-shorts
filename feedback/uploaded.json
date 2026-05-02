@@ -888,5 +888,23 @@
     "affiliate_program": "beehiiv",
     "archetype": "news_update",
     "stats_fetched": false
+  },
+  {
+    "id": "i52InyU9hoU",
+    "title": "\ud83d\ude80 Boost Views with Submagic",
+    "uploaded_at": "2026-05-02T18:08:28.563114+00:00",
+    "hook": "I saved 30 minutes per video",
+    "script": "I saved 30 minutes per video with Submagic. It auto-generates word-by-word captions in 30 seconds. I tested it and got viral-style animated captions like MrBeast. Emoji and B-roll auto-suggestions are a game-changer. Background music sync is effortless. Export in seconds and you're done. No more manual captioning. Try Submagic, link in the pinned comment",
+    "topic": "Viral Captions for Shorts",
+    "tags": [
+      "Submagic",
+      "viral captions",
+      "shorts",
+      "YouTube",
+      "TikTok"
+    ],
+    "affiliate_program": "submagic",
+    "archetype": "tool_review",
+    "stats_fetched": false
   }
 ]
