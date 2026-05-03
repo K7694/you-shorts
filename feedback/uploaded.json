@@ -924,5 +924,23 @@
     "affiliate_program": "fliki",
     "archetype": "news_update",
     "stats_fetched": false
+  },
+  {
+    "id": "4eLQck0_qXo",
+    "title": "\ud83e\udd16 I Cloned My Voice in 60s! \ud83c\udfa4",
+    "uploaded_at": "2026-05-03T06:21:25.413524+00:00",
+    "hook": "I just cloned my voice in 60 seconds!",
+    "script": "I just cloned my voice in 60 seconds! ElevenLabs turns text into ultra-realistic AI voiceover. I cloned my voice from just 60 seconds of audio and now I can generate voiceovers in 29 languages. The result is indistinguishable from human. No more hiring voice actors for $200+ per video. Try ElevenLabs free \u2014 link in pinned comment",
+    "topic": "AI Voice Cloning",
+    "tags": [
+      "ai voice",
+      "voice cloning",
+      "elevenlabs",
+      "voiceover",
+      "text to speech"
+    ],
+    "affiliate_program": "elevenlabs",
+    "archetype": "workflow_tutorial",
+    "stats_fetched": false
   }
 ]
