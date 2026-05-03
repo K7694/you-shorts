@@ -942,5 +942,23 @@
     "affiliate_program": "elevenlabs",
     "archetype": "workflow_tutorial",
     "stats_fetched": false
+  },
+  {
+    "id": "gf0MKf-c57w",
+    "title": "\ud83d\udea8 Cancel $300/mo Tools \ud83d\udea8",
+    "uploaded_at": "2026-05-03T10:32:30.118925+00:00",
+    "hook": "Ditched $300/mo tools",
+    "script": "Ditched $300/mo tools. Replaced ClickFunnels, Mailchimp, and Kajabi with Systeme.io. Drag-drop funnel builder, unlimited emails, course hosting, and affiliate manager - all in one. Switched to Systeme.io and saved big. Link in the pinned comment to try it free",
+    "topic": "Cancel $300/mo tools",
+    "tags": [
+      "online business",
+      "sales funnels",
+      "email marketing",
+      "course creation",
+      "affiliate marketing"
+    ],
+    "affiliate_program": "systeme",
+    "archetype": "tool_comparison",
+    "stats_fetched": false
   }
 ]
