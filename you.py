@@ -185,33 +185,62 @@ def _score_hook(hook: str) -> int:
 
 
 def _call_llm(prompt: str) -> str:
-    """Call LLM with automatic fallback: Gemini → Groq → Ollama (local)."""
+    """Call LLM with automatic fallback: Gemini → Groq → Ollama (local).
+
+    On 429 (rate limit), wait progressively (30s → 60s → 120s) before
+    falling through. Two providers hitting rate limits at the same
+    moment was the cause of the 2026-05-04 failure — letting them
+    cool down often resurrects the call.
+    """
     errors = []
+    is_cloud = os.environ.get("CI", "").lower() == "true"
 
-    # Try Gemini first (fastest, best quality)
+    def _is_rate_limit(err: str) -> bool:
+        return "429" in err or "Too Many Requests" in err or "RESOURCE_EXHAUSTED" in err
+
+    # Try Gemini first (fastest, best quality) — with rate-limit cooldown
     if GEMINI_API_KEY:
-        try:
-            return _call_gemini(prompt)
-        except RuntimeError as e:
-            errors.append(str(e))
-            print(f"      ⚠️  {e}")
+        for attempt, wait in enumerate([0, 30, 60]):
+            if wait:
+                print(f"      ⏳ Gemini cooldown {wait}s before retry {attempt}...")
+                time.sleep(wait)
+            try:
+                return _call_gemini(prompt)
+            except RuntimeError as e:
+                msg = str(e)
+                errors.append(msg)
+                print(f"      ⚠️  {msg}")
+                if not _is_rate_limit(msg):
+                    break  # non-rate-limit error → don't retry, fall to next provider
 
-    # Try Groq second (fast, free tier)
+    # Try Groq second (fast, free tier) — with rate-limit cooldown
     if GROQ_API_KEY:
+        for attempt, wait in enumerate([0, 30, 90]):
+            if wait:
+                print(f"      ⏳ Groq cooldown {wait}s before retry {attempt}...")
+                time.sleep(wait)
+            try:
+                if attempt == 0:
+                    print("      🔄 Trying Groq (llama3-70b)...")
+                return _call_groq(prompt)
+            except RuntimeError as e:
+                msg = str(e)
+                errors.append(msg)
+                print(f"      ⚠️  {msg}")
+                if not _is_rate_limit(msg):
+                    break
+
+    # Ollama only makes sense locally — never works in GitHub Actions
+    # runners (Ollama isn't installed). Skip it cleanly in cloud to
+    # keep logs clean and avoid the misleading "ConnectionRefused".
+    if not is_cloud:
         try:
-            print("      🔄 Trying Groq (llama3-70b)...")
-            return _call_groq(prompt)
+            print("      🔄 Switching to local Ollama (llama3.1:8b)...")
+            return _call_ollama(prompt)
         except RuntimeError as e:
             errors.append(str(e))
-            print(f"      ⚠️  {e}")
 
-    # Try local Ollama last (always available, no limits)
-    try:
-        print("      🔄 Switching to local Ollama (llama3.1:8b)...")
-        return _call_ollama(prompt)
-    except RuntimeError as e:
-        errors.append(str(e))
-        raise RuntimeError(f"All LLMs failed: {'; '.join(errors)}")
+    raise RuntimeError(f"All LLMs failed: {'; '.join(errors)}")
 
 
 def _parse_json(text: str) -> dict:
