@@ -996,5 +996,23 @@
     "affiliate_program": "submagic",
     "archetype": "news_update",
     "stats_fetched": false
+  },
+  {
+    "id": "Mss9W5EtS1s",
+    "title": "\ud83d\ude80 Made 30 Videos in 1 Weekend with Fliki",
+    "uploaded_at": "2026-05-04T17:15:56.642766+00:00",
+    "hook": "Made 30 videos in one weekend",
+    "script": "Made 30 videos in one weekend with Fliki. This AI tool turns blog posts into videos in 1 click, with 2,000+ AI voices and built-in stock footage. I used to spend hours editing, but Fliki collapses the workflow. No more tedious editing, just instant videos. Try Fliki free \u2014 link in pinned comment",
+    "topic": "Faceless YouTube Automation",
+    "tags": [
+      "AI-powered video creation",
+      "faceless YouTube",
+      "Fliki",
+      "video automation",
+      "content creation"
+    ],
+    "affiliate_program": "fliki",
+    "archetype": "news_update",
+    "stats_fetched": false
   }
 ]
