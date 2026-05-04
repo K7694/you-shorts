@@ -978,5 +978,23 @@
     "affiliate_program": "beehiiv",
     "archetype": "news_update",
     "stats_fetched": false
+  },
+  {
+    "id": "zzJzrrK2RBo",
+    "title": "\ud83d\ude80 Why Viral Shorts Use Submagic Captions",
+    "uploaded_at": "2026-05-04T11:25:00.951519+00:00",
+    "hook": "Viral Shorts use Submagic captions",
+    "script": "Viral Shorts use Submagic captions. Manual captioning takes 30 minutes per video. Submagic generates viral-style captions in 30 seconds. Auto-generated word-by-word captions, viral templates, and emoji suggestions. Try Submagic \u2014 link in pinned comment",
+    "topic": "Viral Captions for YouTube Shorts",
+    "tags": [
+      "AI-powered video editing",
+      "YouTube Shorts",
+      "Submagic",
+      "viral captions",
+      "video marketing"
+    ],
+    "affiliate_program": "submagic",
+    "archetype": "news_update",
+    "stats_fetched": false
   }
 ]
