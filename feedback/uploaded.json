@@ -1306,5 +1306,23 @@
     "affiliate_program": "beehiiv",
     "archetype": "news_update",
     "stats_fetched": false
+  },
+  {
+    "id": "8ZF9-EgJohg",
+    "title": "\ud83e\udd16 AI Caption Hack: Save Time & Boost Views",
+    "uploaded_at": "2026-05-06T17:09:41.150463+00:00",
+    "hook": "Saved $500/month with Submagic",
+    "script": "Saved $500/month with Submagic. Auto-generated captions in 30 seconds, not 30 minutes. Viral templates, emoji suggestions, and background music sync. Export in seconds. I used to spend hours on captions, now I just upload and go. Link in the pinned comment to try Submagic free",
+    "topic": "Viral Captions for Shorts",
+    "tags": [
+      "AI",
+      "content creation",
+      "video making",
+      "productivity",
+      "efficiency"
+    ],
+    "affiliate_program": "submagic",
+    "archetype": "workflow_tutorial",
+    "stats_fetched": false
   }
 ]
