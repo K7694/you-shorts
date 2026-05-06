@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-05T06:04:27.514751",
+  "updated": "2026-05-06T06:20:36.180358",
   "performers": [
     {
       "id": "gZIO6_23b0I",
@@ -13,6 +13,17 @@
       "performance_score": 92.5677
     },
     {
+      "id": "gf0MKf-c57w",
+      "title": "🚨 Cancel $300/mo Tools 🚨",
+      "hook": "Ditched $300/mo tools",
+      "script": "Ditched $300/mo tools. Replaced ClickFunnels, Mailchimp, and Kajabi with Systeme.io. Drag-drop funnel builder, unlimited emails, course hosting, and affiliate manager - all in one. Switched to Systeme.io and saved big. Link in the pinned comment to try it free",
+      "topic": "Cancel $300/mo tools",
+      "views": 162,
+      "engagement_rate": 0.617,
+      "views_per_day": 81,
+      "performance_score": 81.49977
+    },
+    {
       "id": "F6zEu1_Wn1Q",
       "title": "🔪 Kitchen Secrets: The Dark Science 🍳",
       "hook": "Your kitchen is a war zone",
@@ -24,6 +35,17 @@
       "performance_score": 55.187549999999995
     },
     {
+      "id": "iWaR6KyQ4xM",
+      "title": "🚀 $4k from 1,000 subs with Beehiiv",
+      "hook": "I made $4k from 1,000 subs",
+      "script": "I made $4k from 1,000 subs with Beehiiv. Free up to 2,500 subs, built-in ad network pays me. No transaction fees, referral program boosts growth. Ditch Substack's 10% cut, try Beehiiv - link in the pinned comment",
+      "topic": "Beehiiv Newsletter Profit",
+      "views": 99,
+      "engagement_rate": 2.02,
+      "views_per_day": 50,
+      "performance_score": 51.01
+    },
+    {
       "id": "-ZrIk9AWQc4",
       "title": "🔮 Black Holes: The Void Within 🌀",
       "hook": "Cosmic voids are devouring us",
@@ -33,28 +55,6 @@
       "engagement_rate": 2.641,
       "views_per_day": 44,
       "performance_score": 45.162040000000005
-    },
-    {
-      "id": "ERhoFeabX3w",
-      "title": "🔥 Black Holes: The Void That Awaits 🕳️",
-      "hook": "Cosmic abysses are devouring reality",
-      "script": "Cosmic abysses are devouring reality. Gravity warps space-time. Stars collapse, matter implodes. Event horizons trap everything. Nothing escapes. Not even light. The point of no return is near. Your existence is a fleeting moment. Cosmic abysses are devouring reality, and we're next, consumed by the same void that has been growing for billions of years, forever trapped in the abyss that started with the first cosmic abysses that are devouring reality",
-      "topic": "Black Holes Science",
-      "views": 514,
-      "engagement_rate": 2.529,
-      "views_per_day": 37,
-      "performance_score": 37.93573
-    },
-    {
-      "id": "jQn0rKxwhAk",
-      "title": "🔮 Black Holes: The Void in Space",
-      "hook": "Gravity has a dead zone",
-      "script": "Gravity has a dead zone. Mass warps space. Time bends reality. Stars shrink to singularity. Nothing escapes, not even light. The point of no return approaches. Your understanding of space-time is about to collapse. The abyss of a black hole is the universe's darkest secret. Gravity has a dead zone.",
-      "topic": "Black Holes Exposed",
-      "views": 443,
-      "engagement_rate": 5.643,
-      "views_per_day": 32,
-      "performance_score": 33.80576
     }
   ]
 }
