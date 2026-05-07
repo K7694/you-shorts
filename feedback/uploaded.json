@@ -1233,7 +1233,37 @@
     ],
     "affiliate_program": "submagic",
     "archetype": "news_update",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "zzJzrrK2RBo",
+      "title": "\ud83d\ude80 Why Viral Shorts Use Submagic Captions",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-05-04T11:25:26Z",
+      "views": 12,
+      "likes": 0,
+      "comments": 1,
+      "engagement_rate": 8.333,
+      "views_per_day": 6,
+      "tags": [
+        "AI-powered video editing",
+        "Submagic",
+        "YouTube Shorts",
+        "ai software",
+        "ai tools",
+        "creator tools",
+        "make money online",
+        "saas",
+        "shorts",
+        "side hustle",
+        "tech review",
+        "video marketing",
+        "viral captions"
+      ],
+      "description": "#ad\n\n\ud83d\udd25 Try Submagic \u2014 link in pinned comment\n\ud83d\udc49 Try it here: https://www.submagic.co/?via=rajan44\n\nDiscover how Submagic auto-captions can boost your YouTube Shorts views\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\ud83d\udce6 As an Amazon Associate I earn from qualifying purchases\n\n\ud83d\udd17 All my tools & links: https://linktr.",
+      "duration_secs": 19,
+      "thumbnail": "https://i.ytimg.com/vi/zzJzrrK2RBo/hqdefault.jpg"
+    }
   },
   {
     "id": "Mss9W5EtS1s",
@@ -1251,7 +1281,37 @@
     ],
     "affiliate_program": "fliki",
     "archetype": "news_update",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "Mss9W5EtS1s",
+      "title": "\ud83d\ude80 Made 30 Videos in 1 Weekend with Fliki",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-05-04T17:16:18Z",
+      "views": 1,
+      "likes": 0,
+      "comments": 1,
+      "engagement_rate": 100.0,
+      "views_per_day": 0,
+      "tags": [
+        "AI-powered video creation",
+        "Fliki",
+        "ai software",
+        "ai tools",
+        "content creation",
+        "creator tools",
+        "faceless YouTube",
+        "make money online",
+        "saas",
+        "shorts",
+        "side hustle",
+        "tech review",
+        "video automation"
+      ],
+      "description": "#ad\n\n\ud83d\udd25 Try Fliki free \u2014 link in pinned comment\n\ud83d\udc49 Try it here: https://fliki.ai/?via=rajan-kale\n\nAutomate your faceless YouTube channel with Fliki, the AI tool that turns blog posts into videos in minutes\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\ud83d\udce6 As an Amazon Associate I earn from qualifying purchases\n\n\ud83d\udd17 All",
+      "duration_secs": 22,
+      "thumbnail": "https://i.ytimg.com/vi/Mss9W5EtS1s/hqdefault.jpg"
+    }
   },
   {
     "id": "wZJjkQ27dsk",
@@ -1269,7 +1329,37 @@
     ],
     "affiliate_program": "elevenlabs",
     "archetype": "news_update",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "wZJjkQ27dsk",
+      "title": "\ud83e\udd16 AI Voice Cloning: $200/video Saved",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-05-05T06:11:05Z",
+      "views": 1,
+      "likes": 0,
+      "comments": 1,
+      "engagement_rate": 100.0,
+      "views_per_day": 0,
+      "tags": [
+        "AI tools",
+        "AI voice generation",
+        "ElevenLabs",
+        "ai software",
+        "ai tools",
+        "creator tools",
+        "make money online",
+        "saas",
+        "shorts",
+        "side hustle",
+        "tech review",
+        "video creation",
+        "voice cloning"
+      ],
+      "description": "#ad\n\n\ud83d\udd25 Try ElevenLabs free \u2014 link in pinned comment\n\ud83d\udc49 Try it here: https://try.elevenlabs.io/llb0lne6yo43\n\nDiscover ElevenLabs, the AI tool that clones your voice in 60 seconds\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\ud83d\udce6 As an Amazon Associate I earn from qualifying purchases\n\n\ud83d\udd17 All my tools & links: https://",
+      "duration_secs": 26,
+      "thumbnail": "https://i.ytimg.com/vi/wZJjkQ27dsk/hqdefault.jpg"
+    }
   },
   {
     "id": "3v5qUlaW2UY",
@@ -1323,6 +1413,24 @@
     ],
     "affiliate_program": "submagic",
     "archetype": "workflow_tutorial",
+    "stats_fetched": false
+  },
+  {
+    "id": "rCvim_OzaWI",
+    "title": "\ud83d\udd25 Fliki vs Lumen5: 30 Videos in 1 Weekend",
+    "uploaded_at": "2026-05-07T06:31:26.967481+00:00",
+    "hook": "Saved 40 hours with Fliki",
+    "script": "Saved 40 hours with Fliki. Made 30 videos in one weekend. Fliki turns blog posts into videos in 1 click. 2,000+ AI voices, built-in stock footage, auto-captions. Outperforms Lumen5. Try Fliki free \u2014 link in pinned comment",
+    "topic": "Fliki vs Lumen5",
+    "tags": [
+      "Fliki",
+      "Lumen5",
+      "text-to-video",
+      "AI tools",
+      "video creation"
+    ],
+    "affiliate_program": "fliki",
+    "archetype": "tool_comparison",
     "stats_fetched": false
   }
 ]
