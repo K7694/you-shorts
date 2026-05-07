@@ -1432,5 +1432,23 @@
     "affiliate_program": "fliki",
     "archetype": "tool_comparison",
     "stats_fetched": false
+  },
+  {
+    "id": "7XLj5zFvya0",
+    "title": "\ud83e\udd16 I Cloned My Voice in 60s! \ud83d\udcb8",
+    "uploaded_at": "2026-05-07T11:29:16.055977+00:00",
+    "hook": "Saved $200/minute with ElevenLabs",
+    "script": "Saved $200/minute with ElevenLabs. Cloned my voice in 60 seconds. Sounds human, not robotic. Replaced expensive voice actors. ElevenLabs: the secret to ultra-realistic AI voiceovers. Try it free \u2014 link in pinned comment",
+    "topic": "Voice Cloning in 60 Seconds",
+    "tags": [
+      "ai voice",
+      "voice cloning",
+      "elevenlabs",
+      "voiceover",
+      "ai tools"
+    ],
+    "affiliate_program": "elevenlabs",
+    "archetype": "myth_buster",
+    "stats_fetched": false
   }
 ]
