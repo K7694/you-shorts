@@ -1760,5 +1760,23 @@
     "affiliate_program": "fliki",
     "archetype": "myth_buster",
     "stats_fetched": false
+  },
+  {
+    "id": "WkxcWpvwAkY",
+    "title": "\ud83e\udd16 Cloned My Voice in 60s! \ud83c\udf99\ufe0f ElevenLabs",
+    "uploaded_at": "2026-05-13T06:44:48.388376+00:00",
+    "hook": "Cloned my voice in 60 seconds",
+    "script": "Cloned my voice in 60 seconds with ElevenLabs. Ultra-realistic AI voiceover. I compared it to Murf, and ElevenLabs wins. Free tier available, 10k chars/month. Indistinguishable from human. Try ElevenLabs free \u2014 link in pinned comment",
+    "topic": "AI Voice Cloning in 60s",
+    "tags": [
+      "AI tools",
+      "voice cloning",
+      "ElevenLabs",
+      "Murf",
+      "AI voice generation"
+    ],
+    "affiliate_program": "elevenlabs",
+    "archetype": "tool_comparison",
+    "stats_fetched": false
   }
 ]
