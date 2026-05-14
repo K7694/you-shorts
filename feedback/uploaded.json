@@ -1796,5 +1796,23 @@
     "affiliate_program": "systeme",
     "archetype": "money_hack",
     "stats_fetched": false
+  },
+  {
+    "id": "BbTbCQnf124",
+    "title": "\ud83d\ude80 Make $4k with 1,000 subs",
+    "uploaded_at": "2026-05-14T06:44:03.992973+00:00",
+    "hook": "Made $4k with 1,000 subs",
+    "script": "Made $4k with 1,000 subs. Beehiiv's built-in ad network pays me directly. No paid subs needed. I grew my list with referrals and monetized with ease. Unlike Substack, Beehiiv doesn't take a 10% cut. Try Beehiiv free \u2014 link in pinned comment",
+    "topic": "Make $4k with 1,000 subs",
+    "tags": [
+      "beehiiv",
+      "newsletter",
+      "monetization",
+      "substack",
+      "mailchimp"
+    ],
+    "affiliate_program": "beehiiv",
+    "archetype": "myth_buster",
+    "stats_fetched": false
   }
 ]
