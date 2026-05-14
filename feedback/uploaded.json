@@ -1832,5 +1832,23 @@
     "affiliate_program": "submagic",
     "archetype": "news_update",
     "stats_fetched": false
+  },
+  {
+    "id": "QBONYGqZSX4",
+    "title": "\ud83d\ude80 AI Video Creation: 30 Videos in 1 Weekend \ud83d\udcf9",
+    "uploaded_at": "2026-05-14T17:26:06.349474+00:00",
+    "hook": "Made 30 videos in one weekend",
+    "script": "Made 30 videos in one weekend. Fliki turns scripts into videos with AI voiceovers and stock footage. I used Fliki to create 30 videos in 2 days. No editing software needed. Fliki's AI voices and auto-captions save time. Link to try Fliki free in the pinned comment",
+    "topic": "AI video creation in 1 click",
+    "tags": [
+      "AI content creation",
+      "video marketing",
+      "content creation tools",
+      "marketing strategy",
+      "productivity hacks"
+    ],
+    "affiliate_program": "fliki",
+    "archetype": "workflow_tutorial",
+    "stats_fetched": false
   }
 ]
