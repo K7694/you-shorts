@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-13T11:40:01.471440",
+  "last_updated": "2026-05-14T11:25:21.423833",
   "videos": {
     "gZIO6_23b0I": {
       "id": "gZIO6_23b0I",
@@ -11,7 +11,7 @@
       "likes": 35,
       "comments": 1,
       "engagement_rate": 2.853,
-      "views_per_day": 50,
+      "views_per_day": 49,
       "tags": [
         "black holes",
         "cosmic collapse",
@@ -37,7 +37,7 @@
       "likes": 3,
       "comments": 0,
       "engagement_rate": 0.341,
-      "views_per_day": 33,
+      "views_per_day": 31,
       "tags": [
         "cooking tips",
         "dark science",
@@ -63,7 +63,7 @@
       "likes": 15,
       "comments": 0,
       "engagement_rate": 2.641,
-      "views_per_day": 23,
+      "views_per_day": 22,
       "tags": [
         "astronomy",
         "black holes",
@@ -88,7 +88,7 @@
       "likes": 13,
       "comments": 0,
       "engagement_rate": 2.529,
-      "views_per_day": 21,
+      "views_per_day": 20,
       "tags": [
         "astronomy",
         "black holes",
@@ -102,58 +102,6 @@
       "description": "Uncover the dark secrets of black holes\n\n#shorts #science #mindblown #blackholes #space\n\n#Shorts",
       "duration_secs": 29,
       "thumbnail": "https://i.ytimg.com/vi/ERhoFeabX3w/hqdefault.jpg"
-    },
-    "PhtesaWw_5A": {
-      "id": "PhtesaWw_5A",
-      "title": "\ud83d\udd25 Black Holes: The Cosmic Abyss \ud83c\udf00",
-      "channel": "KnowMore-Dailyday",
-      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
-      "published": "2026-04-18T16:12:53Z",
-      "views": 402,
-      "likes": 5,
-      "comments": 0,
-      "engagement_rate": 1.244,
-      "views_per_day": 17,
-      "tags": [
-        "astrophysics",
-        "black holes",
-        "cosmology",
-        "facts",
-        "science",
-        "shorts",
-        "space",
-        "universe",
-        "viral"
-      ],
-      "description": "Uncover the dark secrets of black holes\n\n#shorts #science #mindblown #blackholes #cosmos\n\n#Shorts",
-      "duration_secs": 18,
-      "thumbnail": "https://i.ytimg.com/vi/PhtesaWw_5A/hqdefault.jpg"
-    },
-    "jQn0rKxwhAk": {
-      "id": "jQn0rKxwhAk",
-      "title": "\ud83d\udd2e Black Holes: The Void in Space",
-      "channel": "KnowMore-Dailyday",
-      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
-      "published": "2026-04-17T10:46:58Z",
-      "views": 443,
-      "likes": 25,
-      "comments": 0,
-      "engagement_rate": 5.643,
-      "views_per_day": 17,
-      "tags": [
-        "astronomy",
-        "black holes",
-        "cosmos",
-        "facts",
-        "gravity",
-        "science",
-        "shorts",
-        "space",
-        "viral"
-      ],
-      "description": "Uncover the dark truth about black holes\n\n#shorts #science #mindblown #space #blackholes\n\n#Shorts",
-      "duration_secs": 21,
-      "thumbnail": "https://i.ytimg.com/vi/jQn0rKxwhAk/hqdefault.jpg"
     },
     "XImCXqfecvY": {
       "id": "XImCXqfecvY",
@@ -179,6 +127,58 @@
       "duration_secs": 24,
       "thumbnail": "https://i.ytimg.com/vi/XImCXqfecvY/hqdefault.jpg"
     },
+    "PhtesaWw_5A": {
+      "id": "PhtesaWw_5A",
+      "title": "\ud83d\udd25 Black Holes: The Cosmic Abyss \ud83c\udf00",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-04-18T16:12:53Z",
+      "views": 402,
+      "likes": 5,
+      "comments": 0,
+      "engagement_rate": 1.244,
+      "views_per_day": 16,
+      "tags": [
+        "astrophysics",
+        "black holes",
+        "cosmology",
+        "facts",
+        "science",
+        "shorts",
+        "space",
+        "universe",
+        "viral"
+      ],
+      "description": "Uncover the dark secrets of black holes\n\n#shorts #science #mindblown #blackholes #cosmos\n\n#Shorts",
+      "duration_secs": 18,
+      "thumbnail": "https://i.ytimg.com/vi/PhtesaWw_5A/hqdefault.jpg"
+    },
+    "jQn0rKxwhAk": {
+      "id": "jQn0rKxwhAk",
+      "title": "\ud83d\udd2e Black Holes: The Void in Space",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-04-17T10:46:58Z",
+      "views": 443,
+      "likes": 25,
+      "comments": 0,
+      "engagement_rate": 5.643,
+      "views_per_day": 16,
+      "tags": [
+        "astronomy",
+        "black holes",
+        "cosmos",
+        "facts",
+        "gravity",
+        "science",
+        "shorts",
+        "space",
+        "viral"
+      ],
+      "description": "Uncover the dark truth about black holes\n\n#shorts #science #mindblown #space #blackholes\n\n#Shorts",
+      "duration_secs": 21,
+      "thumbnail": "https://i.ytimg.com/vi/jQn0rKxwhAk/hqdefault.jpg"
+    },
     "gf0MKf-c57w": {
       "id": "gf0MKf-c57w",
       "title": "\ud83d\udea8 Cancel $300/mo Tools \ud83d\udea8",
@@ -189,7 +189,7 @@
       "likes": 0,
       "comments": 1,
       "engagement_rate": 0.617,
-      "views_per_day": 16,
+      "views_per_day": 15,
       "tags": [
         "affiliate marketing",
         "ai software",
@@ -311,6 +311,36 @@
       "duration_secs": 23,
       "thumbnail": "https://i.ytimg.com/vi/GF7E-npIDM4/hqdefault.jpg"
     },
+    "WkxcWpvwAkY": {
+      "id": "WkxcWpvwAkY",
+      "title": "\ud83e\udd16 Cloned My Voice in 60s! \ud83c\udf99\ufe0f ElevenLabs",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-05-13T06:45:21Z",
+      "views": 10,
+      "likes": 0,
+      "comments": 1,
+      "engagement_rate": 10.0,
+      "views_per_day": 10,
+      "tags": [
+        "AI tools",
+        "AI voice generation",
+        "ElevenLabs",
+        "Murf",
+        "ai software",
+        "ai tools",
+        "creator tools",
+        "make money online",
+        "saas",
+        "shorts",
+        "side hustle",
+        "tech review",
+        "voice cloning"
+      ],
+      "description": "#ad\n\n\ud83d\udd25 Try ElevenLabs free \u2014 link in pinned comment\n\ud83d\udc49 Try it here: https://try.elevenlabs.io/llb0lne6yo43\n\nClone your voice with ElevenLabs. Try it free and discover the power of ultra-realistic AI voiceover.\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\ud83d\udce6 As an Amazon Associate I earn from qualifying purchases\n\n",
+      "duration_secs": 19,
+      "thumbnail": "https://i.ytimg.com/vi/WkxcWpvwAkY/hqdefault.jpg"
+    },
     "iWaR6KyQ4xM": {
       "id": "iWaR6KyQ4xM",
       "title": "\ud83d\ude80 $4k from 1,000 subs with Beehiiv",
@@ -321,7 +351,7 @@
       "likes": 1,
       "comments": 1,
       "engagement_rate": 2.02,
-      "views_per_day": 11,
+      "views_per_day": 10,
       "tags": [
         "Beehiiv",
         "Substack alternative",
@@ -366,31 +396,6 @@
       "duration_secs": 26,
       "thumbnail": "https://i.ytimg.com/vi/bPyEoqsorTs/hqdefault.jpg"
     },
-    "75NxDsNfXvc": {
-      "id": "75NxDsNfXvc",
-      "title": "The Ocean Is Secretly Expanding",
-      "channel": "KnowMore-Dailyday",
-      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
-      "published": "2026-04-14T09:34:21Z",
-      "views": 221,
-      "likes": 2,
-      "comments": 0,
-      "engagement_rate": 0.905,
-      "views_per_day": 8,
-      "tags": [
-        "earth",
-        "facts",
-        "mindblown",
-        "nature",
-        "ocean",
-        "science",
-        "shorts",
-        "viral"
-      ],
-      "description": "The ocean is hiding something massive from us. #Shorts #science #ocean #mindblown #facts\n\n#Shorts",
-      "duration_secs": 36,
-      "thumbnail": "https://i.ytimg.com/vi/75NxDsNfXvc/hqdefault.jpg"
-    },
     "rX5GXLrXfEc": {
       "id": "rX5GXLrXfEc",
       "title": "\ud83d\udd25 Kitchen Hacks: The Dark Science \ud83c\udf73",
@@ -416,30 +421,30 @@
       "duration_secs": 32,
       "thumbnail": "https://i.ytimg.com/vi/rX5GXLrXfEc/hqdefault.jpg"
     },
-    "G761W9LP9ww": {
-      "id": "G761W9LP9ww",
-      "title": "\ud83d\udd0d Kitchen Hacks: The Secret Science",
+    "75NxDsNfXvc": {
+      "id": "75NxDsNfXvc",
+      "title": "The Ocean Is Secretly Expanding",
       "channel": "KnowMore-Dailyday",
       "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
-      "published": "2026-04-19T10:16:31Z",
-      "views": 132,
-      "likes": 0,
+      "published": "2026-04-14T09:34:21Z",
+      "views": 221,
+      "likes": 2,
       "comments": 0,
-      "engagement_rate": 0.0,
-      "views_per_day": 6,
+      "engagement_rate": 0.905,
+      "views_per_day": 7,
       "tags": [
-        "chemistry",
-        "cooking",
+        "earth",
         "facts",
-        "food",
-        "kitchen hacks",
+        "mindblown",
+        "nature",
+        "ocean",
         "science",
         "shorts",
         "viral"
       ],
-      "description": "Uncover the hidden science behind kitchen hacks\n\n#shorts #science #mindblown #kitchenhacks #cooking\n\n#Shorts",
-      "duration_secs": 30,
-      "thumbnail": "https://i.ytimg.com/vi/G761W9LP9ww/hqdefault.jpg"
+      "description": "The ocean is hiding something massive from us. #Shorts #science #ocean #mindblown #facts\n\n#Shorts",
+      "duration_secs": 36,
+      "thumbnail": "https://i.ytimg.com/vi/75NxDsNfXvc/hqdefault.jpg"
     },
     "ixmHFDkEBhI": {
       "id": "ixmHFDkEBhI",
@@ -465,31 +470,30 @@
       "duration_secs": 26,
       "thumbnail": "https://i.ytimg.com/vi/ixmHFDkEBhI/hqdefault.jpg"
     },
-    "44M9ua1_SXI": {
-      "id": "44M9ua1_SXI",
-      "title": "\ud83d\udd0d Kitchen Hacks: The Dark Science",
+    "G761W9LP9ww": {
+      "id": "G761W9LP9ww",
+      "title": "\ud83d\udd0d Kitchen Hacks: The Secret Science",
       "channel": "KnowMore-Dailyday",
       "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
-      "published": "2026-04-21T05:52:10Z",
-      "views": 78,
+      "published": "2026-04-19T10:16:31Z",
+      "views": 132,
       "likes": 0,
       "comments": 0,
       "engagement_rate": 0.0,
-      "views_per_day": 4,
+      "views_per_day": 5,
       "tags": [
-        "cooking science",
-        "dark science",
+        "chemistry",
+        "cooking",
         "facts",
+        "food",
         "kitchen hacks",
-        "quantum mechanics",
         "science",
         "shorts",
-        "thermodynamics",
         "viral"
       ],
-      "description": "Uncover the hidden forces that govern your kitchen\n\n#shorts #science #mindblown #kitchenhacks #cooking\n\n#Shorts",
-      "duration_secs": 34,
-      "thumbnail": "https://i.ytimg.com/vi/44M9ua1_SXI/hqdefault.jpg"
+      "description": "Uncover the hidden science behind kitchen hacks\n\n#shorts #science #mindblown #kitchenhacks #cooking\n\n#Shorts",
+      "duration_secs": 30,
+      "thumbnail": "https://i.ytimg.com/vi/G761W9LP9ww/hqdefault.jpg"
     },
     "UZLQ3TDd-fQ": {
       "id": "UZLQ3TDd-fQ",
@@ -599,35 +603,61 @@
       "duration_secs": 20,
       "thumbnail": "https://i.ytimg.com/vi/8ZF9-EgJohg/hqdefault.jpg"
     },
-    "WkxcWpvwAkY": {
-      "id": "WkxcWpvwAkY",
-      "title": "\ud83e\udd16 Cloned My Voice in 60s! \ud83c\udf99\ufe0f ElevenLabs",
+    "44M9ua1_SXI": {
+      "id": "44M9ua1_SXI",
+      "title": "\ud83d\udd0d Kitchen Hacks: The Dark Science",
       "channel": "KnowMore-Dailyday",
       "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
-      "published": "2026-05-13T06:45:21Z",
+      "published": "2026-04-21T05:52:10Z",
+      "views": 78,
+      "likes": 0,
+      "comments": 0,
+      "engagement_rate": 0.0,
+      "views_per_day": 3,
+      "tags": [
+        "cooking science",
+        "dark science",
+        "facts",
+        "kitchen hacks",
+        "quantum mechanics",
+        "science",
+        "shorts",
+        "thermodynamics",
+        "viral"
+      ],
+      "description": "Uncover the hidden forces that govern your kitchen\n\n#shorts #science #mindblown #kitchenhacks #cooking\n\n#Shorts",
+      "duration_secs": 34,
+      "thumbnail": "https://i.ytimg.com/vi/44M9ua1_SXI/hqdefault.jpg"
+    },
+    "PVuAfyJRafg": {
+      "id": "PVuAfyJRafg",
+      "title": "\ud83d\ude80 Cancel $300/mo Tools with Systeme.io",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-05-13T11:45:08Z",
       "views": 1,
       "likes": 0,
       "comments": 1,
       "engagement_rate": 100.0,
       "views_per_day": 1,
       "tags": [
-        "AI tools",
-        "AI voice generation",
-        "ElevenLabs",
-        "Murf",
+        "affiliate marketing",
         "ai software",
         "ai tools",
+        "course creation",
         "creator tools",
+        "email marketing",
         "make money online",
+        "online business",
         "saas",
+        "sales funnels",
         "shorts",
         "side hustle",
-        "tech review",
-        "voice cloning"
+        "tech review"
       ],
-      "description": "#ad\n\n\ud83d\udd25 Try ElevenLabs free \u2014 link in pinned comment\n\ud83d\udc49 Try it here: https://try.elevenlabs.io/llb0lne6yo43\n\nClone your voice with ElevenLabs. Try it free and discover the power of ultra-realistic AI voiceover.\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\ud83d\udce6 As an Amazon Associate I earn from qualifying purchases\n\n",
-      "duration_secs": 19,
-      "thumbnail": "https://i.ytimg.com/vi/WkxcWpvwAkY/hqdefault.jpg"
+      "description": "#ad\n\n\ud83d\udd25 Try Systeme.io free \u2014 link in pinned comment\n\ud83d\udc49 Try it here: https://systeme.io/?sa=026901352\n\nSave $300/month with Systeme.io, an all-in-one online business platform\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\ud83d\udce6 As an Amazon Associate I earn from qualifying purchases\n\n\ud83d\udd17 All my tools & links: https://link",
+      "duration_secs": 20,
+      "thumbnail": "https://i.ytimg.com/vi/PVuAfyJRafg/hqdefault.jpg"
     },
     "7XLj5zFvya0": {
       "id": "7XLj5zFvya0",
@@ -717,6 +747,36 @@
       "description": "#ad\n\n\ud83d\udd25 Try Submagic \u2014 link in pinned comment\n\ud83d\udc49 Try it here: https://www.submagic.co/?via=rajan44\n\nDiscover how Submagic auto-captions can boost your YouTube Shorts views\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\ud83d\udce6 As an Amazon Associate I earn from qualifying purchases\n\n\ud83d\udd17 All my tools & links: https://linktr.",
       "duration_secs": 19,
       "thumbnail": "https://i.ytimg.com/vi/zzJzrrK2RBo/hqdefault.jpg"
+    },
+    "BbTbCQnf124": {
+      "id": "BbTbCQnf124",
+      "title": "\ud83d\ude80 Make $4k with 1,000 subs",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-05-14T06:44:23Z",
+      "views": 0,
+      "likes": 0,
+      "comments": 1,
+      "engagement_rate": 100.0,
+      "views_per_day": 0,
+      "tags": [
+        "ai software",
+        "ai tools",
+        "beehiiv",
+        "creator tools",
+        "mailchimp",
+        "make money online",
+        "monetization",
+        "newsletter",
+        "saas",
+        "shorts",
+        "side hustle",
+        "substack",
+        "tech review"
+      ],
+      "description": "#ad\n\n\ud83d\udd25 Try Beehiiv free \u2014 link in pinned comment\n\ud83d\udc49 Try it here: https://www.beehiiv.com/?via=rajan-kale\n\nMake money with Beehiiv's newsletter platform\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\ud83d\udce6 As an Amazon Associate I earn from qualifying purchases\n\n\ud83d\udd17 All my tools & links: https://linktr.ee/7694rk\n\n#beehiiv",
+      "duration_secs": 18,
+      "thumbnail": "https://i.ytimg.com/vi/BbTbCQnf124/hqdefault.jpg"
     },
     "oNM4J9aCJsU": {
       "id": "oNM4J9aCJsU",
