@@ -1759,7 +1759,37 @@
     ],
     "affiliate_program": "fliki",
     "archetype": "myth_buster",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "oNM4J9aCJsU",
+      "title": "\ud83d\udcc8 Made 30 Videos in 1 Weekend with Fliki",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-05-12T15:42:37Z",
+      "views": 1,
+      "likes": 0,
+      "comments": 1,
+      "engagement_rate": 100.0,
+      "views_per_day": 0,
+      "tags": [
+        "AI tools",
+        "ai software",
+        "ai tools",
+        "content creation",
+        "creator tools",
+        "faceless YouTube",
+        "make money online",
+        "productivity",
+        "saas",
+        "shorts",
+        "side hustle",
+        "tech review",
+        "time-saving hacks"
+      ],
+      "description": "#ad\n\n\ud83d\udd25 Try Fliki free \u2014 link in pinned comment\n\ud83d\udc49 Try it here: https://fliki.ai/?via=rajan-kale\n\nCreate YouTube videos with Fliki's text-to-video AI\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\ud83d\udce6 As an Amazon Associate I earn from qualifying purchases\n\n\ud83d\udd17 All my tools & links: https://linktr.ee/7694rk\n\n#AItools #f",
+      "duration_secs": 26,
+      "thumbnail": "https://i.ytimg.com/vi/oNM4J9aCJsU/hqdefault.jpg"
+    }
   },
   {
     "id": "WkxcWpvwAkY",
@@ -1777,7 +1807,37 @@
     ],
     "affiliate_program": "elevenlabs",
     "archetype": "tool_comparison",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "WkxcWpvwAkY",
+      "title": "\ud83e\udd16 Cloned My Voice in 60s! \ud83c\udf99\ufe0f ElevenLabs",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-05-13T06:45:21Z",
+      "views": 17,
+      "likes": 0,
+      "comments": 1,
+      "engagement_rate": 5.882,
+      "views_per_day": 8,
+      "tags": [
+        "AI tools",
+        "AI voice generation",
+        "ElevenLabs",
+        "Murf",
+        "ai software",
+        "ai tools",
+        "creator tools",
+        "make money online",
+        "saas",
+        "shorts",
+        "side hustle",
+        "tech review",
+        "voice cloning"
+      ],
+      "description": "#ad\n\n\ud83d\udd25 Try ElevenLabs free \u2014 link in pinned comment\n\ud83d\udc49 Try it here: https://try.elevenlabs.io/llb0lne6yo43\n\nClone your voice with ElevenLabs. Try it free and discover the power of ultra-realistic AI voiceover.\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\ud83d\udce6 As an Amazon Associate I earn from qualifying purchases\n\n",
+      "duration_secs": 19,
+      "thumbnail": "https://i.ytimg.com/vi/WkxcWpvwAkY/hqdefault.jpg"
+    }
   },
   {
     "id": "PVuAfyJRafg",
@@ -1867,6 +1927,24 @@
     ],
     "affiliate_program": "elevenlabs",
     "archetype": "workflow_tutorial",
+    "stats_fetched": false
+  },
+  {
+    "id": "KY7pAwrOCH8",
+    "title": "\ud83d\ude80 I Cancelled $300/mo Tools",
+    "uploaded_at": "2026-05-15T11:38:27.205940+00:00",
+    "hook": "Ditched $300/mo tools",
+    "script": "Ditched $300/mo tools. Replaced ClickFunnels, Mailchimp, and Kajabi with Systeme.io. Drag-drop funnel builder, unlimited emails, course hosting, and affiliate manager - all in one. Saved big with Systeme.io. Link in the pinned comment to try it free and save $300/mo like I did.",
+    "topic": "Replace $300/mo tools",
+    "tags": [
+      "online business",
+      "sales funnels",
+      "email marketing",
+      "course creation",
+      "affiliate marketing"
+    ],
+    "affiliate_program": "systeme",
+    "archetype": "tool_review",
     "stats_fetched": false
   }
 ]
