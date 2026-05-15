@@ -1850,5 +1850,23 @@
     "affiliate_program": "fliki",
     "archetype": "workflow_tutorial",
     "stats_fetched": false
+  },
+  {
+    "id": "vOD5ZHXMWtY",
+    "title": "\ud83d\udcb8 AI Voice Cloning: Save $200/Video",
+    "uploaded_at": "2026-05-15T06:53:21.571490+00:00",
+    "hook": "Saved $200/video with ElevenLabs",
+    "script": "Saved $200/video with ElevenLabs. I cloned my voice in 60 seconds, got 29 languages with the same voice, and it's indistinguishable from human. Replaced expensive voice actors with ElevenLabs. Try it free \u2014 link in pinned comment",
+    "topic": "AI Voice Cloning in 60s",
+    "tags": [
+      "AI content creation",
+      "video marketing",
+      "content creation tools",
+      "marketing strategy",
+      "productivity hacks"
+    ],
+    "affiliate_program": "elevenlabs",
+    "archetype": "workflow_tutorial",
+    "stats_fetched": false
   }
 ]
