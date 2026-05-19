@@ -48,11 +48,16 @@ jobs:
 
       - name: Download background video (cache miss only)
         if: steps.cache-bg.outputs.cache-hit != 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           mkdir -p assets
-          curl -L --fail --retry 3 --retry-delay 5 \
-            -o assets/subway_surfers_1hr_gameplay.mp4 \
-            https://github.com/${{ github.repository }}/releases/download/assets-v1/subway_surfers_1hr_gameplay.mp4
+          # Repo is private — use gh CLI (auto-authenticated via GH_TOKEN)
+          # instead of the public /releases/download URL which 404s for private repos.
+          gh release download assets-v1 \
+            --repo ${{ github.repository }} \
+            --pattern 'subway_surfers_1hr_gameplay.mp4' \
+            --dir assets
           ls -lh assets/subway_surfers_1hr_gameplay.mp4
 
       # ── 2. Python setup ───────────────────────────────────────
