@@ -25,14 +25,35 @@ jobs:
 
     steps:
 
-      # ── 1. Get the code + LFS assets ──────────────────────────
-      #    lfs:true pulls the actual Subway Surfers clip
-      #    (stored in Git LFS because it's >100MB).
+      # ── 1. Get the code ───────────────────────────────────────
+      #    Background video is fetched separately from a GitHub
+      #    Release (see step 1b) — keeps it out of LFS so we don't
+      #    burn the free 1GB/month LFS bandwidth quota.
       - name: Checkout repo
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          lfs: true
+
+      # ── 1b. Fetch background video (Subway Surfers clip) ──────
+      #    Cached by release tag — first run downloads 447MB,
+      #    subsequent runs hit the cache (free, no bandwidth used).
+      #    To swap the clip: upload a new release asset and bump
+      #    the tag below (e.g. assets-v2).
+      - name: Cache background video
+        id: cache-bg
+        uses: actions/cache@v4
+        with:
+          path: assets/subway_surfers_1hr_gameplay.mp4
+          key: bg-video-assets-v1
+
+      - name: Download background video (cache miss only)
+        if: steps.cache-bg.outputs.cache-hit != 'true'
+        run: |
+          mkdir -p assets
+          curl -L --fail --retry 3 --retry-delay 5 \
+            -o assets/subway_surfers_1hr_gameplay.mp4 \
+            https://github.com/${{ github.repository }}/releases/download/assets-v1/subway_surfers_1hr_gameplay.mp4
+          ls -lh assets/subway_surfers_1hr_gameplay.mp4
 
       # ── 2. Python setup ───────────────────────────────────────
       - name: Set up Python 3.11

@@ -36,3 +36,8 @@ test_*.mp3
 test_*.wav
 *.mp3
 *.wav
+
+# Background video clips — fetched from GitHub Release at runtime
+# (kept out of repo to avoid LFS bandwidth quota)
+assets/*.mp4
+assets/*.mov
