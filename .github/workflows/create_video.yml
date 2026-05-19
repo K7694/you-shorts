@@ -1,15 +1,16 @@
 name: YOU — Auto YouTube Shorts
 
 on:
-  # ── PHASE 2: 3x daily cron re-enabled — week-long test ──
-  # Recipe locked: product-first generation + Subway Surfers
-  # brainrot + on-screen URL overlay + pinned affiliate comment.
-  # Mascot overlay disabled to save image-gen tokens.
-  # Goal: 21 videos in 7 days, then review analytics + iterate.
+  # ── PHASE 3: 1x daily — tighter recipe (set 2026-05-19) ──
+  # May 12–15 analytics review (9 videos, 34 views, 0 organic
+  # likes) showed 8/9 videos didn't earn impressions. 3x/day on
+  # a cold channel may be reading as "spam" to the algo. Cutting
+  # to 1x/day at the prime IST slot.
+  # Also: PRIORITY_PROGRAMS narrowed to elevenlabs+fliki, archetypes
+  # locked to tool_comparison only (see config.py).
+  # Re-evaluate 2026-05-26.
   schedule:
     - cron: '30 3 * * *'   # 9:00 AM IST
-    - cron: '30 9 * * *'   # 3:00 PM IST
-    - cron: '30 15 * * *'  # 9:00 PM IST
 
   # Manual trigger always available
   workflow_dispatch:

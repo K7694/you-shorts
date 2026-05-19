@@ -189,7 +189,17 @@ LINKTREE_URL = "https://linktr.ee/7694rk"
 # Programs to prioritize (by commission value — lifetime recurring first)
 # ⚠️  Only include programs with real IDs above. Adding a pending one
 #     will cause the pipeline to post broken YOUR_ID affiliate links.
-PRIORITY_PROGRAMS = ["systeme", "beehiiv", "elevenlabs", "submagic", "fliki"]
+#
+# ── PHASE 3 RECIPE LOCK (set 2026-05-19) ───────────────────────
+# Analytics review of May 12–15 cohort (9 videos, 34 total views):
+#   - elevenlabs: 28 views across 2 videos  ← WINNER
+#   - fliki:       4 views across 2 videos
+#   - systeme:     2 views across 2 videos
+#   - beehiiv:     0 views across 2 videos
+#   - submagic:    0 views across 1 video
+# Narrowing to the two programs that earned organic impressions.
+# Re-evaluate full roster on 2026-05-26 with new cohort data.
+PRIORITY_PROGRAMS = ["elevenlabs", "fliki"]
 
 # ══════════════════════════════════════════════════════════════
 #  🧠 PRODUCT KNOWLEDGE BASE
@@ -291,12 +301,18 @@ AMAZON_DISCLOSURE = "As an Amazon Associate I earn from qualifying purchases"
 
 # Content archetypes — rotated to avoid YouTube "inauthentic content" flags
 # The BRAIN agent picks one randomly per video to ensure variety
+#
+# ── PHASE 3 RECIPE LOCK (set 2026-05-19) ───────────────────────
+# Only tool_comparison earned views in the May 12–15 cohort
+# (21 views vs. ≤2 for every other archetype). Locking to just this
+# one until we have a second proven archetype to mix in.
+# Original full list preserved in comments for re-enablement later.
 CONTENT_ARCHETYPES = [
-    "tool_review",        # Single tool deep-dive
-    "tool_comparison",    # Head-to-head: Tool A vs Tool B
-    "workflow_tutorial",  # "How I automate X using these 3 tools"
-    "money_hack",         # "This free AI tool saved me $X/month"
-    "listicle",           # "5 AI tools that replace your editor"
-    "myth_buster",        # "AI video tools are NOT what you think"
-    "news_update",        # "[Tool] just dropped something insane"
+    "tool_comparison",    # Head-to-head: Tool A vs Tool B — WINNER
+    # "tool_review",        # Single tool deep-dive
+    # "workflow_tutorial",  # "How I automate X using these 3 tools"
+    # "money_hack",         # "This free AI tool saved me $X/month"
+    # "listicle",           # "5 AI tools that replace your editor"
+    # "myth_buster",        # "AI video tools are NOT what you think"
+    # "news_update",        # "[Tool] just dropped something insane"
 ]
