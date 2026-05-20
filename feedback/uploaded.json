@@ -2192,5 +2192,23 @@
     "affiliate_program": "submagic",
     "archetype": "tool_review",
     "stats_fetched": false
+  },
+  {
+    "id": "TaDp1AykMpc",
+    "title": "\ud83d\ude80 Fliki vs Lumen5: Make 30 Videos in 1 Weekend",
+    "uploaded_at": "2026-05-20T07:07:33.145488+00:00",
+    "hook": "Made 30 videos in one weekend",
+    "script": "Made 30 videos in one weekend, no editing software. Fliki creates videos in 1 click, with 2,000+ AI voices and built-in stock footage. Lumen5 can't match Fliki's speed and quality. Fliki's auto-captions and ChatGPT integration seal the deal. Ditch Lumen5, try Fliki \u2014 link in pinned comment",
+    "topic": "Fliki vs Lumen5",
+    "tags": [
+      "fliki",
+      "lumen5",
+      "text-to-video",
+      "ai tools",
+      "faceless youtube"
+    ],
+    "affiliate_program": "fliki",
+    "archetype": "tool_comparison",
+    "stats_fetched": false
   }
 ]
