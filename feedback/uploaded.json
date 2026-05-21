@@ -2210,5 +2210,23 @@
     "affiliate_program": "fliki",
     "archetype": "tool_comparison",
     "stats_fetched": false
+  },
+  {
+    "id": "ua9I0JbKZFU",
+    "title": "\ud83e\udd16 I Cloned My Voice in 60s! \ud83d\ude80",
+    "uploaded_at": "2026-05-21T07:12:41.533837+00:00",
+    "hook": "Cloned my voice in 60s",
+    "script": "Cloned my voice in 60s with ElevenLabs. Ultra-realistic AI voiceover in 30+ languages. Free tier gives 10k chars/month. I compared it to Murf - ElevenLabs wins for its indistinguishable from human voice. Replaced $200+ voice actors. Try ElevenLabs free \u2014 link in pinned comment",
+    "topic": "AI Voice Cloning",
+    "tags": [
+      "ai",
+      "voice_cloning",
+      "elevenlabs",
+      "murf",
+      "speechify"
+    ],
+    "affiliate_program": "elevenlabs",
+    "archetype": "tool_comparison",
+    "stats_fetched": false
   }
 ]
