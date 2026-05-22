@@ -2191,7 +2191,36 @@
     ],
     "affiliate_program": "submagic",
     "archetype": "tool_review",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "30bz53aKw0Y",
+      "title": "\ud83d\udcb8 Save $300/month on Captioning \ud83d\udcf9",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-05-19T16:42:47Z",
+      "views": 0,
+      "likes": 0,
+      "comments": 1,
+      "engagement_rate": 100.0,
+      "views_per_day": 0,
+      "tags": [
+        "ai software",
+        "ai tools",
+        "captioning tools",
+        "creator tools",
+        "make money online",
+        "saas",
+        "shorts",
+        "shorts creators",
+        "side hustle",
+        "submagic",
+        "tech review",
+        "viral captions"
+      ],
+      "description": "#ad\n\n\ud83d\udd25 Try Submagic free \u2014 link in pinned comment\n\ud83d\udc49 Try it here: https://www.submagic.co/?via=rajan44\n\nDiscover Submagic, the AI tool that auto-generates viral captions for your shorts in 30 seconds\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\ud83d\udce6 As an Amazon Associate I earn from qualifying purchases\n\n\ud83d\udd17 All my t",
+      "duration_secs": 21,
+      "thumbnail": "https://i.ytimg.com/vi/30bz53aKw0Y/hqdefault.jpg"
+    }
   },
   {
     "id": "TaDp1AykMpc",
@@ -2226,6 +2255,24 @@
       "speechify"
     ],
     "affiliate_program": "elevenlabs",
+    "archetype": "tool_comparison",
+    "stats_fetched": false
+  },
+  {
+    "id": "MJ9H78j6I8I",
+    "title": "\ud83d\udd25 Made 30 Videos in 1 Weekend with Fliki",
+    "uploaded_at": "2026-05-22T07:08:29.013270+00:00",
+    "hook": "Made 30 videos in 1 weekend",
+    "script": "Made 30 videos in 1 weekend with Fliki. Replaced Lumen5, saving 4 hours per video. Fliki's AI voiceover and stock footage did all the work. I just pasted my script and got a complete video with auto-captions. Fliki's ChatGPT integration took it to the next level. Link in the pinned comment to try Fliki free.",
+    "topic": "Fliki vs Lumen5",
+    "tags": [
+      "Fliki",
+      "Lumen5",
+      "text-to-video",
+      "AI tools",
+      "video creation"
+    ],
+    "affiliate_program": "fliki",
     "archetype": "tool_comparison",
     "stats_fetched": false
   }

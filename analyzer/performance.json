@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-21T07:07:14.753403",
+  "last_updated": "2026-05-22T07:03:32.162966",
   "videos": {
     "gZIO6_23b0I": {
       "id": "gZIO6_23b0I",
@@ -11,7 +11,7 @@
       "likes": 35,
       "comments": 1,
       "engagement_rate": 2.853,
-      "views_per_day": 38,
+      "views_per_day": 37,
       "tags": [
         "black holes",
         "cosmic collapse",
@@ -37,7 +37,7 @@
       "likes": 3,
       "comments": 0,
       "engagement_rate": 0.341,
-      "views_per_day": 25,
+      "views_per_day": 24,
       "tags": [
         "cooking tips",
         "dark science",
@@ -63,7 +63,7 @@
       "likes": 15,
       "comments": 0,
       "engagement_rate": 2.641,
-      "views_per_day": 18,
+      "views_per_day": 17,
       "tags": [
         "astronomy",
         "black holes",
@@ -88,7 +88,7 @@
       "likes": 13,
       "comments": 0,
       "engagement_rate": 2.529,
-      "views_per_day": 16,
+      "views_per_day": 15,
       "tags": [
         "astronomy",
         "black holes",
@@ -102,32 +102,6 @@
       "description": "Uncover the dark secrets of black holes\n\n#shorts #science #mindblown #blackholes #space\n\n#Shorts",
       "duration_secs": 29,
       "thumbnail": "https://i.ytimg.com/vi/ERhoFeabX3w/hqdefault.jpg"
-    },
-    "PhtesaWw_5A": {
-      "id": "PhtesaWw_5A",
-      "title": "\ud83d\udd25 Black Holes: The Cosmic Abyss \ud83c\udf00",
-      "channel": "KnowMore-Dailyday",
-      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
-      "published": "2026-04-18T16:12:53Z",
-      "views": 402,
-      "likes": 5,
-      "comments": 0,
-      "engagement_rate": 1.244,
-      "views_per_day": 13,
-      "tags": [
-        "astrophysics",
-        "black holes",
-        "cosmology",
-        "facts",
-        "science",
-        "shorts",
-        "space",
-        "universe",
-        "viral"
-      ],
-      "description": "Uncover the dark secrets of black holes\n\n#shorts #science #mindblown #blackholes #cosmos\n\n#Shorts",
-      "duration_secs": 18,
-      "thumbnail": "https://i.ytimg.com/vi/PhtesaWw_5A/hqdefault.jpg"
     },
     "jQn0rKxwhAk": {
       "id": "jQn0rKxwhAk",
@@ -155,30 +129,31 @@
       "duration_secs": 21,
       "thumbnail": "https://i.ytimg.com/vi/jQn0rKxwhAk/hqdefault.jpg"
     },
-    "GNdBew-G_Kg": {
-      "id": "GNdBew-G_Kg",
-      "title": "\ud83d\udd0d The Dark Science of Kitchen Hacks",
+    "PhtesaWw_5A": {
+      "id": "PhtesaWw_5A",
+      "title": "\ud83d\udd25 Black Holes: The Cosmic Abyss \ud83c\udf00",
       "channel": "KnowMore-Dailyday",
       "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
-      "published": "2026-04-19T16:14:29Z",
-      "views": 328,
-      "likes": 2,
+      "published": "2026-04-18T16:12:53Z",
+      "views": 402,
+      "likes": 5,
       "comments": 0,
-      "engagement_rate": 0.61,
-      "views_per_day": 11,
+      "engagement_rate": 1.244,
+      "views_per_day": 12,
       "tags": [
-        "Maillard reaction",
-        "chemistry",
-        "cooking",
+        "astrophysics",
+        "black holes",
+        "cosmology",
         "facts",
-        "kitchen hacks",
         "science",
         "shorts",
+        "space",
+        "universe",
         "viral"
       ],
-      "description": "The secret science behind kitchen hacks revealed\n\n#shorts #science #mindblown #kitchenhacks #cooking\n\n#Shorts",
-      "duration_secs": 32,
-      "thumbnail": "https://i.ytimg.com/vi/GNdBew-G_Kg/hqdefault.jpg"
+      "description": "Uncover the dark secrets of black holes\n\n#shorts #science #mindblown #blackholes #cosmos\n\n#Shorts",
+      "duration_secs": 18,
+      "thumbnail": "https://i.ytimg.com/vi/PhtesaWw_5A/hqdefault.jpg"
     },
     "vbbAFitH3Hs": {
       "id": "vbbAFitH3Hs",
@@ -206,35 +181,30 @@
       "duration_secs": 29,
       "thumbnail": "https://i.ytimg.com/vi/vbbAFitH3Hs/hqdefault.jpg"
     },
-    "gf0MKf-c57w": {
-      "id": "gf0MKf-c57w",
-      "title": "\ud83d\udea8 Cancel $300/mo Tools \ud83d\udea8",
+    "GNdBew-G_Kg": {
+      "id": "GNdBew-G_Kg",
+      "title": "\ud83d\udd0d The Dark Science of Kitchen Hacks",
       "channel": "KnowMore-Dailyday",
       "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
-      "published": "2026-05-03T10:32:50Z",
-      "views": 162,
-      "likes": 0,
-      "comments": 1,
-      "engagement_rate": 0.617,
+      "published": "2026-04-19T16:14:29Z",
+      "views": 328,
+      "likes": 2,
+      "comments": 0,
+      "engagement_rate": 0.61,
       "views_per_day": 10,
       "tags": [
-        "affiliate marketing",
-        "ai software",
-        "ai tools",
-        "course creation",
-        "creator tools",
-        "email marketing",
-        "make money online",
-        "online business",
-        "saas",
-        "sales funnels",
+        "Maillard reaction",
+        "chemistry",
+        "cooking",
+        "facts",
+        "kitchen hacks",
+        "science",
         "shorts",
-        "side hustle",
-        "tech review"
+        "viral"
       ],
-      "description": "#ad\n\n\ud83d\udd25 Try Systeme.io free \u2014 link in pinned comment\n\ud83d\udc49 Try it here: https://systeme.io/?sa=026901352\n\nDitch expensive tools with Systeme.io, an all-in-one platform for sales funnels, email campaigns, course hosting, and affiliate management\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\ud83d\udce6 As an Amazon Associate I e",
-      "duration_secs": 20,
-      "thumbnail": "https://i.ytimg.com/vi/gf0MKf-c57w/hqdefault.jpg"
+      "description": "The secret science behind kitchen hacks revealed\n\n#shorts #science #mindblown #kitchenhacks #cooking\n\n#Shorts",
+      "duration_secs": 32,
+      "thumbnail": "https://i.ytimg.com/vi/GNdBew-G_Kg/hqdefault.jpg"
     },
     "x9VpwqbHngk": {
       "id": "x9VpwqbHngk",
@@ -262,6 +232,36 @@
       "duration_secs": 24,
       "thumbnail": "https://i.ytimg.com/vi/x9VpwqbHngk/hqdefault.jpg"
     },
+    "gf0MKf-c57w": {
+      "id": "gf0MKf-c57w",
+      "title": "\ud83d\udea8 Cancel $300/mo Tools \ud83d\udea8",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-05-03T10:32:50Z",
+      "views": 162,
+      "likes": 0,
+      "comments": 1,
+      "engagement_rate": 0.617,
+      "views_per_day": 9,
+      "tags": [
+        "affiliate marketing",
+        "ai software",
+        "ai tools",
+        "course creation",
+        "creator tools",
+        "email marketing",
+        "make money online",
+        "online business",
+        "saas",
+        "sales funnels",
+        "shorts",
+        "side hustle",
+        "tech review"
+      ],
+      "description": "#ad\n\n\ud83d\udd25 Try Systeme.io free \u2014 link in pinned comment\n\ud83d\udc49 Try it here: https://systeme.io/?sa=026901352\n\nDitch expensive tools with Systeme.io, an all-in-one platform for sales funnels, email campaigns, course hosting, and affiliate management\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\ud83d\udce6 As an Amazon Associate I e",
+      "duration_secs": 20,
+      "thumbnail": "https://i.ytimg.com/vi/gf0MKf-c57w/hqdefault.jpg"
+    },
     "GF7E-npIDM4": {
       "id": "GF7E-npIDM4",
       "title": "\ud83d\udd2e Black Holes: Cosmic Killers",
@@ -286,32 +286,6 @@
       "description": "Uncover the dark secrets of black holes\n\n#shorts #science #mindblown #blackholes #space\n\n#Shorts",
       "duration_secs": 23,
       "thumbnail": "https://i.ytimg.com/vi/GF7E-npIDM4/hqdefault.jpg"
-    },
-    "bPyEoqsorTs": {
-      "id": "bPyEoqsorTs",
-      "title": "\ud83d\udd01 The Dark Secret Behind Song Repetition",
-      "channel": "KnowMore-Dailyday",
-      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
-      "published": "2026-04-15T10:51:49Z",
-      "views": 230,
-      "likes": 8,
-      "comments": 0,
-      "engagement_rate": 3.478,
-      "views_per_day": 7,
-      "tags": [
-        "brain function",
-        "dopamine",
-        "facts",
-        "music",
-        "psychology",
-        "science",
-        "shorts",
-        "song repetition",
-        "viral"
-      ],
-      "description": "Discover the psychological trap behind song repetition\n\n#shorts #science #music\n\n#Shorts",
-      "duration_secs": 26,
-      "thumbnail": "https://i.ytimg.com/vi/bPyEoqsorTs/hqdefault.jpg"
     },
     "iWaR6KyQ4xM": {
       "id": "iWaR6KyQ4xM",
@@ -342,6 +316,32 @@
       "duration_secs": 16,
       "thumbnail": "https://i.ytimg.com/vi/iWaR6KyQ4xM/hqdefault.jpg"
     },
+    "bPyEoqsorTs": {
+      "id": "bPyEoqsorTs",
+      "title": "\ud83d\udd01 The Dark Secret Behind Song Repetition",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-04-15T10:51:49Z",
+      "views": 230,
+      "likes": 8,
+      "comments": 0,
+      "engagement_rate": 3.478,
+      "views_per_day": 6,
+      "tags": [
+        "brain function",
+        "dopamine",
+        "facts",
+        "music",
+        "psychology",
+        "science",
+        "shorts",
+        "song repetition",
+        "viral"
+      ],
+      "description": "Discover the psychological trap behind song repetition\n\n#shorts #science #music\n\n#Shorts",
+      "duration_secs": 26,
+      "thumbnail": "https://i.ytimg.com/vi/bPyEoqsorTs/hqdefault.jpg"
+    },
     "rX5GXLrXfEc": {
       "id": "rX5GXLrXfEc",
       "title": "\ud83d\udd25 Kitchen Hacks: The Dark Science \ud83c\udf73",
@@ -367,6 +367,36 @@
       "duration_secs": 32,
       "thumbnail": "https://i.ytimg.com/vi/rX5GXLrXfEc/hqdefault.jpg"
     },
+    "ua9I0JbKZFU": {
+      "id": "ua9I0JbKZFU",
+      "title": "\ud83e\udd16 I Cloned My Voice in 60s! \ud83d\ude80",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-05-21T07:13:27Z",
+      "views": 4,
+      "likes": 0,
+      "comments": 1,
+      "engagement_rate": 25.0,
+      "views_per_day": 4,
+      "tags": [
+        "ai",
+        "ai software",
+        "ai tools",
+        "creator tools",
+        "elevenlabs",
+        "make money online",
+        "murf",
+        "saas",
+        "shorts",
+        "side hustle",
+        "speechify",
+        "tech review",
+        "voice_cloning"
+      ],
+      "description": "#ad\n\n\ud83d\udd25 Try ElevenLabs free \u2014 link in pinned comment\n\ud83d\udc49 Try it here: https://try.elevenlabs.io/llb0lne6yo43\n\nElevenLabs AI voice cloning tool review\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\ud83d\udce6 As an Amazon Associate I earn from qualifying purchases\n\n\ud83d\udd17 All my tools & links: https://linktr.ee/7694rk\n\n#aitools #vo",
+      "duration_secs": 22,
+      "thumbnail": "https://i.ytimg.com/vi/ua9I0JbKZFU/hqdefault.jpg"
+    },
     "G761W9LP9ww": {
       "id": "G761W9LP9ww",
       "title": "\ud83d\udd0d Kitchen Hacks: The Secret Science",
@@ -391,36 +421,6 @@
       "description": "Uncover the hidden science behind kitchen hacks\n\n#shorts #science #mindblown #kitchenhacks #cooking\n\n#Shorts",
       "duration_secs": 30,
       "thumbnail": "https://i.ytimg.com/vi/G761W9LP9ww/hqdefault.jpg"
-    },
-    "WkxcWpvwAkY": {
-      "id": "WkxcWpvwAkY",
-      "title": "\ud83e\udd16 Cloned My Voice in 60s! \ud83c\udf99\ufe0f ElevenLabs",
-      "channel": "KnowMore-Dailyday",
-      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
-      "published": "2026-05-13T06:45:21Z",
-      "views": 21,
-      "likes": 0,
-      "comments": 1,
-      "engagement_rate": 4.762,
-      "views_per_day": 3,
-      "tags": [
-        "AI tools",
-        "AI voice generation",
-        "ElevenLabs",
-        "Murf",
-        "ai software",
-        "ai tools",
-        "creator tools",
-        "make money online",
-        "saas",
-        "shorts",
-        "side hustle",
-        "tech review",
-        "voice cloning"
-      ],
-      "description": "#ad\n\n\ud83d\udd25 Try ElevenLabs free \u2014 link in pinned comment\n\ud83d\udc49 Try it here: https://try.elevenlabs.io/llb0lne6yo43\n\nClone your voice with ElevenLabs. Try it free and discover the power of ultra-realistic AI voiceover.\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\ud83d\udce6 As an Amazon Associate I earn from qualifying purchases\n\n",
-      "duration_secs": 19,
-      "thumbnail": "https://i.ytimg.com/vi/WkxcWpvwAkY/hqdefault.jpg"
     },
     "44M9ua1_SXI": {
       "id": "44M9ua1_SXI",
@@ -500,17 +500,47 @@
       "duration_secs": 35,
       "thumbnail": "https://i.ytimg.com/vi/dvpNY15bicw/hqdefault.jpg"
     },
+    "WkxcWpvwAkY": {
+      "id": "WkxcWpvwAkY",
+      "title": "\ud83e\udd16 Cloned My Voice in 60s! \ud83c\udf99\ufe0f ElevenLabs",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-05-13T06:45:21Z",
+      "views": 21,
+      "likes": 0,
+      "comments": 1,
+      "engagement_rate": 4.762,
+      "views_per_day": 2,
+      "tags": [
+        "AI tools",
+        "AI voice generation",
+        "ElevenLabs",
+        "Murf",
+        "ai software",
+        "ai tools",
+        "creator tools",
+        "make money online",
+        "saas",
+        "shorts",
+        "side hustle",
+        "tech review",
+        "voice cloning"
+      ],
+      "description": "#ad\n\n\ud83d\udd25 Try ElevenLabs free \u2014 link in pinned comment\n\ud83d\udc49 Try it here: https://try.elevenlabs.io/llb0lne6yo43\n\nClone your voice with ElevenLabs. Try it free and discover the power of ultra-realistic AI voiceover.\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\ud83d\udce6 As an Amazon Associate I earn from qualifying purchases\n\n",
+      "duration_secs": 19,
+      "thumbnail": "https://i.ytimg.com/vi/WkxcWpvwAkY/hqdefault.jpg"
+    },
     "TaDp1AykMpc": {
       "id": "TaDp1AykMpc",
       "title": "\ud83d\ude80 Fliki vs Lumen5: Make 30 Videos in 1 Weekend",
       "channel": "KnowMore-Dailyday",
       "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
       "published": "2026-05-20T07:07:57Z",
-      "views": 2,
+      "views": 1,
       "likes": 0,
       "comments": 1,
-      "engagement_rate": 50.0,
-      "views_per_day": 2,
+      "engagement_rate": 100.0,
+      "views_per_day": 1,
       "tags": [
         "ai software",
         "ai tools",
@@ -1384,32 +1414,6 @@
       "description": "Discover the dark science behind song repetition\n\n#shorts #science #mindblown #music #psychology\n\n#Shorts",
       "duration_secs": 24,
       "thumbnail": "https://i.ytimg.com/vi/0JaVGHU3t0c/hqdefault.jpg"
-    },
-    "il-ChUHw9I8": {
-      "id": "il-ChUHw9I8",
-      "title": "\ud83d\udd04 The Song Loop: Uncovering the Dark Truth",
-      "channel": "KnowMore-Dailyday",
-      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
-      "published": "2026-04-14T14:14:19Z",
-      "views": 2,
-      "likes": 0,
-      "comments": 0,
-      "engagement_rate": 0.0,
-      "views_per_day": 0,
-      "tags": [
-        "brain patterns",
-        "dopamine",
-        "facts",
-        "music",
-        "psychology",
-        "science",
-        "shorts",
-        "song repetition",
-        "viral"
-      ],
-      "description": "Discover the psychology behind song repetition\n\n#shorts #science #mindblown #music #psychology\n\n#Shorts",
-      "duration_secs": 21,
-      "thumbnail": "https://i.ytimg.com/vi/il-ChUHw9I8/hqdefault.jpg"
     }
   }
 }
