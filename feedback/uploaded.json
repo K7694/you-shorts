@@ -2238,7 +2238,36 @@
     ],
     "affiliate_program": "fliki",
     "archetype": "tool_comparison",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "TaDp1AykMpc",
+      "title": "\ud83d\ude80 Fliki vs Lumen5: Make 30 Videos in 1 Weekend",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-05-20T07:07:57Z",
+      "views": 1,
+      "likes": 0,
+      "comments": 1,
+      "engagement_rate": 100.0,
+      "views_per_day": 0,
+      "tags": [
+        "ai software",
+        "ai tools",
+        "creator tools",
+        "faceless youtube",
+        "fliki",
+        "lumen5",
+        "make money online",
+        "saas",
+        "shorts",
+        "side hustle",
+        "tech review",
+        "text-to-video"
+      ],
+      "description": "#ad\n\n\ud83d\udd25 Try Fliki free \u2014 link in pinned comment\n\ud83d\udc49 Try it here: https://fliki.ai/?via=rajan-kale\n\nCompare Fliki and Lumen5 for faceless YouTube creation\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\ud83d\udce6 As an Amazon Associate I earn from qualifying purchases\n\n\ud83d\udd17 All my tools & links: https://linktr.ee/7694rk\n\n#fliki #",
+      "duration_secs": 23,
+      "thumbnail": "https://i.ytimg.com/vi/TaDp1AykMpc/hqdefault.jpg"
+    }
   },
   {
     "id": "ua9I0JbKZFU",
@@ -2273,6 +2302,24 @@
       "video creation"
     ],
     "affiliate_program": "fliki",
+    "archetype": "tool_comparison",
+    "stats_fetched": false
+  },
+  {
+    "id": "eQzIizi_HoY",
+    "title": "\ud83d\udd25 I Cloned My Voice in 60s with ElevenLabs",
+    "uploaded_at": "2026-05-23T06:28:33.937450+00:00",
+    "hook": "Cloned my voice in 60s",
+    "script": "Cloned my voice in 60s using ElevenLabs. Tested against Murf, ElevenLabs wins with ultra-realistic voiceover. Free tier offers 10k chars/month. Sounds human, not robotic. Try ElevenLabs free \u2014 link in pinned comment",
+    "topic": "AI Voice Cloning",
+    "tags": [
+      "AI tools",
+      "voice cloning",
+      "ElevenLabs",
+      "Murf",
+      "AI voice generation"
+    ],
+    "affiliate_program": "elevenlabs",
     "archetype": "tool_comparison",
     "stats_fetched": false
   }
