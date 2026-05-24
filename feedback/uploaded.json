@@ -2285,7 +2285,37 @@
     ],
     "affiliate_program": "elevenlabs",
     "archetype": "tool_comparison",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "ua9I0JbKZFU",
+      "title": "\ud83e\udd16 I Cloned My Voice in 60s! \ud83d\ude80",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-05-21T07:13:27Z",
+      "views": 4,
+      "likes": 0,
+      "comments": 1,
+      "engagement_rate": 25.0,
+      "views_per_day": 2,
+      "tags": [
+        "ai",
+        "ai software",
+        "ai tools",
+        "creator tools",
+        "elevenlabs",
+        "make money online",
+        "murf",
+        "saas",
+        "shorts",
+        "side hustle",
+        "speechify",
+        "tech review",
+        "voice_cloning"
+      ],
+      "description": "#ad\n\n\ud83d\udd25 Try ElevenLabs free \u2014 link in pinned comment\n\ud83d\udc49 Try it here: https://try.elevenlabs.io/llb0lne6yo43\n\nElevenLabs AI voice cloning tool review\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\ud83d\udce6 As an Amazon Associate I earn from qualifying purchases\n\n\ud83d\udd17 All my tools & links: https://linktr.ee/7694rk\n\n#aitools #vo",
+      "duration_secs": 22,
+      "thumbnail": "https://i.ytimg.com/vi/ua9I0JbKZFU/hqdefault.jpg"
+    }
   },
   {
     "id": "MJ9H78j6I8I",
@@ -2320,6 +2350,24 @@
       "AI voice generation"
     ],
     "affiliate_program": "elevenlabs",
+    "archetype": "tool_comparison",
+    "stats_fetched": false
+  },
+  {
+    "id": "BlnULcV0nLQ",
+    "title": "Make 30 Videos in 1 Weekend \ud83d\ude80",
+    "uploaded_at": "2026-05-24T06:56:32.541670+00:00",
+    "hook": "Saved $500/month with Fliki",
+    "script": "Saved $500/month with Fliki. Made 30 videos in one weekend, no editing software needed. Fliki creates videos in 1 click from blog posts, with 2,000+ AI voices and built-in stock footage. Lumen5 can't match Fliki's speed and quality. Try Fliki free \u2014 link in pinned comment",
+    "topic": "Fliki vs Lumen5",
+    "tags": [
+      "fliki",
+      "lumen5",
+      "faceless youtube",
+      "video creation",
+      "ai tools"
+    ],
+    "affiliate_program": "fliki",
     "archetype": "tool_comparison",
     "stats_fetched": false
   }
