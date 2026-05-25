@@ -2333,7 +2333,37 @@
     ],
     "affiliate_program": "fliki",
     "archetype": "tool_comparison",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "MJ9H78j6I8I",
+      "title": "\ud83d\udd25 Made 30 Videos in 1 Weekend with Fliki",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-05-22T07:08:59Z",
+      "views": 6,
+      "likes": 0,
+      "comments": 1,
+      "engagement_rate": 16.667,
+      "views_per_day": 2,
+      "tags": [
+        "AI tools",
+        "Fliki",
+        "Lumen5",
+        "ai software",
+        "ai tools",
+        "creator tools",
+        "make money online",
+        "saas",
+        "shorts",
+        "side hustle",
+        "tech review",
+        "text-to-video",
+        "video creation"
+      ],
+      "description": "#ad\n\n\ud83d\udd25 Try Fliki free \u2014 link in pinned comment\n\ud83d\udc49 Try it here: https://fliki.ai/?via=rajan-kale\n\nFliki text-to-video AI vs Lumen5. Create videos in minutes, not hours.\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\ud83d\udce6 As an Amazon Associate I earn from qualifying purchases\n\n\ud83d\udd17 All my tools & links: https://linktr.ee/",
+      "duration_secs": 22,
+      "thumbnail": "https://i.ytimg.com/vi/MJ9H78j6I8I/hqdefault.jpg"
+    }
   },
   {
     "id": "eQzIizi_HoY",
@@ -2351,7 +2381,37 @@
     ],
     "affiliate_program": "elevenlabs",
     "archetype": "tool_comparison",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "eQzIizi_HoY",
+      "title": "\ud83d\udd25 I Cloned My Voice in 60s with ElevenLabs",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-05-23T06:29:09Z",
+      "views": 9,
+      "likes": 0,
+      "comments": 1,
+      "engagement_rate": 11.111,
+      "views_per_day": 4,
+      "tags": [
+        "AI tools",
+        "AI voice generation",
+        "ElevenLabs",
+        "Murf",
+        "ai software",
+        "ai tools",
+        "creator tools",
+        "make money online",
+        "saas",
+        "shorts",
+        "side hustle",
+        "tech review",
+        "voice cloning"
+      ],
+      "description": "#ad\n\n\ud83d\udd25 Try ElevenLabs free \u2014 link in pinned comment\n\ud83d\udc49 Try it here: https://try.elevenlabs.io/llb0lne6yo43\n\nDiscover how ElevenLabs AI voice cloning outperforms Murf\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\ud83d\udce6 As an Amazon Associate I earn from qualifying purchases\n\n\ud83d\udd17 All my tools & links: https://linktr.ee/76",
+      "duration_secs": 19,
+      "thumbnail": "https://i.ytimg.com/vi/eQzIizi_HoY/hqdefault.jpg"
+    }
   },
   {
     "id": "BlnULcV0nLQ",
@@ -2368,6 +2428,24 @@
       "ai tools"
     ],
     "affiliate_program": "fliki",
+    "archetype": "tool_comparison",
+    "stats_fetched": false
+  },
+  {
+    "id": "cQ5npolmeUA",
+    "title": "\ud83d\ude80 Clone Your Voice in 60s!",
+    "uploaded_at": "2026-05-25T08:10:37.416270+00:00",
+    "hook": "Cloned my voice in 60s",
+    "script": "Cloned my voice in 60s with ElevenLabs. Sounds human, right? I compared it to Murf and the difference is huge. ElevenLabs wins with 29 languages and a free tier. Try ElevenLabs free \u2014 link in pinned comment",
+    "topic": "AI Voice Cloning",
+    "tags": [
+      "AI tools",
+      "content creation",
+      "voice cloning",
+      "productivity",
+      "efficiency"
+    ],
+    "affiliate_program": "elevenlabs",
     "archetype": "tool_comparison",
     "stats_fetched": false
   }
