@@ -2429,7 +2429,36 @@
     ],
     "affiliate_program": "fliki",
     "archetype": "tool_comparison",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "BlnULcV0nLQ",
+      "title": "Make 30 Videos in 1 Weekend \ud83d\ude80",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-05-24T06:57:03Z",
+      "views": 0,
+      "likes": 0,
+      "comments": 1,
+      "engagement_rate": 100.0,
+      "views_per_day": 0,
+      "tags": [
+        "ai software",
+        "ai tools",
+        "creator tools",
+        "faceless youtube",
+        "fliki",
+        "lumen5",
+        "make money online",
+        "saas",
+        "shorts",
+        "side hustle",
+        "tech review",
+        "video creation"
+      ],
+      "description": "#ad\n\n\ud83d\udd25 Try Fliki free \u2014 link in pinned comment\n\ud83d\udc49 Try it here: https://fliki.ai/?via=rajan-kale\n\nCompare Fliki and Lumen5 for faceless YouTube creation\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\ud83d\udce6 As an Amazon Associate I earn from qualifying purchases\n\n\ud83d\udd17 All my tools & links: https://linktr.ee/7694rk\n\n#fliki #",
+      "duration_secs": 21,
+      "thumbnail": "https://i.ytimg.com/vi/BlnULcV0nLQ/hqdefault.jpg"
+    }
   },
   {
     "id": "cQ5npolmeUA",
@@ -2446,6 +2475,24 @@
       "efficiency"
     ],
     "affiliate_program": "elevenlabs",
+    "archetype": "tool_comparison",
+    "stats_fetched": false
+  },
+  {
+    "id": "yC5t0XVNzZs",
+    "title": "\ud83d\ude80 AI Video Creation: 30 Videos in 1 Weekend with Fliki",
+    "uploaded_at": "2026-05-26T07:07:07.856411+00:00",
+    "hook": "Saved $500/month with Fliki",
+    "script": "Saved $500/month with Fliki. Created 30 videos in one weekend, no editing software. Fliki: blog post to video in 1 click, 2,000+ AI voices, built-in stock footage. Lumen5 can't match. Fliki's ChatGPT integration automates faceless YouTube channels. Try Fliki free \u2014 link in pinned comment",
+    "topic": "Fliki vs Lumen5",
+    "tags": [
+      "AI",
+      "content creation",
+      "video production",
+      "productivity",
+      "technology"
+    ],
+    "affiliate_program": "fliki",
     "archetype": "tool_comparison",
     "stats_fetched": false
   }
