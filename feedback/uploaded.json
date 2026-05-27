@@ -2495,5 +2495,23 @@
     "affiliate_program": "fliki",
     "archetype": "tool_comparison",
     "stats_fetched": false
+  },
+  {
+    "id": "fbZo2UqBvhQ",
+    "title": "I Cloned My Voice in 60s \ud83e\udd2f",
+    "uploaded_at": "2026-05-27T07:54:22.537748+00:00",
+    "hook": "Cloned my voice in 60s",
+    "script": "Cloned my voice in 60s with ElevenLabs. Generated voiceover in 30+ languages, indistinguishable from human. Replaced expensive voice actors, saved $200+/video. ElevenLabs vs Murf: which AI voice wins? ElevenLabs cloned my voice perfectly, try it free - link in the pinned comment",
+    "topic": "AI voice cloning",
+    "tags": [
+      "ai",
+      "voice cloning",
+      "elevenlabs",
+      "murf",
+      "speechify"
+    ],
+    "affiliate_program": "elevenlabs",
+    "archetype": "tool_comparison",
+    "stats_fetched": false
   }
 ]
