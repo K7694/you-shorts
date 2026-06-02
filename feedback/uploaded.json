@@ -2621,5 +2621,23 @@
     "affiliate_program": "fliki",
     "archetype": "tool_comparison",
     "stats_fetched": false
+  },
+  {
+    "id": "xZ4jcPZnWDs",
+    "title": "\ud83d\udd25 Cloned My Voice in 60s",
+    "uploaded_at": "2026-06-02T08:20:00.078857+00:00",
+    "hook": "Cloned my voice in 60s",
+    "script": "Cloned my voice in 60s with ElevenLabs. Compared to Murf, ElevenLabs generates ultra-realistic AI voiceover in 30+ languages. Free tier offers 10k chars/month. I tested both: ElevenLabs sounds human, while Murf sounds robotic. Ditch expensive voice actors and try ElevenLabs - link in the pinned comment",
+    "topic": "ElevenLabs Voice Cloning",
+    "tags": [
+      "AI voice generation",
+      "voice cloning",
+      "ElevenLabs",
+      "Murf",
+      "AI tools"
+    ],
+    "affiliate_program": "elevenlabs",
+    "archetype": "tool_comparison",
+    "stats_fetched": false
   }
 ]
