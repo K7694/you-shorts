@@ -2639,5 +2639,23 @@
     "affiliate_program": "elevenlabs",
     "archetype": "tool_comparison",
     "stats_fetched": false
+  },
+  {
+    "id": "X6tEe49_Uhs",
+    "title": "Fliki vs Lumen5: 30 Videos in 1 Weekend? \ud83e\udd2f",
+    "uploaded_at": "2026-06-03T08:41:02.231546+00:00",
+    "hook": "Saved 40 hours with Fliki",
+    "script": "Saved 40 hours with Fliki. Made 30 videos in one weekend, no editing software. Fliki: blog post to video in 1 click, 2,000+ AI voices, built-in stock footage. Lumen5 can't match. Fliki's auto-captions and ChatGPT integration change the game. Ditch manual editing, try Fliki - link in pinned comment",
+    "topic": "Fliki vs Lumen5",
+    "tags": [
+      "AI",
+      "Fliki",
+      "Lumen5",
+      "text-to-video",
+      "productivity"
+    ],
+    "affiliate_program": "fliki",
+    "archetype": "tool_comparison",
+    "stats_fetched": false
   }
 ]
