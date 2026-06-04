@@ -2620,7 +2620,37 @@
     ],
     "affiliate_program": "fliki",
     "archetype": "tool_comparison",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "G922V-EMAms",
+      "title": "\ud83d\udcf9 Fliki vs Lumen5: Make 30 Videos in 1 Weekend?",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-06-01T09:07:35Z",
+      "views": 1,
+      "likes": 0,
+      "comments": 1,
+      "engagement_rate": 100.0,
+      "views_per_day": 0,
+      "tags": [
+        "ai software",
+        "ai tools",
+        "ai-voices",
+        "auto-captions",
+        "creator tools",
+        "fliki",
+        "lumen5",
+        "make money online",
+        "saas",
+        "shorts",
+        "side hustle",
+        "tech review",
+        "text-to-video"
+      ],
+      "description": "#ad\n\n\ud83d\udd25 Try Fliki free \u2014 link in pinned comment\n\ud83d\udc49 Try it here: https://fliki.ai/?via=rajan-kale\n\nCompare Fliki and Lumen5 for faceless YouTube video creation\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\ud83d\udce6 As an Amazon Associate I earn from qualifying purchases\n\n\ud83d\udd17 All my tools & links: https://linktr.ee/7694rk\n\n#f",
+      "duration_secs": 22,
+      "thumbnail": "https://i.ytimg.com/vi/G922V-EMAms/hqdefault.jpg"
+    }
   },
   {
     "id": "xZ4jcPZnWDs",
@@ -2655,6 +2685,24 @@
       "productivity"
     ],
     "affiliate_program": "fliki",
+    "archetype": "tool_comparison",
+    "stats_fetched": false
+  },
+  {
+    "id": "JFzOOW9clrw",
+    "title": "\ud83e\udd16 I Cloned My Voice in 60s \ud83d\udcf9",
+    "uploaded_at": "2026-06-04T08:11:43.150446+00:00",
+    "hook": "Cloned my voice in 60 seconds",
+    "script": "Cloned my voice in 60 seconds with ElevenLabs. Generated ultra-realistic AI voiceover in 30+ languages. Compared to Murf, ElevenLabs sounds indistinguishable from human. Free tier gives 10k chars/month. Try ElevenLabs for your YouTube videos \u2014 link in the pinned comment",
+    "topic": "ElevenLabs vs Murf AI Voice",
+    "tags": [
+      "AI",
+      "voice_cloning",
+      "ElevenLabs",
+      "Murf",
+      "YouTube"
+    ],
+    "affiliate_program": "elevenlabs",
     "archetype": "tool_comparison",
     "stats_fetched": false
   }
