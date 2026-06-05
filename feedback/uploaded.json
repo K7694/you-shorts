@@ -2668,7 +2668,37 @@
     ],
     "affiliate_program": "elevenlabs",
     "archetype": "tool_comparison",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "xZ4jcPZnWDs",
+      "title": "\ud83d\udd25 Cloned My Voice in 60s",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-06-02T08:20:19Z",
+      "views": 1,
+      "likes": 0,
+      "comments": 1,
+      "engagement_rate": 100.0,
+      "views_per_day": 0,
+      "tags": [
+        "AI tools",
+        "AI voice generation",
+        "ElevenLabs",
+        "Murf",
+        "ai software",
+        "ai tools",
+        "creator tools",
+        "make money online",
+        "saas",
+        "shorts",
+        "side hustle",
+        "tech review",
+        "voice cloning"
+      ],
+      "description": "#ad\n\n\ud83d\udd25 Try ElevenLabs free \u2014 link in pinned comment\n\ud83d\udc49 Try it here: https://try.elevenlabs.io/llb0lne6yo43\n\nElevenLabs vs Murf: AI voice cloning comparison\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\ud83d\udce6 As an Amazon Associate I earn from qualifying purchases\n\n\ud83d\udd17 All my tools & links: https://linktr.ee/7694rk\n\n#sho",
+      "duration_secs": 24,
+      "thumbnail": "https://i.ytimg.com/vi/xZ4jcPZnWDs/hqdefault.jpg"
+    }
   },
   {
     "id": "X6tEe49_Uhs",
@@ -2703,6 +2733,24 @@
       "YouTube"
     ],
     "affiliate_program": "elevenlabs",
+    "archetype": "tool_comparison",
+    "stats_fetched": false
+  },
+  {
+    "id": "Rq_s2xEO2AU",
+    "title": "\ud83d\udd25 Fliki vs Lumen5: Make 30 Videos in 1 Weekend",
+    "uploaded_at": "2026-06-05T07:58:48.005239+00:00",
+    "hook": "Saved 40 hours/month",
+    "script": "Saved 40 hours/month with Fliki. Made 30 videos in one weekend, no editing software needed. Fliki creates videos in 1 click, with 2,000+ AI voices and built-in stock footage. Lumen5 can't match Fliki's speed and quality. Fliki's auto-captions and ChatGPT integration make it a game-changer. Link to try Fliki free in the pinned comment.",
+    "topic": "Fliki vs Lumen5",
+    "tags": [
+      "AI",
+      "text-to-video",
+      "Fliki",
+      "Lumen5",
+      "productivity"
+    ],
+    "affiliate_program": "fliki",
     "archetype": "tool_comparison",
     "stats_fetched": false
   }
