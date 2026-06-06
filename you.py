@@ -688,20 +688,36 @@ def _generate_script_curiosity(topic: str = None) -> dict:
         except Exception:
             brief = {}
 
-        if brief.get("topic"):
-            print(f"   📊 Using Analyzer brief: {brief['topic']}")
+        # Taint-guard: the analyzer's state (used_topics, performance,
+        # competitor cache) still carries AI-tool/affiliate residue from
+        # the Phase 1 era, so it can emit affiliate topics like
+        # "Review of AI-powered video editing tools". Reject any brief
+        # whose topic/hook reads affiliate and fall through to fresh
+        # niche-based curiosity generation. This self-heals as science
+        # videos replace the old history.
+        brief_topic = brief.get("topic", "")
+        brief_blob = {"hook": brief.get("hook", ""), "script": brief_topic}
+        brief_is_clean = brief_topic and not _is_affiliate_tainted(brief_blob)
+
+        if brief_is_clean:
+            print(f"   📊 Using Analyzer brief: {brief_topic}")
             topic_part = (
-                f'The topic is: "{brief["topic"]}"\n'
+                f'The topic is: "{brief_topic}"\n'
                 f'Suggested hook direction: "{brief.get("hook", "")}"\n'
                 f'Script direction: {brief.get("script_direction", "")}'
             )
         else:
+            if brief_topic:
+                print(f"   🚫 Brief topic looks affiliate-tainted, ignoring: \"{brief_topic}\"")
+            print(f"   🧪 Generating a fresh curiosity topic from the niche")
             topic_part = (
                 f'Come up with a UNIQUE, surprising, genuinely curiosity-provoking topic '
                 f'in this space: "{CHANNEL_NICHE}".\n'
                 f'It must be something people are intrinsically curious about and would '
-                f'stop scrolling to learn. It MUST be different from everything in the '
-                f'"TOPICS ALREADY USED" list below.'
+                f'stop scrolling to learn (e.g. space, physics, the human body, unsolved '
+                f'mysteries, psychology). Absolutely NO software, apps, AI tools, business, '
+                f'money, or productivity topics.\n'
+                f'It MUST be different from everything in the "TOPICS ALREADY USED" list below.'
             )
     else:
         topic_part = f'The topic is: "{topic}"'
