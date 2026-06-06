@@ -1099,7 +1099,11 @@ def _download_pexels_image(query: str, path: str, index: int, used_ids: set) -> 
                 "query": attempt_q, "orientation": "portrait",
                 "size": "large", "per_page": 15,
             }))
-            req = urllib.request.Request(url, headers={"Authorization": PEXELS_API_KEY})
+            req = urllib.request.Request(url, headers={
+                "Authorization": PEXELS_API_KEY,
+                # Pexels 403s the default Python-urllib UA — send a real one.
+                "User-Agent": "Mozilla/5.0 (YouShorts/1.0)",
+            })
             with urllib.request.urlopen(req, timeout=30) as resp:
                 data = json.loads(resp.read().decode())
 
