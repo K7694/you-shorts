@@ -1,14 +1,12 @@
 name: YOU — Auto YouTube Shorts
 
 on:
-  # ── PHASE 3: 1x daily — tighter recipe (set 2026-05-19) ──
-  # May 12–15 analytics review (9 videos, 34 views, 0 organic
-  # likes) showed 8/9 videos didn't earn impressions. 3x/day on
-  # a cold channel may be reading as "spam" to the algo. Cutting
-  # to 1x/day at the prime IST slot.
-  # Also: PRIORITY_PROGRAMS narrowed to elevenlabs+fliki, archetypes
-  # locked to tool_comparison only (see config.py).
-  # Re-evaluate 2026-05-26.
+  # ── RESET (2026-05-31): 1x/day curiosity science ──
+  # Channel reverted from AI-affiliate (failed) to Phase 0 curiosity
+  # content (worked) per RESET_BUILD_SPEC.md. Monetization OFF.
+  # 1x/day is the conservative, free-tier-safe cadence that avoids
+  # re-tripping the "spam volume" signal on a recovering channel.
+  # Diagnostic batch: 6 videos over ~7 days, then read the verdict.
   schedule:
     - cron: '30 3 * * *'   # 9:00 AM IST
 
