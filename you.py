@@ -429,27 +429,43 @@ def _load_top_performers() -> list:
     return []
 
 
-def _build_few_shot_examples() -> str:
-    """Build the few-shot section of the script prompt.
+# Markers that flag a past video as affiliate/sales content. Used to keep
+# affiliate-era top performers out of the curiosity few-shot prompt so the
+# reset content doesn't drift back toward "sell-y" scripts.
+_AFFILIATE_TAINT = (
+    "pinned comment", "link in", "$", "/mo", "/month", "free trial", "affiliate",
+    "subscription", "cancel", "tool", "saas", "systeme", "beehiiv", "elevenlabs",
+    "submagic", "fliki", "pictory", "canva", "subscribe",
+)
 
-    Uses real top-performing videos when available (self-improving),
-    otherwise falls back to curated static examples.
-    """
-    performers = _load_top_performers()
 
-    if performers:
-        lines = ["YOUR ACTUAL TOP PERFORMING VIDEOS — study and replicate their style, tone, and structure:\n"]
-        for i, p in enumerate(performers[:3], 1):
-            views = p.get("views", 0)
-            eng   = p.get("engagement_rate", 0)
-            lines.append(f"--- YOUR TOP VIDEO #{i} ({views:,} views | {eng}% engagement) ---")
-            lines.append(f'HOOK:   "{p["hook"]}"')
-            lines.append(f'SCRIPT: "{p["script"][:500]}..."')
-            lines.append(f"WHY IT WORKED: This is a real video from your channel that outperformed — replicate its energy.\n")
-        return "\n".join(lines)
+def _is_affiliate_tainted(p: dict) -> bool:
+    blob = f"{p.get('hook', '')} {p.get('script', '')}".lower()
+    return any(m in blob for m in _AFFILIATE_TAINT)
 
-    # Static fallback — curated viral AI-tools/affiliate examples
-    return """PROVEN VIRAL SCRIPTS — study and replicate their structure, then write something equally powerful:
+
+# Phase 0 science few-shot — the exact curated examples from the build that
+# pulled 312 avg views/video. Used as the curiosity fallback.
+_CURIOSITY_STATIC_EXAMPLES = """PROVEN VIRAL SCRIPTS — study and replicate their structure, then write something equally powerful:
+
+--- EXAMPLE 1 (2.3M views, 94% completion rate) ---
+HOOK: "Your body is making a decision right now that will kill you in 40 years."
+SCRIPT: "Your body is making a decision right now that will kill you in 40 years. Every meal you eat trains your immune system. Right now, chronic inflammation is quietly destroying your arteries — one molecule at a time. It takes 30 years to accumulate. By the time you feel symptoms, half the damage is done. The terrifying part? The foods triggering it taste incredible. Sugar. Seed oils. Ultra-processed carbs. Your immune system treats them like a slow invasion. Every bite fans the fire. The damage started years ago. And your body is making that decision right now."
+WHY IT WORKS: Opens with a personal threat, builds dread through specificity, loops perfectly.
+
+--- EXAMPLE 2 (5.1M views, 96% completion rate) ---
+HOOK: "There is a version of you that never existed, and it almost did."
+SCRIPT: "There is a version of you that never existed, and it almost did. Your mother released 400 eggs in her lifetime. Your father produced 525 billion sperm. The odds of the exact sperm meeting the exact egg that became you: one in 400 quadrillion. But it gets darker. Every ancestor you have ever had survived war, plague, famine, and predators — for 3.8 billion years straight. One death, anywhere in that chain, and you vanish. You are the result of the most improbable victory streak in the history of the universe. And yet — there is still a version of you that never existed."
+WHY IT WORKS: Mathematical escalation creates awe, loop forces rewatch.
+
+--- EXAMPLE 3 (3.7M views, 91% completion rate) ---
+HOOK: "The universe should not exist. Physics says so."
+SCRIPT: "The universe should not exist. Physics says so. At the Big Bang, matter and antimatter were created in equal amounts. They should have annihilated each other — perfectly, completely, leaving nothing. Not even darkness. Just void. But for every billion antimatter particles, there was one extra matter particle. One. That asymmetry is the only reason stars, planets, and you exist. Scientists have no explanation. The Standard Model — our best theory of reality — predicts a universe of pure emptiness. The universe should not exist. And yet here you are, proof that physics is missing something."
+WHY IT WORKS: Opens with a paradox, ends with awe, leaves viewer questioning everything."""
+
+
+# Legacy affiliate few-shot — used only while MONETIZATION_ENABLED is True.
+_AFFILIATE_STATIC_EXAMPLES = """PROVEN VIRAL SCRIPTS — study and replicate their structure, then write something equally powerful:
 
 --- EXAMPLE 1 (1.8M views, 92% completion rate) — TOOL REVIEW ---
 HOOK: "This free AI tool just replaced my $500/month video editor."
@@ -465,6 +481,35 @@ WHY IT WORKS: $0 repeated, escalating reveal of automation stack, relatable outc
 HOOK: "Stop paying for Canva Pro. This free alternative does everything."
 SCRIPT: "Stop paying for Canva Pro. This free alternative does everything. It's called Photopea. Same interface. Same features. No watermarks. No subscription. Here's what most people don't know — Photopea supports PSD files, layers, masks, and even Illustrator files. Canva can't do any of that. I tested both on the same thumbnail design. Photopea exported at higher quality. Canva added compression artifacts. The only advantage Canva has is templates. But Photopea has AI generation now. Free. No credit card. No trial that expires. Just the tool. You're welcome."
 WHY IT WORKS: Opens by attacking a known paid tool, comparison creates drama, confident ending."""
+
+
+def _build_few_shot_examples() -> str:
+    """Build the few-shot section of the script prompt.
+
+    Uses real top-performing videos when available (self-improving),
+    otherwise falls back to curated static examples. In curiosity mode
+    (MONETIZATION_ENABLED=False) affiliate-era performers are filtered
+    out so the prompt can't drift back toward sales scripts.
+    """
+    performers = _load_top_performers()
+
+    if performers and not MONETIZATION_ENABLED:
+        performers = [p for p in performers if not _is_affiliate_tainted(p)]
+
+    # Need at least 2 clean real examples to use the dynamic path
+    if performers and len(performers) >= 2:
+        lines = ["YOUR ACTUAL TOP PERFORMING VIDEOS — study and replicate their style, tone, and structure:\n"]
+        for i, p in enumerate(performers[:3], 1):
+            views = p.get("views", 0)
+            eng   = p.get("engagement_rate", 0)
+            lines.append(f"--- YOUR TOP VIDEO #{i} ({views:,} views | {eng}% engagement) ---")
+            lines.append(f'HOOK:   "{p["hook"]}"')
+            lines.append(f'SCRIPT: "{p["script"][:500]}..."')
+            lines.append(f"WHY IT WORKED: This is a real video from your channel that outperformed — replicate its energy.\n")
+        return "\n".join(lines)
+
+    # Static fallback — curiosity science when monetization is off, else affiliate
+    return _AFFILIATE_STATIC_EXAMPLES if MONETIZATION_ENABLED else _CURIOSITY_STATIC_EXAMPLES
 
 
 def _pick_featured_program(used_topics: list) -> str:
