@@ -726,7 +726,20 @@ def _generate_script_curiosity(topic: str = None) -> dict:
     image_prompt_instructions = ""
     image_prompt_json = ""
     if not USE_BACKGROUND_VIDEO:
-        image_prompt_instructions = f'''
+        if IMAGE_SOURCE == "pexels":
+            # Short, concrete search queries for a stock-photo library.
+            image_prompt_instructions = f'''
+Also generate {IMAGES_PER_VIDEO} STOCK-PHOTO SEARCH QUERIES, one per beat of
+the script (they play as a slideshow with slow pan-zoom). These are fed to a
+stock photo library, so:
+- Use SHORT, CONCRETE visual subjects of 1-3 words (e.g. "black hole",
+  "galaxy", "human brain", "ocean depths", "lightning storm", "dna")
+- Each query must match the concrete thing the narration describes at that beat
+- Prefer dramatic, cinematic natural/scientific subjects that exist as photos
+- Query 1 should be the most visually striking (it's the first frame)
+- NO sentences, NO abstract concepts, NO text/UI/logos, NO specific named people'''
+        else:
+            image_prompt_instructions = f'''
 Also generate {IMAGES_PER_VIDEO} image prompts for AI-generated visuals,
 one per beat of the script (they play as a slideshow with slow pan-zoom).
 - Image 1 MUST be the most visually ARRESTING (it's the first frame — it stops the swipe)
@@ -734,7 +747,7 @@ one per beat of the script (they play as a slideshow with slow pan-zoom).
 - Style: dark cinematic, high contrast, deep blues/purples, hyper-realistic
 - Think: cosmic scales, microscopic zooms, impossible physics visualized, dramatic lighting
 - NO text, NO watermarks, NO realistic human faces'''
-        image_prompt_json = ',\n    "image_prompts": ["prompt1", "prompt2", "prompt3", "prompt4", "prompt5"]'
+        image_prompt_json = ',\n    "image_prompts": ["query1", "query2", "query3", "query4", "query5"]'
 
     prompt = f"""You are the world's most viral YouTube Shorts scriptwriter. Your scripts have generated billions of views by making people feel awe, curiosity, and the urge to share.
 
@@ -1061,6 +1074,61 @@ def _download_ai_image(prompt: str, path: str, index: int) -> bool:
         return False
 
 
+def _download_pexels_image(query: str, path: str, index: int, used_ids: set) -> bool:
+    """Download one portrait stock photo from Pexels (free API key).
+
+    Pollinations' free image gen monetized (HTTP 402), so this is the
+    current $0 visual source. Progressively broadens the query if the
+    first search returns nothing, and avoids reusing the same photo
+    within a single video for visual variety.
+    """
+    if not PEXELS_API_KEY:
+        print(f"      ⚠️  Scene {index+1}: PEXELS_API_KEY not set — using fallback")
+        return False
+
+    # Build short, search-friendly queries (Pexels prefers concrete nouns)
+    cleaned = re.sub(r"[^\w\s]", " ", query).strip()
+    words = cleaned.split()
+    candidates = [" ".join(words[:5]), " ".join(words[:3]), " ".join(words[:1]) or "space"]
+
+    for attempt_q in candidates:
+        if not attempt_q:
+            continue
+        try:
+            url = ("https://api.pexels.com/v1/search?" + urllib.parse.urlencode({
+                "query": attempt_q, "orientation": "portrait",
+                "size": "large", "per_page": 15,
+            }))
+            req = urllib.request.Request(url, headers={"Authorization": PEXELS_API_KEY})
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                data = json.loads(resp.read().decode())
+
+            photos = data.get("photos", [])
+            fresh = [p for p in photos if p.get("id") not in used_ids]
+            pool = fresh or photos
+            if not pool:
+                continue
+
+            photo = pool[index % len(pool)]
+            used_ids.add(photo.get("id"))
+            src = photo.get("src", {})
+            img_url = src.get("portrait") or src.get("large2x") or src.get("original")
+            if not img_url:
+                continue
+
+            ireq = urllib.request.Request(img_url, headers={"User-Agent": "You-Agent/1.0"})
+            with urllib.request.urlopen(ireq, timeout=60) as iresp:
+                with open(path, "wb") as f:
+                    f.write(iresp.read())
+            size_kb = Path(path).stat().st_size / 1024
+            print(f"      🖼️  Scene {index+1} ready — Pexels \"{attempt_q}\" ({size_kb:.0f} KB)")
+            return True
+        except Exception as e:
+            print(f"      ⚠️  Pexels '{attempt_q}' failed: {e}")
+            continue
+    return False
+
+
 def _make_fallback_image(path: str):
     """Create a solid dark background as fallback."""
     subprocess.run([
@@ -1071,27 +1139,32 @@ def _make_fallback_image(path: str):
 
 
 def generate_images(prompts: list, session_id: str) -> list:
-    """Generate all AI images for a video."""
+    """Fetch one visual per script beat from the configured IMAGE_SOURCE."""
     # Skip image gen ONLY when brainrot is on AND mascot overlay is off.
     # When mascot overlay is on we need the mascot images even if
     # brainrot is also enabled (split-screen layout uses both).
     if USE_BACKGROUND_VIDEO and not USE_MASCOT_OVERLAY:
         return []
 
-    print(f"   👁️  Generating {len(prompts)} AI images...")
+    print(f"   👁️  Fetching {len(prompts)} visuals (source: {IMAGE_SOURCE})...")
     img_dir = TEMP_DIR / session_id
     img_dir.mkdir(exist_ok=True)
 
     paths = []
+    used_ids: set = set()
     for i, prompt in enumerate(prompts):
         path = str(img_dir / f"scene_{i:02d}.jpg")
-        if not _download_ai_image(prompt, path, i):
+        if IMAGE_SOURCE == "pexels":
+            ok = _download_pexels_image(prompt, path, i, used_ids)
+        else:
+            ok = _download_ai_image(prompt, path, i)
+        if not ok:
             _make_fallback_image(path)
         paths.append(path)
         if i < len(prompts) - 1:
-            time.sleep(1.5)  # Be nice to free service
+            time.sleep(0.5)  # Be nice to the free API
 
-    print(f"   ✅ {len(paths)} images ready")
+    print(f"   ✅ {len(paths)} visuals ready")
     return paths
 
 
@@ -1873,16 +1946,12 @@ def create_video(topic: str = None, upload: bool = True) -> dict:
         print("\n  ┌─ 2/5 ── 👁️  EYES ──────────────────────────")
         image_prompts = script.get("image_prompts")
         if not image_prompts and not USE_BACKGROUND_VIDEO:
-            # LLM failed to return prompts — generate cinematic science fallbacks
-            _t = script.get("topic", "the cosmos")
-            image_prompts = [
-                f"epic cinematic wide shot illustrating {_t}, deep space, dramatic lighting",
-                f"extreme close-up macro detail related to {_t}, hyper-realistic",
-                f"awe-inspiring cosmic vista, nebula and stars, related to {_t}",
-                f"abstract visualization of {_t}, glowing energy, dark background",
-                f"dramatic scientific illustration of {_t}, volumetric light, 4k",
-            ]
-            print("      ⚠️  No image prompts from LLM — using cinematic science fallbacks")
+            # LLM failed to return prompts — short concrete stock subjects.
+            # Lead with the topic, then generic cinematic science fillers
+            # that always return strong Pexels results.
+            _t = script.get("topic", "galaxy")
+            image_prompts = [_t, "galaxy", "nebula", "deep space", "stars"]
+            print("      ⚠️  No image prompts from LLM — using stock science fallbacks")
         images = generate_images(image_prompts or [], sid)
         r["images"] = images
 

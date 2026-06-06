@@ -54,6 +54,18 @@ GROQ_API_KEY = os.getenv("GROQ_API_KEY", "")
 # 1c. YouTube Data API key (for the Analyzer — reading YouTube data)
 YOUTUBE_DATA_API_KEY = os.getenv("YOUTUBE_DATA_API_KEY", "")
 
+# 1d. Pexels API key (FREE — for stock visuals).
+#     RESET (2026-06-06): Pollinations.ai's free image gen monetized
+#     (returns HTTP 402), so the per-beat visuals now come from Pexels
+#     stock photos. Get a free key in 30s: https://www.pexels.com/api/
+#     Set via env / GitHub Secret:  PEXELS_API_KEY=your-key
+PEXELS_API_KEY = os.getenv("PEXELS_API_KEY", "")
+
+# Visual source for the per-beat slideshow:
+#   "pexels"       → free stock photos (current, reliable, $0)
+#   "pollinations" → legacy AI image gen (DEAD: now paid / 402)
+IMAGE_SOURCE = "pexels"
+
 # 2. What is your channel about? Be SPECIFIC.
 #    RESET (2026-05-31): reverted to the curiosity niche that worked in
 #    Phase 0 (312 avg views/video). This drives both the analyzer brief
