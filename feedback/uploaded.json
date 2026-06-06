@@ -2716,7 +2716,37 @@
     ],
     "affiliate_program": "fliki",
     "archetype": "tool_comparison",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "X6tEe49_Uhs",
+      "title": "Fliki vs Lumen5: 30 Videos in 1 Weekend? \ud83e\udd2f",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-06-03T08:41:27Z",
+      "views": 0,
+      "likes": 0,
+      "comments": 1,
+      "engagement_rate": 100.0,
+      "views_per_day": 0,
+      "tags": [
+        "AI",
+        "Fliki",
+        "Lumen5",
+        "ai software",
+        "ai tools",
+        "creator tools",
+        "make money online",
+        "productivity",
+        "saas",
+        "shorts",
+        "side hustle",
+        "tech review",
+        "text-to-video"
+      ],
+      "description": "#ad\n\n\ud83d\udd25 Try Fliki free \u2014 link in pinned comment\n\ud83d\udc49 Try it here: https://fliki.ai/?via=rajan-kale\n\nFliki text-to-video AI saves time and money\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\ud83d\udce6 As an Amazon Associate I earn from qualifying purchases\n\n\ud83d\udd17 All my tools & links: https://linktr.ee/7694rk\n\n#AI #Fliki #Lumen5 ",
+      "duration_secs": 24,
+      "thumbnail": "https://i.ytimg.com/vi/X6tEe49_Uhs/hqdefault.jpg"
+    }
   },
   {
     "id": "JFzOOW9clrw",
@@ -2751,6 +2781,24 @@
       "productivity"
     ],
     "affiliate_program": "fliki",
+    "archetype": "tool_comparison",
+    "stats_fetched": false
+  },
+  {
+    "id": "cDv7KNKf1Q0",
+    "title": "\ud83d\udde3\ufe0f AI Voice Cloning: ElevenLabs vs Murf",
+    "uploaded_at": "2026-06-06T06:48:01.715483+00:00",
+    "hook": "Cloned my voice in 60 seconds",
+    "script": "Cloned my voice in 60 seconds with ElevenLabs. Generated voiceover in 30+ languages, indistinguishable from human. Replaced expensive voice actors, saved $200+/video. ElevenLabs vs Murf: which AI voice wins? Try ElevenLabs free - link in pinned comment",
+    "topic": "AI Voice Cloning",
+    "tags": [
+      "AI voice generation",
+      "voice cloning",
+      "ElevenLabs",
+      "Murf",
+      "AI technology"
+    ],
+    "affiliate_program": "elevenlabs",
     "archetype": "tool_comparison",
     "stats_fetched": false
   }
