@@ -1,17 +1,14 @@
 """
 ╔══════════════════════════════════════════════════════════════╗
 ║                  YOU — Configuration                         ║
-║        AI Tools Affiliate Channel · Faceless Shorts          ║
+║        Curiosity Science Channel · Faceless Shorts           ║
 ║                                                              ║
-║   MONETIZATION STACK (active):                               ║
-║     Systeme.io    → 60% lifetime recurring  ✅               ║
-║     Beehiiv       → 50% recurring 12 mo     ✅               ║
-║     ElevenLabs    → 22% recurring 12 mo     ✅               ║
-║     Submagic      → 30% lifetime recurring  ✅               ║
-║     Fliki         → 30% lifetime recurring  ✅               ║
-║     (Pictory / HeyGen / Opus / Kit / GetResp / Amazon        ║
-║      pending — on waiting list or no code yet)               ║
-║     Shorts Ad Rev → rounding error ($0.08-$0.20 RPM)         ║
+║   RESET (2026-05-31) — see RESET_BUILD_SPEC.md:              ║
+║     Reverted from AI-affiliate content (failed: 10 avg      ║
+║     views, $0) back to Phase 0 curiosity science (worked:   ║
+║     312 avg views). Monetization is OFF via the             ║
+║     MONETIZATION_ENABLED kill-switch below; affiliate code  ║
+║     is dormant, not deleted.                                ║
 ║                                                              ║
 ║   PRODUCTION COST: ₹0 — Everything is free.                  ║
 ╚══════════════════════════════════════════════════════════════╝
@@ -58,16 +55,17 @@ GROQ_API_KEY = os.getenv("GROQ_API_KEY", "")
 YOUTUBE_DATA_API_KEY = os.getenv("YOUTUBE_DATA_API_KEY", "")
 
 # 2. What is your channel about? Be SPECIFIC.
-#    Bad:  "tech stuff"
-#    Good: "honest AI tool reviews that help creators save time and make money"
-CHANNEL_NICHE = "AI tools and software reviews that help creators and entrepreneurs save time and make money — honest, no-BS breakdowns of what actually works and what's a waste of money"
+#    RESET (2026-05-31): reverted to the curiosity niche that worked in
+#    Phase 0 (312 avg views/video). This drives both the analyzer brief
+#    and the curiosity script generator.
+CHANNEL_NICHE = "mind-blowing science and curiosity facts — space, physics, the universe, how things work, unsolved mysteries, psychology, and counterintuitive truths that make you see reality differently"
 
 # ══════════════════════════════════════════════════════════════
 #  🟡 OPTIONAL — Customize these later
 # ══════════════════════════════════════════════════════════════
 
 # Tone of narration
-CONTENT_TONE = "confident, direct, slightly edgy — like a tech-savvy friend who has already tested everything and just tells you what's worth your money"
+CONTENT_TONE = "awe-inspiring, cinematic, and slightly ominous — like a movie-trailer narrator revealing a secret of the universe that makes you question everything"
 
 # Language
 LANGUAGE = "English"
@@ -160,8 +158,8 @@ CHANNEL_MASCOT = (
 YOUTUBE_SECRETS_FILE = str(BASE_DIR / "client_secrets.json")
 YOUTUBE_TOKEN_FILE = str(BASE_DIR / "youtube_token.json")
 YOUTUBE_PRIVACY = "public"   # Live — videos go to public channel feed for real metrics   # ⚠️ Change to "public" when ready to launch!
-YOUTUBE_CATEGORY = "28"      # 28 = Science & Tech (correct for AI tools)
-YOUTUBE_DEFAULT_TAGS = ["shorts", "ai tools", "make money online", "saas", "tech review", "ai software", "creator tools", "side hustle"]
+YOUTUBE_CATEGORY = "28"      # 28 = Science & Technology
+YOUTUBE_DEFAULT_TAGS = ["shorts", "science", "space", "facts", "did you know", "mindblown", "universe", "physics", "curiosity"]
 YOUTUBE_MADE_FOR_KIDS = False
 
 # Autopilot interval (minutes between videos)
@@ -323,20 +321,25 @@ AFFILIATE_PRODUCTS = {
 FTC_DISCLOSURE_TEXT = "#ad"
 AMAZON_DISCLOSURE = "As an Amazon Associate I earn from qualifying purchases"
 
-# Content archetypes — rotated to avoid YouTube "inauthentic content" flags
-# The BRAIN agent picks one randomly per video to ensure variety
+# Content archetypes — rotated for variety so the channel doesn't feel
+# templated. The BRAIN agent picks one randomly per video.
 #
-# ── PHASE 3 RECIPE LOCK (set 2026-05-19) ───────────────────────
-# Only tool_comparison earned views in the May 12–15 cohort
-# (21 views vs. ≤2 for every other archetype). Locking to just this
-# one until we have a second proven archetype to mix in.
-# Original full list preserved in comments for re-enablement later.
+# ── RESET (2026-05-31): CURIOSITY ARCHETYPES ───────────────────
+# Replaced the affiliate archetypes (tool_comparison, money_hack, …)
+# with curiosity framings. Keys MUST match the instruction map in
+# you.py (_CURIOSITY_ARCHETYPE_INSTRUCTIONS). The diagnostic batch
+# (spec Phase C) will show which pull; treat this as a starting set.
 CONTENT_ARCHETYPES = [
-    "tool_comparison",    # Head-to-head: Tool A vs Tool B — WINNER
-    # "tool_review",        # Single tool deep-dive
-    # "workflow_tutorial",  # "How I automate X using these 3 tools"
-    # "money_hack",         # "This free AI tool saved me $X/month"
-    # "listicle",           # "5 AI tools that replace your editor"
-    # "myth_buster",        # "AI video tools are NOT what you think"
-    # "news_update",        # "[Tool] just dropped something insane"
+    "mind_blowing_fact",        # One true, astonishing fact, built to a reveal
+    "how_does_it_work",         # Demystify how something surprising works
+    "unsolved_mystery",         # A real unanswered question, left open
+    "counterintuitive_truth",   # The opposite of what people believe
+    "what_if",                  # A vivid, scientifically honest hypothetical
 ]
+
+# ── Legacy affiliate archetypes (DORMANT — MONETIZATION_ENABLED) ──
+# Kept for reference / revival alongside the affiliate flow.
+# MONETIZATION_ARCHETYPES = [
+#     "tool_review", "tool_comparison", "workflow_tutorial",
+#     "money_hack", "listicle", "myth_buster", "news_update",
+# ]
