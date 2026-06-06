@@ -161,6 +161,21 @@ AUTOPILOT_INTERVAL = 360  # 6 hours
 # ══════════════════════════════════════════════════════════════
 #  💰 AFFILIATE CONFIGURATION
 # ══════════════════════════════════════════════════════════════
+#
+# ── RESET (2026-05-31): MONETIZATION KILL-SWITCH ───────────────
+# The affiliate pivot collapsed distribution (Phase 0 science:
+# 312 avg views; Phase 1 affiliate: 10.5 avg, $0 earned). Per
+# RESET_BUILD_SPEC.md we revert to pure curiosity content and turn
+# ALL monetization OFF. The affiliate code below is NOT deleted —
+# it's left dormant so it can be revived later (only after the
+# channel proves it can distribute again — see spec Phase D / Week 8).
+#
+# When False (current): no program selection, no pinned comment,
+#   no URL overlay, no FTC/disclosure text — nothing affiliate
+#   touches the live render/upload path.
+# When True: the legacy product-first flow returns.
+MONETIZATION_ENABLED = False
+
 # Replace YOUR_ID with your actual affiliate IDs after signing up.
 # Sign up links are in the "New Pivot for Money.md" document.
 

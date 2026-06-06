@@ -552,7 +552,199 @@ PROVEN TOPIC ANGLES (your script must align with the chosen one):
 
 
 def generate_script(topic: str = None) -> dict:
-    """Generate a complete script using the 4-part viral formula."""
+    """Dispatch to the active content mode.
+
+    RESET (2026-05-31): the channel is reverting to pure curiosity
+    content (see RESET_BUILD_SPEC.md). The affiliate / product-first
+    generator is preserved but dormant behind MONETIZATION_ENABLED.
+
+      MONETIZATION_ENABLED=False → curiosity flow (restored Phase 0)
+      MONETIZATION_ENABLED=True  → legacy product-first affiliate flow
+    """
+    if MONETIZATION_ENABLED:
+        return _generate_script_monetized(topic)
+    return _generate_script_curiosity(topic)
+
+
+def _generate_with_hook_gate(prompt: str) -> dict:
+    """Run the LLM with 2-attempt hook-quality gating (shared by both modes)."""
+    data = None
+    for attempt in range(2):
+        raw = _call_llm(prompt)
+        data = _parse_json(raw)
+        hook = data.get("hook", "")
+        hook_score = _score_hook(hook)
+        print(f"   📊 Hook score: {hook_score}/10  \"{hook[:60]}\"")
+        if hook_score >= 6:
+            break
+        if attempt == 0:
+            print(f"   🔄 Hook too weak (score {hook_score}) — regenerating...")
+            prompt = prompt.replace(
+                "TOPICS ALREADY USED — DO NOT REPEAT THESE:",
+                f'REJECTED HOOK (too weak, do NOT use): "{hook}"\n\nTOPICS ALREADY USED — DO NOT REPEAT THESE:'
+            )
+    return data
+
+
+def _finalize_script(data: dict) -> dict:
+    """Shared post-processing: save topic for dedup + build caption lines."""
+    _save_used_topic(data.get("topic", "unknown"))
+    words = data["script"].split()
+    data["caption_lines"] = [
+        " ".join(words[i:i + CAPTION_WORDS_PER_LINE])
+        for i in range(0, len(words), CAPTION_WORDS_PER_LINE)
+    ]
+    print(f"   ✅ \"{data['title']}\" — {len(words)} words")
+    return data
+
+
+# ── Curiosity archetypes (B3): how each one shapes the script ──
+# Keys should match config.CONTENT_ARCHETYPES. Unknown keys fall back
+# to a generic curiosity instruction so the pipeline never breaks if
+# the archetype list and this map drift.
+_CURIOSITY_ARCHETYPE_INSTRUCTIONS = {
+    "mind_blowing_fact":   "Reveal a single, true, genuinely astonishing fact. Build to it, then hit it. The viewer should immediately want to tell someone.",
+    "how_does_it_work":    "Explain how something surprising actually works, step by step, in plain vivid language. Demystify it so the viewer feels smarter in 35 seconds.",
+    "unsolved_mystery":    "Pose a real unsolved question (science, history, the universe) and walk through why it's so baffling. End on the open mystery, not a neat answer.",
+    "counterintuitive_truth": "Take something people believe and show why the truth is the opposite. Lead with the common belief, then dismantle it with real facts.",
+    "what_if":             "Explore a vivid 'what if' grounded in real science (what if the sun vanished, what if you fell into a black hole). Stay scientifically honest.",
+}
+_CURIOSITY_FALLBACK_INSTRUCTION = (
+    "Reveal something true and genuinely fascinating about the topic — the kind of "
+    "fact or idea that stops the scroll and makes the viewer want to share it."
+)
+
+
+def _generate_script_curiosity(topic: str = None) -> dict:
+    """CURIOSITY content path (restored & upgraded from Phase 0).
+
+    No affiliate, no product, no CTA. Topics come from, in priority order:
+      1. An explicit `topic` argument
+      2. The analyzer brief (seeded from science/curiosity channels)
+      3. A curiosity archetype + the channel niche, LLM-generated
+    """
+    target_words = int(TARGET_DURATION * WORDS_PER_SECOND)
+
+    used = _load_used_topics()
+    used_list = "\n".join(f"- {t['topic']}" for t in used[-50:]) if used else "None yet."
+
+    # Pick a curiosity archetype for variety
+    archetype = random.choice(CONTENT_ARCHETYPES) if CONTENT_ARCHETYPES else "mind_blowing_fact"
+    archetype_instruction = _CURIOSITY_ARCHETYPE_INSTRUCTIONS.get(
+        archetype, _CURIOSITY_FALLBACK_INSTRUCTION
+    )
+
+    # ── Topic selection ────────────────────────────────────────────
+    if not topic:
+        brief = {}
+        try:
+            from analyzer import get_latest_brief
+            brief = get_latest_brief() or {}
+        except Exception:
+            brief = {}
+
+        if brief.get("topic"):
+            print(f"   📊 Using Analyzer brief: {brief['topic']}")
+            topic_part = (
+                f'The topic is: "{brief["topic"]}"\n'
+                f'Suggested hook direction: "{brief.get("hook", "")}"\n'
+                f'Script direction: {brief.get("script_direction", "")}'
+            )
+        else:
+            topic_part = (
+                f'Come up with a UNIQUE, surprising, genuinely curiosity-provoking topic '
+                f'in this space: "{CHANNEL_NICHE}".\n'
+                f'It must be something people are intrinsically curious about and would '
+                f'stop scrolling to learn. It MUST be different from everything in the '
+                f'"TOPICS ALREADY USED" list below.'
+            )
+    else:
+        topic_part = f'The topic is: "{topic}"'
+
+    # ── Image prompts (only when the slideshow is the visual source) ─
+    image_prompt_instructions = ""
+    image_prompt_json = ""
+    if not USE_BACKGROUND_VIDEO:
+        image_prompt_instructions = f'''
+Also generate {IMAGES_PER_VIDEO} image prompts for AI-generated visuals,
+one per beat of the script (they play as a slideshow with slow pan-zoom).
+- Image 1 MUST be the most visually ARRESTING (it's the first frame — it stops the swipe)
+- Each prompt should illustrate what the narration is describing at that moment
+- Style: dark cinematic, high contrast, deep blues/purples, hyper-realistic
+- Think: cosmic scales, microscopic zooms, impossible physics visualized, dramatic lighting
+- NO text, NO watermarks, NO realistic human faces'''
+        image_prompt_json = ',\n    "image_prompts": ["prompt1", "prompt2", "prompt3", "prompt4", "prompt5"]'
+
+    prompt = f"""You are the world's most viral YouTube Shorts scriptwriter. Your scripts have generated billions of views by making people feel awe, curiosity, and the urge to share.
+
+CONTENT ARCHETYPE FOR THIS VIDEO: {archetype.upper().replace('_', ' ')}
+{archetype_instruction}
+
+{topic_part}
+
+Write a {TARGET_DURATION}-second script (~{target_words} words).
+Language: {LANGUAGE}. Tone: {CONTENT_TONE}.
+
+TOPICS ALREADY USED — DO NOT REPEAT THESE:
+{used_list}
+
+{_build_few_shot_examples()}
+
+YOU MUST FOLLOW THIS EXACT 4-PART STRUCTURE:
+
+PART 1 — THE HOOK (first 2-3 seconds, ~8 words):
+- Open with a JARRING, disruptive statement that stops the scroll
+- NEVER start with "Did you know", "What if I told you", or any cliche
+- Make it feel like a secret of reality being revealed
+
+PART 2 — THE ESCALATION (next 15-17 seconds, ~42 words):
+- Explain rapidly but clearly using vivid analogies
+- Short punchy sentences (max 8 words each)
+- Each sentence must raise the stakes higher
+
+PART 3 — THE MIND-BENDER (next 10 seconds, ~28 words):
+- Deliver the fact that makes them question reality
+- This is the "holy crap I need to share this" moment
+
+PART 4 — THE SEAMLESS LOOP (final 3-5 seconds, ~10 words):
+- End with a sentence that grammatically loops back to the opening hook
+- This forces a rewatch and skyrockets completion rate
+- Do NOT say "follow for more" or "subscribe"
+
+CRITICAL RULES:
+- ZERO filler words. Every word must earn its place.
+- The script must sound like a movie trailer, not a lecture.
+- Every fact must be TRUE and well-established — no invented science, no fabricated numbers.
+- If you are unsure a claim is accurate, choose a different angle you are certain about.
+- Think: if someone reads this at a party, people would go silent.
+{image_prompt_instructions}
+
+Return ONLY valid JSON (no markdown, no backticks):
+{{
+    "topic": "topic in 5-10 words",
+    "archetype": "{archetype}",
+    "hook": "the opening hook line only",
+    "script": "the COMPLETE narration from hook through loop ending as one paragraph",
+    "loop_point": "the exact ending phrase that connects back to the hook",
+    "title": "YouTube title with emoji, max 70 chars — feel like revealed/forbidden knowledge",
+    "description": "YouTube description, max 200 chars",
+    "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"],
+    "hashtags": ["#shorts", "#science", "#mindblown"]{image_prompt_json}
+}}"""
+
+    print(f"   🧠 Writing script (curiosity · archetype: {archetype})...")
+    data = _generate_with_hook_gate(prompt)
+    data.setdefault("archetype", archetype)
+    return _finalize_script(data)
+
+
+def _generate_script_monetized(topic: str = None) -> dict:
+    """LEGACY product-first affiliate flow — DORMANT (MONETIZATION_ENABLED).
+
+    Preserved verbatim from the Phase 1 build so monetization can be
+    revived later without a rebuild. Not reached while the kill-switch
+    is off. See RESET_BUILD_SPEC.md.
+    """
     target_words = int(TARGET_DURATION * WORDS_PER_SECOND)
 
     # Load previously used topics for deduplication
@@ -1303,7 +1495,11 @@ def assemble_video(audio: str, images: list, captions: list, filename: str, word
 
     vf_parts = [f"ass={subs_escaped}"]
 
-    if _dt_font:
+    # Affiliate-only overlays (FTC #ad badge + typeable Linktree URL).
+    # RESET: these belong to the monetization layer and are skipped
+    # entirely when MONETIZATION_ENABLED is False. Captions (ass=...)
+    # above are always applied.
+    if _dt_font and MONETIZATION_ENABLED:
         # FTC disclosure: "#ad" in top-left corner for first 3 seconds
         vf_parts.append(
             f"drawtext=fontfile='{_dt_font}':text='%23ad':"
@@ -1554,8 +1750,10 @@ def upload_youtube(video_path: str, title: str, desc: str, tags: list,
         except Exception as e:
             print(f"   ⚠️  Thumbnail upload failed (channel may need verification): {e}")
 
-    # Post pinned comment with affiliate link (primary monetization CTA)
-    if script:
+    # Post pinned comment with affiliate link (primary monetization CTA).
+    # RESET: skipped entirely while MONETIZATION_ENABLED is False — no
+    # affiliate link surface anywhere on the video.
+    if script and MONETIZATION_ENABLED:
         try:
             from compliance import build_pinned_comment
             comment_text = build_pinned_comment(script)
@@ -1648,23 +1846,34 @@ def create_video(topic: str = None, upload: bool = True) -> dict:
             thumb_path = generate_thumbnail(images[0], script.get("hook", script["title"]), slug)
             r["thumbnail"] = thumb_path
 
-        # ── STEP 4.5: COMPLIANCE CHECK ──────────────────────
-        print("\n  ┌─ ⚖️  COMPLIANCE ─────────────────────────────")
-        try:
-            from compliance import build_compliant_description, validate_compliance
-            compliance = validate_compliance(script)
-            if compliance["warnings"]:
-                for w in compliance["warnings"]:
-                    print(f"      ⚠️  {w}")
-            if compliance["errors"]:
-                for e in compliance["errors"]:
-                    print(f"      ❌ {e}")
-            if compliance["passed"]:
-                print("      ✅ Compliance check passed")
-            compliant_desc = build_compliant_description(script)
-        except Exception as e:
-            print(f"      ⚠️  Compliance module error: {e} — using basic description")
-            compliant_desc = script.get("description", "") + "\n\n" + " ".join(script.get("hashtags", ["#shorts"]))
+        # ── STEP 4.5: DESCRIPTION ───────────────────────────
+        # RESET: with monetization off there are no affiliate links and
+        # no FTC disclosure to inject, so we build a plain curiosity
+        # description (title blurb + hashtags). The compliance module is
+        # only used when MONETIZATION_ENABLED brings affiliates back.
+        def _plain_description(s: dict) -> str:
+            tags = s.get("hashtags") or ["#shorts", "#science", "#mindblown"]
+            return (s.get("description", "") + "\n\n" + " ".join(tags)).strip()
+
+        if MONETIZATION_ENABLED:
+            print("\n  ┌─ ⚖️  COMPLIANCE ─────────────────────────────")
+            try:
+                from compliance import build_compliant_description, validate_compliance
+                compliance = validate_compliance(script)
+                if compliance["warnings"]:
+                    for w in compliance["warnings"]:
+                        print(f"      ⚠️  {w}")
+                if compliance["errors"]:
+                    for e in compliance["errors"]:
+                        print(f"      ❌ {e}")
+                if compliance["passed"]:
+                    print("      ✅ Compliance check passed")
+                compliant_desc = build_compliant_description(script)
+            except Exception as e:
+                print(f"      ⚠️  Compliance module error: {e} — using basic description")
+                compliant_desc = _plain_description(script)
+        else:
+            compliant_desc = _plain_description(script)
 
         # ── STEP 5: PUBLISHER ───────────────────────────────
         print("\n  ┌─ 5/5 ── 📤 PUBLISHER ──────────────────────")
