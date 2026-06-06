@@ -1812,16 +1812,16 @@ def create_video(topic: str = None, upload: bool = True) -> dict:
         print("\n  ┌─ 2/5 ── 👁️  EYES ──────────────────────────")
         image_prompts = script.get("image_prompts")
         if not image_prompts and not USE_BACKGROUND_VIDEO:
-            # LLM failed to return prompts — generate tech-themed fallbacks
-            _t = script.get("topic", "AI tools")
+            # LLM failed to return prompts — generate cinematic science fallbacks
+            _t = script.get("topic", "the cosmos")
             image_prompts = [
-                f"modern dark mode software dashboard with neon accents, {_t}",
-                f"AI tool interface generating content, sleek glassmorphism UI, {_t}",
-                f"revenue analytics dashboard glowing charts dark background, {_t}",
-                f"laptop screen showing productivity workflow automation, dark UI",
-                f"futuristic AI software interface with holographic elements, dark mode",
+                f"epic cinematic wide shot illustrating {_t}, deep space, dramatic lighting",
+                f"extreme close-up macro detail related to {_t}, hyper-realistic",
+                f"awe-inspiring cosmic vista, nebula and stars, related to {_t}",
+                f"abstract visualization of {_t}, glowing energy, dark background",
+                f"dramatic scientific illustration of {_t}, volumetric light, 4k",
             ]
-            print("      ⚠️  No image prompts from LLM — using tech-themed fallbacks")
+            print("      ⚠️  No image prompts from LLM — using cinematic science fallbacks")
         images = generate_images(image_prompts or [], sid)
         r["images"] = images
 

@@ -91,7 +91,9 @@ VOICE_RATE = "+5%"
 # Video dimensions (9:16 vertical for Shorts)
 VIDEO_WIDTH = 1080
 VIDEO_HEIGHT = 1920
-VIDEO_FPS = 60
+# 30fps is plenty for an image slideshow with pan-zoom (no fast motion)
+# and roughly halves render time on free GitHub Actions runners.
+VIDEO_FPS = 30
 
 # Number of AI images per video (more = more visual variety)
 IMAGES_PER_VIDEO = 5
@@ -101,8 +103,11 @@ CAPTION_FONT = "Impact"
 CAPTION_SIZE = 82
 CAPTION_WORDS_PER_LINE = 3
 
-# AI image style suffix (tech/software review aesthetic)
-IMAGE_STYLE = "clean modern tech UI, dark mode interface, glassmorphism panels, neon accent lighting, professional software screenshot aesthetic, 4k, minimal and sleek"
+# AI image style suffix.
+# RESET (2026-05-31): reverted from the affiliate "tech UI / software
+# screenshot" look back to Phase 0's cinematic science aesthetic — the
+# style that pulled 312 avg views/video.
+IMAGE_STYLE = "dark cinematic, high contrast, deep blues and purples, hyper-realistic, dramatic volumetric lighting, cosmic and microscopic scales, awe-inspiring, 4k, no text"
 
 # Batch size (how many videos per run)
 BATCH_SIZE = 1
@@ -114,7 +119,11 @@ BGM_VOLUME = 0.12  # Volume relative to voiceover (0.0-1.0, subtle at 12%)
 # ══════════════════════════════════════════════════════════════
 #  🟣 GAMEPLAY/BACKGROUND VIDEO OVERLAY
 # ══════════════════════════════════════════════════════════════
-USE_BACKGROUND_VIDEO = True
+# RESET (2026-05-31): the static Subway Surfers brainrot loop is OFF.
+# Setting this False re-enables Phase 0's per-beat AI image slideshow
+# (Pollinations.ai, free) with Ken Burns pan-zoom — the visual layer
+# that worked. The gameplay path is kept intact for easy A/B later.
+USE_BACKGROUND_VIDEO = False
 BACKGROUND_VIDEO_FILE = str(ASSETS_DIR / "subway_surfers_1hr_gameplay.mp4")
 BACKGROUND_VIDEO_VOLUME = 0.0   # Mute gameplay audio — keeps voiceover clean
 
