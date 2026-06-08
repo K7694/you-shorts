@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-07T07:43:00.687851",
+  "last_updated": "2026-06-08T08:29:55.034118",
   "videos": {
     "gZIO6_23b0I": {
       "id": "gZIO6_23b0I",
@@ -63,7 +63,7 @@
       "likes": 15,
       "comments": 0,
       "engagement_rate": 2.641,
-      "views_per_day": 12,
+      "views_per_day": 11,
       "tags": [
         "astronomy",
         "black holes",
@@ -179,32 +179,6 @@
       "duration_secs": 18,
       "thumbnail": "https://i.ytimg.com/vi/PhtesaWw_5A/hqdefault.jpg"
     },
-    "vbbAFitH3Hs": {
-      "id": "vbbAFitH3Hs",
-      "title": "\ud83d\udd0d Kitchen Secrets Revealed",
-      "channel": "KnowMore-Dailyday",
-      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
-      "published": "2026-04-16T10:54:33Z",
-      "views": 383,
-      "likes": 2,
-      "comments": 0,
-      "engagement_rate": 0.522,
-      "views_per_day": 8,
-      "tags": [
-        "chemistry",
-        "cooking",
-        "dark science",
-        "facts",
-        "food science",
-        "kitchen hacks",
-        "science",
-        "shorts",
-        "viral"
-      ],
-      "description": "The dark science behind kitchen hacks\n\n#shorts #science #mindblown #kitchenhacks #foodscience\n\n#Shorts",
-      "duration_secs": 29,
-      "thumbnail": "https://i.ytimg.com/vi/vbbAFitH3Hs/hqdefault.jpg"
-    },
     "GNdBew-G_Kg": {
       "id": "GNdBew-G_Kg",
       "title": "\ud83d\udd0d The Dark Science of Kitchen Hacks",
@@ -229,6 +203,32 @@
       "description": "The secret science behind kitchen hacks revealed\n\n#shorts #science #mindblown #kitchenhacks #cooking\n\n#Shorts",
       "duration_secs": 32,
       "thumbnail": "https://i.ytimg.com/vi/GNdBew-G_Kg/hqdefault.jpg"
+    },
+    "vbbAFitH3Hs": {
+      "id": "vbbAFitH3Hs",
+      "title": "\ud83d\udd0d Kitchen Secrets Revealed",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-04-16T10:54:33Z",
+      "views": 383,
+      "likes": 2,
+      "comments": 0,
+      "engagement_rate": 0.522,
+      "views_per_day": 7,
+      "tags": [
+        "chemistry",
+        "cooking",
+        "dark science",
+        "facts",
+        "food science",
+        "kitchen hacks",
+        "science",
+        "shorts",
+        "viral"
+      ],
+      "description": "The dark science behind kitchen hacks\n\n#shorts #science #mindblown #kitchenhacks #foodscience\n\n#Shorts",
+      "duration_secs": 29,
+      "thumbnail": "https://i.ytimg.com/vi/vbbAFitH3Hs/hqdefault.jpg"
     },
     "x9VpwqbHngk": {
       "id": "x9VpwqbHngk",
@@ -509,6 +509,35 @@
       "description": "Uncover the sinister science behind song repetition\n\n#shorts #science #mindblown\n\n#Shorts",
       "duration_secs": 23,
       "thumbnail": "https://i.ytimg.com/vi/tNwO-DzFeyM/hqdefault.jpg"
+    },
+    "OX4kwfIKTrM": {
+      "id": "OX4kwfIKTrM",
+      "title": "\ud83d\udd25 Black Holes: The Ultimate Kill Switch",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-06-07T07:48:06Z",
+      "views": 1,
+      "likes": 0,
+      "comments": 0,
+      "engagement_rate": 0.0,
+      "views_per_day": 1,
+      "tags": [
+        "black holes",
+        "cosmos",
+        "curiosity",
+        "did you know",
+        "facts",
+        "gravity",
+        "mindblown",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "universe"
+      ],
+      "description": "The terrifying truth about black holes\n\n#shorts #science #mindblown",
+      "duration_secs": 18,
+      "thumbnail": "https://i.ytimg.com/vi/OX4kwfIKTrM/hqdefault.jpg"
     },
     "l_hqhyPPviw": {
       "id": "l_hqhyPPviw",

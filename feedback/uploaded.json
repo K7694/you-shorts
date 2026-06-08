@@ -2855,5 +2855,23 @@
     "affiliate_program": "",
     "archetype": "counterintuitive_truth",
     "stats_fetched": false
+  },
+  {
+    "id": "mtJT1Lm56Sk",
+    "title": "\ud83d\ude80 Lost in Space: The Darkest Truth",
+    "uploaded_at": "2026-06-08T08:35:10.210559+00:00",
+    "hook": "Imagine being lost in space",
+    "script": "Imagine being lost in space. Stars blur. Oxygen dwindles. Panic sets. Space madness creeps. Time warps. Black holes loom. Cosmic voids await. And in the darkness, a terrifying truth: you're completely alone. Lost in an endless sea, where the last sound is silence, and imagine being lost in space",
+    "topic": "Lost in Space",
+    "tags": [
+      "space",
+      "astronomy",
+      "survival",
+      "black holes",
+      "cosmic voids"
+    ],
+    "affiliate_program": "",
+    "archetype": "how_does_it_work",
+    "stats_fetched": false
   }
 ]
