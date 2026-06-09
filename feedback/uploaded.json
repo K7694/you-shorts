@@ -2836,7 +2836,37 @@
     ],
     "affiliate_program": "",
     "archetype": "how_does_it_work",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "l_hqhyPPviw",
+      "title": "\ud83d\udd2e Reality's Hidden Mirror",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-06-06T11:55:03Z",
+      "views": 1,
+      "likes": 0,
+      "comments": 0,
+      "engagement_rate": 0.0,
+      "views_per_day": 0,
+      "tags": [
+        "curiosity",
+        "did you know",
+        "entanglement",
+        "facts",
+        "mindblown",
+        "mirror",
+        "physics",
+        "quantum mechanics",
+        "reality",
+        "science",
+        "shorts",
+        "space",
+        "universe"
+      ],
+      "description": "Uncover the secrets of quantum entanglement\n\n#shorts #science #mindblown #quantum",
+      "duration_secs": 25,
+      "thumbnail": "https://i.ytimg.com/vi/l_hqhyPPviw/hqdefault.jpg"
+    }
   },
   {
     "id": "OX4kwfIKTrM",
@@ -2872,6 +2902,24 @@
     ],
     "affiliate_program": "",
     "archetype": "how_does_it_work",
+    "stats_fetched": false
+  },
+  {
+    "id": "Si1DeQpa6y0",
+    "title": "\ud83d\ude80 Stranded in Eternity",
+    "uploaded_at": "2026-06-09T07:08:31.561792+00:00",
+    "hook": "Stranded in eternity",
+    "script": "Stranded in eternity. Space stretches out. Stars die. Planets collide. Oxygen dwindles. Silence chokes. The cosmos is indifferent. Time loses meaning. And in this desolate vastness, a single truth echoes: Stranded in eternity, where the void is endless, and Stranded in eternity",
+    "topic": "Lost in Space",
+    "tags": [
+      "space",
+      "survival",
+      "cosmos",
+      "eternity",
+      "void"
+    ],
+    "affiliate_program": "",
+    "archetype": "what_if",
     "stats_fetched": false
   }
 ]
