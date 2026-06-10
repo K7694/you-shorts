@@ -2884,7 +2884,36 @@
     ],
     "affiliate_program": "",
     "archetype": "counterintuitive_truth",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "OX4kwfIKTrM",
+      "title": "\ud83d\udd25 Black Holes: The Ultimate Kill Switch",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-06-07T07:48:06Z",
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "engagement_rate": 0.0,
+      "views_per_day": 0,
+      "tags": [
+        "black holes",
+        "cosmos",
+        "curiosity",
+        "did you know",
+        "facts",
+        "gravity",
+        "mindblown",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "universe"
+      ],
+      "description": "The terrifying truth about black holes\n\n#shorts #science #mindblown",
+      "duration_secs": 18,
+      "thumbnail": "https://i.ytimg.com/vi/OX4kwfIKTrM/hqdefault.jpg"
+    }
   },
   {
     "id": "mtJT1Lm56Sk",
@@ -2917,6 +2946,24 @@
       "cosmos",
       "eternity",
       "void"
+    ],
+    "affiliate_program": "",
+    "archetype": "what_if",
+    "stats_fetched": false
+  },
+  {
+    "id": "nHWyado7Hbw",
+    "title": "\ud83d\udd2b Gunfire on the Moon: Forbidden Knowledge",
+    "uploaded_at": "2026-06-10T07:58:38.487796+00:00",
+    "hook": "Gunfire in space",
+    "script": "Gunfire in space. No air, no sound. Vacuum silence. Bullets travel forever. No resistance, no gravity. Moon's low gravity, odd trajectories. No air friction, bullets keep going. And in this eerie silence, gunfire in space",
+    "topic": "Firing a Gun on the Moon",
+    "tags": [
+      "space",
+      "gunfire",
+      "moon",
+      "science",
+      "astronomy"
     ],
     "affiliate_program": "",
     "archetype": "what_if",
