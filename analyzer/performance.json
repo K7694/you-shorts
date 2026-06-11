@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-10T07:54:04.834528",
+  "last_updated": "2026-06-11T08:22:38.781462",
   "videos": {
     "gZIO6_23b0I": {
       "id": "gZIO6_23b0I",
@@ -11,7 +11,7 @@
       "likes": 35,
       "comments": 1,
       "engagement_rate": 2.853,
-      "views_per_day": 24,
+      "views_per_day": 23,
       "tags": [
         "black holes",
         "cosmic collapse",
@@ -510,35 +510,34 @@
       "duration_secs": 23,
       "thumbnail": "https://i.ytimg.com/vi/tNwO-DzFeyM/hqdefault.jpg"
     },
-    "mtJT1Lm56Sk": {
-      "id": "mtJT1Lm56Sk",
-      "title": "\ud83d\ude80 Lost in Space: The Darkest Truth",
+    "nHWyado7Hbw": {
+      "id": "nHWyado7Hbw",
+      "title": "\ud83d\udd2b Gunfire on the Moon: Forbidden Knowledge",
       "channel": "KnowMore-Dailyday",
       "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
-      "published": "2026-06-08T08:35:34Z",
-      "views": 1,
+      "published": "2026-06-10T07:59:12Z",
+      "views": 0,
       "likes": 0,
       "comments": 0,
       "engagement_rate": 0.0,
-      "views_per_day": 1,
+      "views_per_day": 0,
       "tags": [
         "astronomy",
-        "black holes",
-        "cosmic voids",
         "curiosity",
         "did you know",
         "facts",
+        "gunfire",
         "mindblown",
+        "moon",
         "physics",
         "science",
         "shorts",
         "space",
-        "survival",
         "universe"
       ],
-      "description": "What happens when you're lost in space? The terrifying truth revealed\n\n#shorts #science #mindblown #space #astronomy",
-      "duration_secs": 23,
-      "thumbnail": "https://i.ytimg.com/vi/mtJT1Lm56Sk/hqdefault.jpg"
+      "description": "What happens when you fire a gun on the moon? The answer will surprise you!\n\n#shorts #science #mindblown",
+      "duration_secs": 19,
+      "thumbnail": "https://i.ytimg.com/vi/nHWyado7Hbw/hqdefault.jpg"
     },
     "Si1DeQpa6y0": {
       "id": "Si1DeQpa6y0",
@@ -569,6 +568,36 @@
       "description": "What happens when you're lost in space?\n\n#shorts #space #science #mindblown",
       "duration_secs": 22,
       "thumbnail": "https://i.ytimg.com/vi/Si1DeQpa6y0/hqdefault.jpg"
+    },
+    "mtJT1Lm56Sk": {
+      "id": "mtJT1Lm56Sk",
+      "title": "\ud83d\ude80 Lost in Space: The Darkest Truth",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-06-08T08:35:34Z",
+      "views": 1,
+      "likes": 0,
+      "comments": 0,
+      "engagement_rate": 0.0,
+      "views_per_day": 0,
+      "tags": [
+        "astronomy",
+        "black holes",
+        "cosmic voids",
+        "curiosity",
+        "did you know",
+        "facts",
+        "mindblown",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "survival",
+        "universe"
+      ],
+      "description": "What happens when you're lost in space? The terrifying truth revealed\n\n#shorts #science #mindblown #space #astronomy",
+      "duration_secs": 23,
+      "thumbnail": "https://i.ytimg.com/vi/mtJT1Lm56Sk/hqdefault.jpg"
     },
     "OX4kwfIKTrM": {
       "id": "OX4kwfIKTrM",
