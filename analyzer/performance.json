@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-11T08:22:38.781462",
+  "last_updated": "2026-06-12T08:10:07.094322",
   "videos": {
     "gZIO6_23b0I": {
       "id": "gZIO6_23b0I",
@@ -37,7 +37,7 @@
       "likes": 3,
       "comments": 0,
       "engagement_rate": 0.341,
-      "views_per_day": 16,
+      "views_per_day": 15,
       "tags": [
         "cooking tips",
         "dark science",
@@ -88,7 +88,7 @@
       "likes": 13,
       "comments": 0,
       "engagement_rate": 2.529,
-      "views_per_day": 10,
+      "views_per_day": 9,
       "tags": [
         "astronomy",
         "black holes",
@@ -127,32 +127,6 @@
       "duration_secs": 24,
       "thumbnail": "https://i.ytimg.com/vi/XImCXqfecvY/hqdefault.jpg"
     },
-    "PhtesaWw_5A": {
-      "id": "PhtesaWw_5A",
-      "title": "\ud83d\udd25 Black Holes: The Cosmic Abyss \ud83c\udf00",
-      "channel": "KnowMore-Dailyday",
-      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
-      "published": "2026-04-18T16:12:53Z",
-      "views": 402,
-      "likes": 5,
-      "comments": 0,
-      "engagement_rate": 1.244,
-      "views_per_day": 8,
-      "tags": [
-        "astrophysics",
-        "black holes",
-        "cosmology",
-        "facts",
-        "science",
-        "shorts",
-        "space",
-        "universe",
-        "viral"
-      ],
-      "description": "Uncover the dark secrets of black holes\n\n#shorts #science #mindblown #blackholes #cosmos\n\n#Shorts",
-      "duration_secs": 18,
-      "thumbnail": "https://i.ytimg.com/vi/PhtesaWw_5A/hqdefault.jpg"
-    },
     "jQn0rKxwhAk": {
       "id": "jQn0rKxwhAk",
       "title": "\ud83d\udd2e Black Holes: The Void in Space",
@@ -178,6 +152,32 @@
       "description": "Uncover the dark truth about black holes\n\n#shorts #science #mindblown #space #blackholes\n\n#Shorts",
       "duration_secs": 21,
       "thumbnail": "https://i.ytimg.com/vi/jQn0rKxwhAk/hqdefault.jpg"
+    },
+    "PhtesaWw_5A": {
+      "id": "PhtesaWw_5A",
+      "title": "\ud83d\udd25 Black Holes: The Cosmic Abyss \ud83c\udf00",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-04-18T16:12:53Z",
+      "views": 402,
+      "likes": 5,
+      "comments": 0,
+      "engagement_rate": 1.244,
+      "views_per_day": 7,
+      "tags": [
+        "astrophysics",
+        "black holes",
+        "cosmology",
+        "facts",
+        "science",
+        "shorts",
+        "space",
+        "universe",
+        "viral"
+      ],
+      "description": "Uncover the dark secrets of black holes\n\n#shorts #science #mindblown #blackholes #cosmos\n\n#Shorts",
+      "duration_secs": 18,
+      "thumbnail": "https://i.ytimg.com/vi/PhtesaWw_5A/hqdefault.jpg"
     },
     "vbbAFitH3Hs": {
       "id": "vbbAFitH3Hs",
@@ -205,32 +205,6 @@
       "duration_secs": 29,
       "thumbnail": "https://i.ytimg.com/vi/vbbAFitH3Hs/hqdefault.jpg"
     },
-    "x9VpwqbHngk": {
-      "id": "x9VpwqbHngk",
-      "title": "\ud83d\udd01 The Song That Controls Your Mind",
-      "channel": "KnowMore-Dailyday",
-      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
-      "published": "2026-04-15T05:47:30Z",
-      "views": 376,
-      "likes": 7,
-      "comments": 0,
-      "engagement_rate": 1.862,
-      "views_per_day": 7,
-      "tags": [
-        "cognitive bias",
-        "facts",
-        "habit formation",
-        "music psychology",
-        "neuroscience",
-        "science",
-        "shorts",
-        "song repetition",
-        "viral"
-      ],
-      "description": "Discover the dark science behind song repetition\n\n#shorts #science #mindblown #music #psychology\n\n#Shorts",
-      "duration_secs": 24,
-      "thumbnail": "https://i.ytimg.com/vi/x9VpwqbHngk/hqdefault.jpg"
-    },
     "GNdBew-G_Kg": {
       "id": "GNdBew-G_Kg",
       "title": "\ud83d\udd0d The Dark Science of Kitchen Hacks",
@@ -255,6 +229,32 @@
       "description": "The secret science behind kitchen hacks revealed\n\n#shorts #science #mindblown #kitchenhacks #cooking\n\n#Shorts",
       "duration_secs": 32,
       "thumbnail": "https://i.ytimg.com/vi/GNdBew-G_Kg/hqdefault.jpg"
+    },
+    "x9VpwqbHngk": {
+      "id": "x9VpwqbHngk",
+      "title": "\ud83d\udd01 The Song That Controls Your Mind",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-04-15T05:47:30Z",
+      "views": 376,
+      "likes": 7,
+      "comments": 0,
+      "engagement_rate": 1.862,
+      "views_per_day": 6,
+      "tags": [
+        "cognitive bias",
+        "facts",
+        "habit formation",
+        "music psychology",
+        "neuroscience",
+        "science",
+        "shorts",
+        "song repetition",
+        "viral"
+      ],
+      "description": "Discover the dark science behind song repetition\n\n#shorts #science #mindblown #music #psychology\n\n#Shorts",
+      "duration_secs": 24,
+      "thumbnail": "https://i.ytimg.com/vi/x9VpwqbHngk/hqdefault.jpg"
     },
     "GF7E-npIDM4": {
       "id": "GF7E-npIDM4",
@@ -332,30 +332,34 @@
       "duration_secs": 36,
       "thumbnail": "https://i.ytimg.com/vi/75NxDsNfXvc/hqdefault.jpg"
     },
-    "G761W9LP9ww": {
-      "id": "G761W9LP9ww",
-      "title": "\ud83d\udd0d Kitchen Hacks: The Secret Science",
+    "0q-IhTcNvyQ": {
+      "id": "0q-IhTcNvyQ",
+      "title": "Black Holes: The Void \ud83d\udd73\ufe0f",
       "channel": "KnowMore-Dailyday",
       "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
-      "published": "2026-04-19T10:16:31Z",
-      "views": 132,
+      "published": "2026-06-11T08:28:13Z",
+      "views": 3,
       "likes": 0,
       "comments": 0,
       "engagement_rate": 0.0,
       "views_per_day": 3,
       "tags": [
-        "chemistry",
-        "cooking",
+        "black holes",
+        "cosmos",
+        "curiosity",
+        "did you know",
         "facts",
-        "food",
-        "kitchen hacks",
+        "gravity",
+        "mindblown",
+        "physics",
         "science",
         "shorts",
-        "viral"
+        "space",
+        "universe"
       ],
-      "description": "Uncover the hidden science behind kitchen hacks\n\n#shorts #science #mindblown #kitchenhacks #cooking\n\n#Shorts",
-      "duration_secs": 30,
-      "thumbnail": "https://i.ytimg.com/vi/G761W9LP9ww/hqdefault.jpg"
+      "description": "What happens if you get stuck in a black hole?\n\n#shorts #science #mindblown #space #blackholes",
+      "duration_secs": 27,
+      "thumbnail": "https://i.ytimg.com/vi/0q-IhTcNvyQ/hqdefault.jpg"
     },
     "rX5GXLrXfEc": {
       "id": "rX5GXLrXfEc",
@@ -431,6 +435,31 @@
       "description": "Uncover the hidden forces that govern your kitchen\n\n#shorts #science #mindblown #kitchenhacks #cooking\n\n#Shorts",
       "duration_secs": 34,
       "thumbnail": "https://i.ytimg.com/vi/44M9ua1_SXI/hqdefault.jpg"
+    },
+    "G761W9LP9ww": {
+      "id": "G761W9LP9ww",
+      "title": "\ud83d\udd0d Kitchen Hacks: The Secret Science",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-04-19T10:16:31Z",
+      "views": 132,
+      "likes": 0,
+      "comments": 0,
+      "engagement_rate": 0.0,
+      "views_per_day": 2,
+      "tags": [
+        "chemistry",
+        "cooking",
+        "facts",
+        "food",
+        "kitchen hacks",
+        "science",
+        "shorts",
+        "viral"
+      ],
+      "description": "Uncover the hidden science behind kitchen hacks\n\n#shorts #science #mindblown #kitchenhacks #cooking\n\n#Shorts",
+      "duration_secs": 30,
+      "thumbnail": "https://i.ytimg.com/vi/G761W9LP9ww/hqdefault.jpg"
     },
     "UZLQ3TDd-fQ": {
       "id": "UZLQ3TDd-fQ",

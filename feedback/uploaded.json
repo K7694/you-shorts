@@ -3027,7 +3027,36 @@
     ],
     "affiliate_program": "",
     "archetype": "what_if",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "nHWyado7Hbw",
+      "title": "\ud83d\udd2b Gunfire on the Moon: Forbidden Knowledge",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-06-10T07:59:12Z",
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "engagement_rate": 0.0,
+      "views_per_day": 0,
+      "tags": [
+        "astronomy",
+        "curiosity",
+        "did you know",
+        "facts",
+        "gunfire",
+        "mindblown",
+        "moon",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "universe"
+      ],
+      "description": "What happens when you fire a gun on the moon? The answer will surprise you!\n\n#shorts #science #mindblown",
+      "duration_secs": 19,
+      "thumbnail": "https://i.ytimg.com/vi/nHWyado7Hbw/hqdefault.jpg"
+    }
   },
   {
     "id": "0q-IhTcNvyQ",
@@ -3045,6 +3074,24 @@
     ],
     "affiliate_program": "",
     "archetype": "mind_blowing_fact",
+    "stats_fetched": false
+  },
+  {
+    "id": "WolpLzitfl8",
+    "title": "\ud83d\udd2b Bullets in Space: The Unanswered Question",
+    "uploaded_at": "2026-06-12T08:15:04.715173+00:00",
+    "hook": "Bullets in space",
+    "script": "Bullets in space. No air, no sound. Gravity warps trajectory. On Mars, a shot fires. In vacuum, it never stops. On Venus, it melts. On Jupiter, it disintegrates. The question remains: what happens when you fire a gun on different planets? Bullets in space",
+    "topic": "Firing a Gun on Mars",
+    "tags": [
+      "space",
+      "guns",
+      "planets",
+      "physics",
+      "mystery"
+    ],
+    "affiliate_program": "",
+    "archetype": "unsolved_mystery",
     "stats_fetched": false
   }
 ]
