@@ -355,3 +355,24 @@ CONTENT_ARCHETYPES = [
 #     "tool_review", "tool_comparison", "workflow_tutorial",
 #     "money_hack", "listicle", "myth_buster", "news_update",
 # ]
+
+# ── Curiosity DOMAINS (2026-06-14) — anti-repetition ───────────
+# The batch repeated "black holes" in 4 of 8 videos because exact-
+# string dedup doesn't catch subject repetition. The pipeline now
+# rotates through these domains, picking one NOT used in the last few
+# videos, so topics spread across the whole curiosity space instead
+# of collapsing onto space/black-holes every time.
+CURIOSITY_DOMAINS = [
+    "deep space & astrophysics (but NOT black holes unless truly novel)",
+    "the human body & the brain",
+    "psychology & why people behave the way they do",
+    "Earth, oceans, weather & natural phenomena",
+    "animals & the strangeness of nature",
+    "history's unsolved mysteries & lost civilizations",
+    "physics & quantum weirdness in everyday life",
+    "the human senses, perception & consciousness",
+    "numbers, probability & counterintuitive math",
+    "the deep past & the far future of humanity",
+    "the microscopic world — cells, atoms, microbes",
+    "technology & inventions that changed everything",
+]

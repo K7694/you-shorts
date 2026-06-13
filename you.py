@@ -170,15 +170,31 @@ def _score_hook(hook: str) -> int:
     if hook.strip().endswith("?") and len(words) < 8:
         score -= 1
 
-    # Reward money/tech/urgency language
-    power_words = [
-        "free", "save", "replace", "kill", "stop", "waste", "paying",
-        "$", "money", "revenue", "income", "profit", "automate",
-        "secret", "nobody", "most people", "don't know", "hidden",
-        "just dropped", "just launched", "right now", "already",
-        "tool", "app", "software", "ai",
-    ]
+    # Reward power language — curiosity vs affiliate depending on mode
+    if MONETIZATION_ENABLED:
+        power_words = [
+            "free", "save", "replace", "kill", "stop", "waste", "paying",
+            "$", "money", "revenue", "income", "profit", "automate",
+            "secret", "nobody", "most people", "don't know", "hidden",
+            "just dropped", "just launched", "right now", "already",
+            "tool", "app", "software", "ai",
+        ]
+    else:
+        # Curiosity/science power language — what actually makes a
+        # science hook stop the scroll (modeled on the 740-view winner).
+        power_words = [
+            "universe", "reality", "physics", "scientists", "science",
+            "death", "die", "dying", "kill", "dark", "infinite", "forever",
+            "impossible", "never", "always", "secret", "hidden", "nobody",
+            "most people", "actually", "truth", "wrong", "brain", "body",
+            "blood", "space", "light", "time", "energy", "ancient", "alive",
+            "billion", "trillion", "quadrillion", "should not", "shouldn't",
+            "doesn't exist", "every", "right now", "inside you", "your body",
+        ]
     if any(pw in h for pw in power_words):
+        score += 1
+    # Bonus: a concrete, specific noun-driven hook (two+ power signals)
+    if sum(1 for pw in power_words if pw in h) >= 2:
         score += 1
 
     return max(1, min(score, 10))
@@ -611,24 +627,36 @@ def generate_script(topic: str = None) -> dict:
     return _generate_script_curiosity(topic)
 
 
-def _generate_with_hook_gate(prompt: str) -> dict:
-    """Run the LLM with 2-attempt hook-quality gating (shared by both modes)."""
-    data = None
-    for attempt in range(2):
+def _generate_with_hook_gate(prompt: str, attempts: int = 3, target: int = 7) -> dict:
+    """Run the LLM with hook-quality gating, keeping the BEST attempt.
+
+    Raised from 2→3 attempts and 6→7 target after the Jun batch shipped
+    too many 4–5/10 hooks (1-in-8 hit rate). Instead of taking whatever
+    the last attempt produced, we keep the highest-scoring one across all
+    attempts so a weak final try can't override a stronger earlier one.
+    """
+    best_data, best_score = None, -1
+    rejected = []
+    for attempt in range(attempts):
         raw = _call_llm(prompt)
         data = _parse_json(raw)
         hook = data.get("hook", "")
-        hook_score = _score_hook(hook)
-        print(f"   📊 Hook score: {hook_score}/10  \"{hook[:60]}\"")
-        if hook_score >= 6:
+        score = _score_hook(hook)
+        print(f"   📊 Hook score: {score}/10  \"{hook[:60]}\"")
+        if score > best_score:
+            best_data, best_score = data, score
+        if score >= target:
             break
-        if attempt == 0:
-            print(f"   🔄 Hook too weak (score {hook_score}) — regenerating...")
+        if attempt < attempts - 1:
+            print(f"   🔄 Hook below {target} (got {score}) — regenerating...")
+            rejected.append(hook)
+            ban = "\n".join(f'- "{h}"' for h in rejected)
             prompt = prompt.replace(
                 "TOPICS ALREADY USED — DO NOT REPEAT THESE:",
-                f'REJECTED HOOK (too weak, do NOT use): "{hook}"\n\nTOPICS ALREADY USED — DO NOT REPEAT THESE:'
+                f'REJECTED HOOKS (too weak — write something sharper, do NOT reuse):\n{ban}\n\nTOPICS ALREADY USED — DO NOT REPEAT THESE:'
             )
-    return data
+    print(f"   ✅ Best hook: {best_score}/10")
+    return best_data
 
 
 def _finalize_script(data: dict) -> dict:
@@ -660,6 +688,61 @@ _CURIOSITY_FALLBACK_INSTRUCTION = (
 )
 
 
+def _pick_curiosity_domain(used: list) -> str:
+    """Rotate curiosity domains: pick one NOT used in the last few videos.
+
+    Keeps topics from collapsing onto the same subject (the batch did
+    'black holes' 4 of 8 times). Matches recent topic strings against
+    domain keywords and prefers a domain that hasn't appeared lately.
+    """
+    domains = list(CURIOSITY_DOMAINS) if CURIOSITY_DOMAINS else []
+    if not domains:
+        return ""
+
+    recent_blob = " ".join(t.get("topic", "").lower() for t in used[-5:])
+    # First keyword of each domain (rough subject) for recency matching
+    def _key(d: str) -> str:
+        return re.split(r"[ &(,]", d.strip())[0].lower()
+
+    fresh = [d for d in domains if _key(d) not in recent_blob]
+    pool = fresh or domains
+    return random.choice(pool)
+
+
+def _recent_subjects(used: list, n: int = 8) -> str:
+    """Comma list of recent topics to explicitly ban for variety."""
+    subs = [t.get("topic", "") for t in used[-n:] if t.get("topic")]
+    return ", ".join(subs) if subs else "none yet"
+
+
+# Content words to ignore when comparing topic subjects for repetition.
+_SUBJECT_STOPWORDS = {
+    "the", "a", "an", "of", "in", "on", "to", "is", "are", "what", "why",
+    "how", "if", "you", "your", "and", "or", "for", "with", "that", "this",
+    "happens", "get", "stuck", "into", "inside", "vs", "mystery", "mysteries",
+    "survival", "truth", "secret", "secrets", "myth", "facts", "fact",
+}
+
+
+def _subject_recently_used(topic: str, used: list, n: int = 6) -> bool:
+    """True if `topic` shares a meaningful keyword with a recent topic.
+
+    Catches subject-level repeats that exact-string dedup misses
+    (e.g. "Black Hole Survival" vs "stuck in a black hole?" both → "black hole").
+    """
+    def keys(s: str) -> set:
+        words = re.findall(r"[a-z]+", s.lower())
+        return {w for w in words if len(w) > 3 and w not in _SUBJECT_STOPWORDS}
+
+    new_keys = keys(topic)
+    if not new_keys:
+        return False
+    for t in used[-n:]:
+        if new_keys & keys(t.get("topic", "")):
+            return True
+    return False
+
+
 def _generate_script_curiosity(topic: str = None) -> dict:
     """CURIOSITY content path (restored & upgraded from Phase 0).
 
@@ -679,6 +762,10 @@ def _generate_script_curiosity(topic: str = None) -> dict:
         archetype, _CURIOSITY_FALLBACK_INSTRUCTION
     )
 
+    # Anti-repetition: rotate to a domain not used recently + ban recent subjects
+    domain = _pick_curiosity_domain(used)
+    recent_subjects = _recent_subjects(used)
+
     # ── Topic selection ────────────────────────────────────────────
     if not topic:
         brief = {}
@@ -697,7 +784,15 @@ def _generate_script_curiosity(topic: str = None) -> dict:
         # videos replace the old history.
         brief_topic = brief.get("topic", "")
         brief_blob = {"hook": brief.get("hook", ""), "script": brief_topic}
-        brief_is_clean = brief_topic and not _is_affiliate_tainted(brief_blob)
+        # A brief is usable only if it's both non-affiliate AND not a
+        # repeat of a recently-covered subject. The analyzer self-healed
+        # back to science but keeps re-suggesting black holes — subject
+        # recency catches that where the affiliate check can't.
+        brief_is_clean = (
+            brief_topic
+            and not _is_affiliate_tainted(brief_blob)
+            and not _subject_recently_used(brief_topic, used)
+        )
 
         if brief_is_clean:
             print(f"   📊 Using Analyzer brief: {brief_topic}")
@@ -707,17 +802,20 @@ def _generate_script_curiosity(topic: str = None) -> dict:
                 f'Script direction: {brief.get("script_direction", "")}'
             )
         else:
-            if brief_topic:
+            if brief_topic and _is_affiliate_tainted(brief_blob):
                 print(f"   🚫 Brief topic looks affiliate-tainted, ignoring: \"{brief_topic}\"")
-            print(f"   🧪 Generating a fresh curiosity topic from the niche")
+            elif brief_topic:
+                print(f"   🔁 Brief repeats a recent subject, ignoring: \"{brief_topic}\"")
+            print(f"   🧪 Fresh curiosity topic — domain: {domain}")
             topic_part = (
-                f'Come up with a UNIQUE, surprising, genuinely curiosity-provoking topic '
-                f'in this space: "{CHANNEL_NICHE}".\n'
+                f'Pick a UNIQUE, surprising, genuinely curiosity-provoking topic from '
+                f'THIS DOMAIN: {domain}.\n'
                 f'It must be something people are intrinsically curious about and would '
-                f'stop scrolling to learn (e.g. space, physics, the human body, unsolved '
-                f'mysteries, psychology). Absolutely NO software, apps, AI tools, business, '
-                f'money, or productivity topics.\n'
-                f'It MUST be different from everything in the "TOPICS ALREADY USED" list below.'
+                f'stop scrolling to learn. Absolutely NO software, apps, AI tools, '
+                f'business, money, or productivity topics.\n'
+                f'⛔ DO NOT make a video about any of these recently-covered subjects '
+                f'(pick something clearly different): {recent_subjects}.\n'
+                f'Especially avoid black holes unless you have a genuinely novel angle.'
             )
     else:
         topic_part = f'The topic is: "{topic}"'
@@ -770,6 +868,14 @@ PART 1 — THE HOOK (first 2-3 seconds, ~8 words):
 - Open with a JARRING, disruptive statement that stops the scroll
 - NEVER start with "Did you know", "What if I told you", or any cliche
 - Make it feel like a secret of reality being revealed
+- Be CONCRETE and SPECIFIC, not vague. The hook must name a real, vivid
+  thing or pose a sharp, irresistible question.
+  GOOD (specific, makes you NEED the answer):
+    • "Fire a gun on the Moon and the bullet could hit you in the back."
+    • "There is a version of you that never existed."
+    • "Your body replaced almost every cell since you started reading this."
+  BAD (vague, no pull): "Reality is a mirror." "The darkest truth." "Space is strange."
+- If it could be the title of ten different videos, it's too vague — make it sharper.
 
 PART 2 — THE ESCALATION (next 15-17 seconds, ~42 words):
 - Explain rapidly but clearly using vivid analogies
