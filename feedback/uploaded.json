@@ -3074,7 +3074,36 @@
     ],
     "affiliate_program": "",
     "archetype": "mind_blowing_fact",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "0q-IhTcNvyQ",
+      "title": "Black Holes: The Void \ud83d\udd73\ufe0f",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-06-11T08:28:13Z",
+      "views": 3,
+      "likes": 0,
+      "comments": 0,
+      "engagement_rate": 0.0,
+      "views_per_day": 2,
+      "tags": [
+        "black holes",
+        "cosmos",
+        "curiosity",
+        "did you know",
+        "facts",
+        "gravity",
+        "mindblown",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "universe"
+      ],
+      "description": "What happens if you get stuck in a black hole?\n\n#shorts #science #mindblown #space #blackholes",
+      "duration_secs": 27,
+      "thumbnail": "https://i.ytimg.com/vi/0q-IhTcNvyQ/hqdefault.jpg"
+    }
   },
   {
     "id": "WolpLzitfl8",
@@ -3110,6 +3139,24 @@
     ],
     "affiliate_program": "",
     "archetype": "counterintuitive_truth",
+    "stats_fetched": false
+  },
+  {
+    "id": "B53sD67zSzo",
+    "title": "\ud83d\ude80 Bullet Orbit: Mars Gunfire Secret",
+    "uploaded_at": "2026-06-14T08:10:56.959012+00:00",
+    "hook": "Fire a gun on Mars and the bullet could orbit forever",
+    "script": "Fire a gun on Mars and the bullet could orbit forever. Planets have different atmospheres. Air resistance varies. Bullet trajectories bend. Gravity warps. On Mars, the bullet could escape. On Venus, it would burn. In space, it would float. The shocking truth: a bullet's path is dictated by the planet's gravity and atmosphere. Fire a gun on Mars and the bullet could orbit forever",
+    "topic": "Firing a gun on other planets",
+    "tags": [
+      "space",
+      "guns",
+      "physics",
+      "Mars",
+      "atmosphere"
+    ],
+    "affiliate_program": "",
+    "archetype": "mind_blowing_fact",
     "stats_fetched": false
   }
 ]

@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-13T07:11:01.254634",
+  "last_updated": "2026-06-14T08:04:07.316780",
   "videos": {
     "WolpLzitfl8": {
       "id": "WolpLzitfl8",
@@ -7,11 +7,11 @@
       "channel": "KnowMore-Dailyday",
       "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
       "published": "2026-06-12T08:15:19Z",
-      "views": 294,
-      "likes": 4,
+      "views": 821,
+      "likes": 11,
       "comments": 0,
-      "engagement_rate": 1.361,
-      "views_per_day": 294,
+      "engagement_rate": 1.34,
+      "views_per_day": 821,
       "tags": [
         "curiosity",
         "did you know",
@@ -40,7 +40,7 @@
       "likes": 35,
       "comments": 1,
       "engagement_rate": 2.853,
-      "views_per_day": 23,
+      "views_per_day": 22,
       "tags": [
         "black holes",
         "cosmic collapse",
@@ -361,35 +361,6 @@
       "duration_secs": 36,
       "thumbnail": "https://i.ytimg.com/vi/75NxDsNfXvc/hqdefault.jpg"
     },
-    "0q-IhTcNvyQ": {
-      "id": "0q-IhTcNvyQ",
-      "title": "Black Holes: The Void \ud83d\udd73\ufe0f",
-      "channel": "KnowMore-Dailyday",
-      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
-      "published": "2026-06-11T08:28:13Z",
-      "views": 3,
-      "likes": 0,
-      "comments": 0,
-      "engagement_rate": 0.0,
-      "views_per_day": 3,
-      "tags": [
-        "black holes",
-        "cosmos",
-        "curiosity",
-        "did you know",
-        "facts",
-        "gravity",
-        "mindblown",
-        "physics",
-        "science",
-        "shorts",
-        "space",
-        "universe"
-      ],
-      "description": "What happens if you get stuck in a black hole?\n\n#shorts #science #mindblown #space #blackholes",
-      "duration_secs": 27,
-      "thumbnail": "https://i.ytimg.com/vi/0q-IhTcNvyQ/hqdefault.jpg"
-    },
     "rX5GXLrXfEc": {
       "id": "rX5GXLrXfEc",
       "title": "\ud83d\udd25 Kitchen Hacks: The Dark Science \ud83c\udf73",
@@ -438,6 +409,35 @@
       "description": "What if everything you see is a lie? #Shorts #science #reality #mindblown #facts\n\n#Shorts",
       "duration_secs": 26,
       "thumbnail": "https://i.ytimg.com/vi/ixmHFDkEBhI/hqdefault.jpg"
+    },
+    "0q-IhTcNvyQ": {
+      "id": "0q-IhTcNvyQ",
+      "title": "Black Holes: The Void \ud83d\udd73\ufe0f",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-06-11T08:28:13Z",
+      "views": 3,
+      "likes": 0,
+      "comments": 0,
+      "engagement_rate": 0.0,
+      "views_per_day": 2,
+      "tags": [
+        "black holes",
+        "cosmos",
+        "curiosity",
+        "did you know",
+        "facts",
+        "gravity",
+        "mindblown",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "universe"
+      ],
+      "description": "What happens if you get stuck in a black hole?\n\n#shorts #science #mindblown #space #blackholes",
+      "duration_secs": 27,
+      "thumbnail": "https://i.ytimg.com/vi/0q-IhTcNvyQ/hqdefault.jpg"
     },
     "G761W9LP9ww": {
       "id": "G761W9LP9ww",
@@ -567,6 +567,36 @@
       "description": "Uncover the hidden forces that govern your kitchen\n\n#shorts #science #mindblown #kitchenhacks #cooking\n\n#Shorts",
       "duration_secs": 34,
       "thumbnail": "https://i.ytimg.com/vi/44M9ua1_SXI/hqdefault.jpg"
+    },
+    "H-SmcjaEXYE": {
+      "id": "H-SmcjaEXYE",
+      "title": "\ud83d\ude80 Black Holes: The Ultimate Trap?",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-06-13T07:16:43Z",
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "engagement_rate": 0.0,
+      "views_per_day": 0,
+      "tags": [
+        "astronomy",
+        "black holes",
+        "cosmology",
+        "curiosity",
+        "did you know",
+        "facts",
+        "gravity",
+        "mindblown",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "universe"
+      ],
+      "description": "What happens when you get stuck in a black hole? The truth will blow your mind.\n\n#shorts #science #mindblown #space #blackholes",
+      "duration_secs": 29,
+      "thumbnail": "https://i.ytimg.com/vi/H-SmcjaEXYE/hqdefault.jpg"
     },
     "nHWyado7Hbw": {
       "id": "nHWyado7Hbw",
