@@ -1,6 +1,17 @@
 {
-  "updated": "2026-06-14T08:04:05.263790",
+  "updated": "2026-06-15T09:45:19.770033",
   "performers": [
+    {
+      "id": "WolpLzitfl8",
+      "title": "🔫 Bullets in Space: The Unanswered Question",
+      "hook": "Bullets in space",
+      "script": "Bullets in space. No air, no sound. Gravity warps trajectory. On Mars, a shot fires. In vacuum, it never stops. On Venus, it melts. On Jupiter, it disintegrates. The question remains: what happens when you fire a gun on different planets? Bullets in space",
+      "topic": "Firing a Gun on Mars",
+      "views": 867,
+      "engagement_rate": 1.153,
+      "views_per_day": 289,
+      "performance_score": 292.33217
+    },
     {
       "id": "gZIO6_23b0I",
       "title": "🚀 Black Holes: Gravity's Kill Switch",
@@ -44,17 +55,6 @@
       "engagement_rate": 2.02,
       "views_per_day": 50,
       "performance_score": 51.01
-    },
-    {
-      "id": "-ZrIk9AWQc4",
-      "title": "🔮 Black Holes: The Void Within 🌀",
-      "hook": "Cosmic voids are devouring us",
-      "script": "Cosmic voids are devouring us. Stars collapse. Gravity warps. Space-time implodes. Singularity forms. Event horizon draws near. Nothing escapes. Not even light. The universe's darkest secret: black holes are portals to oblivion. And they're growing. Cosmic voids are devouring us",
-      "topic": "Black Holes Science Revealed",
-      "views": 568,
-      "engagement_rate": 2.641,
-      "views_per_day": 44,
-      "performance_score": 45.162040000000005
     }
   ]
 }
