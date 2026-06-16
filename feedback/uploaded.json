@@ -3216,7 +3216,36 @@
     ],
     "affiliate_program": "",
     "archetype": "mind_blowing_fact",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "B53sD67zSzo",
+      "title": "\ud83d\ude80 Bullet Orbit: Mars Gunfire Secret",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-06-14T08:11:32Z",
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "engagement_rate": 0.0,
+      "views_per_day": 0,
+      "tags": [
+        "Mars",
+        "atmosphere",
+        "curiosity",
+        "did you know",
+        "facts",
+        "guns",
+        "mindblown",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "universe"
+      ],
+      "description": "What happens when you fire a gun on Mars? The answer will shock you.\n\n#shorts #science #mindblown #space",
+      "duration_secs": 26,
+      "thumbnail": "https://i.ytimg.com/vi/B53sD67zSzo/hqdefault.jpg"
+    }
   },
   {
     "id": "vSNwLt-P4hU",
@@ -3234,6 +3263,24 @@
     ],
     "affiliate_program": "",
     "archetype": "unsolved_mystery",
+    "stats_fetched": false
+  },
+  {
+    "id": "kT_fXzfG4hI",
+    "title": "\ud83d\udd0d Atoms Pass Through Walls",
+    "uploaded_at": "2026-06-16T09:17:29.876557+00:00",
+    "hook": "Atoms pass through walls",
+    "script": "Atoms pass through walls. Electrons zip through barriers. Protons tunnel deep. Particles disappear, reappear. The rules of reality bend. Your body is a portal. Atoms tunnel in, out. The question remains: what happens when atoms pass through walls? Atoms pass through walls",
+    "topic": "Quantum Tunneling in Everyday Objects",
+    "tags": [
+      "quantum mechanics",
+      "physics",
+      "tunneling",
+      "atoms",
+      "particles"
+    ],
+    "affiliate_program": "",
+    "archetype": "how_does_it_work",
     "stats_fetched": false
   }
 ]
