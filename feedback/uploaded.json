@@ -3282,5 +3282,23 @@
     "affiliate_program": "",
     "archetype": "how_does_it_work",
     "stats_fetched": false
+  },
+  {
+    "id": "nKm2S9gfcU0",
+    "title": "\ud83d\udd0d The Hidden Truth About Reality",
+    "uploaded_at": "2026-06-17T08:48:29.851247+00:00",
+    "hook": "Reality is not what you see",
+    "script": "Reality is not what you see. Waves collapse. Particles scatter. Observer effect distorts. In the quantum realm, truth is hidden. Decoherence reveals the lie. Our world is a projection, a shadow of reality. Reality is not what you see.",
+    "topic": "Quantum Decoherence in Everyday Objects",
+    "tags": [
+      "quantum mechanics",
+      "decoherence",
+      "reality",
+      "physics",
+      "science"
+    ],
+    "affiliate_program": "",
+    "archetype": "counterintuitive_truth",
+    "stats_fetched": false
   }
 ]
