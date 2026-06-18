@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-17T08:42:12.615608",
+  "last_updated": "2026-06-18T08:26:14.658448",
   "videos": {
     "kT_fXzfG4hI": {
       "id": "kT_fXzfG4hI",
@@ -7,11 +7,11 @@
       "channel": "KnowMore-Dailyday",
       "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
       "published": "2026-06-16T09:17:52Z",
-      "views": 251,
+      "views": 561,
       "likes": 3,
       "comments": 1,
-      "engagement_rate": 1.594,
-      "views_per_day": 251,
+      "engagement_rate": 0.713,
+      "views_per_day": 561,
       "tags": [
         "atoms",
         "curiosity",
@@ -41,7 +41,7 @@
       "likes": 10,
       "comments": 0,
       "engagement_rate": 1.153,
-      "views_per_day": 173,
+      "views_per_day": 144,
       "tags": [
         "curiosity",
         "did you know",
@@ -66,11 +66,11 @@
       "channel": "KnowMore-Dailyday",
       "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
       "published": "2026-06-15T09:51:59Z",
-      "views": 72,
+      "views": 73,
       "likes": 0,
       "comments": 0,
       "engagement_rate": 0.0,
-      "views_per_day": 72,
+      "views_per_day": 36,
       "tags": [
         "astrophysics",
         "cosmic phenomena",
@@ -153,7 +153,7 @@
       "likes": 15,
       "comments": 0,
       "engagement_rate": 2.641,
-      "views_per_day": 10,
+      "views_per_day": 9,
       "tags": [
         "astronomy",
         "black holes",
@@ -178,7 +178,7 @@
       "likes": 13,
       "comments": 0,
       "engagement_rate": 2.529,
-      "views_per_day": 9,
+      "views_per_day": 8,
       "tags": [
         "astronomy",
         "black holes",
@@ -397,31 +397,6 @@
       "duration_secs": 26,
       "thumbnail": "https://i.ytimg.com/vi/bPyEoqsorTs/hqdefault.jpg"
     },
-    "75NxDsNfXvc": {
-      "id": "75NxDsNfXvc",
-      "title": "The Ocean Is Secretly Expanding",
-      "channel": "KnowMore-Dailyday",
-      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
-      "published": "2026-04-14T09:34:21Z",
-      "views": 221,
-      "likes": 2,
-      "comments": 0,
-      "engagement_rate": 0.905,
-      "views_per_day": 4,
-      "tags": [
-        "earth",
-        "facts",
-        "mindblown",
-        "nature",
-        "ocean",
-        "science",
-        "shorts",
-        "viral"
-      ],
-      "description": "The ocean is hiding something massive from us. #Shorts #science #ocean #mindblown #facts\n\n#Shorts",
-      "duration_secs": 36,
-      "thumbnail": "https://i.ytimg.com/vi/75NxDsNfXvc/hqdefault.jpg"
-    },
     "rX5GXLrXfEc": {
       "id": "rX5GXLrXfEc",
       "title": "\ud83d\udd25 Kitchen Hacks: The Dark Science \ud83c\udf73",
@@ -446,6 +421,31 @@
       "description": "Uncover the secret science behind kitchen hacks\n\n#shorts #science #mindblown #kitchenhacks #cooking\n\n#Shorts",
       "duration_secs": 32,
       "thumbnail": "https://i.ytimg.com/vi/rX5GXLrXfEc/hqdefault.jpg"
+    },
+    "75NxDsNfXvc": {
+      "id": "75NxDsNfXvc",
+      "title": "The Ocean Is Secretly Expanding",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-04-14T09:34:21Z",
+      "views": 221,
+      "likes": 2,
+      "comments": 0,
+      "engagement_rate": 0.905,
+      "views_per_day": 3,
+      "tags": [
+        "earth",
+        "facts",
+        "mindblown",
+        "nature",
+        "ocean",
+        "science",
+        "shorts",
+        "viral"
+      ],
+      "description": "The ocean is hiding something massive from us. #Shorts #science #ocean #mindblown #facts\n\n#Shorts",
+      "duration_secs": 36,
+      "thumbnail": "https://i.ytimg.com/vi/75NxDsNfXvc/hqdefault.jpg"
     },
     "ixmHFDkEBhI": {
       "id": "ixmHFDkEBhI",
@@ -599,6 +599,35 @@
       "description": "Uncover the hidden forces that govern your kitchen\n\n#shorts #science #mindblown #kitchenhacks #cooking\n\n#Shorts",
       "duration_secs": 34,
       "thumbnail": "https://i.ytimg.com/vi/44M9ua1_SXI/hqdefault.jpg"
+    },
+    "nKm2S9gfcU0": {
+      "id": "nKm2S9gfcU0",
+      "title": "\ud83d\udd0d The Hidden Truth About Reality",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-06-17T08:48:47Z",
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "engagement_rate": 0.0,
+      "views_per_day": 0,
+      "tags": [
+        "curiosity",
+        "decoherence",
+        "did you know",
+        "facts",
+        "mindblown",
+        "physics",
+        "quantum mechanics",
+        "reality",
+        "science",
+        "shorts",
+        "space",
+        "universe"
+      ],
+      "description": "Discover the shocking truth about the world around you\n\n#shorts #science #mindblown #quantumreality",
+      "duration_secs": 18,
+      "thumbnail": "https://i.ytimg.com/vi/nKm2S9gfcU0/hqdefault.jpg"
     },
     "B53sD67zSzo": {
       "id": "B53sD67zSzo",

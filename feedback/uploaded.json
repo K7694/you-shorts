@@ -3263,7 +3263,38 @@
     ],
     "affiliate_program": "",
     "archetype": "unsolved_mystery",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "vSNwLt-P4hU",
+      "title": "\ud83d\udd0d Cosmic Lighthouses: Unseen Forces",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-06-15T09:51:59Z",
+      "views": 73,
+      "likes": 0,
+      "comments": 0,
+      "engagement_rate": 0.0,
+      "views_per_day": 36,
+      "tags": [
+        "astrophysics",
+        "cosmic phenomena",
+        "curiosity",
+        "deep space",
+        "did you know",
+        "facts",
+        "fast radio bursts",
+        "mindblown",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "universe",
+        "unsolved mystery"
+      ],
+      "description": "Uncover the enigma of fast radio bursts in deep space\n\n#shorts #science #mindblown #space #mystery",
+      "duration_secs": 19,
+      "thumbnail": "https://i.ytimg.com/vi/vSNwLt-P4hU/hqdefault.jpg"
+    }
   },
   {
     "id": "kT_fXzfG4hI",
@@ -3299,6 +3330,24 @@
     ],
     "affiliate_program": "",
     "archetype": "counterintuitive_truth",
+    "stats_fetched": false
+  },
+  {
+    "id": "eJS2wpcHT_0",
+    "title": "\ud83c\udf0a Underwater Lakes: The Hidden Killers",
+    "uploaded_at": "2026-06-18T08:33:07.770590+00:00",
+    "hook": "Beneath the ocean, a secret world",
+    "script": "Beneath the ocean, a secret world. Darkness reigns. Pressure crushes. Yet, lakes exist. Freshwater lakes, trapped beneath the sea. Brine and water, a deadly mix. The denser liquid, a poisonous shroud. And at the heart of it all, a mind-bending truth: these underwater lakes can kill, and yet, they're home to life, beneath the ocean, a secret world",
+    "topic": "Underwater Lakes on Earth",
+    "tags": [
+      "underwater lakes",
+      "ocean secrets",
+      "marine life",
+      "freshwater lakes",
+      "brine pools"
+    ],
+    "affiliate_program": "",
+    "archetype": "mind_blowing_fact",
     "stats_fetched": false
   }
 ]
