@@ -679,13 +679,19 @@ _CURIOSITY_ARCHETYPE_INSTRUCTIONS = {
     "mind_blowing_fact":   "Reveal a single, true, genuinely astonishing fact. Build to it, then hit it. The viewer should immediately want to tell someone.",
     "how_does_it_work":    "Explain how something surprising actually works, step by step, in plain vivid language. Demystify it so the viewer feels smarter in 35 seconds.",
     "unsolved_mystery":    "Pose a real unsolved question (science, history, the universe) and walk through why it's so baffling. End on the open mystery, not a neat answer.",
-    "counterintuitive_truth": "Take something people believe and show why the truth is the opposite. Lead with the common belief, then dismantle it with real facts.",
-    "what_if":             "Explore a vivid 'what if' grounded in real science (what if the sun vanished, what if you fell into a black hole). Stay scientifically honest.",
+    "counterintuitive_truth": "Take ONE specific, widely-held belief and show why the truth is the opposite, with a concrete real fact. Name the exact belief and the exact surprising truth — never vague ('the hidden truth about reality' is banned). E.g. 'You are not solid — atoms are 99.9999% empty space.'",
+    "what_if":             "Explore ONE vivid, concrete 'what if' grounded in real science, with a specific named scenario and a specific consequence (not abstract). Stay scientifically honest. E.g. 'What if you fell into the ocean's deepest point — the pressure would crush you to half your size.'",
 }
 _CURIOSITY_FALLBACK_INSTRUCTION = (
     "Reveal something true and genuinely fascinating about the topic — the kind of "
     "fact or idea that stops the scroll and makes the viewer want to share it."
 )
+
+# Archetype selection weights (from config; empty dict → uniform).
+try:
+    _ARCHETYPE_WEIGHTS = dict(CONTENT_ARCHETYPE_WEIGHTS)
+except NameError:
+    _ARCHETYPE_WEIGHTS = {}
 
 
 def _pick_curiosity_domain(used: list) -> str:
@@ -756,8 +762,14 @@ def _generate_script_curiosity(topic: str = None) -> dict:
     used = _load_used_topics()
     used_list = "\n".join(f"- {t['topic']}" for t in used[-50:]) if used else "None yet."
 
-    # Pick a curiosity archetype for variety
-    archetype = random.choice(CONTENT_ARCHETYPES) if CONTENT_ARCHETYPES else "mind_blowing_fact"
+    # Pick a curiosity archetype — weighted toward proven winners
+    # (unsolved_mystery / how_does_it_work) with a small exploration
+    # slice on the rest. Falls back to uniform if weights are missing.
+    if CONTENT_ARCHETYPES:
+        _weights = [_ARCHETYPE_WEIGHTS.get(a, 1) for a in CONTENT_ARCHETYPES]
+        archetype = random.choices(CONTENT_ARCHETYPES, weights=_weights, k=1)[0]
+    else:
+        archetype = "unsolved_mystery"
     archetype_instruction = _CURIOSITY_ARCHETYPE_INSTRUCTIONS.get(
         archetype, _CURIOSITY_FALLBACK_INSTRUCTION
     )

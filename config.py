@@ -349,6 +349,25 @@ CONTENT_ARCHETYPES = [
     "what_if",                  # A vivid, scientifically honest hypothetical
 ]
 
+# ── Archetype WEIGHTS (2026-06-20) — bias toward proven winners ──
+# Across the first ~13 curiosity videos, ALL the breakouts came from
+# two archetypes; the other three produced ~0 views:
+#   unsolved_mystery → 740, 73   (best, consistent)
+#   how_does_it_work → 574       (biggest single hit)
+#   mind_blowing_fact → 0-3      (weak)
+#   counterintuitive_truth → 0,0,0 (dead — usually too vague)
+#   what_if → 0,0                (dead)
+# Weighted random selection favors the winners (~73% of videos) while
+# keeping a small exploration slice on the others so we don't overfit
+# to a tiny sample or collapse into a monoculture. Tune as data grows.
+CONTENT_ARCHETYPE_WEIGHTS = {
+    "unsolved_mystery": 4,
+    "how_does_it_work": 4,
+    "mind_blowing_fact": 1,
+    "counterintuitive_truth": 1,
+    "what_if": 1,
+}
+
 # ── Legacy affiliate archetypes (DORMANT — MONETIZATION_ENABLED) ──
 # Kept for reference / revival alongside the affiliate flow.
 # MONETIZATION_ARCHETYPES = [
