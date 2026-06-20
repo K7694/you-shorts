@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-18T08:26:13.066286",
+  "updated": "2026-06-20T13:17:54.309794",
   "performers": [
     {
       "id": "WolpLzitfl8",
@@ -11,6 +11,17 @@
       "engagement_rate": 1.153,
       "views_per_day": 289,
       "performance_score": 292.33217
+    },
+    {
+      "id": "kT_fXzfG4hI",
+      "title": "🔍 Atoms Pass Through Walls",
+      "hook": "Atoms pass through walls",
+      "script": "Atoms pass through walls. Electrons zip through barriers. Protons tunnel deep. Particles disappear, reappear. The rules of reality bend. Your body is a portal. Atoms tunnel in, out. The question remains: what happens when atoms pass through walls? Atoms pass through walls",
+      "topic": "Quantum Tunneling in Everyday Objects",
+      "views": 574,
+      "engagement_rate": 0.697,
+      "views_per_day": 144,
+      "performance_score": 145.00367999999997
     },
     {
       "id": "gZIO6_23b0I",
@@ -44,17 +55,6 @@
       "engagement_rate": 0.341,
       "views_per_day": 55,
       "performance_score": 55.187549999999995
-    },
-    {
-      "id": "iWaR6KyQ4xM",
-      "title": "🚀 $4k from 1,000 subs with Beehiiv",
-      "hook": "I made $4k from 1,000 subs",
-      "script": "I made $4k from 1,000 subs with Beehiiv. Free up to 2,500 subs, built-in ad network pays me. No transaction fees, referral program boosts growth. Ditch Substack's 10% cut, try Beehiiv - link in the pinned comment",
-      "topic": "Beehiiv Newsletter Profit",
-      "views": 99,
-      "engagement_rate": 2.02,
-      "views_per_day": 50,
-      "performance_score": 51.01
     }
   ]
 }

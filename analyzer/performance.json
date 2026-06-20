@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-18T08:26:14.658448",
+  "last_updated": "2026-06-20T13:17:55.464034",
   "videos": {
     "kT_fXzfG4hI": {
       "id": "kT_fXzfG4hI",
@@ -7,11 +7,11 @@
       "channel": "KnowMore-Dailyday",
       "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
       "published": "2026-06-16T09:17:52Z",
-      "views": 561,
+      "views": 574,
       "likes": 3,
       "comments": 1,
-      "engagement_rate": 0.713,
-      "views_per_day": 561,
+      "engagement_rate": 0.697,
+      "views_per_day": 144,
       "tags": [
         "atoms",
         "curiosity",
@@ -41,7 +41,7 @@
       "likes": 10,
       "comments": 0,
       "engagement_rate": 1.153,
-      "views_per_day": 144,
+      "views_per_day": 108,
       "tags": [
         "curiosity",
         "did you know",
@@ -60,6 +60,32 @@
       "duration_secs": 20,
       "thumbnail": "https://i.ytimg.com/vi/WolpLzitfl8/hqdefault.jpg"
     },
+    "gZIO6_23b0I": {
+      "id": "gZIO6_23b0I",
+      "title": "\ud83d\ude80 Black Holes: Gravity's Kill Switch",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-04-18T05:34:21Z",
+      "views": 1262,
+      "likes": 35,
+      "comments": 1,
+      "engagement_rate": 2.853,
+      "views_per_day": 20,
+      "tags": [
+        "black holes",
+        "cosmic collapse",
+        "event horizon",
+        "facts",
+        "gravity",
+        "science",
+        "shorts",
+        "space-time",
+        "viral"
+      ],
+      "description": "Uncover the dark secrets of black holes\n\n#shorts #science #mindblown #blackholes #gravity\n\n#Shorts",
+      "duration_secs": 27,
+      "thumbnail": "https://i.ytimg.com/vi/gZIO6_23b0I/hqdefault.jpg"
+    },
     "vSNwLt-P4hU": {
       "id": "vSNwLt-P4hU",
       "title": "\ud83d\udd0d Cosmic Lighthouses: Unseen Forces",
@@ -70,7 +96,7 @@
       "likes": 0,
       "comments": 0,
       "engagement_rate": 0.0,
-      "views_per_day": 36,
+      "views_per_day": 15,
       "tags": [
         "astrophysics",
         "cosmic phenomena",
@@ -90,32 +116,6 @@
       "description": "Uncover the enigma of fast radio bursts in deep space\n\n#shorts #science #mindblown #space #mystery",
       "duration_secs": 19,
       "thumbnail": "https://i.ytimg.com/vi/vSNwLt-P4hU/hqdefault.jpg"
-    },
-    "gZIO6_23b0I": {
-      "id": "gZIO6_23b0I",
-      "title": "\ud83d\ude80 Black Holes: Gravity's Kill Switch",
-      "channel": "KnowMore-Dailyday",
-      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
-      "published": "2026-04-18T05:34:21Z",
-      "views": 1262,
-      "likes": 35,
-      "comments": 1,
-      "engagement_rate": 2.853,
-      "views_per_day": 21,
-      "tags": [
-        "black holes",
-        "cosmic collapse",
-        "event horizon",
-        "facts",
-        "gravity",
-        "science",
-        "shorts",
-        "space-time",
-        "viral"
-      ],
-      "description": "Uncover the dark secrets of black holes\n\n#shorts #science #mindblown #blackholes #gravity\n\n#Shorts",
-      "duration_secs": 27,
-      "thumbnail": "https://i.ytimg.com/vi/gZIO6_23b0I/hqdefault.jpg"
     },
     "F6zEu1_Wn1Q": {
       "id": "F6zEu1_Wn1Q",
@@ -193,56 +193,6 @@
       "duration_secs": 29,
       "thumbnail": "https://i.ytimg.com/vi/ERhoFeabX3w/hqdefault.jpg"
     },
-    "XImCXqfecvY": {
-      "id": "XImCXqfecvY",
-      "title": "The Multiverse Mind Hack",
-      "channel": "KnowMore-Dailyday",
-      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
-      "published": "2026-04-14T09:34:16Z",
-      "views": 497,
-      "likes": 7,
-      "comments": 0,
-      "engagement_rate": 1.408,
-      "views_per_day": 8,
-      "tags": [
-        "facts",
-        "mindblown",
-        "multiverse",
-        "quantum",
-        "science",
-        "shorts",
-        "viral"
-      ],
-      "description": "Your mind might be connected to parallel universes. #Shorts #science #multiverse #mindblown #facts\n\n#Shorts",
-      "duration_secs": 24,
-      "thumbnail": "https://i.ytimg.com/vi/XImCXqfecvY/hqdefault.jpg"
-    },
-    "PhtesaWw_5A": {
-      "id": "PhtesaWw_5A",
-      "title": "\ud83d\udd25 Black Holes: The Cosmic Abyss \ud83c\udf00",
-      "channel": "KnowMore-Dailyday",
-      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
-      "published": "2026-04-18T16:12:53Z",
-      "views": 402,
-      "likes": 5,
-      "comments": 0,
-      "engagement_rate": 1.244,
-      "views_per_day": 7,
-      "tags": [
-        "astrophysics",
-        "black holes",
-        "cosmology",
-        "facts",
-        "science",
-        "shorts",
-        "space",
-        "universe",
-        "viral"
-      ],
-      "description": "Uncover the dark secrets of black holes\n\n#shorts #science #mindblown #blackholes #cosmos\n\n#Shorts",
-      "duration_secs": 18,
-      "thumbnail": "https://i.ytimg.com/vi/PhtesaWw_5A/hqdefault.jpg"
-    },
     "jQn0rKxwhAk": {
       "id": "jQn0rKxwhAk",
       "title": "\ud83d\udd2e Black Holes: The Void in Space",
@@ -269,30 +219,55 @@
       "duration_secs": 21,
       "thumbnail": "https://i.ytimg.com/vi/jQn0rKxwhAk/hqdefault.jpg"
     },
-    "GNdBew-G_Kg": {
-      "id": "GNdBew-G_Kg",
-      "title": "\ud83d\udd0d The Dark Science of Kitchen Hacks",
+    "XImCXqfecvY": {
+      "id": "XImCXqfecvY",
+      "title": "The Multiverse Mind Hack",
       "channel": "KnowMore-Dailyday",
       "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
-      "published": "2026-04-19T16:14:29Z",
-      "views": 328,
-      "likes": 2,
+      "published": "2026-04-14T09:34:16Z",
+      "views": 497,
+      "likes": 7,
       "comments": 0,
-      "engagement_rate": 0.61,
-      "views_per_day": 6,
+      "engagement_rate": 1.408,
+      "views_per_day": 7,
       "tags": [
-        "Maillard reaction",
-        "chemistry",
-        "cooking",
         "facts",
-        "kitchen hacks",
+        "mindblown",
+        "multiverse",
+        "quantum",
         "science",
         "shorts",
         "viral"
       ],
-      "description": "The secret science behind kitchen hacks revealed\n\n#shorts #science #mindblown #kitchenhacks #cooking\n\n#Shorts",
-      "duration_secs": 32,
-      "thumbnail": "https://i.ytimg.com/vi/GNdBew-G_Kg/hqdefault.jpg"
+      "description": "Your mind might be connected to parallel universes. #Shorts #science #multiverse #mindblown #facts\n\n#Shorts",
+      "duration_secs": 24,
+      "thumbnail": "https://i.ytimg.com/vi/XImCXqfecvY/hqdefault.jpg"
+    },
+    "PhtesaWw_5A": {
+      "id": "PhtesaWw_5A",
+      "title": "\ud83d\udd25 Black Holes: The Cosmic Abyss \ud83c\udf00",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-04-18T16:12:53Z",
+      "views": 402,
+      "likes": 5,
+      "comments": 0,
+      "engagement_rate": 1.244,
+      "views_per_day": 6,
+      "tags": [
+        "astrophysics",
+        "black holes",
+        "cosmology",
+        "facts",
+        "science",
+        "shorts",
+        "space",
+        "universe",
+        "viral"
+      ],
+      "description": "Uncover the dark secrets of black holes\n\n#shorts #science #mindblown #blackholes #cosmos\n\n#Shorts",
+      "duration_secs": 18,
+      "thumbnail": "https://i.ytimg.com/vi/PhtesaWw_5A/hqdefault.jpg"
     },
     "vbbAFitH3Hs": {
       "id": "vbbAFitH3Hs",
@@ -346,6 +321,31 @@
       "duration_secs": 24,
       "thumbnail": "https://i.ytimg.com/vi/x9VpwqbHngk/hqdefault.jpg"
     },
+    "GNdBew-G_Kg": {
+      "id": "GNdBew-G_Kg",
+      "title": "\ud83d\udd0d The Dark Science of Kitchen Hacks",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-04-19T16:14:29Z",
+      "views": 328,
+      "likes": 2,
+      "comments": 0,
+      "engagement_rate": 0.61,
+      "views_per_day": 5,
+      "tags": [
+        "Maillard reaction",
+        "chemistry",
+        "cooking",
+        "facts",
+        "kitchen hacks",
+        "science",
+        "shorts",
+        "viral"
+      ],
+      "description": "The secret science behind kitchen hacks revealed\n\n#shorts #science #mindblown #kitchenhacks #cooking\n\n#Shorts",
+      "duration_secs": 32,
+      "thumbnail": "https://i.ytimg.com/vi/GNdBew-G_Kg/hqdefault.jpg"
+    },
     "GF7E-npIDM4": {
       "id": "GF7E-npIDM4",
       "title": "\ud83d\udd2e Black Holes: Cosmic Killers",
@@ -356,7 +356,7 @@
       "likes": 7,
       "comments": 0,
       "engagement_rate": 2.632,
-      "views_per_day": 5,
+      "views_per_day": 4,
       "tags": [
         "black holes",
         "cosmos",
@@ -370,32 +370,6 @@
       "description": "Uncover the dark secrets of black holes\n\n#shorts #science #mindblown #blackholes #space\n\n#Shorts",
       "duration_secs": 23,
       "thumbnail": "https://i.ytimg.com/vi/GF7E-npIDM4/hqdefault.jpg"
-    },
-    "bPyEoqsorTs": {
-      "id": "bPyEoqsorTs",
-      "title": "\ud83d\udd01 The Dark Secret Behind Song Repetition",
-      "channel": "KnowMore-Dailyday",
-      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
-      "published": "2026-04-15T10:51:49Z",
-      "views": 230,
-      "likes": 8,
-      "comments": 0,
-      "engagement_rate": 3.478,
-      "views_per_day": 4,
-      "tags": [
-        "brain function",
-        "dopamine",
-        "facts",
-        "music",
-        "psychology",
-        "science",
-        "shorts",
-        "song repetition",
-        "viral"
-      ],
-      "description": "Discover the psychological trap behind song repetition\n\n#shorts #science #music\n\n#Shorts",
-      "duration_secs": 26,
-      "thumbnail": "https://i.ytimg.com/vi/bPyEoqsorTs/hqdefault.jpg"
     },
     "rX5GXLrXfEc": {
       "id": "rX5GXLrXfEc",
@@ -421,6 +395,32 @@
       "description": "Uncover the secret science behind kitchen hacks\n\n#shorts #science #mindblown #kitchenhacks #cooking\n\n#Shorts",
       "duration_secs": 32,
       "thumbnail": "https://i.ytimg.com/vi/rX5GXLrXfEc/hqdefault.jpg"
+    },
+    "bPyEoqsorTs": {
+      "id": "bPyEoqsorTs",
+      "title": "\ud83d\udd01 The Dark Secret Behind Song Repetition",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-04-15T10:51:49Z",
+      "views": 230,
+      "likes": 8,
+      "comments": 0,
+      "engagement_rate": 3.478,
+      "views_per_day": 3,
+      "tags": [
+        "brain function",
+        "dopamine",
+        "facts",
+        "music",
+        "psychology",
+        "science",
+        "shorts",
+        "song repetition",
+        "viral"
+      ],
+      "description": "Discover the psychological trap behind song repetition\n\n#shorts #science #music\n\n#Shorts",
+      "duration_secs": 26,
+      "thumbnail": "https://i.ytimg.com/vi/bPyEoqsorTs/hqdefault.jpg"
     },
     "75NxDsNfXvc": {
       "id": "75NxDsNfXvc",
@@ -470,6 +470,37 @@
       "description": "What if everything you see is a lie? #Shorts #science #reality #mindblown #facts\n\n#Shorts",
       "duration_secs": 26,
       "thumbnail": "https://i.ytimg.com/vi/ixmHFDkEBhI/hqdefault.jpg"
+    },
+    "eJS2wpcHT_0": {
+      "id": "eJS2wpcHT_0",
+      "title": "\ud83c\udf0a Underwater Lakes: The Hidden Killers",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-06-18T08:33:22Z",
+      "views": 3,
+      "likes": 0,
+      "comments": 0,
+      "engagement_rate": 0.0,
+      "views_per_day": 2,
+      "tags": [
+        "brine pools",
+        "curiosity",
+        "did you know",
+        "facts",
+        "freshwater lakes",
+        "marine life",
+        "mindblown",
+        "ocean secrets",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "underwater lakes",
+        "universe"
+      ],
+      "description": "Discover the deadly underwater lakes that can kill, yet support life\n\n#shorts #ocean #nature #science #mindblown",
+      "duration_secs": 24,
+      "thumbnail": "https://i.ytimg.com/vi/eJS2wpcHT_0/hqdefault.jpg"
     },
     "G761W9LP9ww": {
       "id": "G761W9LP9ww",

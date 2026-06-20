@@ -3312,7 +3312,37 @@
     ],
     "affiliate_program": "",
     "archetype": "how_does_it_work",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "kT_fXzfG4hI",
+      "title": "\ud83d\udd0d Atoms Pass Through Walls",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-06-16T09:17:52Z",
+      "views": 574,
+      "likes": 3,
+      "comments": 1,
+      "engagement_rate": 0.697,
+      "views_per_day": 144,
+      "tags": [
+        "atoms",
+        "curiosity",
+        "did you know",
+        "facts",
+        "mindblown",
+        "particles",
+        "physics",
+        "quantum mechanics",
+        "science",
+        "shorts",
+        "space",
+        "tunneling",
+        "universe"
+      ],
+      "description": "Discover the secret of quantum tunneling\n\n#shorts #science #mindblown #quantum",
+      "duration_secs": 20,
+      "thumbnail": "https://i.ytimg.com/vi/kT_fXzfG4hI/hqdefault.jpg"
+    }
   },
   {
     "id": "nKm2S9gfcU0",
@@ -3330,7 +3360,36 @@
     ],
     "affiliate_program": "",
     "archetype": "counterintuitive_truth",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "nKm2S9gfcU0",
+      "title": "\ud83d\udd0d The Hidden Truth About Reality",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-06-17T08:48:47Z",
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "engagement_rate": 0.0,
+      "views_per_day": 0,
+      "tags": [
+        "curiosity",
+        "decoherence",
+        "did you know",
+        "facts",
+        "mindblown",
+        "physics",
+        "quantum mechanics",
+        "reality",
+        "science",
+        "shorts",
+        "space",
+        "universe"
+      ],
+      "description": "Discover the shocking truth about the world around you\n\n#shorts #science #mindblown #quantumreality",
+      "duration_secs": 18,
+      "thumbnail": "https://i.ytimg.com/vi/nKm2S9gfcU0/hqdefault.jpg"
+    }
   },
   {
     "id": "eJS2wpcHT_0",
@@ -3348,6 +3407,55 @@
     ],
     "affiliate_program": "",
     "archetype": "mind_blowing_fact",
+    "stats_fetched": true,
+    "stats": {
+      "id": "eJS2wpcHT_0",
+      "title": "\ud83c\udf0a Underwater Lakes: The Hidden Killers",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-06-18T08:33:22Z",
+      "views": 3,
+      "likes": 0,
+      "comments": 0,
+      "engagement_rate": 0.0,
+      "views_per_day": 2,
+      "tags": [
+        "brine pools",
+        "curiosity",
+        "did you know",
+        "facts",
+        "freshwater lakes",
+        "marine life",
+        "mindblown",
+        "ocean secrets",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "underwater lakes",
+        "universe"
+      ],
+      "description": "Discover the deadly underwater lakes that can kill, yet support life\n\n#shorts #ocean #nature #science #mindblown",
+      "duration_secs": 24,
+      "thumbnail": "https://i.ytimg.com/vi/eJS2wpcHT_0/hqdefault.jpg"
+    }
+  },
+  {
+    "id": "ojAv-DQ33lQ",
+    "title": "\ud83d\udd2e Mirror Reflections Entangled? \ud83e\udd2f",
+    "uploaded_at": "2026-06-20T13:23:19.784744+00:00",
+    "hook": "Mirror reflections entangled",
+    "script": "Mirror reflections entangled. Photons bounce back. Entanglement occurs. Reality blurs. Your reflection is connected. To what, we don't know. Mirror reflections entangled",
+    "topic": "Quantum Entanglement in Mirror Reflections",
+    "tags": [
+      "quantum entanglement",
+      "mirror reflections",
+      "physics",
+      "unsolved mystery",
+      "science"
+    ],
+    "affiliate_program": "",
+    "archetype": "unsolved_mystery",
     "stats_fetched": false
   }
 ]
