@@ -201,12 +201,15 @@ def _score_hook(hook: str) -> int:
 
 
 def _call_llm(prompt: str) -> str:
-    """Call LLM with automatic fallback: Gemini → Groq → Ollama (local).
+    """Call an LLM with provider fallback. Order set by config.LLM_PRIMARY.
 
-    On 429 (rate limit), wait progressively (30s → 60s → 120s) before
-    falling through. Two providers hitting rate limits at the same
-    moment was the cause of the 2026-05-04 failure — letting them
-    cool down often resurrects the call.
+    Groq is the default primary: this account's Gemini free tier returns
+    429 RESOURCE_EXHAUSTED on every call (zero quota), so Gemini is kept
+    only as a fail-fast fallback. A daily/zero quota won't recover in
+    90s, so we no longer burn long cooldowns on it (that wasted ~4.5
+    min/run). Groq's limits are per-minute and recover quickly, so it
+    gets short cooldowns. Flip LLM_PRIMARY to "gemini" when a key with
+    real quota exists and it upgrades automatically.
     """
     errors = []
     is_cloud = os.environ.get("CI", "").lower() == "true"
@@ -214,41 +217,45 @@ def _call_llm(prompt: str) -> str:
     def _is_rate_limit(err: str) -> bool:
         return "429" in err or "Too Many Requests" in err or "RESOURCE_EXHAUSTED" in err
 
-    # Try Gemini first (fastest, best quality) — with rate-limit cooldown
-    if GEMINI_API_KEY:
-        for attempt, wait in enumerate([0, 30, 60]):
-            if wait:
-                print(f"      ⏳ Gemini cooldown {wait}s before retry {attempt}...")
-                time.sleep(wait)
-            try:
-                return _call_gemini(prompt)
-            except RuntimeError as e:
-                msg = str(e)
-                errors.append(msg)
-                print(f"      ⚠️  {msg}")
-                if not _is_rate_limit(msg):
-                    break  # non-rate-limit error → don't retry, fall to next provider
-
-    # Try Groq second (fast, free tier) — with rate-limit cooldown
-    if GROQ_API_KEY:
-        for attempt, wait in enumerate([0, 30, 90]):
+    def _try_groq():
+        if not GROQ_API_KEY:
+            return None
+        for attempt, wait in enumerate([0, 15, 30]):  # short — RPM recovers fast
             if wait:
                 print(f"      ⏳ Groq cooldown {wait}s before retry {attempt}...")
                 time.sleep(wait)
             try:
                 if attempt == 0:
-                    print("      🔄 Trying Groq (llama3-70b)...")
+                    print("      🧠 Groq (llama-3.3-70b)...")
                 return _call_groq(prompt)
             except RuntimeError as e:
-                msg = str(e)
-                errors.append(msg)
-                print(f"      ⚠️  {msg}")
+                msg = str(e); errors.append(msg); print(f"      ⚠️  {msg}")
                 if not _is_rate_limit(msg):
                     break
+        return None
+
+    def _try_gemini():
+        if not GEMINI_API_KEY:
+            return None
+        # Fail fast — one quick attempt, no cooldown (quota is usually zero)
+        try:
+            print("      🧠 Gemini (gemini-2.0-flash)...")
+            return _call_gemini(prompt)
+        except RuntimeError as e:
+            msg = str(e); errors.append(msg); print(f"      ⚠️  {msg}")
+        return None
+
+    providers = {"groq": _try_groq, "gemini": _try_gemini}
+    primary = (LLM_PRIMARY if "LLM_PRIMARY" in globals() else "groq").lower()
+    order = [primary] + [p for p in ("groq", "gemini") if p != primary]
+
+    for name in order:
+        result = providers[name]()
+        if result is not None:
+            return result
 
     # Ollama only makes sense locally — never works in GitHub Actions
-    # runners (Ollama isn't installed). Skip it cleanly in cloud to
-    # keep logs clean and avoid the misleading "ConnectionRefused".
+    # runners (Ollama isn't installed). Skip it cleanly in cloud.
     if not is_cloud:
         try:
             print("      🔄 Switching to local Ollama (llama3.1:8b)...")
@@ -627,13 +634,13 @@ def generate_script(topic: str = None) -> dict:
     return _generate_script_curiosity(topic)
 
 
-def _generate_with_hook_gate(prompt: str, attempts: int = 3, target: int = 7) -> dict:
+def _generate_with_hook_gate(prompt: str, attempts: int = 4, target: int = 7) -> dict:
     """Run the LLM with hook-quality gating, keeping the BEST attempt.
 
-    Raised from 2→3 attempts and 6→7 target after the Jun batch shipped
-    too many 4–5/10 hooks (1-in-8 hit rate). Instead of taking whatever
-    the last attempt produced, we keep the highest-scoring one across all
-    attempts so a weak final try can't override a stronger earlier one.
+    Raised to 4 attempts / target 7 now that Groq is the primary LLM
+    (fast + free, so more shots are cheap). Keeps the highest-scoring
+    attempt across all tries so a weak final try can't override a
+    stronger earlier one.
     """
     best_data, best_score = None, -1
     rejected = []

@@ -51,6 +51,14 @@ GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
 #     Get it here (30 sec): https://console.groq.com → API Keys
 GROQ_API_KEY = os.getenv("GROQ_API_KEY", "")
 
+# ── PRIMARY LLM (2026-06-20) ───────────────────────────────────
+# This account's Gemini free tier returns 429 RESOURCE_EXHAUSTED on
+# every call (zero generation quota — likely a Workspace/region limit),
+# so Groq is the reliable primary. Gemini stays in the chain as a
+# fail-fast fallback. The DAY a key with real Gemini quota appears,
+# flip this to "gemini" (one line) and it upgrades automatically.
+LLM_PRIMARY = "groq"   # "groq" | "gemini"
+
 # 1c. YouTube Data API key (for the Analyzer — reading YouTube data)
 YOUTUBE_DATA_API_KEY = os.getenv("YOUTUBE_DATA_API_KEY", "")
 
