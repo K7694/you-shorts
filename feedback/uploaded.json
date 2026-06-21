@@ -3457,5 +3457,23 @@
     "affiliate_program": "",
     "archetype": "unsolved_mystery",
     "stats_fetched": false
+  },
+  {
+    "id": "7s8N1yhGDDU",
+    "title": "\ud83d\udd0d Uncovering The Great Sphinx Secret",
+    "uploaded_at": "2026-06-21T08:17:06.954419+00:00",
+    "hook": "The Great Sphinx is older",
+    "script": "The Great Sphinx is older. Than the pyramids. Carved from one block. Face of a god, body of a lion. Eyes stare into eternity. Nose missing, secrets hidden. The Great Sphinx stands guard, the Great Sphinx is older",
+    "topic": "The Great Sphinx Mystery",
+    "tags": [
+      "Great Sphinx",
+      "Ancient Egypt",
+      "Mystery",
+      "History",
+      "Archaeology"
+    ],
+    "affiliate_program": "",
+    "archetype": "unsolved_mystery",
+    "stats_fetched": false
   }
 ]
