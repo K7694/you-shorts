@@ -3475,5 +3475,23 @@
     "affiliate_program": "",
     "archetype": "unsolved_mystery",
     "stats_fetched": false
+  },
+  {
+    "id": "Nf64RDDKWqY",
+    "title": "\ud83d\udd34 Black Holes: The Void \ud83d\udd34",
+    "uploaded_at": "2026-06-21T11:14:55.999749+00:00",
+    "hook": "Enter a void where light dies",
+    "script": "Enter a void where light dies. Gravity warps space. Stars collapse. Nothing escapes. Not even light. Matter implodes. Energy implodes. Time implodes. The point of no return is near. The event horizon looms. Cosmic collapse is inevitable. And once you cross, enter a void where light dies",
+    "topic": "Black Holes Science",
+    "tags": [
+      "black holes",
+      "space",
+      "gravity",
+      "cosmos",
+      "science"
+    ],
+    "affiliate_program": "",
+    "archetype": "what_if",
+    "stats_fetched": false
   }
 ]

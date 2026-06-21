@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-20T13:17:55.464034",
+  "last_updated": "2026-06-21T11:13:14.283936",
   "videos": {
     "kT_fXzfG4hI": {
       "id": "kT_fXzfG4hI",
@@ -11,7 +11,7 @@
       "likes": 3,
       "comments": 1,
       "engagement_rate": 0.697,
-      "views_per_day": 144,
+      "views_per_day": 115,
       "tags": [
         "atoms",
         "curiosity",
@@ -41,7 +41,7 @@
       "likes": 10,
       "comments": 0,
       "engagement_rate": 1.153,
-      "views_per_day": 108,
+      "views_per_day": 96,
       "tags": [
         "curiosity",
         "did you know",
@@ -86,6 +86,32 @@
       "duration_secs": 27,
       "thumbnail": "https://i.ytimg.com/vi/gZIO6_23b0I/hqdefault.jpg"
     },
+    "F6zEu1_Wn1Q": {
+      "id": "F6zEu1_Wn1Q",
+      "title": "\ud83d\udd2a Kitchen Secrets: The Dark Science \ud83c\udf73",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-04-16T05:53:52Z",
+      "views": 879,
+      "likes": 3,
+      "comments": 0,
+      "engagement_rate": 0.341,
+      "views_per_day": 13,
+      "tags": [
+        "cooking tips",
+        "dark science",
+        "facts",
+        "food science",
+        "kitchen hacks",
+        "molecular gastronomy",
+        "science",
+        "shorts",
+        "viral"
+      ],
+      "description": "Uncover the sinister science behind kitchen hacks\n\n#shorts #science #mindblown #kitchenhacks #foodscience\n\n#Shorts",
+      "duration_secs": 29,
+      "thumbnail": "https://i.ytimg.com/vi/F6zEu1_Wn1Q/hqdefault.jpg"
+    },
     "vSNwLt-P4hU": {
       "id": "vSNwLt-P4hU",
       "title": "\ud83d\udd0d Cosmic Lighthouses: Unseen Forces",
@@ -96,7 +122,7 @@
       "likes": 0,
       "comments": 0,
       "engagement_rate": 0.0,
-      "views_per_day": 15,
+      "views_per_day": 12,
       "tags": [
         "astrophysics",
         "cosmic phenomena",
@@ -116,32 +142,6 @@
       "description": "Uncover the enigma of fast radio bursts in deep space\n\n#shorts #science #mindblown #space #mystery",
       "duration_secs": 19,
       "thumbnail": "https://i.ytimg.com/vi/vSNwLt-P4hU/hqdefault.jpg"
-    },
-    "F6zEu1_Wn1Q": {
-      "id": "F6zEu1_Wn1Q",
-      "title": "\ud83d\udd2a Kitchen Secrets: The Dark Science \ud83c\udf73",
-      "channel": "KnowMore-Dailyday",
-      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
-      "published": "2026-04-16T05:53:52Z",
-      "views": 879,
-      "likes": 3,
-      "comments": 0,
-      "engagement_rate": 0.341,
-      "views_per_day": 14,
-      "tags": [
-        "cooking tips",
-        "dark science",
-        "facts",
-        "food science",
-        "kitchen hacks",
-        "molecular gastronomy",
-        "science",
-        "shorts",
-        "viral"
-      ],
-      "description": "Uncover the sinister science behind kitchen hacks\n\n#shorts #science #mindblown #kitchenhacks #foodscience\n\n#Shorts",
-      "duration_secs": 29,
-      "thumbnail": "https://i.ytimg.com/vi/F6zEu1_Wn1Q/hqdefault.jpg"
     },
     "-ZrIk9AWQc4": {
       "id": "-ZrIk9AWQc4",
@@ -321,6 +321,35 @@
       "duration_secs": 24,
       "thumbnail": "https://i.ytimg.com/vi/x9VpwqbHngk/hqdefault.jpg"
     },
+    "ojAv-DQ33lQ": {
+      "id": "ojAv-DQ33lQ",
+      "title": "\ud83d\udd2e Mirror Reflections Entangled? \ud83e\udd2f",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-06-20T13:23:37Z",
+      "views": 5,
+      "likes": 0,
+      "comments": 0,
+      "engagement_rate": 0.0,
+      "views_per_day": 5,
+      "tags": [
+        "curiosity",
+        "did you know",
+        "facts",
+        "mindblown",
+        "mirror reflections",
+        "physics",
+        "quantum entanglement",
+        "science",
+        "shorts",
+        "space",
+        "universe",
+        "unsolved mystery"
+      ],
+      "description": "The bizarre connection between mirror reflections and quantum entanglement\n\n#shorts #science #mindblown #quantum #entanglement",
+      "duration_secs": 13,
+      "thumbnail": "https://i.ytimg.com/vi/ojAv-DQ33lQ/hqdefault.jpg"
+    },
     "GNdBew-G_Kg": {
       "id": "GNdBew-G_Kg",
       "title": "\ud83d\udd0d The Dark Science of Kitchen Hacks",
@@ -471,37 +500,6 @@
       "duration_secs": 26,
       "thumbnail": "https://i.ytimg.com/vi/ixmHFDkEBhI/hqdefault.jpg"
     },
-    "eJS2wpcHT_0": {
-      "id": "eJS2wpcHT_0",
-      "title": "\ud83c\udf0a Underwater Lakes: The Hidden Killers",
-      "channel": "KnowMore-Dailyday",
-      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
-      "published": "2026-06-18T08:33:22Z",
-      "views": 3,
-      "likes": 0,
-      "comments": 0,
-      "engagement_rate": 0.0,
-      "views_per_day": 2,
-      "tags": [
-        "brine pools",
-        "curiosity",
-        "did you know",
-        "facts",
-        "freshwater lakes",
-        "marine life",
-        "mindblown",
-        "ocean secrets",
-        "physics",
-        "science",
-        "shorts",
-        "space",
-        "underwater lakes",
-        "universe"
-      ],
-      "description": "Discover the deadly underwater lakes that can kill, yet support life\n\n#shorts #ocean #nature #science #mindblown",
-      "duration_secs": 24,
-      "thumbnail": "https://i.ytimg.com/vi/eJS2wpcHT_0/hqdefault.jpg"
-    },
     "G761W9LP9ww": {
       "id": "G761W9LP9ww",
       "title": "\ud83d\udd0d Kitchen Hacks: The Secret Science",
@@ -605,6 +603,37 @@
       "duration_secs": 23,
       "thumbnail": "https://i.ytimg.com/vi/tNwO-DzFeyM/hqdefault.jpg"
     },
+    "eJS2wpcHT_0": {
+      "id": "eJS2wpcHT_0",
+      "title": "\ud83c\udf0a Underwater Lakes: The Hidden Killers",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-06-18T08:33:22Z",
+      "views": 4,
+      "likes": 0,
+      "comments": 0,
+      "engagement_rate": 0.0,
+      "views_per_day": 1,
+      "tags": [
+        "brine pools",
+        "curiosity",
+        "did you know",
+        "facts",
+        "freshwater lakes",
+        "marine life",
+        "mindblown",
+        "ocean secrets",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "underwater lakes",
+        "universe"
+      ],
+      "description": "Discover the deadly underwater lakes that can kill, yet support life\n\n#shorts #ocean #nature #science #mindblown",
+      "duration_secs": 24,
+      "thumbnail": "https://i.ytimg.com/vi/eJS2wpcHT_0/hqdefault.jpg"
+    },
     "44M9ua1_SXI": {
       "id": "44M9ua1_SXI",
       "title": "\ud83d\udd0d Kitchen Hacks: The Dark Science",
@@ -630,6 +659,37 @@
       "description": "Uncover the hidden forces that govern your kitchen\n\n#shorts #science #mindblown #kitchenhacks #cooking\n\n#Shorts",
       "duration_secs": 34,
       "thumbnail": "https://i.ytimg.com/vi/44M9ua1_SXI/hqdefault.jpg"
+    },
+    "7s8N1yhGDDU": {
+      "id": "7s8N1yhGDDU",
+      "title": "\ud83d\udd0d Uncovering The Great Sphinx Secret",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-06-21T08:17:25Z",
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "engagement_rate": 0.0,
+      "views_per_day": 0,
+      "tags": [
+        "Ancient Egypt",
+        "Archaeology",
+        "Great Sphinx",
+        "History",
+        "Mystery",
+        "curiosity",
+        "did you know",
+        "facts",
+        "mindblown",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "universe"
+      ],
+      "description": "Unravel the mystery of the Great Sphinx\n\n#shorts #history #mystery",
+      "duration_secs": 15,
+      "thumbnail": "https://i.ytimg.com/vi/7s8N1yhGDDU/hqdefault.jpg"
     },
     "nKm2S9gfcU0": {
       "id": "nKm2S9gfcU0",
