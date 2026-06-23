@@ -3456,7 +3456,36 @@
     ],
     "affiliate_program": "",
     "archetype": "unsolved_mystery",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "ojAv-DQ33lQ",
+      "title": "\ud83d\udd2e Mirror Reflections Entangled? \ud83e\udd2f",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-06-20T13:23:37Z",
+      "views": 6,
+      "likes": 0,
+      "comments": 0,
+      "engagement_rate": 0.0,
+      "views_per_day": 3,
+      "tags": [
+        "curiosity",
+        "did you know",
+        "facts",
+        "mindblown",
+        "mirror reflections",
+        "physics",
+        "quantum entanglement",
+        "science",
+        "shorts",
+        "space",
+        "universe",
+        "unsolved mystery"
+      ],
+      "description": "The bizarre connection between mirror reflections and quantum entanglement\n\n#shorts #science #mindblown #quantum #entanglement",
+      "duration_secs": 13,
+      "thumbnail": "https://i.ytimg.com/vi/ojAv-DQ33lQ/hqdefault.jpg"
+    }
   },
   {
     "id": "7s8N1yhGDDU",
@@ -3528,6 +3557,24 @@
     ],
     "affiliate_program": "",
     "archetype": "mind_blowing_fact",
+    "stats_fetched": false
+  },
+  {
+    "id": "M-hxG49mA-E",
+    "title": "Moon Bullet \ud83d\ude80",
+    "uploaded_at": "2026-06-23T07:06:15.637008+00:00",
+    "hook": "Fire a gun on the Moon and the bullet could hit you in the back.",
+    "script": "Fire a gun on the Moon and the bullet could hit you in the back. No air, no sound. Gravity warps trajectory. Low gravity, long range. Bullet keeps going, no friction. Hits the horizon, comes back. The question remains: what happens when you fire a gun on the Moon? Fire a gun on the Moon and the bullet could hit you in the back.",
+    "topic": "Firing a gun on the moon",
+    "tags": [
+      "moon",
+      "gun",
+      "space",
+      "gravity",
+      "low gravity"
+    ],
+    "affiliate_program": "",
+    "archetype": "how_does_it_work",
     "stats_fetched": false
   }
 ]
