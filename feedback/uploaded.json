@@ -3503,7 +3503,38 @@
     ],
     "affiliate_program": "",
     "archetype": "unsolved_mystery",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "7s8N1yhGDDU",
+      "title": "\ud83d\udd0d Uncovering The Great Sphinx Secret",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-06-21T08:17:25Z",
+      "views": 662,
+      "likes": 12,
+      "comments": 0,
+      "engagement_rate": 1.813,
+      "views_per_day": 331,
+      "tags": [
+        "Ancient Egypt",
+        "Archaeology",
+        "Great Sphinx",
+        "History",
+        "Mystery",
+        "curiosity",
+        "did you know",
+        "facts",
+        "mindblown",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "universe"
+      ],
+      "description": "Unravel the mystery of the Great Sphinx\n\n#shorts #history #mystery",
+      "duration_secs": 15,
+      "thumbnail": "https://i.ytimg.com/vi/7s8N1yhGDDU/hqdefault.jpg"
+    }
   },
   {
     "id": "Nf64RDDKWqY",
@@ -3521,7 +3552,36 @@
     ],
     "affiliate_program": "",
     "archetype": "what_if",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "Nf64RDDKWqY",
+      "title": "\ud83d\udd34 Black Holes: The Void \ud83d\udd34",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-06-21T11:15:11Z",
+      "views": 98,
+      "likes": 1,
+      "comments": 0,
+      "engagement_rate": 1.02,
+      "views_per_day": 49,
+      "tags": [
+        "black holes",
+        "cosmos",
+        "curiosity",
+        "did you know",
+        "facts",
+        "gravity",
+        "mindblown",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "universe"
+      ],
+      "description": "What happens when you enter a black hole?\n\n#shorts #science #mindblown",
+      "duration_secs": 22,
+      "thumbnail": "https://i.ytimg.com/vi/Nf64RDDKWqY/hqdefault.jpg"
+    }
   },
   {
     "id": "0K_3ssqYbjw",
@@ -3539,7 +3599,38 @@
     ],
     "affiliate_program": "",
     "archetype": "mind_blowing_fact",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "0K_3ssqYbjw",
+      "title": "\ud83c\udf1f Creatures That Light The Dark \ud83c\udf1f",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-06-22T05:39:01Z",
+      "views": 751,
+      "likes": 10,
+      "comments": 0,
+      "engagement_rate": 1.332,
+      "views_per_day": 376,
+      "tags": [
+        "bioluminescence",
+        "curiosity",
+        "deep ocean",
+        "did you know",
+        "facts",
+        "marine life",
+        "mindblown",
+        "ocean creatures",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "universe",
+        "wildlife"
+      ],
+      "description": "Discover the glowing creatures of the deep ocean\n\n#shorts #ocean #wildlife #nature #bioluminescence",
+      "duration_secs": 20,
+      "thumbnail": "https://i.ytimg.com/vi/0K_3ssqYbjw/hqdefault.jpg"
+    }
   },
   {
     "id": "oXAo27YlJoI",
@@ -3575,6 +3666,24 @@
     ],
     "affiliate_program": "",
     "archetype": "how_does_it_work",
+    "stats_fetched": false
+  },
+  {
+    "id": "YUq2wg58P6o",
+    "title": "\ud83d\udd34 Stranded: The Last Person Alive",
+    "uploaded_at": "2026-06-24T07:03:44.428416+00:00",
+    "hook": "Alone on a lifeless planet",
+    "script": "Alone on a lifeless planet. No signal, no rescue. Stars above, emptiness below. Time loses meaning, survival is key. The planet's vastness swallows you, silence is deafening. Alone on a lifeless planet",
+    "topic": "Stranded on deserted planet",
+    "tags": [
+      "space",
+      "survival",
+      "astronomy",
+      "mystery",
+      "unsolved"
+    ],
+    "affiliate_program": "",
+    "archetype": "unsolved_mystery",
     "stats_fetched": false
   }
 ]

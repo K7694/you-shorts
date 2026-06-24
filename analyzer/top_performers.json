@@ -1,6 +1,28 @@
 {
-  "updated": "2026-06-23T07:05:00.976941",
+  "updated": "2026-06-24T07:01:51.630425",
   "performers": [
+    {
+      "id": "0K_3ssqYbjw",
+      "title": "🌟 Creatures That Light The Dark 🌟",
+      "hook": "Glowing creatures light the dark",
+      "script": "Glowing creatures light the dark. Deep ocean, no sunlight. Bioluminescent beasts thrive. Anglerfish lure prey, glowing spots shine. Giant squid glow to hide, to hunt. The darkest depths are lit. By creatures that produce their own light. Glowing creatures light the dark.",
+      "topic": "Bioluminescent Animals in Deep Ocean",
+      "views": 751,
+      "engagement_rate": 1.332,
+      "views_per_day": 376,
+      "performance_score": 381.00832
+    },
+    {
+      "id": "7s8N1yhGDDU",
+      "title": "🔍 Uncovering The Great Sphinx Secret",
+      "hook": "The Great Sphinx is older",
+      "script": "The Great Sphinx is older. Than the pyramids. Carved from one block. Face of a god, body of a lion. Eyes stare into eternity. Nose missing, secrets hidden. The Great Sphinx stands guard, the Great Sphinx is older",
+      "topic": "The Great Sphinx Mystery",
+      "views": 662,
+      "engagement_rate": 1.813,
+      "views_per_day": 331,
+      "performance_score": 337.00103
+    },
     {
       "id": "WolpLzitfl8",
       "title": "🔫 Bullets in Space: The Unanswered Question",
@@ -33,28 +55,6 @@
       "engagement_rate": 2.853,
       "views_per_day": 90,
       "performance_score": 92.5677
-    },
-    {
-      "id": "gf0MKf-c57w",
-      "title": "🚨 Cancel $300/mo Tools 🚨",
-      "hook": "Ditched $300/mo tools",
-      "script": "Ditched $300/mo tools. Replaced ClickFunnels, Mailchimp, and Kajabi with Systeme.io. Drag-drop funnel builder, unlimited emails, course hosting, and affiliate manager - all in one. Switched to Systeme.io and saved big. Link in the pinned comment to try it free",
-      "topic": "Cancel $300/mo tools",
-      "views": 162,
-      "engagement_rate": 0.617,
-      "views_per_day": 81,
-      "performance_score": 81.49977
-    },
-    {
-      "id": "F6zEu1_Wn1Q",
-      "title": "🔪 Kitchen Secrets: The Dark Science 🍳",
-      "hook": "Your kitchen is a war zone",
-      "script": "Your kitchen is a war zone. Chemical reactions rage. Molecular bonds shatter. Every cut, a microscopic massacre. Enzymes collide, flavors annihilate. The science behind kitchen hacks: a twisted game of thermal dynamics. Maillard's sinister art. Flavor, a mere casualty. And at the heart of it all, a singular truth: your kitchen is a war zone, where the next meal is the next battlefield, and your kitchen is a war zone",
-      "topic": "Kitchen Hacks Meet Dark Science",
-      "views": 879,
-      "engagement_rate": 0.341,
-      "views_per_day": 55,
-      "performance_score": 55.187549999999995
     }
   ]
 }
