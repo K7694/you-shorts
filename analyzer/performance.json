@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-24T07:01:53.370303",
+  "last_updated": "2026-06-25T07:01:56.138309",
   "videos": {
     "M-hxG49mA-E": {
       "id": "M-hxG49mA-E",
@@ -7,11 +7,11 @@
       "channel": "KnowMore-Dailyday",
       "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
       "published": "2026-06-23T07:06:33Z",
-      "views": 668,
+      "views": 663,
       "likes": 11,
       "comments": 1,
-      "engagement_rate": 1.796,
-      "views_per_day": 668,
+      "engagement_rate": 1.81,
+      "views_per_day": 663,
       "tags": [
         "curiosity",
         "did you know",
@@ -31,36 +31,35 @@
       "duration_secs": 22,
       "thumbnail": "https://i.ytimg.com/vi/M-hxG49mA-E/hqdefault.jpg"
     },
-    "oXAo27YlJoI": {
-      "id": "oXAo27YlJoI",
-      "title": "\ud83e\udde0 You Forget 90% of Dreams!",
+    "YUq2wg58P6o": {
+      "id": "YUq2wg58P6o",
+      "title": "\ud83d\udd34 Stranded: The Last Person Alive",
       "channel": "KnowMore-Dailyday",
       "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
-      "published": "2026-06-22T09:32:05Z",
-      "views": 401,
-      "likes": 7,
+      "published": "2026-06-24T07:04:04Z",
+      "views": 561,
+      "likes": 10,
       "comments": 0,
-      "engagement_rate": 1.746,
-      "views_per_day": 401,
+      "engagement_rate": 1.783,
+      "views_per_day": 561,
       "tags": [
-        "brain",
+        "astronomy",
         "curiosity",
         "did you know",
-        "dreams",
         "facts",
-        "memory",
-        "mind",
         "mindblown",
+        "mystery",
         "physics",
-        "psychology",
         "science",
         "shorts",
         "space",
-        "universe"
+        "survival",
+        "universe",
+        "unsolved"
       ],
-      "description": "Discover the shocking truth about your brain and dreams\n\n#shorts #science #mindblown",
-      "duration_secs": 18,
-      "thumbnail": "https://i.ytimg.com/vi/oXAo27YlJoI/hqdefault.jpg"
+      "description": "Imagine being the only person left on a deserted planet\n\n#shorts #space #mystery",
+      "duration_secs": 17,
+      "thumbnail": "https://i.ytimg.com/vi/YUq2wg58P6o/hqdefault.jpg"
     },
     "0K_3ssqYbjw": {
       "id": "0K_3ssqYbjw",
@@ -68,11 +67,11 @@
       "channel": "KnowMore-Dailyday",
       "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
       "published": "2026-06-22T05:39:01Z",
-      "views": 752,
+      "views": 757,
       "likes": 10,
       "comments": 0,
-      "engagement_rate": 1.33,
-      "views_per_day": 376,
+      "engagement_rate": 1.321,
+      "views_per_day": 252,
       "tags": [
         "bioluminescence",
         "curiosity",
@@ -103,7 +102,7 @@
       "likes": 12,
       "comments": 0,
       "engagement_rate": 1.813,
-      "views_per_day": 331,
+      "views_per_day": 221,
       "tags": [
         "Ancient Egypt",
         "Archaeology",
@@ -124,6 +123,37 @@
       "duration_secs": 15,
       "thumbnail": "https://i.ytimg.com/vi/7s8N1yhGDDU/hqdefault.jpg"
     },
+    "oXAo27YlJoI": {
+      "id": "oXAo27YlJoI",
+      "title": "\ud83e\udde0 You Forget 90% of Dreams!",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-06-22T09:32:05Z",
+      "views": 403,
+      "likes": 7,
+      "comments": 0,
+      "engagement_rate": 1.737,
+      "views_per_day": 202,
+      "tags": [
+        "brain",
+        "curiosity",
+        "did you know",
+        "dreams",
+        "facts",
+        "memory",
+        "mind",
+        "mindblown",
+        "physics",
+        "psychology",
+        "science",
+        "shorts",
+        "space",
+        "universe"
+      ],
+      "description": "Discover the shocking truth about your brain and dreams\n\n#shorts #science #mindblown",
+      "duration_secs": 18,
+      "thumbnail": "https://i.ytimg.com/vi/oXAo27YlJoI/hqdefault.jpg"
+    },
     "kT_fXzfG4hI": {
       "id": "kT_fXzfG4hI",
       "title": "\ud83d\udd0d Atoms Pass Through Walls",
@@ -134,7 +164,7 @@
       "likes": 3,
       "comments": 1,
       "engagement_rate": 0.697,
-      "views_per_day": 82,
+      "views_per_day": 72,
       "tags": [
         "atoms",
         "curiosity",
@@ -164,7 +194,7 @@
       "likes": 10,
       "comments": 0,
       "engagement_rate": 1.153,
-      "views_per_day": 79,
+      "views_per_day": 72,
       "tags": [
         "curiosity",
         "did you know",
@@ -193,7 +223,7 @@
       "likes": 1,
       "comments": 0,
       "engagement_rate": 1.02,
-      "views_per_day": 49,
+      "views_per_day": 33,
       "tags": [
         "black holes",
         "cosmos",
@@ -274,7 +304,7 @@
       "likes": 0,
       "comments": 0,
       "engagement_rate": 0.0,
-      "views_per_day": 9,
+      "views_per_day": 8,
       "tags": [
         "astrophysics",
         "cosmic phenomena",
@@ -305,7 +335,7 @@
       "likes": 15,
       "comments": 0,
       "engagement_rate": 2.641,
-      "views_per_day": 9,
+      "views_per_day": 8,
       "tags": [
         "astronomy",
         "black holes",

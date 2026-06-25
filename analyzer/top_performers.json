@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-24T07:01:51.630425",
+  "updated": "2026-06-25T07:01:53.907760",
   "performers": [
     {
       "id": "0K_3ssqYbjw",
@@ -35,6 +35,17 @@
       "performance_score": 292.33217
     },
     {
+      "id": "oXAo27YlJoI",
+      "title": "🧠 You Forget 90% of Dreams!",
+      "hook": "Your brain forgets 90% of dreams",
+      "script": "Your brain forgets 90% of dreams. Dreams occur. Memories form. Brain wipes. Forgets. Lost. Your brain forgets 90% of dreams, but what if it doesn't, and they're just hidden, waiting to resurface, where your brain forgets 90% of dreams",
+      "topic": "Human Brain Memory",
+      "views": 403,
+      "engagement_rate": 1.737,
+      "views_per_day": 202,
+      "performance_score": 205.50874000000002
+    },
+    {
       "id": "kT_fXzfG4hI",
       "title": "🔍 Atoms Pass Through Walls",
       "hook": "Atoms pass through walls",
@@ -44,17 +55,6 @@
       "engagement_rate": 0.697,
       "views_per_day": 144,
       "performance_score": 145.00367999999997
-    },
-    {
-      "id": "gZIO6_23b0I",
-      "title": "🚀 Black Holes: Gravity's Kill Switch",
-      "hook": "Gravity has a kill switch",
-      "script": "Gravity has a kill switch. It's called a black hole. Stars collapse. Space-time buckles. Nothing escapes. Not even light. Matter implodes. Energy implodes. Time implodes. The point of no return is near. The event horizon looms. Cosmic collapse is inevitable. The universe is full of them. And they're growing. Gravity has a kill switch, and it's pulling us in, where gravity has a kill switch",
-      "topic": "Black Holes Exposed",
-      "views": 1262,
-      "engagement_rate": 2.853,
-      "views_per_day": 90,
-      "performance_score": 92.5677
     }
   ]
 }

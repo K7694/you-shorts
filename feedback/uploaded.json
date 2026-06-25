@@ -3648,7 +3648,38 @@
     ],
     "affiliate_program": "",
     "archetype": "mind_blowing_fact",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "oXAo27YlJoI",
+      "title": "\ud83e\udde0 You Forget 90% of Dreams!",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-06-22T09:32:05Z",
+      "views": 403,
+      "likes": 7,
+      "comments": 0,
+      "engagement_rate": 1.737,
+      "views_per_day": 202,
+      "tags": [
+        "brain",
+        "curiosity",
+        "did you know",
+        "dreams",
+        "facts",
+        "memory",
+        "mind",
+        "mindblown",
+        "physics",
+        "psychology",
+        "science",
+        "shorts",
+        "space",
+        "universe"
+      ],
+      "description": "Discover the shocking truth about your brain and dreams\n\n#shorts #science #mindblown",
+      "duration_secs": 18,
+      "thumbnail": "https://i.ytimg.com/vi/oXAo27YlJoI/hqdefault.jpg"
+    }
   },
   {
     "id": "M-hxG49mA-E",
@@ -3681,6 +3712,24 @@
       "astronomy",
       "mystery",
       "unsolved"
+    ],
+    "affiliate_program": "",
+    "archetype": "unsolved_mystery",
+    "stats_fetched": false
+  },
+  {
+    "id": "LeyFU-s9Pg0",
+    "title": "Water on Mars? \ud83d\ude80",
+    "uploaded_at": "2026-06-25T07:03:35.956359+00:00",
+    "hook": "Pour water on Mars",
+    "script": "Pour water on Mars. It evaporates. On Jupiter, it disintegrates. On Venus, it boils. On Earth, it flows. But what happens when you pour water on different planets? Does it spark life or destroy it? Pour water on Mars.",
+    "topic": "water on different planets",
+    "tags": [
+      "space",
+      "water",
+      "Mars",
+      "Jupiter",
+      "Venus"
     ],
     "affiliate_program": "",
     "archetype": "unsolved_mystery",
