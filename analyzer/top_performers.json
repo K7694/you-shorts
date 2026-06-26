@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-25T07:01:53.907760",
+  "updated": "2026-06-26T07:08:48.986441",
   "performers": [
     {
       "id": "0K_3ssqYbjw",
@@ -35,26 +35,26 @@
       "performance_score": 292.33217
     },
     {
-      "id": "oXAo27YlJoI",
-      "title": "🧠 You Forget 90% of Dreams!",
-      "hook": "Your brain forgets 90% of dreams",
-      "script": "Your brain forgets 90% of dreams. Dreams occur. Memories form. Brain wipes. Forgets. Lost. Your brain forgets 90% of dreams, but what if it doesn't, and they're just hidden, waiting to resurface, where your brain forgets 90% of dreams",
-      "topic": "Human Brain Memory",
-      "views": 403,
-      "engagement_rate": 1.737,
-      "views_per_day": 202,
-      "performance_score": 205.50874000000002
+      "id": "YUq2wg58P6o",
+      "title": "🔴 Stranded: The Last Person Alive",
+      "hook": "Alone on a lifeless planet",
+      "script": "Alone on a lifeless planet. No signal, no rescue. Stars above, emptiness below. Time loses meaning, survival is key. The planet's vastness swallows you, silence is deafening. Alone on a lifeless planet",
+      "topic": "Stranded on deserted planet",
+      "views": 570,
+      "engagement_rate": 1.754,
+      "views_per_day": 285,
+      "performance_score": 289.9989
     },
     {
-      "id": "kT_fXzfG4hI",
-      "title": "🔍 Atoms Pass Through Walls",
-      "hook": "Atoms pass through walls",
-      "script": "Atoms pass through walls. Electrons zip through barriers. Protons tunnel deep. Particles disappear, reappear. The rules of reality bend. Your body is a portal. Atoms tunnel in, out. The question remains: what happens when atoms pass through walls? Atoms pass through walls",
-      "topic": "Quantum Tunneling in Everyday Objects",
-      "views": 574,
-      "engagement_rate": 0.697,
-      "views_per_day": 144,
-      "performance_score": 145.00367999999997
+      "id": "M-hxG49mA-E",
+      "title": "Moon Bullet 🚀",
+      "hook": "Fire a gun on the Moon and the bullet could hit you in the back.",
+      "script": "Fire a gun on the Moon and the bullet could hit you in the back. No air, no sound. Gravity warps trajectory. Low gravity, long range. Bullet keeps going, no friction. Hits the horizon, comes back. The question remains: what happens when you fire a gun on the Moon? Fire a gun on the Moon and the bullet could hit you in the back.",
+      "topic": "Firing a gun on the moon",
+      "views": 669,
+      "engagement_rate": 1.794,
+      "views_per_day": 223,
+      "performance_score": 227.00062000000003
     }
   ]
 }

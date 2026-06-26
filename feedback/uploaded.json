@@ -3697,7 +3697,37 @@
     ],
     "affiliate_program": "",
     "archetype": "how_does_it_work",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "M-hxG49mA-E",
+      "title": "Moon Bullet \ud83d\ude80",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-06-23T07:06:33Z",
+      "views": 669,
+      "likes": 11,
+      "comments": 1,
+      "engagement_rate": 1.794,
+      "views_per_day": 223,
+      "tags": [
+        "curiosity",
+        "did you know",
+        "facts",
+        "gravity",
+        "gun",
+        "low gravity",
+        "mindblown",
+        "moon",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "universe"
+      ],
+      "description": "Firing a gun on the Moon, what happens next?\n\n#shorts #science #mindblown #space",
+      "duration_secs": 22,
+      "thumbnail": "https://i.ytimg.com/vi/M-hxG49mA-E/hqdefault.jpg"
+    }
   },
   {
     "id": "YUq2wg58P6o",
@@ -3715,7 +3745,37 @@
     ],
     "affiliate_program": "",
     "archetype": "unsolved_mystery",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "YUq2wg58P6o",
+      "title": "\ud83d\udd34 Stranded: The Last Person Alive",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-06-24T07:04:04Z",
+      "views": 570,
+      "likes": 10,
+      "comments": 0,
+      "engagement_rate": 1.754,
+      "views_per_day": 285,
+      "tags": [
+        "astronomy",
+        "curiosity",
+        "did you know",
+        "facts",
+        "mindblown",
+        "mystery",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "survival",
+        "universe",
+        "unsolved"
+      ],
+      "description": "Imagine being the only person left on a deserted planet\n\n#shorts #space #mystery",
+      "duration_secs": 17,
+      "thumbnail": "https://i.ytimg.com/vi/YUq2wg58P6o/hqdefault.jpg"
+    }
   },
   {
     "id": "LeyFU-s9Pg0",
@@ -3733,6 +3793,24 @@
     ],
     "affiliate_program": "",
     "archetype": "unsolved_mystery",
+    "stats_fetched": false
+  },
+  {
+    "id": "Wh_cFYR_16M",
+    "title": "\ud83c\udf2b\ufe0f Rare Clouds Eat The Sky",
+    "uploaded_at": "2026-06-26T07:09:55.471657+00:00",
+    "hook": "Rolling tubes of cloud devour the sky",
+    "script": "Rolling tubes of cloud devour the sky. Rare, tubular clouds form. Over oceans, they spin. Mesocyclones create them. Rotating, they touch ground. The Morning Glory cloud brings awe, rolling tubes of cloud devour the sky.",
+    "topic": "Morning Glory Cloud Formation",
+    "tags": [
+      "clouds",
+      "weather",
+      "Morning Glory",
+      "roll cloud",
+      "tubular cloud"
+    ],
+    "affiliate_program": "",
+    "archetype": "how_does_it_work",
     "stats_fetched": false
   }
 ]

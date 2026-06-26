@@ -1,35 +1,35 @@
 {
-  "last_updated": "2026-06-25T07:01:56.138309",
+  "last_updated": "2026-06-26T07:08:50.115746",
   "videos": {
-    "M-hxG49mA-E": {
-      "id": "M-hxG49mA-E",
-      "title": "Moon Bullet \ud83d\ude80",
+    "LeyFU-s9Pg0": {
+      "id": "LeyFU-s9Pg0",
+      "title": "Water on Mars? \ud83d\ude80",
       "channel": "KnowMore-Dailyday",
       "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
-      "published": "2026-06-23T07:06:33Z",
-      "views": 663,
+      "published": "2026-06-25T07:03:45Z",
+      "views": 694,
       "likes": 11,
-      "comments": 1,
-      "engagement_rate": 1.81,
-      "views_per_day": 663,
+      "comments": 2,
+      "engagement_rate": 1.873,
+      "views_per_day": 694,
       "tags": [
+        "Jupiter",
+        "Mars",
+        "Venus",
         "curiosity",
         "did you know",
         "facts",
-        "gravity",
-        "gun",
-        "low gravity",
         "mindblown",
-        "moon",
         "physics",
         "science",
         "shorts",
         "space",
-        "universe"
+        "universe",
+        "water"
       ],
-      "description": "Firing a gun on the Moon, what happens next?\n\n#shorts #science #mindblown #space",
-      "duration_secs": 22,
-      "thumbnail": "https://i.ytimg.com/vi/M-hxG49mA-E/hqdefault.jpg"
+      "description": "What happens when you pour water on different planets?\n\n#shorts #space #science",
+      "duration_secs": 16,
+      "thumbnail": "https://i.ytimg.com/vi/LeyFU-s9Pg0/hqdefault.jpg"
     },
     "YUq2wg58P6o": {
       "id": "YUq2wg58P6o",
@@ -37,11 +37,11 @@
       "channel": "KnowMore-Dailyday",
       "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
       "published": "2026-06-24T07:04:04Z",
-      "views": 561,
+      "views": 570,
       "likes": 10,
       "comments": 0,
-      "engagement_rate": 1.783,
-      "views_per_day": 561,
+      "engagement_rate": 1.754,
+      "views_per_day": 285,
       "tags": [
         "astronomy",
         "curiosity",
@@ -61,6 +61,36 @@
       "duration_secs": 17,
       "thumbnail": "https://i.ytimg.com/vi/YUq2wg58P6o/hqdefault.jpg"
     },
+    "M-hxG49mA-E": {
+      "id": "M-hxG49mA-E",
+      "title": "Moon Bullet \ud83d\ude80",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-06-23T07:06:33Z",
+      "views": 669,
+      "likes": 11,
+      "comments": 1,
+      "engagement_rate": 1.794,
+      "views_per_day": 223,
+      "tags": [
+        "curiosity",
+        "did you know",
+        "facts",
+        "gravity",
+        "gun",
+        "low gravity",
+        "mindblown",
+        "moon",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "universe"
+      ],
+      "description": "Firing a gun on the Moon, what happens next?\n\n#shorts #science #mindblown #space",
+      "duration_secs": 22,
+      "thumbnail": "https://i.ytimg.com/vi/M-hxG49mA-E/hqdefault.jpg"
+    },
     "0K_3ssqYbjw": {
       "id": "0K_3ssqYbjw",
       "title": "\ud83c\udf1f Creatures That Light The Dark \ud83c\udf1f",
@@ -71,7 +101,7 @@
       "likes": 10,
       "comments": 0,
       "engagement_rate": 1.321,
-      "views_per_day": 252,
+      "views_per_day": 189,
       "tags": [
         "bioluminescence",
         "curiosity",
@@ -102,7 +132,7 @@
       "likes": 12,
       "comments": 0,
       "engagement_rate": 1.813,
-      "views_per_day": 221,
+      "views_per_day": 166,
       "tags": [
         "Ancient Egypt",
         "Archaeology",
@@ -133,7 +163,7 @@
       "likes": 7,
       "comments": 0,
       "engagement_rate": 1.737,
-      "views_per_day": 202,
+      "views_per_day": 134,
       "tags": [
         "brain",
         "curiosity",
@@ -154,6 +184,35 @@
       "duration_secs": 18,
       "thumbnail": "https://i.ytimg.com/vi/oXAo27YlJoI/hqdefault.jpg"
     },
+    "WolpLzitfl8": {
+      "id": "WolpLzitfl8",
+      "title": "\ud83d\udd2b Bullets in Space: The Unanswered Question",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-06-12T08:15:19Z",
+      "views": 867,
+      "likes": 10,
+      "comments": 0,
+      "engagement_rate": 1.153,
+      "views_per_day": 67,
+      "tags": [
+        "curiosity",
+        "did you know",
+        "facts",
+        "guns",
+        "mindblown",
+        "mystery",
+        "physics",
+        "planets",
+        "science",
+        "shorts",
+        "space",
+        "universe"
+      ],
+      "description": "What happens when you fire a gun on Mars, Venus, or Jupiter? The answer will leave you speechless\n\n#shorts #space #science #mindblown",
+      "duration_secs": 20,
+      "thumbnail": "https://i.ytimg.com/vi/WolpLzitfl8/hqdefault.jpg"
+    },
     "kT_fXzfG4hI": {
       "id": "kT_fXzfG4hI",
       "title": "\ud83d\udd0d Atoms Pass Through Walls",
@@ -164,7 +223,7 @@
       "likes": 3,
       "comments": 1,
       "engagement_rate": 0.697,
-      "views_per_day": 72,
+      "views_per_day": 64,
       "tags": [
         "atoms",
         "curiosity",
@@ -184,35 +243,6 @@
       "duration_secs": 20,
       "thumbnail": "https://i.ytimg.com/vi/kT_fXzfG4hI/hqdefault.jpg"
     },
-    "WolpLzitfl8": {
-      "id": "WolpLzitfl8",
-      "title": "\ud83d\udd2b Bullets in Space: The Unanswered Question",
-      "channel": "KnowMore-Dailyday",
-      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
-      "published": "2026-06-12T08:15:19Z",
-      "views": 867,
-      "likes": 10,
-      "comments": 0,
-      "engagement_rate": 1.153,
-      "views_per_day": 72,
-      "tags": [
-        "curiosity",
-        "did you know",
-        "facts",
-        "guns",
-        "mindblown",
-        "mystery",
-        "physics",
-        "planets",
-        "science",
-        "shorts",
-        "space",
-        "universe"
-      ],
-      "description": "What happens when you fire a gun on Mars, Venus, or Jupiter? The answer will leave you speechless\n\n#shorts #space #science #mindblown",
-      "duration_secs": 20,
-      "thumbnail": "https://i.ytimg.com/vi/WolpLzitfl8/hqdefault.jpg"
-    },
     "Nf64RDDKWqY": {
       "id": "Nf64RDDKWqY",
       "title": "\ud83d\udd34 Black Holes: The Void \ud83d\udd34",
@@ -223,7 +253,7 @@
       "likes": 1,
       "comments": 0,
       "engagement_rate": 1.02,
-      "views_per_day": 33,
+      "views_per_day": 24,
       "tags": [
         "black holes",
         "cosmos",
@@ -252,7 +282,7 @@
       "likes": 35,
       "comments": 1,
       "engagement_rate": 2.853,
-      "views_per_day": 19,
+      "views_per_day": 18,
       "tags": [
         "black holes",
         "cosmic collapse",
@@ -278,7 +308,7 @@
       "likes": 3,
       "comments": 0,
       "engagement_rate": 0.341,
-      "views_per_day": 13,
+      "views_per_day": 12,
       "tags": [
         "cooking tips",
         "dark science",
@@ -293,37 +323,6 @@
       "description": "Uncover the sinister science behind kitchen hacks\n\n#shorts #science #mindblown #kitchenhacks #foodscience\n\n#Shorts",
       "duration_secs": 29,
       "thumbnail": "https://i.ytimg.com/vi/F6zEu1_Wn1Q/hqdefault.jpg"
-    },
-    "vSNwLt-P4hU": {
-      "id": "vSNwLt-P4hU",
-      "title": "\ud83d\udd0d Cosmic Lighthouses: Unseen Forces",
-      "channel": "KnowMore-Dailyday",
-      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
-      "published": "2026-06-15T09:51:59Z",
-      "views": 73,
-      "likes": 0,
-      "comments": 0,
-      "engagement_rate": 0.0,
-      "views_per_day": 8,
-      "tags": [
-        "astrophysics",
-        "cosmic phenomena",
-        "curiosity",
-        "deep space",
-        "did you know",
-        "facts",
-        "fast radio bursts",
-        "mindblown",
-        "physics",
-        "science",
-        "shorts",
-        "space",
-        "universe",
-        "unsolved mystery"
-      ],
-      "description": "Uncover the enigma of fast radio bursts in deep space\n\n#shorts #science #mindblown #space #mystery",
-      "duration_secs": 19,
-      "thumbnail": "https://i.ytimg.com/vi/vSNwLt-P4hU/hqdefault.jpg"
     },
     "-ZrIk9AWQc4": {
       "id": "-ZrIk9AWQc4",
@@ -350,6 +349,37 @@
       "duration_secs": 21,
       "thumbnail": "https://i.ytimg.com/vi/-ZrIk9AWQc4/hqdefault.jpg"
     },
+    "vSNwLt-P4hU": {
+      "id": "vSNwLt-P4hU",
+      "title": "\ud83d\udd0d Cosmic Lighthouses: Unseen Forces",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-06-15T09:51:59Z",
+      "views": 73,
+      "likes": 0,
+      "comments": 0,
+      "engagement_rate": 0.0,
+      "views_per_day": 7,
+      "tags": [
+        "astrophysics",
+        "cosmic phenomena",
+        "curiosity",
+        "deep space",
+        "did you know",
+        "facts",
+        "fast radio bursts",
+        "mindblown",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "universe",
+        "unsolved mystery"
+      ],
+      "description": "Uncover the enigma of fast radio bursts in deep space\n\n#shorts #science #mindblown #space #mystery",
+      "duration_secs": 19,
+      "thumbnail": "https://i.ytimg.com/vi/vSNwLt-P4hU/hqdefault.jpg"
+    },
     "ERhoFeabX3w": {
       "id": "ERhoFeabX3w",
       "title": "\ud83d\udd25 Black Holes: The Void That Awaits \ud83d\udd73\ufe0f",
@@ -360,7 +390,7 @@
       "likes": 13,
       "comments": 0,
       "engagement_rate": 2.529,
-      "views_per_day": 8,
+      "views_per_day": 7,
       "tags": [
         "astronomy",
         "black holes",
@@ -374,32 +404,6 @@
       "description": "Uncover the dark secrets of black holes\n\n#shorts #science #mindblown #blackholes #space\n\n#Shorts",
       "duration_secs": 29,
       "thumbnail": "https://i.ytimg.com/vi/ERhoFeabX3w/hqdefault.jpg"
-    },
-    "jQn0rKxwhAk": {
-      "id": "jQn0rKxwhAk",
-      "title": "\ud83d\udd2e Black Holes: The Void in Space",
-      "channel": "KnowMore-Dailyday",
-      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
-      "published": "2026-04-17T10:46:58Z",
-      "views": 443,
-      "likes": 25,
-      "comments": 0,
-      "engagement_rate": 5.643,
-      "views_per_day": 7,
-      "tags": [
-        "astronomy",
-        "black holes",
-        "cosmos",
-        "facts",
-        "gravity",
-        "science",
-        "shorts",
-        "space",
-        "viral"
-      ],
-      "description": "Uncover the dark truth about black holes\n\n#shorts #science #mindblown #space #blackholes\n\n#Shorts",
-      "duration_secs": 21,
-      "thumbnail": "https://i.ytimg.com/vi/jQn0rKxwhAk/hqdefault.jpg"
     },
     "XImCXqfecvY": {
       "id": "XImCXqfecvY",
@@ -451,31 +455,31 @@
       "duration_secs": 18,
       "thumbnail": "https://i.ytimg.com/vi/PhtesaWw_5A/hqdefault.jpg"
     },
-    "vbbAFitH3Hs": {
-      "id": "vbbAFitH3Hs",
-      "title": "\ud83d\udd0d Kitchen Secrets Revealed",
+    "jQn0rKxwhAk": {
+      "id": "jQn0rKxwhAk",
+      "title": "\ud83d\udd2e Black Holes: The Void in Space",
       "channel": "KnowMore-Dailyday",
       "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
-      "published": "2026-04-16T10:54:33Z",
-      "views": 383,
-      "likes": 2,
+      "published": "2026-04-17T10:46:58Z",
+      "views": 443,
+      "likes": 25,
       "comments": 0,
-      "engagement_rate": 0.522,
+      "engagement_rate": 5.643,
       "views_per_day": 6,
       "tags": [
-        "chemistry",
-        "cooking",
-        "dark science",
+        "astronomy",
+        "black holes",
+        "cosmos",
         "facts",
-        "food science",
-        "kitchen hacks",
+        "gravity",
         "science",
         "shorts",
+        "space",
         "viral"
       ],
-      "description": "The dark science behind kitchen hacks\n\n#shorts #science #mindblown #kitchenhacks #foodscience\n\n#Shorts",
-      "duration_secs": 29,
-      "thumbnail": "https://i.ytimg.com/vi/vbbAFitH3Hs/hqdefault.jpg"
+      "description": "Uncover the dark truth about black holes\n\n#shorts #science #mindblown #space #blackholes\n\n#Shorts",
+      "duration_secs": 21,
+      "thumbnail": "https://i.ytimg.com/vi/jQn0rKxwhAk/hqdefault.jpg"
     },
     "GNdBew-G_Kg": {
       "id": "GNdBew-G_Kg",
@@ -501,6 +505,32 @@
       "description": "The secret science behind kitchen hacks revealed\n\n#shorts #science #mindblown #kitchenhacks #cooking\n\n#Shorts",
       "duration_secs": 32,
       "thumbnail": "https://i.ytimg.com/vi/GNdBew-G_Kg/hqdefault.jpg"
+    },
+    "vbbAFitH3Hs": {
+      "id": "vbbAFitH3Hs",
+      "title": "\ud83d\udd0d Kitchen Secrets Revealed",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-04-16T10:54:33Z",
+      "views": 383,
+      "likes": 2,
+      "comments": 0,
+      "engagement_rate": 0.522,
+      "views_per_day": 5,
+      "tags": [
+        "chemistry",
+        "cooking",
+        "dark science",
+        "facts",
+        "food science",
+        "kitchen hacks",
+        "science",
+        "shorts",
+        "viral"
+      ],
+      "description": "The dark science behind kitchen hacks\n\n#shorts #science #mindblown #kitchenhacks #foodscience\n\n#Shorts",
+      "duration_secs": 29,
+      "thumbnail": "https://i.ytimg.com/vi/vbbAFitH3Hs/hqdefault.jpg"
     },
     "x9VpwqbHngk": {
       "id": "x9VpwqbHngk",
@@ -552,31 +582,6 @@
       "description": "Uncover the dark secrets of black holes\n\n#shorts #science #mindblown #blackholes #space\n\n#Shorts",
       "duration_secs": 23,
       "thumbnail": "https://i.ytimg.com/vi/GF7E-npIDM4/hqdefault.jpg"
-    },
-    "rX5GXLrXfEc": {
-      "id": "rX5GXLrXfEc",
-      "title": "\ud83d\udd25 Kitchen Hacks: The Dark Science \ud83c\udf73",
-      "channel": "KnowMore-Dailyday",
-      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
-      "published": "2026-04-19T05:52:57Z",
-      "views": 169,
-      "likes": 3,
-      "comments": 0,
-      "engagement_rate": 1.775,
-      "views_per_day": 3,
-      "tags": [
-        "chemistry",
-        "cooking",
-        "facts",
-        "food",
-        "kitchen hacks",
-        "science",
-        "shorts",
-        "viral"
-      ],
-      "description": "Uncover the secret science behind kitchen hacks\n\n#shorts #science #mindblown #kitchenhacks #cooking\n\n#Shorts",
-      "duration_secs": 32,
-      "thumbnail": "https://i.ytimg.com/vi/rX5GXLrXfEc/hqdefault.jpg"
     },
     "bPyEoqsorTs": {
       "id": "bPyEoqsorTs",
@@ -653,35 +658,6 @@
       "duration_secs": 26,
       "thumbnail": "https://i.ytimg.com/vi/ixmHFDkEBhI/hqdefault.jpg"
     },
-    "ojAv-DQ33lQ": {
-      "id": "ojAv-DQ33lQ",
-      "title": "\ud83d\udd2e Mirror Reflections Entangled? \ud83e\udd2f",
-      "channel": "KnowMore-Dailyday",
-      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
-      "published": "2026-06-20T13:23:37Z",
-      "views": 7,
-      "likes": 0,
-      "comments": 0,
-      "engagement_rate": 0.0,
-      "views_per_day": 2,
-      "tags": [
-        "curiosity",
-        "did you know",
-        "facts",
-        "mindblown",
-        "mirror reflections",
-        "physics",
-        "quantum entanglement",
-        "science",
-        "shorts",
-        "space",
-        "universe",
-        "unsolved mystery"
-      ],
-      "description": "The bizarre connection between mirror reflections and quantum entanglement\n\n#shorts #science #mindblown #quantum #entanglement",
-      "duration_secs": 13,
-      "thumbnail": "https://i.ytimg.com/vi/ojAv-DQ33lQ/hqdefault.jpg"
-    },
     "G761W9LP9ww": {
       "id": "G761W9LP9ww",
       "title": "\ud83d\udd0d Kitchen Hacks: The Secret Science",
@@ -706,6 +682,31 @@
       "description": "Uncover the hidden science behind kitchen hacks\n\n#shorts #science #mindblown #kitchenhacks #cooking\n\n#Shorts",
       "duration_secs": 30,
       "thumbnail": "https://i.ytimg.com/vi/G761W9LP9ww/hqdefault.jpg"
+    },
+    "rX5GXLrXfEc": {
+      "id": "rX5GXLrXfEc",
+      "title": "\ud83d\udd25 Kitchen Hacks: The Dark Science \ud83c\udf73",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-04-19T05:52:57Z",
+      "views": 169,
+      "likes": 3,
+      "comments": 0,
+      "engagement_rate": 1.775,
+      "views_per_day": 2,
+      "tags": [
+        "chemistry",
+        "cooking",
+        "facts",
+        "food",
+        "kitchen hacks",
+        "science",
+        "shorts",
+        "viral"
+      ],
+      "description": "Uncover the secret science behind kitchen hacks\n\n#shorts #science #mindblown #kitchenhacks #cooking\n\n#Shorts",
+      "duration_secs": 32,
+      "thumbnail": "https://i.ytimg.com/vi/rX5GXLrXfEc/hqdefault.jpg"
     },
     "tNwO-DzFeyM": {
       "id": "tNwO-DzFeyM",
@@ -732,6 +733,35 @@
       "description": "Uncover the sinister science behind song repetition\n\n#shorts #science #mindblown\n\n#Shorts",
       "duration_secs": 23,
       "thumbnail": "https://i.ytimg.com/vi/tNwO-DzFeyM/hqdefault.jpg"
+    },
+    "ojAv-DQ33lQ": {
+      "id": "ojAv-DQ33lQ",
+      "title": "\ud83d\udd2e Mirror Reflections Entangled? \ud83e\udd2f",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-06-20T13:23:37Z",
+      "views": 7,
+      "likes": 0,
+      "comments": 0,
+      "engagement_rate": 0.0,
+      "views_per_day": 1,
+      "tags": [
+        "curiosity",
+        "did you know",
+        "facts",
+        "mindblown",
+        "mirror reflections",
+        "physics",
+        "quantum entanglement",
+        "science",
+        "shorts",
+        "space",
+        "universe",
+        "unsolved mystery"
+      ],
+      "description": "The bizarre connection between mirror reflections and quantum entanglement\n\n#shorts #science #mindblown #quantum #entanglement",
+      "duration_secs": 13,
+      "thumbnail": "https://i.ytimg.com/vi/ojAv-DQ33lQ/hqdefault.jpg"
     },
     "44M9ua1_SXI": {
       "id": "44M9ua1_SXI",
