@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-26T07:08:54.411074",
+  "generated": "2026-06-27T06:43:01.787598",
   "analysis": {
     "market_pulse": {
       "top_3_trending_topics": [
@@ -8,19 +8,19 @@
         "mind-blowing facts"
       ],
       "top_3_trending_hook_styles": [
-        "What if scenarios with example: What if you fired a gun on different planets?",
-        "Mind-blowing facts with example: 5 Mind-Blowing Facts You Didn't Know!",
-        "Surprising science with example: The Alien Mystery of Octopuses!"
+        "What if scenarios with a surprising twist, e.g. 'What Happens If An Astronaut Gets Stuck Floating In Space?'",
+        "Counterintuitive truths, e.g. 'The Alien Mystery of Octopuses!'",
+        "Amazing science magic, e.g. '\u0b86\u0b9a\u0bcd\u0b9a\u0bb0\u0bbf\u0baf\u0bae\u0bbe\u0ba9 \u0b85\u0bb1\u0bbf\u0bb5\u0bbf\u0baf\u0bb2\u0bcd \u0bae\u0bc7\u0b9c\u0bbf\u0b95\u0bcd'"
       ],
-      "avg_engagement_rate": "1.83%",
-      "best_performing_content_type": "short, attention-grabbing videos with a mix of visuals and interesting facts",
-      "viral_trigger": "using a combination of surprise, curiosity, and interesting visuals to grab viewers' attention"
+      "avg_engagement_rate": "2.11%",
+      "best_performing_content_type": "short, engaging videos with a mix of visuals and surprising facts",
+      "viral_trigger": "using attention-grabbing titles and hooks that create curiosity and surprise"
     },
     "competitor_intelligence": {
       "winning_channels": [
         "The Slow Mo Guys"
       ],
-      "their_secret": "using slow-motion footage to showcase interesting phenomena and experiments",
+      "their_secret": "using slow-motion footage to showcase interesting phenomena",
       "title_patterns": [
         "Do [something]?",
         "What if [something]?",
@@ -33,78 +33,75 @@
       ],
       "topics_they_avoid": [
         "kitchen hacks",
-        "food facts"
+        "song loops"
       ]
     },
     "my_channel_diagnosis": {
       "best_performing_video": "Black Holes: Gravity's Kill Switch",
-      "worst_performing_video": "Your Brain Deletes Memories While You Sleep",
+      "worst_performing_video": "Underwater Lakes: The Hidden Killers",
       "my_strengths": [
-        "creating content around space and astronomy",
-        "using attention-grabbing titles and hooks"
+        "creating engaging titles",
+        "covering a wide range of topics"
       ],
       "my_gaps": [
-        "not utilizing slow-motion footage",
-        "not creating content around trending topics like kitchen hacks"
+        "lack of slow-motion footage",
+        "not utilizing hooks effectively"
       ],
-      "retention_problem": "not providing enough interesting and surprising facts to keep viewers engaged"
+      "retention_problem": "viewers are dropping off due to lack of engaging visuals and surprising facts"
     },
     "content_opportunities": [
       {
         "rank": 1,
-        "topic": "What if you were stuck on the moon with limited resources?",
-        "why": "this topic combines the trending topics of space and survival, and can be presented in a way that is both interesting and suspenseful",
-        "hook": "Imagine being stranded on the moon with only a few days of oxygen left...",
-        "title": "What if You Were Stuck on the Moon?",
+        "topic": "What if you fired a gun on the moon?",
+        "why": "similar videos have performed well, with 'What if you fired a gun on different planets?' getting 2,230,966 views",
+        "hook": "Imagine being on the moon with a gun, but what happens when you pull the trigger?",
+        "title": "What if you fired a gun on the moon? #space #science",
         "estimated_performance": "high",
-        "urgency": "this topic is relevant now due to the recent interest in space exploration and survival stories"
+        "urgency": "space-related topics are currently trending"
       },
       {
         "rank": 2,
-        "topic": "The science behind kitchen hacks",
-        "why": "this topic combines the trending topics of kitchen hacks and science, and can be presented in a way that is both interesting and informative",
-        "hook": "Did you know that some kitchen hacks are based on real science?",
-        "title": "The Science Behind Kitchen Hacks",
+        "topic": "The science behind ASMR videos",
+        "why": "ASMR videos are popular, and explaining the science behind them could be interesting and engaging",
+        "hook": "Have you ever wondered why ASMR videos are so relaxing? Let's dive into the science behind them",
+        "title": "The Science Behind ASMR Videos #ASMR #science",
         "estimated_performance": "medium",
-        "urgency": "this topic is relevant now due to the recent interest in kitchen hacks and cooking"
+        "urgency": "ASMR videos are currently popular, and explaining the science behind them could be a unique topic"
       },
       {
         "rank": 3,
-        "topic": "The mysteries of black holes",
-        "why": "this topic is a classic in the space and astronomy genre, and can be presented in a way that is both interesting and thought-provoking",
-        "hook": "What if black holes are not just voids in space, but actually portals to other dimensions?",
-        "title": "The Mysteries of Black Holes",
+        "topic": "Mind-blowing facts about black holes",
+        "why": "black holes are a popular topic, and creating a video with mind-blowing facts could be engaging and informative",
+        "hook": "What if I told you that black holes are not just voids in space, but actually have some amazing properties?",
+        "title": "Mind-Blowing Facts About Black Holes #blackholes #space",
         "estimated_performance": "high",
-        "urgency": "this topic is relevant now due to the recent interest in space and astronomy"
+        "urgency": "black holes are a popular topic, and creating a video with mind-blowing facts could be a great opportunity"
       }
     ],
     "next_video_brief": {
-      "topic": "What if you were stuck on the moon with limited resources?",
-      "hook": "Imagine being stranded on the moon with only a few days of oxygen left...",
-      "script_direction": "Create a suspenseful and informative video that explores the possibilities of survival on the moon, including the science behind the challenges and the potential solutions. Use a mix of visuals and interesting facts to keep viewers engaged.",
-      "title": "What if You Were Stuck on the Moon?",
+      "topic": "What if you fired a gun on the moon?",
+      "hook": "Imagine being on the moon with a gun, but what happens when you pull the trigger?",
+      "script_direction": "Create a video that explains the science behind firing a gun on the moon, using visuals and interesting facts to keep viewers engaged",
+      "title": "What if you fired a gun on the moon? #space #science",
       "tags": [
         "space",
-        "astronomy",
-        "survival",
+        "science",
+        "gun",
         "moon",
-        "science"
+        "what if"
       ],
       "hashtags": [
         "#space",
-        "#moon",
-        "#survival",
-        "#science"
+        "#science",
+        "#whatif"
       ],
-      "thumbnail_concept": "a dramatic image of a person in a spacesuit standing on the moon's surface, with a clock ticking in the background",
+      "thumbnail_concept": "a picture of a person on the moon holding a gun, with a surprised expression",
       "confidence_score": 85
     },
     "strategic_recommendations": [
-      "Create more content around trending topics like kitchen hacks and survival stories",
-      "Utilize slow-motion footage to showcase interesting phenomena and experiments",
-      "Collaborate with other creators or experts in the field to create more engaging and informative content",
-      "Optimize video titles and tags to better match what viewers are searching for",
-      "Experiment with different formats, such as live streams or Q&A sessions, to engage with viewers and build a community"
+      "Use more attention-grabbing titles and hooks to increase engagement",
+      "Create more videos that utilize slow-motion footage to showcase interesting phenomena",
+      "Cover a wider range of topics, including more mind-blowing facts and science explanations"
     ]
   }
 }

@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-26T07:08:50.115746",
+  "last_updated": "2026-06-27T06:42:58.836091",
   "videos": {
     "LeyFU-s9Pg0": {
       "id": "LeyFU-s9Pg0",
@@ -7,11 +7,11 @@
       "channel": "KnowMore-Dailyday",
       "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
       "published": "2026-06-25T07:03:45Z",
-      "views": 694,
+      "views": 766,
       "likes": 11,
       "comments": 2,
-      "engagement_rate": 1.873,
-      "views_per_day": 694,
+      "engagement_rate": 1.697,
+      "views_per_day": 766,
       "tags": [
         "Jupiter",
         "Mars",
@@ -61,17 +61,48 @@
       "duration_secs": 17,
       "thumbnail": "https://i.ytimg.com/vi/YUq2wg58P6o/hqdefault.jpg"
     },
+    "Wh_cFYR_16M": {
+      "id": "Wh_cFYR_16M",
+      "title": "\ud83c\udf2b\ufe0f Rare Clouds Eat The Sky",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-06-26T07:10:16Z",
+      "views": 235,
+      "likes": 3,
+      "comments": 0,
+      "engagement_rate": 1.277,
+      "views_per_day": 235,
+      "tags": [
+        "Morning Glory",
+        "clouds",
+        "curiosity",
+        "did you know",
+        "facts",
+        "mindblown",
+        "physics",
+        "roll cloud",
+        "science",
+        "shorts",
+        "space",
+        "tubular cloud",
+        "universe",
+        "weather"
+      ],
+      "description": "Witness the breathtaking Morning Glory cloud\n\n#shorts #weather #clouds",
+      "duration_secs": 17,
+      "thumbnail": "https://i.ytimg.com/vi/Wh_cFYR_16M/hqdefault.jpg"
+    },
     "M-hxG49mA-E": {
       "id": "M-hxG49mA-E",
       "title": "Moon Bullet \ud83d\ude80",
       "channel": "KnowMore-Dailyday",
       "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
       "published": "2026-06-23T07:06:33Z",
-      "views": 669,
+      "views": 672,
       "likes": 11,
       "comments": 1,
-      "engagement_rate": 1.794,
-      "views_per_day": 223,
+      "engagement_rate": 1.786,
+      "views_per_day": 224,
       "tags": [
         "curiosity",
         "did you know",
@@ -101,7 +132,7 @@
       "likes": 10,
       "comments": 0,
       "engagement_rate": 1.321,
-      "views_per_day": 189,
+      "views_per_day": 151,
       "tags": [
         "bioluminescence",
         "curiosity",
@@ -132,7 +163,7 @@
       "likes": 12,
       "comments": 0,
       "engagement_rate": 1.813,
-      "views_per_day": 166,
+      "views_per_day": 132,
       "tags": [
         "Ancient Egypt",
         "Archaeology",
@@ -163,7 +194,7 @@
       "likes": 7,
       "comments": 0,
       "engagement_rate": 1.737,
-      "views_per_day": 134,
+      "views_per_day": 101,
       "tags": [
         "brain",
         "curiosity",
@@ -191,10 +222,10 @@
       "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
       "published": "2026-06-12T08:15:19Z",
       "views": 867,
-      "likes": 10,
+      "likes": 9,
       "comments": 0,
-      "engagement_rate": 1.153,
-      "views_per_day": 67,
+      "engagement_rate": 1.038,
+      "views_per_day": 62,
       "tags": [
         "curiosity",
         "did you know",
@@ -223,7 +254,7 @@
       "likes": 3,
       "comments": 1,
       "engagement_rate": 0.697,
-      "views_per_day": 64,
+      "views_per_day": 57,
       "tags": [
         "atoms",
         "curiosity",
@@ -253,7 +284,7 @@
       "likes": 1,
       "comments": 0,
       "engagement_rate": 1.02,
-      "views_per_day": 24,
+      "views_per_day": 20,
       "tags": [
         "black holes",
         "cosmos",
@@ -708,32 +739,6 @@
       "duration_secs": 32,
       "thumbnail": "https://i.ytimg.com/vi/rX5GXLrXfEc/hqdefault.jpg"
     },
-    "tNwO-DzFeyM": {
-      "id": "tNwO-DzFeyM",
-      "title": "\ud83d\udc80 The Dark Side of Earworms \ud83c\udfb5",
-      "channel": "KnowMore-Dailyday",
-      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
-      "published": "2026-04-12T18:53:07Z",
-      "views": 111,
-      "likes": 1,
-      "comments": 0,
-      "engagement_rate": 0.901,
-      "views_per_day": 2,
-      "tags": [
-        "brain function",
-        "earworms",
-        "facts",
-        "music",
-        "neuroscience",
-        "psychology",
-        "science",
-        "shorts",
-        "viral"
-      ],
-      "description": "Uncover the sinister science behind song repetition\n\n#shorts #science #mindblown\n\n#Shorts",
-      "duration_secs": 23,
-      "thumbnail": "https://i.ytimg.com/vi/tNwO-DzFeyM/hqdefault.jpg"
-    },
     "ojAv-DQ33lQ": {
       "id": "ojAv-DQ33lQ",
       "title": "\ud83d\udd2e Mirror Reflections Entangled? \ud83e\udd2f",
@@ -840,6 +845,32 @@
       "description": "Discover the dark science behind song repetition\n\n#shorts #science #mindblown #music\n\n#Shorts",
       "duration_secs": 35,
       "thumbnail": "https://i.ytimg.com/vi/dvpNY15bicw/hqdefault.jpg"
+    },
+    "tNwO-DzFeyM": {
+      "id": "tNwO-DzFeyM",
+      "title": "\ud83d\udc80 The Dark Side of Earworms \ud83c\udfb5",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-04-12T18:53:07Z",
+      "views": 111,
+      "likes": 1,
+      "comments": 0,
+      "engagement_rate": 0.901,
+      "views_per_day": 1,
+      "tags": [
+        "brain function",
+        "earworms",
+        "facts",
+        "music",
+        "neuroscience",
+        "psychology",
+        "science",
+        "shorts",
+        "viral"
+      ],
+      "description": "Uncover the sinister science behind song repetition\n\n#shorts #science #mindblown\n\n#Shorts",
+      "duration_secs": 23,
+      "thumbnail": "https://i.ytimg.com/vi/tNwO-DzFeyM/hqdefault.jpg"
     },
     "eJS2wpcHT_0": {
       "id": "eJS2wpcHT_0",
