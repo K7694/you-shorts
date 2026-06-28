@@ -3793,7 +3793,37 @@
     ],
     "affiliate_program": "",
     "archetype": "unsolved_mystery",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "LeyFU-s9Pg0",
+      "title": "Water on Mars? \ud83d\ude80",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-06-25T07:03:45Z",
+      "views": 772,
+      "likes": 11,
+      "comments": 2,
+      "engagement_rate": 1.684,
+      "views_per_day": 257,
+      "tags": [
+        "Jupiter",
+        "Mars",
+        "Venus",
+        "curiosity",
+        "did you know",
+        "facts",
+        "mindblown",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "universe",
+        "water"
+      ],
+      "description": "What happens when you pour water on different planets?\n\n#shorts #space #science",
+      "duration_secs": 16,
+      "thumbnail": "https://i.ytimg.com/vi/LeyFU-s9Pg0/hqdefault.jpg"
+    }
   },
   {
     "id": "Wh_cFYR_16M",
@@ -3811,7 +3841,38 @@
     ],
     "affiliate_program": "",
     "archetype": "how_does_it_work",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "Wh_cFYR_16M",
+      "title": "\ud83c\udf2b\ufe0f Rare Clouds Eat The Sky",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-06-26T07:10:16Z",
+      "views": 240,
+      "likes": 3,
+      "comments": 0,
+      "engagement_rate": 1.25,
+      "views_per_day": 120,
+      "tags": [
+        "Morning Glory",
+        "clouds",
+        "curiosity",
+        "did you know",
+        "facts",
+        "mindblown",
+        "physics",
+        "roll cloud",
+        "science",
+        "shorts",
+        "space",
+        "tubular cloud",
+        "universe",
+        "weather"
+      ],
+      "description": "Witness the breathtaking Morning Glory cloud\n\n#shorts #weather #clouds",
+      "duration_secs": 17,
+      "thumbnail": "https://i.ytimg.com/vi/Wh_cFYR_16M/hqdefault.jpg"
+    }
   },
   {
     "id": "BeJyp9jNOCU",
@@ -3829,6 +3890,24 @@
     ],
     "affiliate_program": "",
     "archetype": "how_does_it_work",
+    "stats_fetched": false
+  },
+  {
+    "id": "qc1tZmnuU8E",
+    "title": "\ud83d\ude80 Stranded in Space: No Escape",
+    "uploaded_at": "2026-06-28T07:39:47.887463+00:00",
+    "hook": "Trapped on a space station with no escape",
+    "script": "Trapped on a space station with no escape. Oxygen dwindling. Life support failing. Panic sets in. The vastness of space stares back. No rescue in sight. Trapped on a space station with no escape",
+    "topic": "Stranded in Space",
+    "tags": [
+      "space station",
+      "stranded",
+      "survival",
+      "space mystery",
+      "unsolved"
+    ],
+    "affiliate_program": "",
+    "archetype": "unsolved_mystery",
     "stats_fetched": false
   }
 ]

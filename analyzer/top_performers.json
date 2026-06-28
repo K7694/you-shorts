@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-27T06:42:56.819951",
+  "updated": "2026-06-28T07:38:11.523965",
   "performers": [
     {
       "id": "0K_3ssqYbjw",
@@ -46,15 +46,15 @@
       "performance_score": 289.9989
     },
     {
-      "id": "M-hxG49mA-E",
-      "title": "Moon Bullet 🚀",
-      "hook": "Fire a gun on the Moon and the bullet could hit you in the back.",
-      "script": "Fire a gun on the Moon and the bullet could hit you in the back. No air, no sound. Gravity warps trajectory. Low gravity, long range. Bullet keeps going, no friction. Hits the horizon, comes back. The question remains: what happens when you fire a gun on the Moon? Fire a gun on the Moon and the bullet could hit you in the back.",
-      "topic": "Firing a gun on the moon",
-      "views": 669,
-      "engagement_rate": 1.794,
-      "views_per_day": 223,
-      "performance_score": 227.00062000000003
+      "id": "LeyFU-s9Pg0",
+      "title": "Water on Mars? 🚀",
+      "hook": "Pour water on Mars",
+      "script": "Pour water on Mars. It evaporates. On Jupiter, it disintegrates. On Venus, it boils. On Earth, it flows. But what happens when you pour water on different planets? Does it spark life or destroy it? Pour water on Mars.",
+      "topic": "water on different planets",
+      "views": 772,
+      "engagement_rate": 1.684,
+      "views_per_day": 257,
+      "performance_score": 261.32788
     }
   ]
 }
