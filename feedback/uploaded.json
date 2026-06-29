@@ -3890,7 +3890,38 @@
     ],
     "affiliate_program": "",
     "archetype": "how_does_it_work",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "BeJyp9jNOCU",
+      "title": "\ud83d\udd25 Ball Lightning: The Unexplained \ud83d\udd25",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-06-27T06:45:12Z",
+      "views": 405,
+      "likes": 5,
+      "comments": 0,
+      "engagement_rate": 1.235,
+      "views_per_day": 202,
+      "tags": [
+        "ball lightning",
+        "curiosity",
+        "did you know",
+        "facts",
+        "mindblown",
+        "natural wonders",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "thunderstorms",
+        "unexplained phenomena",
+        "universe",
+        "weather mysteries"
+      ],
+      "description": "Witness the mysterious ball lightning phenomenon\n\n#shorts #science #mindblown #weather #nature",
+      "duration_secs": 16,
+      "thumbnail": "https://i.ytimg.com/vi/BeJyp9jNOCU/hqdefault.jpg"
+    }
   },
   {
     "id": "qc1tZmnuU8E",
@@ -3908,6 +3939,24 @@
     ],
     "affiliate_program": "",
     "archetype": "unsolved_mystery",
+    "stats_fetched": false
+  },
+  {
+    "id": "vXw-De7uCm4",
+    "title": "\ud83d\udd34 Black Hole Secret Revealed",
+    "uploaded_at": "2026-06-29T08:35:32.662684+00:00",
+    "hook": "Sucked into a black hole",
+    "script": "Sucked into a black hole. Gravity warps space. Time slows down. Stars distort. You're stretched, squeezed. The event horizon crosses. No escape. You're trapped, forever falling. Sucked into a black hole",
+    "topic": "Black Hole Survival",
+    "tags": [
+      "Black Hole",
+      "Space",
+      "Gravity",
+      "Cosmos",
+      "Astronomy"
+    ],
+    "affiliate_program": "",
+    "archetype": "how_does_it_work",
     "stats_fetched": false
   }
 ]

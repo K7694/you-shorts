@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-28T07:38:12.825347",
+  "last_updated": "2026-06-29T08:33:54.054267",
   "videos": {
     "BeJyp9jNOCU": {
       "id": "BeJyp9jNOCU",
@@ -7,11 +7,11 @@
       "channel": "KnowMore-Dailyday",
       "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
       "published": "2026-06-27T06:45:12Z",
-      "views": 321,
-      "likes": 4,
+      "views": 405,
+      "likes": 5,
       "comments": 0,
-      "engagement_rate": 1.246,
-      "views_per_day": 321,
+      "engagement_rate": 1.235,
+      "views_per_day": 202,
       "tags": [
         "ball lightning",
         "curiosity",
@@ -42,7 +42,7 @@
       "likes": 11,
       "comments": 2,
       "engagement_rate": 1.684,
-      "views_per_day": 257,
+      "views_per_day": 193,
       "tags": [
         "Jupiter",
         "Mars",
@@ -72,7 +72,7 @@
       "likes": 10,
       "comments": 0,
       "engagement_rate": 1.745,
-      "views_per_day": 143,
+      "views_per_day": 115,
       "tags": [
         "astronomy",
         "curiosity",
@@ -102,7 +102,7 @@
       "likes": 11,
       "comments": 1,
       "engagement_rate": 1.773,
-      "views_per_day": 135,
+      "views_per_day": 113,
       "tags": [
         "curiosity",
         "did you know",
@@ -132,7 +132,7 @@
       "likes": 10,
       "comments": 0,
       "engagement_rate": 1.321,
-      "views_per_day": 126,
+      "views_per_day": 108,
       "tags": [
         "bioluminescence",
         "curiosity",
@@ -153,48 +153,17 @@
       "duration_secs": 20,
       "thumbnail": "https://i.ytimg.com/vi/0K_3ssqYbjw/hqdefault.jpg"
     },
-    "Wh_cFYR_16M": {
-      "id": "Wh_cFYR_16M",
-      "title": "\ud83c\udf2b\ufe0f Rare Clouds Eat The Sky",
-      "channel": "KnowMore-Dailyday",
-      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
-      "published": "2026-06-26T07:10:16Z",
-      "views": 240,
-      "likes": 3,
-      "comments": 0,
-      "engagement_rate": 1.25,
-      "views_per_day": 120,
-      "tags": [
-        "Morning Glory",
-        "clouds",
-        "curiosity",
-        "did you know",
-        "facts",
-        "mindblown",
-        "physics",
-        "roll cloud",
-        "science",
-        "shorts",
-        "space",
-        "tubular cloud",
-        "universe",
-        "weather"
-      ],
-      "description": "Witness the breathtaking Morning Glory cloud\n\n#shorts #weather #clouds",
-      "duration_secs": 17,
-      "thumbnail": "https://i.ytimg.com/vi/Wh_cFYR_16M/hqdefault.jpg"
-    },
     "7s8N1yhGDDU": {
       "id": "7s8N1yhGDDU",
       "title": "\ud83d\udd0d Uncovering The Great Sphinx Secret",
       "channel": "KnowMore-Dailyday",
       "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
       "published": "2026-06-21T08:17:25Z",
-      "views": 662,
+      "views": 663,
       "likes": 12,
       "comments": 0,
-      "engagement_rate": 1.813,
-      "views_per_day": 110,
+      "engagement_rate": 1.81,
+      "views_per_day": 83,
       "tags": [
         "Ancient Egypt",
         "Archaeology",
@@ -215,6 +184,37 @@
       "duration_secs": 15,
       "thumbnail": "https://i.ytimg.com/vi/7s8N1yhGDDU/hqdefault.jpg"
     },
+    "Wh_cFYR_16M": {
+      "id": "Wh_cFYR_16M",
+      "title": "\ud83c\udf2b\ufe0f Rare Clouds Eat The Sky",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-06-26T07:10:16Z",
+      "views": 241,
+      "likes": 3,
+      "comments": 0,
+      "engagement_rate": 1.245,
+      "views_per_day": 80,
+      "tags": [
+        "Morning Glory",
+        "clouds",
+        "curiosity",
+        "did you know",
+        "facts",
+        "mindblown",
+        "physics",
+        "roll cloud",
+        "science",
+        "shorts",
+        "space",
+        "tubular cloud",
+        "universe",
+        "weather"
+      ],
+      "description": "Witness the breathtaking Morning Glory cloud\n\n#shorts #weather #clouds",
+      "duration_secs": 17,
+      "thumbnail": "https://i.ytimg.com/vi/Wh_cFYR_16M/hqdefault.jpg"
+    },
     "oXAo27YlJoI": {
       "id": "oXAo27YlJoI",
       "title": "\ud83e\udde0 You Forget 90% of Dreams!",
@@ -225,7 +225,7 @@
       "likes": 7,
       "comments": 0,
       "engagement_rate": 1.737,
-      "views_per_day": 81,
+      "views_per_day": 67,
       "tags": [
         "brain",
         "curiosity",
@@ -256,7 +256,7 @@
       "likes": 9,
       "comments": 0,
       "engagement_rate": 1.038,
-      "views_per_day": 58,
+      "views_per_day": 51,
       "tags": [
         "curiosity",
         "did you know",
@@ -285,7 +285,7 @@
       "likes": 3,
       "comments": 1,
       "engagement_rate": 0.697,
-      "views_per_day": 52,
+      "views_per_day": 48,
       "tags": [
         "atoms",
         "curiosity",
@@ -341,7 +341,7 @@
       "likes": 1,
       "comments": 0,
       "engagement_rate": 1.02,
-      "views_per_day": 16,
+      "views_per_day": 14,
       "tags": [
         "black holes",
         "cosmos",
@@ -770,6 +770,37 @@
       "duration_secs": 26,
       "thumbnail": "https://i.ytimg.com/vi/ixmHFDkEBhI/hqdefault.jpg"
     },
+    "qc1tZmnuU8E": {
+      "id": "qc1tZmnuU8E",
+      "title": "\ud83d\ude80 Stranded in Space: No Escape",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-06-28T07:39:59Z",
+      "views": 1,
+      "likes": 0,
+      "comments": 0,
+      "engagement_rate": 0.0,
+      "views_per_day": 1,
+      "tags": [
+        "curiosity",
+        "did you know",
+        "facts",
+        "mindblown",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "space mystery",
+        "space station",
+        "stranded",
+        "survival",
+        "universe",
+        "unsolved"
+      ],
+      "description": "Imagine being stranded on a space station with limited resources\n\n#shorts #space #mystery",
+      "duration_secs": 14,
+      "thumbnail": "https://i.ytimg.com/vi/qc1tZmnuU8E/hqdefault.jpg"
+    },
     "ojAv-DQ33lQ": {
       "id": "ojAv-DQ33lQ",
       "title": "\ud83d\udd2e Mirror Reflections Entangled? \ud83e\udd2f",
@@ -876,32 +907,6 @@
       "description": "Discover the dark science behind song repetition\n\n#shorts #science #mindblown #music\n\n#Shorts",
       "duration_secs": 35,
       "thumbnail": "https://i.ytimg.com/vi/dvpNY15bicw/hqdefault.jpg"
-    },
-    "tNwO-DzFeyM": {
-      "id": "tNwO-DzFeyM",
-      "title": "\ud83d\udc80 The Dark Side of Earworms \ud83c\udfb5",
-      "channel": "KnowMore-Dailyday",
-      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
-      "published": "2026-04-12T18:53:07Z",
-      "views": 111,
-      "likes": 1,
-      "comments": 0,
-      "engagement_rate": 0.901,
-      "views_per_day": 1,
-      "tags": [
-        "brain function",
-        "earworms",
-        "facts",
-        "music",
-        "neuroscience",
-        "psychology",
-        "science",
-        "shorts",
-        "viral"
-      ],
-      "description": "Uncover the sinister science behind song repetition\n\n#shorts #science #mindblown\n\n#Shorts",
-      "duration_secs": 23,
-      "thumbnail": "https://i.ytimg.com/vi/tNwO-DzFeyM/hqdefault.jpg"
     },
     "eJS2wpcHT_0": {
       "id": "eJS2wpcHT_0",
