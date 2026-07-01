@@ -3939,7 +3939,38 @@
     ],
     "affiliate_program": "",
     "archetype": "unsolved_mystery",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "qc1tZmnuU8E",
+      "title": "\ud83d\ude80 Stranded in Space: No Escape",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-06-28T07:39:59Z",
+      "views": 7,
+      "likes": 0,
+      "comments": 0,
+      "engagement_rate": 0.0,
+      "views_per_day": 2,
+      "tags": [
+        "curiosity",
+        "did you know",
+        "facts",
+        "mindblown",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "space mystery",
+        "space station",
+        "stranded",
+        "survival",
+        "universe",
+        "unsolved"
+      ],
+      "description": "Imagine being stranded on a space station with limited resources\n\n#shorts #space #mystery",
+      "duration_secs": 14,
+      "thumbnail": "https://i.ytimg.com/vi/qc1tZmnuU8E/hqdefault.jpg"
+    }
   },
   {
     "id": "vXw-De7uCm4",
@@ -3975,6 +4006,24 @@
     ],
     "affiliate_program": "",
     "archetype": "mind_blowing_fact",
+    "stats_fetched": false
+  },
+  {
+    "id": "I4phgzXFamU",
+    "title": "\ud83d\udd2b Moon Gunfire: The Shocking Truth",
+    "uploaded_at": "2026-07-01T07:57:11.975739+00:00",
+    "hook": "Fire a gun on the Moon and the bullet could hit you in the back",
+    "script": "Fire a gun on the Moon and the bullet could hit you in the back. No air, no sound. Gravity warps trajectory. In vacuum, it never stops. On the Moon's surface, it could ricochet. What happens when you fire a gun on the Moon? Fire a gun on the Moon and the bullet could hit you in the back",
+    "topic": "Firing a Gun on the Moon",
+    "tags": [
+      "Moon",
+      "Gunfire",
+      "Space",
+      "Physics",
+      "Astronomy"
+    ],
+    "affiliate_program": "",
+    "archetype": "how_does_it_work",
     "stats_fetched": false
   }
 ]
