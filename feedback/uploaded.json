@@ -3988,7 +3988,38 @@
     ],
     "affiliate_program": "",
     "archetype": "how_does_it_work",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "vXw-De7uCm4",
+      "title": "\ud83d\udd34 Black Hole Secret Revealed",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-06-29T08:35:56Z",
+      "views": 258,
+      "likes": 4,
+      "comments": 0,
+      "engagement_rate": 1.55,
+      "views_per_day": 129,
+      "tags": [
+        "Astronomy",
+        "Black Hole",
+        "Cosmos",
+        "Gravity",
+        "Space",
+        "curiosity",
+        "did you know",
+        "facts",
+        "mindblown",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "universe"
+      ],
+      "description": "What happens when you get stuck in a black hole?\n\n#shorts #science #mindblown #space #blackhole",
+      "duration_secs": 15,
+      "thumbnail": "https://i.ytimg.com/vi/vXw-De7uCm4/hqdefault.jpg"
+    }
   },
   {
     "id": "E8uJufACPTA",
@@ -4021,6 +4052,24 @@
       "Space",
       "Physics",
       "Astronomy"
+    ],
+    "affiliate_program": "",
+    "archetype": "how_does_it_work",
+    "stats_fetched": false
+  },
+  {
+    "id": "kXxlF9EQYXo",
+    "title": "\ud83c\udf0c Poisonous Skies Revealed",
+    "uploaded_at": "2026-07-02T06:57:06.931022+00:00",
+    "hook": "Trapped in a poisonous sky",
+    "script": "Trapped in a poisonous sky. Toxic gases surround. No oxygen, no life. Acid rain falls, sulfuric mist. Lungs dissolve, skin burns. The atmosphere is a killer. Trapped in a poisonous sky",
+    "topic": "Toxic Planet Atmosphere",
+    "tags": [
+      "space",
+      "atmosphere",
+      "toxic",
+      "poisonous",
+      "science"
     ],
     "affiliate_program": "",
     "archetype": "how_does_it_work",

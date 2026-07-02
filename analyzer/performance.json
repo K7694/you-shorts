@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-01T07:55:49.902798",
+  "last_updated": "2026-07-02T06:55:41.424932",
   "videos": {
     "vXw-De7uCm4": {
       "id": "vXw-De7uCm4",
@@ -11,7 +11,7 @@
       "likes": 4,
       "comments": 0,
       "engagement_rate": 1.55,
-      "views_per_day": 258,
+      "views_per_day": 129,
       "tags": [
         "Astronomy",
         "Black Hole",
@@ -68,11 +68,11 @@
       "channel": "KnowMore-Dailyday",
       "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
       "published": "2026-06-30T07:10:35Z",
-      "views": 110,
+      "views": 108,
       "likes": 1,
       "comments": 0,
-      "engagement_rate": 0.909,
-      "views_per_day": 110,
+      "engagement_rate": 0.926,
+      "views_per_day": 108,
       "tags": [
         "curiosity",
         "did you know",
@@ -90,37 +90,6 @@
       "description": "The shocking truth behind mirror reflections\n\n#shorts #science #mindblown #quantum",
       "duration_secs": 16,
       "thumbnail": "https://i.ytimg.com/vi/E8uJufACPTA/hqdefault.jpg"
-    },
-    "BeJyp9jNOCU": {
-      "id": "BeJyp9jNOCU",
-      "title": "\ud83d\udd25 Ball Lightning: The Unexplained \ud83d\udd25",
-      "channel": "KnowMore-Dailyday",
-      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
-      "published": "2026-06-27T06:45:12Z",
-      "views": 409,
-      "likes": 5,
-      "comments": 0,
-      "engagement_rate": 1.222,
-      "views_per_day": 102,
-      "tags": [
-        "ball lightning",
-        "curiosity",
-        "did you know",
-        "facts",
-        "mindblown",
-        "natural wonders",
-        "physics",
-        "science",
-        "shorts",
-        "space",
-        "thunderstorms",
-        "unexplained phenomena",
-        "universe",
-        "weather mysteries"
-      ],
-      "description": "Witness the mysterious ball lightning phenomenon\n\n#shorts #science #mindblown #weather #nature",
-      "duration_secs": 16,
-      "thumbnail": "https://i.ytimg.com/vi/BeJyp9jNOCU/hqdefault.jpg"
     },
     "M-hxG49mA-E": {
       "id": "M-hxG49mA-E",
@@ -152,36 +121,36 @@
       "duration_secs": 22,
       "thumbnail": "https://i.ytimg.com/vi/M-hxG49mA-E/hqdefault.jpg"
     },
-    "0K_3ssqYbjw": {
-      "id": "0K_3ssqYbjw",
-      "title": "\ud83c\udf1f Creatures That Light The Dark \ud83c\udf1f",
+    "BeJyp9jNOCU": {
+      "id": "BeJyp9jNOCU",
+      "title": "\ud83d\udd25 Ball Lightning: The Unexplained \ud83d\udd25",
       "channel": "KnowMore-Dailyday",
       "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
-      "published": "2026-06-22T05:39:01Z",
-      "views": 757,
-      "likes": 10,
+      "published": "2026-06-27T06:45:12Z",
+      "views": 409,
+      "likes": 5,
       "comments": 0,
-      "engagement_rate": 1.321,
-      "views_per_day": 84,
+      "engagement_rate": 1.222,
+      "views_per_day": 82,
       "tags": [
-        "bioluminescence",
+        "ball lightning",
         "curiosity",
-        "deep ocean",
         "did you know",
         "facts",
-        "marine life",
         "mindblown",
-        "ocean creatures",
+        "natural wonders",
         "physics",
         "science",
         "shorts",
         "space",
+        "thunderstorms",
+        "unexplained phenomena",
         "universe",
-        "wildlife"
+        "weather mysteries"
       ],
-      "description": "Discover the glowing creatures of the deep ocean\n\n#shorts #ocean #wildlife #nature #bioluminescence",
-      "duration_secs": 20,
-      "thumbnail": "https://i.ytimg.com/vi/0K_3ssqYbjw/hqdefault.jpg"
+      "description": "Witness the mysterious ball lightning phenomenon\n\n#shorts #science #mindblown #weather #nature",
+      "duration_secs": 16,
+      "thumbnail": "https://i.ytimg.com/vi/BeJyp9jNOCU/hqdefault.jpg"
     },
     "YUq2wg58P6o": {
       "id": "YUq2wg58P6o",
@@ -213,6 +182,37 @@
       "duration_secs": 17,
       "thumbnail": "https://i.ytimg.com/vi/YUq2wg58P6o/hqdefault.jpg"
     },
+    "0K_3ssqYbjw": {
+      "id": "0K_3ssqYbjw",
+      "title": "\ud83c\udf1f Creatures That Light The Dark \ud83c\udf1f",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-06-22T05:39:01Z",
+      "views": 757,
+      "likes": 10,
+      "comments": 0,
+      "engagement_rate": 1.321,
+      "views_per_day": 76,
+      "tags": [
+        "bioluminescence",
+        "curiosity",
+        "deep ocean",
+        "did you know",
+        "facts",
+        "marine life",
+        "mindblown",
+        "ocean creatures",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "universe",
+        "wildlife"
+      ],
+      "description": "Discover the glowing creatures of the deep ocean\n\n#shorts #ocean #wildlife #nature #bioluminescence",
+      "duration_secs": 20,
+      "thumbnail": "https://i.ytimg.com/vi/0K_3ssqYbjw/hqdefault.jpg"
+    },
     "7s8N1yhGDDU": {
       "id": "7s8N1yhGDDU",
       "title": "\ud83d\udd0d Uncovering The Great Sphinx Secret",
@@ -223,7 +223,7 @@
       "likes": 12,
       "comments": 0,
       "engagement_rate": 1.81,
-      "views_per_day": 74,
+      "views_per_day": 66,
       "tags": [
         "Ancient Egypt",
         "Archaeology",
@@ -243,37 +243,6 @@
       "description": "Unravel the mystery of the Great Sphinx\n\n#shorts #history #mystery",
       "duration_secs": 15,
       "thumbnail": "https://i.ytimg.com/vi/7s8N1yhGDDU/hqdefault.jpg"
-    },
-    "oXAo27YlJoI": {
-      "id": "oXAo27YlJoI",
-      "title": "\ud83e\udde0 You Forget 90% of Dreams!",
-      "channel": "KnowMore-Dailyday",
-      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
-      "published": "2026-06-22T09:32:05Z",
-      "views": 403,
-      "likes": 7,
-      "comments": 0,
-      "engagement_rate": 1.737,
-      "views_per_day": 50,
-      "tags": [
-        "brain",
-        "curiosity",
-        "did you know",
-        "dreams",
-        "facts",
-        "memory",
-        "mind",
-        "mindblown",
-        "physics",
-        "psychology",
-        "science",
-        "shorts",
-        "space",
-        "universe"
-      ],
-      "description": "Discover the shocking truth about your brain and dreams\n\n#shorts #science #mindblown",
-      "duration_secs": 18,
-      "thumbnail": "https://i.ytimg.com/vi/oXAo27YlJoI/hqdefault.jpg"
     },
     "Wh_cFYR_16M": {
       "id": "Wh_cFYR_16M",
@@ -316,7 +285,7 @@
       "likes": 9,
       "comments": 0,
       "engagement_rate": 1.037,
-      "views_per_day": 48,
+      "views_per_day": 46,
       "tags": [
         "curiosity",
         "did you know",
@@ -335,6 +304,37 @@
       "duration_secs": 20,
       "thumbnail": "https://i.ytimg.com/vi/WolpLzitfl8/hqdefault.jpg"
     },
+    "oXAo27YlJoI": {
+      "id": "oXAo27YlJoI",
+      "title": "\ud83e\udde0 You Forget 90% of Dreams!",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-06-22T09:32:05Z",
+      "views": 403,
+      "likes": 7,
+      "comments": 0,
+      "engagement_rate": 1.737,
+      "views_per_day": 45,
+      "tags": [
+        "brain",
+        "curiosity",
+        "did you know",
+        "dreams",
+        "facts",
+        "memory",
+        "mind",
+        "mindblown",
+        "physics",
+        "psychology",
+        "science",
+        "shorts",
+        "space",
+        "universe"
+      ],
+      "description": "Discover the shocking truth about your brain and dreams\n\n#shorts #science #mindblown",
+      "duration_secs": 18,
+      "thumbnail": "https://i.ytimg.com/vi/oXAo27YlJoI/hqdefault.jpg"
+    },
     "kT_fXzfG4hI": {
       "id": "kT_fXzfG4hI",
       "title": "\ud83d\udd0d Atoms Pass Through Walls",
@@ -345,7 +345,7 @@
       "likes": 3,
       "comments": 1,
       "engagement_rate": 0.697,
-      "views_per_day": 41,
+      "views_per_day": 38,
       "tags": [
         "atoms",
         "curiosity",
@@ -401,7 +401,7 @@
       "likes": 3,
       "comments": 0,
       "engagement_rate": 0.341,
-      "views_per_day": 12,
+      "views_per_day": 11,
       "tags": [
         "cooking tips",
         "dark science",
@@ -427,7 +427,7 @@
       "likes": 1,
       "comments": 0,
       "engagement_rate": 1.02,
-      "views_per_day": 11,
+      "views_per_day": 10,
       "tags": [
         "black holes",
         "cosmos",
@@ -496,32 +496,6 @@
       "duration_secs": 29,
       "thumbnail": "https://i.ytimg.com/vi/ERhoFeabX3w/hqdefault.jpg"
     },
-    "PhtesaWw_5A": {
-      "id": "PhtesaWw_5A",
-      "title": "\ud83d\udd25 Black Holes: The Cosmic Abyss \ud83c\udf00",
-      "channel": "KnowMore-Dailyday",
-      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
-      "published": "2026-04-18T16:12:53Z",
-      "views": 402,
-      "likes": 5,
-      "comments": 0,
-      "engagement_rate": 1.244,
-      "views_per_day": 6,
-      "tags": [
-        "astrophysics",
-        "black holes",
-        "cosmology",
-        "facts",
-        "science",
-        "shorts",
-        "space",
-        "universe",
-        "viral"
-      ],
-      "description": "Uncover the dark secrets of black holes\n\n#shorts #science #mindblown #blackholes #cosmos\n\n#Shorts",
-      "duration_secs": 18,
-      "thumbnail": "https://i.ytimg.com/vi/PhtesaWw_5A/hqdefault.jpg"
-    },
     "jQn0rKxwhAk": {
       "id": "jQn0rKxwhAk",
       "title": "\ud83d\udd2e Black Holes: The Void in Space",
@@ -579,30 +553,31 @@
       "duration_secs": 19,
       "thumbnail": "https://i.ytimg.com/vi/vSNwLt-P4hU/hqdefault.jpg"
     },
-    "GNdBew-G_Kg": {
-      "id": "GNdBew-G_Kg",
-      "title": "\ud83d\udd0d The Dark Science of Kitchen Hacks",
+    "PhtesaWw_5A": {
+      "id": "PhtesaWw_5A",
+      "title": "\ud83d\udd25 Black Holes: The Cosmic Abyss \ud83c\udf00",
       "channel": "KnowMore-Dailyday",
       "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
-      "published": "2026-04-19T16:14:29Z",
-      "views": 328,
-      "likes": 2,
+      "published": "2026-04-18T16:12:53Z",
+      "views": 402,
+      "likes": 5,
       "comments": 0,
-      "engagement_rate": 0.61,
+      "engagement_rate": 1.244,
       "views_per_day": 5,
       "tags": [
-        "Maillard reaction",
-        "chemistry",
-        "cooking",
+        "astrophysics",
+        "black holes",
+        "cosmology",
         "facts",
-        "kitchen hacks",
         "science",
         "shorts",
+        "space",
+        "universe",
         "viral"
       ],
-      "description": "The secret science behind kitchen hacks revealed\n\n#shorts #science #mindblown #kitchenhacks #cooking\n\n#Shorts",
-      "duration_secs": 32,
-      "thumbnail": "https://i.ytimg.com/vi/GNdBew-G_Kg/hqdefault.jpg"
+      "description": "Uncover the dark secrets of black holes\n\n#shorts #science #mindblown #blackholes #cosmos\n\n#Shorts",
+      "duration_secs": 18,
+      "thumbnail": "https://i.ytimg.com/vi/PhtesaWw_5A/hqdefault.jpg"
     },
     "vbbAFitH3Hs": {
       "id": "vbbAFitH3Hs",
@@ -656,6 +631,37 @@
       "duration_secs": 24,
       "thumbnail": "https://i.ytimg.com/vi/x9VpwqbHngk/hqdefault.jpg"
     },
+    "I4phgzXFamU": {
+      "id": "I4phgzXFamU",
+      "title": "\ud83d\udd2b Moon Gunfire: The Shocking Truth",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-07-01T07:57:35Z",
+      "views": 4,
+      "likes": 1,
+      "comments": 0,
+      "engagement_rate": 25.0,
+      "views_per_day": 4,
+      "tags": [
+        "Astronomy",
+        "Gunfire",
+        "Moon",
+        "Physics",
+        "Space",
+        "curiosity",
+        "did you know",
+        "facts",
+        "mindblown",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "universe"
+      ],
+      "description": "What happens when you fire a gun on the Moon? The answer will blow your mind\n\n#shorts #science #mindblown",
+      "duration_secs": 18,
+      "thumbnail": "https://i.ytimg.com/vi/I4phgzXFamU/hqdefault.jpg"
+    },
     "GF7E-npIDM4": {
       "id": "GF7E-npIDM4",
       "title": "\ud83d\udd2e Black Holes: Cosmic Killers",
@@ -680,6 +686,31 @@
       "description": "Uncover the dark secrets of black holes\n\n#shorts #science #mindblown #blackholes #space\n\n#Shorts",
       "duration_secs": 23,
       "thumbnail": "https://i.ytimg.com/vi/GF7E-npIDM4/hqdefault.jpg"
+    },
+    "GNdBew-G_Kg": {
+      "id": "GNdBew-G_Kg",
+      "title": "\ud83d\udd0d The Dark Science of Kitchen Hacks",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-04-19T16:14:29Z",
+      "views": 328,
+      "likes": 2,
+      "comments": 0,
+      "engagement_rate": 0.61,
+      "views_per_day": 4,
+      "tags": [
+        "Maillard reaction",
+        "chemistry",
+        "cooking",
+        "facts",
+        "kitchen hacks",
+        "science",
+        "shorts",
+        "viral"
+      ],
+      "description": "The secret science behind kitchen hacks revealed\n\n#shorts #science #mindblown #kitchenhacks #cooking\n\n#Shorts",
+      "duration_secs": 32,
+      "thumbnail": "https://i.ytimg.com/vi/GNdBew-G_Kg/hqdefault.jpg"
     },
     "bPyEoqsorTs": {
       "id": "bPyEoqsorTs",
@@ -706,31 +737,6 @@
       "description": "Discover the psychological trap behind song repetition\n\n#shorts #science #music\n\n#Shorts",
       "duration_secs": 26,
       "thumbnail": "https://i.ytimg.com/vi/bPyEoqsorTs/hqdefault.jpg"
-    },
-    "75NxDsNfXvc": {
-      "id": "75NxDsNfXvc",
-      "title": "The Ocean Is Secretly Expanding",
-      "channel": "KnowMore-Dailyday",
-      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
-      "published": "2026-04-14T09:34:21Z",
-      "views": 221,
-      "likes": 2,
-      "comments": 0,
-      "engagement_rate": 0.905,
-      "views_per_day": 3,
-      "tags": [
-        "earth",
-        "facts",
-        "mindblown",
-        "nature",
-        "ocean",
-        "science",
-        "shorts",
-        "viral"
-      ],
-      "description": "The ocean is hiding something massive from us. #Shorts #science #ocean #mindblown #facts\n\n#Shorts",
-      "duration_secs": 36,
-      "thumbnail": "https://i.ytimg.com/vi/75NxDsNfXvc/hqdefault.jpg"
     },
     "qc1tZmnuU8E": {
       "id": "qc1tZmnuU8E",
