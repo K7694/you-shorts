@@ -4037,7 +4037,36 @@
     ],
     "affiliate_program": "",
     "archetype": "mind_blowing_fact",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "E8uJufACPTA",
+      "title": "\ud83d\udd2e Mirror Reflections Are Quantum Entanglements",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-06-30T07:10:35Z",
+      "views": 108,
+      "likes": 1,
+      "comments": 0,
+      "engagement_rate": 0.926,
+      "views_per_day": 54,
+      "tags": [
+        "curiosity",
+        "did you know",
+        "entanglement",
+        "facts",
+        "mindblown",
+        "mirror reflections",
+        "physics",
+        "quantum mechanics",
+        "science",
+        "shorts",
+        "space",
+        "universe"
+      ],
+      "description": "The shocking truth behind mirror reflections\n\n#shorts #science #mindblown #quantum",
+      "duration_secs": 16,
+      "thumbnail": "https://i.ytimg.com/vi/E8uJufACPTA/hqdefault.jpg"
+    }
   },
   {
     "id": "I4phgzXFamU",
@@ -4073,6 +4102,24 @@
     ],
     "affiliate_program": "",
     "archetype": "how_does_it_work",
+    "stats_fetched": false
+  },
+  {
+    "id": "bKq65A_X0Wc",
+    "title": "\ud83c\udf0a Lost City Beneath the Waves",
+    "uploaded_at": "2026-07-03T06:51:03.547936+00:00",
+    "hook": "City swallowed by the sea",
+    "script": "City swallowed by the sea. Ancient metropolis hidden. Beneath Mediterranean waves, ruins lie. Temples, theaters, and towers, submerged for millennia. The question remains: what secrets do the ruins of Thonis-Heraklion still hold? City swallowed by the sea",
+    "topic": "The Lost City of Thonis-Heraklion",
+    "tags": [
+      "lost city",
+      "Thonis-Heraklion",
+      "Mediterranean",
+      "ancient mystery",
+      "archaeology"
+    ],
+    "affiliate_program": "",
+    "archetype": "unsolved_mystery",
     "stats_fetched": false
   }
 ]
