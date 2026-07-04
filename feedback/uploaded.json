@@ -4084,7 +4084,38 @@
     ],
     "affiliate_program": "",
     "archetype": "how_does_it_work",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "I4phgzXFamU",
+      "title": "\ud83d\udd2b Moon Gunfire: The Shocking Truth",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-07-01T07:57:35Z",
+      "views": 3,
+      "likes": 1,
+      "comments": 0,
+      "engagement_rate": 33.333,
+      "views_per_day": 2,
+      "tags": [
+        "Astronomy",
+        "Gunfire",
+        "Moon",
+        "Physics",
+        "Space",
+        "curiosity",
+        "did you know",
+        "facts",
+        "mindblown",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "universe"
+      ],
+      "description": "What happens when you fire a gun on the Moon? The answer will blow your mind\n\n#shorts #science #mindblown",
+      "duration_secs": 18,
+      "thumbnail": "https://i.ytimg.com/vi/I4phgzXFamU/hqdefault.jpg"
+    }
   },
   {
     "id": "kXxlF9EQYXo",
@@ -4117,6 +4148,24 @@
       "Mediterranean",
       "ancient mystery",
       "archaeology"
+    ],
+    "affiliate_program": "",
+    "archetype": "unsolved_mystery",
+    "stats_fetched": false
+  },
+  {
+    "id": "br0b6ycg-rU",
+    "title": "\ud83e\udddf\u200d\u2642\ufe0f Zombie Fungi: Mind Control? \ud83c\udf33",
+    "uploaded_at": "2026-07-04T06:36:59.898573+00:00",
+    "hook": "Fungi turn ants into zombies",
+    "script": "Fungi turn ants into zombies. Infected ants climb high. Fungi grow inside, control minds. Ants become 'zombies', do fungi's bidding. Fungi burst out, kill ants. The question remains: how do fungi control ants? Fungi turn ants into zombies",
+    "topic": "Zombie Fungi Control Insects",
+    "tags": [
+      "zombie fungi",
+      "mind control",
+      "insect manipulation",
+      "parasitic fungi",
+      "ant zombies"
     ],
     "affiliate_program": "",
     "archetype": "unsolved_mystery",
