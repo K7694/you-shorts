@@ -4133,7 +4133,36 @@
     ],
     "affiliate_program": "",
     "archetype": "how_does_it_work",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "kXxlF9EQYXo",
+      "title": "\ud83c\udf0c Poisonous Skies Revealed",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-07-02T06:57:24Z",
+      "views": 1297,
+      "likes": 5,
+      "comments": 0,
+      "engagement_rate": 0.386,
+      "views_per_day": 648,
+      "tags": [
+        "atmosphere",
+        "curiosity",
+        "did you know",
+        "facts",
+        "mindblown",
+        "physics",
+        "poisonous",
+        "science",
+        "shorts",
+        "space",
+        "toxic",
+        "universe"
+      ],
+      "description": "What if you were stuck on a planet with a toxic atmosphere?\n\n#shorts #science #mindblown",
+      "duration_secs": 15,
+      "thumbnail": "https://i.ytimg.com/vi/kXxlF9EQYXo/hqdefault.jpg"
+    }
   },
   {
     "id": "bKq65A_X0Wc",
@@ -4151,7 +4180,38 @@
     ],
     "affiliate_program": "",
     "archetype": "unsolved_mystery",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "bKq65A_X0Wc",
+      "title": "\ud83c\udf0a Lost City Beneath the Waves",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-07-03T06:51:28Z",
+      "views": 768,
+      "likes": 4,
+      "comments": 0,
+      "engagement_rate": 0.521,
+      "views_per_day": 384,
+      "tags": [
+        "Mediterranean",
+        "Thonis-Heraklion",
+        "ancient mystery",
+        "archaeology",
+        "curiosity",
+        "did you know",
+        "facts",
+        "lost city",
+        "mindblown",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "universe"
+      ],
+      "description": "Discover the ancient metropolis hidden beneath the Mediterranean\n\n#shorts #history #mystery",
+      "duration_secs": 18,
+      "thumbnail": "https://i.ytimg.com/vi/bKq65A_X0Wc/hqdefault.jpg"
+    }
   },
   {
     "id": "br0b6ycg-rU",
@@ -4166,6 +4226,24 @@
       "insect manipulation",
       "parasitic fungi",
       "ant zombies"
+    ],
+    "affiliate_program": "",
+    "archetype": "unsolved_mystery",
+    "stats_fetched": false
+  },
+  {
+    "id": "IuMAB2-l_lU",
+    "title": "\ud83d\ude80 Water on Mars: The Vanishing Act",
+    "uploaded_at": "2026-07-05T06:58:09.868593+00:00",
+    "hook": "Pour water on Mars and it vanishes",
+    "script": "Pour water on Mars and it vanishes. Thin atmosphere, low pressure. Water boils instantly, then freezes. On Venus, it's crushed by pressure. On Jupiter, it's lost in gas. But what happens to water on other planets? Pour water on Mars and it vanishes",
+    "topic": "Water on Different Planets",
+    "tags": [
+      "Mars",
+      "water",
+      "planets",
+      "space",
+      "science"
     ],
     "affiliate_program": "",
     "archetype": "unsolved_mystery",

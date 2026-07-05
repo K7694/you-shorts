@@ -1,6 +1,28 @@
 {
-  "updated": "2026-07-04T06:35:48.883642",
+  "updated": "2026-07-05T06:55:40.839914",
   "performers": [
+    {
+      "id": "kXxlF9EQYXo",
+      "title": "🌌 Poisonous Skies Revealed",
+      "hook": "Trapped in a poisonous sky",
+      "script": "Trapped in a poisonous sky. Toxic gases surround. No oxygen, no life. Acid rain falls, sulfuric mist. Lungs dissolve, skin burns. The atmosphere is a killer. Trapped in a poisonous sky",
+      "topic": "Toxic Planet Atmosphere",
+      "views": 1297,
+      "engagement_rate": 0.386,
+      "views_per_day": 648,
+      "performance_score": 650.50128
+    },
+    {
+      "id": "bKq65A_X0Wc",
+      "title": "🌊 Lost City Beneath the Waves",
+      "hook": "City swallowed by the sea",
+      "script": "City swallowed by the sea. Ancient metropolis hidden. Beneath Mediterranean waves, ruins lie. Temples, theaters, and towers, submerged for millennia. The question remains: what secrets do the ruins of Thonis-Heraklion still hold? City swallowed by the sea",
+      "topic": "The Lost City of Thonis-Heraklion",
+      "views": 768,
+      "engagement_rate": 0.521,
+      "views_per_day": 384,
+      "performance_score": 386.00064
+    },
     {
       "id": "0K_3ssqYbjw",
       "title": "🌟 Creatures That Light The Dark 🌟",
@@ -33,28 +55,6 @@
       "engagement_rate": 1.153,
       "views_per_day": 289,
       "performance_score": 292.33217
-    },
-    {
-      "id": "YUq2wg58P6o",
-      "title": "🔴 Stranded: The Last Person Alive",
-      "hook": "Alone on a lifeless planet",
-      "script": "Alone on a lifeless planet. No signal, no rescue. Stars above, emptiness below. Time loses meaning, survival is key. The planet's vastness swallows you, silence is deafening. Alone on a lifeless planet",
-      "topic": "Stranded on deserted planet",
-      "views": 570,
-      "engagement_rate": 1.754,
-      "views_per_day": 285,
-      "performance_score": 289.9989
-    },
-    {
-      "id": "LeyFU-s9Pg0",
-      "title": "Water on Mars? 🚀",
-      "hook": "Pour water on Mars",
-      "script": "Pour water on Mars. It evaporates. On Jupiter, it disintegrates. On Venus, it boils. On Earth, it flows. But what happens when you pour water on different planets? Does it spark life or destroy it? Pour water on Mars.",
-      "topic": "water on different planets",
-      "views": 772,
-      "engagement_rate": 1.684,
-      "views_per_day": 257,
-      "performance_score": 261.32788
     }
   ]
 }
