@@ -26,6 +26,7 @@ All in `config.py` unless noted.
 | `VIDEO_FPS` | 30 | 60 doubles encode time for zero gain on slideshows |
 | `IMAGES_PER_VIDEO` | 5 | One per script beat |
 | `IMAGE_SOURCE` | `"pexels"` | `"pollinations"` is dead (402) — kept for reference |
+| `AB_VISUAL_TEST` | True | Daily-alternating A/B: photos+Ken Burns vs stock video montage; arm logged as `visual_variant` in feedback log; `VISUAL_VARIANT` env forces an arm for testing |
 | `IMAGE_STYLE` | cinematic science | Only used in prompt/query construction |
 | `CAPTION_FONT/SIZE/WORDS_PER_LINE` | Impact 82 / 3 | The proven Shorts caption look |
 | `BGM_ENABLED/BGM_VOLUME` | True / 0.12 | Subtle ambient bed |

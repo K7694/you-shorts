@@ -74,6 +74,18 @@ PEXELS_API_KEY = os.getenv("PEXELS_API_KEY", "")
 #   "pollinations" → legacy AI image gen (DEAD: now paid / 402)
 IMAGE_SOURCE = "pexels"
 
+# ── A/B TEST: photos vs video clips (started 2026-07-06) ────────
+# Variant A ("photos"): 5 Pexels stock photos + Ken Burns pan-zoom
+#   — the proven recipe (344 avg views, 71% hit-rate).
+# Variant B ("videos"): 5 Pexels stock VIDEO clips trimmed to one
+#   script beat each — real motion footage, higher production value.
+# Assignment is deterministic by day-of-year parity (even=photos,
+# odd=videos) so CI needs no state and variants interleave daily.
+# Each upload is tagged "visual_variant" in feedback/uploaded.json.
+# READOUT: after ≥6 videos per arm (~2 weeks), compare median views
+# at equal 72h age by variant. Same Pexels key, still $0.
+AB_VISUAL_TEST = True
+
 # 2. What is your channel about? Be SPECIFIC.
 #    RESET (2026-05-31): reverted to the curiosity niche that worked in
 #    Phase 0 (312 avg views/video). This drives both the analyzer brief

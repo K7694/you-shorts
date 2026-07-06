@@ -339,6 +339,9 @@ def _log_upload(video_id: str, script: dict, title: str):
         # can correlate revenue/views back to programs and content types
         "affiliate_program": script.get("affiliate_program", ""),
         "archetype":         script.get("archetype", ""),
+        # A/B arm for the visual-layer test (photos | videos | gameplay).
+        # Group by this at the 72h readout.
+        "visual_variant":    script.get("visual_variant", "photos"),
         "stats_fetched": False,
     })
     _UPLOADS_LOG.write_text(json.dumps(uploads, indent=2), encoding="utf-8")
@@ -1267,6 +1270,129 @@ def _make_fallback_image(path: str):
     ], capture_output=True)
 
 
+# ── A/B variant B: Pexels stock VIDEO clips ───────────────────────
+
+def _pick_visual_variant() -> str:
+    """A/B assignment for the visual layer (photos vs video clips).
+
+    Deterministic by day-of-year parity so the daily cron alternates
+    arms with no stored state and no mid-batch drift. Override with
+    env VISUAL_VARIANT=photos|videos for testing.
+    """
+    forced = os.environ.get("VISUAL_VARIANT", "").lower()
+    if forced in ("photos", "videos"):
+        return forced
+    if not globals().get("AB_VISUAL_TEST", False):
+        return "photos"
+    return "videos" if datetime.now().timetuple().tm_yday % 2 else "photos"
+
+
+def _download_pexels_video(query: str, path: str, index: int, used_ids: set) -> bool:
+    """Download one portrait stock VIDEO clip from Pexels.
+
+    Picks the smallest file that still covers 1080x1920 (bigger files
+    waste CI bandwidth for zero visible gain at Shorts resolution).
+    """
+    if not PEXELS_API_KEY:
+        return False
+    cleaned = re.sub(r"[^\w\s]", " ", query).strip()
+    words = cleaned.split()
+    candidates = [" ".join(words[:5]), " ".join(words[:3]), " ".join(words[:1]) or "space"]
+
+    for attempt_q in candidates:
+        if not attempt_q:
+            continue
+        try:
+            url = ("https://api.pexels.com/videos/search?" + urllib.parse.urlencode({
+                "query": attempt_q, "orientation": "portrait", "per_page": 10,
+            }))
+            req = urllib.request.Request(url, headers={
+                "Authorization": PEXELS_API_KEY,
+                "User-Agent": "Mozilla/5.0 (YouShorts/1.0)",
+            })
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                data = json.loads(resp.read().decode())
+
+            videos = data.get("videos", [])
+            fresh = [v for v in videos if v.get("id") not in used_ids]
+            pool = fresh or videos
+            if not pool:
+                continue
+            video = pool[index % len(pool)]
+            used_ids.add(video.get("id"))
+
+            # Choose the smallest portrait file that covers our height
+            files = [f for f in video.get("video_files", [])
+                     if f.get("link") and (f.get("height") or 0) >= (f.get("width") or 1)]
+            if not files:
+                files = video.get("video_files", [])
+            covering = [f for f in files if (f.get("height") or 0) >= VIDEO_HEIGHT]
+            pick = (min(covering, key=lambda f: f.get("height") or 10**9) if covering
+                    else max(files, key=lambda f: f.get("height") or 0, default=None))
+            if not pick:
+                continue
+
+            vreq = urllib.request.Request(pick["link"], headers={"User-Agent": "Mozilla/5.0 (YouShorts/1.0)"})
+            with urllib.request.urlopen(vreq, timeout=120) as vresp:
+                with open(path, "wb") as f:
+                    f.write(vresp.read())
+            size_mb = Path(path).stat().st_size / (1024 * 1024)
+            print(f"      🎞️  Clip {index+1} ready — Pexels \"{attempt_q}\" "
+                  f"({pick.get('width')}x{pick.get('height')}, {size_mb:.1f} MB)")
+            return True
+        except Exception as e:
+            print(f"      ⚠️  Pexels video '{attempt_q}' failed: {e}")
+            continue
+    return False
+
+
+def generate_video_clips(prompts: list, session_id: str) -> list:
+    """Fetch one stock video clip per script beat (A/B variant B)."""
+    print(f"   👁️  Fetching {len(prompts)} video clips (Pexels)...")
+    clip_dir = TEMP_DIR / session_id
+    clip_dir.mkdir(exist_ok=True)
+    paths, used_ids = [], set()
+    for i, prompt in enumerate(prompts):
+        path = str(clip_dir / f"clip_{i:02d}.mp4")
+        if _download_pexels_video(prompt, path, i, used_ids):
+            paths.append(path)
+        if i < len(prompts) - 1:
+            time.sleep(0.5)
+    print(f"   ✅ {len(paths)}/{len(prompts)} clips ready")
+    return paths
+
+
+def _make_video_montage(clips: list, duration: float, path: str) -> bool:
+    """Concatenate stock clips into one 9:16 track, one beat per clip.
+
+    Each clip is looped/trimmed to duration/len(clips), scaled+cropped
+    to cover 1080x1920, muted (voiceover+BGM are added later, same as
+    the slideshow path).
+    """
+    if not clips:
+        return False
+    t_each = duration / len(clips)
+    inputs, filters, labels = [], [], []
+    for i, clip in enumerate(clips):
+        inputs += ["-stream_loop", "-1", "-t", f"{t_each:.3f}", "-i", clip]
+        filters.append(
+            f"[{i}:v]scale={VIDEO_WIDTH}:{VIDEO_HEIGHT}:force_original_aspect_ratio=increase,"
+            f"crop={VIDEO_WIDTH}:{VIDEO_HEIGHT},fps={VIDEO_FPS},setsar=1[v{i}]"
+        )
+        labels.append(f"[v{i}]")
+    filter_str = ";".join(filters) + ";" + "".join(labels) + f"concat=n={len(clips)}:v=1:a=0[out]"
+    result = subprocess.run([
+        "ffmpeg", "-y", *inputs,
+        "-filter_complex", filter_str, "-map", "[out]",
+        "-c:v", "libx264", "-preset", "medium", "-crf", "20",
+        "-pix_fmt", "yuv420p", "-an", path,
+    ], capture_output=True, text=True)
+    if result.returncode != 0:
+        print(f"      ⚠️  Montage failed: {result.stderr[-200:]}")
+        return False
+    return True
+
+
 def generate_images(prompts: list, session_id: str) -> list:
     """Fetch one visual per script beat from the configured IMAGE_SOURCE."""
     # Skip image gen ONLY when brainrot is on AND mascot overlay is off.
@@ -1623,8 +1749,13 @@ def _make_simple_slideshow(images: list, duration: float, path: str):
     ], capture_output=True, check=True)
 
 
-def assemble_video(audio: str, images: list, captions: list, filename: str, word_timestamps: list = None) -> str:
-    """Assemble final video: images + audio + captions → .mp4"""
+def assemble_video(audio: str, images: list, captions: list, filename: str,
+                   word_timestamps: list = None, video_clips: list = None) -> str:
+    """Assemble final video: visuals + audio + captions → .mp4
+
+    Visual track priority: gameplay (USE_BACKGROUND_VIDEO) → stock video
+    montage (A/B variant B, `video_clips`) → Ken Burns photo slideshow.
+    """
     print("   🎬 Assembling video...")
 
     # Get audio duration
@@ -1682,6 +1813,16 @@ def assemble_video(audio: str, images: list, captions: list, filename: str, word
             slide_path
         ], capture_output=True, check=True)
         print("      ✅ Background segment ready")
+    elif video_clips:
+        print(f"      🎞️  Building stock-footage montage ({len(video_clips)} clips)...")
+        if not _make_video_montage(video_clips, duration, slide_path):
+            if images:
+                print("      ⚠️  Montage failed — falling back to photo slideshow...")
+                if not _make_slideshow(images, duration, slide_path):
+                    _make_simple_slideshow(images, duration, slide_path)
+            else:
+                raise RuntimeError("Video montage failed and no photo fallback available")
+        print("      ✅ Montage done")
     else:
         print("      📸 Creating slideshow with Ken Burns...")
         if not _make_slideshow(images, duration, slide_path):
@@ -2107,7 +2248,21 @@ def create_video(topic: str = None, upload: bool = True) -> dict:
             _t = script.get("topic", "galaxy")
             image_prompts = [_t, "galaxy", "nebula", "deep space", "stars"]
             print("      ⚠️  No image prompts from LLM — using stock science fallbacks")
-        images = generate_images(image_prompts or [], sid)
+
+        # A/B: photos (Ken Burns) vs stock video clips, alternating daily.
+        # Needs ≥3 clips to run variant B; otherwise falls back to photos
+        # and is LOGGED as photos so the readout stays honest.
+        images, video_clips = [], []
+        visual_variant = "gameplay" if USE_BACKGROUND_VIDEO else _pick_visual_variant()
+        if visual_variant == "videos":
+            video_clips = generate_video_clips(image_prompts or [], sid)
+            if len(video_clips) < 3:
+                print("      ⚠️  Too few clips — falling back to photo variant")
+                visual_variant, video_clips = "photos", []
+        if not video_clips:
+            images = generate_images(image_prompts or [], sid)
+        script["visual_variant"] = visual_variant
+        print(f"      🅰️🅱️  Visual variant: {visual_variant}")
         r["images"] = images
 
         # ── STEP 3: VOICE (word timings captured during synthesis) ──
@@ -2124,7 +2279,8 @@ def create_video(topic: str = None, upload: bool = True) -> dict:
 
         # ── STEP 4: DIRECTOR ────────────────────────────────
         print("\n  ┌─ 4/5 ── 🎬 DIRECTOR ───────────────────────")
-        video_path = assemble_video(audio_path, images, script["caption_lines"], sid, word_timestamps=word_ts)
+        video_path = assemble_video(audio_path, images, script["caption_lines"], sid,
+                                    word_timestamps=word_ts, video_clips=video_clips)
         r["video"] = video_path
 
         # Generate thumbnail from first AI image (must happen before temp cleanup)
