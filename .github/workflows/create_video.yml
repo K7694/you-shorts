@@ -25,39 +25,17 @@ jobs:
     steps:
 
       # ── 1. Get the code ───────────────────────────────────────
-      #    Background video is fetched separately from a GitHub
-      #    Release (see step 1b) — keeps it out of LFS so we don't
-      #    burn the free 1GB/month LFS bandwidth quota.
+      #    NOTE (2026-06-27): the Subway Surfers background-video
+      #    cache/download steps were removed — USE_BACKGROUND_VIDEO is
+      #    False (visuals are the Pexels slideshow). The 447MB clip
+      #    still lives in the assets-v1 GitHub Release; restore the
+      #    cache+`gh release download` steps if that mode returns.
+      #    The Whisper model cache is gone too — word timings now come
+      #    from Edge TTS WordBoundary events (no transcription step).
       - name: Checkout repo
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-
-      # ── 1b. Fetch background video (Subway Surfers clip) ──────
-      #    Cached by release tag — first run downloads 447MB,
-      #    subsequent runs hit the cache (free, no bandwidth used).
-      #    To swap the clip: upload a new release asset and bump
-      #    the tag below (e.g. assets-v2).
-      - name: Cache background video
-        id: cache-bg
-        uses: actions/cache@v4
-        with:
-          path: assets/subway_surfers_1hr_gameplay.mp4
-          key: bg-video-assets-v1
-
-      - name: Download background video (cache miss only)
-        if: steps.cache-bg.outputs.cache-hit != 'true'
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          mkdir -p assets
-          # Repo is private — use gh CLI (auto-authenticated via GH_TOKEN)
-          # instead of the public /releases/download URL which 404s for private repos.
-          gh release download assets-v1 \
-            --repo ${{ github.repository }} \
-            --pattern 'subway_surfers_1hr_gameplay.mp4' \
-            --dir assets
-          ls -lh assets/subway_surfers_1hr_gameplay.mp4
 
       # ── 2. Python setup ───────────────────────────────────────
       - name: Set up Python 3.11
@@ -72,13 +50,6 @@ jobs:
           path: ~/.cache/pip
           key: pip-${{ hashFiles('requirements.txt') }}
           restore-keys: pip-
-
-      # ── 4. Cache Whisper model (base, ~150MB) ─────────────────
-      - name: Cache Whisper model
-        uses: actions/cache@v4
-        with:
-          path: ~/.cache/huggingface
-          key: whisper-base-v1
 
       # ── 5. Install system dependencies ───────────────────────
       #    Step-level 5min timeout so an Ubuntu mirror hang fails

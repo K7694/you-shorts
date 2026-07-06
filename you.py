@@ -1313,18 +1313,44 @@ def _sanitize_tts(text: str) -> str:
     return "".join(clean).strip()
 
 
-def generate_voice(text: str, path: str) -> float:
-    """Generate voiceover and return duration in seconds."""
+def generate_voice(text: str, path: str) -> tuple:
+    """Generate voiceover. Returns (duration_seconds, word_timestamps).
+
+    EFFICIENCY (2026-06-27): word timings now come from Edge TTS's own
+    WordBoundary events emitted during synthesis — exact, free, instant.
+    This replaced faster-whisper, which re-transcribed audio we had just
+    synthesized from a known script (an ML model + 150MB cache + ~30s
+    CPU per run to recover information we already had, with occasional
+    misrecognitions corrupting captions). The audio post-processing
+    below is compressor+EQ only (no tempo change), so the timings
+    remain valid on the processed file.
+    """
     import edge_tts
 
     text = _sanitize_tts(text)
+    words = []
 
     async def _gen():
-        comm = edge_tts.Communicate(text=text, voice=VOICE, rate=VOICE_RATE)
-        await comm.save(path)
+        # boundary="WordBoundary" required on edge-tts >= 7.x (default is
+        # SentenceBoundary, which yields no per-word events)
+        comm = edge_tts.Communicate(text=text, voice=VOICE, rate=VOICE_RATE,
+                                    boundary="WordBoundary")
+        with open(path, "wb") as f:
+            async for chunk in comm.stream():
+                if chunk["type"] == "audio":
+                    f.write(chunk["data"])
+                elif chunk["type"] == "WordBoundary":
+                    # offset/duration are in 100-nanosecond ticks
+                    start = chunk["offset"] / 1e7
+                    words.append({
+                        "word": chunk["text"].strip(),
+                        "start": start,
+                        "end": start + chunk["duration"] / 1e7,
+                    })
 
     print(f"   🎙️  Recording voiceover ({VOICE})...")
     asyncio.run(_gen())
+    print(f"      ⏱️  {len(words)} word timings captured during synthesis")
 
     # Post-process: add warmth, compression, presence (makes TTS less robotic)
     raw_path = path.replace(".mp3", "_raw.mp3")
@@ -1345,7 +1371,7 @@ def generate_voice(text: str, path: str) -> float:
     )
     duration = float(result.stdout.strip())
     print(f"   ✅ Voiceover ready: {duration:.1f}s")
-    return duration
+    return duration, words
 
 
 def transcribe_words(audio_path: str) -> list:
@@ -2084,14 +2110,17 @@ def create_video(topic: str = None, upload: bool = True) -> dict:
         images = generate_images(image_prompts or [], sid)
         r["images"] = images
 
-        # ── STEP 3: VOICE ───────────────────────────────────
+        # ── STEP 3: VOICE (word timings captured during synthesis) ──
         print("\n  ┌─ 3/5 ── 🎙️  VOICE ─────────────────────────")
         audio_path = str(TEMP_DIR / f"{sid}.mp3")
-        duration = generate_voice(script["script"], audio_path)
+        duration, word_ts = generate_voice(script["script"], audio_path)
         r["audio"] = audio_path
 
-        # ── STEP 3.5: TRANSCRIBE (word-level timestamps) ───
-        word_ts = transcribe_words(audio_path)
+        # Emergency fallback only — Edge TTS boundaries are deterministic,
+        # but if they ever come back empty, try Whisper (no-ops gracefully
+        # if faster-whisper isn't installed).
+        if not word_ts:
+            word_ts = transcribe_words(audio_path)
 
         # ── STEP 4: DIRECTOR ────────────────────────────────
         print("\n  ┌─ 4/5 ── 🎬 DIRECTOR ───────────────────────")

@@ -1,6 +1,8 @@
 # YOU — Dependencies (all FREE)
-edge-tts>=6.1.0
-faster-whisper>=1.0.0
+# NOTE: faster-whisper removed 2026-06-27 — word timings now come from
+# Edge TTS WordBoundary events captured during synthesis (you.py
+# generate_voice, requires edge-tts >= 7 for boundary="WordBoundary").
+edge-tts>=7.0.0
 google-auth>=2.20.0
 google-auth-oauthlib>=1.0.0
 google-api-python-client>=2.90.0
