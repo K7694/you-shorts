@@ -4297,5 +4297,23 @@
     "affiliate_program": "",
     "archetype": "mind_blowing_fact",
     "stats_fetched": false
+  },
+  {
+    "id": "z3E3VKDGuVU",
+    "title": "\ud83d\udd2e Deja Vu: Reliving the Future",
+    "uploaded_at": "2026-07-06T16:49:07.008270+00:00",
+    "hook": "You're reliving a future memory",
+    "script": "You're reliving a future memory. Brain signals collide. Past, present, future blur. Memories overlap, familiarity spikes. Your mind is warning you, of a moment yet to come. You're reliving a future memory",
+    "topic": "Psychology of Deja Vu",
+    "tags": [
+      "deja vu",
+      "psychology",
+      "memory",
+      "brain function",
+      "paranormal"
+    ],
+    "affiliate_program": "",
+    "archetype": "how_does_it_work",
+    "stats_fetched": false
   }
 ]
