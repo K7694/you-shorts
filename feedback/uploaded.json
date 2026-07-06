@@ -4229,7 +4229,38 @@
     ],
     "affiliate_program": "",
     "archetype": "unsolved_mystery",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "br0b6ycg-rU",
+      "title": "\ud83e\udddf\u200d\u2642\ufe0f Zombie Fungi: Mind Control? \ud83c\udf33",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-07-04T06:37:09Z",
+      "views": 248,
+      "likes": 3,
+      "comments": 0,
+      "engagement_rate": 1.21,
+      "views_per_day": 124,
+      "tags": [
+        "ant zombies",
+        "curiosity",
+        "did you know",
+        "facts",
+        "insect manipulation",
+        "mind control",
+        "mindblown",
+        "parasitic fungi",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "universe",
+        "zombie fungi"
+      ],
+      "description": "Fungi controlling insect minds, a dark secret revealed\n\n#shorts #science #mindblown #fungi #zombies",
+      "duration_secs": 18,
+      "thumbnail": "https://i.ytimg.com/vi/br0b6ycg-rU/hqdefault.jpg"
+    }
   },
   {
     "id": "IuMAB2-l_lU",
@@ -4247,6 +4278,24 @@
     ],
     "affiliate_program": "",
     "archetype": "unsolved_mystery",
+    "stats_fetched": false
+  },
+  {
+    "id": "AfBmoeFQJRI",
+    "title": "\ud83d\udd2e Black Holes: Not Empty \ud83d\udd73\ufe0f",
+    "uploaded_at": "2026-07-06T08:06:29.332433+00:00",
+    "hook": "Black holes are not empty",
+    "script": "Black holes are not empty. Gravity warps space. Stars collapse. Matter compresses. The point of no return approaches. Gravity dominates, time bends, and space shrinks. What if the void is a doorway? Black holes are not empty, they're doorways to the unknown, and the void is where gravity warps space.",
+    "topic": "Black Holes Science",
+    "tags": [
+      "black holes",
+      "space",
+      "science",
+      "astronomy",
+      "gravity"
+    ],
+    "affiliate_program": "",
+    "archetype": "mind_blowing_fact",
     "stats_fetched": false
   }
 ]
