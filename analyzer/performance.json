@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-06T08:04:16.766417",
+  "last_updated": "2026-07-07T07:02:29.721688",
   "videos": {
     "IuMAB2-l_lU": {
       "id": "IuMAB2-l_lU",
@@ -7,11 +7,11 @@
       "channel": "KnowMore-Dailyday",
       "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
       "published": "2026-07-05T06:58:17Z",
-      "views": 1356,
+      "views": 1957,
       "likes": 8,
       "comments": 0,
-      "engagement_rate": 0.59,
-      "views_per_day": 1356,
+      "engagement_rate": 0.409,
+      "views_per_day": 978,
       "tags": [
         "Mars",
         "curiosity",
@@ -30,6 +30,35 @@
       "duration_secs": 19,
       "thumbnail": "https://i.ytimg.com/vi/IuMAB2-l_lU/hqdefault.jpg"
     },
+    "AfBmoeFQJRI": {
+      "id": "AfBmoeFQJRI",
+      "title": "\ud83d\udd2e Black Holes: Not Empty \ud83d\udd73\ufe0f",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-07-06T08:06:46Z",
+      "views": 260,
+      "likes": 5,
+      "comments": 0,
+      "engagement_rate": 1.923,
+      "views_per_day": 260,
+      "tags": [
+        "astronomy",
+        "black holes",
+        "curiosity",
+        "did you know",
+        "facts",
+        "gravity",
+        "mindblown",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "universe"
+      ],
+      "description": "Mind-blowing fact about black holes\n\n#shorts #science #mindblown #blackholes #space",
+      "duration_secs": 22,
+      "thumbnail": "https://i.ytimg.com/vi/AfBmoeFQJRI/hqdefault.jpg"
+    },
     "kXxlF9EQYXo": {
       "id": "kXxlF9EQYXo",
       "title": "\ud83c\udf0c Poisonous Skies Revealed",
@@ -40,7 +69,7 @@
       "likes": 5,
       "comments": 0,
       "engagement_rate": 0.386,
-      "views_per_day": 324,
+      "views_per_day": 259,
       "tags": [
         "atmosphere",
         "curiosity",
@@ -65,11 +94,11 @@
       "channel": "KnowMore-Dailyday",
       "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
       "published": "2026-07-03T06:51:28Z",
-      "views": 773,
+      "views": 781,
       "likes": 4,
       "comments": 0,
-      "engagement_rate": 0.517,
-      "views_per_day": 258,
+      "engagement_rate": 0.512,
+      "views_per_day": 195,
       "tags": [
         "Mediterranean",
         "Thonis-Heraklion",
@@ -100,7 +129,7 @@
       "likes": 3,
       "comments": 0,
       "engagement_rate": 1.21,
-      "views_per_day": 124,
+      "views_per_day": 83,
       "tags": [
         "ant zombies",
         "curiosity",
@@ -151,37 +180,6 @@
       "duration_secs": 16,
       "thumbnail": "https://i.ytimg.com/vi/LeyFU-s9Pg0/hqdefault.jpg"
     },
-    "0K_3ssqYbjw": {
-      "id": "0K_3ssqYbjw",
-      "title": "\ud83c\udf1f Creatures That Light The Dark \ud83c\udf1f",
-      "channel": "KnowMore-Dailyday",
-      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
-      "published": "2026-06-22T05:39:01Z",
-      "views": 757,
-      "likes": 10,
-      "comments": 0,
-      "engagement_rate": 1.321,
-      "views_per_day": 54,
-      "tags": [
-        "bioluminescence",
-        "curiosity",
-        "deep ocean",
-        "did you know",
-        "facts",
-        "marine life",
-        "mindblown",
-        "ocean creatures",
-        "physics",
-        "science",
-        "shorts",
-        "space",
-        "universe",
-        "wildlife"
-      ],
-      "description": "Discover the glowing creatures of the deep ocean\n\n#shorts #ocean #wildlife #nature #bioluminescence",
-      "duration_secs": 20,
-      "thumbnail": "https://i.ytimg.com/vi/0K_3ssqYbjw/hqdefault.jpg"
-    },
     "M-hxG49mA-E": {
       "id": "M-hxG49mA-E",
       "title": "Moon Bullet \ud83d\ude80",
@@ -211,6 +209,37 @@
       "description": "Firing a gun on the Moon, what happens next?\n\n#shorts #science #mindblown #space",
       "duration_secs": 22,
       "thumbnail": "https://i.ytimg.com/vi/M-hxG49mA-E/hqdefault.jpg"
+    },
+    "0K_3ssqYbjw": {
+      "id": "0K_3ssqYbjw",
+      "title": "\ud83c\udf1f Creatures That Light The Dark \ud83c\udf1f",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-06-22T05:39:01Z",
+      "views": 757,
+      "likes": 10,
+      "comments": 0,
+      "engagement_rate": 1.321,
+      "views_per_day": 50,
+      "tags": [
+        "bioluminescence",
+        "curiosity",
+        "deep ocean",
+        "did you know",
+        "facts",
+        "marine life",
+        "mindblown",
+        "ocean creatures",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "universe",
+        "wildlife"
+      ],
+      "description": "Discover the glowing creatures of the deep ocean\n\n#shorts #ocean #wildlife #nature #bioluminescence",
+      "duration_secs": 20,
+      "thumbnail": "https://i.ytimg.com/vi/0K_3ssqYbjw/hqdefault.jpg"
     },
     "YUq2wg58P6o": {
       "id": "YUq2wg58P6o",
@@ -252,7 +281,7 @@
       "likes": 12,
       "comments": 0,
       "engagement_rate": 1.81,
-      "views_per_day": 47,
+      "views_per_day": 44,
       "tags": [
         "Ancient Egypt",
         "Archaeology",
@@ -283,7 +312,7 @@
       "likes": 5,
       "comments": 0,
       "engagement_rate": 1.22,
-      "views_per_day": 46,
+      "views_per_day": 41,
       "tags": [
         "ball lightning",
         "curiosity",
@@ -314,7 +343,7 @@
       "likes": 4,
       "comments": 0,
       "engagement_rate": 1.556,
-      "views_per_day": 43,
+      "views_per_day": 37,
       "tags": [
         "Astronomy",
         "Black Hole",
@@ -345,7 +374,7 @@
       "likes": 9,
       "comments": 0,
       "engagement_rate": 1.037,
-      "views_per_day": 38,
+      "views_per_day": 36,
       "tags": [
         "curiosity",
         "did you know",
@@ -374,7 +403,7 @@
       "likes": 7,
       "comments": 0,
       "engagement_rate": 1.737,
-      "views_per_day": 31,
+      "views_per_day": 29,
       "tags": [
         "brain",
         "curiosity",
@@ -405,7 +434,7 @@
       "likes": 3,
       "comments": 1,
       "engagement_rate": 0.697,
-      "views_per_day": 30,
+      "views_per_day": 29,
       "tags": [
         "atoms",
         "curiosity",
@@ -455,6 +484,37 @@
       "description": "Witness the breathtaking Morning Glory cloud\n\n#shorts #weather #clouds",
       "duration_secs": 17,
       "thumbnail": "https://i.ytimg.com/vi/Wh_cFYR_16M/hqdefault.jpg"
+    },
+    "z3E3VKDGuVU": {
+      "id": "z3E3VKDGuVU",
+      "title": "\ud83d\udd2e Deja Vu: Reliving the Future",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-07-06T16:49:20Z",
+      "views": 21,
+      "likes": 0,
+      "comments": 0,
+      "engagement_rate": 0.0,
+      "views_per_day": 21,
+      "tags": [
+        "brain function",
+        "curiosity",
+        "deja vu",
+        "did you know",
+        "facts",
+        "memory",
+        "mindblown",
+        "paranormal",
+        "physics",
+        "psychology",
+        "science",
+        "shorts",
+        "space",
+        "universe"
+      ],
+      "description": "The eerie feeling of living a moment twice\n\n#shorts #psychology #mindblown",
+      "duration_secs": 15,
+      "thumbnail": "https://i.ytimg.com/vi/z3E3VKDGuVU/hqdefault.jpg"
     },
     "E8uJufACPTA": {
       "id": "E8uJufACPTA",
@@ -601,7 +661,7 @@
       "likes": 13,
       "comments": 0,
       "engagement_rate": 2.529,
-      "views_per_day": 7,
+      "views_per_day": 6,
       "tags": [
         "astronomy",
         "black holes",
@@ -694,31 +754,30 @@
       "duration_secs": 29,
       "thumbnail": "https://i.ytimg.com/vi/vbbAFitH3Hs/hqdefault.jpg"
     },
-    "x9VpwqbHngk": {
-      "id": "x9VpwqbHngk",
-      "title": "\ud83d\udd01 The Song That Controls Your Mind",
+    "GNdBew-G_Kg": {
+      "id": "GNdBew-G_Kg",
+      "title": "\ud83d\udd0d The Dark Science of Kitchen Hacks",
       "channel": "KnowMore-Dailyday",
       "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
-      "published": "2026-04-15T05:47:30Z",
-      "views": 376,
-      "likes": 7,
+      "published": "2026-04-19T16:14:29Z",
+      "views": 328,
+      "likes": 2,
       "comments": 0,
-      "engagement_rate": 1.862,
-      "views_per_day": 5,
+      "engagement_rate": 0.61,
+      "views_per_day": 4,
       "tags": [
-        "cognitive bias",
+        "Maillard reaction",
+        "chemistry",
+        "cooking",
         "facts",
-        "habit formation",
-        "music psychology",
-        "neuroscience",
+        "kitchen hacks",
         "science",
         "shorts",
-        "song repetition",
         "viral"
       ],
-      "description": "Discover the dark science behind song repetition\n\n#shorts #science #mindblown #music #psychology\n\n#Shorts",
-      "duration_secs": 24,
-      "thumbnail": "https://i.ytimg.com/vi/x9VpwqbHngk/hqdefault.jpg"
+      "description": "The secret science behind kitchen hacks revealed\n\n#shorts #science #mindblown #kitchenhacks #cooking\n\n#Shorts",
+      "duration_secs": 32,
+      "thumbnail": "https://i.ytimg.com/vi/GNdBew-G_Kg/hqdefault.jpg"
     },
     "vSNwLt-P4hU": {
       "id": "vSNwLt-P4hU",
@@ -730,7 +789,7 @@
       "likes": 0,
       "comments": 0,
       "engagement_rate": 0.0,
-      "views_per_day": 4,
+      "views_per_day": 3,
       "tags": [
         "astrophysics",
         "cosmic phenomena",
@@ -761,7 +820,7 @@
       "likes": 7,
       "comments": 0,
       "engagement_rate": 2.632,
-      "views_per_day": 4,
+      "views_per_day": 3,
       "tags": [
         "black holes",
         "cosmos",
@@ -775,31 +834,6 @@
       "description": "Uncover the dark secrets of black holes\n\n#shorts #science #mindblown #blackholes #space\n\n#Shorts",
       "duration_secs": 23,
       "thumbnail": "https://i.ytimg.com/vi/GF7E-npIDM4/hqdefault.jpg"
-    },
-    "GNdBew-G_Kg": {
-      "id": "GNdBew-G_Kg",
-      "title": "\ud83d\udd0d The Dark Science of Kitchen Hacks",
-      "channel": "KnowMore-Dailyday",
-      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
-      "published": "2026-04-19T16:14:29Z",
-      "views": 328,
-      "likes": 2,
-      "comments": 0,
-      "engagement_rate": 0.61,
-      "views_per_day": 4,
-      "tags": [
-        "Maillard reaction",
-        "chemistry",
-        "cooking",
-        "facts",
-        "kitchen hacks",
-        "science",
-        "shorts",
-        "viral"
-      ],
-      "description": "The secret science behind kitchen hacks revealed\n\n#shorts #science #mindblown #kitchenhacks #cooking\n\n#Shorts",
-      "duration_secs": 32,
-      "thumbnail": "https://i.ytimg.com/vi/GNdBew-G_Kg/hqdefault.jpg"
     },
     "bPyEoqsorTs": {
       "id": "bPyEoqsorTs",
@@ -1395,32 +1429,6 @@
       "description": "Uncover the secrets of black holes\n\n#shorts #science #mindblown\n\n#Shorts",
       "duration_secs": 24,
       "thumbnail": "https://i.ytimg.com/vi/uWejwIYrKyM/hqdefault.jpg"
-    },
-    "0JaVGHU3t0c": {
-      "id": "0JaVGHU3t0c",
-      "title": "\ud83d\udd01 The Song Loop: Mind Control \ud83c\udfb6",
-      "channel": "KnowMore-Dailyday",
-      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
-      "published": "2026-04-14T16:52:44Z",
-      "views": 2,
-      "likes": 0,
-      "comments": 0,
-      "engagement_rate": 0.0,
-      "views_per_day": 0,
-      "tags": [
-        "addiction",
-        "brain science",
-        "dopamine",
-        "facts",
-        "music psychology",
-        "science",
-        "shorts",
-        "song repetition",
-        "viral"
-      ],
-      "description": "Discover the dark science behind song repetition\n\n#shorts #science #mindblown #music #psychology\n\n#Shorts",
-      "duration_secs": 24,
-      "thumbnail": "https://i.ytimg.com/vi/0JaVGHU3t0c/hqdefault.jpg"
     }
   }
 }

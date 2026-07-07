@@ -1,6 +1,17 @@
 {
-  "updated": "2026-07-06T08:04:15.547366",
+  "updated": "2026-07-07T07:02:28.006950",
   "performers": [
+    {
+      "id": "IuMAB2-l_lU",
+      "title": "🚀 Water on Mars: The Vanishing Act",
+      "hook": "Pour water on Mars and it vanishes",
+      "script": "Pour water on Mars and it vanishes. Thin atmosphere, low pressure. Water boils instantly, then freezes. On Venus, it's crushed by pressure. On Jupiter, it's lost in gas. But what happens to water on other planets? Pour water on Mars and it vanishes",
+      "topic": "Water on Different Planets",
+      "views": 1897,
+      "engagement_rate": 0.422,
+      "views_per_day": 948,
+      "performance_score": 952.00056
+    },
     {
       "id": "kXxlF9EQYXo",
       "title": "🌌 Poisonous Skies Revealed",
@@ -44,17 +55,6 @@
       "engagement_rate": 1.813,
       "views_per_day": 331,
       "performance_score": 337.00103
-    },
-    {
-      "id": "WolpLzitfl8",
-      "title": "🔫 Bullets in Space: The Unanswered Question",
-      "hook": "Bullets in space",
-      "script": "Bullets in space. No air, no sound. Gravity warps trajectory. On Mars, a shot fires. In vacuum, it never stops. On Venus, it melts. On Jupiter, it disintegrates. The question remains: what happens when you fire a gun on different planets? Bullets in space",
-      "topic": "Firing a Gun on Mars",
-      "views": 867,
-      "engagement_rate": 1.153,
-      "views_per_day": 289,
-      "performance_score": 292.33217
     }
   ]
 }

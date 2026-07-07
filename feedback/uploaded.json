@@ -4278,7 +4278,36 @@
     ],
     "affiliate_program": "",
     "archetype": "unsolved_mystery",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "IuMAB2-l_lU",
+      "title": "\ud83d\ude80 Water on Mars: The Vanishing Act",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-07-05T06:58:17Z",
+      "views": 1897,
+      "likes": 8,
+      "comments": 0,
+      "engagement_rate": 0.422,
+      "views_per_day": 948,
+      "tags": [
+        "Mars",
+        "curiosity",
+        "did you know",
+        "facts",
+        "mindblown",
+        "physics",
+        "planets",
+        "science",
+        "shorts",
+        "space",
+        "universe",
+        "water"
+      ],
+      "description": "What happens to water on other planets? Mars, Venus, Jupiter, and more\n\n#shorts #science #mindblown #space",
+      "duration_secs": 19,
+      "thumbnail": "https://i.ytimg.com/vi/IuMAB2-l_lU/hqdefault.jpg"
+    }
   },
   {
     "id": "AfBmoeFQJRI",
@@ -4314,6 +4343,25 @@
     ],
     "affiliate_program": "",
     "archetype": "how_does_it_work",
+    "stats_fetched": false
+  },
+  {
+    "id": "jVRR2io_tVo",
+    "title": "\ud83c\udf10 Math's Darkest Secret: The Banach-Tarski Paradox",
+    "uploaded_at": "2026-07-07T07:03:55.991234+00:00",
+    "hook": "A sphere can be cut into 5 pieces",
+    "script": "A sphere can be cut into 5 pieces. Each piece is a perfect sphere. Smaller, yet identical. Reassembled, they form two spheres. The original size. Mind-bending math defies reality. A sphere can be cut into 5 pieces",
+    "topic": "The Banach-Tarski Paradox",
+    "tags": [
+      "math",
+      "paradox",
+      "geometry",
+      "Banach-Tarski",
+      "mindblown"
+    ],
+    "affiliate_program": "",
+    "archetype": "how_does_it_work",
+    "visual_variant": "photos",
     "stats_fetched": false
   }
 ]
