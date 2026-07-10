@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-09T07:03:15.490277",
+  "updated": "2026-07-10T07:02:22.545247",
   "performers": [
     {
       "id": "IuMAB2-l_lU",
@@ -46,15 +46,15 @@
       "performance_score": 381.00832
     },
     {
-      "id": "7s8N1yhGDDU",
-      "title": "🔍 Uncovering The Great Sphinx Secret",
-      "hook": "The Great Sphinx is older",
-      "script": "The Great Sphinx is older. Than the pyramids. Carved from one block. Face of a god, body of a lion. Eyes stare into eternity. Nose missing, secrets hidden. The Great Sphinx stands guard, the Great Sphinx is older",
-      "topic": "The Great Sphinx Mystery",
-      "views": 662,
-      "engagement_rate": 1.813,
-      "views_per_day": 331,
-      "performance_score": 337.00103
+      "id": "jVRR2io_tVo",
+      "title": "🌐 Math's Darkest Secret: The Banach-Tarski Paradox",
+      "hook": "A sphere can be cut into 5 pieces",
+      "script": "A sphere can be cut into 5 pieces. Each piece is a perfect sphere. Smaller, yet identical. Reassembled, they form two spheres. The original size. Mind-bending math defies reality. A sphere can be cut into 5 pieces",
+      "topic": "The Banach-Tarski Paradox",
+      "views": 676,
+      "engagement_rate": 0.592,
+      "views_per_day": 338,
+      "performance_score": 340.00095999999996
     }
   ]
 }

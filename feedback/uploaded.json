@@ -4422,7 +4422,37 @@
     "affiliate_program": "",
     "archetype": "how_does_it_work",
     "visual_variant": "photos",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "jVRR2io_tVo",
+      "title": "\ud83c\udf10 Math's Darkest Secret: The Banach-Tarski Paradox",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-07-07T07:04:13Z",
+      "views": 676,
+      "likes": 4,
+      "comments": 0,
+      "engagement_rate": 0.592,
+      "views_per_day": 338,
+      "tags": [
+        "Banach-Tarski",
+        "curiosity",
+        "did you know",
+        "facts",
+        "geometry",
+        "math",
+        "mindblown",
+        "paradox",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "universe"
+      ],
+      "description": "Discover the mind-bending math that defies reality\n\n#shorts #science #mindblown #math",
+      "duration_secs": 17,
+      "thumbnail": "https://i.ytimg.com/vi/jVRR2io_tVo/hqdefault.jpg"
+    }
   },
   {
     "id": "qZlxmUfB7cI",
@@ -4441,7 +4471,37 @@
     "affiliate_program": "",
     "archetype": "how_does_it_work",
     "visual_variant": "videos",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "qZlxmUfB7cI",
+      "title": "\ud83d\udd25 Ball Lightning: The Explosion Inside \ud83c\udfe0",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-07-08T06:16:41Z",
+      "views": 9,
+      "likes": 0,
+      "comments": 0,
+      "engagement_rate": 0.0,
+      "views_per_day": 4,
+      "tags": [
+        "ball lightning",
+        "curiosity",
+        "did you know",
+        "explosions",
+        "facts",
+        "mindblown",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "unexplained events",
+        "universe",
+        "weather phenomena"
+      ],
+      "description": "Witness the mysterious ball lightning phenomenon\n\n#shorts #science #mindblown #weather #explosions",
+      "duration_secs": 22,
+      "thumbnail": "https://i.ytimg.com/vi/qZlxmUfB7cI/hqdefault.jpg"
+    }
   },
   {
     "id": "6Pfx5XCIYM0",
@@ -4460,6 +4520,25 @@
     "affiliate_program": "",
     "archetype": "unsolved_mystery",
     "visual_variant": "photos",
+    "stats_fetched": false
+  },
+  {
+    "id": "KBMvd_24pxc",
+    "title": "\ud83d\udd0d Nazca Lines: The Baffling Truth",
+    "uploaded_at": "2026-07-10T07:04:05.268453+00:00",
+    "hook": "Desert drawings defy human scale",
+    "script": "Desert drawings defy human scale. Mammoths, birds, and monkeys, etched in sand. Perfect proportions, mysterious purpose. Geoglyphs reveal ancient knowledge. Desert drawings defy human scale",
+    "topic": "The Nazca Lines Geoglyphs",
+    "tags": [
+      "Nazca Lines",
+      "geoglyphs",
+      "ancient mysteries",
+      "desert drawings",
+      "archaeology"
+    ],
+    "affiliate_program": "",
+    "archetype": "how_does_it_work",
+    "visual_variant": "videos",
     "stats_fetched": false
   }
 ]
