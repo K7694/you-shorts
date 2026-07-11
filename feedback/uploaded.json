@@ -4540,5 +4540,24 @@
     "archetype": "how_does_it_work",
     "visual_variant": "videos",
     "stats_fetched": false
+  },
+  {
+    "id": "KuJkNzf--Sk",
+    "title": "\ud83d\ude80 Sound in Space = Death? \ud83d\udeab",
+    "uploaded_at": "2026-07-11T05:59:19.696433+00:00",
+    "hook": "Hear a sound in space and it kills",
+    "script": "Hear a sound in space and it kills. Sound waves propagate, pressure builds. Eardrums rupture, lungs collapse. In vacuum, sound is deadly. Hear a sound in space and it kills",
+    "topic": "Sound Waves in Space",
+    "tags": [
+      "space",
+      "sound waves",
+      "physics",
+      "survival",
+      "space travel"
+    ],
+    "affiliate_program": "",
+    "archetype": "what_if",
+    "visual_variant": "photos",
+    "stats_fetched": false
   }
 ]
