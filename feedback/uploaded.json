@@ -4520,7 +4520,38 @@
     "affiliate_program": "",
     "archetype": "unsolved_mystery",
     "visual_variant": "photos",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "6Pfx5XCIYM0",
+      "title": "\ud83d\udd13 The Door That Defies Logic",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-07-09T07:04:55Z",
+      "views": 109,
+      "likes": 0,
+      "comments": 0,
+      "engagement_rate": 0.0,
+      "views_per_day": 54,
+      "tags": [
+        "Logic",
+        "Math",
+        "Monty Hall Problem",
+        "Paradox",
+        "Probability",
+        "curiosity",
+        "did you know",
+        "facts",
+        "mindblown",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "universe"
+      ],
+      "description": "A probability puzzle that will blow your mind\n\n#shorts #science #mindblown #probability #math",
+      "duration_secs": 25,
+      "thumbnail": "https://i.ytimg.com/vi/6Pfx5XCIYM0/hqdefault.jpg"
+    }
   },
   {
     "id": "KBMvd_24pxc",
@@ -4558,6 +4589,25 @@
     "affiliate_program": "",
     "archetype": "what_if",
     "visual_variant": "photos",
+    "stats_fetched": false
+  },
+  {
+    "id": "boK5QEVfcDM",
+    "title": "\ud83d\udd2e Black Holes: Cosmic Killers",
+    "uploaded_at": "2026-07-12T06:20:33.741889+00:00",
+    "hook": "Black holes are cosmic killers",
+    "script": "Black holes are cosmic killers. Stars consumed, space-time warped. Gravity so strong, not even light escapes. Warped boundaries, distorted realities. What happens inside, remains a secret. Black holes are cosmic killers",
+    "topic": "The Science of Black Holes",
+    "tags": [
+      "black holes",
+      "space",
+      "cosmos",
+      "mystery",
+      "science"
+    ],
+    "affiliate_program": "",
+    "archetype": "unsolved_mystery",
+    "visual_variant": "videos",
     "stats_fetched": false
   }
 ]
