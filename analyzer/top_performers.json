@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-12T06:18:54.875682",
+  "updated": "2026-07-13T06:38:43.027711",
   "performers": [
     {
       "id": "IuMAB2-l_lU",
@@ -24,6 +24,17 @@
       "performance_score": 650.50128
     },
     {
+      "id": "KuJkNzf--Sk",
+      "title": "🚀 Sound in Space = Death? 🚫",
+      "hook": "Hear a sound in space and it kills",
+      "script": "Hear a sound in space and it kills. Sound waves propagate, pressure builds. Eardrums rupture, lungs collapse. In vacuum, sound is deadly. Hear a sound in space and it kills",
+      "topic": "Sound Waves in Space",
+      "views": 769,
+      "engagement_rate": 1.17,
+      "views_per_day": 384,
+      "performance_score": 388.4928
+    },
+    {
       "id": "bKq65A_X0Wc",
       "title": "🌊 Lost City Beneath the Waves",
       "hook": "City swallowed by the sea",
@@ -44,17 +55,6 @@
       "engagement_rate": 1.332,
       "views_per_day": 376,
       "performance_score": 381.00832
-    },
-    {
-      "id": "jVRR2io_tVo",
-      "title": "🌐 Math's Darkest Secret: The Banach-Tarski Paradox",
-      "hook": "A sphere can be cut into 5 pieces",
-      "script": "A sphere can be cut into 5 pieces. Each piece is a perfect sphere. Smaller, yet identical. Reassembled, they form two spheres. The original size. Mind-bending math defies reality. A sphere can be cut into 5 pieces",
-      "topic": "The Banach-Tarski Paradox",
-      "views": 676,
-      "engagement_rate": 0.592,
-      "views_per_day": 338,
-      "performance_score": 340.00095999999996
     }
   ]
 }
