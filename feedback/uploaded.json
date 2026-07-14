@@ -4688,5 +4688,24 @@
     "archetype": "unsolved_mystery",
     "visual_variant": "photos",
     "stats_fetched": false
+  },
+  {
+    "id": "2SNsAzVbPHU",
+    "title": "\ud83c\udf0a Rivers Turn to Ice Discs! \ud83e\udd76",
+    "uploaded_at": "2026-07-14T05:55:35.901277+00:00",
+    "hook": " Rivers turn to ice discs",
+    "script": "Rivers turn to ice discs. Water freezes, rotates. Discs form, grow. Methane bubbles, pressure builds. Ice discs spin, perfectly round. Rivers turn to ice discs",
+    "topic": "Ice Discs in Rivers",
+    "tags": [
+      "ice discs",
+      "rivers",
+      "natural wonders",
+      "science",
+      "environment"
+    ],
+    "affiliate_program": "",
+    "archetype": "how_does_it_work",
+    "visual_variant": "videos",
+    "stats_fetched": false
   }
 ]
