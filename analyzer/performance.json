@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-15T05:54:49.029077",
+  "last_updated": "2026-07-16T06:00:22.251546",
   "videos": {
     "22PxfPCE5bs": {
       "id": "22PxfPCE5bs",
@@ -11,7 +11,7 @@
       "likes": 3,
       "comments": 0,
       "engagement_rate": 0.421,
-      "views_per_day": 713,
+      "views_per_day": 356,
       "tags": [
         "China",
         "Shicheng",
@@ -42,7 +42,7 @@
       "likes": 7,
       "comments": 0,
       "engagement_rate": 1.397,
-      "views_per_day": 501,
+      "views_per_day": 250,
       "tags": [
         "curiosity",
         "did you know",
@@ -72,7 +72,7 @@
       "likes": 15,
       "comments": 0,
       "engagement_rate": 2.086,
-      "views_per_day": 360,
+      "views_per_day": 240,
       "tags": [
         "black holes",
         "cosmos",
@@ -91,35 +91,6 @@
       "duration_secs": 17,
       "thumbnail": "https://i.ytimg.com/vi/boK5QEVfcDM/hqdefault.jpg"
     },
-    "KuJkNzf--Sk": {
-      "id": "KuJkNzf--Sk",
-      "title": "\ud83d\ude80 Sound in Space = Death? \ud83d\udeab",
-      "channel": "KnowMore-Dailyday",
-      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
-      "published": "2026-07-11T05:59:33Z",
-      "views": 801,
-      "likes": 9,
-      "comments": 0,
-      "engagement_rate": 1.124,
-      "views_per_day": 267,
-      "tags": [
-        "curiosity",
-        "did you know",
-        "facts",
-        "mindblown",
-        "physics",
-        "science",
-        "shorts",
-        "sound waves",
-        "space",
-        "space travel",
-        "survival",
-        "universe"
-      ],
-      "description": "What happens when sound waves propagate in space?\n\n#shorts #science #mindblown #space",
-      "duration_secs": 13,
-      "thumbnail": "https://i.ytimg.com/vi/KuJkNzf--Sk/hqdefault.jpg"
-    },
     "IuMAB2-l_lU": {
       "id": "IuMAB2-l_lU",
       "title": "\ud83d\ude80 Water on Mars: The Vanishing Act",
@@ -130,7 +101,7 @@
       "likes": 8,
       "comments": 0,
       "engagement_rate": 0.389,
-      "views_per_day": 228,
+      "views_per_day": 205,
       "tags": [
         "Mars",
         "curiosity",
@@ -149,6 +120,35 @@
       "duration_secs": 19,
       "thumbnail": "https://i.ytimg.com/vi/IuMAB2-l_lU/hqdefault.jpg"
     },
+    "KuJkNzf--Sk": {
+      "id": "KuJkNzf--Sk",
+      "title": "\ud83d\ude80 Sound in Space = Death? \ud83d\udeab",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-07-11T05:59:33Z",
+      "views": 801,
+      "likes": 9,
+      "comments": 0,
+      "engagement_rate": 1.124,
+      "views_per_day": 160,
+      "tags": [
+        "curiosity",
+        "did you know",
+        "facts",
+        "mindblown",
+        "physics",
+        "science",
+        "shorts",
+        "sound waves",
+        "space",
+        "space travel",
+        "survival",
+        "universe"
+      ],
+      "description": "What happens when sound waves propagate in space?\n\n#shorts #science #mindblown #space",
+      "duration_secs": 13,
+      "thumbnail": "https://i.ytimg.com/vi/KuJkNzf--Sk/hqdefault.jpg"
+    },
     "kXxlF9EQYXo": {
       "id": "kXxlF9EQYXo",
       "title": "\ud83c\udf0c Poisonous Skies Revealed",
@@ -159,7 +159,7 @@
       "likes": 5,
       "comments": 0,
       "engagement_rate": 0.386,
-      "views_per_day": 108,
+      "views_per_day": 100,
       "tags": [
         "atmosphere",
         "curiosity",
@@ -188,7 +188,7 @@
       "likes": 4,
       "comments": 0,
       "engagement_rate": 0.591,
-      "views_per_day": 97,
+      "views_per_day": 85,
       "tags": [
         "Banach-Tarski",
         "curiosity",
@@ -218,7 +218,7 @@
       "likes": 4,
       "comments": 0,
       "engagement_rate": 0.512,
-      "views_per_day": 71,
+      "views_per_day": 65,
       "tags": [
         "Mediterranean",
         "Thonis-Heraklion",
@@ -239,6 +239,36 @@
       "duration_secs": 18,
       "thumbnail": "https://i.ytimg.com/vi/bKq65A_X0Wc/hqdefault.jpg"
     },
+    "YfcjqW4Gf1E": {
+      "id": "YfcjqW4Gf1E",
+      "title": "\ud83c\udf0c Cosmic Bursts: Universe's Most Powerful Secret",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-07-15T05:56:41Z",
+      "views": 49,
+      "likes": 2,
+      "comments": 0,
+      "engagement_rate": 4.082,
+      "views_per_day": 49,
+      "tags": [
+        "astrophysics",
+        "cosmic bursts",
+        "curiosity",
+        "did you know",
+        "facts",
+        "fast radio bursts",
+        "mindblown",
+        "mystery",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "universe"
+      ],
+      "description": "Uncover the mysterious Fast Radio Bursts in deep space\n\n#shorts #science #mindblown #space",
+      "duration_secs": 15,
+      "thumbnail": "https://i.ytimg.com/vi/YfcjqW4Gf1E/hqdefault.jpg"
+    },
     "KBMvd_24pxc": {
       "id": "KBMvd_24pxc",
       "title": "\ud83d\udd0d Nazca Lines: The Baffling Truth",
@@ -249,7 +279,7 @@
       "likes": 1,
       "comments": 0,
       "engagement_rate": 0.446,
-      "views_per_day": 56,
+      "views_per_day": 45,
       "tags": [
         "Nazca Lines",
         "ancient mysteries",
@@ -280,7 +310,7 @@
       "likes": 5,
       "comments": 0,
       "engagement_rate": 1.309,
-      "views_per_day": 48,
+      "views_per_day": 42,
       "tags": [
         "astronomy",
         "black holes",
@@ -309,7 +339,7 @@
       "likes": 11,
       "comments": 1,
       "engagement_rate": 1.554,
-      "views_per_day": 41,
+      "views_per_day": 39,
       "tags": [
         "Jupiter",
         "Mars",
@@ -339,7 +369,7 @@
       "likes": 10,
       "comments": 0,
       "engagement_rate": 1.321,
-      "views_per_day": 33,
+      "views_per_day": 32,
       "tags": [
         "bioluminescence",
         "curiosity",
@@ -370,7 +400,7 @@
       "likes": 11,
       "comments": 1,
       "engagement_rate": 1.765,
-      "views_per_day": 32,
+      "views_per_day": 31,
       "tags": [
         "curiosity",
         "did you know",
@@ -390,36 +420,6 @@
       "duration_secs": 22,
       "thumbnail": "https://i.ytimg.com/vi/M-hxG49mA-E/hqdefault.jpg"
     },
-    "YUq2wg58P6o": {
-      "id": "YUq2wg58P6o",
-      "title": "\ud83d\udd34 Stranded: The Last Person Alive",
-      "channel": "KnowMore-Dailyday",
-      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
-      "published": "2026-06-24T07:04:04Z",
-      "views": 573,
-      "likes": 10,
-      "comments": 0,
-      "engagement_rate": 1.745,
-      "views_per_day": 29,
-      "tags": [
-        "astronomy",
-        "curiosity",
-        "did you know",
-        "facts",
-        "mindblown",
-        "mystery",
-        "physics",
-        "science",
-        "shorts",
-        "space",
-        "survival",
-        "universe",
-        "unsolved"
-      ],
-      "description": "Imagine being the only person left on a deserted planet\n\n#shorts #space #mystery",
-      "duration_secs": 17,
-      "thumbnail": "https://i.ytimg.com/vi/YUq2wg58P6o/hqdefault.jpg"
-    },
     "7s8N1yhGDDU": {
       "id": "7s8N1yhGDDU",
       "title": "\ud83d\udd0d Uncovering The Great Sphinx Secret",
@@ -430,7 +430,7 @@
       "likes": 12,
       "comments": 0,
       "engagement_rate": 1.81,
-      "views_per_day": 29,
+      "views_per_day": 28,
       "tags": [
         "Ancient Egypt",
         "Archaeology",
@@ -451,6 +451,36 @@
       "duration_secs": 15,
       "thumbnail": "https://i.ytimg.com/vi/7s8N1yhGDDU/hqdefault.jpg"
     },
+    "YUq2wg58P6o": {
+      "id": "YUq2wg58P6o",
+      "title": "\ud83d\udd34 Stranded: The Last Person Alive",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-06-24T07:04:04Z",
+      "views": 573,
+      "likes": 10,
+      "comments": 0,
+      "engagement_rate": 1.745,
+      "views_per_day": 27,
+      "tags": [
+        "astronomy",
+        "curiosity",
+        "did you know",
+        "facts",
+        "mindblown",
+        "mystery",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "survival",
+        "universe",
+        "unsolved"
+      ],
+      "description": "Imagine being the only person left on a deserted planet\n\n#shorts #space #mystery",
+      "duration_secs": 17,
+      "thumbnail": "https://i.ytimg.com/vi/YUq2wg58P6o/hqdefault.jpg"
+    },
     "WolpLzitfl8": {
       "id": "WolpLzitfl8",
       "title": "\ud83d\udd2b Bullets in Space: The Unanswered Question",
@@ -461,7 +491,7 @@
       "likes": 9,
       "comments": 0,
       "engagement_rate": 1.037,
-      "views_per_day": 27,
+      "views_per_day": 26,
       "tags": [
         "curiosity",
         "did you know",
@@ -490,7 +520,7 @@
       "likes": 3,
       "comments": 0,
       "engagement_rate": 1.21,
-      "views_per_day": 25,
+      "views_per_day": 23,
       "tags": [
         "ant zombies",
         "curiosity",
@@ -521,7 +551,7 @@
       "likes": 5,
       "comments": 0,
       "engagement_rate": 1.22,
-      "views_per_day": 24,
+      "views_per_day": 23,
       "tags": [
         "ball lightning",
         "curiosity",
@@ -541,37 +571,6 @@
       "description": "Witness the mysterious ball lightning phenomenon\n\n#shorts #science #mindblown #weather #nature",
       "duration_secs": 16,
       "thumbnail": "https://i.ytimg.com/vi/BeJyp9jNOCU/hqdefault.jpg"
-    },
-    "6Pfx5XCIYM0": {
-      "id": "6Pfx5XCIYM0",
-      "title": "\ud83d\udd13 The Door That Defies Logic",
-      "channel": "KnowMore-Dailyday",
-      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
-      "published": "2026-07-09T07:04:55Z",
-      "views": 109,
-      "likes": 0,
-      "comments": 0,
-      "engagement_rate": 0.0,
-      "views_per_day": 22,
-      "tags": [
-        "Logic",
-        "Math",
-        "Monty Hall Problem",
-        "Paradox",
-        "Probability",
-        "curiosity",
-        "did you know",
-        "facts",
-        "mindblown",
-        "physics",
-        "science",
-        "shorts",
-        "space",
-        "universe"
-      ],
-      "description": "A probability puzzle that will blow your mind\n\n#shorts #science #mindblown #probability #math",
-      "duration_secs": 25,
-      "thumbnail": "https://i.ytimg.com/vi/6Pfx5XCIYM0/hqdefault.jpg"
     },
     "kT_fXzfG4hI": {
       "id": "kT_fXzfG4hI",
@@ -602,6 +601,37 @@
       "description": "Discover the secret of quantum tunneling\n\n#shorts #science #mindblown #quantum",
       "duration_secs": 20,
       "thumbnail": "https://i.ytimg.com/vi/kT_fXzfG4hI/hqdefault.jpg"
+    },
+    "6Pfx5XCIYM0": {
+      "id": "6Pfx5XCIYM0",
+      "title": "\ud83d\udd13 The Door That Defies Logic",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-07-09T07:04:55Z",
+      "views": 109,
+      "likes": 0,
+      "comments": 0,
+      "engagement_rate": 0.0,
+      "views_per_day": 18,
+      "tags": [
+        "Logic",
+        "Math",
+        "Monty Hall Problem",
+        "Paradox",
+        "Probability",
+        "curiosity",
+        "did you know",
+        "facts",
+        "mindblown",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "universe"
+      ],
+      "description": "A probability puzzle that will blow your mind\n\n#shorts #science #mindblown #probability #math",
+      "duration_secs": 25,
+      "thumbnail": "https://i.ytimg.com/vi/6Pfx5XCIYM0/hqdefault.jpg"
     },
     "oXAo27YlJoI": {
       "id": "oXAo27YlJoI",
@@ -644,7 +674,7 @@
       "likes": 4,
       "comments": 0,
       "engagement_rate": 1.556,
-      "views_per_day": 17,
+      "views_per_day": 16,
       "tags": [
         "Astronomy",
         "Black Hole",
@@ -706,7 +736,7 @@
       "likes": 1,
       "comments": 0,
       "engagement_rate": 0.926,
-      "views_per_day": 8,
+      "views_per_day": 7,
       "tags": [
         "curiosity",
         "did you know",
@@ -724,31 +754,6 @@
       "description": "The shocking truth behind mirror reflections\n\n#shorts #science #mindblown #quantum",
       "duration_secs": 16,
       "thumbnail": "https://i.ytimg.com/vi/E8uJufACPTA/hqdefault.jpg"
-    },
-    "-ZrIk9AWQc4": {
-      "id": "-ZrIk9AWQc4",
-      "title": "\ud83d\udd2e Black Holes: The Void Within \ud83c\udf00",
-      "channel": "KnowMore-Dailyday",
-      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
-      "published": "2026-04-18T10:15:20Z",
-      "views": 568,
-      "likes": 15,
-      "comments": 0,
-      "engagement_rate": 2.641,
-      "views_per_day": 7,
-      "tags": [
-        "astronomy",
-        "black holes",
-        "cosmology",
-        "facts",
-        "science",
-        "shorts",
-        "space",
-        "viral"
-      ],
-      "description": "Uncover the dark truth behind black holes\n\n#shorts #science #mindblown #blackholes #space\n\n#Shorts",
-      "duration_secs": 21,
-      "thumbnail": "https://i.ytimg.com/vi/-ZrIk9AWQc4/hqdefault.jpg"
     },
     "z3E3VKDGuVU": {
       "id": "z3E3VKDGuVU",
@@ -861,37 +866,6 @@
       "duration_secs": 32,
       "thumbnail": "https://i.ytimg.com/vi/GNdBew-G_Kg/hqdefault.jpg"
     },
-    "vSNwLt-P4hU": {
-      "id": "vSNwLt-P4hU",
-      "title": "\ud83d\udd0d Cosmic Lighthouses: Unseen Forces",
-      "channel": "KnowMore-Dailyday",
-      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
-      "published": "2026-06-15T09:51:59Z",
-      "views": 73,
-      "likes": 0,
-      "comments": 0,
-      "engagement_rate": 0.0,
-      "views_per_day": 3,
-      "tags": [
-        "astrophysics",
-        "cosmic phenomena",
-        "curiosity",
-        "deep space",
-        "did you know",
-        "facts",
-        "fast radio bursts",
-        "mindblown",
-        "physics",
-        "science",
-        "shorts",
-        "space",
-        "universe",
-        "unsolved mystery"
-      ],
-      "description": "Uncover the enigma of fast radio bursts in deep space\n\n#shorts #science #mindblown #space #mystery",
-      "duration_secs": 19,
-      "thumbnail": "https://i.ytimg.com/vi/vSNwLt-P4hU/hqdefault.jpg"
-    },
     "GF7E-npIDM4": {
       "id": "GF7E-npIDM4",
       "title": "\ud83d\udd2e Black Holes: Cosmic Killers",
@@ -917,35 +891,36 @@
       "duration_secs": 23,
       "thumbnail": "https://i.ytimg.com/vi/GF7E-npIDM4/hqdefault.jpg"
     },
-    "qZlxmUfB7cI": {
-      "id": "qZlxmUfB7cI",
-      "title": "\ud83d\udd25 Ball Lightning: The Explosion Inside \ud83c\udfe0",
+    "vSNwLt-P4hU": {
+      "id": "vSNwLt-P4hU",
+      "title": "\ud83d\udd0d Cosmic Lighthouses: Unseen Forces",
       "channel": "KnowMore-Dailyday",
       "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
-      "published": "2026-07-08T06:16:41Z",
-      "views": 10,
+      "published": "2026-06-15T09:51:59Z",
+      "views": 73,
       "likes": 0,
       "comments": 0,
       "engagement_rate": 0.0,
       "views_per_day": 2,
       "tags": [
-        "ball lightning",
+        "astrophysics",
+        "cosmic phenomena",
         "curiosity",
+        "deep space",
         "did you know",
-        "explosions",
         "facts",
+        "fast radio bursts",
         "mindblown",
         "physics",
         "science",
         "shorts",
         "space",
-        "unexplained events",
         "universe",
-        "weather phenomena"
+        "unsolved mystery"
       ],
-      "description": "Witness the mysterious ball lightning phenomenon\n\n#shorts #science #mindblown #weather #explosions",
-      "duration_secs": 22,
-      "thumbnail": "https://i.ytimg.com/vi/qZlxmUfB7cI/hqdefault.jpg"
+      "description": "Uncover the enigma of fast radio bursts in deep space\n\n#shorts #science #mindblown #space #mystery",
+      "duration_secs": 19,
+      "thumbnail": "https://i.ytimg.com/vi/vSNwLt-P4hU/hqdefault.jpg"
     },
     "G761W9LP9ww": {
       "id": "G761W9LP9ww",
@@ -996,6 +971,36 @@
       "description": "Uncover the secret science behind kitchen hacks\n\n#shorts #science #mindblown #kitchenhacks #cooking\n\n#Shorts",
       "duration_secs": 32,
       "thumbnail": "https://i.ytimg.com/vi/rX5GXLrXfEc/hqdefault.jpg"
+    },
+    "qZlxmUfB7cI": {
+      "id": "qZlxmUfB7cI",
+      "title": "\ud83d\udd25 Ball Lightning: The Explosion Inside \ud83c\udfe0",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-07-08T06:16:41Z",
+      "views": 10,
+      "likes": 0,
+      "comments": 0,
+      "engagement_rate": 0.0,
+      "views_per_day": 1,
+      "tags": [
+        "ball lightning",
+        "curiosity",
+        "did you know",
+        "explosions",
+        "facts",
+        "mindblown",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "unexplained events",
+        "universe",
+        "weather phenomena"
+      ],
+      "description": "Witness the mysterious ball lightning phenomenon\n\n#shorts #science #mindblown #weather #explosions",
+      "duration_secs": 22,
+      "thumbnail": "https://i.ytimg.com/vi/qZlxmUfB7cI/hqdefault.jpg"
     },
     "44M9ua1_SXI": {
       "id": "44M9ua1_SXI",
