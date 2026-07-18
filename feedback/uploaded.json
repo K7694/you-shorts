@@ -4884,5 +4884,24 @@
     "archetype": "how_does_it_work",
     "visual_variant": "photos",
     "stats_fetched": false
+  },
+  {
+    "id": "T36Mte1mMFA",
+    "title": "\ud83c\udf0a The Ocean's Deadly Secret",
+    "uploaded_at": "2026-07-18T05:49:17.862334+00:00",
+    "hook": "Beneath the waves, a silent killer rises",
+    "script": "Beneath the waves, a silent killer rises. Methane bubbles form, toxic and hidden. Ocean currents spread, unsuspecting life. Gas leaks from seafloor, deadly and silent. What triggers these poisonous releases? Beneath the waves, a silent killer rises",
+    "topic": "Methane Bubbles in Ocean",
+    "tags": [
+      "oceanography",
+      "methane",
+      "marine life",
+      "climate change",
+      "unsolved mysteries"
+    ],
+    "affiliate_program": "",
+    "archetype": "unsolved_mystery",
+    "visual_variant": "videos",
+    "stats_fetched": false
   }
 ]
