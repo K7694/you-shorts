@@ -4864,7 +4864,38 @@
     "affiliate_program": "",
     "archetype": "what_if",
     "visual_variant": "videos",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "BJZn4oR3I9k",
+      "title": "\ud83d\udd2e Shatter Reality",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-07-16T06:02:17Z",
+      "views": 329,
+      "likes": 4,
+      "comments": 0,
+      "engagement_rate": 1.216,
+      "views_per_day": 110,
+      "tags": [
+        "curiosity",
+        "decoherence",
+        "did you know",
+        "entanglement",
+        "facts",
+        "mindblown",
+        "mirror reflections",
+        "photons",
+        "physics",
+        "quantum physics",
+        "science",
+        "shorts",
+        "space",
+        "universe"
+      ],
+      "description": "Discover the mind-bending secret of quantum decoherence in mirror reflections\n\n#shorts #science #mindblown",
+      "duration_secs": 17,
+      "thumbnail": "https://i.ytimg.com/vi/BJZn4oR3I9k/hqdefault.jpg"
+    }
   },
   {
     "id": "ZTrJ25fnAk8",
@@ -4883,7 +4914,38 @@
     "affiliate_program": "",
     "archetype": "how_does_it_work",
     "visual_variant": "photos",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "ZTrJ25fnAk8",
+      "title": "\ud83d\udd25 Ball Lightning: Forbidden Knowledge",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-07-17T06:03:00Z",
+      "views": 35,
+      "likes": 0,
+      "comments": 0,
+      "engagement_rate": 0.0,
+      "views_per_day": 18,
+      "tags": [
+        "Atmospheric Phenomena",
+        "Ball Lightning",
+        "Electromagnetism",
+        "Plasma Physics",
+        "Science",
+        "curiosity",
+        "did you know",
+        "facts",
+        "mindblown",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "universe"
+      ],
+      "description": "The deadly secret of glowing ball lightning\n\n#shorts #science #mindblown",
+      "duration_secs": 12,
+      "thumbnail": "https://i.ytimg.com/vi/ZTrJ25fnAk8/hqdefault.jpg"
+    }
   },
   {
     "id": "T36Mte1mMFA",
@@ -4902,6 +4964,25 @@
     "affiliate_program": "",
     "archetype": "unsolved_mystery",
     "visual_variant": "videos",
+    "stats_fetched": false
+  },
+  {
+    "id": "LFNsQP-eL-Y",
+    "title": "\ud83d\ude80 Black Holes' Dark Secret",
+    "uploaded_at": "2026-07-19T06:15:58.105227+00:00",
+    "hook": "Black holes have a memory",
+    "script": "Black holes have a memory. Information gets stored. Not just vacuum cleaners. Matter, energy, and data. Stored in holograms. On the surface, a secret. Black holes have a memory.",
+    "topic": "Black Holes Secret",
+    "tags": [
+      "black holes",
+      "space",
+      "science",
+      "memory",
+      "hologram"
+    ],
+    "affiliate_program": "",
+    "archetype": "counterintuitive_truth",
+    "visual_variant": "photos",
     "stats_fetched": false
   }
 ]
