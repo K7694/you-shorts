@@ -4964,7 +4964,38 @@
     "affiliate_program": "",
     "archetype": "unsolved_mystery",
     "visual_variant": "videos",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "T36Mte1mMFA",
+      "title": "\ud83c\udf0a The Ocean's Deadly Secret",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-07-18T05:49:41Z",
+      "views": 715,
+      "likes": 6,
+      "comments": 0,
+      "engagement_rate": 0.839,
+      "views_per_day": 358,
+      "tags": [
+        "climate change",
+        "curiosity",
+        "did you know",
+        "facts",
+        "marine life",
+        "methane",
+        "mindblown",
+        "oceanography",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "universe",
+        "unsolved mysteries"
+      ],
+      "description": "Discover the mysterious threat lurking in the depths\n\n#shorts #ocean #mystery",
+      "duration_secs": 19,
+      "thumbnail": "https://i.ytimg.com/vi/T36Mte1mMFA/hqdefault.jpg"
+    }
   },
   {
     "id": "LFNsQP-eL-Y",
@@ -4983,6 +5014,25 @@
     "affiliate_program": "",
     "archetype": "counterintuitive_truth",
     "visual_variant": "photos",
+    "stats_fetched": false
+  },
+  {
+    "id": "xxCi3ZKAN3c",
+    "title": "\ud83c\udf0a Glow in the Dark Sea Creatures",
+    "uploaded_at": "2026-07-20T06:35:49.024729+00:00",
+    "hook": "Touch a siphonophore and it glows",
+    "script": "Touch a siphonophore and it glows. Bioluminescent cells ignite. Toxins released, predators warned. In dark depths, glow is defense. It's a chain of life, a glowing warning. Touch a siphonophore and it glows",
+    "topic": "Glowing Siphonophores in Deep Ocean",
+    "tags": [
+      "siphonophores",
+      "bioluminescence",
+      "deep ocean",
+      "marine life",
+      "glowing creatures"
+    ],
+    "affiliate_program": "",
+    "archetype": "what_if",
+    "visual_variant": "videos",
     "stats_fetched": false
   }
 ]
