@@ -5034,5 +5034,24 @@
     "archetype": "what_if",
     "visual_variant": "videos",
     "stats_fetched": false
+  },
+  {
+    "id": "EPClSK87al8",
+    "title": "\ud83d\udd0d You're Blind to 99% of Light",
+    "uploaded_at": "2026-07-21T06:14:00.657672+00:00",
+    "hook": "You are blind to most light",
+    "script": "You are blind to most light. Invisible waves surround us. Ultraviolet, infrared, and more. Our eyes filter, our brains ignore. But what if you could see it all? You are blind to most light, and that's what makes you blind to most light",
+    "topic": "human blindness to invisible light",
+    "tags": [
+      "human vision",
+      "invisible light",
+      "ultraviolet",
+      "infrared",
+      "perception"
+    ],
+    "affiliate_program": "",
+    "archetype": "counterintuitive_truth",
+    "visual_variant": "photos",
+    "stats_fetched": false
   }
 ]
