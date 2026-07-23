@@ -5062,7 +5062,38 @@
     "affiliate_program": "",
     "archetype": "what_if",
     "visual_variant": "videos",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "xxCi3ZKAN3c",
+      "title": "\ud83c\udf0a Glow in the Dark Sea Creatures",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-07-20T06:36:05Z",
+      "views": 67,
+      "likes": 0,
+      "comments": 0,
+      "engagement_rate": 0.0,
+      "views_per_day": 34,
+      "tags": [
+        "bioluminescence",
+        "curiosity",
+        "deep ocean",
+        "did you know",
+        "facts",
+        "glowing creatures",
+        "marine life",
+        "mindblown",
+        "physics",
+        "science",
+        "shorts",
+        "siphonophores",
+        "space",
+        "universe"
+      ],
+      "description": "What happens when you touch a glowing siphonophore?\n\n#shorts #science #mindblown #ocean #glow",
+      "duration_secs": 15,
+      "thumbnail": "https://i.ytimg.com/vi/xxCi3ZKAN3c/hqdefault.jpg"
+    }
   },
   {
     "id": "EPClSK87al8",
@@ -5081,7 +5112,38 @@
     "affiliate_program": "",
     "archetype": "counterintuitive_truth",
     "visual_variant": "photos",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "EPClSK87al8",
+      "title": "\ud83d\udd0d You're Blind to 99% of Light",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-07-21T06:14:17Z",
+      "views": 235,
+      "likes": 2,
+      "comments": 0,
+      "engagement_rate": 0.851,
+      "views_per_day": 118,
+      "tags": [
+        "curiosity",
+        "did you know",
+        "facts",
+        "human vision",
+        "infrared",
+        "invisible light",
+        "mindblown",
+        "perception",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "ultraviolet",
+        "universe"
+      ],
+      "description": "Discover the invisible light surrounding us\n\n#shorts #science #mindblown",
+      "duration_secs": 16,
+      "thumbnail": "https://i.ytimg.com/vi/EPClSK87al8/hqdefault.jpg"
+    }
   },
   {
     "id": "ahal1ysUUoQ",
@@ -5100,6 +5162,25 @@
     "affiliate_program": "",
     "archetype": "how_does_it_work",
     "visual_variant": "videos",
+    "stats_fetched": false
+  },
+  {
+    "id": "kjlm_1R1fgk",
+    "title": "\ud83d\udd25 Space Boils at Your Touch",
+    "uploaded_at": "2026-07-23T06:18:54.582058+00:00",
+    "hook": "Touch space and it boils",
+    "script": "Touch space and it boils. Vacuum energy churns, particles appear. Fleeting moments, infinite density. Quantum foam bubbles, reality distorts. In the fabric of space-time, the laws of physics blur. Touch space and it boils.",
+    "topic": "Quantum Foam in Space Time",
+    "tags": [
+      "quantum physics",
+      "space-time",
+      "vacuum energy",
+      "particle physics",
+      "reality distortion"
+    ],
+    "affiliate_program": "",
+    "archetype": "unsolved_mystery",
+    "visual_variant": "photos",
     "stats_fetched": false
   }
 ]
