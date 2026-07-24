@@ -5182,5 +5182,24 @@
     "archetype": "unsolved_mystery",
     "visual_variant": "photos",
     "stats_fetched": false
+  },
+  {
+    "id": "45iewvaWsKo",
+    "title": "\ud83e\udd2f The Hidden Voice in Your Head",
+    "uploaded_at": "2026-07-24T06:11:16.052317+00:00",
+    "hook": "You are not alone in your mind",
+    "script": "You are not alone in your mind. Thoughts echo, voices whisper. Memories mimic, emotions mirror. The psyche is a maze, reflections roam. You are not alone in your mind",
+    "topic": "Psychology of Human Echoism",
+    "tags": [
+      "psychology",
+      "human behavior",
+      "echoism",
+      "mindfulness",
+      "self awareness"
+    ],
+    "affiliate_program": "",
+    "archetype": "how_does_it_work",
+    "visual_variant": "videos",
+    "stats_fetched": false
   }
 ]
