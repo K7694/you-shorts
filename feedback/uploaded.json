@@ -5268,5 +5268,27 @@
     "archetype": "unsolved_mystery",
     "visual_variant": "photos",
     "stats_fetched": false
+  },
+  {
+    "id": "NsA1K7XQGGE",
+    "title": "HOW IT WORKS #1 | \ud83d\ude82 Train in a Vacuum \ud83c\udf00",
+    "uploaded_at": "2026-07-25T16:23:21.120971+00:00",
+    "hook": "Ride a train through a mountain and you're in a vacuum",
+    "script": "Ride a train through a mountain and you're in a vacuum. Air is removed to reduce friction. The train accelerates, using less energy. In the tunnel, pressure is low, and air would expand dangerously. So, a vacuum is created, reducing air resistance. Ride a train through a mountain and you're in a vacuum",
+    "topic": "Vacuum Sealed Train Tunnels",
+    "tags": [
+      "train",
+      "vacuum",
+      "tunnel",
+      "friction",
+      "transportation"
+    ],
+    "affiliate_program": "",
+    "archetype": "how_does_it_work",
+    "series": "HOW IT WORKS",
+    "episode": 1,
+    "voice": "en-US-BrianMultilingualNeural",
+    "visual_variant": "photos",
+    "stats_fetched": false
   }
 ]
