@@ -715,7 +715,7 @@ def _pick_curiosity_domain(used: list) -> str:
     if not domains:
         return ""
 
-    recent_blob = " ".join(t.get("topic", "").lower() for t in used[-5:])
+    recent_blob = " ".join(t.get("topic", "").lower() for t in used[-8:])
     # First keyword of each domain (rough subject) for recency matching
     def _key(d: str) -> str:
         return re.split(r"[ &(,]", d.strip())[0].lower()
@@ -725,26 +725,41 @@ def _pick_curiosity_domain(used: list) -> str:
     return random.choice(pool)
 
 
-def _recent_subjects(used: list, n: int = 8) -> str:
+def _recent_subjects(used: list, n: int = 15) -> str:
     """Comma list of recent topics to explicitly ban for variety."""
     subs = [t.get("topic", "") for t in used[-n:] if t.get("topic")]
     return ", ".join(subs) if subs else "none yet"
 
 
 # Content words to ignore when comparing topic subjects for repetition.
+# These are FRAMING words that appear across unrelated topics — matching on
+# them would reject fresh subjects. Real subject nouns must NOT be listed.
 _SUBJECT_STOPWORDS = {
     "the", "a", "an", "of", "in", "on", "to", "is", "are", "what", "why",
     "how", "if", "you", "your", "and", "or", "for", "with", "that", "this",
     "happens", "get", "stuck", "into", "inside", "vs", "mystery", "mysteries",
     "survival", "truth", "secret", "secrets", "myth", "facts", "fact",
+    # Added 2026-07-25: recurring title/framing words that were letting
+    # real subject repeats hide (they matched on the framing, not the noun).
+    "dark", "darkest", "hidden", "forbidden", "knowledge", "revealed",
+    "science", "unknown", "strange", "weird", "amazing", "shocking",
+    "explained", "behind", "real", "reality", "world", "universe",
+    "discovery", "discovered", "found", "baffling", "unexplained",
+    "phenomenon", "phenomena", "effect", "theory", "question", "questions",
 }
 
 
-def _subject_recently_used(topic: str, used: list, n: int = 6) -> bool:
+def _subject_recently_used(topic: str, used: list, n: int = 20) -> bool:
     """True if `topic` shares a meaningful keyword with a recent topic.
 
     Catches subject-level repeats that exact-string dedup misses
     (e.g. "Black Hole Survival" vs "stuck in a black hole?" both → "black hole").
+
+    Window widened 6 → 20 on 2026-07-25. Measured leak at n=6: "Ball
+    Lightning" ran twice 9 days apart and both flopped (13 and 34 views —
+    the two worst in the cohort); "black holes" recurred across 7 videos
+    (median 98). Repeats reliably underperform, so the lookback now spans
+    ~3 weeks of daily uploads.
     """
     def keys(s: str) -> set:
         words = re.findall(r"[a-z]+", s.lower())
@@ -776,7 +791,12 @@ def _generate_script_curiosity(topic: str = None) -> dict:
     # (unsolved_mystery / how_does_it_work) with a small exploration
     # slice on the rest. Falls back to uniform if weights are missing.
     if CONTENT_ARCHETYPES:
-        _weights = [_ARCHETYPE_WEIGHTS.get(a, 1) for a in CONTENT_ARCHETYPES]
+        # A weight of 0 disables an archetype (see config). If every weight
+        # is 0 or missing, fall back to uniform so we never crash on a
+        # zero-total weight vector.
+        _weights = [max(0, _ARCHETYPE_WEIGHTS.get(a, 1)) for a in CONTENT_ARCHETYPES]
+        if sum(_weights) <= 0:
+            _weights = [1] * len(CONTENT_ARCHETYPES)
         archetype = random.choices(CONTENT_ARCHETYPES, weights=_weights, k=1)[0]
     else:
         archetype = "unsolved_mystery"

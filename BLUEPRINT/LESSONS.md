@@ -112,6 +112,40 @@ At 2–28 views/video, differences between variants are statistical noise.
 Only read signals at meaningful volume (the 72-hour checkpoint protocol:
 compare videos at equal age, median + best-of-batch gates).
 
+### ✅ The visual layer is NOT the lever (measured, 2026-07-25)
+A/B: photo slideshow + Ken Burns vs Pexels stock-video montage, 8 videos
+per arm, compared at equal ≥72h age.
+- photos: median 281, mean 380 · videos: median 354, mean 369
+- Mann-Whitney **U=31.0 vs 32.0 expected under the null** — a coin flip
+- **Variance INSIDE each arm (13→802 views) was ~4× the gap BETWEEN arms**
+
+Don't spend effort on production polish before content selection. What
+actually moved the number, same dataset (n=49, equal age):
+
+| archetype | n | median views |
+|---|---|---|
+| unsolved_mystery | 14 | **690** |
+| how_does_it_work | 17 | 241 |
+| mind_blowing_fact | 7 | 108 |
+| what_if | 6 | 84 |
+| counterintuitive_truth | 5 | **1** |
+
+**Archetype choice ≈ 3× lever; visuals ≈ 0×.** Open-question framings
+("unsolved mystery") beat explanatory framings by ~3×. Weight hard toward
+the winner and zero out anything with a dead median — a median of 1 view
+across 5 tries is waste, not exploration.
+
+### ❌ Subject-repeat guard window was too short
+At a 6-video lookback, subjects returned just outside the window and
+reliably flopped: "Ball Lightning" ran twice 9 days apart → **13 and 34
+views** (the two worst in the cohort); "black holes" recurred across 7
+videos → median 98.
+**Fix:** widen the lookback to ~20 videos (~3 weeks of daily uploads) and
+add *framing* words ("dark", "hidden", "forbidden", "revealed",
+"science", "reality"…) to the stopword set — matching on framing was
+letting the real subject noun hide. Verify with a false-positive check
+against a list of genuinely fresh topics before shipping a wider window.
+
 ---
 
 ## 4. Process lessons

@@ -369,23 +369,28 @@ CONTENT_ARCHETYPES = [
     "what_if",                  # A vivid, scientifically honest hypothetical
 ]
 
-# ── Archetype WEIGHTS (2026-06-20) — bias toward proven winners ──
-# Across the first ~13 curiosity videos, ALL the breakouts came from
-# two archetypes; the other three produced ~0 views:
-#   unsolved_mystery → 740, 73   (best, consistent)
-#   how_does_it_work → 574       (biggest single hit)
-#   mind_blowing_fact → 0-3      (weak)
-#   counterintuitive_truth → 0,0,0 (dead — usually too vague)
-#   what_if → 0,0                (dead)
-# Weighted random selection favors the winners (~73% of videos) while
-# keeping a small exploration slice on the others so we don't overfit
-# to a tiny sample or collapse into a monoculture. Tune as data grows.
+# ── Archetype WEIGHTS — rebalanced 2026-07-25 on n=49 ───────────
+# Median views per archetype across the whole curiosity era (videos
+# aged >=72h, so they're compared at equal age):
+#   unsolved_mystery       n=14  median 690  max 2054   <- 3x the field
+#   how_does_it_work       n=17  median 241  max 1298
+#   mind_blowing_fact      n=7   median 108  max  757
+#   what_if                n=6   median  84  max  802
+#   counterintuitive_truth n=5   median   1  max  326   <- dead
+#
+# Previously unsolved_mystery and how_does_it_work were weighted equally
+# at 4 despite a ~3x median gap — that was the misallocation. Now:
+#   unsolved_mystery ~55%, how_does_it_work ~27%, and a ~18% exploration
+#   slice split between the two mid performers.
+# counterintuitive_truth is set to 0: a median of 1 view across 5 videos
+# isn't exploration, it's waste. Kept in CONTENT_ARCHETYPES (weight 0 is
+# simply never chosen) so it can be revived by bumping this number.
 CONTENT_ARCHETYPE_WEIGHTS = {
-    "unsolved_mystery": 4,
-    "how_does_it_work": 4,
+    "unsolved_mystery": 6,
+    "how_does_it_work": 3,
     "mind_blowing_fact": 1,
-    "counterintuitive_truth": 1,
     "what_if": 1,
+    "counterintuitive_truth": 0,
 }
 
 # ── Legacy affiliate archetypes (DORMANT — MONETIZATION_ENABLED) ──
