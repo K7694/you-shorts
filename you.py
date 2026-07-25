@@ -339,6 +339,10 @@ def _log_upload(video_id: str, script: dict, title: str):
         # can correlate revenue/views back to programs and content types
         "affiliate_program": script.get("affiliate_program", ""),
         "archetype":         script.get("archetype", ""),
+        # Series identity — drives episode numbering and per-series readouts
+        "series":            script.get("series", ""),
+        "episode":           script.get("episode", 0),
+        "voice":             script.get("voice", ""),
         # A/B arm for the visual-layer test (photos | videos | gameplay).
         # Group by this at the 72h readout.
         "visual_variant":    script.get("visual_variant", "photos"),
@@ -704,6 +708,26 @@ except NameError:
     _ARCHETYPE_WEIGHTS = {}
 
 
+def _series_for(archetype: str) -> dict:
+    """Series identity (voice/captions/structure/title) for an archetype."""
+    try:
+        return CONTENT_SERIES.get(archetype, DEFAULT_SERIES)
+    except NameError:
+        return {"name": "", "voice": VOICE, "rate": VOICE_RATE,
+                "caption_hex": "&H0000FFFF", "promise": "", "structure": ""}
+
+
+def _episode_number(series_name: str) -> int:
+    """Next episode number for a series, counted from the upload log."""
+    if not series_name:
+        return 0
+    try:
+        uploads = json.loads(_UPLOADS_LOG.read_text(encoding="utf-8"))
+        return sum(1 for u in uploads if u.get("series") == series_name) + 1
+    except Exception:
+        return 1
+
+
 def _pick_curiosity_domain(used: list) -> str:
     """Rotate curiosity domains: pick one NOT used in the last few videos.
 
@@ -803,6 +827,13 @@ def _generate_script_curiosity(topic: str = None) -> dict:
     archetype_instruction = _CURIOSITY_ARCHETYPE_INSTRUCTIONS.get(
         archetype, _CURIOSITY_FALLBACK_INSTRUCTION
     )
+
+    # Series identity: each archetype is a named show with its own
+    # narrator, caption colour and script shape (anti-template + gives
+    # viewers something to subscribe TO).
+    series = _series_for(archetype)
+    series_name = series.get("name", "")
+    series_structure = series.get("structure", "") or archetype_instruction
 
     # Anti-repetition: rotate to a domain not used recently + ban recent subjects
     domain = _pick_curiosity_domain(used)
@@ -904,14 +935,11 @@ TOPICS ALREADY USED — DO NOT REPEAT THESE:
 
 {_build_few_shot_examples()}
 
-YOU MUST FOLLOW THIS EXACT 4-PART STRUCTURE:
-
-PART 1 — THE HOOK (first 2-3 seconds, ~8 words):
+THE OPENING LINE (first 2-3 seconds — decides everything):
 - Open with a JARRING, disruptive statement that stops the scroll
 - NEVER start with "Did you know", "What if I told you", or any cliche
-- Make it feel like a secret of reality being revealed
-- Be CONCRETE and SPECIFIC, not vague. The hook must name a real, vivid
-  thing or pose a sharp, irresistible question.
+- Be CONCRETE and SPECIFIC, not vague. It must name a real, vivid thing
+  or pose a sharp, irresistible question.
   GOOD (specific, makes you NEED the answer):
     • "Fire a gun on the Moon and the bullet could hit you in the back."
     • "There is a version of you that never existed."
@@ -919,18 +947,18 @@ PART 1 — THE HOOK (first 2-3 seconds, ~8 words):
   BAD (vague, no pull): "Reality is a mirror." "The darkest truth." "Space is strange."
 - If it could be the title of ten different videos, it's too vague — make it sharper.
 
-PART 2 — THE ESCALATION (next 15-17 seconds, ~42 words):
-- Explain rapidly but clearly using vivid analogies
-- Short punchy sentences (max 8 words each)
-- Each sentence must raise the stakes higher
+STRUCTURE FOR THIS EPISODE — "{series_name}":
+{series_structure}
 
-PART 3 — THE MIND-BENDER (next 10 seconds, ~28 words):
-- Deliver the fact that makes them question reality
-- This is the "holy crap I need to share this" moment
+Follow THAT structure. Do NOT fall back on a generic
+hook/escalation/reveal template — each series in this channel is
+deliberately shaped differently, and episodes must not feel
+interchangeable with one another.
 
-PART 4 — THE SEAMLESS LOOP (final 3-5 seconds, ~10 words):
-- End with a sentence that grammatically loops back to the opening hook
-- This forces a rewatch and skyrockets completion rate
+THE ENDING:
+- Close the way this series closes (see the structure above)
+- Where it fits naturally, let the last line echo the opening so the
+  loop invites a rewatch — but never at the cost of the series' own shape
 - Do NOT say "follow for more" or "subscribe"
 
 CRITICAL RULES:
@@ -954,9 +982,28 @@ Return ONLY valid JSON (no markdown, no backticks):
     "hashtags": ["#shorts", "#science", "#mindblown"]{image_prompt_json}
 }}"""
 
-    print(f"   🧠 Writing script (curiosity · archetype: {archetype})...")
+    print(f"   🧠 Writing script (series: {series_name or archetype})...")
     data = _generate_with_hook_gate(prompt)
     data.setdefault("archetype", archetype)
+
+    # ── Series branding: title prefix + episode number + promise ──
+    # A recognisable, numbered show is what converts a viewer into a
+    # subscriber (nobody subscribes to "a fact"). Also carries the
+    # per-series voice/caption colour down to the render stages.
+    if series_name:
+        episode = _episode_number(series_name) if SERIES_EPISODE_NUMBERS else 0
+        label = f"{series_name} #{episode}" if episode else series_name
+        raw_title = re.sub(r"^(UNSOLVED|HOW IT WORKS|MIND BENDER|WHAT IF|ACTUALLY)\s*#?\d*\s*[:|-]*\s*",
+                           "", data.get("title", "").strip(), flags=re.I)
+        data["title"] = f"{label} | {raw_title}"[:100]
+        data["series"] = series_name
+        data["episode"] = episode
+        promise = series.get("promise", "")
+        desc = data.get("description", "").strip()
+        data["description"] = f"{desc}\n\n{series_name} — {promise}\nNew episode every day."[:4900]
+    data["voice"] = series.get("voice", VOICE)
+    data["voice_rate"] = series.get("rate", VOICE_RATE)
+    data["caption_hex"] = series.get("caption_hex", "&H0000FFFF")
     return _finalize_script(data)
 
 
@@ -1459,7 +1506,7 @@ def _sanitize_tts(text: str) -> str:
     return "".join(clean).strip()
 
 
-def generate_voice(text: str, path: str) -> tuple:
+def generate_voice(text: str, path: str, voice: str = None, rate: str = None) -> tuple:
     """Generate voiceover. Returns (duration_seconds, word_timestamps).
 
     EFFICIENCY (2026-06-27): word timings now come from Edge TTS's own
@@ -1475,11 +1522,14 @@ def generate_voice(text: str, path: str) -> tuple:
 
     text = _sanitize_tts(text)
     words = []
+    # Per-series narrator (falls back to the channel default voice)
+    voice = voice or VOICE
+    rate = rate or VOICE_RATE
 
     async def _gen():
         # boundary="WordBoundary" required on edge-tts >= 7.x (default is
         # SentenceBoundary, which yields no per-word events)
-        comm = edge_tts.Communicate(text=text, voice=VOICE, rate=VOICE_RATE,
+        comm = edge_tts.Communicate(text=text, voice=voice, rate=rate,
                                     boundary="WordBoundary")
         with open(path, "wb") as f:
             async for chunk in comm.stream():
@@ -1494,7 +1544,7 @@ def generate_voice(text: str, path: str) -> tuple:
                         "end": start + chunk["duration"] / 1e7,
                     })
 
-    print(f"   🎙️  Recording voiceover ({VOICE})...")
+    print(f"   🎙️  Recording voiceover ({voice} @ {rate})...")
     asyncio.run(_gen())
     print(f"      ⏱️  {len(words)} word timings captured during synthesis")
 
@@ -1619,8 +1669,13 @@ def _ass_time(sec: float) -> str:
     return f"{h}:{m:02d}:{s:02d}.{cs:02d}"
 
 
-def _make_captions_whisper(word_ts: list, path: str):
-    """Create ASS subtitles with TikTok-style word-by-word highlighting using Whisper timestamps."""
+def _make_captions_whisper(word_ts: list, path: str, highlight_hex: str = "&H0000FFFF"):
+    """Word-by-word highlighted ASS captions.
+
+    `highlight_hex` is the per-series accent colour (ASS uses BGR order),
+    so each show is visually distinguishable — part of the anti-template
+    variation, and it makes a returning viewer recognise the series.
+    """
     ass = f"""[Script Info]
 Title: You Captions
 ScriptType: v4.00+
@@ -1655,8 +1710,9 @@ Format: Layer,Start,End,Style,Name,MarginL,MarginR,MarginV,Effect,Text
             for k, w in enumerate(chunk):
                 word_upper = w["word"].upper()
                 if k == j:
-                    # Highlighted word: yellow + slightly larger
-                    parts.append(r"{\c&H00FFFF&\fscx110\fscy110}" + word_upper + r"{\c&HFFFFFF&\fscx100\fscy100}")
+                    # Highlighted word: series accent colour + slightly larger
+                    _accent = (highlight_hex or "&H0000FFFF").replace("&H00", "&H").rstrip("&") + "&"
+                    parts.append(r"{\c" + _accent + r"\fscx110\fscy110}" + word_upper + r"{\c&HFFFFFF&\fscx100\fscy100}")
                 else:
                     parts.append(word_upper)
 
@@ -1770,7 +1826,8 @@ def _make_simple_slideshow(images: list, duration: float, path: str):
 
 
 def assemble_video(audio: str, images: list, captions: list, filename: str,
-                   word_timestamps: list = None, video_clips: list = None) -> str:
+                   word_timestamps: list = None, video_clips: list = None,
+                   caption_hex: str = "&H0000FFFF") -> str:
     """Assemble final video: visuals + audio + captions → .mp4
 
     Visual track priority: gameplay (USE_BACKGROUND_VIDEO) → stock video
@@ -1886,7 +1943,7 @@ def assemble_video(audio: str, images: list, captions: list, filename: str,
     # Step 2: Captions (word-synced via Whisper, or fallback)
     subs_path = str(TEMP_DIR / f"{filename}_subs.ass")
     if word_timestamps:
-        _make_captions_whisper(word_timestamps, subs_path)
+        _make_captions_whisper(word_timestamps, subs_path, caption_hex)
         print("      ✅ Captions done (word-synced)")
     else:
         _make_captions_fallback(captions, duration - 0.3, subs_path)
@@ -2026,7 +2083,11 @@ def generate_thumbnail(image_path: str, hook: str, slug: str) -> str | None:
         Path("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"),
     ]
     if win_font.exists():
-        font_arg = "C\\\\:/Windows/Fonts/impact.ttf"
+        # FFmpeg needs the drive colon escaped ONCE inside a filtergraph:
+        # C\:/Windows/... . The previous double backslash produced C\\:/...
+        # which FFmpeg misparsed, so thumbnails silently failed on Windows.
+        # (Linux CI was unaffected — it takes the branch below.)
+        font_arg = "C\\:/Windows/Fonts/impact.ttf"
     else:
         raw = next((str(f) for f in linux_fonts if f.exists()), None)
         if not raw:
@@ -2048,10 +2109,16 @@ def generate_thumbnail(image_path: str, hook: str, slug: str) -> str | None:
         text_lines.append(" ".join(cur).upper())
     text_lines = text_lines[:3]
 
-    # Escape special chars for FFmpeg drawtext text= value:
-    #   \ → \\,  ' → \',  : → \:
+    # Escape special chars for FFmpeg drawtext text= value.
+    # The apostrophe MUST use the close-quote idiom '\'' — a backslash-
+    # escaped quote (\') corrupts the filtergraph as soon as more options
+    # follow text=, which silently killed the thumbnail for every hook
+    # containing "you're", "Gravity's", etc. Verified: with \' those hooks
+    # fail and clean hooks pass; with '\'' all pass.
     def _esc(s: str) -> str:
-        return s.replace("\\", "\\\\").replace("'", "\\'").replace(":", "\\:")
+        return (s.replace("\\", "\\\\")
+                 .replace(":", "\\:")
+                 .replace("'", "'\\''"))
 
     # Build one drawtext filter per line, positioned vertically within the dark bar
     filters = [
@@ -2288,7 +2355,9 @@ def create_video(topic: str = None, upload: bool = True) -> dict:
         # ── STEP 3: VOICE (word timings captured during synthesis) ──
         print("\n  ┌─ 3/5 ── 🎙️  VOICE ─────────────────────────")
         audio_path = str(TEMP_DIR / f"{sid}.mp3")
-        duration, word_ts = generate_voice(script["script"], audio_path)
+        duration, word_ts = generate_voice(
+            script["script"], audio_path,
+            voice=script.get("voice"), rate=script.get("voice_rate"))
         r["audio"] = audio_path
 
         # Emergency fallback only — Edge TTS boundaries are deterministic,
@@ -2300,7 +2369,8 @@ def create_video(topic: str = None, upload: bool = True) -> dict:
         # ── STEP 4: DIRECTOR ────────────────────────────────
         print("\n  ┌─ 4/5 ── 🎬 DIRECTOR ───────────────────────")
         video_path = assemble_video(audio_path, images, script["caption_lines"], sid,
-                                    word_timestamps=word_ts, video_clips=video_clips)
+                                    word_timestamps=word_ts, video_clips=video_clips,
+                                    caption_hex=script.get("caption_hex", "&H0000FFFF"))
         r["video"] = video_path
 
         # Generate thumbnail from first AI image (must happen before temp cleanup)

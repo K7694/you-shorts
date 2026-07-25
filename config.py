@@ -400,6 +400,100 @@ CONTENT_ARCHETYPE_WEIGHTS = {
 #     "money_hack", "listicle", "myth_buster", "news_update",
 # ]
 
+# ══════════════════════════════════════════════════════════════
+#  📺 CONTENT SERIES (2026-07-25) — identity + anti-template
+# ══════════════════════════════════════════════════════════════
+# Two problems, one fix.
+#
+# 1) MONETIZATION RISK. YouTube's "inauthentic content" policy
+#    (Jul 2025) demonetizes work that looks "made with a template
+#    with little to no variation across videos" / "easily replicable
+#    at scale". Every video we shipped had the same voice, caption
+#    style and 4-part structure — a textbook match. Real variation
+#    is now a compliance requirement, not a nicety.
+#
+# 2) CONVERSION. 31 subs on 25k views (~0.12%) because there is
+#    nothing to subscribe TO. Nobody subscribes to "a fact"; they
+#    subscribe to a SERIES they want the next episode of.
+#
+# Each archetype becomes a named series with its own narrator voice,
+# caption colour, script structure and title prefix — so videos differ
+# from each other AND are recognisable as a returning show.
+CONTENT_SERIES = {
+    "unsolved_mystery": {
+        "name": "UNSOLVED",
+        "voice": "en-US-ChristopherNeural",      # deep, documentary
+        "rate": "+0%",
+        "caption_hex": "&H0000D7FF",             # amber (ASS = BGR)
+        "promise": "One unsolved mystery, every day.",
+        "structure": (
+            "COLD OPEN with the strangest single detail of the case (no setup, "
+            "start mid-story). Then the FACTS — what was observed, when, by whom. "
+            "Then THE PROBLEM — why every explanation fails. End on the open "
+            "question, unresolved. Never invent a solution."
+        ),
+    },
+    "how_does_it_work": {
+        "name": "HOW IT WORKS",
+        "voice": "en-US-BrianMultilingualNeural",  # warm explainer
+        "rate": "+6%",
+        "caption_hex": "&H00FFFF00",               # cyan
+        "promise": "The hidden mechanics of everyday things.",
+        "structure": (
+            "Open with the everyday thing people never question. Then REVEAL the "
+            "counterintuitive mechanism, step by step, each step a short sentence. "
+            "Build to the 'oh THAT's why' moment. Close by pointing back at the "
+            "ordinary object so they never see it the same way."
+        ),
+    },
+    "mind_blowing_fact": {
+        "name": "MIND BENDER",
+        "voice": "en-US-AndrewMultilingualNeural",  # current flagship voice
+        "rate": "+5%",
+        "caption_hex": "&H00B469FF",                # hot pink
+        "promise": "A fact that breaks your brain, daily.",
+        "structure": (
+            "State the impossible-sounding claim flat out in one line. Spend the "
+            "middle PROVING it with escalating concrete numbers and comparisons. "
+            "Land a final comparison that reframes the viewer's own body or life."
+        ),
+    },
+    "what_if": {
+        "name": "WHAT IF",
+        "voice": "en-GB-RyanNeural",               # British, speculative
+        "rate": "+3%",
+        "caption_hex": "&H0000FF7F",               # spring green
+        "promise": "Impossible scenarios, real physics.",
+        "structure": (
+            "Pose the scenario in one vivid line. Then walk the CONSEQUENCE CHAIN "
+            "— first this happens, then this, then this — each worse or stranger "
+            "than the last, all scientifically honest. End at the final consequence."
+        ),
+    },
+    "counterintuitive_truth": {
+        "name": "ACTUALLY",
+        "voice": "en-US-AriaNeural",
+        "rate": "+4%",
+        "caption_hex": "&H00FFFFFF",               # white
+        "promise": "Everything you know, corrected.",
+        "structure": (
+            "State the belief everyone holds. Say plainly that it is wrong. "
+            "Deliver the real mechanism with evidence. Close on what this means."
+        ),
+    },
+}
+
+# Fallback when an archetype has no series entry
+DEFAULT_SERIES = {
+    "name": "", "voice": VOICE, "rate": VOICE_RATE,
+    "caption_hex": "&H0000FFFF", "promise": "New science every day.",
+    "structure": "",
+}
+
+# Show episode numbers in titles ("UNSOLVED #12") — gives a returning
+# viewer a reason to expect the next one.
+SERIES_EPISODE_NUMBERS = True
+
 # ── Curiosity DOMAINS (2026-06-14) — anti-repetition ───────────
 # The batch repeated "black holes" in 4 of 8 videos because exact-
 # string dedup doesn't catch subject repetition. The pipeline now
