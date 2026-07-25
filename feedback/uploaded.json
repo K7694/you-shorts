@@ -5251,5 +5251,22 @@
     "archetype": "what_if",
     "visual_variant": "photos",
     "stats_fetched": false
+  },
+  {
+    "id": "NTnrH-edhAU",
+    "title": "\ud83d\udd22 The Collatz Enigma",
+    "uploaded_at": "2026-07-25T15:10:48.448763+00:00",
+    "hook": "Multiply by 3 and add 1",
+    "script": "Multiply by 3 and add 1. Numbers collapse. Patterns emerge. But what happens next? The Collatz Conjecture remains unsolved. Multiply by 3 and add 1.",
+    "topic": "The Collatz Conjecture Mystery",
+    "tags": [
+      "Collatz Conjecture",
+      "math mystery",
+      "unsolved problem"
+    ],
+    "affiliate_program": "",
+    "archetype": "unsolved_mystery",
+    "visual_variant": "photos",
+    "stats_fetched": false
   }
 ]
