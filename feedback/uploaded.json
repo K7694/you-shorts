@@ -5212,7 +5212,38 @@
     "affiliate_program": "",
     "archetype": "unsolved_mystery",
     "visual_variant": "photos",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "kjlm_1R1fgk",
+      "title": "\ud83d\udd25 Space Boils at Your Touch",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-07-23T06:19:07Z",
+      "views": 419,
+      "likes": 8,
+      "comments": 0,
+      "engagement_rate": 1.909,
+      "views_per_day": 140,
+      "tags": [
+        "curiosity",
+        "did you know",
+        "facts",
+        "mindblown",
+        "particle physics",
+        "physics",
+        "quantum physics",
+        "reality distortion",
+        "science",
+        "shorts",
+        "space",
+        "space-time",
+        "universe",
+        "vacuum energy"
+      ],
+      "description": "The hidden reality of space-time\n\n#shorts #science #mindblown #quantumphysics #spacetime",
+      "duration_secs": 17,
+      "thumbnail": "https://i.ytimg.com/vi/kjlm_1R1fgk/hqdefault.jpg"
+    }
   },
   {
     "id": "45iewvaWsKo",
@@ -5231,7 +5262,38 @@
     "affiliate_program": "",
     "archetype": "how_does_it_work",
     "visual_variant": "videos",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "45iewvaWsKo",
+      "title": "\ud83e\udd2f The Hidden Voice in Your Head",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-07-24T06:11:34Z",
+      "views": 304,
+      "likes": 4,
+      "comments": 0,
+      "engagement_rate": 1.316,
+      "views_per_day": 152,
+      "tags": [
+        "curiosity",
+        "did you know",
+        "echoism",
+        "facts",
+        "human behavior",
+        "mindblown",
+        "mindfulness",
+        "physics",
+        "psychology",
+        "science",
+        "self awareness",
+        "shorts",
+        "space",
+        "universe"
+      ],
+      "description": "The shocking truth about human echoism\n\n#shorts #psychology #mindblown",
+      "duration_secs": 12,
+      "thumbnail": "https://i.ytimg.com/vi/45iewvaWsKo/hqdefault.jpg"
+    }
   },
   {
     "id": "oi4x0YUSxl8",
@@ -5289,6 +5351,28 @@
     "episode": 1,
     "voice": "en-US-BrianMultilingualNeural",
     "visual_variant": "photos",
+    "stats_fetched": false
+  },
+  {
+    "id": "5MJ9x096vzk",
+    "title": "UNSOLVED #1 | \ud83d\udd0d Quantum Secrets: Can the Past be Changed? \ud83d\udd70\ufe0f",
+    "uploaded_at": "2026-07-26T06:24:51.935281+00:00",
+    "hook": "Shine a light on a photon and its past changes",
+    "script": "Shine a light on a photon and its past changes. In the quantum eraser experiment, particles are entangled, then separated. Measuring one affects the other, even after the fact. The act of observation rewrites history. But what happens when we apply this to everyday objects? Shine a light on a photon and its past changes",
+    "topic": "Quantum Eraser Experiment",
+    "tags": [
+      "Quantum Mechanics",
+      "Physics",
+      "Mystery",
+      "Science",
+      "Experiment"
+    ],
+    "affiliate_program": "",
+    "archetype": "unsolved_mystery",
+    "series": "UNSOLVED",
+    "episode": 1,
+    "voice": "en-US-ChristopherNeural",
+    "visual_variant": "videos",
     "stats_fetched": false
   }
 ]
