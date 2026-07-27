@@ -5312,7 +5312,37 @@
     "affiliate_program": "",
     "archetype": "what_if",
     "visual_variant": "photos",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "oi4x0YUSxl8",
+      "title": "\ud83e\udd2f Sphere Splitting Paradox",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-07-25T06:03:44Z",
+      "views": 990,
+      "likes": 5,
+      "comments": 0,
+      "engagement_rate": 0.505,
+      "views_per_day": 495,
+      "tags": [
+        "Banach-Tarski",
+        "curiosity",
+        "did you know",
+        "facts",
+        "geometry",
+        "math",
+        "mindblown",
+        "paradox",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "universe"
+      ],
+      "description": "Mind-bending math reveals a sphere can be split into 5 identical pieces\n\n#shorts #math #science #mindblown",
+      "duration_secs": 16,
+      "thumbnail": "https://i.ytimg.com/vi/oi4x0YUSxl8/hqdefault.jpg"
+    }
   },
   {
     "id": "NTnrH-edhAU",
@@ -5373,6 +5403,28 @@
     "episode": 1,
     "voice": "en-US-ChristopherNeural",
     "visual_variant": "videos",
+    "stats_fetched": false
+  },
+  {
+    "id": "uK0oNeuG2JI",
+    "title": "HOW IT WORKS #2 | \ud83c\udf2b\ufe0f The Secret of Rolling Clouds",
+    "uploaded_at": "2026-07-27T06:51:25.437792+00:00",
+    "hook": "Rolling tubes of cloud can stretch 1000 miles",
+    "script": "Rolling tubes of cloud can stretch 1000 miles. They form when cool air meets warm air. Moisture condenses, creating a tubular cloud. As winds shift, the tube can break, revealing a rolling wave of cloud. Rolling tubes of cloud can stretch 1000 miles, and now you know why.",
+    "topic": "Morning Glory Clouds Formation",
+    "tags": [
+      "morning glory clouds",
+      "cloud formation",
+      "weather phenomenon",
+      "atmospheric science",
+      "meteorology"
+    ],
+    "affiliate_program": "",
+    "archetype": "how_does_it_work",
+    "series": "HOW IT WORKS",
+    "episode": 2,
+    "voice": "en-US-BrianMultilingualNeural",
+    "visual_variant": "photos",
     "stats_fetched": false
   }
 ]

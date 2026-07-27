@@ -1,20 +1,20 @@
 {
-  "generated": "2026-07-26T06:22:17.035643",
+  "generated": "2026-07-27T06:50:24.135933",
   "analysis": {
     "market_pulse": {
       "top_3_trending_topics": [
         "space and physics",
         "mind-blowing facts",
-        "science and technology"
+        "unsolved mysteries"
       ],
       "top_3_trending_hook_styles": [
         "using a question to pique curiosity",
         "making a bold statement",
-        "using a surprising statistic"
+        "using a fascinating fact"
       ],
-      "avg_engagement_rate": "1.31%",
-      "best_performing_content_type": "short, informative videos with a mix of visuals and narration",
-      "viral_trigger": "using a combination of interesting facts and visually appealing graphics"
+      "avg_engagement_rate": "1.26%",
+      "best_performing_content_type": "short, informative videos with a mix of visuals and text overlays",
+      "viral_trigger": "using a combination of surprise, curiosity, and fascination to capture viewers' attention"
     },
     "competitor_intelligence": {
       "winning_channels": [
@@ -25,71 +25,71 @@
       "title_patterns": [
         "using questions",
         "making bold statements",
-        "using alliteration"
+        "incorporating keywords"
       ],
       "hook_patterns": [
-        "starting with a surprising fact",
-        "using a personal story",
+        "using a hook to grab attention",
+        "making a surprising statement",
         "asking a question"
       ],
       "topics_they_avoid": [
-        "controversial topics",
-        "sensitive subjects"
+        "overly complex or technical topics",
+        "topics that are too long or boring"
       ]
     },
     "my_channel_diagnosis": {
-      "best_performing_video": "Water on Mars: The Vanishing Act",
+      "best_performing_video": "The Collatz Enigma",
       "worst_performing_video": "The Hidden Truth About Reality",
       "my_strengths": [
         "creating engaging titles",
-        "using interesting facts"
+        "using interesting topics"
       ],
       "my_gaps": [
-        "lack of high-quality visuals",
-        "not using enough hooks to grab viewers' attention"
+        "not using enough visuals or animations",
+        "not optimizing for SEO"
       ],
-      "retention_problem": "viewers are dropping off due to lack of engagement and not enough interesting facts"
+      "retention_problem": "viewers are dropping off due to lack of engagement or interest in the topic"
     },
     "content_opportunities": [
       {
         "rank": 1,
-        "topic": "The Science Behind Black Holes",
-        "why": "black holes are a popular topic and there is a lack of content on this subject",
-        "hook": "Did you know that black holes are not actually holes?",
+        "topic": "the science behind black holes",
+        "why": "high engagement rate and views on similar topics",
+        "hook": "Did you know that black holes are actually doorways to other dimensions?",
         "title": "The Mind-Blowing Truth About Black Holes",
         "estimated_performance": "high",
-        "urgency": "now because it's a trending topic"
+        "urgency": "black holes are a trending topic right now"
       },
       {
         "rank": 2,
-        "topic": "The Mystery of Dark Matter",
-        "why": "dark matter is a fascinating topic that is not well understood",
-        "hook": "What if I told you that there's a type of matter that we can't see or touch?",
-        "title": "The Baffling Truth About Dark Matter",
+        "topic": "unsolved mysteries of the universe",
+        "why": "high interest and engagement on similar topics",
+        "hook": "What if I told you that there are still many unsolved mysteries in the universe?",
+        "title": "The Top 5 Unsolved Mysteries of the Universe",
         "estimated_performance": "medium",
-        "urgency": "now because it's a topic that is gaining interest"
+        "urgency": "viewers are always interested in learning about new and interesting topics"
       },
       {
         "rank": 3,
-        "topic": "The Science of Time Travel",
-        "why": "time travel is a popular topic that sparks curiosity",
-        "hook": "Imagine being able to travel back in time and change the course of history",
-        "title": "The Mind-Bending Science of Time Travel",
-        "estimated_performance": "viral",
-        "urgency": "now because it's a topic that is trending"
+        "topic": "the physics of time travel",
+        "why": "high engagement rate and views on similar topics",
+        "hook": "Is time travel really possible?",
+        "title": "The Science Behind Time Travel",
+        "estimated_performance": "high",
+        "urgency": "time travel is a fascinating topic that is always trending"
       }
     ],
     "next_video_brief": {
-      "topic": "The Science Behind Black Holes",
-      "hook": "Did you know that black holes are not actually holes?",
-      "script_direction": "Create a script that explains the science behind black holes in an engaging and easy-to-understand way, using visuals and animations to help illustrate the concepts",
+      "topic": "the science behind black holes",
+      "hook": "Did you know that black holes are actually doorways to other dimensions?",
+      "script_direction": "create a script that is engaging, informative, and easy to follow, with a mix of visuals and text overlays",
       "title": "The Mind-Blowing Truth About Black Holes",
       "tags": [
         "black holes",
         "space",
+        "physics",
         "science",
-        "astronomy",
-        "physics"
+        "universe"
       ],
       "hashtags": [
         "#shorts",
@@ -100,9 +100,9 @@
       "confidence_score": 85
     },
     "strategic_recommendations": [
-      "Create more content around popular topics such as space and physics",
-      "Use more hooks and interesting facts to grab viewers' attention",
-      "Invest in high-quality visuals and animations to make content more engaging"
+      "optimize videos for SEO by using relevant keywords and tags",
+      "use more visuals and animations to increase engagement and interest",
+      "create a content calendar to ensure consistent uploads and minimize gaps in content"
     ]
   }
 }
