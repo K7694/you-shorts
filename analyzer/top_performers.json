@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-27T06:50:20.092150",
+  "updated": "2026-07-28T06:10:09.630674",
   "performers": [
     {
       "id": "IuMAB2-l_lU",
@@ -24,6 +24,28 @@
       "performance_score": 650.50128
     },
     {
+      "id": "NTnrH-edhAU",
+      "title": "🔢 The Collatz Enigma",
+      "hook": "Multiply by 3 and add 1",
+      "script": "Multiply by 3 and add 1. Numbers collapse. Patterns emerge. But what happens next? The Collatz Conjecture remains unsolved. Multiply by 3 and add 1.",
+      "topic": "The Collatz Conjecture Mystery",
+      "views": 1137,
+      "engagement_rate": 0.792,
+      "views_per_day": 568,
+      "performance_score": 572.49856
+    },
+    {
+      "id": "NsA1K7XQGGE",
+      "title": "HOW IT WORKS #1 | 🚂 Train in a Vacuum 🌀",
+      "hook": "Ride a train through a mountain and you're in a vacuum",
+      "script": "Ride a train through a mountain and you're in a vacuum. Air is removed to reduce friction. The train accelerates, using less energy. In the tunnel, pressure is low, and air would expand dangerously. So, a vacuum is created, reducing air resistance. Ride a train through a mountain and you're in a vacuum",
+      "topic": "Vacuum Sealed Train Tunnels",
+      "views": 1090,
+      "engagement_rate": 0.642,
+      "views_per_day": 545,
+      "performance_score": 548.4989
+    },
+    {
       "id": "oi4x0YUSxl8",
       "title": "🤯 Sphere Splitting Paradox",
       "hook": "Split a sphere into 5 identical pieces",
@@ -33,28 +55,6 @@
       "engagement_rate": 0.505,
       "views_per_day": 495,
       "performance_score": 497.49975
-    },
-    {
-      "id": "KuJkNzf--Sk",
-      "title": "🚀 Sound in Space = Death? 🚫",
-      "hook": "Hear a sound in space and it kills",
-      "script": "Hear a sound in space and it kills. Sound waves propagate, pressure builds. Eardrums rupture, lungs collapse. In vacuum, sound is deadly. Hear a sound in space and it kills",
-      "topic": "Sound Waves in Space",
-      "views": 769,
-      "engagement_rate": 1.17,
-      "views_per_day": 384,
-      "performance_score": 388.4928
-    },
-    {
-      "id": "bKq65A_X0Wc",
-      "title": "🌊 Lost City Beneath the Waves",
-      "hook": "City swallowed by the sea",
-      "script": "City swallowed by the sea. Ancient metropolis hidden. Beneath Mediterranean waves, ruins lie. Temples, theaters, and towers, submerged for millennia. The question remains: what secrets do the ruins of Thonis-Heraklion still hold? City swallowed by the sea",
-      "topic": "The Lost City of Thonis-Heraklion",
-      "views": 768,
-      "engagement_rate": 0.521,
-      "views_per_day": 384,
-      "performance_score": 386.00064
     }
   ]
 }

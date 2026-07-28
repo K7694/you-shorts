@@ -5359,7 +5359,36 @@
     "affiliate_program": "",
     "archetype": "unsolved_mystery",
     "visual_variant": "photos",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "NTnrH-edhAU",
+      "title": "\ud83d\udd22 The Collatz Enigma",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-07-25T15:11:12Z",
+      "views": 1137,
+      "likes": 9,
+      "comments": 0,
+      "engagement_rate": 0.792,
+      "views_per_day": 568,
+      "tags": [
+        "Collatz Conjecture",
+        "curiosity",
+        "did you know",
+        "facts",
+        "math mystery",
+        "mindblown",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "universe",
+        "unsolved problem"
+      ],
+      "description": "A simple math equation that has puzzled experts for decades\n\n#shorts #math #mystery",
+      "duration_secs": 12,
+      "thumbnail": "https://i.ytimg.com/vi/NTnrH-edhAU/hqdefault.jpg"
+    }
   },
   {
     "id": "NsA1K7XQGGE",
@@ -5381,7 +5410,38 @@
     "episode": 1,
     "voice": "en-US-BrianMultilingualNeural",
     "visual_variant": "photos",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "NsA1K7XQGGE",
+      "title": "HOW IT WORKS #1 | \ud83d\ude82 Train in a Vacuum \ud83c\udf00",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-07-25T16:23:52Z",
+      "views": 1090,
+      "likes": 7,
+      "comments": 0,
+      "engagement_rate": 0.642,
+      "views_per_day": 545,
+      "tags": [
+        "curiosity",
+        "did you know",
+        "facts",
+        "friction",
+        "mindblown",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "train",
+        "transportation",
+        "tunnel",
+        "universe",
+        "vacuum"
+      ],
+      "description": "How trains use vacuums to reduce friction\n\nHOW IT WORKS \u2014 The hidden mechanics of everyday things.\nNew episode every day.\n\n#shorts #science #mindblown",
+      "duration_secs": 19,
+      "thumbnail": "https://i.ytimg.com/vi/NsA1K7XQGGE/hqdefault.jpg"
+    }
   },
   {
     "id": "5MJ9x096vzk",
@@ -5425,6 +5485,28 @@
     "episode": 2,
     "voice": "en-US-BrianMultilingualNeural",
     "visual_variant": "photos",
+    "stats_fetched": false
+  },
+  {
+    "id": "QU6Uor34_rQ",
+    "title": "UNSOLVED #2 | \ud83d\udd0d Dark Matter: The Unseen Force \ud83c\udf0c",
+    "uploaded_at": "2026-07-28T06:12:33.129075+00:00",
+    "hook": "A shadowy presence fills 27% of the universe",
+    "script": "A shadowy presence fills 27% of the universe. It's invisible, yet it shapes the cosmos. Galaxies rotate, stars collide, all influenced by this unseen force. Researchers have mapped its presence, but the truth remains elusive. What is this dark matter, and how does it command the universe? A shadowy presence fills 27% of the universe",
+    "topic": "Dark Matter Mystery",
+    "tags": [
+      "dark matter",
+      "cosmology",
+      "astrophysics",
+      "mystery",
+      "universe"
+    ],
+    "affiliate_program": "",
+    "archetype": "unsolved_mystery",
+    "series": "UNSOLVED",
+    "episode": 2,
+    "voice": "en-US-ChristopherNeural",
+    "visual_variant": "videos",
     "stats_fetched": false
   }
 ]
