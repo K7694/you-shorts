@@ -5463,7 +5463,38 @@
     "episode": 1,
     "voice": "en-US-ChristopherNeural",
     "visual_variant": "videos",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "5MJ9x096vzk",
+      "title": "UNSOLVED #1 | \ud83d\udd0d Quantum Secrets: Can the Past be Changed? \ud83d\udd70\ufe0f",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-07-26T06:25:09Z",
+      "views": 413,
+      "likes": 7,
+      "comments": 0,
+      "engagement_rate": 1.695,
+      "views_per_day": 206,
+      "tags": [
+        "Experiment",
+        "Mystery",
+        "Physics",
+        "Quantum Mechanics",
+        "Science",
+        "curiosity",
+        "did you know",
+        "facts",
+        "mindblown",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "universe"
+      ],
+      "description": "Explore the mind-bending quantum eraser experiment\n\nUNSOLVED \u2014 One unsolved mystery, every day.\nNew episode every day.\n\n#shorts #science #mindblown #quantum",
+      "duration_secs": 24,
+      "thumbnail": "https://i.ytimg.com/vi/5MJ9x096vzk/hqdefault.jpg"
+    }
   },
   {
     "id": "uK0oNeuG2JI",
@@ -5507,6 +5538,28 @@
     "episode": 2,
     "voice": "en-US-ChristopherNeural",
     "visual_variant": "videos",
+    "stats_fetched": false
+  },
+  {
+    "id": "DYekLzE_-rc",
+    "title": "UNSOLVED #3 | \ud83d\udd2d Uranus' Hidden Moons \ud83d\udef8",
+    "uploaded_at": "2026-07-29T06:16:39.935353+00:00",
+    "hook": "On the dark side of Uranus, moons hide secrets",
+    "script": "On the dark side of Uranus, moons hide secrets. The ice giant's system is home to 27 known moons, each with unique features. Miranda, with its bizarre, cliff-lined terrain, and Titania, with its canyons and craters, reveal a complex geological history. But what processes shaped these moons, and what lies beneath their icy surfaces? The mysteries of Uranus' moons remain, on the dark side of Uranus, moons hide secrets",
+    "topic": "Mysterious Moons of Uranus",
+    "tags": [
+      "Uranus",
+      "moons",
+      "space",
+      "mystery",
+      "astronomy"
+    ],
+    "affiliate_program": "",
+    "archetype": "unsolved_mystery",
+    "series": "UNSOLVED",
+    "episode": 3,
+    "voice": "en-US-ChristopherNeural",
+    "visual_variant": "photos",
     "stats_fetched": false
   }
 ]
