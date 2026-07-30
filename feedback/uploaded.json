@@ -5516,7 +5516,38 @@
     "episode": 2,
     "voice": "en-US-BrianMultilingualNeural",
     "visual_variant": "photos",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "uK0oNeuG2JI",
+      "title": "HOW IT WORKS #2 | \ud83c\udf2b\ufe0f The Secret of Rolling Clouds",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-07-27T06:52:26Z",
+      "views": 687,
+      "likes": 6,
+      "comments": 0,
+      "engagement_rate": 0.873,
+      "views_per_day": 344,
+      "tags": [
+        "atmospheric science",
+        "cloud formation",
+        "curiosity",
+        "did you know",
+        "facts",
+        "meteorology",
+        "mindblown",
+        "morning glory clouds",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "universe",
+        "weather phenomenon"
+      ],
+      "description": "Discover the surprising science behind morning glory clouds\n\nHOW IT WORKS \u2014 The hidden mechanics of everyday things.\nNew episode every day.\n\n#shorts #science #weather",
+      "duration_secs": 19,
+      "thumbnail": "https://i.ytimg.com/vi/uK0oNeuG2JI/hqdefault.jpg"
+    }
   },
   {
     "id": "QU6Uor34_rQ",
@@ -5560,6 +5591,28 @@
     "episode": 3,
     "voice": "en-US-ChristopherNeural",
     "visual_variant": "photos",
+    "stats_fetched": false
+  },
+  {
+    "id": "JIlg7m3YdFU",
+    "title": "UNSOLVED #4 | \ud83d\udd0d Metal's Hidden Movement",
+    "uploaded_at": "2026-07-30T06:11:47.553793+00:00",
+    "hook": "Metal sheets can move on their own",
+    "script": "Metal sheets can move on their own. This phenomenon, known as quantum fluctuations, has been observed in laboratory experiments. When metal sheets are placed in a vacuum, they can spontaneously vibrate, as if an invisible force is acting upon them. The facts are clear: these fluctuations occur at the quantum level, where the rules of classical physics no longer apply. But the problem remains: why do these fluctuations cause the metal to move, and what is the underlying mechanism behind this bizarre phenomenon? Metal sheets can move on their own, and we still don't know why.",
+    "topic": "Quantum Fluctuations in Metal",
+    "tags": [
+      "quantum mechanics",
+      "metal",
+      "physics",
+      "unsolved mystery",
+      "science"
+    ],
+    "affiliate_program": "",
+    "archetype": "unsolved_mystery",
+    "series": "UNSOLVED",
+    "episode": 4,
+    "voice": "en-US-ChristopherNeural",
+    "visual_variant": "videos",
     "stats_fetched": false
   }
 ]
