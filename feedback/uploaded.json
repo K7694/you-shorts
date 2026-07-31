@@ -5569,7 +5569,37 @@
     "episode": 2,
     "voice": "en-US-ChristopherNeural",
     "visual_variant": "videos",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "QU6Uor34_rQ",
+      "title": "UNSOLVED #2 | \ud83d\udd0d Dark Matter: The Unseen Force \ud83c\udf0c",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-07-28T06:12:54Z",
+      "views": 67,
+      "likes": 3,
+      "comments": 0,
+      "engagement_rate": 4.478,
+      "views_per_day": 22,
+      "tags": [
+        "astrophysics",
+        "cosmology",
+        "curiosity",
+        "dark matter",
+        "did you know",
+        "facts",
+        "mindblown",
+        "mystery",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "universe"
+      ],
+      "description": "Uncover the mystery of dark matter, the invisible presence shaping the universe\n\nUNSOLVED \u2014 One unsolved mystery, every day.\nNew episode every day.\n\n#shorts #science #mindblown #space",
+      "duration_secs": 27,
+      "thumbnail": "https://i.ytimg.com/vi/QU6Uor34_rQ/hqdefault.jpg"
+    }
   },
   {
     "id": "DYekLzE_-rc",
@@ -5591,7 +5621,37 @@
     "episode": 3,
     "voice": "en-US-ChristopherNeural",
     "visual_variant": "photos",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "DYekLzE_-rc",
+      "title": "UNSOLVED #3 | \ud83d\udd2d Uranus' Hidden Moons \ud83d\udef8",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-07-29T06:17:04Z",
+      "views": 721,
+      "likes": 11,
+      "comments": 1,
+      "engagement_rate": 1.664,
+      "views_per_day": 360,
+      "tags": [
+        "Uranus",
+        "astronomy",
+        "curiosity",
+        "did you know",
+        "facts",
+        "mindblown",
+        "moons",
+        "mystery",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "universe"
+      ],
+      "description": "Explore the mysterious moons of Uranus\n\nUNSOLVED \u2014 One unsolved mystery, every day.\nNew episode every day.\n\n#shorts #science #space",
+      "duration_secs": 32,
+      "thumbnail": "https://i.ytimg.com/vi/DYekLzE_-rc/hqdefault.jpg"
+    }
   },
   {
     "id": "JIlg7m3YdFU",
@@ -5613,6 +5673,28 @@
     "episode": 4,
     "voice": "en-US-ChristopherNeural",
     "visual_variant": "videos",
+    "stats_fetched": false
+  },
+  {
+    "id": "Knr-VAuUrN0",
+    "title": "HOW IT WORKS #3 | \ud83d\udd25 Electric Eel Shock Secret \ud83d\udd0b",
+    "uploaded_at": "2026-07-31T06:33:03.290346+00:00",
+    "hook": "Touch an electric eel and get knocked off your feet",
+    "script": "Touch an electric eel and get knocked off your feet. It generates 600 volts, enough to power a light bulb. Special cells called electrocytes produce the shock, releasing ions that create an electric field. This field disrupts your nervous system, causing muscle contractions. The eel uses this defense to stun predators, and now you know its secret. Touch an electric eel and get knocked off your feet",
+    "topic": "Electric Eel Shock Mechanism",
+    "tags": [
+      "electric eel",
+      "shock mechanism",
+      "animal defense",
+      "nature secrets",
+      "wildlife"
+    ],
+    "affiliate_program": "",
+    "archetype": "how_does_it_work",
+    "series": "HOW IT WORKS",
+    "episode": 3,
+    "voice": "en-US-BrianMultilingualNeural",
+    "visual_variant": "photos",
     "stats_fetched": false
   }
 ]
