@@ -1290,8 +1290,12 @@ def _download_pexels_image(query: str, path: str, index: int, used_ids: set) -> 
         if not attempt_q:
             continue
         try:
+            # Orientation follows the output format: Shorts are portrait,
+            # long-form is landscape. Asking for the wrong one means every
+            # image gets heavily cropped.
+            _orient = "landscape" if VIDEO_WIDTH >= VIDEO_HEIGHT else "portrait"
             url = ("https://api.pexels.com/v1/search?" + urllib.parse.urlencode({
-                "query": attempt_q, "orientation": "portrait",
+                "query": attempt_q, "orientation": _orient,
                 "size": "large", "per_page": 15,
             }))
             req = urllib.request.Request(url, headers={
@@ -1371,7 +1375,9 @@ def _download_pexels_video(query: str, path: str, index: int, used_ids: set) -> 
             continue
         try:
             url = ("https://api.pexels.com/videos/search?" + urllib.parse.urlencode({
-                "query": attempt_q, "orientation": "portrait", "per_page": 10,
+                "query": attempt_q,
+                "orientation": "landscape" if VIDEO_WIDTH >= VIDEO_HEIGHT else "portrait",
+                "per_page": 10,
             }))
             req = urllib.request.Request(url, headers={
                 "Authorization": PEXELS_API_KEY,
@@ -1690,7 +1696,10 @@ Style: Main,{CAPTION_FONT},{CAPTION_SIZE},&H00FFFFFF,&H000000FF,&H00000000,&H800
 [Events]
 Format: Layer,Start,End,Style,Name,MarginL,MarginR,MarginV,Effect,Text
 """
-    cx, cy = VIDEO_WIDTH // 2, VIDEO_HEIGHT // 2 + 280
+    cx = VIDEO_WIDTH // 2
+    # Lower third, proportional so it sits correctly in both the 9:16
+    # Shorts frame and the 16:9 long-form frame.
+    cy = int(VIDEO_HEIGHT * 0.76)
     n = CAPTION_WORDS_PER_LINE
 
     # Group words into chunks
@@ -1740,7 +1749,10 @@ Style: Main,{CAPTION_FONT},{CAPTION_SIZE},&H00FFFFFF,&H000000FF,&H00000000,&H800
 [Events]
 Format: Layer,Start,End,Style,Name,MarginL,MarginR,MarginV,Effect,Text
 """
-    cx, cy = VIDEO_WIDTH // 2, VIDEO_HEIGHT // 2 + 280
+    cx = VIDEO_WIDTH // 2
+    # Lower third, proportional so it sits correctly in both the 9:16
+    # Shorts frame and the 16:9 long-form frame.
+    cy = int(VIDEO_HEIGHT * 0.76)
 
     for i, line in enumerate(lines):
         s, e = i * t, (i + 1) * t
@@ -1755,11 +1767,25 @@ Format: Layer,Start,End,Style,Name,MarginL,MarginR,MarginV,Effect,Text
         f.write(ass)
 
 
-def _make_slideshow(images: list, duration: float, path: str) -> bool:
-    """Create slideshow with Ken Burns effect."""
+def _make_slideshow(images: list, duration: float, path: str, fast: bool = False) -> bool:
+    """Create slideshow with Ken Burns effect.
+
+    `fast=True` is for long-form (8-10 min), where the default settings are
+    far too expensive: every frame was being upscaled to 2160x3840 before
+    zoompan and then sharpened, which is fine for a 35s Short (~1k frames)
+    but means ~13k heavyweight frames on a documentary. Fast mode uses a
+    1.3x working scale (still ample headroom for a 1.25x zoom at
+    1080x1920), skips the per-frame unsharp, and encodes with a quicker
+    preset. Visually indistinguishable after the downscale.
+    """
     t_each = duration / len(images)
     inputs = []
     filters = []
+    work_w = int(VIDEO_WIDTH * (1.3 if fast else 2))
+    work_h = int(VIDEO_HEIGHT * (1.3 if fast else 2))
+    polish = ("eq=contrast=1.15:saturation=1.2:brightness=-0.02,"
+              if fast else
+              "eq=contrast=1.15:saturation=1.2:brightness=-0.02,unsharp=5:5:1.0:5:5:0.0,")
 
     for i, img in enumerate(images):
         inputs.extend(["-loop", "1", "-t", str(t_each + 0.8), "-i", img])
@@ -1780,8 +1806,8 @@ def _make_slideshow(images: list, duration: float, path: str) -> bool:
             py = f"y='ih*0.1*on/{frames}'"
 
         filters.append(
-            f"[{i}:v]scale={VIDEO_WIDTH*2}:{VIDEO_HEIGHT*2},"
-            f"eq=contrast=1.15:saturation=1.2:brightness=-0.02,unsharp=5:5:1.0:5:5:0.0,"
+            f"[{i}:v]scale={work_w}:{work_h},"
+            f"{polish}"
             f"zoompan={zoom}:{px}:{py}:d={frames}:s={VIDEO_WIDTH}x{VIDEO_HEIGHT}:fps={VIDEO_FPS},"
             f"setpts=PTS-STARTPTS[v{i}]"
         )
@@ -1799,10 +1825,11 @@ def _make_slideshow(images: list, duration: float, path: str) -> bool:
             prev = label
         fc = fc.rstrip(";")
 
+    speed = ["-preset", "veryfast", "-crf", "20"] if fast else []
     result = subprocess.run(
         ["ffmpeg", "-y", *inputs, "-filter_complex", fc,
          "-map", "[out]", "-c:v", "libx264", "-pix_fmt", "yuv420p",
-         "-r", str(VIDEO_FPS), "-t", str(duration), path],
+         *speed, "-r", str(VIDEO_FPS), "-t", str(duration), path],
         capture_output=True, text=True,
     )
     return result.returncode == 0
@@ -1827,7 +1854,9 @@ def _make_simple_slideshow(images: list, duration: float, path: str):
 
 def assemble_video(audio: str, images: list, captions: list, filename: str,
                    word_timestamps: list = None, video_clips: list = None,
-                   caption_hex: str = "&H0000FFFF") -> str:
+                   caption_hex: str = "&H0000FFFF",
+                   preset: str = "medium", crf: str = "18",
+                   fast_slideshow: bool = False) -> str:
     """Assemble final video: visuals + audio + captions → .mp4
 
     Visual track priority: gameplay (USE_BACKGROUND_VIDEO) → stock video
@@ -1901,8 +1930,8 @@ def assemble_video(audio: str, images: list, captions: list, filename: str,
                 raise RuntimeError("Video montage failed and no photo fallback available")
         print("      ✅ Montage done")
     else:
-        print("      📸 Creating slideshow with Ken Burns...")
-        if not _make_slideshow(images, duration, slide_path):
+        print(f"      📸 Creating slideshow with Ken Burns{' (fast)' if fast_slideshow else ''}...")
+        if not _make_slideshow(images, duration, slide_path, fast=fast_slideshow):
             print("      ⚠️  Falling back to simple slideshow...")
             _make_simple_slideshow(images, duration, slide_path)
         print("      ✅ Slideshow done")
@@ -2044,7 +2073,7 @@ def assemble_video(audio: str, images: list, captions: list, filename: str,
         "-filter_complex", filter_complex_str,
         "-vf", vf_str,
         "-map", "0:v", "-map", "[aout]",
-        "-c:v", "libx264", "-preset", "medium", "-crf", "18",
+        "-c:v", "libx264", "-preset", preset, "-crf", crf,
         "-c:a", "aac", "-b:a", "192k",
         "-shortest", "-pix_fmt", "yuv420p", "-r", str(VIDEO_FPS),
         "-movflags", "+faststart",

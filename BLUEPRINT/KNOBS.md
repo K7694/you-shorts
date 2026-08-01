@@ -47,6 +47,19 @@ All in `config.py` unless noted.
 | `USE_MASCOT_OVERLAY` | False | AI mascot character overlay |
 | `GEMINI_API_KEY` + `LLM_PRIMARY="gemini"` | fallback | Gemini as primary LLM |
 
+## Long-form (`longform.py`, weekly)
+| Knob | Default | Notes |
+|------|---------|-------|
+| `SEGMENTS` / `WORDS_PER_SEGMENT` | 6 / 250 | ~7.5–9 min. Generate PER SEGMENT — one call asking for 1,200 words returns ~530 |
+| `SEGMENT_PACING_SEC` | 12 | Groq free tier meters ~12k tokens/MINUTE; a 7-call burst trips 429 without this |
+| `IMAGES_PER_SEGMENT` | 3 | 18 visuals total across the runtime |
+| `LANDSCAPE_W/H` | 1920×1080 | Long-form must be 16:9 — watch hours come from desktop/TV. Overrides `you.py` globals, which also flips Pexels searches to landscape |
+| `LONGFORM_PRESET` / `CRF` | veryfast / 23 | 15–20× the frames of a Short |
+| `fast_slideshow` | True | Ken Burns at 1.3× working scale, no unsharp. Default 2× (=4K/frame) + unsharp is far too slow at 13k frames |
+| Cron | Sun 05:30 UTC | `.github/workflows/longform.yml`, 90-min timeout |
+
+Measured: 7.3-min video builds in ~18 min locally, ~100 MB, 1.8 Mbps.
+
 ## State files (what the machine remembers)
 | File | Role | Reset for a new channel? |
 |------|------|--------------------------|

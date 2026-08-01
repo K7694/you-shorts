@@ -64,8 +64,32 @@ The working formula:
 - Subscribers 9 → 20 in three weeks
 - 7 of 8 videos in the final week cleared 200 views with organic likes
 
+## The monetization reality (research + measured, Aug 2026)
+
+Read this before optimizing anything.
+
+- **YPP needs 1,000 subs + 10,000,000 Shorts views / 90 days.** At ~700
+  views/video that is ~240x away.
+- **Shorts pay $0.01–0.07 RPM.** Even *winning* that race is $33–233/month.
+  Shorts revenue is pooled globally, not paid per-video. It is structurally
+  a rounding error — **Shorts ad revenue is not a business.**
+- **The long-form door is ~14x easier:** 1,000 subs + 4,000 watch HOURS.
+  10M Shorts views ≈ 55,000 hours consumed; long-form needs 4,000.
+- **Shorts-only channels get throttled.** 2026 distribution rewards the
+  "bridge" — Shorts viewers clicking into long-form. No long-form was
+  capping the Shorts.
+- **Real faceless money is: audience → owned asset** (affiliate that fits,
+  digital product, newsletter, sponsorship). Ad revenue is last, not first.
+
+So the system now runs **two pipelines**: daily Shorts for discovery
+(`you.py`) and weekly long-form for watch-hours + conversion
+(`longform.py`). Nothing was dropped — they feed each other.
+
 ## Known ceiling / next lever
 
-Views convert to subscribers at only ~0.2%. The next unlock is a
-**subscribable format** — a recurring series identity, not one-off facts.
-Design that BEFORE scaling a clone of this system.
+Views convert to subscribers at only ~0.1–0.5%. Views are solved; the
+unsolved problem is conversion. Two levers, in order:
+1. **Series identity** (shipped) — named shows with distinct voice,
+   captions and structure, so there is something to subscribe *to*.
+2. **Long-form** (shipped) — where subscribing and watch-hours actually
+   happen. Watch the bridge rate.

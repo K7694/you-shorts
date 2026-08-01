@@ -1,0 +1,85 @@
+name: YOU — Weekly Long-Form
+
+# ── PHASE 2 (2026-08-01) ─────────────────────────────────────────
+# One 8-10 minute documentary per week, built from the best-performing
+# Shorts topics.
+#
+# Why weekly long-form exists:
+#  · YPP via Shorts needs 1,000 subs + 10,000,000 Shorts views/90 days.
+#    Via long-form it needs 1,000 subs + 4,000 watch HOURS — and 10M
+#    Shorts views is ~55,000 hours of watching, so this door is ~14x
+#    less watch time for the same unlock.
+#  · Long-form RPM is an order of magnitude above Shorts ($0.01-0.07).
+#  · YouTube throttles Shorts-only channels: it rewards Shorts viewers
+#    bridging to long-form. Having no long-form was capping the Shorts.
+#
+# Runs Sunday 05:30 UTC (11:00 AM IST). Shorts keep running daily —
+# nothing is replaced.
+
+on:
+  schedule:
+    - cron: '30 5 * * 0'   # Sundays, 11:00 AM IST
+  workflow_dispatch:
+
+jobs:
+  create-longform:
+    runs-on: ubuntu-latest
+    # An 8-10 min render is 15-20x the frames of a Short. Minutes are free
+    # on a public repo, so give it generous headroom rather than risk a
+    # timeout mid-encode.
+    timeout-minutes: 90
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Cache pip
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: pip-${{ hashFiles('requirements.txt') }}
+          restore-keys: pip-
+
+      - name: Install FFmpeg + fonts
+        timeout-minutes: 5
+        run: |
+          sudo apt-get update -q
+          sudo apt-get install -y ffmpeg fonts-liberation fonts-freefont-ttf
+
+      - name: Install Python packages
+        run: pip install -r requirements.txt
+
+      - name: Write credentials
+        run: |
+          echo '${{ secrets.CLIENT_SECRETS_JSON }}' > client_secrets.json
+          echo '${{ secrets.YOUTUBE_TOKEN_JSON }}' > youtube_token.json
+
+      - name: Build and upload long-form video
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          YOUTUBE_DATA_API_KEY: ${{ secrets.YOUTUBE_DATA_API_KEY }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          PYTHONIOENCODING: utf-8
+        run: python longform.py
+
+      - name: Save state to repo
+        if: always()
+        run: |
+          git config user.name "YOU Bot"
+          git config user.email "you-bot@automation.local"
+          git add feedback/ 2>/dev/null || true
+          git diff --staged --quiet && echo "No state changes." || \
+            git commit -m "auto: long-form state [skip ci]"
+          git pull --rebase --autostash || true
+          git push || echo "Push failed — nothing to push"

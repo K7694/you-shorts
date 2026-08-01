@@ -28,6 +28,21 @@ for _d in _FFMPEG_CANDIDATES:
         os.environ["PATH"] = _d + os.pathsep + os.environ.get("PATH", "")
         break
 
+# ── Load .env for local runs ─────────────────────────────────
+# CI supplies these as real environment variables (from GitHub Secrets);
+# locally they live in .env. Without this, running any entrypoint directly
+# gets EMPTY keys and every provider is silently skipped — which surfaces
+# as the very confusing "All LLMs failed:" with an empty error list.
+# Existing environment variables always win, so CI is unaffected.
+_ENV_FILE = Path(__file__).parent / ".env"
+if _ENV_FILE.exists():
+    for _line in _ENV_FILE.read_text(encoding="utf-8").splitlines():
+        _line = _line.strip()
+        if not _line or _line.startswith("#") or "=" not in _line:
+            continue
+        _k, _v = _line.split("=", 1)
+        os.environ.setdefault(_k.strip(), _v.strip().strip('"').strip("'"))
+
 # ── Directories ──────────────────────────────────────────────
 BASE_DIR = Path(__file__).parent
 OUTPUT_DIR = BASE_DIR / "output"
