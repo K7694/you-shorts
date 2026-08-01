@@ -1031,9 +1031,11 @@ Return ONLY valid JSON (no markdown, no backticks):
         data["title"] = f"{label} | {raw_title}"[:100]
         data["series"] = series_name
         data["episode"] = episode
-        promise = series.get("promise", "")
-        desc = data.get("description", "").strip()
-        data["description"] = f"{desc}\n\n{series_name} — {promise}\nNew episode every day."[:4900]
+        # NOTE: the series promise + subscribe ask are appended later by
+        # _plain_description (which also carries the long-form bridge link),
+        # so don't add them here — it duplicated the promise in the live
+        # description.
+        data["description"] = data.get("description", "").strip()[:4900]
     data["voice"] = series.get("voice", VOICE)
     data["voice_rate"] = series.get("rate", VOICE_RATE)
     data["caption_hex"] = series.get("caption_hex", "&H0000FFFF")
