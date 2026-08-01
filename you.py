@@ -874,31 +874,38 @@ def _generate_script_curiosity(topic: str = None) -> dict:
 
     # ── Topic selection ────────────────────────────────────────────
     if not topic:
-        brief = {}
+        # Take the first usable analyzer suggestion. The analyzer now
+        # returns backups as well as a primary, because a single stale
+        # suggestion used to discard the whole analysis (~10 of 12 runs).
+        candidates = []
         try:
-            from analyzer import get_latest_brief
-            brief = get_latest_brief() or {}
+            from analyzer import get_brief_candidates
+            candidates = get_brief_candidates() or []
         except Exception:
-            brief = {}
+            try:
+                from analyzer import get_latest_brief
+                one = get_latest_brief() or {}
+                candidates = [one] if one.get("topic") else []
+            except Exception:
+                candidates = []
 
-        # Taint-guard: the analyzer's state (used_topics, performance,
-        # competitor cache) still carries AI-tool/affiliate residue from
-        # the Phase 1 era, so it can emit affiliate topics like
-        # "Review of AI-powered video editing tools". Reject any brief
-        # whose topic/hook reads affiliate and fall through to fresh
-        # niche-based curiosity generation. This self-heals as science
-        # videos replace the old history.
-        brief_topic = brief.get("topic", "")
-        brief_blob = {"hook": brief.get("hook", ""), "script": brief_topic}
-        # A brief is usable only if it's both non-affiliate AND not a
-        # repeat of a recently-covered subject. The analyzer self-healed
-        # back to science but keeps re-suggesting black holes — subject
-        # recency catches that where the affiliate check can't.
-        brief_is_clean = (
-            brief_topic
-            and not _is_affiliate_tainted(brief_blob)
-            and not _subject_recently_used(brief_topic, used)
-        )
+        # A suggestion is usable only if it is non-affiliate AND not a
+        # repeat of a recent subject. The affiliate check catches Phase-1
+        # residue; the recency check catches the niche's greatest hits.
+        brief, brief_topic, brief_is_clean = {}, "", False
+        for cand in candidates:
+            c_topic = cand.get("topic", "")
+            c_blob = {"hook": cand.get("hook", ""), "script": c_topic}
+            if not c_topic:
+                continue
+            if _is_affiliate_tainted(c_blob):
+                print(f"   🚫 Brief candidate affiliate-tainted: \"{c_topic}\"")
+                continue
+            if _subject_recently_used(c_topic, used):
+                print(f"   🔁 Brief candidate repeats a recent subject: \"{c_topic}\"")
+                continue
+            brief, brief_topic, brief_is_clean = cand, c_topic, True
+            break
 
         if brief_is_clean:
             print(f"   📊 Using Analyzer brief: {brief_topic}")
@@ -908,10 +915,9 @@ def _generate_script_curiosity(topic: str = None) -> dict:
                 f'Script direction: {brief.get("script_direction", "")}'
             )
         else:
-            if brief_topic and _is_affiliate_tainted(brief_blob):
-                print(f"   🚫 Brief topic looks affiliate-tainted, ignoring: \"{brief_topic}\"")
-            elif brief_topic:
-                print(f"   🔁 Brief repeats a recent subject, ignoring: \"{brief_topic}\"")
+            # Per-candidate rejection reasons were already logged above.
+            if candidates:
+                print(f"   ⚠️  All {len(candidates)} analyzer suggestion(s) unusable")
             print(f"   🧪 Fresh curiosity topic — domain: {domain}")
             topic_part = (
                 f'Pick a UNIQUE, surprising, genuinely curiosity-provoking topic from '

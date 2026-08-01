@@ -413,10 +413,29 @@ def analyze_patterns(trending: list, competitors: list, my_videos: list) -> dict
     else:
         my_summary = "No videos yet or stats not available."
 
+    # Topics we've already covered. Without this the analyzer keeps
+    # proposing the niche's greatest hits (black holes, etc.), the
+    # pipeline's subject-recency guard rejects the brief, and the whole
+    # analysis is discarded — it was being thrown away on 10 of 12 runs.
+    _recent = []
+    try:
+        _used = json.loads((BASE_DIR / "used_topics.json").read_text(encoding="utf-8"))
+        _recent = [t.get("topic", "") for t in _used[-25:] if t.get("topic")]
+    except Exception:
+        pass
+    already_covered = "\n".join(f"- {t}" for t in _recent) if _recent else "Nothing yet."
+
     prompt = f"""You are a world-class YouTube Shorts strategist and data analyst.
 You have access to real performance data from YouTube. Your job is to extract actionable intelligence.
 
 CHANNEL NICHE: {CHANNEL_NICHE}
+
+=== ALREADY COVERED — DO NOT PROPOSE THESE OR CLOSE VARIANTS ===
+{already_covered}
+
+Every topic you propose MUST be about a clearly different subject from the
+list above. Reusing a subject (even with a new angle or title) is the single
+most common failure mode here and gets the whole brief discarded.
 
 === TRENDING SHORTS (last 30 days, sorted by views/day velocity) ===
 {trending_summary if trending_summary else "No trending data available."}
@@ -489,6 +508,14 @@ Perform a DEEP analysis and return a JSON object with this EXACT structure:
         "thumbnail_concept": "describe what the thumbnail should show",
         "confidence_score": 85
     }},
+    "backup_topics": [
+        {{"topic": "a DIFFERENT subject from next_video_brief and from the covered list",
+          "hook": "exact first sentence",
+          "script_direction": "2-3 sentences"}},
+        {{"topic": "another clearly different subject",
+          "hook": "exact first sentence",
+          "script_direction": "2-3 sentences"}}
+    ],
     "strategic_recommendations": [
         "Specific actionable recommendation 1",
         "Specific actionable recommendation 2",
@@ -945,6 +972,29 @@ def get_latest_brief() -> dict:
         except Exception:
             pass
     return {}
+
+
+def get_brief_candidates() -> list:
+    """Primary brief plus its backups, best first.
+
+    The pipeline rejects any topic repeating a recent subject. Offering
+    alternates means one stale suggestion no longer discards the entire
+    analysis (previously the case on ~10 of 12 runs).
+    """
+    if not BRIEF_DB.exists():
+        return []
+    try:
+        analysis = json.loads(BRIEF_DB.read_text()).get("analysis", {})
+    except Exception:
+        return []
+    out = []
+    primary = analysis.get("next_video_brief") or {}
+    if primary.get("topic"):
+        out.append(primary)
+    for b in analysis.get("backup_topics") or []:
+        if isinstance(b, dict) and b.get("topic"):
+            out.append(b)
+    return out
 
 
 # ─────────────────────────────────────────────────────────────────
