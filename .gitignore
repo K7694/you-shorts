@@ -3,10 +3,13 @@ client_secrets.json
 youtube_token.json
 .env
 
-# Old notes / auth helper
+# Old notes
 PRD.md
-auth_youtube.py
 setup.sh
+# NOTE: auth_youtube.py is intentionally TRACKED — it defines the OAuth
+# scopes and is a required setup step (see BLUEPRINT/REPLICATE.md). It
+# contains no secrets; those live in client_secrets.json / youtube_token.json,
+# both ignored above.
 
 # Generated content
 output/
