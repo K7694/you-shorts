@@ -298,9 +298,16 @@ def build_video(script: dict, upload: bool = True) -> dict:
     # 4. Description with real chapter timestamps (helps retention + UX)
     def stamp(sec):
         return f"{int(sec//60)}:{int(sec%60):02d}"
-    chapter_lines = "\n".join(f"{stamp(c['t'])} {c['heading']}" for c in chapters)
+    # YouTube only renders chapters when the FIRST one is exactly 0:00 and
+    # each is >=10s after the previous. Segment 1 already starts at 0:00, so
+    # a separate "Intro" line would duplicate 0:00 and void the whole list.
+    chapter_lines = "\n".join(
+        f"{stamp(c['t'])} {c['heading']}"
+        for i, c in enumerate(chapters)
+        if i == 0 or c["t"] - chapters[i - 1]["t"] >= 10
+    )
     desc = (f"{script['theme']}\n\n"
-            f"CHAPTERS\n0:00 Intro\n{chapter_lines}\n\n"
+            f"CHAPTERS\n{chapter_lines}\n\n"
             f"New deep dive every week. Daily science Shorts on the channel.\n\n"
             f"#science #documentary #space")
 

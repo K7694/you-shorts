@@ -2284,7 +2284,10 @@ def upload_youtube(video_path: str, title: str, desc: str, tags: list,
             print(f"      ⏳ {int(status.progress()*100)}%")
 
     vid = response["id"]
-    url = f"https://youtube.com/shorts/{vid}"
+    # Long-form (landscape) isn't a Short — the /shorts/ URL would be
+    # misleading in logs. Pick the form that matches the output format.
+    url = (f"https://youtube.com/watch?v={vid}" if VIDEO_WIDTH >= VIDEO_HEIGHT
+           else f"https://youtube.com/shorts/{vid}")
     print(f"   ✅ Live at: {url}")
 
     # Upload custom thumbnail
