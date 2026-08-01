@@ -509,6 +509,24 @@ DEFAULT_SERIES = {
 # viewer a reason to expect the next one.
 SERIES_EPISODE_NUMBERS = True
 
+# ══════════════════════════════════════════════════════════════
+#  🌉 SHORTS → LONG-FORM BRIDGE (2026-08-01)
+# ══════════════════════════════════════════════════════════════
+# YouTube's 2026 distribution explicitly rewards Shorts viewers who click
+# through to long-form, and throttles channels whose Shorts go nowhere.
+# We built the weekly documentary for exactly this — but nothing pointed
+# at it, so the mechanic was half-built.
+#
+# Deliberately NOT an on-screen overlay: the loop ending is what drives
+# our completion rate (and the 700-view median), so we add the bridge
+# only on surfaces that don't touch the video itself — the pinned comment
+# (the clickable surface on Shorts) and the description.
+#
+# NOTE: this reuses the pinned-comment plumbing built for affiliates, but
+# it is NOT monetization — it links our own video, so it stays on while
+# MONETIZATION_ENABLED is off.
+BRIDGE_ENABLED = True
+
 # ── Curiosity DOMAINS (2026-06-14) — anti-repetition ───────────
 # The batch repeated "black holes" in 4 of 8 videos because exact-
 # string dedup doesn't catch subject repetition. The pipeline now

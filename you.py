@@ -708,6 +708,39 @@ except NameError:
     _ARCHETYPE_WEIGHTS = {}
 
 
+_LONGFORM_LOG = BASE_DIR / "feedback" / "longform.json"
+
+
+def _latest_longform() -> dict | None:
+    """Most recent published long-form video, for the Shorts bridge."""
+    try:
+        entries = json.loads(_LONGFORM_LOG.read_text(encoding="utf-8"))
+    except Exception:
+        return None
+    for e in reversed(entries):
+        vid = (e.get("id") or "").strip()
+        if vid and vid != "local":
+            return {"id": vid, "title": e.get("title", "the latest deep dive")}
+    return None
+
+
+def _build_bridge_comment(script: dict) -> str | None:
+    """Pinned comment pointing Shorts viewers at the weekly documentary.
+
+    The pinned comment is the clickable surface on Shorts (description
+    links stopped being clickable there in 2024), and it costs nothing in
+    retention because it never touches the video.
+    """
+    lf = _latest_longform()
+    if not lf:
+        return None
+    series = script.get("series", "")
+    line = f"Full documentary: {lf['title']} 👇\nhttps://youtube.com/watch?v={lf['id']}"
+    if series:
+        line += f"\n\n{series} drops daily. New deep dive every Sunday."
+    return line
+
+
 def _series_for(archetype: str) -> dict:
     """Series identity (voice/captions/structure/title) for an archetype."""
     try:
@@ -2299,10 +2332,20 @@ def upload_youtube(video_path: str, title: str, desc: str, tags: list,
         except Exception as e:
             print(f"   ⚠️  Thumbnail upload failed (channel may need verification): {e}")
 
-    # Post pinned comment with affiliate link (primary monetization CTA).
-    # RESET: skipped entirely while MONETIZATION_ENABLED is False — no
-    # affiliate link surface anywhere on the video.
-    if script and MONETIZATION_ENABLED:
+    # Pinned comment — the only clickable surface on a Short.
+    # Bridge (our own documentary) takes priority; the affiliate variant
+    # only returns if MONETIZATION_ENABLED is switched back on.
+    if script and BRIDGE_ENABLED and not MONETIZATION_ENABLED:
+        try:
+            bridge = _build_bridge_comment(script)
+            if bridge:
+                _post_pinned_comment(yt, vid, bridge)
+                print("   🌉 Bridge comment pinned (→ latest documentary)")
+            else:
+                print("   ℹ️  No long-form published yet — bridge comment skipped")
+        except Exception as e:
+            print(f"   ⚠️  Could not post bridge comment: {e}")
+    elif script and MONETIZATION_ENABLED:
         try:
             from compliance import build_pinned_comment
             comment_text = build_pinned_comment(script)
@@ -2419,7 +2462,27 @@ def create_video(topic: str = None, upload: bool = True) -> dict:
         # only used when MONETIZATION_ENABLED brings affiliates back.
         def _plain_description(s: dict) -> str:
             tags = s.get("hashtags") or ["#shorts", "#science", "#mindblown"]
-            return (s.get("description", "") + "\n\n" + " ".join(tags)).strip()
+            parts = [s.get("description", "").strip()]
+            # Bridge: send Shorts viewers to the weekly documentary. Also
+            # states the reason to subscribe — series identity only converts
+            # if something actually names the promise.
+            if BRIDGE_ENABLED:
+                lf = _latest_longform()
+                if lf:
+                    parts.append(f"▶ FULL DOCUMENTARY: {lf['title']}\n"
+                                 f"https://youtube.com/watch?v={lf['id']}")
+                series = s.get("series", "")
+                promise = ""
+                try:
+                    promise = CONTENT_SERIES.get(s.get("archetype", ""), {}).get("promise", "")
+                except NameError:
+                    pass
+                if series:
+                    parts.append(f"📺 {series} — {promise}\n"
+                                 f"Subscribe for a new episode every day, "
+                                 f"plus a full deep dive every Sunday.")
+            parts.append(" ".join(tags))
+            return "\n\n".join(p for p in parts if p).strip()
 
         if MONETIZATION_ENABLED:
             print("\n  ┌─ ⚖️  COMPLIANCE ─────────────────────────────")

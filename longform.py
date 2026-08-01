@@ -306,9 +306,12 @@ def build_video(script: dict, upload: bool = True) -> dict:
         for i, c in enumerate(chapters)
         if i == 0 or c["t"] - chapters[i - 1]["t"] >= 10
     )
+    # Reciprocal bridge: Shorts point here, this points back at the daily
+    # series. Subscribing is framed around what they actually get next.
     desc = (f"{script['theme']}\n\n"
             f"CHAPTERS\n{chapter_lines}\n\n"
-            f"New deep dive every week. Daily science Shorts on the channel.\n\n"
+            f"📺 Subscribe for a new deep dive every Sunday — plus daily "
+            f"science Shorts (UNSOLVED, HOW IT WORKS, MIND BENDER, WHAT IF).\n\n"
             f"#science #documentary #space")
 
     # 5. Publish
