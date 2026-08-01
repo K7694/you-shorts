@@ -5747,5 +5747,27 @@
     "voice": "en-US-ChristopherNeural",
     "visual_variant": "videos",
     "stats_fetched": false
+  },
+  {
+    "id": "R_7SK3217Zc",
+    "title": "UNSOLVED #6 | \ud83c\udfef Lost City: The Indus Valley Enigma",
+    "uploaded_at": "2026-08-01T14:33:15.330690+00:00",
+    "hook": "A 4,000-year-old city vanished overnight",
+    "script": "A 4,000-year-old city vanished overnight. The Indus Valley Civilization, with its sophisticated urban planning and architecture, was suddenly abandoned. The streets, once filled with people, were empty. The buildings, once full of life, were silent. What happened to the people who lived there? The cities were left intact, with no signs of war or natural disaster. The mystery remains, a 4,000-year-old city vanished overnight",
+    "topic": "The Disappearance of the Indus Valley Civilization",
+    "tags": [
+      "Indus Valley Civilization",
+      "Lost City",
+      "Ancient Mystery",
+      "Unsolved Enigma",
+      "Archaeology"
+    ],
+    "affiliate_program": "",
+    "archetype": "unsolved_mystery",
+    "series": "UNSOLVED",
+    "episode": 6,
+    "voice": "en-US-ChristopherNeural",
+    "visual_variant": "videos",
+    "stats_fetched": false
   }
 ]
