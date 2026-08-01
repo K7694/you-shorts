@@ -5673,7 +5673,36 @@
     "episode": 4,
     "voice": "en-US-ChristopherNeural",
     "visual_variant": "videos",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "JIlg7m3YdFU",
+      "title": "UNSOLVED #4 | \ud83d\udd0d Metal's Hidden Movement",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-07-30T06:12:06Z",
+      "views": 701,
+      "likes": 11,
+      "comments": 1,
+      "engagement_rate": 1.712,
+      "views_per_day": 350,
+      "tags": [
+        "curiosity",
+        "did you know",
+        "facts",
+        "metal",
+        "mindblown",
+        "physics",
+        "quantum mechanics",
+        "science",
+        "shorts",
+        "space",
+        "universe",
+        "unsolved mystery"
+      ],
+      "description": "Discover the bizarre phenomenon of quantum fluctuations in metal\n\nUNSOLVED \u2014 One unsolved mystery, every day.\nNew episode every day.\n\n#shorts #science #mindblown",
+      "duration_secs": 38,
+      "thumbnail": "https://i.ytimg.com/vi/JIlg7m3YdFU/hqdefault.jpg"
+    }
   },
   {
     "id": "Knr-VAuUrN0",
@@ -5695,6 +5724,28 @@
     "episode": 3,
     "voice": "en-US-BrianMultilingualNeural",
     "visual_variant": "photos",
+    "stats_fetched": false
+  },
+  {
+    "id": "II_RLe12oxg",
+    "title": "UNSOLVED #5 | \ud83c\udf0e Birds' Hidden Compass",
+    "uploaded_at": "2026-08-01T06:17:38.397445+00:00",
+    "hook": "Birds migrate thousands of miles with a hidden compass",
+    "script": "Birds migrate thousands of miles with a hidden compass. Scientists have observed that some birds can detect the Earth's magnetic field, but the exact mechanism remains unknown. Research suggests that quantum coherence might play a role, allowing birds to sense the magnetic field and navigate with incredible precision. But how do they achieve this? Birds migrate thousands of miles with a hidden compass",
+    "topic": "Quantum Coherence in Bird Migration",
+    "tags": [
+      "bird migration",
+      "quantum coherence",
+      "animal navigation",
+      "magnetic field",
+      "unsolved mystery"
+    ],
+    "affiliate_program": "",
+    "archetype": "unsolved_mystery",
+    "series": "UNSOLVED",
+    "episode": 5,
+    "voice": "en-US-ChristopherNeural",
+    "visual_variant": "videos",
     "stats_fetched": false
   }
 ]
