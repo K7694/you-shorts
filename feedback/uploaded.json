@@ -5791,5 +5791,29 @@
     "voice": "en-US-BrianMultilingualNeural",
     "visual_variant": "photos",
     "stats_fetched": false
+  },
+  {
+    "id": "bJOte-3WQ2Q",
+    "title": "WHAT IF #1 | \ud83c\udf1f Bermuda Triangle: Sail into the Abyss",
+    "uploaded_at": "2026-08-02T10:45:52.151643+00:00",
+    "hook": "What if you sailed into the Bermuda Triangle's dead zone?",
+    "script": "What if you sailed into the Bermuda Triangle's dead zone? Compasses spin wildly, radios go dark. Methane gas bubbles rise from the seafloor, disrupting navigation. Then, rogue waves crash, and the ocean's currents pull you under. The last transmission is lost in the void. What if you sailed into the Bermuda Triangle's dead zone?",
+    "topic": "Bermuda Triangle Mystery",
+    "tags": [
+      "Bermuda Triangle",
+      "Mystery",
+      "Science",
+      "Ocean",
+      "Navigation"
+    ],
+    "affiliate_program": "",
+    "archetype": "what_if",
+    "series": "WHAT IF",
+    "episode": 1,
+    "voice": "en-GB-RyanNeural",
+    "visual_variant": "photos",
+    "hook_score": 7,
+    "word_count": 54,
+    "stats_fetched": false
   }
 ]
