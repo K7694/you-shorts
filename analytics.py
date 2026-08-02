@@ -73,7 +73,29 @@ def fetch(days: int = 30) -> list:
     end = date.today()
     start = end - timedelta(days=days)
 
-    resp = yta.reports().query(
+    try:
+        resp = _query(yta, start, end)
+    except Exception as e:
+        msg = str(e)
+        if "accessNotConfigured" in msg or "has not been used in project" in msg:
+            print("❌ The YouTube Analytics API is not enabled for this Google Cloud project.")
+            print("   The OAuth scope grants permission, but the API itself must also be")
+            print("   switched on for the project (same one-time step as the Data API).")
+            print("\n   Enable it here, then retry (allow ~1-2 min to propagate):")
+            print("   https://console.developers.google.com/apis/api/"
+                  "youtubeanalytics.googleapis.com/overview?project=416897339211")
+        elif "insufficient" in msg.lower() or "forbidden" in msg.lower():
+            print(f"❌ Access denied by the Analytics API: {msg[:200]}")
+        else:
+            print(f"❌ Analytics query failed: {msg[:300]}")
+        return []
+
+    cols = [h["name"] for h in resp.get("columnHeaders", [])]
+    return [dict(zip(cols, row)) for row in resp.get("rows", [])]
+
+
+def _query(yta, start, end):
+    return yta.reports().query(
         ids="channel==MINE",
         startDate=start.isoformat(),
         endDate=end.isoformat(),
@@ -85,9 +107,6 @@ def fetch(days: int = 30) -> list:
         sort="-views",
         maxResults=200,
     ).execute()
-
-    cols = [h["name"] for h in resp.get("columnHeaders", [])]
-    return [dict(zip(cols, row)) for row in resp.get("rows", [])]
 
 
 def main() -> int:
