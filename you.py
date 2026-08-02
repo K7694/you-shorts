@@ -346,6 +346,11 @@ def _log_upload(video_id: str, script: dict, title: str):
         # A/B arm for the visual-layer test (photos | videos | gameplay).
         # Group by this at the 72h readout.
         "visual_variant":    script.get("visual_variant", "photos"),
+        # Logged so the hook scorer can eventually be VALIDATED against real
+        # performance. It's a hand-written heuristic that has never been
+        # checked for whether it actually predicts views or subscribers.
+        "hook_score":        script.get("hook_score", 0),
+        "word_count":        len(script.get("script", "").split()),
         "stats_fetched": False,
     })
     _UPLOADS_LOG.write_text(json.dumps(uploads, indent=2), encoding="utf-8")
@@ -670,6 +675,8 @@ def _generate_with_hook_gate(prompt: str, attempts: int = 4, target: int = 7) ->
                 f'REJECTED HOOKS (too weak — write something sharper, do NOT reuse):\n{ban}\n\nTOPICS ALREADY USED — DO NOT REPEAT THESE:'
             )
     print(f"   ✅ Best hook: {best_score}/10")
+    if isinstance(best_data, dict):
+        best_data["hook_score"] = best_score
     return best_data
 
 
