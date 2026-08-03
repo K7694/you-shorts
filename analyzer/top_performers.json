@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-01T20:10:35.778203",
+  "updated": "2026-08-03T06:45:59.403950",
   "performers": [
     {
       "id": "IuMAB2-l_lU",
@@ -46,15 +46,15 @@
       "performance_score": 548.4989
     },
     {
-      "id": "oi4x0YUSxl8",
-      "title": "🤯 Sphere Splitting Paradox",
-      "hook": "Split a sphere into 5 identical pieces",
-      "script": "Split a sphere into 5 identical pieces. Each piece is a perfect sphere. Volume is conserved, yet it's impossible. The Banach-Tarski Paradox reveals a shocking truth. Split a sphere into 5 identical pieces",
-      "topic": "The Banach-Tarski Paradox",
-      "views": 990,
-      "engagement_rate": 0.505,
-      "views_per_day": 495,
-      "performance_score": 497.49975
+      "id": "II_RLe12oxg",
+      "title": "UNSOLVED #5 | 🌎 Birds' Hidden Compass",
+      "hook": "Birds migrate thousands of miles with a hidden compass",
+      "script": "Birds migrate thousands of miles with a hidden compass. Scientists have observed that some birds can detect the Earth's magnetic field, but the exact mechanism remains unknown. Research suggests that quantum coherence might play a role, allowing birds to sense the magnetic field and navigate with incredible precision. But how do they achieve this? Birds migrate thousands of miles with a hidden compass",
+      "topic": "Quantum Coherence in Bird Migration",
+      "views": 1085,
+      "engagement_rate": 0.553,
+      "views_per_day": 542,
+      "performance_score": 544.99726
     }
   ]
 }

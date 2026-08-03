@@ -5724,7 +5724,38 @@
     "episode": 3,
     "voice": "en-US-BrianMultilingualNeural",
     "visual_variant": "photos",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "Knr-VAuUrN0",
+      "title": "HOW IT WORKS #3 | \ud83d\udd25 Electric Eel Shock Secret \ud83d\udd0b",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-07-31T06:33:23Z",
+      "views": 627,
+      "likes": 6,
+      "comments": 0,
+      "engagement_rate": 0.957,
+      "views_per_day": 209,
+      "tags": [
+        "animal defense",
+        "curiosity",
+        "did you know",
+        "electric eel",
+        "facts",
+        "mindblown",
+        "nature secrets",
+        "physics",
+        "science",
+        "shock mechanism",
+        "shorts",
+        "space",
+        "universe",
+        "wildlife"
+      ],
+      "description": "Discover the shocking truth behind electric eels\n\nHOW IT WORKS \u2014 The hidden mechanics of everyday things.\nNew episode every day.\n\n#shorts #science #mindblown #wildlife #nature",
+      "duration_secs": 25,
+      "thumbnail": "https://i.ytimg.com/vi/Knr-VAuUrN0/hqdefault.jpg"
+    }
   },
   {
     "id": "II_RLe12oxg",
@@ -5746,7 +5777,38 @@
     "episode": 5,
     "voice": "en-US-ChristopherNeural",
     "visual_variant": "videos",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "II_RLe12oxg",
+      "title": "UNSOLVED #5 | \ud83c\udf0e Birds' Hidden Compass",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-08-01T06:17:49Z",
+      "views": 1085,
+      "likes": 5,
+      "comments": 1,
+      "engagement_rate": 0.553,
+      "views_per_day": 542,
+      "tags": [
+        "animal navigation",
+        "bird migration",
+        "curiosity",
+        "did you know",
+        "facts",
+        "magnetic field",
+        "mindblown",
+        "physics",
+        "quantum coherence",
+        "science",
+        "shorts",
+        "space",
+        "universe",
+        "unsolved mystery"
+      ],
+      "description": "Uncovering the mystery of bird migration\n\nUNSOLVED \u2014 One unsolved mystery, every day.\nNew episode every day.\n\n#shorts #science #mindblown #birdmigration #quantumphysics",
+      "duration_secs": 27,
+      "thumbnail": "https://i.ytimg.com/vi/II_RLe12oxg/hqdefault.jpg"
+    }
   },
   {
     "id": "R_7SK3217Zc",
@@ -5814,6 +5876,30 @@
     "visual_variant": "photos",
     "hook_score": 7,
     "word_count": 54,
+    "stats_fetched": false
+  },
+  {
+    "id": "tFy2S89e-bk",
+    "title": "MIND BENDER #1 | \ud83d\udcab Galaxy Pulled Towards Mysterious Region",
+    "uploaded_at": "2026-08-03T06:48:44.315799+00:00",
+    "hook": "Our galaxy is being pulled towards a region of space",
+    "script": "Our galaxy is being pulled towards a region of space. This phenomenon is known as the Great Attractor, a region of space that's pulling our galaxy, the Milky Way, and many others towards it. The Great Attractor is a diffuse structure, spread over a vast area of space. Our galaxy is being pulled towards it at a speed of around 2 million kilometers per hour. The Great Attractor is a mind-bending fact that challenges our understanding of the universe, and its existence raises more questions than answers. Our galaxy is being pulled towards a region of space",
+    "topic": "The Great Attractor Mystery",
+    "tags": [
+      "space",
+      "galaxy",
+      "mystery",
+      "science",
+      "universe"
+    ],
+    "affiliate_program": "",
+    "archetype": "mind_blowing_fact",
+    "series": "MIND BENDER",
+    "episode": 1,
+    "voice": "en-US-AndrewMultilingualNeural",
+    "visual_variant": "videos",
+    "hook_score": 8,
+    "word_count": 97,
     "stats_fetched": false
   }
 ]
