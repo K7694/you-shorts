@@ -5830,7 +5830,38 @@
     "episode": 6,
     "voice": "en-US-ChristopherNeural",
     "visual_variant": "videos",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "R_7SK3217Zc",
+      "title": "UNSOLVED #6 | \ud83c\udfef Lost City: The Indus Valley Enigma",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-08-01T14:33:31Z",
+      "views": 682,
+      "likes": 6,
+      "comments": 1,
+      "engagement_rate": 1.026,
+      "views_per_day": 341,
+      "tags": [
+        "Ancient Mystery",
+        "Archaeology",
+        "Indus Valley Civilization",
+        "Lost City",
+        "Unsolved Enigma",
+        "curiosity",
+        "did you know",
+        "facts",
+        "mindblown",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "universe"
+      ],
+      "description": "Uncover the mystery of the Indus Valley Civilization's disappearance\n\nUNSOLVED \u2014 One unsolved mystery, every day.\nNew episode every day.\n\n\u25b6 FULL DOCUMENTARY: Alien Water Worlds\nhttps://youtube.com/watch?v=JaO9mYrT2Bc\n\n\ud83d\udcfa UNSOLVED \u2014 One unsolved mystery, every day.\nSubscribe for a new episode every da",
+      "duration_secs": 31,
+      "thumbnail": "https://i.ytimg.com/vi/R_7SK3217Zc/hqdefault.jpg"
+    }
   },
   {
     "id": "BbCUIJiBiJg",
@@ -5900,6 +5931,30 @@
     "visual_variant": "videos",
     "hook_score": 8,
     "word_count": 97,
+    "stats_fetched": false
+  },
+  {
+    "id": "DLkirmv_s3Q",
+    "title": "UNSOLVED #7 | \ud83d\udd2e Teleportation: The Unseen Truth",
+    "uploaded_at": "2026-08-04T06:13:32.752342+00:00",
+    "hook": "Teleportation is closer than you think",
+    "script": "Teleportation is closer than you think. Scientists have successfully teleported particles from one location to another without crossing the space in between. But what if this technology could be applied to larger objects, even humans? The implications are mind-boggling, but the science is still shrouded in mystery. Teleportation is closer than you think",
+    "topic": "The Science of Teleportation",
+    "tags": [
+      "teleportation",
+      "science",
+      "mystery",
+      "technology",
+      "physics"
+    ],
+    "affiliate_program": "",
+    "archetype": "unsolved_mystery",
+    "series": "UNSOLVED",
+    "episode": 7,
+    "voice": "en-US-ChristopherNeural",
+    "visual_variant": "photos",
+    "hook_score": 7,
+    "word_count": 53,
     "stats_fetched": false
   }
 ]
