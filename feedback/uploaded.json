@@ -5883,7 +5883,37 @@
     "episode": 4,
     "voice": "en-US-BrianMultilingualNeural",
     "visual_variant": "photos",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "BbCUIJiBiJg",
+      "title": "HOW IT WORKS #4 | \ud83d\udd13 Unlocking Dreams",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-08-02T06:20:07Z",
+      "views": 152,
+      "likes": 1,
+      "comments": 1,
+      "engagement_rate": 1.316,
+      "views_per_day": 76,
+      "tags": [
+        "brain",
+        "curiosity",
+        "did you know",
+        "dreams",
+        "facts",
+        "mind",
+        "mindblown",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "subconscious",
+        "universe"
+      ],
+      "description": "The secret science behind dreaming revealed\n\n\u25b6 FULL DOCUMENTARY: Alien Water Worlds\nhttps://youtube.com/watch?v=JaO9mYrT2Bc\n\n\ud83d\udcfa HOW IT WORKS \u2014 The hidden mechanics of everyday things.\nSubscribe for a new episode every day, plus a full deep dive every Sunday.\n\n#shorts #science #mindblown",
+      "duration_secs": 19,
+      "thumbnail": "https://i.ytimg.com/vi/BbCUIJiBiJg/hqdefault.jpg"
+    }
   },
   {
     "id": "bJOte-3WQ2Q",
@@ -5907,7 +5937,38 @@
     "visual_variant": "photos",
     "hook_score": 7,
     "word_count": 54,
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "bJOte-3WQ2Q",
+      "title": "WHAT IF #1 | \ud83c\udf1f Bermuda Triangle: Sail into the Abyss",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-08-02T10:46:03Z",
+      "views": 92,
+      "likes": 0,
+      "comments": 1,
+      "engagement_rate": 1.087,
+      "views_per_day": 46,
+      "tags": [
+        "Bermuda Triangle",
+        "Mystery",
+        "Navigation",
+        "Ocean",
+        "Science",
+        "curiosity",
+        "did you know",
+        "facts",
+        "mindblown",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "universe"
+      ],
+      "description": "Uncover the truth behind the Bermuda Triangle's eerie disappearances\n\n\u25b6 FULL DOCUMENTARY: Toxic Planet\nhttps://youtube.com/watch?v=F3xdKAoRb8k\n\n\ud83d\udcfa WHAT IF \u2014 Impossible scenarios, real physics.\nSubscribe for a new episode every day, plus a full deep dive every Sunday.\n\n#shorts #science #mindblown",
+      "duration_secs": 23,
+      "thumbnail": "https://i.ytimg.com/vi/bJOte-3WQ2Q/hqdefault.jpg"
+    }
   },
   {
     "id": "tFy2S89e-bk",
@@ -5955,6 +6016,30 @@
     "visual_variant": "photos",
     "hook_score": 7,
     "word_count": 53,
+    "stats_fetched": false
+  },
+  {
+    "id": "S17xSEOFT94",
+    "title": "UNSOLVED #8 | \ud83d\udd0d Cosmic Blast: The Energy Enigma",
+    "uploaded_at": "2026-08-05T06:10:13.414572+00:00",
+    "hook": "A cosmic blast of energy from the edge of the universe",
+    "script": "A cosmic blast of energy from the edge of the universe. In milliseconds, it unleashes as much energy as the sun does in an entire day. The signal is brief, but the mystery is vast. What could be the source of these Fast Radio Bursts? A cosmic blast of energy from the edge of the universe",
+    "topic": "Fast Radio Bursts in Deep Space",
+    "tags": [
+      "Fast Radio Bursts",
+      "Deep Space",
+      "Unsolved Mystery",
+      "Astrophysics",
+      "Cosmic Energy"
+    ],
+    "affiliate_program": "",
+    "archetype": "unsolved_mystery",
+    "series": "UNSOLVED",
+    "episode": 8,
+    "voice": "en-US-ChristopherNeural",
+    "visual_variant": "videos",
+    "hook_score": 7,
+    "word_count": 56,
     "stats_fetched": false
   }
 ]
