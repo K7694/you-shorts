@@ -6097,7 +6097,38 @@
     "visual_variant": "videos",
     "hook_score": 7,
     "word_count": 56,
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "S17xSEOFT94",
+      "title": "UNSOLVED #8 | \ud83d\udd0d Cosmic Blast: The Energy Enigma",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-08-05T06:10:34Z",
+      "views": 166,
+      "likes": 4,
+      "comments": 1,
+      "engagement_rate": 3.012,
+      "views_per_day": 83,
+      "tags": [
+        "Astrophysics",
+        "Cosmic Energy",
+        "Deep Space",
+        "Fast Radio Bursts",
+        "Unsolved Mystery",
+        "curiosity",
+        "did you know",
+        "facts",
+        "mindblown",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "universe"
+      ],
+      "description": "Uncover the mystery behind Fast Radio Bursts in deep space\n\n\u25b6 FULL DOCUMENTARY: Toxic Planet\nhttps://youtube.com/watch?v=F3xdKAoRb8k\n\n\ud83d\udcfa UNSOLVED \u2014 One unsolved mystery, every day.\nSubscribe for a new episode every day, plus a full deep dive every Sunday.\n\n#shorts #science #mindblown",
+      "duration_secs": 21,
+      "thumbnail": "https://i.ytimg.com/vi/S17xSEOFT94/hqdefault.jpg"
+    }
   },
   {
     "id": "N39rfuDn6f0",
@@ -6145,6 +6176,30 @@
     "visual_variant": "videos",
     "hook_score": 9,
     "word_count": 51,
+    "stats_fetched": false
+  },
+  {
+    "id": "2azzfvLX4Fg",
+    "title": "WHAT IF #2 | \ud83d\udd25 Ball Lightning: Unexplained \ud83c\udf0c",
+    "uploaded_at": "2026-08-08T04:39:04.670755+00:00",
+    "hook": "Imagine a ball of lightning that can float in air",
+    "script": "Imagine a ball of lightning that can float in air. It hovers, glowing, as if defying explanation. Scientists propose it's a chemical reaction, a plasma vortex, or even antimatter. But what if it's something more? What if it's a portal to a hidden world? The ball of lightning floats, and we're left wondering, imagine a ball of lightning that can float in air",
+    "topic": "Ball Lightning Mystery",
+    "tags": [
+      "ball lightning",
+      "science",
+      "mystery",
+      "unexplained",
+      "phenomenon"
+    ],
+    "affiliate_program": "",
+    "archetype": "what_if",
+    "series": "WHAT IF",
+    "episode": 2,
+    "voice": "en-GB-RyanNeural",
+    "visual_variant": "photos",
+    "hook_score": 6,
+    "word_count": 63,
     "stats_fetched": false
   }
 ]
