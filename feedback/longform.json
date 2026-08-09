@@ -30,5 +30,21 @@
       "Climate Tipping Points",
       "The Sixth Mass Extinction"
     ]
+  },
+  {
+    "id": "n7--mTZUASg",
+    "title": "Cracking Collatz",
+    "theme": "The Collatz Conjecture Mystery",
+    "uploaded_at": "2026-08-09T06:17:04.550318+00:00",
+    "duration_sec": 400.7,
+    "words": 1004,
+    "segments": [
+      "The Bizarre Cycle",
+      "A Simple yet Puzzling Formula",
+      "Historical Pursuit",
+      "Computational Challenges",
+      "Collatz in Nature",
+      "Universal Implications"
+    ]
   }
 ]
