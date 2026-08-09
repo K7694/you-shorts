@@ -6152,7 +6152,36 @@
     "visual_variant": "photos",
     "hook_score": 6,
     "word_count": 53,
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "N39rfuDn6f0",
+      "title": "MIND BENDER #2 | \ud83d\ude80 Black Holes: Gateways to Parallel Universes?",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-08-06T06:14:21Z",
+      "views": 845,
+      "likes": 23,
+      "comments": 1,
+      "engagement_rate": 2.84,
+      "views_per_day": 422,
+      "tags": [
+        "black holes",
+        "curiosity",
+        "did you know",
+        "facts",
+        "mindblown",
+        "parallel universes",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "theory",
+        "universe"
+      ],
+      "description": "Discover the mind-blowing science behind black holes\n\n\u25b6 FULL DOCUMENTARY: Toxic Planet\nhttps://youtube.com/watch?v=F3xdKAoRb8k\n\n\ud83d\udcfa MIND BENDER \u2014 A fact that breaks your brain, daily.\nSubscribe for a new episode every day, plus a full deep dive every Sunday.\n\n#shorts #science #mindblown #space #blackh",
+      "duration_secs": 23,
+      "thumbnail": "https://i.ytimg.com/vi/N39rfuDn6f0/hqdefault.jpg"
+    }
   },
   {
     "id": "BpDusVCQquw",
@@ -6200,6 +6229,30 @@
     "visual_variant": "photos",
     "hook_score": 6,
     "word_count": 63,
+    "stats_fetched": false
+  },
+  {
+    "id": "5Y45CkU1yAU",
+    "title": "UNSOLVED #9 | \ud83d\udd26 The Glow of the Unknown",
+    "uploaded_at": "2026-08-09T04:50:25.588965+00:00",
+    "hook": "Glowing organisms light up the darkness",
+    "script": "Glowing organisms light up the darkness. From fireflies to deep-sea fish, they produce their own light. But how? It's a complex process involving chemical reactions and energy transfer. The science of bioluminescence remains shrouded in mystery, with many unanswered questions. Glowing organisms light up the darkness",
+    "topic": "Bioluminescent Creatures",
+    "tags": [
+      "bioluminescence",
+      "science",
+      "nature",
+      "mystery",
+      "unsolved"
+    ],
+    "affiliate_program": "",
+    "archetype": "unsolved_mystery",
+    "series": "UNSOLVED",
+    "episode": 9,
+    "voice": "en-US-ChristopherNeural",
+    "visual_variant": "videos",
+    "hook_score": 7,
+    "word_count": 46,
     "stats_fetched": false
   }
 ]
