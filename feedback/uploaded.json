@@ -6205,7 +6205,37 @@
     "visual_variant": "videos",
     "hook_score": 9,
     "word_count": 51,
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "BpDusVCQquw",
+      "title": "HOW IT WORKS #5 | \ud83e\udde0 Mind Over Matter: The Placebo Effect",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-08-07T05:18:02Z",
+      "views": 257,
+      "likes": 5,
+      "comments": 1,
+      "engagement_rate": 2.335,
+      "views_per_day": 128,
+      "tags": [
+        "brain power",
+        "curiosity",
+        "did you know",
+        "facts",
+        "healing",
+        "mind body connection",
+        "mindblown",
+        "physics",
+        "placebo effect",
+        "science",
+        "shorts",
+        "space",
+        "universe"
+      ],
+      "description": "Discover the surprising science behind the placebo effect\n\n\u25b6 FULL DOCUMENTARY: Toxic Planet\nhttps://youtube.com/watch?v=F3xdKAoRb8k\n\n\ud83d\udcfa HOW IT WORKS \u2014 The hidden mechanics of everyday things.\nSubscribe for a new episode every day, plus a full deep dive every Sunday.\n\n#shorts #science #mindblown",
+      "duration_secs": 20,
+      "thumbnail": "https://i.ytimg.com/vi/BpDusVCQquw/hqdefault.jpg"
+    }
   },
   {
     "id": "2azzfvLX4Fg",
@@ -6229,7 +6259,37 @@
     "visual_variant": "photos",
     "hook_score": 6,
     "word_count": 63,
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "2azzfvLX4Fg",
+      "title": "WHAT IF #2 | \ud83d\udd25 Ball Lightning: Unexplained \ud83c\udf0c",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-08-08T04:39:24Z",
+      "views": 830,
+      "likes": 11,
+      "comments": 1,
+      "engagement_rate": 1.446,
+      "views_per_day": 415,
+      "tags": [
+        "ball lightning",
+        "curiosity",
+        "did you know",
+        "facts",
+        "mindblown",
+        "mystery",
+        "phenomenon",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "unexplained",
+        "universe"
+      ],
+      "description": "Explore the mysterious ball lightning phenomenon\n\n\u25b6 FULL DOCUMENTARY: Toxic Planet\nhttps://youtube.com/watch?v=F3xdKAoRb8k\n\n\ud83d\udcfa WHAT IF \u2014 Impossible scenarios, real physics.\nSubscribe for a new episode every day, plus a full deep dive every Sunday.\n\n#shorts #science #mindblown",
+      "duration_secs": 25,
+      "thumbnail": "https://i.ytimg.com/vi/2azzfvLX4Fg/hqdefault.jpg"
+    }
   },
   {
     "id": "5Y45CkU1yAU",
@@ -6253,6 +6313,30 @@
     "visual_variant": "videos",
     "hook_score": 7,
     "word_count": 46,
+    "stats_fetched": false
+  },
+  {
+    "id": "2GL7SI_uHlc",
+    "title": "UNSOLVED #10 | \ud83c\udf31 Plants Talk? \ud83c\udf3f",
+    "uploaded_at": "2026-08-10T05:09:35.449744+00:00",
+    "hook": "Plants warn each other through secret networks",
+    "script": "Plants warn each other through secret networks. They use chemical signals to communicate with each other and their environment. But what happens when a plant is attacked by insects? It releases a distress signal, warning its neighbors of the danger. The warning signs are still unclear. Plants warn each other through secret networks",
+    "topic": "Plant Communication Mystery",
+    "tags": [
+      "plant_communication",
+      "science",
+      "mystery",
+      "nature",
+      "botany"
+    ],
+    "affiliate_program": "",
+    "archetype": "unsolved_mystery",
+    "series": "UNSOLVED",
+    "episode": 10,
+    "voice": "en-US-ChristopherNeural",
+    "visual_variant": "photos",
+    "hook_score": 6,
+    "word_count": 53,
     "stats_fetched": false
   }
 ]
