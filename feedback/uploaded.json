@@ -6313,7 +6313,37 @@
     "visual_variant": "videos",
     "hook_score": 7,
     "word_count": 46,
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "5Y45CkU1yAU",
+      "title": "UNSOLVED #9 | \ud83d\udd26 The Glow of the Unknown",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-08-09T04:50:47Z",
+      "views": 265,
+      "likes": 5,
+      "comments": 1,
+      "engagement_rate": 2.264,
+      "views_per_day": 132,
+      "tags": [
+        "bioluminescence",
+        "curiosity",
+        "did you know",
+        "facts",
+        "mindblown",
+        "mystery",
+        "nature",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "universe",
+        "unsolved"
+      ],
+      "description": "Uncovering the secrets of bioluminescence\n\n\u25b6 FULL DOCUMENTARY: Toxic Planet\nhttps://youtube.com/watch?v=F3xdKAoRb8k\n\n\ud83d\udcfa UNSOLVED \u2014 One unsolved mystery, every day.\nSubscribe for a new episode every day, plus a full deep dive every Sunday.\n\n#shorts #science #mindblown",
+      "duration_secs": 24,
+      "thumbnail": "https://i.ytimg.com/vi/5Y45CkU1yAU/hqdefault.jpg"
+    }
   },
   {
     "id": "2GL7SI_uHlc",
@@ -6337,6 +6367,30 @@
     "visual_variant": "photos",
     "hook_score": 6,
     "word_count": 53,
+    "stats_fetched": false
+  },
+  {
+    "id": "VAvoFFGUMI4",
+    "title": "UNSOLVED #11 | \ud83d\udd70\ufe0f Time's Dark Secret",
+    "uploaded_at": "2026-08-11T04:52:50.196673+00:00",
+    "hook": "Time freezes at the speed of light",
+    "script": "Time freezes at the speed of light. As we approach this cosmic limit, clocks slow, aging stops. But what happens to time itself? According to Einstein's theory of relativity, time dilation occurs when objects move at high speeds or are in strong gravitational fields. Yet, the underlying cause remains a mystery. Time freezes at the speed of light.",
+    "topic": "Time Dilation Mystery",
+    "tags": [
+      "time dilation",
+      "relativity",
+      "cosmology",
+      "physics",
+      "mystery"
+    ],
+    "affiliate_program": "",
+    "archetype": "unsolved_mystery",
+    "series": "UNSOLVED",
+    "episode": 11,
+    "voice": "en-US-ChristopherNeural",
+    "visual_variant": "videos",
+    "hook_score": 7,
+    "word_count": 58,
     "stats_fetched": false
   }
 ]
