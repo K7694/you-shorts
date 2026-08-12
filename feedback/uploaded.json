@@ -6367,7 +6367,37 @@
     "visual_variant": "photos",
     "hook_score": 6,
     "word_count": 53,
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "2GL7SI_uHlc",
+      "title": "UNSOLVED #10 | \ud83c\udf31 Plants Talk? \ud83c\udf3f",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-08-10T05:09:49Z",
+      "views": 466,
+      "likes": 9,
+      "comments": 2,
+      "engagement_rate": 2.361,
+      "views_per_day": 233,
+      "tags": [
+        "botany",
+        "curiosity",
+        "did you know",
+        "facts",
+        "mindblown",
+        "mystery",
+        "nature",
+        "physics",
+        "plant_communication",
+        "science",
+        "shorts",
+        "space",
+        "universe"
+      ],
+      "description": "Uncover the secret world of plant communication\n\n\u25b6 FULL DOCUMENTARY: Cracking Collatz\nhttps://youtube.com/watch?v=n7--mTZUASg\n\n\ud83d\udcfa UNSOLVED \u2014 One unsolved mystery, every day.\nSubscribe for a new episode every day, plus a full deep dive every Sunday.\n\n#shorts #science #mindblown #plants",
+      "duration_secs": 23,
+      "thumbnail": "https://i.ytimg.com/vi/2GL7SI_uHlc/hqdefault.jpg"
+    }
   },
   {
     "id": "VAvoFFGUMI4",
@@ -6391,6 +6421,30 @@
     "visual_variant": "videos",
     "hook_score": 7,
     "word_count": 58,
+    "stats_fetched": false
+  },
+  {
+    "id": "muVEEYNylTA",
+    "title": "MIND BENDER #3 | \ud83d\udd0a Hearing the Universe's Secrets",
+    "uploaded_at": "2026-08-12T05:16:43.648260+00:00",
+    "hook": "Imagine hearing the universe in a way that was previously impossible",
+    "script": "Imagine hearing the universe in a way that was previously impossible. Gravitational waves, ripples in space-time, carry secrets from the cosmos. They were predicted by Einstein, but only recently detected. These waves whisper tales of black holes, neutron stars, and the universe's darkest corners. Imagine hearing the universe in a way that was previously impossible",
+    "topic": "Gravitational Waves Mystery",
+    "tags": [
+      "Gravitational Waves",
+      "Space-Time",
+      "Einstein",
+      "Cosmos",
+      "Black Holes"
+    ],
+    "affiliate_program": "",
+    "archetype": "mind_blowing_fact",
+    "series": "MIND BENDER",
+    "episode": 3,
+    "voice": "en-US-AndrewMultilingualNeural",
+    "visual_variant": "photos",
+    "hook_score": 7,
+    "word_count": 55,
     "stats_fetched": false
   }
 ]
