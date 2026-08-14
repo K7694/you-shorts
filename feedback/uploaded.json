@@ -6500,5 +6500,29 @@
     "hook_score": 5,
     "word_count": 84,
     "stats_fetched": false
+  },
+  {
+    "id": "U1gpfejciVE",
+    "title": "UNSOLVED #12 | \ud83d\udd2d The Wow! Signal: Unsolved Mystery \ud83d\udef8",
+    "uploaded_at": "2026-08-14T05:18:08.176845+00:00",
+    "hook": "A 72-second signal from deep space",
+    "script": "A 72-second signal from deep space. In 1977, a radio telescope detected it, and it's still not fully understood. The Wow! Signal, as it's known, was so strong that it rivaled the power of a small star. But what was it? The signal was picked up by a radio telescope at Ohio State University, and it lasted for just 72 seconds. The mystery remains: what was the Wow! Signal, and will we ever find the answer? A 72-second signal from deep space",
+    "topic": "The Wow Signal Mystery",
+    "tags": [
+      "Wow Signal",
+      "space mystery",
+      "unsolved",
+      "science",
+      "astronomy"
+    ],
+    "affiliate_program": "",
+    "archetype": "unsolved_mystery",
+    "series": "UNSOLVED",
+    "episode": 12,
+    "voice": "en-US-ChristopherNeural",
+    "visual_variant": "photos",
+    "hook_score": 8,
+    "word_count": 82,
+    "stats_fetched": false
   }
 ]
