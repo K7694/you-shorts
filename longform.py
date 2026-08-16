@@ -67,7 +67,18 @@ Y.CAPTION_SIZE = 64
 # ── Long-form settings ────────────────────────────────────────────
 SEGMENTS            = 6       # ~6 x 240 words ~= 8-9 minutes
 WORDS_PER_SEGMENT   = 250
-IMAGES_PER_SEGMENT  = 3
+
+# ── SHOT RATE (the retention fix, 2026-08-16) ─────────────────────
+# Measured: 18 visuals over 7.3 min = one image every 24.5s, each with the
+# same slow Ken Burns zoom. Viewers abandoned at 66-98s — in that window
+# they saw FOUR images. Documentaries cut every 3-6s; we were 5x too slow.
+# A denser cut is free: we use ~160 of 25,000 monthly Pexels requests, so
+# even ~90 visuals per video leaves the quota barely touched.
+SECONDS_PER_SHOT    = 5
+IMAGES_PER_SEGMENT  = 14      # queries requested per segment (~70s / 5s)
+# Motion beats stills over 7 minutes. A few real video clips per segment
+# break up the pan-zoom without the bandwidth of an all-video render.
+CLIPS_PER_SEGMENT   = 2
 LONGFORM_VOICE      = "en-US-ChristopherNeural"   # documentary narrator
 LONGFORM_RATE       = "+0%"
 LONGFORM_CAPTION    = "&H0000D7FF"                # amber, matches UNSOLVED
@@ -117,10 +128,29 @@ def pick_topic() -> dict:
 def build_outline(theme: str) -> dict:
     prompt = f"""You are writing a documentary-style YouTube video about: "{theme}".
 
-Produce an outline of exactly {SEGMENTS} segments. Each segment must cover a
-DISTINCT sub-question or case — no overlap, no repetition. Order them so
-curiosity builds: the strangest, most gripping one goes FIRST (it decides
-whether anyone stays), and the most mind-expanding one goes LAST.
+Produce an outline of exactly {SEGMENTS} segments.
+
+⛔ THE #1 FAILURE TO AVOID — ENCYCLOPEDIA STRUCTURE.
+Measured: viewers abandon these videos around 70-90 seconds. The cause is
+outlines that read like a textbook contents page. These headings are BANNED:
+"Basic Principles", "Historic Precedents", "Introduction", "Background",
+"How It Works", "Modern Implementations", "Future Possibilities",
+"Applications", "Overview", "The Science Of".
+
+Instead, every segment must be a STORY BEAT that raises a question the next
+segment answers. Think: a specific event, a specific person, a specific
+anomaly, a specific consequence. Concrete over general, always.
+
+GOOD headings: "The Tunnel They Sealed And Never Reopened" ·
+"The Engineer Who Was Laughed Out Of The Room" · "Then The Pressure Readings
+Went Wrong"
+BAD headings: "Basic Principles" · "Historic Precedents" · "Applications"
+
+Segment 1 is a COLD OPEN: it must drop the viewer straight into the single
+strangest, most specific detail of the whole story — no scene-setting, no
+definitions, no "for centuries humans have wondered". It decides whether
+anyone is still watching at 90 seconds.
+Order the rest so curiosity compounds, with the most mind-expanding last.
 
 Return ONLY valid JSON (no markdown, no backticks):
 {{
@@ -152,7 +182,11 @@ Return ONLY valid JSON (no markdown, no backticks):
 
 def write_segment(theme: str, seg: dict, index: int, total: int, previous: str) -> dict:
     """Write one segment. Separate call per segment = reliable length + variety."""
-    position = ("This is the OPENING segment — it must hook a cold viewer in the first two sentences."
+    position = ("This is the COLD OPEN. Viewers abandon at 70-90 seconds, so the first "
+                "TWO SENTENCES decide everything. Open mid-story on the single strangest "
+                "concrete detail — a specific object, place, number or moment. "
+                "Do NOT set the scene, define terms, or open with 'For centuries...', "
+                "'Imagine...', or 'Deep beneath...'. Earn the next 30 seconds."
                 if index == 1 else
                 "This is the FINAL segment — end on the biggest idea, then a closing thought. Do not add a call to action."
                 if index == total else
@@ -189,7 +223,12 @@ the prose here
 
 The visuals are {IMAGES_PER_SEGMENT} stock-footage search terms: SHORT concrete
 visual subjects of 1-3 words a stock library would actually have (e.g.
-deep ocean | radio telescope | human brain). No abstractions."""
+deep ocean | radio telescope | human brain). No abstractions.
+
+They are shown IN ORDER, one every ~{SECONDS_PER_SHOT}s, so they must track what
+the narration is describing as it moves — not {IMAGES_PER_SEGMENT} variations of
+one idea. Give genuinely different subjects across the segment, and vary the
+scale between them (wide landscape → machinery → close-up detail → human scale)."""
     raw = Y._call_llm(prompt)
 
     # Deliberately NOT JSON: narration is long prose full of quotes,
@@ -242,6 +281,118 @@ def build_script(theme: str) -> dict:
             "theme": theme, "segments": segments, "total_words": total_words}
 
 
+# ── Visual track ──────────────────────────────────────────────────
+
+def build_visual_track(segments: list, durations: list, sid: str, workdir) -> dict:
+    """Compose the full visual track as a dense cut.
+
+    One shot every ~SECONDS_PER_SHOT (was one every 24.5s, which is what the
+    66-98s abandonment was really measuring). Each segment is rendered on its
+    own and the segments are concatenated, so no single ffmpeg filtergraph
+    has to swallow ~85 inputs. A couple of real Pexels video clips per
+    segment break up the pan-zoom.
+    """
+    shot_dir = workdir / "shots"
+    shot_dir.mkdir(parents=True, exist_ok=True)
+    seg_files, total_shots, total_clips = [], 0, 0
+
+    for si, (seg, dur) in enumerate(zip(segments, durations)):
+        n_shots = max(2, round(dur / SECONDS_PER_SHOT))
+        queries = seg.get("visuals") or [seg.get("heading", "science")]
+        # Cycle the segment's queries if it gave fewer than we need
+        picks = [queries[i % len(queries)] for i in range(n_shots)]
+
+        used_img, used_vid = set(), set()
+        parts = []
+        for i, q in enumerate(picks):
+            shot = str(shot_dir / f"s{si:02d}_{i:03d}.mp4")
+            # Spread the motion clips through the segment
+            want_clip = CLIPS_PER_SEGMENT and (i % max(n_shots // CLIPS_PER_SEGMENT, 1) == 1)
+            made = False
+            if want_clip:
+                raw = str(shot_dir / f"s{si:02d}_{i:03d}_src.mp4")
+                if Y._download_pexels_video(q, raw, i, used_vid):
+                    made = _clip_shot(raw, shot, SECONDS_PER_SHOT)
+                    if made:
+                        total_clips += 1
+            if not made:
+                raw = str(shot_dir / f"s{si:02d}_{i:03d}.jpg")
+                if not Y._download_pexels_image(q, raw, i, used_img):
+                    Y._make_fallback_image(raw)
+                made = _still_shot(raw, shot, SECONDS_PER_SHOT, i)
+            if made:
+                parts.append(shot)
+
+        if not parts:
+            continue
+        seg_out = str(shot_dir / f"seg{si:02d}.mp4")
+        if _concat(parts, seg_out):
+            seg_files.append(seg_out)
+            total_shots += len(parts)
+        print(f"      🎬 segment {si+1}: {len(parts)} shots over {dur:.0f}s "
+              f"(~{dur/max(len(parts),1):.1f}s each)")
+
+    out = str(workdir / "visual_track.mp4")
+    _concat(seg_files, out)
+    print(f"   ✅ {total_shots} shots ({total_clips} motion clips) — "
+          f"one every ~{sum(durations)/max(total_shots,1):.1f}s")
+    return {"path": out, "shots": total_shots, "clips": total_clips}
+
+
+def _still_shot(img: str, out: str, dur: float, idx: int) -> bool:
+    """One still with a slow Ken Burns move; direction varies per shot."""
+    frames = int(dur * VIDEO_FPS)
+    w, h = Y.VIDEO_WIDTH, Y.VIDEO_HEIGHT
+    if idx % 3 == 0:
+        z, x, y = f"min(1+0.18*on/{frames},1.18)", "iw/2-(iw/zoom/2)", "ih/2-(ih/zoom/2)"
+    elif idx % 3 == 1:
+        z, x, y = f"max(1.18-0.18*on/{frames},1.0)", "iw/2-(iw/zoom/2)", "ih/2-(ih/zoom/2)"
+    else:
+        z, x, y = "1.12", f"iw*0.08*on/{frames}", "ih/2-(ih/zoom/2)"
+    vf = (f"scale={int(w*1.3)}:{int(h*1.3)}:force_original_aspect_ratio=increase,"
+          f"crop={int(w*1.3)}:{int(h*1.3)},"
+          f"eq=contrast=1.12:saturation=1.15,"
+          f"zoompan=z='{z}':x='{x}':y='{y}':d={frames}:s={w}x{h}:fps={VIDEO_FPS},"
+          f"setsar=1")
+    # NO `-loop 1 -t`: with a looped input, zoompan expands EVERY input frame
+    # into d frames (125 x 150 = 18,750 frames — measured at 237s for one
+    # 5-second shot). Feeding a single still lets d= generate exactly the
+    # frames we want. Same shot now renders in ~1s.
+    r = Y.subprocess.run(["ffmpeg", "-y", "-i", img,
+                          "-vf", vf, "-c:v", "libx264", "-preset", "veryfast",
+                          "-crf", "23", "-pix_fmt", "yuv420p", "-an",
+                          "-frames:v", str(frames), out],
+                         capture_output=True, text=True)
+    return r.returncode == 0
+
+
+def _clip_shot(src: str, out: str, dur: float) -> bool:
+    """Trim/scale one stock video clip to a single shot."""
+    w, h = Y.VIDEO_WIDTH, Y.VIDEO_HEIGHT
+    r = Y.subprocess.run(["ffmpeg", "-y", "-stream_loop", "-1", "-t", f"{dur}", "-i", src,
+                          "-vf", f"scale={w}:{h}:force_original_aspect_ratio=increase,"
+                                 f"crop={w}:{h},fps={VIDEO_FPS},setsar=1",
+                          "-c:v", "libx264", "-preset", "veryfast", "-crf", "23",
+                          "-pix_fmt", "yuv420p", "-an", out],
+                         capture_output=True, text=True)
+    ok = r.returncode == 0
+    try:
+        Path(src).unlink()      # source clips are large; don't keep them
+    except OSError:
+        pass
+    return ok
+
+
+def _concat(parts: list, out: str) -> bool:
+    if not parts:
+        return False
+    lst = Path(out).with_suffix(".txt")
+    lst.write_text("".join(f"file '{Path(p).as_posix()}'\n" for p in parts), encoding="utf-8")
+    r = Y.subprocess.run(["ffmpeg", "-y", "-f", "concat", "-safe", "0", "-i", str(lst),
+                          "-c", "copy", out], capture_output=True, text=True)
+    return r.returncode == 0
+
+
 # ── Assembly ──────────────────────────────────────────────────────
 
 def build_video(script: dict, upload: bool = True) -> dict:
@@ -274,21 +425,27 @@ def build_video(script: dict, upload: bool = True) -> dict:
                      capture_output=True, check=True)
     print(f"   ✅ Narration {offset/60:.1f} min · {len(all_words)} word timings")
 
-    # 2. Visuals — spread across the whole runtime
+    # 2. Visuals — a DENSE cut, built per segment then concatenated.
+    #    One shot every ~SECONDS_PER_SHOT instead of every 24s, with a couple
+    #    of real motion clips per segment. Building per segment keeps each
+    #    ffmpeg filtergraph small instead of one graph with ~85 inputs.
     print("\n  ┌─ VISUALS ──────────────────────────────────")
-    queries = []
-    for seg in script["segments"]:
-        queries.extend(seg["visuals"][:IMAGES_PER_SEGMENT])
-    images = Y.generate_images(queries, sid)
-    result["images"] = len(images)
+    seg_durations = []
+    for i, c in enumerate(chapters):
+        end = chapters[i + 1]["t"] if i + 1 < len(chapters) else offset
+        seg_durations.append(max(end - c["t"], 1.0))
+
+    track = build_visual_track(script["segments"], seg_durations, sid, seg_dir)
+    result["images"] = track["shots"]
 
     # 3. Assemble (faster preset — 15-20x the frames of a Short)
     print("\n  ┌─ ASSEMBLY ─────────────────────────────────")
     t0 = time.time()
     video_path = Y.assemble_video(
-        audio_path, images, [], sid,
+        audio_path, [], [], sid,
         word_timestamps=all_words, caption_hex=LONGFORM_CAPTION,
-        preset=LONGFORM_PRESET, crf=LONGFORM_CRF, fast_slideshow=True,
+        preset=LONGFORM_PRESET, crf=LONGFORM_CRF,
+        prebuilt_track=track["path"],
     )
     print(f"   ✅ Encoded in {time.time()-t0:.0f}s")
     result["video"] = video_path

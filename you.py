@@ -1904,7 +1904,8 @@ def assemble_video(audio: str, images: list, captions: list, filename: str,
                    word_timestamps: list = None, video_clips: list = None,
                    caption_hex: str = "&H0000FFFF",
                    preset: str = "medium", crf: str = "18",
-                   fast_slideshow: bool = False) -> str:
+                   fast_slideshow: bool = False,
+                   prebuilt_track: str = None) -> str:
     """Assemble final video: visuals + audio + captions → .mp4
 
     Visual track priority: gameplay (USE_BACKGROUND_VIDEO) → stock video
@@ -1921,7 +1922,12 @@ def assemble_video(audio: str, images: list, captions: list, filename: str,
 
     # Step 1: Slideshow or Background Video
     slide_path = str(TEMP_DIR / f"{filename}_slides.mp4")
-    if USE_BACKGROUND_VIDEO:
+    if prebuilt_track:
+        # Caller already composed the visual track (long-form builds a dense
+        # per-segment cut). Use it as-is rather than re-encoding.
+        print(f"      🎞️  Using pre-built visual track")
+        slide_path = prebuilt_track
+    elif USE_BACKGROUND_VIDEO:
         print(f"      🎞️  Using background video: {Path(BACKGROUND_VIDEO_FILE).name}")
 
         # Get duration of the background video
