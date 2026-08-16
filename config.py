@@ -132,6 +132,10 @@ WORDS_PER_SECOND = 2.8
 #   hi-IN-SwaraNeural        → Hindi female
 VOICE = "en-US-AndrewMultilingualNeural"
 VOICE_RATE = "+5%"
+# Wall-clock cap on one TTS synthesis. A stalled Edge TTS stream once hung a
+# build indefinitely; in the unattended weekly job that burns the whole
+# timeout. Generous enough for a ~250-word long-form segment.
+TTS_TIMEOUT_SEC = 180
 
 # Video dimensions (9:16 vertical for Shorts)
 VIDEO_WIDTH = 1080

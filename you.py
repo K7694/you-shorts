@@ -1584,7 +1584,8 @@ def generate_voice(text: str, path: str, voice: str = None, rate: str = None) ->
         # boundary="WordBoundary" required on edge-tts >= 7.x (default is
         # SentenceBoundary, which yields no per-word events)
         comm = edge_tts.Communicate(text=text, voice=voice, rate=rate,
-                                    boundary="WordBoundary")
+                                    boundary="WordBoundary",
+                                    connect_timeout=15, receive_timeout=30)
         with open(path, "wb") as f:
             async for chunk in comm.stream():
                 if chunk["type"] == "audio":
@@ -1598,8 +1599,27 @@ def generate_voice(text: str, path: str, voice: str = None, rate: str = None) ->
                         "end": start + chunk["duration"] / 1e7,
                     })
 
+    # Hard wall-clock cap. Observed a stream stall mid-segment that hung the
+    # process indefinitely — in the unattended weekly job that silently burns
+    # the entire 90-minute budget. edge-tts' own timeouts don't cover a
+    # stream that stalls between chunks, so wrap the whole synthesis.
+    async def _gen_guarded():
+        await asyncio.wait_for(_gen(), timeout=TTS_TIMEOUT_SEC)
+
     print(f"   🎙️  Recording voiceover ({voice} @ {rate})...")
-    asyncio.run(_gen())
+    last_err = None
+    for attempt in range(3):
+        words.clear()
+        try:
+            asyncio.run(_gen_guarded())
+            last_err = None
+            break
+        except Exception as e:
+            last_err = e
+            print(f"      ⚠️  TTS attempt {attempt+1} failed ({type(e).__name__}) — retrying")
+            time.sleep(3 * (attempt + 1))
+    if last_err is not None:
+        raise RuntimeError(f"TTS failed after 3 attempts: {last_err}")
     print(f"      ⏱️  {len(words)} word timings captured during synthesis")
 
     # Post-process: add warmth, compression, presence (makes TTS less robotic)

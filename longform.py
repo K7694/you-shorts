@@ -450,7 +450,19 @@ def build_video(script: dict, upload: bool = True) -> dict:
     print(f"   ✅ Encoded in {time.time()-t0:.0f}s")
     result["video"] = video_path
 
-    thumb = Y.generate_thumbnail(images[0], script["title"], Y._slug(script["title"])) if images else None
+    # Thumbnail: pull a frame out of the finished track. There is no longer a
+    # list of stills to reach into — visuals are composed into the track — and
+    # a real frame is more representative of the video than the first image.
+    thumb = None
+    frame = str(seg_dir / "thumb_frame.jpg")
+    grab = Y.subprocess.run(
+        ["ffmpeg", "-y", "-ss", f"{max(offset * 0.08, 2):.1f}", "-i", track["path"],
+         "-frames:v", "1", "-q:v", "2", frame],
+        capture_output=True, text=True)
+    if grab.returncode == 0 and Path(frame).exists():
+        thumb = Y.generate_thumbnail(frame, script["title"], Y._slug(script["title"]))
+    else:
+        print("      ⚠️  Could not grab a thumbnail frame — continuing without one")
 
     # 4. Description with real chapter timestamps (helps retention + UX)
     def stamp(sec):
