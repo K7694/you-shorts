@@ -6585,7 +6585,37 @@
     "visual_variant": "photos",
     "hook_score": 8,
     "word_count": 82,
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "U1gpfejciVE",
+      "title": "UNSOLVED #12 | \ud83d\udd2d The Wow! Signal: Unsolved Mystery \ud83d\udef8",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-08-14T05:18:23Z",
+      "views": 7,
+      "likes": 0,
+      "comments": 1,
+      "engagement_rate": 14.286,
+      "views_per_day": 4,
+      "tags": [
+        "Wow Signal",
+        "astronomy",
+        "curiosity",
+        "did you know",
+        "facts",
+        "mindblown",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "space mystery",
+        "universe",
+        "unsolved"
+      ],
+      "description": "A mysterious signal from space, still unexplained\n\n\u25b6 FULL DOCUMENTARY: Cracking Collatz\nhttps://youtube.com/watch?v=n7--mTZUASg\n\n\ud83d\udcfa UNSOLVED \u2014 One unsolved mystery, every day.\nSubscribe for a new episode every day, plus a full deep dive every Sunday.\n\n#shorts #science #mindblown",
+      "duration_secs": 37,
+      "thumbnail": "https://i.ytimg.com/vi/U1gpfejciVE/hqdefault.jpg"
+    }
   },
   {
     "id": "0ewEimJxR0s",
@@ -6609,7 +6639,38 @@
     "visual_variant": "videos",
     "hook_score": 7,
     "word_count": 47,
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "0ewEimJxR0s",
+      "title": "WHAT IF #3 | \ud83e\udde0 The Dark Side of Forgetting",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-08-15T04:07:24Z",
+      "views": 0,
+      "likes": 0,
+      "comments": 1,
+      "engagement_rate": 100.0,
+      "views_per_day": 0,
+      "tags": [
+        "brain function",
+        "curiosity",
+        "did you know",
+        "facts",
+        "human behavior",
+        "identity",
+        "memory",
+        "mindblown",
+        "physics",
+        "psychology",
+        "science",
+        "shorts",
+        "space",
+        "universe"
+      ],
+      "description": "What happens when you erase your memories?\n\n\u25b6 FULL DOCUMENTARY: Cracking Collatz\nhttps://youtube.com/watch?v=n7--mTZUASg\n\n\ud83d\udcfa WHAT IF \u2014 Impossible scenarios, real physics.\nSubscribe for a new episode every day, plus a full deep dive every Sunday.\n\n#shorts #science #mindblown",
+      "duration_secs": 19,
+      "thumbnail": "https://i.ytimg.com/vi/0ewEimJxR0s/hqdefault.jpg"
+    }
   },
   {
     "id": "RRuXKwtIydk",
@@ -6633,6 +6694,30 @@
     "visual_variant": "photos",
     "hook_score": 7,
     "word_count": 60,
+    "stats_fetched": false
+  },
+  {
+    "id": "Ey2sdtKvGVs",
+    "title": "UNSOLVED #14 | \ud83d\udd2e Mirror Self-Recognition Mystery",
+    "uploaded_at": "2026-08-17T04:22:06.693428+00:00",
+    "hook": "You can't recognize yourself in the mirror",
+    "script": "You can't recognize yourself in the mirror. This is a reality for some animals, and a few rare humans. The science behind mirror self-recognition is still baffling. Researchers have studied the psychology and neuroscience, but the answer remains elusive. What happens in our brains when we gaze into the mirror, and why can't some species, or people, grasp their own reflection? You can't recognize yourself in the mirror",
+    "topic": "Mirror Self-Recognition Mystery",
+    "tags": [
+      "mirror self-recognition",
+      "psychology",
+      "neuroscience",
+      "animal cognition",
+      "human brain"
+    ],
+    "affiliate_program": "",
+    "archetype": "unsolved_mystery",
+    "series": "UNSOLVED",
+    "episode": 14,
+    "voice": "en-US-ChristopherNeural",
+    "visual_variant": "videos",
+    "hook_score": 7,
+    "word_count": 68,
     "stats_fetched": false
   }
 ]
