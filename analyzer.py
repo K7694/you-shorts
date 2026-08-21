@@ -33,7 +33,7 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 from config import (
-    YOUTUBE_DATA_API_KEY, GEMINI_API_KEY, GROQ_API_KEY, GROQ_MODEL,
+    YOUTUBE_DATA_API_KEY, GEMINI_API_KEY, GROQ_API_KEY, GROQ_MODEL, LLM_PROVIDERS,
     CHANNEL_NICHE, OUTPUT_DIR, BASE_DIR
 )
 
@@ -349,27 +349,30 @@ def _call_llm_analyzer(prompt: str) -> str:
         except Exception as e:
             print(f"      Gemini: {e}")
 
-    # Try Groq
-    if GROQ_API_KEY:
+    # Walk the same provider chain the pipeline uses (config.LLM_PROVIDERS).
+    # Previously this only knew about Groq, so the model retirement that took
+    # the pipeline down also silently killed the analyzer.
+    for prov in LLM_PROVIDERS:
+        if not prov.get("key"):
+            continue
         try:
-            url = "https://api.groq.com/openai/v1/chat/completions"
-            payload = json.dumps({
-                "model": GROQ_MODEL,
-                # See config: gpt-oss reasons by default and truncates output
-                "reasoning_effort": "low",
+            body = {
+                "model": prov["model"],
                 "messages": [{"role": "user", "content": prompt}],
                 "temperature": 0.3, "max_tokens": 4096,
-            }).encode()
-            req = urllib.request.Request(url, data=payload, headers={
+            }
+            if prov.get("reasoning_effort"):
+                body["reasoning_effort"] = prov["reasoning_effort"]
+            req = urllib.request.Request(prov["url"], data=json.dumps(body).encode(), headers={
                 "Content-Type": "application/json",
-                "Authorization": f"Bearer {GROQ_API_KEY}",
+                "Authorization": f"Bearer {prov['key']}",
                 "User-Agent": "Mozilla/5.0",
             })
             with urllib.request.urlopen(req, timeout=60) as r:
                 data = json.loads(r.read().decode())
                 return data["choices"][0]["message"]["content"].strip()
         except Exception as e:
-            print(f"      Groq: {e}")
+            print(f"      {prov['name']}: {e}")
 
     # Fallback to local Ollama
     try:

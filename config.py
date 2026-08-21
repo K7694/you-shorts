@@ -88,6 +88,34 @@ GROQ_MODEL = "openai/gpt-oss-120b"
 # automatically if the model rejects the parameter).
 GROQ_REASONING_EFFORT = "low"
 
+# ── BACKUP LLM PROVIDERS (2026-08-22) ──────────────────────────
+# Groq being the only working LLM cost us 4 silent days when it retired a
+# model, and Gemini's free tier has failed twice. These are all
+# OpenAI-compatible, so the same call path serves every one of them:
+# add a key and it joins the fallback chain automatically.
+#
+#   Cerebras   cloud.cerebras.ai   ~1M tokens/day free, no card, very fast
+#   OpenRouter openrouter.ai       one key -> many models; changing a dead
+#                                  model becomes a one-line edit, which is
+#                                  insurance against the exact outage we hit
+CEREBRAS_API_KEY   = os.getenv("CEREBRAS_API_KEY", "")
+CEREBRAS_MODEL     = "llama-3.3-70b"
+OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "")
+OPENROUTER_MODEL   = "meta-llama/llama-3.3-70b-instruct:free"
+
+# Fallback chain, tried in order. Entries without a key are skipped, so the
+# pipeline keeps working before any backup key is added.
+# `reasoning_effort` is only sent when set (gpt-oss models need it or they
+# burn the token budget thinking and return truncated JSON).
+LLM_PROVIDERS = [
+    {"name": "groq",       "url": "https://api.groq.com/openai/v1/chat/completions",
+     "key": GROQ_API_KEY,       "model": GROQ_MODEL,       "reasoning_effort": GROQ_REASONING_EFFORT},
+    {"name": "cerebras",   "url": "https://api.cerebras.ai/v1/chat/completions",
+     "key": CEREBRAS_API_KEY,   "model": CEREBRAS_MODEL,   "reasoning_effort": ""},
+    {"name": "openrouter", "url": "https://openrouter.ai/api/v1/chat/completions",
+     "key": OPENROUTER_API_KEY, "model": OPENROUTER_MODEL, "reasoning_effort": ""},
+]
+
 # 1c. YouTube Data API key (for the Analyzer — reading YouTube data)
 YOUTUBE_DATA_API_KEY = os.getenv("YOUTUBE_DATA_API_KEY", "")
 

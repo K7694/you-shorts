@@ -71,6 +71,28 @@ throttled us once in 6+ weeks. Gemini demoted to fail-fast fallback
 (1 try, no cooldown — a daily quota never recovers in 90s; we wasted
 4.5 min/run learning that). `LLM_PRIMARY` config flips it back anytime.
 
+### ❌ A single LLM provider is a single point of failure
+Groq retired `llama-3.3-70b-versatile` (~2026-08-18). Every run 404'd and,
+because Gemini's free tier had already failed on that account, there was no
+fallback — **four days with nothing published**, discovered only on the next
+manual check. The model id was also hardcoded in three files.
+**Fix:** one `GROQ_MODEL` in config, and `LLM_PROVIDERS` — an ordered chain
+of OpenAI-compatible endpoints (Groq → Cerebras → OpenRouter). Entries with
+no key are skipped, so adding a backup is a key plus a config line. 404 /
+401 / 403 / 400 skip straight to the next provider instead of retrying
+(a retired model never recovers by waiting); only 429 gets a cooldown.
+Verified failover against a simulated retired model: 0.6s to recover.
+**Also:** free-tier LLMs retire models with no notice. Prefer a router
+(OpenRouter) for at least one link in the chain — swapping a dead model
+becomes a one-line change.
+
+### ❌ Reasoning models silently truncate JSON
+`openai/gpt-oss-120b` spent 677 of 829 completion tokens on hidden reasoning
+and returned JSON cut off mid-string. Raising `max_tokens` isn't the fix —
+8000 returns HTTP 413 against a 12k tokens/min org limit.
+**Fix:** `reasoning_effort: "low"` (reasoning → ~13 tokens). Send it only
+where supported and drop it automatically on a 400 that names the parameter.
+
 ### ❌ Pollinations.ai free image gen died (HTTP 402)
 Third-party free services monetize without notice; the whole visual
 layer broke overnight.

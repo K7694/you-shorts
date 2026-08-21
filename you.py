@@ -77,11 +77,15 @@ def _call_gemini(prompt: str) -> str:
                 raise RuntimeError(f"Gemini failed: {e}")
 
 
-def _call_groq(prompt: str) -> str:
-    """Call Groq API as fallback. Free tier, very fast. Model from config.GROQ_MODEL."""
-    url = "https://api.groq.com/openai/v1/chat/completions"
+def _call_openai_compatible(prompt: str, url: str, key: str, model: str,
+                            reasoning_effort: str = "") -> str:
+    """Call any OpenAI-compatible chat endpoint (Groq, Cerebras, OpenRouter).
+
+    One implementation serves every provider in config.LLM_PROVIDERS, so
+    adding a backup is a config entry plus a key — no new call path to test.
+    """
     body = {
-        "model": GROQ_MODEL,
+        "model": model,
         "messages": [{"role": "user", "content": prompt}],
         "temperature": 0.9,
         "max_tokens": 2048,
@@ -92,16 +96,16 @@ def _call_groq(prompt: str) -> str:
     # and the output parses. Raising max_tokens instead is not an option —
     # 8000 returns HTTP 413 against the org's 12k tokens/min limit.
     # Dropped automatically if a future model rejects the parameter.
-    send_effort = bool(GROQ_REASONING_EFFORT)
+    send_effort = bool(reasoning_effort)
     if send_effort:
-        body["reasoning_effort"] = GROQ_REASONING_EFFORT
+        body["reasoning_effort"] = reasoning_effort
 
     for attempt in range(3):
         payload = json.dumps(body).encode()
         try:
             req = urllib.request.Request(url, data=payload, headers={
                 "Content-Type": "application/json",
-                "Authorization": f"Bearer {GROQ_API_KEY}",
+                "Authorization": f"Bearer {key}",
                 "User-Agent": "Mozilla/5.0",
             })
             with urllib.request.urlopen(req, timeout=60) as resp:
@@ -119,17 +123,23 @@ def _call_groq(prompt: str) -> str:
                 body.pop("reasoning_effort", None)
                 send_effort = False
                 continue
+            # 404 (model retired), 401/403 (bad key) and 400 never recover by
+            # retrying — go straight to the next provider instead of burning
+            # three attempts on each, which is what made the Aug 18 outage
+            # slow as well as total.
+            if e.code in (400, 401, 403, 404):
+                raise RuntimeError(f"HTTP {e.code} {detail[:120]}")
             if attempt < 2:
-                print(f"      ⚠️  Groq retry {attempt+1}: HTTP {e.code} {detail[:80]}")
+                print(f"      ⚠️  {model} retry {attempt+1}: HTTP {e.code} {detail[:80]}")
                 time.sleep(2 ** attempt)
             else:
-                raise RuntimeError(f"Groq failed: HTTP {e.code} {detail[:120]}")
+                raise RuntimeError(f"HTTP {e.code} {detail[:120]}")
         except Exception as e:
             if attempt < 2:
-                print(f"      ⚠️  Groq retry {attempt+1}: {e}")
+                print(f"      ⚠️  {model} retry {attempt+1}: {e}")
                 time.sleep(2 ** attempt)
             else:
-                raise RuntimeError(f"Groq failed: {e}")
+                raise RuntimeError(str(e))
 
 
 def _call_ollama(prompt: str) -> str:
@@ -228,15 +238,20 @@ def _score_hook(hook: str) -> int:
 
 
 def _call_llm(prompt: str) -> str:
-    """Call an LLM with provider fallback. Order set by config.LLM_PRIMARY.
+    """Call an LLM, walking config.LLM_PROVIDERS until one answers.
 
-    Groq is the default primary: this account's Gemini free tier returns
-    429 RESOURCE_EXHAUSTED on every call (zero quota), so Gemini is kept
-    only as a fail-fast fallback. A daily/zero quota won't recover in
-    90s, so we no longer burn long cooldowns on it (that wasted ~4.5
-    min/run). Groq's limits are per-minute and recover quickly, so it
-    gets short cooldowns. Flip LLM_PRIMARY to "gemini" when a key with
-    real quota exists and it upgrades automatically.
+    Every provider in that list is OpenAI-compatible, so adding a backup is
+    a config entry plus a key — entries without a key are skipped, so this
+    keeps working before any backup is configured.
+
+    Why a chain at all: Groq alone silently stopped the channel for four days
+    when it retired a model (2026-08-18), and Google's free tier has failed
+    twice on this account. Rate limits get a short cooldown (per-minute
+    limits recover); anything else moves straight to the next provider,
+    because a dead model or bad key will never recover by waiting.
+
+    Gemini is tried last and fails fast — kept only so a working key would
+    slot back in automatically.
     """
     errors = []
     is_cloud = os.environ.get("CI", "").lower() == "true"
@@ -244,42 +259,41 @@ def _call_llm(prompt: str) -> str:
     def _is_rate_limit(err: str) -> bool:
         return "429" in err or "Too Many Requests" in err or "RESOURCE_EXHAUSTED" in err
 
-    def _try_groq():
-        if not GROQ_API_KEY:
-            return None
-        for attempt, wait in enumerate([0, 15, 30]):  # short — RPM recovers fast
+    # Honour LLM_PRIMARY by moving that provider to the front
+    chain = [p for p in LLM_PROVIDERS if p.get("key")]
+    primary = (LLM_PRIMARY if "LLM_PRIMARY" in globals() else "").lower()
+    chain.sort(key=lambda p: 0 if p["name"] == primary else 1)
+
+    if not chain:
+        print("      ⚠️  No LLM provider keys configured")
+
+    for prov in chain:
+        for attempt, wait in enumerate([0, 15, 30]):
             if wait:
-                print(f"      ⏳ Groq cooldown {wait}s before retry {attempt}...")
+                print(f"      ⏳ {prov['name']} cooldown {wait}s before retry {attempt}...")
                 time.sleep(wait)
             try:
                 if attempt == 0:
-                    print(f"      🧠 Groq ({GROQ_MODEL})...")
-                return _call_groq(prompt)
+                    print(f"      🧠 {prov['name']} ({prov['model']})...")
+                return _call_openai_compatible(
+                    prompt, prov["url"], prov["key"], prov["model"],
+                    prov.get("reasoning_effort", ""))
             except RuntimeError as e:
-                msg = str(e); errors.append(msg); print(f"      ⚠️  {msg}")
-                if not _is_rate_limit(msg):
+                msg = f"{prov['name']}: {e}"
+                errors.append(msg)
+                print(f"      ⚠️  {msg}")
+                # Only a rate limit is worth waiting out; a retired model or
+                # revoked key won't fix itself, so fall through immediately.
+                if not _is_rate_limit(str(e)):
                     break
-        return None
 
-    def _try_gemini():
-        if not GEMINI_API_KEY:
-            return None
-        # Fail fast — one quick attempt, no cooldown (quota is usually zero)
+    if GEMINI_API_KEY:
         try:
             print("      🧠 Gemini (gemini-2.0-flash)...")
             return _call_gemini(prompt)
         except RuntimeError as e:
-            msg = str(e); errors.append(msg); print(f"      ⚠️  {msg}")
-        return None
-
-    providers = {"groq": _try_groq, "gemini": _try_gemini}
-    primary = (LLM_PRIMARY if "LLM_PRIMARY" in globals() else "groq").lower()
-    order = [primary] + [p for p in ("groq", "gemini") if p != primary]
-
-    for name in order:
-        result = providers[name]()
-        if result is not None:
-            return result
+            errors.append(f"gemini: {e}")
+            print(f"      ⚠️  gemini: {e}")
 
     # Ollama only makes sense locally — never works in GitHub Actions
     # runners (Ollama isn't installed). Skip it cleanly in cloud.
