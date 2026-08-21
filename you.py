@@ -305,7 +305,7 @@ def _call_llm(prompt: str) -> str:
 
     if GEMINI_API_KEY:
         try:
-            print("      🧠 Gemini (gemini-2.0-flash)...")
+            print(f"      🧠 gemini ({GEMINI_MODEL})...")
             return _call_gemini(prompt)
         except RuntimeError as e:
             errors.append(f"gemini: {e}")
