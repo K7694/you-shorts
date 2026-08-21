@@ -102,25 +102,43 @@ GROQ_REASONING_EFFORT = "low"
 # OpenAI-compatible, so the same call path serves every one of them:
 # add a key and it joins the fallback chain automatically.
 #
-#   Cerebras   cloud.cerebras.ai   ~1M tokens/day free, no card, very fast
-#   OpenRouter openrouter.ai       one key -> many models; changing a dead
-#                                  model becomes a one-line edit, which is
-#                                  insurance against the exact outage we hit
+#   Cerebras   cloud.cerebras.ai   key authenticates but generation returns
+#                                  402 "Payment required — visit your billing
+#                                  tab" (2026-08-22). Left configured so it
+#                                  activates the moment that account is sorted.
+#   OpenRouter openrouter.ai       one key -> many models, so a retired model
+#                                  is a one-line edit. Free models are SLOW
+#                                  (10-47s) and often 429 under contention, so
+#                                  it sits last as a genuine last resort.
+#                                  Measured: nemotron-nano-9b-v2 10.3s/106w;
+#                                  super-120b 20.7s; gemma/gpt-oss-20b 429.
 CEREBRAS_API_KEY   = os.getenv("CEREBRAS_API_KEY", "")
-CEREBRAS_MODEL     = "llama-3.3-70b"
+CEREBRAS_MODEL     = "gpt-oss-120b"   # verified id; account currently 402s
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "")
-OPENROUTER_MODEL   = "meta-llama/llama-3.3-70b-instruct:free"
+OPENROUTER_MODEL   = "nvidia/nemotron-nano-9b-v2:free"
 
 # Fallback chain, tried in order. Entries without a key are skipped, so the
 # pipeline keeps working before any backup key is added.
 # `reasoning_effort` is only sent when set (gpt-oss models need it or they
 # burn the token budget thinking and return truncated JSON).
+# Ordered FASTEST-WORKING FIRST, since every failover costs wall-clock time
+# in an unattended job. Measured 2026-08-22:
+#   groq       ~0.6s   gemini ~1.9s   openrouter 10-47s (and often 429)
+#   cerebras   402 today, but fast once that account's billing is sorted.
+# "kind" selects the request shape: Gemini's REST API differs from the
+# OpenAI-compatible ones.
 LLM_PROVIDERS = [
-    {"name": "groq",       "url": "https://api.groq.com/openai/v1/chat/completions",
+    {"name": "groq",       "kind": "openai",
+     "url": "https://api.groq.com/openai/v1/chat/completions",
      "key": GROQ_API_KEY,       "model": GROQ_MODEL,       "reasoning_effort": GROQ_REASONING_EFFORT},
-    {"name": "cerebras",   "url": "https://api.cerebras.ai/v1/chat/completions",
-     "key": CEREBRAS_API_KEY,   "model": CEREBRAS_MODEL,   "reasoning_effort": ""},
-    {"name": "openrouter", "url": "https://openrouter.ai/api/v1/chat/completions",
+    {"name": "gemini",     "kind": "gemini",
+     "url": "",  # built from GEMINI_MODEL
+     "key": GEMINI_API_KEY,     "model": GEMINI_MODEL,     "reasoning_effort": ""},
+    {"name": "cerebras",   "kind": "openai",
+     "url": "https://api.cerebras.ai/v1/chat/completions",
+     "key": CEREBRAS_API_KEY,   "model": CEREBRAS_MODEL,   "reasoning_effort": "low"},
+    {"name": "openrouter", "kind": "openai",
+     "url": "https://openrouter.ai/api/v1/chat/completions",
      "key": OPENROUTER_API_KEY, "model": OPENROUTER_MODEL, "reasoning_effort": ""},
 ]
 

@@ -41,7 +41,7 @@ from config import *
 #  AGENT 1: BRAIN — Script Generation (Gemini + Groq Fallback)
 # ═══════════════════════════════════════════════════════════════
 
-def _call_gemini(prompt: str) -> str:
+def _call_gemini(prompt: str, key: str = None, model: str = None) -> str:
     """Call Gemini API via REST. No SDK needed.
 
     Verified 2026-08-22:
@@ -52,9 +52,11 @@ def _call_gemini(prompt: str) -> str:
       fine via ?key= or the documented x-goog-api-key header — but NOT via
       Authorization: Bearer, which returns 401.
     """
+    key = key or GEMINI_API_KEY
+    model = model or GEMINI_MODEL
     url = (
         "https://generativelanguage.googleapis.com/v1beta/models/"
-        f"{GEMINI_MODEL}:generateContent"
+        f"{model}:generateContent"
     )
     payload = json.dumps({
         "contents": [{"parts": [{"text": prompt}]}],
@@ -66,7 +68,7 @@ def _call_gemini(prompt: str) -> str:
             req = urllib.request.Request(url, data=payload, headers={
                 "Content-Type": "application/json",
                 # Documented header form; works for both AIza and AQ. keys
-                "x-goog-api-key": GEMINI_API_KEY,
+                "x-goog-api-key": key,
             })
             with urllib.request.urlopen(req, timeout=45) as resp:
                 data = json.loads(resp.read().decode())
@@ -122,7 +124,13 @@ def _call_openai_compatible(prompt: str, url: str, key: str, model: str,
             })
             with urllib.request.urlopen(req, timeout=60) as resp:
                 data = json.loads(resp.read().decode())
-                return data["choices"][0]["message"]["content"].strip()
+                # Some providers (several OpenRouter free models) return
+                # content: null instead of text — .strip() on None crashes
+                # the whole run, so treat it as a provider failure and move on.
+                content = (data["choices"][0]["message"].get("content") or "").strip()
+                if not content:
+                    raise RuntimeError("empty content from provider")
+                return content
         except urllib.error.HTTPError as e:
             detail = ""
             try:
@@ -135,11 +143,11 @@ def _call_openai_compatible(prompt: str, url: str, key: str, model: str,
                 body.pop("reasoning_effort", None)
                 send_effort = False
                 continue
-            # 404 (model retired), 401/403 (bad key) and 400 never recover by
+            # 404 (retired), 401/403 (bad key), 400, 402 (billing) never recover by
             # retrying — go straight to the next provider instead of burning
             # three attempts on each, which is what made the Aug 18 outage
             # slow as well as total.
-            if e.code in (400, 401, 403, 404):
+            if e.code in (400, 401, 402, 403, 404):
                 raise RuntimeError(f"HTTP {e.code} {detail[:120]}")
             if attempt < 2:
                 print(f"      ⚠️  {model} retry {attempt+1}: HTTP {e.code} {detail[:80]}")
@@ -169,7 +177,7 @@ def _call_ollama(prompt: str) -> str:
             req = urllib.request.Request(url, data=payload, headers={
                 "Content-Type": "application/json",
                 # Documented header form; works for both AIza and AQ. keys
-                "x-goog-api-key": GEMINI_API_KEY,
+                "x-goog-api-key": key,
             })
             with urllib.request.urlopen(req, timeout=300) as resp:
                 data = json.loads(resp.read().decode())
@@ -291,6 +299,8 @@ def _call_llm(prompt: str) -> str:
             try:
                 if attempt == 0:
                     print(f"      🧠 {prov['name']} ({prov['model']})...")
+                if prov.get("kind") == "gemini":
+                    return _call_gemini(prompt, prov["key"], prov["model"])
                 return _call_openai_compatible(
                     prompt, prov["url"], prov["key"], prov["model"],
                     prov.get("reasoning_effort", ""))
@@ -302,14 +312,6 @@ def _call_llm(prompt: str) -> str:
                 # revoked key won't fix itself, so fall through immediately.
                 if not _is_rate_limit(str(e)):
                     break
-
-    if GEMINI_API_KEY:
-        try:
-            print(f"      🧠 gemini ({GEMINI_MODEL})...")
-            return _call_gemini(prompt)
-        except RuntimeError as e:
-            errors.append(f"gemini: {e}")
-            print(f"      ⚠️  gemini: {e}")
 
     # Ollama only makes sense locally — never works in GitHub Actions
     # runners (Ollama isn't installed). Skip it cleanly in cloud.
