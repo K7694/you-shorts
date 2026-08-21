@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-21T04:11:18.019300",
+  "last_updated": "2026-08-21T18:50:25.959118",
   "videos": {
     "Ey2sdtKvGVs": {
       "id": "Ey2sdtKvGVs",
@@ -11,7 +11,7 @@
       "likes": 4,
       "comments": 1,
       "engagement_rate": 0.752,
-      "views_per_day": 222,
+      "views_per_day": 166,
       "tags": [
         "animal cognition",
         "curiosity",
@@ -42,7 +42,7 @@
       "likes": 17,
       "comments": 1,
       "engagement_rate": 2.748,
-      "views_per_day": 73,
+      "views_per_day": 66,
       "tags": [
         "cosmology",
         "curiosity",
@@ -72,7 +72,7 @@
       "likes": 12,
       "comments": 1,
       "engagement_rate": 1.553,
-      "views_per_day": 70,
+      "views_per_day": 64,
       "tags": [
         "ball lightning",
         "curiosity",
@@ -102,7 +102,7 @@
       "likes": 13,
       "comments": 1,
       "engagement_rate": 2.881,
-      "views_per_day": 69,
+      "views_per_day": 61,
       "tags": [
         "bioluminescence",
         "curiosity",
@@ -133,7 +133,7 @@
       "likes": 23,
       "comments": 1,
       "engagement_rate": 2.84,
-      "views_per_day": 60,
+      "views_per_day": 56,
       "tags": [
         "black holes",
         "curiosity",
@@ -162,7 +162,7 @@
       "likes": 5,
       "comments": 1,
       "engagement_rate": 0.548,
-      "views_per_day": 58,
+      "views_per_day": 55,
       "tags": [
         "animal navigation",
         "bird migration",
@@ -193,7 +193,7 @@
       "likes": 13,
       "comments": 1,
       "engagement_rate": 3.5,
-      "views_per_day": 50,
+      "views_per_day": 44,
       "tags": [
         "Black Holes",
         "Cosmos",
@@ -224,7 +224,7 @@
       "likes": 9,
       "comments": 2,
       "engagement_rate": 2.355,
-      "views_per_day": 47,
+      "views_per_day": 42,
       "tags": [
         "botany",
         "curiosity",
@@ -254,7 +254,7 @@
       "likes": 9,
       "comments": 0,
       "engagement_rate": 0.789,
-      "views_per_day": 44,
+      "views_per_day": 42,
       "tags": [
         "Collatz Conjecture",
         "curiosity",
@@ -283,7 +283,7 @@
       "likes": 7,
       "comments": 0,
       "engagement_rate": 0.642,
-      "views_per_day": 42,
+      "views_per_day": 40,
       "tags": [
         "curiosity",
         "did you know",
@@ -314,7 +314,7 @@
       "likes": 5,
       "comments": 1,
       "engagement_rate": 0.596,
-      "views_per_day": 39,
+      "views_per_day": 37,
       "tags": [
         "Banach-Tarski",
         "curiosity",
@@ -334,37 +334,6 @@
       "duration_secs": 16,
       "thumbnail": "https://i.ytimg.com/vi/oi4x0YUSxl8/hqdefault.jpg"
     },
-    "RRuXKwtIydk": {
-      "id": "RRuXKwtIydk",
-      "title": "UNSOLVED #13 | \ud83c\udf2a\ufe0f The Tunguska Enigma",
-      "channel": "KnowMore-Dailyday",
-      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
-      "published": "2026-08-16T04:11:47Z",
-      "views": 143,
-      "likes": 1,
-      "comments": 1,
-      "engagement_rate": 1.399,
-      "views_per_day": 36,
-      "tags": [
-        "Siberia",
-        "Tunguska Event",
-        "curiosity",
-        "did you know",
-        "explosion",
-        "facts",
-        "mindblown",
-        "mystery",
-        "physics",
-        "science",
-        "shorts",
-        "space",
-        "unexplained",
-        "universe"
-      ],
-      "description": "Uncover the truth behind the mysterious Tunguska Event\n\n\u25b6 FULL DOCUMENTARY: Cracking Collatz\nhttps://youtube.com/watch?v=n7--mTZUASg\n\n\ud83d\udcfa UNSOLVED \u2014 One unsolved mystery, every day.\nSubscribe for a new episode every day, plus a full deep dive every Sunday.\n\n#shorts #science #mystery",
-      "duration_secs": 28,
-      "thumbnail": "https://i.ytimg.com/vi/RRuXKwtIydk/hqdefault.jpg"
-    },
     "R_7SK3217Zc": {
       "id": "R_7SK3217Zc",
       "title": "UNSOLVED #6 | \ud83c\udfef Lost City: The Indus Valley Enigma",
@@ -375,7 +344,7 @@
       "likes": 6,
       "comments": 2,
       "engagement_rate": 1.168,
-      "views_per_day": 36,
+      "views_per_day": 34,
       "tags": [
         "Ancient Mystery",
         "Archaeology",
@@ -406,7 +375,7 @@
       "likes": 11,
       "comments": 0,
       "engagement_rate": 1.449,
-      "views_per_day": 36,
+      "views_per_day": 34,
       "tags": [
         "curiosity",
         "did you know",
@@ -435,7 +404,7 @@
       "likes": 11,
       "comments": 1,
       "engagement_rate": 1.664,
-      "views_per_day": 33,
+      "views_per_day": 31,
       "tags": [
         "Uranus",
         "astronomy",
@@ -465,7 +434,7 @@
       "likes": 6,
       "comments": 0,
       "engagement_rate": 0.957,
-      "views_per_day": 31,
+      "views_per_day": 30,
       "tags": [
         "animal defense",
         "curiosity",
@@ -486,6 +455,37 @@
       "duration_secs": 25,
       "thumbnail": "https://i.ytimg.com/vi/Knr-VAuUrN0/hqdefault.jpg"
     },
+    "RRuXKwtIydk": {
+      "id": "RRuXKwtIydk",
+      "title": "UNSOLVED #13 | \ud83c\udf2a\ufe0f The Tunguska Enigma",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-08-16T04:11:47Z",
+      "views": 143,
+      "likes": 1,
+      "comments": 1,
+      "engagement_rate": 1.399,
+      "views_per_day": 29,
+      "tags": [
+        "Siberia",
+        "Tunguska Event",
+        "curiosity",
+        "did you know",
+        "explosion",
+        "facts",
+        "mindblown",
+        "mystery",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "unexplained",
+        "universe"
+      ],
+      "description": "Uncover the truth behind the mysterious Tunguska Event\n\n\u25b6 FULL DOCUMENTARY: Cracking Collatz\nhttps://youtube.com/watch?v=n7--mTZUASg\n\n\ud83d\udcfa UNSOLVED \u2014 One unsolved mystery, every day.\nSubscribe for a new episode every day, plus a full deep dive every Sunday.\n\n#shorts #science #mystery",
+      "duration_secs": 28,
+      "thumbnail": "https://i.ytimg.com/vi/RRuXKwtIydk/hqdefault.jpg"
+    },
     "uK0oNeuG2JI": {
       "id": "uK0oNeuG2JI",
       "title": "HOW IT WORKS #2 | \ud83c\udf2b\ufe0f The Secret of Rolling Clouds",
@@ -496,7 +496,7 @@
       "likes": 6,
       "comments": 0,
       "engagement_rate": 0.871,
-      "views_per_day": 29,
+      "views_per_day": 28,
       "tags": [
         "atmospheric science",
         "cloud formation",
@@ -527,7 +527,7 @@
       "likes": 5,
       "comments": 1,
       "engagement_rate": 2.281,
-      "views_per_day": 24,
+      "views_per_day": 22,
       "tags": [
         "bioluminescence",
         "curiosity",
@@ -557,7 +557,7 @@
       "likes": 6,
       "comments": 0,
       "engagement_rate": 0.833,
-      "views_per_day": 22,
+      "views_per_day": 21,
       "tags": [
         "climate change",
         "curiosity",
@@ -577,36 +577,6 @@
       "description": "Discover the mysterious threat lurking in the depths\n\n#shorts #ocean #mystery",
       "duration_secs": 19,
       "thumbnail": "https://i.ytimg.com/vi/T36Mte1mMFA/hqdefault.jpg"
-    },
-    "BpDusVCQquw": {
-      "id": "BpDusVCQquw",
-      "title": "HOW IT WORKS #5 | \ud83e\udde0 Mind Over Matter: The Placebo Effect",
-      "channel": "KnowMore-Dailyday",
-      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
-      "published": "2026-08-07T05:18:02Z",
-      "views": 257,
-      "likes": 5,
-      "comments": 1,
-      "engagement_rate": 2.335,
-      "views_per_day": 20,
-      "tags": [
-        "brain power",
-        "curiosity",
-        "did you know",
-        "facts",
-        "healing",
-        "mind body connection",
-        "mindblown",
-        "physics",
-        "placebo effect",
-        "science",
-        "shorts",
-        "space",
-        "universe"
-      ],
-      "description": "Discover the surprising science behind the placebo effect\n\n\u25b6 FULL DOCUMENTARY: Toxic Planet\nhttps://youtube.com/watch?v=F3xdKAoRb8k\n\n\ud83d\udcfa HOW IT WORKS \u2014 The hidden mechanics of everyday things.\nSubscribe for a new episode every day, plus a full deep dive every Sunday.\n\n#shorts #science #mindblown",
-      "duration_secs": 20,
-      "thumbnail": "https://i.ytimg.com/vi/BpDusVCQquw/hqdefault.jpg"
     },
     "KuJkNzf--Sk": {
       "id": "KuJkNzf--Sk",
@@ -637,6 +607,36 @@
       "duration_secs": 13,
       "thumbnail": "https://i.ytimg.com/vi/KuJkNzf--Sk/hqdefault.jpg"
     },
+    "BpDusVCQquw": {
+      "id": "BpDusVCQquw",
+      "title": "HOW IT WORKS #5 | \ud83e\udde0 Mind Over Matter: The Placebo Effect",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-08-07T05:18:02Z",
+      "views": 257,
+      "likes": 5,
+      "comments": 1,
+      "engagement_rate": 2.335,
+      "views_per_day": 18,
+      "tags": [
+        "brain power",
+        "curiosity",
+        "did you know",
+        "facts",
+        "healing",
+        "mind body connection",
+        "mindblown",
+        "physics",
+        "placebo effect",
+        "science",
+        "shorts",
+        "space",
+        "universe"
+      ],
+      "description": "Discover the surprising science behind the placebo effect\n\n\u25b6 FULL DOCUMENTARY: Toxic Planet\nhttps://youtube.com/watch?v=F3xdKAoRb8k\n\n\ud83d\udcfa HOW IT WORKS \u2014 The hidden mechanics of everyday things.\nSubscribe for a new episode every day, plus a full deep dive every Sunday.\n\n#shorts #science #mindblown",
+      "duration_secs": 20,
+      "thumbnail": "https://i.ytimg.com/vi/BpDusVCQquw/hqdefault.jpg"
+    },
     "22PxfPCE5bs": {
       "id": "22PxfPCE5bs",
       "title": "\ud83c\udfca\u200d\u2640\ufe0f Lost City Found? \ud83e\udd2f",
@@ -647,7 +647,7 @@
       "likes": 3,
       "comments": 0,
       "engagement_rate": 0.418,
-      "views_per_day": 19,
+      "views_per_day": 18,
       "tags": [
         "China",
         "Shicheng",
@@ -707,7 +707,7 @@
       "likes": 7,
       "comments": 0,
       "engagement_rate": 1.647,
-      "views_per_day": 17,
+      "views_per_day": 16,
       "tags": [
         "Experiment",
         "Mystery",
@@ -759,67 +759,6 @@
       "duration_secs": 17,
       "thumbnail": "https://i.ytimg.com/vi/kjlm_1R1fgk/hqdefault.jpg"
     },
-    "2SNsAzVbPHU": {
-      "id": "2SNsAzVbPHU",
-      "title": "\ud83c\udf0a Rivers Turn to Ice Discs! \ud83e\udd76",
-      "channel": "KnowMore-Dailyday",
-      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
-      "published": "2026-07-14T05:55:56Z",
-      "views": 504,
-      "likes": 7,
-      "comments": 0,
-      "engagement_rate": 1.389,
-      "views_per_day": 14,
-      "tags": [
-        "curiosity",
-        "did you know",
-        "environment",
-        "facts",
-        "ice discs",
-        "mindblown",
-        "natural wonders",
-        "physics",
-        "rivers",
-        "science",
-        "shorts",
-        "space",
-        "universe"
-      ],
-      "description": "Discover the mysterious ice discs forming in rivers\n\n#shorts #science #mindblown",
-      "duration_secs": 12,
-      "thumbnail": "https://i.ytimg.com/vi/2SNsAzVbPHU/hqdefault.jpg"
-    },
-    "45iewvaWsKo": {
-      "id": "45iewvaWsKo",
-      "title": "\ud83e\udd2f The Hidden Voice in Your Head",
-      "channel": "KnowMore-Dailyday",
-      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
-      "published": "2026-07-24T06:11:34Z",
-      "views": 341,
-      "likes": 4,
-      "comments": 0,
-      "engagement_rate": 1.173,
-      "views_per_day": 13,
-      "tags": [
-        "curiosity",
-        "did you know",
-        "echoism",
-        "facts",
-        "human behavior",
-        "mindblown",
-        "mindfulness",
-        "physics",
-        "psychology",
-        "science",
-        "self awareness",
-        "shorts",
-        "space",
-        "universe"
-      ],
-      "description": "The shocking truth about human echoism\n\n#shorts #psychology #mindblown",
-      "duration_secs": 12,
-      "thumbnail": "https://i.ytimg.com/vi/45iewvaWsKo/hqdefault.jpg"
-    },
     "ahal1ysUUoQ": {
       "id": "ahal1ysUUoQ",
       "title": "\ud83e\udd16 The Faceless Army Revealed",
@@ -851,6 +790,67 @@
       "duration_secs": 20,
       "thumbnail": "https://i.ytimg.com/vi/ahal1ysUUoQ/hqdefault.jpg"
     },
+    "2SNsAzVbPHU": {
+      "id": "2SNsAzVbPHU",
+      "title": "\ud83c\udf0a Rivers Turn to Ice Discs! \ud83e\udd76",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-07-14T05:55:56Z",
+      "views": 504,
+      "likes": 7,
+      "comments": 0,
+      "engagement_rate": 1.389,
+      "views_per_day": 13,
+      "tags": [
+        "curiosity",
+        "did you know",
+        "environment",
+        "facts",
+        "ice discs",
+        "mindblown",
+        "natural wonders",
+        "physics",
+        "rivers",
+        "science",
+        "shorts",
+        "space",
+        "universe"
+      ],
+      "description": "Discover the mysterious ice discs forming in rivers\n\n#shorts #science #mindblown",
+      "duration_secs": 12,
+      "thumbnail": "https://i.ytimg.com/vi/2SNsAzVbPHU/hqdefault.jpg"
+    },
+    "45iewvaWsKo": {
+      "id": "45iewvaWsKo",
+      "title": "\ud83e\udd2f The Hidden Voice in Your Head",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-07-24T06:11:34Z",
+      "views": 341,
+      "likes": 4,
+      "comments": 0,
+      "engagement_rate": 1.173,
+      "views_per_day": 12,
+      "tags": [
+        "curiosity",
+        "did you know",
+        "echoism",
+        "facts",
+        "human behavior",
+        "mindblown",
+        "mindfulness",
+        "physics",
+        "psychology",
+        "science",
+        "self awareness",
+        "shorts",
+        "space",
+        "universe"
+      ],
+      "description": "The shocking truth about human echoism\n\n#shorts #psychology #mindblown",
+      "duration_secs": 12,
+      "thumbnail": "https://i.ytimg.com/vi/45iewvaWsKo/hqdefault.jpg"
+    },
     "S17xSEOFT94": {
       "id": "S17xSEOFT94",
       "title": "UNSOLVED #8 | \ud83d\udd0d Cosmic Blast: The Energy Enigma",
@@ -861,7 +861,7 @@
       "likes": 4,
       "comments": 1,
       "engagement_rate": 3.012,
-      "views_per_day": 11,
+      "views_per_day": 10,
       "tags": [
         "Astrophysics",
         "Cosmic Energy",
