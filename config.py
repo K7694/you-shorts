@@ -63,7 +63,12 @@ for d in [OUTPUT_DIR, TEMP_DIR, ASSETS_DIR]:
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
 # gemini-2.0-flash and gemini-2.5-flash are both RETIRED (404 as of
 # 2026-08-22). Only the floating "-latest" aliases resolve, so pin to one.
-GEMINI_MODEL = "gemini-flash-latest"
+# Verified 2026-08-22 against a live AQ. key:
+#   gemini-flash-lite-latest  200 OK, ~1.9s, clean JSON   <- use this
+#   gemini-flash-latest       read timeouts, repeatedly
+#   gemini-pro-latest         429 quota (pro has tight free limits)
+#   gemini-2.0-flash / 2.5-flash  404 RETIRED
+GEMINI_MODEL = "gemini-flash-lite-latest"
 
 # 1b. Your free Groq API key (backup — used when Gemini is rate-limited)
 #     Get it here (30 sec): https://console.groq.com → API Keys
