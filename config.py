@@ -74,6 +74,20 @@ GROQ_API_KEY = os.getenv("GROQ_API_KEY", "")
 # flip this to "gemini" (one line) and it upgrades automatically.
 LLM_PRIMARY = "groq"   # "groq" | "gemini"
 
+# Groq model id. Kept HERE because it was hardcoded in three files and Groq
+# retired llama-3.3-70b-versatile on ~2026-08-18 — every run 404'd for four
+# days with no video published. One place to change now.
+# Verified 2026-08-22: gpt-oss-120b is fast (~1s) and returns clean JSON.
+# (qwen3.6-27b emits <think> preambles that break JSON parsing — avoid.)
+# If this 404s again, list live models with:
+#   curl -H "Authorization: Bearer $GROQ_API_KEY" https://api.groq.com/openai/v1/models
+GROQ_MODEL = "openai/gpt-oss-120b"
+# gpt-oss models reason before answering. Left unchecked that burns the token
+# budget and truncates the JSON mid-string. "low" keeps reasoning to ~13
+# tokens. Set to "" for a non-reasoning model (it's also dropped
+# automatically if the model rejects the parameter).
+GROQ_REASONING_EFFORT = "low"
+
 # 1c. YouTube Data API key (for the Analyzer — reading YouTube data)
 YOUTUBE_DATA_API_KEY = os.getenv("YOUTUBE_DATA_API_KEY", "")
 

@@ -78,16 +78,26 @@ def _call_gemini(prompt: str) -> str:
 
 
 def _call_groq(prompt: str) -> str:
-    """Call Groq API (llama3-70b) as fallback. Free tier, very fast."""
+    """Call Groq API as fallback. Free tier, very fast. Model from config.GROQ_MODEL."""
     url = "https://api.groq.com/openai/v1/chat/completions"
-    payload = json.dumps({
-        "model": "llama-3.3-70b-versatile",
+    body = {
+        "model": GROQ_MODEL,
         "messages": [{"role": "user", "content": prompt}],
         "temperature": 0.9,
         "max_tokens": 2048,
-    }).encode()
+    }
+    # gpt-oss-120b is a REASONING model: by default it spent 677 of 829
+    # completion tokens thinking and the JSON came back truncated
+    # ("Unterminated string"). reasoning_effort=low cuts that to ~13 tokens
+    # and the output parses. Raising max_tokens instead is not an option —
+    # 8000 returns HTTP 413 against the org's 12k tokens/min limit.
+    # Dropped automatically if a future model rejects the parameter.
+    send_effort = bool(GROQ_REASONING_EFFORT)
+    if send_effort:
+        body["reasoning_effort"] = GROQ_REASONING_EFFORT
 
     for attempt in range(3):
+        payload = json.dumps(body).encode()
         try:
             req = urllib.request.Request(url, data=payload, headers={
                 "Content-Type": "application/json",
@@ -97,6 +107,23 @@ def _call_groq(prompt: str) -> str:
             with urllib.request.urlopen(req, timeout=60) as resp:
                 data = json.loads(resp.read().decode())
                 return data["choices"][0]["message"]["content"].strip()
+        except urllib.error.HTTPError as e:
+            detail = ""
+            try:
+                detail = e.read().decode(errors="ignore")[:200]
+            except Exception:
+                pass
+            # Model doesn't know reasoning_effort → drop it and retry
+            if e.code == 400 and send_effort and "reasoning_effort" in detail:
+                print("      ℹ️  Model rejects reasoning_effort — retrying without")
+                body.pop("reasoning_effort", None)
+                send_effort = False
+                continue
+            if attempt < 2:
+                print(f"      ⚠️  Groq retry {attempt+1}: HTTP {e.code} {detail[:80]}")
+                time.sleep(2 ** attempt)
+            else:
+                raise RuntimeError(f"Groq failed: HTTP {e.code} {detail[:120]}")
         except Exception as e:
             if attempt < 2:
                 print(f"      ⚠️  Groq retry {attempt+1}: {e}")
@@ -226,7 +253,7 @@ def _call_llm(prompt: str) -> str:
                 time.sleep(wait)
             try:
                 if attempt == 0:
-                    print("      🧠 Groq (llama-3.3-70b)...")
+                    print(f"      🧠 Groq ({GROQ_MODEL})...")
                 return _call_groq(prompt)
             except RuntimeError as e:
                 msg = str(e); errors.append(msg); print(f"      ⚠️  {msg}")

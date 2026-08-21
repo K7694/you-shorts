@@ -33,7 +33,7 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 from config import (
-    YOUTUBE_DATA_API_KEY, GEMINI_API_KEY, GROQ_API_KEY,
+    YOUTUBE_DATA_API_KEY, GEMINI_API_KEY, GROQ_API_KEY, GROQ_MODEL,
     CHANNEL_NICHE, OUTPUT_DIR, BASE_DIR
 )
 
@@ -354,7 +354,9 @@ def _call_llm_analyzer(prompt: str) -> str:
         try:
             url = "https://api.groq.com/openai/v1/chat/completions"
             payload = json.dumps({
-                "model": "llama-3.3-70b-versatile",
+                "model": GROQ_MODEL,
+                # See config: gpt-oss reasons by default and truncates output
+                "reasoning_effort": "low",
                 "messages": [{"role": "user", "content": prompt}],
                 "temperature": 0.3, "max_tokens": 4096,
             }).encode()
