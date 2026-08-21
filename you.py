@@ -42,11 +42,19 @@ from config import *
 # ═══════════════════════════════════════════════════════════════
 
 def _call_gemini(prompt: str) -> str:
-    """Call Gemini API via REST. No SDK needed."""
+    """Call Gemini API via REST. No SDK needed.
+
+    Verified 2026-08-22:
+    - gemini-2.0-flash AND gemini-2.5-flash are both RETIRED (404). Only the
+      floating "-latest" aliases resolve, so we pin to one of those.
+    - The new AQ.-prefixed keys are legitimate (Google migrated Standard
+      "AIza" keys to service-account-bound Auth keys). They authenticate
+      fine via ?key= or the documented x-goog-api-key header — but NOT via
+      Authorization: Bearer, which returns 401.
+    """
     url = (
         "https://generativelanguage.googleapis.com/v1beta/models/"
-        "gemini-2.0-flash:generateContent"
-        f"?key={GEMINI_API_KEY}"
+        f"{GEMINI_MODEL}:generateContent"
     )
     payload = json.dumps({
         "contents": [{"parts": [{"text": prompt}]}],
@@ -55,7 +63,11 @@ def _call_gemini(prompt: str) -> str:
 
     for attempt in range(3):
         try:
-            req = urllib.request.Request(url, data=payload, headers={"Content-Type": "application/json"})
+            req = urllib.request.Request(url, data=payload, headers={
+                "Content-Type": "application/json",
+                # Documented header form; works for both AIza and AQ. keys
+                "x-goog-api-key": GEMINI_API_KEY,
+            })
             with urllib.request.urlopen(req, timeout=45) as resp:
                 data = json.loads(resp.read().decode())
                 return data["candidates"][0]["content"]["parts"][0]["text"].strip()
@@ -154,7 +166,11 @@ def _call_ollama(prompt: str) -> str:
 
     for attempt in range(3):
         try:
-            req = urllib.request.Request(url, data=payload, headers={"Content-Type": "application/json"})
+            req = urllib.request.Request(url, data=payload, headers={
+                "Content-Type": "application/json",
+                # Documented header form; works for both AIza and AQ. keys
+                "x-goog-api-key": GEMINI_API_KEY,
+            })
             with urllib.request.urlopen(req, timeout=300) as resp:
                 data = json.loads(resp.read().decode())
                 return data["response"].strip()

@@ -61,6 +61,9 @@ for d in [OUTPUT_DIR, TEMP_DIR, ASSETS_DIR]:
 #    Set via environment variable:  set GEMINI_API_KEY=your-key-here
 #    (Or in GitHub Actions, add as a repository Secret)
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
+# gemini-2.0-flash and gemini-2.5-flash are both RETIRED (404 as of
+# 2026-08-22). Only the floating "-latest" aliases resolve, so pin to one.
+GEMINI_MODEL = "gemini-flash-latest"
 
 # 1b. Your free Groq API key (backup — used when Gemini is rate-limited)
 #     Get it here (30 sec): https://console.groq.com → API Keys
