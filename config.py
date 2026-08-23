@@ -228,6 +228,15 @@ CAPTION_WORDS_PER_LINE = 3
 # the writing instead. Set False to generate in one pass with no editing.
 CRITIQUE_AND_REVISE = True
 
+# ── Retention instrumentation (2026-08-23) ───────────────────────
+# The hook was never measurable before this: views/likes say nothing about
+# whether the opening stopped the scroll. analytics.py --backfill records
+# the retention curve per video so hook changes can be judged on evidence.
+# 72h: YouTube's curve is still moving in the first day or two.
+RETENTION_BACKFILL_AFTER_HOURS = 72
+# Shorts are decided in the first few seconds; 3s is the hook window.
+RETENTION_HOOK_SECONDS = 3.0
+
 # AI image style suffix.
 # RESET (2026-05-31): reverted from the affiliate "tech UI / software
 # screenshot" look back to Phase 0's cinematic science aesthetic — the

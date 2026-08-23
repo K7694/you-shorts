@@ -102,6 +102,25 @@ jobs:
           PYTHONIOENCODING: utf-8
         run: python you.py
 
+      # ── 8c. Record hook retention for finished videos ─────────
+      #    Views and likes say nothing about whether the opening stopped
+      #    the scroll; the retention curve says it directly. Writes
+      #    rrp_hook / rrp_all / rrp_thirds into feedback/uploaded.json for
+      #    any video past RETENTION_BACKFILL_AFTER_HOURS, so hook and
+      #    pacing changes can be judged on evidence instead of guesses.
+      #    One API call per genuinely new video, nothing after that.
+      #
+      #    continue-on-error like step 8a: this is instrumentation, not
+      #    publishing. The video has already shipped by this point, so a
+      #    transient Analytics API failure must not turn the run red — it
+      #    would train us to ignore real failures. A persistent failure is
+      #    visible as retention data going stale in the log.
+      - name: Record hook retention
+        continue-on-error: true
+        env:
+          PYTHONIOENCODING: utf-8
+        run: python analytics.py --backfill
+
       # ── 9. Save state back to repo ───────────────────────────
       #    Saves: used topics list, token refresh, feedback logs,
       #    analyzer brief and top performers (for self-improvement).

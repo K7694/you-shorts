@@ -30,7 +30,8 @@ import sys
 from datetime import date, timedelta
 from pathlib import Path
 
-from config import YOUTUBE_TOKEN_FILE, BASE_DIR
+from config import (YOUTUBE_TOKEN_FILE, BASE_DIR,
+                    RETENTION_BACKFILL_AFTER_HOURS, RETENTION_HOOK_SECONDS)
 
 ANALYTICS_SCOPE = "https://www.googleapis.com/auth/yt-analytics.readonly"
 UPLOADS_LOG = BASE_DIR / "feedback" / "uploaded.json"
@@ -109,10 +110,161 @@ def _query(yta, start, end):
     ).execute()
 
 
+# ── Retention backfill ────────────────────────────────────────────
+# The hook is the one thing we could never measure. Views and likes say
+# nothing about whether the opening line stopped the scroll; the retention
+# curve says it directly. Recording it per video is what lets a future
+# hook change be judged on evidence instead of another n=11 guess.
+#
+# Why this exists (2026-08-23): the old _score_hook gate was validated
+# against real 3-second retention and came back r=-0.06 (p=0.86) — it was
+# measuring nothing. That check needed 11 usable videos scraped by hand.
+# With this running daily, the same question is answerable from the log.
+
+def _retention_curve(yta, vid: str, days: int) -> list:
+    """100-point retention curve for one video, or [] if unavailable.
+
+    audienceWatchRatio     — fraction still watching at that point
+    relativeRetentionPerformance — 0-1 percentile vs comparable YouTube
+                             videos, so it already strips out topic and
+                             algorithm luck. This is the honest one.
+    """
+    from datetime import date as _date
+    end = _date.today()
+    start = end - timedelta(days=days)
+    resp = yta.reports().query(
+        ids="channel==MINE",
+        startDate=start.isoformat(),
+        endDate=end.isoformat(),
+        metrics="audienceWatchRatio,relativeRetentionPerformance",
+        dimensions="elapsedVideoTimeRatio",
+        filters=f"video=={vid}",
+    ).execute()
+    return resp.get("rows", [])
+
+
+def backfill_retention(days: int = 90, refresh: bool = False) -> int:
+    """Write hook-window retention into feedback/uploaded.json.
+
+    Only touches videos old enough for the curve to have settled
+    (RETENTION_BACKFILL_AFTER_HOURS) and not already recorded, so a daily
+    run costs one API call per genuinely new video and nothing after that.
+
+    Stores, per video:
+      retention.awr_hook  — mean audienceWatchRatio over the first
+                            RETENTION_HOOK_SECONDS
+      retention.rrp_hook  — mean relativeRetentionPerformance, same window
+      retention.rrp_all   — mean relativeRetentionPerformance, whole video
+      retention.duration_est_s / points / fetched_at
+
+    rrp_hook is the number to judge hooks on. rrp_all is the baseline it
+    should be compared against — a hook is weak when rrp_hook < rrp_all,
+    which is exactly the pattern this channel showed (0.47 vs 0.50).
+    """
+    creds = _creds()
+    if not creds:
+        return 0
+    from googleapiclient.discovery import build
+    from datetime import datetime, timezone
+
+    if not UPLOADS_LOG.exists():
+        print("   No uploads tracked yet.")
+        return 0
+    uploads = json.loads(UPLOADS_LOG.read_text(encoding="utf-8"))
+
+    def _age_hours(ts: str) -> float:
+        dt = datetime.fromisoformat((ts or "").replace("Z", "+00:00"))
+        if dt.tzinfo is None:                      # pre-tz-fix records
+            dt = dt.replace(tzinfo=timezone.utc)
+        return (datetime.now(timezone.utc) - dt).total_seconds() / 3600
+
+    pending = []
+    for u in uploads:
+        if not u.get("id") or not u.get("uploaded_at"):
+            continue
+        if u.get("retention") and not refresh:
+            continue
+        try:
+            if _age_hours(u["uploaded_at"]) < RETENTION_BACKFILL_AFTER_HOURS:
+                continue
+        except Exception:
+            continue
+        pending.append(u)
+
+    if not pending:
+        print(f"   Retention: nothing new to record "
+              f"(videos become eligible at {RETENTION_BACKFILL_AFTER_HOURS}h).")
+        return 0
+
+    yta = build("youtubeAnalytics", "v2", credentials=creds)
+    print(f"   Retention: recording {len(pending)} video(s)...")
+    done = 0
+    for u in pending:
+        vid = u["id"]
+        try:
+            rows = _retention_curve(yta, vid, days)
+        except Exception as e:
+            print(f"      ⚠️  {vid}: {str(e)[:100]}")
+            continue
+        if len(rows) < 20:
+            # Too few views for YouTube to release a curve. Leave the record
+            # untouched so it retries once the video picks up more views.
+            print(f"      ·  {vid}: no curve yet ({len(rows)} points)")
+            continue
+
+        # elapsedVideoTimeRatio is a FRACTION of duration, so the hook window
+        # has to be converted per video. word_count is the only length signal
+        # in the log; /2.5 wps + ~3s of padding matched measured duration to
+        # within 1-3s when checked against AVD/retention on 2026-08-23.
+        wc = u.get("word_count") or 0
+        dur = (wc / 2.5 + 3.0) if wc else 0.0
+        frac = (RETENTION_HOOK_SECONDS / dur) if dur > 0 else 0.10
+        frac = min(max(frac, 0.02), 0.5)
+
+        early = [r for r in rows if r[0] <= frac] or rows[:max(2, len(rows) // 10)]
+
+        # Thirds cost nothing extra (same rows) and are what actually locate
+        # the weak stretch. Recorded because the first n=60 read showed the
+        # hook is the STRONGEST third, not the weakest — see LESSONS.md.
+        n3 = max(1, len(rows) // 3)
+        thirds = [round(sum(r[2] for r in rows[i:i + n3]) / len(rows[i:i + n3]), 4)
+                  for i in (0, n3, 2 * n3) if rows[i:i + n3]]
+
+        u["retention"] = {
+            "awr_hook": round(sum(r[1] for r in early) / len(early), 4),
+            "rrp_hook": round(sum(r[2] for r in early) / len(early), 4),
+            "rrp_all":  round(sum(r[2] for r in rows) / len(rows), 4),
+            "rrp_thirds": thirds,
+            "hook_window_s": RETENTION_HOOK_SECONDS,
+            "duration_est_s": round(dur, 1) if dur else None,
+            "points": len(rows),
+            "fetched_at": datetime.now(timezone.utc).isoformat(),
+        }
+        r = u["retention"]
+        flag = "  ← weak hook" if r["rrp_hook"] < r["rrp_all"] else ""
+        print(f"      ✅ {vid}  rrp_hook={r['rrp_hook']:.2f}  "
+              f"rrp_all={r['rrp_all']:.2f}  awr@{RETENTION_HOOK_SECONDS:g}s={r['awr_hook']:.2f}{flag}")
+        done += 1
+
+    if done:
+        UPLOADS_LOG.write_text(json.dumps(uploads, indent=2, ensure_ascii=False),
+                               encoding="utf-8")
+    print(f"   Retention: {done} video(s) recorded.")
+    return done
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description="YOU — retention analytics")
     ap.add_argument("--days", type=int, default=30)
+    ap.add_argument("--backfill", action="store_true",
+                    help="Record per-video hook retention into feedback/uploaded.json and exit")
+    ap.add_argument("--refresh", action="store_true",
+                    help="With --backfill: re-fetch videos already recorded")
     args = ap.parse_args()
+
+    if args.backfill:
+        backfill_retention(days=max(args.days, 90), refresh=args.refresh)
+        return 0
 
     rows = fetch(args.days)
     if not rows:
