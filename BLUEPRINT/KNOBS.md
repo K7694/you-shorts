@@ -60,6 +60,27 @@ All in `config.py` unless noted.
 
 Measured: 7.3-min video builds in ~18 min locally, ~100 MB, 1.8 Mbps.
 
+## Script quality + retention instrumentation (added 2026-08-23)
+| Knob | Default | Notes |
+|------|---------|-------|
+| `CRITIQUE_AND_REVISE` | True | Second LLM call rewrites the single weakest line. Replaced the `_score_hook >= 7` gate, which re-rolled whole scripts up to 4x on a keyword count measured at r=-0.06 vs real 3-second retention. Net call count unchanged (~1.9 -> 2.0); the second call now edits instead of re-rolling. False = one-pass generation |
+| `RETENTION_BACKFILL_AFTER_HOURS` | 72 | Age before a video's retention curve is recorded. YouTube's curve is still moving in the first day or two |
+| `RETENTION_HOOK_SECONDS` | 3.0 | The hook window. `elapsedVideoTimeRatio` is a fraction of duration, so this is converted per video using `word_count / 2.5 + 3s` |
+
+Run manually: `python analytics.py --backfill` (add `--refresh` to re-fetch
+already-recorded videos). Runs automatically as step 8c of the daily
+workflow. Writes into each `feedback/uploaded.json` record:
+
+```
+retention: { awr_hook, rrp_hook, rrp_all, rrp_thirds[3], duration_est_s, points }
+```
+
+`rrp_*` is `relativeRetentionPerformance` — a 0-1 percentile against
+comparable YouTube videos, so it already strips out topic and algorithm
+luck. **This is the honest retention number.** Absolute retention flatters
+short videos: this channel reads 68.5% absolute but 0.43 relative, i.e.
+slightly below the median comparable video.
+
 ## State files (what the machine remembers)
 | File | Role | Reset for a new channel? |
 |------|------|--------------------------|

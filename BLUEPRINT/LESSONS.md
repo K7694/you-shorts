@@ -170,6 +170,59 @@ against a list of genuinely fresh topics before shipping a wider window.
 
 ---
 
+## 3b. The hook scorer measured nothing (2026-08-23)
+
+`_score_hook` gated every script: below 7/10, regenerate, up to 4 times.
+It ran for months and nobody ever checked it against reality.
+
+**Validated two ways, both damning:**
+- vs real 3-second retention (`audienceWatchRatio`): **r = -0.06, p = 0.86**
+- vs `relativeRetentionPerformance`: r = -0.09, p = 0.78
+- across all 150 logged hooks: **sd = 1.22**, 39% scored exactly 7
+- two of its four rules fired on <5% of hooks, leaving little more than
+  "contains a digit" + "contains the word you"
+
+It was a 3-bit keyword check driving ~1.9 generations per video.
+**Fix:** deleted the gate, moved the budget to `_critique_and_revise`.
+`hook_score` is still logged so the record stays continuous.
+
+**The lesson:** a scoring function that is never validated is not a
+quality gate, it is a random number generator with a confidence interval.
+Anything that *selects* must be checked against the outcome it claims to
+predict, and "it looks reasonable" is not that check.
+
+## 3c. n=11 pointed the wrong way; n=60 reversed it (2026-08-23)
+
+The first retention read (n=11, filtered to >=100 views) showed the hook
+window at 0.47 vs 0.50 overall and I reported "the openings are the weak
+spot." The critique pass was built biased toward line 1 on that basis.
+
+Backfilling all 60 eligible videos reversed it:
+
+```
+opening third  0.408
+middle third   0.382   <- viewers actually leave here
+final third    0.495
+```
+
+Middle is weakest in 57% of videos (opening 33%, final 10%);
+opening-vs-middle p=0.0004, middle-vs-final p<0.0001. The n=11 subset was
+filtered to >=100 views — which *selects for videos whose body holds up*,
+inverting the very comparison it was used for. Caught and corrected before
+it shipped, but only because the instrumentation landed the same day.
+
+**The lesson:** a filter applied for convenience (">=100 views so the
+numbers are stable") can encode the answer. When a subset is small AND
+filtered, the filter is a confounder until proven otherwise.
+
+## 3d. A diagnostic that lies is worse than none (2026-08-23)
+
+`test_apis.py` reports Groq and Cerebras as `HTTP 403 / error 1010`
+(Cloudflare) while production calls the same endpoints fine. The probe
+omits the `User-Agent: Mozilla/5.0` header that `you.py` sets. Anyone
+debugging an outage with it would conclude a working provider is dead.
+Probe through the production code path, never a parallel re-implementation.
+
 ## 4. Process lessons
 
 - **Change one thing per batch.** The clean Phase 0 vs Phase 1 comparison
