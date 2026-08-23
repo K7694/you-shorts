@@ -223,6 +223,46 @@ omits the `User-Agent: Mozilla/5.0` header that `you.py` sets. Anyone
 debugging an outage with it would conclude a working provider is dead.
 Probe through the production code path, never a parallel re-implementation.
 
+## 3e. The prompt shaped the opening and the ending, not the drop (2026-08-23)
+
+Averaging the full 100-point retention curve over 57 videos gives a clean
+U against comparable videos:
+
+```
+  1% of runtime   0.538   opening already beats peers
+ 36% of runtime   0.382   trough
+100% of runtime   0.579   ending already beats peers
+```
+
+Steepest absolute drop-off: 6-9s in, i.e. words 15-25 of a ~26s script.
+
+Then the actual cause turned up in our own prompt. It had a detailed
+"THE OPENING LINE (first 2-3 seconds)" block and a detailed "THE ENDING"
+block — and **nothing whatsoever about the stretch between them.** The two
+specified sections are the two that outperform. The unspecified one is the
+trough. Added "THE SECOND BEAT (seconds 3-10)" at matching specificity.
+
+**Honest limits.** The trough LOCATION is solid (57 averaged curves). The
+CAUSE is not: nine text features were tested against per-video middle
+performance and none cleared p=0.26. Best remaining signal is full stops in
+the 6-9.5s window (r=+0.22, p=0.098; monotonic 0 stops -> 0.246 mean loss,
+1 -> 0.290, 2 -> 0.365). Acted on because it is cheap and reversible, not
+because it is proven. Measurable in ~3 weeks now that retention is logged.
+
+**Two false positives caught en route, both my own bugs:**
+1. "Longer scripts sag in the middle" (r=-0.41, p=0.0006) — an artifact of
+   splitting thirds BY WORD COUNT, so "middle length" was just total
+   length/3.
+2. "Longer scripts lose less at 7s" (r=-0.42, p=0.0007) — an artifact of
+   `retention.duration_est_s` being None for 127 of 150 records and
+   defaulting to 26.0s, which corrupted every absolute-time conversion.
+   Recomputing duration from the script text collapsed it to r=-0.10,
+   p=0.47.
+
+**The lesson:** when one variable keeps coming out significant and nothing
+else does, suspect the measurement before believing the result. Both times
+the "finding" was the shape of my own bug.
+
 ## 4. Process lessons
 
 - **Change one thing per batch.** The clean Phase 0 vs Phase 1 comparison

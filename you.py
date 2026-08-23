@@ -753,10 +753,30 @@ def _critique_and_revise(data: dict) -> dict:
     entire scripts to chase a keyword score; this keeps everything that
     already works and repairs only the worst line.
 
-    Biased toward the opening on evidence, not taste: YouTube's
-    relativeRetentionPerformance for this channel is 0.50 across the whole
-    video but 0.47 over the first 3 seconds (n=11, 2026-08-23) — the hook is
-    the measurably weakest stretch, and it is what the algorithm reads first.
+    Aimed at the measured trough. Averaging the full 100-point retention
+    curve across 57 videos (2026-08-23) gives a clean U against peers:
+
+        1% of runtime    0.538   (opening already beats peers)
+        36% of runtime   0.382   <- trough
+        100% of runtime  0.579   (ending already beats peers)
+
+    The steepest absolute drop-off sits around 6-9s, which in a ~26s script
+    is words 15-25 - lines 2-4, the stretch just after the hook. Notably the
+    generation prompt specified the opening line in detail and the ending in
+    detail, and said nothing at all about this window.
+
+    CAVEAT, deliberately recorded: the trough LOCATION is solid (57 averaged
+    curves), but no text feature explains it. Nine were tested and none
+    cleared p=0.26. The best remaining signal is full stops in the 6-9.5s
+    window: r=+0.22, p=0.098, monotonic (0 stops -> 0.246 mean loss,
+    1 -> 0.290, 2 -> 0.365). Suggestive, NOT proven. The wording below acts
+    on it because it is cheap and reversible, not because it is established.
+    Retention is instrumented now, so this is measurable in ~3 weeks - check
+    before trusting it.
+
+    An earlier n=11 read said the hook was the weak spot and was wrong: that
+    subset was filtered to >=100 views, which selects for videos whose body
+    holds up. See LESSONS.md 3c.
 
     Deliberately ONE line. A whole-script rewrite loses the parts that work,
     and every extra edit is another chance for the model to invent a fact —
@@ -775,10 +795,12 @@ def _critique_and_revise(data: dict) -> dict:
         f"You are a ruthless script editor for a ~35-second science Short.\n\n"
         f"SCRIPT (one sentence per line):\n{numbered}\n\n"
         f"Exactly ONE line is the weakest — the one most likely to make a viewer "
-        f"swipe away. Retention data for this channel says viewers leave in the "
-        f"MIDDLE, not at the start or the end, so weight the middle lines most "
-        f"heavily: a middle line that restates, over-explains or stalls the idea "
-        f"is the weakest line. Pick line 1 only if the opening is genuinely vague.\n\n"
+        f"swipe away. Retention for this channel troughs at ~36% of runtime — the "
+        f"opening and the ending already work, the stretch just after the hook does "
+        f"not. Weight lines 2-4 most heavily: a line there that stacks short closed "
+        f"sentences, re-poses the question the hook already asked, or states "
+        f"something abstract instead of concrete is the weakest line. Pick line 1 "
+        f"only if the opening is genuinely vague.\n\n"
         f"Rewrite that ONE line so it is sharper, more concrete and more specific.\n"
         f"RULES:\n"
         f"- ⛔ Introduce NO new facts, numbers, mechanisms or terminology. Use ONLY "
@@ -1219,6 +1241,27 @@ THE OPENING LINE (first 2-3 seconds — decides everything):
     • "Your body replaced almost every cell since you started reading this."
   BAD (vague, no pull): "Reality is a mirror." "The darkest truth." "Space is strange."
 - If it could be the title of ten different videos, it's too vague — make it sharper.
+
+THE SECOND BEAT (seconds 3-10 — where this channel actually loses people):
+- Measured across 57 videos: retention is strong at the open (0.54 vs peers),
+  troughs at ~36% of runtime, then recovers to 0.58 by the end. The opening
+  and the ending are already working. THIS stretch is not.
+- By second 4 the viewer has accepted the premise and is deciding one thing:
+  "is this actually going somewhere?" Answer it before second 10.
+- ⛔ Do NOT stack short closed sentences here. Every full stop is an exit
+  ramp, and this window is where they cost the most.
+    BAD: "Stars implode. Mesocyclones create them. Rotating, they touch ground."
+    BAD: "Lungs dissolve, skin burns. The atmosphere is hostile."
+- ⛔ Do NOT re-pose the question the hook already asked. "But why?" and
+  "The question remains..." spend the window without advancing.
+- ✅ Instead, use ONE continuous sentence that names the specific thing that
+  makes this strange, and leaves the payoff visibly still coming.
+    GOOD: "The impact was so powerful that it flattened 80 million trees —
+           and left no crater at all."
+    GOOD: "Multiply by 3, add 1, halve it when even, and every number ever
+           tested collapses to the same loop."
+- The test: at second 10, the viewer should know something concrete they
+  didn't know at second 3, AND be aware there is more coming.
 
 STRUCTURE FOR THIS EPISODE — "{series_name}":
 {series_structure}
