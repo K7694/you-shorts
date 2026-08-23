@@ -705,38 +705,130 @@ def generate_script(topic: str = None) -> dict:
     return _generate_script_curiosity(topic)
 
 
-def _generate_with_hook_gate(prompt: str, attempts: int = 4, target: int = 7) -> dict:
-    """Run the LLM with hook-quality gating, keeping the BEST attempt.
+def _generate_once(prompt: str, attempts: int = 3) -> dict:
+    """Generate the script once. Retries ONLY on unparseable output.
 
-    Raised to 4 attempts / target 7 now that Groq is the primary LLM
-    (fast + free, so more shots are cheap). Keeps the highest-scoring
-    attempt across all tries so a weak final try can't override a
-    stronger earlier one.
+    Replaces the old `_generate_with_hook_gate`, which regenerated the whole
+    script up to 4 times chasing `_score_hook` >= 7. Measured 2026-08-23,
+    that gate was selecting on noise:
+      - r = -0.06 (p=0.86) against real 3-second retention, n=11 videos
+      - sd = 1.22 over 150 logged hooks; 39% scored exactly 7
+      - two of its four rules fired on <5% of hooks, leaving little more
+        than "contains a digit" + "contains the word you"
+    It missed its target on ~49% of runs, so it cost ~3 extra generations
+    half the time and bought nothing measurable. That call budget moved to
+    `_critique_and_revise`, which edits the writing instead of re-rolling it.
+
+    The retry loop is kept for PARSE failures only — the old gate provided
+    that resilience as a side effect, and a bare single call would have made
+    one malformed response fatal.
+
+    `hook_score` is still computed and logged so the feedback record stays
+    continuous across the change, but it no longer decides anything.
     """
-    best_data, best_score = None, -1
-    rejected = []
+    last_err = None
     for attempt in range(attempts):
-        raw = _call_llm(prompt)
-        data = _parse_json(raw)
-        hook = data.get("hook", "")
-        score = _score_hook(hook)
-        print(f"   📊 Hook score: {score}/10  \"{hook[:60]}\"")
-        if score > best_score:
-            best_data, best_score = data, score
-        if score >= target:
-            break
-        if attempt < attempts - 1:
-            print(f"   🔄 Hook below {target} (got {score}) — regenerating...")
-            rejected.append(hook)
-            ban = "\n".join(f'- "{h}"' for h in rejected)
-            prompt = prompt.replace(
-                "TOPICS ALREADY USED — DO NOT REPEAT THESE:",
-                f'REJECTED HOOKS (too weak — write something sharper, do NOT reuse):\n{ban}\n\nTOPICS ALREADY USED — DO NOT REPEAT THESE:'
-            )
-    print(f"   ✅ Best hook: {best_score}/10")
-    if isinstance(best_data, dict):
-        best_data["hook_score"] = best_score
-    return best_data
+        try:
+            data = _parse_json(_call_llm(prompt))
+        except (json.JSONDecodeError, ValueError, KeyError, TypeError) as e:
+            last_err = e
+            print(f"   ⚠️  Unparseable script JSON (try {attempt + 1}/{attempts}): {str(e)[:80]}")
+            continue
+        if not isinstance(data, dict) or not (data.get("script") or "").strip():
+            last_err = ValueError("no 'script' field in response")
+            print(f"   ⚠️  Script field missing (try {attempt + 1}/{attempts})")
+            continue
+        data["hook_score"] = _score_hook(data.get("hook", ""))
+        print(f"   📊 Hook score {data['hook_score']}/10 (logged only — no longer gates)")
+        return data
+    raise RuntimeError(
+        f"Script generation returned no usable JSON after {attempts} tries: {last_err}"
+    )
+
+
+def _critique_and_revise(data: dict) -> dict:
+    """Second LLM pass: find the single weakest line and rewrite it.
+
+    This is where the old hook-gate's call budget went. The gate threw away
+    entire scripts to chase a keyword score; this keeps everything that
+    already works and repairs only the worst line.
+
+    Biased toward the opening on evidence, not taste: YouTube's
+    relativeRetentionPerformance for this channel is 0.50 across the whole
+    video but 0.47 over the first 3 seconds (n=11, 2026-08-23) — the hook is
+    the measurably weakest stretch, and it is what the algorithm reads first.
+
+    Deliberately ONE line. A whole-script rewrite loses the parts that work,
+    and every extra edit is another chance for the model to invent a fact —
+    the exact failure `_fix_verbatim_loop` already had to defend against.
+    Runs BEFORE the loop repair, since it can change the first or last line.
+    """
+    if not CRITIQUE_AND_REVISE:
+        return data
+
+    sents = _sentences(data.get("script") or "")
+    if len(sents) < 3:
+        return data  # too short for "weakest line" to mean anything
+
+    numbered = "\n".join(f"{i + 1}. {s}" for i, s in enumerate(sents))
+    prompt = (
+        f"You are a ruthless script editor for a ~35-second science Short.\n\n"
+        f"SCRIPT (one sentence per line):\n{numbered}\n\n"
+        f"Exactly ONE line is the weakest — the one most likely to make a viewer "
+        f"swipe away. Line 1 is the hook and carries the most weight: if it is even "
+        f"slightly vague, generic or slow to land, it is the weakest line.\n\n"
+        f"Rewrite that ONE line so it is sharper, more concrete and more specific.\n"
+        f"RULES:\n"
+        f"- ⛔ Introduce NO new facts, numbers, mechanisms or terminology. Use ONLY "
+        f"what the script already establishes. Rephrasing is allowed; inventing is not.\n"
+        f"- Keep it close to the original length — never more than a few words longer.\n"
+        f"- Plain spoken English. Banned openers: 'did you know', 'imagine if', "
+        f"'what if I told you', 'believe it or not'.\n"
+        f"- Do not say subscribe or follow.\n\n"
+        f'Return ONLY JSON: {{"line": <line number>, "replacement": "<new sentence>"}}'
+    )
+
+    try:
+        out = _parse_json(_call_llm(prompt))
+        idx = int(out.get("line", 0)) - 1
+        new = (out.get("replacement") or "").strip().strip('"').split("\n")[0].strip()
+    except Exception as e:
+        print(f"   ⚠️  Critique pass failed ({str(e)[:60]}) — keeping original script")
+        return data
+
+    if not (0 <= idx < len(sents)) or not new:
+        print("   ⚠️  Critique returned an unusable line — keeping original script")
+        return data
+
+    old = sents[idx]
+    ow, nw = len(old.split()), len(new.split())
+    # Length guard: a much longer line eats the runtime budget, a much
+    # shorter one usually means the model dropped the substance.
+    if nw < 3 or nw > max(ow + 5, int(ow * 1.5)):
+        print(f"   ⚠️  Rewrite length off ({ow}w → {nw}w) — keeping original line")
+        return data
+    if new.lower().rstrip(".!?") == old.lower().rstrip(".!?"):
+        print("   ✅ Critique found nothing to change")
+        return data
+
+    revised = sents[:]
+    revised[idx] = new
+    trial = " ".join(revised)
+
+    # Don't let the edit create the very problem _fix_verbatim_loop exists for.
+    if _loop_overlap(trial) >= 0.5 and _loop_overlap(" ".join(sents)) < 0.5:
+        print("   ⚠️  Rewrite made the ending echo the hook — keeping original line")
+        return data
+
+    data["script"] = trial
+    if idx == 0:
+        data["hook"] = new          # script starts with the hook; keep them in sync
+    if idx == len(sents) - 1:
+        data["loop_point"] = new
+    where = "hook" if idx == 0 else f"line {idx + 1}"
+    print(f"   ✍️  Revised {where}: {new[:70]}")
+    data["revised_line"] = idx
+    return data
 
 
 def _sentences(text: str) -> list:
@@ -809,9 +901,11 @@ def _finalize_script(data: dict) -> dict:
     """Shared post-processing: repair a repeated closing line, save the topic
     for dedup, build caption lines.
 
-    The loop repair runs BEFORE captions are built, since it can change the
-    script text.
+    Order matters: critique-and-revise runs first (it can rewrite the first
+    or last line), then the loop repair judges the result, then captions are
+    built from the final text.
     """
+    data = _critique_and_revise(data)
     data = _fix_verbatim_loop(data)
     _save_used_topic(data.get("topic", "unknown"))
     words = data["script"].split()
@@ -1167,7 +1261,7 @@ Return ONLY valid JSON (no markdown, no backticks):
 }}"""
 
     print(f"   🧠 Writing script (series: {series_name or archetype})...")
-    data = _generate_with_hook_gate(prompt)
+    data = _generate_once(prompt)
     data.setdefault("archetype", archetype)
 
     # ── Series branding: title prefix + episode number + promise ──

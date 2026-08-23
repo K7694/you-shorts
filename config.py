@@ -220,6 +220,14 @@ CAPTION_FONT = "Impact"
 CAPTION_SIZE = 82
 CAPTION_WORDS_PER_LINE = 3
 
+# ── Script quality: critique-and-revise (2026-08-23) ──────────────
+# Second LLM pass that rewrites the single weakest line of the script.
+# Replaced the old hook-score gate, which regenerated whole scripts up to
+# 4x chasing _score_hook >= 7 — measured at r=-0.06 (p=0.86) against real
+# 3-second retention, i.e. selecting on noise. Same call budget, aimed at
+# the writing instead. Set False to generate in one pass with no editing.
+CRITIQUE_AND_REVISE = True
+
 # AI image style suffix.
 # RESET (2026-05-31): reverted from the affiliate "tech UI / software
 # screenshot" look back to Phase 0's cinematic science aesthetic — the
