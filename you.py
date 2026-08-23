@@ -739,8 +739,80 @@ def _generate_with_hook_gate(prompt: str, attempts: int = 4, target: int = 7) ->
     return best_data
 
 
+def _sentences(text: str) -> list:
+    return [s.strip() for s in re.split(r"(?<=[.!?])\s+", text or "") if len(s.split()) >= 3]
+
+
+def _loop_overlap(script: str) -> float:
+    """Word overlap between the first and last sentence (0-1)."""
+    s = _sentences(script)
+    if len(s) < 2:
+        return 0.0
+    a, b = set(s[0].lower().split()), set(s[-1].lower().split())
+    return len(a & b) / max(len(a | b), 1)
+
+
+def _fix_verbatim_loop(data: dict, threshold: float = 0.5) -> dict:
+    """Rewrite the closing line when it just replays the opening.
+
+    The prompt used to ask the script to "loop back to the hook" and the
+    model took that literally — measured at 4 of 6 scripts repeating the
+    opening word-for-word, which a viewer called out ("You said the same
+    thing like 3 times"). In a ~35s script that's a third of the runtime
+    spent saying nothing new. Prompt wording alone doesn't reliably stop it,
+    so this repairs the final sentence with one cheap targeted call.
+    """
+    script = data.get("script", "")
+    overlap = _loop_overlap(script)
+    if overlap < threshold:
+        return data
+
+    sents = _sentences(script)
+    print(f"   🔁 Closing line repeats the hook ({overlap:.0%}) — rewriting it")
+    body = " ".join(sents[:-1])
+    prompt = (
+        f'This short science script ends by repeating its own opening line.\n\n'
+        f'FULL SCRIPT (without the bad ending):\n"{body}"\n\n'
+        f'OPENING LINE: "{sents[0]}"\n\n'
+        f'Write ONE replacement closing sentence that resolves or sharpens the '
+        f'idea and moves the thought forward.\n'
+        f'RULES:\n'
+        f'- Never reuse the opening line\'s wording\n'
+        f'- ⛔ Introduce NO new facts, mechanisms or terminology. Use ONLY what '
+        f'the script above already established. Do not invent capabilities '
+        f'(e.g. do not claim an animal uses sonar if the script never said so).\n'
+        f'- Max 14 words. Do not say subscribe or follow.\n'
+        f'Return ONLY the sentence, no quotes, no preamble.'
+    )
+    try:
+        new_last = _call_llm(prompt).strip().strip('"').split("\n")[0].strip()
+        # Guard the repair itself: reject a fix that is empty, too long, or
+        # still just the hook again.
+        if new_last and len(new_last.split()) <= 20:
+            trial = " ".join(sents[:-1] + [new_last])
+            if _loop_overlap(trial) < threshold:
+                data["script"] = trial
+                data["loop_point"] = new_last
+                print(f"   ✅ New ending: {new_last[:70]}")
+                return data
+        print("   ⚠️  Rewrite still echoed the hook — dropping the closing line instead")
+    except Exception as e:
+        print(f"   ⚠️  Loop rewrite failed ({e}) — dropping the closing line instead")
+
+    # Fallback: a script that simply stops is better than one that repeats.
+    if len(sents) >= 3:
+        data["script"] = " ".join(sents[:-1])
+    return data
+
+
 def _finalize_script(data: dict) -> dict:
-    """Shared post-processing: save topic for dedup + build caption lines."""
+    """Shared post-processing: repair a repeated closing line, save the topic
+    for dedup, build caption lines.
+
+    The loop repair runs BEFORE captions are built, since it can change the
+    script text.
+    """
+    data = _fix_verbatim_loop(data)
     _save_used_topic(data.get("topic", "unknown"))
     words = data["script"].split()
     data["caption_lines"] = [
@@ -1062,8 +1134,15 @@ interchangeable with one another.
 
 THE ENDING:
 - Close the way this series closes (see the structure above)
-- Where it fits naturally, let the last line echo the opening so the
-  loop invites a rewatch — but never at the cost of the series' own shape
+- ⛔ NEVER repeat the opening line word-for-word. A real viewer commented
+  "You said the same thing like 3 times" — in a ~35 second script, replaying
+  the hook verbatim wastes a third of the video and reads as padding.
+- The final line must ADD something: answer the question the hook asked,
+  invert it, or land the consequence. It may echo the hook's IDEA, but it
+  must use different words and move the thought forward.
+  Hook: "A great white just crossed the Pacific without a map."
+    ✅ "It wasn't navigating by sight — it was reading the planet itself."
+    ❌ "A great white just crossed the Pacific without a map."
 - Do NOT say "follow for more" or "subscribe"
 
 CRITICAL RULES:
@@ -1080,7 +1159,7 @@ Return ONLY valid JSON (no markdown, no backticks):
     "archetype": "{archetype}",
     "hook": "the opening hook line only",
     "script": "the COMPLETE narration from hook through loop ending as one paragraph",
-    "loop_point": "the exact ending phrase that connects back to the hook",
+    "loop_point": "the closing phrase — must NOT reuse the hook's wording",
     "title": "YouTube title with emoji, max 70 chars — feel like revealed/forbidden knowledge",
     "description": "YouTube description, max 200 chars",
     "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"],
@@ -1793,6 +1872,23 @@ def generate_bgm(duration: float, path: str) -> bool:
 #  AGENT 4: DIRECTOR — Video Assembly (FFmpeg, FREE)
 # ═══════════════════════════════════════════════════════════════
 
+# Typographic characters the LLM emits (non-breaking hyphen, curly quotes,
+# en/em dashes, ellipsis) have no glyph in Impact and render as boxes in the
+# burned-in captions. Map them to ASCII for display only — the TTS audio
+# keeps the original text.
+_CAPTION_CHAR_MAP = {
+    "‑": "-", "‐": "-", "‒": "-", "–": "-", "—": "-",
+    "‘": "'", "’": "'", "“": '"', "”": '"',
+    "…": "...", " ": " ", " ": " ",
+}
+
+
+def _caption_safe(text: str) -> str:
+    for bad, good in _CAPTION_CHAR_MAP.items():
+        text = text.replace(bad, good)
+    return text
+
+
 def _ass_time(sec: float) -> str:
     """Convert seconds to ASS timestamp."""
     h = int(sec // 3600)
@@ -1844,7 +1940,7 @@ Format: Layer,Start,End,Style,Name,MarginL,MarginR,MarginV,Effect,Text
 
             parts = []
             for k, w in enumerate(chunk):
-                word_upper = w["word"].upper()
+                word_upper = _caption_safe(w["word"]).upper()
                 if k == j:
                     # Highlighted word: series accent colour + slightly larger
                     _accent = (highlight_hex or "&H0000FFFF").replace("&H00", "&H").rstrip("&") + "&"
@@ -1855,7 +1951,10 @@ Format: Layer,Start,End,Style,Name,MarginL,MarginR,MarginV,Effect,Text
             text = rf"{{\an5\pos({cx},{cy})\fad(60,40)}}" + " ".join(parts)
             ass += f"Dialogue: 0,{_ass_time(w_start)},{_ass_time(w_end)},Main,,0,0,0,,{text}\n"
 
-    with open(path, "w") as f:
+    # Explicit UTF-8: without it Windows falls back to cp1252 and the
+    # write dies on typographic characters the LLM emits (e.g. the
+    # non-breaking hyphen ‑). ASS files are UTF-8 by spec anyway.
+    with open(path, "w", encoding="utf-8") as f:
         f.write(ass)
 
 
@@ -1890,7 +1989,10 @@ Format: Layer,Start,End,Style,Name,MarginL,MarginR,MarginV,Effect,Text
         )
         ass += f"Dialogue: 0,{_ass_time(s)},{_ass_time(e)},Main,,0,0,0,,{text}\n"
 
-    with open(path, "w") as f:
+    # Explicit UTF-8: without it Windows falls back to cp1252 and the
+    # write dies on typographic characters the LLM emits (e.g. the
+    # non-breaking hyphen ‑). ASS files are UTF-8 by spec anyway.
+    with open(path, "w", encoding="utf-8") as f:
         f.write(ass)
 
 
