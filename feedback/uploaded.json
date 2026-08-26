@@ -7918,7 +7918,38 @@
     "visual_variant": "videos",
     "hook_score": 7,
     "word_count": 91,
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "WhM11X5DLP8",
+      "title": "UNSOLVED #17 | \ud83d\udd2b When Two Bullets Meet: The Unseen Explosion!",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-08-23T04:15:00Z",
+      "views": 1034,
+      "likes": 19,
+      "comments": 1,
+      "engagement_rate": 1.934,
+      "views_per_day": 517,
+      "tags": [
+        "bullet collision",
+        "curiosity",
+        "did you know",
+        "explosive mystery",
+        "facts",
+        "kinetic energy",
+        "mindblown",
+        "physics",
+        "plasma physics",
+        "science",
+        "shorts",
+        "space",
+        "universe",
+        "unsolved science"
+      ],
+      "description": "Two supersonic bullets collide\u2014metal, plasma, mystery. What really happens?\n\n\u25b6 FULL DOCUMENTARY: Birds' Quantum Compass\nhttps://youtube.com/watch?v=VlUq2WLo-LA\n\n\ud83d\udcfa UNSOLVED \u2014 One unsolved mystery, every day.\nSubscribe for a new episode every day, plus a full deep dive every Sunday.\n\n#shorts #science ",
+      "duration_secs": 44,
+      "thumbnail": "https://i.ytimg.com/vi/WhM11X5DLP8/hqdefault.jpg"
+    }
   },
   {
     "id": "NsDRJeHMm7k",
@@ -7942,7 +7973,38 @@
     "visual_variant": "videos",
     "hook_score": 6,
     "word_count": 92,
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "NsDRJeHMm7k",
+      "title": "UNSOLVED #18 | \ud83d\udfe2 Green Sky Warning: The Unsolved Tornado Signal",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-08-23T07:19:32Z",
+      "views": 556,
+      "likes": 4,
+      "comments": 1,
+      "engagement_rate": 0.899,
+      "views_per_day": 278,
+      "tags": [
+        "curiosity",
+        "did you know",
+        "facts",
+        "green sky",
+        "mindblown",
+        "physics",
+        "safety",
+        "science",
+        "shorts",
+        "space",
+        "storm physics",
+        "tornado",
+        "universe",
+        "weather mystery"
+      ],
+      "description": "Why does the sky turn green before a tornado? The physics remain a mystery. Stay safe!\n\n\u25b6 FULL DOCUMENTARY: What the Universe Hides: Six Unsolved Mysteries That Defy Science\nhttps://youtube.com/watch?v=de6etCcpSWM\n\n\ud83d\udcfa UNSOLVED \u2014 One unsolved mystery, every day.\nSubscribe for a new episode every day, ",
+      "duration_secs": 39,
+      "thumbnail": "https://i.ytimg.com/vi/NsDRJeHMm7k/hqdefault.jpg"
+    }
   },
   {
     "id": "Ry04x8XZ2Z4",
@@ -7990,6 +8052,30 @@
     "visual_variant": "videos",
     "hook_score": 6,
     "word_count": 89,
+    "stats_fetched": false
+  },
+  {
+    "id": "FVyZODRHN3s",
+    "title": "WHAT IF #5 | \ud83d\ude80 What a Sonic Boom Sounds Like on Mars \ud83c\udf0c",
+    "uploaded_at": "2026-08-26T04:14:04.415565+00:00",
+    "hook": "A rocket breaks the sound barrier over Mars and the sky shatters.",
+    "script": "A rocket breaks the sound barrier over Mars and the sky shatters. In Mars\u2019 thin air, shock waves travel farther before merging, turning the thunderclap into a high\u2011pitched hiss that fades before it reaches the ground. Because sound travels 30% slower on Mars, the boom\u2019s rise time stretches, making the peak pressure only about one\u2011tenth of an Earth boom. NASA\u2019s Perseverance test chamber reproduces this by firing a supersonic jet in a vacuum chamber, proving the Martian boom would be a whisper of a roar.",
+    "topic": "Sonic boom physics on Mars",
+    "tags": [
+      "Mars",
+      "Sonic Boom",
+      "Space Physics",
+      "NASA",
+      "Atmosphere"
+    ],
+    "affiliate_program": "",
+    "archetype": "what_if",
+    "series": "WHAT IF",
+    "episode": 5,
+    "voice": "en-GB-RyanNeural",
+    "visual_variant": "photos",
+    "hook_score": 6,
+    "word_count": 85,
     "stats_fetched": false
   }
 ]
