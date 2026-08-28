@@ -8136,7 +8136,38 @@
     "visual_variant": "photos",
     "hook_score": 6,
     "word_count": 85,
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "FVyZODRHN3s",
+      "title": "WHAT IF #5 | \ud83d\ude80 What a Sonic Boom Sounds Like on Mars \ud83c\udf0c",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-08-26T04:14:20Z",
+      "views": 936,
+      "likes": 12,
+      "comments": 1,
+      "engagement_rate": 1.389,
+      "views_per_day": 468,
+      "tags": [
+        "Atmosphere",
+        "Mars",
+        "NASA",
+        "Sonic Boom",
+        "Space Physics",
+        "curiosity",
+        "did you know",
+        "facts",
+        "mindblown",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "universe"
+      ],
+      "description": "Discover why a Martian boom is a high\u2011pitched whisper, not an Earth\u2011shattering roar.\n\n\u25b6 FULL DOCUMENTARY: What the Universe Hides: Six Unsolved Mysteries That Defy Science\nhttps://youtube.com/watch?v=de6etCcpSWM\n\n\ud83d\udcfa WHAT IF \u2014 Impossible scenarios, real physics.\nSubscribe for a new episode every day, ",
+      "duration_secs": 30,
+      "thumbnail": "https://i.ytimg.com/vi/FVyZODRHN3s/hqdefault.jpg"
+    }
   },
   {
     "id": "euIIsjDtAZs",
@@ -8160,6 +8191,30 @@
     "visual_variant": "videos",
     "hook_score": 7,
     "word_count": 81,
+    "stats_fetched": false
+  },
+  {
+    "id": "sx5Tf79A75g",
+    "title": "UNSOLVED #20 | \ud83d\udd34 Neutrinos: Earth\u2019s Invisible Pass\u2011Through \ud83d\ude80",
+    "uploaded_at": "2026-08-28T15:40:19.563057+00:00",
+    "hook": "A single neutrino can slice straight through Earth, emerging the other side untouched.",
+    "script": "A single neutrino can slice straight through Earth, emerging the other side untouched. Because they only feel the weak force, about nine in ten trillion glide through a human body without a trace. In 2018, the IceCube observatory caught a muon\u2011neutrino that traversed 2,800\u202fkm of Antarctic ice, its energy unchanged, proving the planet is essentially transparent to them. Their fleeting dance through mountains, oceans, and steel challenges every intuition about the solidity of the world. Yet we cannot see them, cannot stop them, and cannot fully grasp why such abundant messengers ignore the matter that composes everything we know.",
+    "topic": "How neutrinos pass through Earth without stopping anything",
+    "tags": [
+      "neutrino",
+      "particle physics",
+      "unsolved",
+      "IceCube",
+      "weak force"
+    ],
+    "affiliate_program": "",
+    "archetype": "unsolved_mystery",
+    "series": "UNSOLVED",
+    "episode": 20,
+    "voice": "en-US-ChristopherNeural",
+    "visual_variant": "photos",
+    "hook_score": 6,
+    "word_count": 100,
     "stats_fetched": false
   }
 ]
