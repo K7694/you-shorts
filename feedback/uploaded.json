@@ -8216,5 +8216,29 @@
     "hook_score": 6,
     "word_count": 100,
     "stats_fetched": false
+  },
+  {
+    "id": "zEfMXu_HSnU",
+    "title": "UNSOLVED #21 | \ud83d\ude80 Dark Flow: The Cosmic Current No One Can See",
+    "uploaded_at": "2026-08-29T10:24:10.995811+00:00",
+    "hook": "A hidden current drags galaxy clusters across the void.",
+    "script": "Astronomers mapped the motion of thousands of galaxy clusters and found they all stream toward a single spot, faster than gravity alone should allow. In 2019 NASA\u2019s\u202fCOBE\u2011type analysis confirmed a coherent velocity\u2014dubbed Dark Flow\u2014stretching billions of light\u2011years. The only plausible source would be a massive object beyond our observable universe, warping space\u2011time from beyond the cosmic horizon. Yet no such megastructure has ever been seen, and every alternative explanation collapses under the data. Could an unseen force be dragging the entire cosmos?",
+    "topic": "The mysterious Dark Flow pulling galaxy clusters",
+    "tags": [
+      "dark flow",
+      "cosmology",
+      "universe mystery",
+      "galaxy clusters",
+      "NASA"
+    ],
+    "affiliate_program": "",
+    "archetype": "unsolved_mystery",
+    "series": "UNSOLVED",
+    "episode": 21,
+    "voice": "en-US-ChristopherNeural",
+    "visual_variant": "videos",
+    "hook_score": 7,
+    "word_count": 83,
+    "stats_fetched": false
   }
 ]
