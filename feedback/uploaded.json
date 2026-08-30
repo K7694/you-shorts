@@ -8191,7 +8191,38 @@
     "visual_variant": "videos",
     "hook_score": 7,
     "word_count": 81,
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "euIIsjDtAZs",
+      "title": "HOW IT WORKS #9 | \ud83e\udea8 How Desert Stones Actually Sail Across the Sand \ud83c\udf2a\ufe0f",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-08-27T14:36:50Z",
+      "views": 968,
+      "likes": 8,
+      "comments": 1,
+      "engagement_rate": 0.93,
+      "views_per_day": 484,
+      "tags": [
+        "Death Valley",
+        "curiosity",
+        "did you know",
+        "facts",
+        "geology",
+        "mindblown",
+        "mysterious phenomena",
+        "physics",
+        "sailing stones",
+        "science",
+        "science short",
+        "shorts",
+        "space",
+        "universe"
+      ],
+      "description": "Discover the real physics behind Death Valley\u2019s mysterious moving rocks in under 35 seconds.\n\n\u25b6 FULL DOCUMENTARY: What the Universe Hides: Six Unsolved Mysteries That Defy Science\nhttps://youtube.com/watch?v=de6etCcpSWM\n\n\ud83d\udcfa HOW IT WORKS \u2014 The hidden mechanics of everyday things.\nSubscribe for a new e",
+      "duration_secs": 31,
+      "thumbnail": "https://i.ytimg.com/vi/euIIsjDtAZs/hqdefault.jpg"
+    }
   },
   {
     "id": "sx5Tf79A75g",
@@ -8239,6 +8270,30 @@
     "visual_variant": "videos",
     "hook_score": 7,
     "word_count": 83,
+    "stats_fetched": false
+  },
+  {
+    "id": "PKxr_uyBRN0",
+    "title": "UNSOLVED #22 | \ud83d\ude80 Why an Elevator Can Make You Weightless in Seconds",
+    "uploaded_at": "2026-08-30T09:28:29.724774+00:00",
+    "hook": "Step into a falling elevator and you\u2019ll feel the Earth disappear.",
+    "script": "Step into a falling elevator and you\u2019ll feel the Earth disappear. When the elevator accelerates downward faster than gravity, the floor stops pushing up and you and a loose pen start to float. In just two seconds the cabin becomes a tiny pocket of free\u2011fall, the same principle NASA uses in parabolic flights to train astronauts for orbit. Yet engineers still debate the exact threshold where human perception flips from pressure to weightlessness, and why some people feel it instantly while others sense a lingering pull.",
+    "topic": "Elevator weightlessness mystery",
+    "tags": [
+      "elevator physics",
+      "free fall",
+      "weightlessness",
+      "parabolic flight",
+      "unsolved science"
+    ],
+    "affiliate_program": "",
+    "archetype": "unsolved_mystery",
+    "series": "UNSOLVED",
+    "episode": 22,
+    "voice": "en-US-ChristopherNeural",
+    "visual_variant": "photos",
+    "hook_score": 6,
+    "word_count": 86,
     "stats_fetched": false
   }
 ]
