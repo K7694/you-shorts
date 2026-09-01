@@ -8301,7 +8301,38 @@
     "visual_variant": "videos",
     "hook_score": 7,
     "word_count": 83,
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "zEfMXu_HSnU",
+      "title": "UNSOLVED #21 | \ud83d\ude80 Dark Flow: The Cosmic Current No One Can See",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-08-29T10:24:38Z",
+      "views": 46,
+      "likes": 1,
+      "comments": 1,
+      "engagement_rate": 4.348,
+      "views_per_day": 23,
+      "tags": [
+        "NASA",
+        "cosmology",
+        "curiosity",
+        "dark flow",
+        "did you know",
+        "facts",
+        "galaxy clusters",
+        "mindblown",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "universe",
+        "universe mystery"
+      ],
+      "description": "Galaxy clusters rush together\u2014what hidden mass could be pulling the universe?\n\n\u25b6 FULL DOCUMENTARY: What the Universe Hides: Six Unsolved Mysteries That Defy Science\nhttps://youtube.com/watch?v=de6etCcpSWM\n\n\ud83d\udcfa UNSOLVED \u2014 One unsolved mystery, every day.\nSubscribe for a new episode every day, plus a fu",
+      "duration_secs": 37,
+      "thumbnail": "https://i.ytimg.com/vi/zEfMXu_HSnU/hqdefault.jpg"
+    }
   },
   {
     "id": "PKxr_uyBRN0",
@@ -8349,6 +8380,30 @@
     "visual_variant": "videos",
     "hook_score": 6,
     "word_count": 85,
+    "stats_fetched": false
+  },
+  {
+    "id": "PIiFgMm2A-g",
+    "title": "HOW IT WORKS #10 | \ud83d\ude80 Moon's Gunpowder Smell Explained! \ud83c\udf15",
+    "uploaded_at": "2026-09-01T08:55:11.968400+00:00",
+    "hook": "An astronaut peeled off his helmet and gasped at the smell of gunpowder on the Moon.",
+    "script": "When lunar dust meets the oxygen inside a suit, the impact shatters tiny glass beads, heating them to a few hundred degrees. The heat releases sulfur\u2011rich iron sulfide and tholins, spilling them into the airlock. NASA\u2019s 2024 regolith analysis shows these molecules ignite a faint, metallic odor that astronauts describe as gunpowder. On Earth the scent would vaporize in seconds, but in the Moon\u2019s vacuum it clings to the suit for minutes, lingering long after the hatch closes, a ghostly reminder of a world without air.",
+    "topic": "Why the Moon smells like gunpowder",
+    "tags": [
+      "Moon smell",
+      "lunar dust",
+      "NASA",
+      "space science",
+      "astronauts"
+    ],
+    "affiliate_program": "",
+    "archetype": "how_does_it_work",
+    "series": "HOW IT WORKS",
+    "episode": 10,
+    "voice": "en-US-BrianMultilingualNeural",
+    "visual_variant": "photos",
+    "hook_score": 6,
+    "word_count": 86,
     "stats_fetched": false
   }
 ]
