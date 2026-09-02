@@ -8356,7 +8356,38 @@
     "visual_variant": "photos",
     "hook_score": 6,
     "word_count": 86,
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "PKxr_uyBRN0",
+      "title": "UNSOLVED #22 | \ud83d\ude80 Why an Elevator Can Make You Weightless in Seconds",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-08-30T09:28:50Z",
+      "views": 591,
+      "likes": 5,
+      "comments": 1,
+      "engagement_rate": 1.015,
+      "views_per_day": 296,
+      "tags": [
+        "curiosity",
+        "did you know",
+        "elevator physics",
+        "facts",
+        "free fall",
+        "mindblown",
+        "parabolic flight",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "universe",
+        "unsolved science",
+        "weightlessness"
+      ],
+      "description": "A falling lift creates instant free\u2011fall. The science is real, the mystery remains.\n\n\u25b6 FULL DOCUMENTARY: What the Universe Hides: Six Unsolved Mysteries That Defy Science\nhttps://youtube.com/watch?v=de6etCcpSWM\n\n\ud83d\udcfa UNSOLVED \u2014 One unsolved mystery, every day.\nSubscribe for a new episode every day, plu",
+      "duration_secs": 32,
+      "thumbnail": "https://i.ytimg.com/vi/PKxr_uyBRN0/hqdefault.jpg"
+    }
   },
   {
     "id": "_SvrLvQ_bds",
@@ -8404,6 +8435,30 @@
     "visual_variant": "photos",
     "hook_score": 6,
     "word_count": 86,
+    "stats_fetched": false
+  },
+  {
+    "id": "a6NNkBqtJVo",
+    "title": "HOW IT WORKS #11 | \ud83d\udd25 Water Boils at 70\u00b0C on Everest? The Hidden Physics \ud83c\udf04",
+    "uploaded_at": "2026-09-02T08:09:09.883732+00:00",
+    "hook": "A pot of water boils at 70\u00b0C on Everest\u2019s summit.",
+    "script": "A pot of water boils at 70\u00b0C on Everest\u2019s summit. Up here the air is a thin veil, pressure half of sea level, so molecules need far less push to escape the liquid. As pressure drops, the boiling point slides down, turning a gentle simmer into a full boil at temperatures that would barely warm a spoon at sea level. That\u2019s why pasta cooks twice as slow and cakes barely rise, looking like ghosts. Less air, less force, faster vapor\u2014water surrenders its steam at the altitude of the gods for anyone daring to cook on thin air above.",
+    "topic": "Why water boils at lower temps on mountains",
+    "tags": [
+      "water boiling",
+      "high altitude",
+      "physics",
+      "cooking",
+      "science short"
+    ],
+    "affiliate_program": "",
+    "archetype": "how_does_it_work",
+    "series": "HOW IT WORKS",
+    "episode": 11,
+    "voice": "en-US-BrianMultilingualNeural",
+    "visual_variant": "videos",
+    "hook_score": 8,
+    "word_count": 98,
     "stats_fetched": false
   }
 ]
