@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-02T08:05:56.061781",
+  "last_updated": "2026-09-03T08:15:59.059659",
   "videos": {
     "PIiFgMm2A-g": {
       "id": "PIiFgMm2A-g",
@@ -7,11 +7,11 @@
       "channel": "KnowMore-Dailyday",
       "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
       "published": "2026-09-01T08:55:30Z",
-      "views": 963,
+      "views": 978,
       "likes": 8,
       "comments": 1,
-      "engagement_rate": 0.935,
-      "views_per_day": 963,
+      "engagement_rate": 0.92,
+      "views_per_day": 978,
       "tags": [
         "Moon smell",
         "NASA",
@@ -32,6 +32,36 @@
       "duration_secs": 33,
       "thumbnail": "https://i.ytimg.com/vi/PIiFgMm2A-g/hqdefault.jpg"
     },
+    "a6NNkBqtJVo": {
+      "id": "a6NNkBqtJVo",
+      "title": "HOW IT WORKS #11 | \ud83d\udd25 Water Boils at 70\u00b0C on Everest? The Hidden Physics \ud83c\udf04",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-09-02T08:09:25Z",
+      "views": 712,
+      "likes": 12,
+      "comments": 1,
+      "engagement_rate": 1.826,
+      "views_per_day": 712,
+      "tags": [
+        "cooking",
+        "curiosity",
+        "did you know",
+        "facts",
+        "high altitude",
+        "mindblown",
+        "physics",
+        "science",
+        "science short",
+        "shorts",
+        "space",
+        "universe",
+        "water boiling"
+      ],
+      "description": "Discover why water boils lower on mountain peaks and how it changes cooking forever.\n\n\u25b6 FULL DOCUMENTARY: The Unsolved Mysteries That Could Rewrite Physics\nhttps://youtube.com/watch?v=p6ozjQHgJGo\n\n\ud83d\udcfa HOW IT WORKS \u2014 The hidden mechanics of everyday things.\nSubscribe for a new episode every day, plus a",
+      "duration_secs": 33,
+      "thumbnail": "https://i.ytimg.com/vi/a6NNkBqtJVo/hqdefault.jpg"
+    },
     "PKxr_uyBRN0": {
       "id": "PKxr_uyBRN0",
       "title": "UNSOLVED #22 | \ud83d\ude80 Why an Elevator Can Make You Weightless in Seconds",
@@ -42,7 +72,7 @@
       "likes": 5,
       "comments": 1,
       "engagement_rate": 1.015,
-      "views_per_day": 296,
+      "views_per_day": 197,
       "tags": [
         "curiosity",
         "did you know",
@@ -73,7 +103,7 @@
       "likes": 8,
       "comments": 1,
       "engagement_rate": 0.905,
-      "views_per_day": 199,
+      "views_per_day": 166,
       "tags": [
         "Death Valley",
         "curiosity",
@@ -104,7 +134,7 @@
       "likes": 12,
       "comments": 1,
       "engagement_rate": 1.387,
-      "views_per_day": 134,
+      "views_per_day": 117,
       "tags": [
         "Atmosphere",
         "Mars",
@@ -135,7 +165,7 @@
       "likes": 20,
       "comments": 2,
       "engagement_rate": 2.444,
-      "views_per_day": 112,
+      "views_per_day": 100,
       "tags": [
         "Kola Peninsula",
         "curiosity",
@@ -165,7 +195,7 @@
       "likes": 20,
       "comments": 1,
       "engagement_rate": 2.057,
-      "views_per_day": 102,
+      "views_per_day": 93,
       "tags": [
         "bullet collision",
         "curiosity",
@@ -196,7 +226,7 @@
       "likes": 9,
       "comments": 1,
       "engagement_rate": 1.096,
-      "views_per_day": 101,
+      "views_per_day": 91,
       "tags": [
         "ants",
         "biology",
@@ -226,7 +256,7 @@
       "likes": 10,
       "comments": 1,
       "engagement_rate": 1.125,
-      "views_per_day": 89,
+      "views_per_day": 82,
       "tags": [
         "curiosity",
         "did you know",
@@ -256,7 +286,7 @@
       "likes": 4,
       "comments": 1,
       "engagement_rate": 0.899,
-      "views_per_day": 56,
+      "views_per_day": 51,
       "tags": [
         "curiosity",
         "did you know",
@@ -287,7 +317,7 @@
       "likes": 4,
       "comments": 1,
       "engagement_rate": 0.752,
-      "views_per_day": 42,
+      "views_per_day": 39,
       "tags": [
         "animal cognition",
         "curiosity",
@@ -318,7 +348,7 @@
       "likes": 12,
       "comments": 1,
       "engagement_rate": 1.537,
-      "views_per_day": 34,
+      "views_per_day": 33,
       "tags": [
         "ball lightning",
         "curiosity",
@@ -348,7 +378,7 @@
       "likes": 5,
       "comments": 1,
       "engagement_rate": 0.548,
-      "views_per_day": 34,
+      "views_per_day": 33,
       "tags": [
         "animal navigation",
         "bird migration",
@@ -379,7 +409,7 @@
       "likes": 0,
       "comments": 1,
       "engagement_rate": 0.278,
-      "views_per_day": 33,
+      "views_per_day": 30,
       "tags": [
         "History",
         "Tesla",
@@ -410,7 +440,7 @@
       "likes": 23,
       "comments": 1,
       "engagement_rate": 2.84,
-      "views_per_day": 31,
+      "views_per_day": 30,
       "tags": [
         "black holes",
         "curiosity",
@@ -439,7 +469,7 @@
       "likes": 17,
       "comments": 1,
       "engagement_rate": 2.74,
-      "views_per_day": 30,
+      "views_per_day": 29,
       "tags": [
         "cosmology",
         "curiosity",
@@ -459,35 +489,6 @@
       "duration_secs": 26,
       "thumbnail": "https://i.ytimg.com/vi/VAvoFFGUMI4/hqdefault.jpg"
     },
-    "NTnrH-edhAU": {
-      "id": "NTnrH-edhAU",
-      "title": "\ud83d\udd22 The Collatz Enigma",
-      "channel": "KnowMore-Dailyday",
-      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
-      "published": "2026-07-25T15:11:12Z",
-      "views": 1143,
-      "likes": 9,
-      "comments": 0,
-      "engagement_rate": 0.787,
-      "views_per_day": 30,
-      "tags": [
-        "Collatz Conjecture",
-        "curiosity",
-        "did you know",
-        "facts",
-        "math mystery",
-        "mindblown",
-        "physics",
-        "science",
-        "shorts",
-        "space",
-        "universe",
-        "unsolved problem"
-      ],
-      "description": "A simple math equation that has puzzled experts for decades\n\n#shorts #math #mystery",
-      "duration_secs": 12,
-      "thumbnail": "https://i.ytimg.com/vi/NTnrH-edhAU/hqdefault.jpg"
-    },
     "NsA1K7XQGGE": {
       "id": "NsA1K7XQGGE",
       "title": "HOW IT WORKS #1 | \ud83d\ude82 Train in a Vacuum \ud83c\udf00",
@@ -498,7 +499,7 @@
       "likes": 7,
       "comments": 0,
       "engagement_rate": 0.642,
-      "views_per_day": 29,
+      "views_per_day": 28,
       "tags": [
         "curiosity",
         "did you know",
@@ -529,7 +530,7 @@
       "likes": 13,
       "comments": 1,
       "engagement_rate": 2.881,
-      "views_per_day": 24,
+      "views_per_day": 23,
       "tags": [
         "bioluminescence",
         "curiosity",
@@ -549,37 +550,6 @@
       "description": "Discover the science behind glowing mushrooms and their potential applications\n\n\u25b6 FULL DOCUMENTARY: Cracking Collatz\nhttps://youtube.com/watch?v=n7--mTZUASg\n\n\ud83d\udcfa MIND BENDER \u2014 A fact that breaks your brain, daily.\nSubscribe for a new episode every day, plus a full deep dive every Sunday.\n\n#shorts #sci",
       "duration_secs": 33,
       "thumbnail": "https://i.ytimg.com/vi/F9H7eblPcCY/hqdefault.jpg"
-    },
-    "R_7SK3217Zc": {
-      "id": "R_7SK3217Zc",
-      "title": "UNSOLVED #6 | \ud83c\udfef Lost City: The Indus Valley Enigma",
-      "channel": "KnowMore-Dailyday",
-      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
-      "published": "2026-08-01T14:33:31Z",
-      "views": 685,
-      "likes": 6,
-      "comments": 2,
-      "engagement_rate": 1.168,
-      "views_per_day": 22,
-      "tags": [
-        "Ancient Mystery",
-        "Archaeology",
-        "Indus Valley Civilization",
-        "Lost City",
-        "Unsolved Enigma",
-        "curiosity",
-        "did you know",
-        "facts",
-        "mindblown",
-        "physics",
-        "science",
-        "shorts",
-        "space",
-        "universe"
-      ],
-      "description": "Uncover the mystery of the Indus Valley Civilization's disappearance\n\nUNSOLVED \u2014 One unsolved mystery, every day.\nNew episode every day.\n\n\u25b6 FULL DOCUMENTARY: Alien Water Worlds\nhttps://youtube.com/watch?v=JaO9mYrT2Bc\n\n\ud83d\udcfa UNSOLVED \u2014 One unsolved mystery, every day.\nSubscribe for a new episode every da",
-      "duration_secs": 31,
-      "thumbnail": "https://i.ytimg.com/vi/R_7SK3217Zc/hqdefault.jpg"
     },
     "JIlg7m3YdFU": {
       "id": "JIlg7m3YdFU",
@@ -610,6 +580,37 @@
       "duration_secs": 38,
       "thumbnail": "https://i.ytimg.com/vi/JIlg7m3YdFU/hqdefault.jpg"
     },
+    "R_7SK3217Zc": {
+      "id": "R_7SK3217Zc",
+      "title": "UNSOLVED #6 | \ud83c\udfef Lost City: The Indus Valley Enigma",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-08-01T14:33:31Z",
+      "views": 685,
+      "likes": 6,
+      "comments": 2,
+      "engagement_rate": 1.168,
+      "views_per_day": 21,
+      "tags": [
+        "Ancient Mystery",
+        "Archaeology",
+        "Indus Valley Civilization",
+        "Lost City",
+        "Unsolved Enigma",
+        "curiosity",
+        "did you know",
+        "facts",
+        "mindblown",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "universe"
+      ],
+      "description": "Uncover the mystery of the Indus Valley Civilization's disappearance\n\nUNSOLVED \u2014 One unsolved mystery, every day.\nNew episode every day.\n\n\u25b6 FULL DOCUMENTARY: Alien Water Worlds\nhttps://youtube.com/watch?v=JaO9mYrT2Bc\n\n\ud83d\udcfa UNSOLVED \u2014 One unsolved mystery, every day.\nSubscribe for a new episode every da",
+      "duration_secs": 31,
+      "thumbnail": "https://i.ytimg.com/vi/R_7SK3217Zc/hqdefault.jpg"
+    },
     "DYekLzE_-rc": {
       "id": "DYekLzE_-rc",
       "title": "UNSOLVED #3 | \ud83d\udd2d Uranus' Hidden Moons \ud83d\udef8",
@@ -620,7 +621,7 @@
       "likes": 11,
       "comments": 1,
       "engagement_rate": 1.664,
-      "views_per_day": 21,
+      "views_per_day": 20,
       "tags": [
         "Uranus",
         "astronomy",
@@ -650,7 +651,7 @@
       "likes": 9,
       "comments": 2,
       "engagement_rate": 2.355,
-      "views_per_day": 20,
+      "views_per_day": 19,
       "tags": [
         "botany",
         "curiosity",
@@ -680,7 +681,7 @@
       "likes": 13,
       "comments": 1,
       "engagement_rate": 3.5,
-      "views_per_day": 19,
+      "views_per_day": 18,
       "tags": [
         "Black Holes",
         "Cosmos",
@@ -711,7 +712,7 @@
       "likes": 6,
       "comments": 0,
       "engagement_rate": 0.957,
-      "views_per_day": 19,
+      "views_per_day": 18,
       "tags": [
         "animal defense",
         "curiosity",
@@ -742,7 +743,7 @@
       "likes": 6,
       "comments": 0,
       "engagement_rate": 0.871,
-      "views_per_day": 19,
+      "views_per_day": 18,
       "tags": [
         "atmospheric science",
         "cloud formation",
@@ -773,7 +774,7 @@
       "likes": 1,
       "comments": 1,
       "engagement_rate": 4.348,
-      "views_per_day": 15,
+      "views_per_day": 12,
       "tags": [
         "NASA",
         "cosmology",
@@ -804,7 +805,7 @@
       "likes": 3,
       "comments": 1,
       "engagement_rate": 2.817,
-      "views_per_day": 13,
+      "views_per_day": 12,
       "tags": [
         "ampullae of Lorenzini",
         "curiosity",
@@ -824,37 +825,6 @@
       "description": "Sharks navigate the globe with an invisible magnetic map. The mystery remains unsolved.\n\n\u25b6 FULL DOCUMENTARY: Birds' Quantum Compass\nhttps://youtube.com/watch?v=VlUq2WLo-LA\n\n\ud83d\udcfa UNSOLVED \u2014 One unsolved mystery, every day.\nSubscribe for a new episode every day, plus a full deep dive every Sunday.\n\n#shor",
       "duration_secs": 44,
       "thumbnail": "https://i.ytimg.com/vi/M9G6a_FXxys/hqdefault.jpg"
-    },
-    "sx5Tf79A75g": {
-      "id": "sx5Tf79A75g",
-      "title": "UNSOLVED #20 | \ud83d\udd34 Neutrinos: Earth\u2019s Invisible Pass\u2011Through \ud83d\ude80",
-      "channel": "KnowMore-Dailyday",
-      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
-      "published": "2026-08-28T15:41:32Z",
-      "views": 45,
-      "likes": 0,
-      "comments": 1,
-      "engagement_rate": 2.222,
-      "views_per_day": 11,
-      "tags": [
-        "IceCube",
-        "curiosity",
-        "did you know",
-        "facts",
-        "mindblown",
-        "neutrino",
-        "particle physics",
-        "physics",
-        "science",
-        "shorts",
-        "space",
-        "universe",
-        "unsolved",
-        "weak force"
-      ],
-      "description": "Ghostly particles cross the planet untouched\u2014why can we\u2019t see or stop them?\n\n\u25b6 FULL DOCUMENTARY: What the Universe Hides: Six Unsolved Mysteries That Defy Science\nhttps://youtube.com/watch?v=de6etCcpSWM\n\n\ud83d\udcfa UNSOLVED \u2014 One unsolved mystery, every day.\nSubscribe for a new episode every day, plus a full",
-      "duration_secs": 42,
-      "thumbnail": "https://i.ytimg.com/vi/sx5Tf79A75g/hqdefault.jpg"
     },
     "5Y45CkU1yAU": {
       "id": "5Y45CkU1yAU",
@@ -947,17 +917,48 @@
       "duration_secs": 20,
       "thumbnail": "https://i.ytimg.com/vi/BpDusVCQquw/hqdefault.jpg"
     },
+    "sx5Tf79A75g": {
+      "id": "sx5Tf79A75g",
+      "title": "UNSOLVED #20 | \ud83d\udd34 Neutrinos: Earth\u2019s Invisible Pass\u2011Through \ud83d\ude80",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-08-28T15:41:32Z",
+      "views": 45,
+      "likes": 0,
+      "comments": 1,
+      "engagement_rate": 2.222,
+      "views_per_day": 9,
+      "tags": [
+        "IceCube",
+        "curiosity",
+        "did you know",
+        "facts",
+        "mindblown",
+        "neutrino",
+        "particle physics",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "universe",
+        "unsolved",
+        "weak force"
+      ],
+      "description": "Ghostly particles cross the planet untouched\u2014why can we\u2019t see or stop them?\n\n\u25b6 FULL DOCUMENTARY: What the Universe Hides: Six Unsolved Mysteries That Defy Science\nhttps://youtube.com/watch?v=de6etCcpSWM\n\n\ud83d\udcfa UNSOLVED \u2014 One unsolved mystery, every day.\nSubscribe for a new episode every day, plus a full",
+      "duration_secs": 42,
+      "thumbnail": "https://i.ytimg.com/vi/sx5Tf79A75g/hqdefault.jpg"
+    },
     "_SvrLvQ_bds": {
       "id": "_SvrLvQ_bds",
       "title": "UNSOLVED #23 | \ud83e\ude81 The Ocean\u2019s Ghost Sailors: Velella's Unsolved Voyage",
       "channel": "KnowMore-Dailyday",
       "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
       "published": "2026-08-31T10:05:57Z",
-      "views": 9,
+      "views": 15,
       "likes": 0,
       "comments": 1,
-      "engagement_rate": 11.111,
-      "views_per_day": 9,
+      "engagement_rate": 6.667,
+      "views_per_day": 8,
       "tags": [
         "Velella",
         "curiosity",

@@ -8411,7 +8411,38 @@
     "visual_variant": "videos",
     "hook_score": 6,
     "word_count": 85,
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "_SvrLvQ_bds",
+      "title": "UNSOLVED #23 | \ud83e\ude81 The Ocean\u2019s Ghost Sailors: Velella's Unsolved Voyage",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-08-31T10:05:57Z",
+      "views": 15,
+      "likes": 0,
+      "comments": 1,
+      "engagement_rate": 6.667,
+      "views_per_day": 8,
+      "tags": [
+        "Velella",
+        "curiosity",
+        "did you know",
+        "facts",
+        "marine mystery",
+        "mindblown",
+        "nature wonders",
+        "ocean drift",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "universe",
+        "unsolved science"
+      ],
+      "description": "Why do tiny Velella colonies travel thousands of miles without a brain or motor? The mystery drifts on.\n\n\u25b6 FULL DOCUMENTARY: The Unsolved Mysteries That Could Rewrite Physics\nhttps://youtube.com/watch?v=p6ozjQHgJGo\n\n\ud83d\udcfa UNSOLVED \u2014 One unsolved mystery, every day.\nSubscribe for a new episode every day,",
+      "duration_secs": 36,
+      "thumbnail": "https://i.ytimg.com/vi/_SvrLvQ_bds/hqdefault.jpg"
+    }
   },
   {
     "id": "PIiFgMm2A-g",
@@ -8459,6 +8490,30 @@
     "visual_variant": "videos",
     "hook_score": 8,
     "word_count": 98,
+    "stats_fetched": false
+  },
+  {
+    "id": "WtTqEXht_0o",
+    "title": "UNSOLVED #24 | \ud83d\udd22 The Prime Number Race \u2013 Hidden Bias No One Can Explain",
+    "uploaded_at": "2026-09-03T08:17:56.367415+00:00",
+    "hook": "Prime numbers march in step, yet every few thousand they suddenly favor one odd digit over another.",
+    "script": "Prime numbers line up like soldiers, each integer either joining the ranks or being left behind. Mathematicians expect equal numbers of 1\u2011mod\u20114 and 3\u2011mod\u20114 primes, yet long stretches are flooded by 3\u2011mod\u20114 primes before the balance suddenly swings back. The phenomenon, called the prime number race, persists across billions of numbers, and every known model predicts a perfect balance that never appears. Why does this hidden bias emerge, and does it ever truly vanish?",
+    "topic": "The Prime Number Race \u2013 an unsolved bias",
+    "tags": [
+      "prime numbers",
+      "number theory",
+      "unsolved math",
+      "prime race",
+      "mathematics mystery"
+    ],
+    "affiliate_program": "",
+    "archetype": "unsolved_mystery",
+    "series": "UNSOLVED",
+    "episode": 24,
+    "voice": "en-US-ChristopherNeural",
+    "visual_variant": "photos",
+    "hook_score": 7,
+    "word_count": 74,
     "stats_fetched": false
   }
 ]
