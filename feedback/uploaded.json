@@ -8466,7 +8466,38 @@
     "visual_variant": "photos",
     "hook_score": 6,
     "word_count": 86,
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "PIiFgMm2A-g",
+      "title": "HOW IT WORKS #10 | \ud83d\ude80 Moon's Gunpowder Smell Explained! \ud83c\udf15",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-09-01T08:55:30Z",
+      "views": 982,
+      "likes": 8,
+      "comments": 1,
+      "engagement_rate": 0.916,
+      "views_per_day": 491,
+      "tags": [
+        "Moon smell",
+        "NASA",
+        "astronauts",
+        "curiosity",
+        "did you know",
+        "facts",
+        "lunar dust",
+        "mindblown",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "space science",
+        "universe"
+      ],
+      "description": "Discover why lunar dust smells like gunpowder and how a vacuum keeps the scent alive.\n\n\u25b6 FULL DOCUMENTARY: The Unsolved Mysteries That Could Rewrite Physics\nhttps://youtube.com/watch?v=p6ozjQHgJGo\n\n\ud83d\udcfa HOW IT WORKS \u2014 The hidden mechanics of everyday things.\nSubscribe for a new episode every day, plus ",
+      "duration_secs": 33,
+      "thumbnail": "https://i.ytimg.com/vi/PIiFgMm2A-g/hqdefault.jpg"
+    }
   },
   {
     "id": "a6NNkBqtJVo",
@@ -8490,7 +8521,37 @@
     "visual_variant": "videos",
     "hook_score": 8,
     "word_count": 98,
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "a6NNkBqtJVo",
+      "title": "HOW IT WORKS #11 | \ud83d\udd25 Water Boils at 70\u00b0C on Everest? The Hidden Physics \ud83c\udf04",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-09-02T08:09:25Z",
+      "views": 817,
+      "likes": 13,
+      "comments": 1,
+      "engagement_rate": 1.714,
+      "views_per_day": 408,
+      "tags": [
+        "cooking",
+        "curiosity",
+        "did you know",
+        "facts",
+        "high altitude",
+        "mindblown",
+        "physics",
+        "science",
+        "science short",
+        "shorts",
+        "space",
+        "universe",
+        "water boiling"
+      ],
+      "description": "Discover why water boils lower on mountain peaks and how it changes cooking forever.\n\n\u25b6 FULL DOCUMENTARY: The Unsolved Mysteries That Could Rewrite Physics\nhttps://youtube.com/watch?v=p6ozjQHgJGo\n\n\ud83d\udcfa HOW IT WORKS \u2014 The hidden mechanics of everyday things.\nSubscribe for a new episode every day, plus a",
+      "duration_secs": 33,
+      "thumbnail": "https://i.ytimg.com/vi/a6NNkBqtJVo/hqdefault.jpg"
+    }
   },
   {
     "id": "WtTqEXht_0o",
@@ -8514,6 +8575,30 @@
     "visual_variant": "photos",
     "hook_score": 7,
     "word_count": 74,
+    "stats_fetched": false
+  },
+  {
+    "id": "0B4Hp3MdRNY",
+    "title": "UNSOLVED #25 | \u26a1\ufe0f How Lightning Forged Glass Tubes in a Split Second \ud83c\udf2a\ufe0f",
+    "uploaded_at": "2026-09-04T08:13:07.733691+00:00",
+    "hook": "A single bolt of lightning can turn sand into glass in an instant!",
+    "script": "When a thunderstorm erupts over a desert, a jagged discharge slices through silica grains at 30,000\u202f\u00b0C, hotter than the Sun's surface, melting them faster than any furnace could. The plasma channel expands, cooling in milliseconds, and the molten silica solidifies into hollow, tube\u2011shaped glass called fulgurite. Even in labs we can spark fulgurites, but we still don\u2019t know which exact conditions make the perfectly radial tubes instead of just scorched sand. The answer still flickers beyond our grasp.",
+    "topic": "Lightning turning sand into glass",
+    "tags": [
+      "lightning",
+      "fulgurite",
+      "unsolved science",
+      "natural glass",
+      "mystery"
+    ],
+    "affiliate_program": "",
+    "archetype": "unsolved_mystery",
+    "series": "UNSOLVED",
+    "episode": 25,
+    "voice": "en-US-ChristopherNeural",
+    "visual_variant": "videos",
+    "hook_score": 6,
+    "word_count": 79,
     "stats_fetched": false
   }
 ]
