@@ -8600,5 +8600,29 @@
     "hook_score": 6,
     "word_count": 79,
     "stats_fetched": false
+  },
+  {
+    "id": "dVvKzCM_51Y",
+    "title": "UNSOLVED #26 | \ud83c\udf0c The Secret Purple Dawn You\u2019ve Never Seen",
+    "uploaded_at": "2026-09-05T07:51:55.273306+00:00",
+    "hook": "The sky bleeds purple just before sunrise.",
+    "script": "The sky bleeds purple just before sunrise. Sunlight hits the atmosphere, scattering blue light and letting reds dominate, while dust and ash refract the rest into violet, flashing a brief otherworldly glow. Most mornings paint orange and pink, yet when particulate layers thicken, the balance tips and the horizon ignites in a mystic purple that fades as the sun climbs. Scientists can model the physics, but why some dawns burst into violet while others never do remains a restless question, lingering at the edge of our sight.",
+    "topic": "Why the sky turns purple at sunrise",
+    "tags": [
+      "sunrise",
+      "purple sky",
+      "atmospheric scattering",
+      "mystery",
+      "science"
+    ],
+    "affiliate_program": "",
+    "archetype": "unsolved_mystery",
+    "series": "UNSOLVED",
+    "episode": 26,
+    "voice": "en-US-ChristopherNeural",
+    "visual_variant": "photos",
+    "hook_score": 6,
+    "word_count": 87,
+    "stats_fetched": false
   }
 ]
