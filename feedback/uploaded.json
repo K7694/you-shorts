@@ -8575,7 +8575,38 @@
     "visual_variant": "photos",
     "hook_score": 7,
     "word_count": 74,
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "WtTqEXht_0o",
+      "title": "UNSOLVED #24 | \ud83d\udd22 The Prime Number Race \u2013 Hidden Bias No One Can Explain",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-09-03T08:18:16Z",
+      "views": 237,
+      "likes": 1,
+      "comments": 1,
+      "engagement_rate": 0.844,
+      "views_per_day": 118,
+      "tags": [
+        "curiosity",
+        "did you know",
+        "facts",
+        "mathematics mystery",
+        "mindblown",
+        "number theory",
+        "physics",
+        "prime numbers",
+        "prime race",
+        "science",
+        "shorts",
+        "space",
+        "universe",
+        "unsolved math"
+      ],
+      "description": "Primes seem random, but they secretly favor certain remainders. The mystery deepens.\n\n\u25b6 FULL DOCUMENTARY: The Unsolved Mysteries That Could Rewrite Physics\nhttps://youtube.com/watch?v=p6ozjQHgJGo\n\n\ud83d\udcfa UNSOLVED \u2014 One unsolved mystery, every day.\nSubscribe for a new episode every day, plus a full deep d",
+      "duration_secs": 31,
+      "thumbnail": "https://i.ytimg.com/vi/WtTqEXht_0o/hqdefault.jpg"
+    }
   },
   {
     "id": "0B4Hp3MdRNY",
@@ -8623,6 +8654,30 @@
     "visual_variant": "photos",
     "hook_score": 6,
     "word_count": 87,
+    "stats_fetched": false
+  },
+  {
+    "id": "F75Ohcgm-nw",
+    "title": "UNSOLVED #27 | \ud83c\udf19\u2728 Moonbow: The Night\u2011Sky Rainbow No One Can Predict",
+    "uploaded_at": "2026-09-06T08:07:18.652737+00:00",
+    "hook": "A rainbow painted across the night sky\u2014yes, it really happens.",
+    "script": "A rainbow painted across the night sky\u2014yes, it really happens. When a full moon rises behind a misty waterfall, its feeble light scatters off billions of tiny droplets, bending exactly the same way sun\u2011light does at dawn. In the darkness it shows as a pale, almost white arc that flickers faintly. Yet scientists can\u2019t predict where a moonbow will appear\u2014tiny variations in droplet size, moon phase, and atmospheric clarity shift the effect beyond our models. Want to catch one? Find a clear night, a bright moon, and a spray of water.",
+    "topic": "Nighttime rainbows and the moonbow mystery",
+    "tags": [
+      "moonbow",
+      "rainbow",
+      "night sky",
+      "unsolved mystery",
+      "astronomy"
+    ],
+    "affiliate_program": "",
+    "archetype": "unsolved_mystery",
+    "series": "UNSOLVED",
+    "episode": 27,
+    "voice": "en-US-ChristopherNeural",
+    "visual_variant": "videos",
+    "hook_score": 6,
+    "word_count": 91,
     "stats_fetched": false
   }
 ]
