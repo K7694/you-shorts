@@ -2624,7 +2624,16 @@ def upload_youtube(video_path: str, title: str, desc: str, tags: list,
     creds = None
 
     if os.path.exists(YOUTUBE_TOKEN_FILE):
-        creds = Credentials.from_authorized_user_file(YOUTUBE_TOKEN_FILE, SCOPES)
+        # Load with the token's OWN scopes — do NOT pass SCOPES here.
+        # Passing an explicit list makes google-auth set creds.scopes to that
+        # narrower list, and the refresh writeback below then serialises the
+        # NARROWED set back over youtube_token.json. In CI that silently
+        # stripped yt-analytics.readonly on every run before the retention
+        # step could read it (2026-08-24..09-06: 14 videos, 0 recorded).
+        # The grant itself always had all three scopes; only the on-disk copy
+        # was being shrunk. A token may hold MORE scopes than the code asks
+        # for — never fewer (see LESSONS.md, the May invalid_scope outage).
+        creds = Credentials.from_authorized_user_file(YOUTUBE_TOKEN_FILE)
 
     if not creds or not creds.valid:
         if creds and creds.expired and creds.refresh_token:
