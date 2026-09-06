@@ -115,7 +115,12 @@ GROQ_REASONING_EFFORT = "low"
 CEREBRAS_API_KEY   = os.getenv("CEREBRAS_API_KEY", "")
 CEREBRAS_MODEL     = "gpt-oss-120b"   # verified id; account currently 402s
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "")
-OPENROUTER_MODEL   = "nvidia/nemotron-nano-9b-v2:free"
+# 2026-09-06: nemotron-nano-9b-v2:free was RETIRED (404 "No endpoints
+# found"). Chain had silently dropped to 2 live providers — the exact
+# single-point-of-failure shape behind the Aug 18-21 outage. Re-verified
+# through you._call_openai_compatible: super-120b OK 2.8s, minimax-m2.7 OK
+# 2.3s, both gemma-4 variants 429. Pinned the same vendor family, larger.
+OPENROUTER_MODEL   = "nvidia/nemotron-3-super-120b-a12b:free"
 
 # Fallback chain, tried in order. Entries without a key are skipped, so the
 # pipeline keeps working before any backup key is added.
