@@ -18,7 +18,7 @@ name: YOU — Weekly Long-Form
 
 on:
   schedule:
-    - cron: '30 5 * * 0'   # Sundays, 11:00 AM IST
+    - cron: '47 4 * * 0'   # Sundays, 10:17 IST nominal (off the :30 mark, see create_video.yml)
   workflow_dispatch:
 
 jobs:

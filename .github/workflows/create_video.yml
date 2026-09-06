@@ -8,7 +8,9 @@ on:
   # re-tripping the "spam volume" signal on a recovering channel.
   # Diagnostic batch: 6 videos over ~7 days, then read the verdict.
   schedule:
-    - cron: '30 3 * * *'   # 9:00 AM IST
+    - cron: '47 2 * * *'   # 08:17 IST nominal. Off the :00/:30 marks GitHub's
+                            # scheduler deprioritises — measured 4.5-12h late
+                            # on the old '30 3' (2026-08-27..09-06)
 
   # Manual trigger always available
   workflow_dispatch:
