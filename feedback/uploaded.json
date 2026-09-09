@@ -8953,6 +8953,20 @@
       "description": "A fleeting violet sunrise—science explains the glow, but the mystery endures. #shorts\n\n▶ FULL DOCUMENTARY: The Unsolved Mysteries That Could Rewrite Physics\nhttps://youtube.com/watch?v=p6ozjQHgJGo\n\n📺 UNSOLVED — One unsolved mystery, every day.\nSubscribe for a new episode every day, plus a full deep ",
       "duration_secs": 33,
       "thumbnail": "https://i.ytimg.com/vi/dVvKzCM_51Y/hqdefault.jpg"
+    },
+    "retention": {
+      "awr_hook": 1.0588,
+      "rrp_hook": 0.275,
+      "rrp_all": 0.1878,
+      "rrp_thirds": [
+        0.188,
+        0.1194,
+        0.2511
+      ],
+      "hook_window_s": 3.0,
+      "duration_est_s": 37.8,
+      "points": 100,
+      "fetched_at": "2026-09-09T07:38:20.702108+00:00"
     }
   },
   {
@@ -8977,7 +8991,38 @@
     "visual_variant": "videos",
     "hook_score": 6,
     "word_count": 91,
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "F75Ohcgm-nw",
+      "title": "UNSOLVED #27 | 🌙✨ Moonbow: The Night‑Sky Rainbow No One Can Predict",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-09-06T08:07:35Z",
+      "views": 313,
+      "likes": 2,
+      "comments": 1,
+      "engagement_rate": 0.958,
+      "views_per_day": 156,
+      "tags": [
+        "astronomy",
+        "curiosity",
+        "did you know",
+        "facts",
+        "mindblown",
+        "moonbow",
+        "night sky",
+        "physics",
+        "rainbow",
+        "science",
+        "shorts",
+        "space",
+        "universe",
+        "unsolved mystery"
+      ],
+      "description": "Discover why rainbows can appear at night and the mystery that keeps scientists guessing. #shorts\n\n▶ FULL DOCUMENTARY: The Unsolved Mysteries That Could Rewrite Physics\nhttps://youtube.com/watch?v=p6ozjQHgJGo\n\n📺 UNSOLVED — One unsolved mystery, every day.\nSubscribe for a new episode every day, plus ",
+      "duration_secs": 38,
+      "thumbnail": "https://i.ytimg.com/vi/F75Ohcgm-nw/hqdefault.jpg"
+    }
   },
   {
     "id": "nwCxheXlcEM",
@@ -9001,7 +9046,38 @@
     "visual_variant": "videos",
     "hook_score": 6,
     "word_count": 87,
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "nwCxheXlcEM",
+      "title": "HOW IT WORKS #12 | 🕳️ The Underground City That Hid an Entire Civilization",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-09-06T14:58:56Z",
+      "views": 991,
+      "likes": 16,
+      "comments": 1,
+      "engagement_rate": 1.715,
+      "views_per_day": 496,
+      "tags": [
+        "Cappadocia",
+        "Derinkuyu",
+        "ancient engineering",
+        "curiosity",
+        "did you know",
+        "facts",
+        "lost civilization",
+        "mindblown",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "underground city",
+        "universe"
+      ],
+      "description": "Discover how Derinkuyu's ancient engineers built a massive, self‑contained underground metropolis.\n\n▶ FULL DOCUMENTARY: The Unsolved Mysteries That Could Rewrite Physics\nhttps://youtube.com/watch?v=tOhlrlu7720\n\n📺 HOW IT WORKS — The hidden mechanics of everyday things.\nSubscribe for a new episode eve",
+      "duration_secs": 35,
+      "thumbnail": "https://i.ytimg.com/vi/nwCxheXlcEM/hqdefault.jpg"
+    }
   },
   {
     "id": "eIf1h4iMkF8",
@@ -9049,6 +9125,30 @@
     "visual_variant": "videos",
     "hook_score": 10,
     "word_count": 90,
+    "stats_fetched": false
+  },
+  {
+    "id": "RBmPx5p1hUs",
+    "title": "UNSOLVED #30 | 🔴 Red Sky Warning: The Untold Science Behind Stormy Sunsets",
+    "uploaded_at": "2026-09-09T07:38:00.024399+00:00",
+    "hook": "Red sky, thunder's herald.",
+    "script": "Red sky, thunder's herald. As the sun sinks, droplets and dust rise, turning the horizon into a bleeding veil. Light hits particles larger than molecules, scattering the longer red wavelengths—Mie scattering dominates, while tiny gases still perform Rayleigh's blue trick. That same sunset physics flips into a storm alarm, and scientists still puzzle over why the red surge peaks just before thunder rolls. Is the atmosphere shouting a secret we still can't decode? The blood‑red glow may be nature's alarm, or just a fleeting coincidence.",
+    "topic": "The real science behind red skies before storms",
+    "tags": [
+      "red sky",
+      "storm warning",
+      "light scattering",
+      "atmospheric mystery",
+      "unsolved science"
+    ],
+    "affiliate_program": "",
+    "archetype": "unsolved_mystery",
+    "series": "UNSOLVED",
+    "episode": 30,
+    "voice": "en-US-ChristopherNeural",
+    "visual_variant": "photos",
+    "hook_score": 5,
+    "word_count": 85,
     "stats_fetched": false
   }
 ]
