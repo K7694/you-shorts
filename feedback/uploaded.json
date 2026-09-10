@@ -9022,6 +9022,20 @@
       "description": "Discover why rainbows can appear at night and the mystery that keeps scientists guessing. #shorts\n\n▶ FULL DOCUMENTARY: The Unsolved Mysteries That Could Rewrite Physics\nhttps://youtube.com/watch?v=p6ozjQHgJGo\n\n📺 UNSOLVED — One unsolved mystery, every day.\nSubscribe for a new episode every day, plus ",
       "duration_secs": 38,
       "thumbnail": "https://i.ytimg.com/vi/F75Ohcgm-nw/hqdefault.jpg"
+    },
+    "retention": {
+      "awr_hook": 1.0956,
+      "rrp_hook": 0.3422,
+      "rrp_all": 0.3989,
+      "rrp_thirds": [
+        0.2628,
+        0.3512,
+        0.5729
+      ],
+      "hook_window_s": 3.0,
+      "duration_est_s": 39.4,
+      "points": 100,
+      "fetched_at": "2026-09-10T07:35:23.736871+00:00"
     }
   },
   {
@@ -9077,6 +9091,20 @@
       "description": "Discover how Derinkuyu's ancient engineers built a massive, self‑contained underground metropolis.\n\n▶ FULL DOCUMENTARY: The Unsolved Mysteries That Could Rewrite Physics\nhttps://youtube.com/watch?v=tOhlrlu7720\n\n📺 HOW IT WORKS — The hidden mechanics of everyday things.\nSubscribe for a new episode eve",
       "duration_secs": 35,
       "thumbnail": "https://i.ytimg.com/vi/nwCxheXlcEM/hqdefault.jpg"
+    },
+    "retention": {
+      "awr_hook": 1.6157,
+      "rrp_hook": 0.5623,
+      "rrp_all": 0.6637,
+      "rrp_thirds": [
+        0.5142,
+        0.5628,
+        0.9053
+      ],
+      "hook_window_s": 3.0,
+      "duration_est_s": 37.8,
+      "points": 100,
+      "fetched_at": "2026-09-10T07:35:24.188537+00:00"
     }
   },
   {
@@ -9101,7 +9129,38 @@
     "visual_variant": "photos",
     "hook_score": 7,
     "word_count": 91,
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "eIf1h4iMkF8",
+      "title": "UNSOLVED #28 | ⚡️Seeing Electricity: The Untamed Plasma Arcs That Defy Physics⚡️",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-09-07T07:36:54Z",
+      "views": 237,
+      "likes": 4,
+      "comments": 1,
+      "engagement_rate": 2.11,
+      "views_per_day": 118,
+      "tags": [
+        "Tesla coil",
+        "curiosity",
+        "did you know",
+        "electricity",
+        "facts",
+        "lightning",
+        "mindblown",
+        "physics",
+        "plasma",
+        "science",
+        "shorts",
+        "space",
+        "universe",
+        "unsolved mystery"
+      ],
+      "description": "Why do plasma arcs glow and twist in air? The secret behind Tesla coils and lightning is still unsolved.\n\n▶ FULL DOCUMENTARY: The Unsolved Mysteries That Could Rewrite Physics\nhttps://youtube.com/watch?v=tOhlrlu7720\n\n📺 UNSOLVED — One unsolved mystery, every day.\nSubscribe for a new episode every day",
+      "duration_secs": 36,
+      "thumbnail": "https://i.ytimg.com/vi/eIf1h4iMkF8/hqdefault.jpg"
+    }
   },
   {
     "id": "MVRZxQfxQ6c",
@@ -9125,7 +9184,38 @@
     "visual_variant": "videos",
     "hook_score": 10,
     "word_count": 90,
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "MVRZxQfxQ6c",
+      "title": "UNSOLVED #29 | 📡 GPS Time‑Machine: The Secret Relativity Behind Your Phone 🌌",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-09-08T07:30:22Z",
+      "views": 14,
+      "likes": 0,
+      "comments": 1,
+      "engagement_rate": 7.143,
+      "views_per_day": 7,
+      "tags": [
+        "Einstein",
+        "GPS",
+        "curiosity",
+        "did you know",
+        "facts",
+        "mindblown",
+        "physics",
+        "relativity",
+        "satellites",
+        "science",
+        "shorts",
+        "space",
+        "time dilation",
+        "universe"
+      ],
+      "description": "Discover how Einstein's theory hides in every turn of your GPS and why the universe still guards its true clock.\n\n▶ FULL DOCUMENTARY: The Unsolved Mysteries That Could Rewrite Physics\nhttps://youtube.com/watch?v=tOhlrlu7720\n\n📺 UNSOLVED — One unsolved mystery, every day.\nSubscribe for a new episode e",
+      "duration_secs": 37,
+      "thumbnail": "https://i.ytimg.com/vi/MVRZxQfxQ6c/hqdefault.jpg"
+    }
   },
   {
     "id": "RBmPx5p1hUs",
@@ -9149,6 +9239,30 @@
     "visual_variant": "photos",
     "hook_score": 5,
     "word_count": 85,
+    "stats_fetched": false
+  },
+  {
+    "id": "B3uUzgyd36I",
+    "title": "HOW IT WORKS #13 | 🌀 When Nothing Pushes Everything – The Casimir Effect",
+    "uploaded_at": "2026-09-10T07:34:59.156326+00:00",
+    "hook": "Empty space can actually shove things together.",
+    "script": "Two nanoscopic metal plates float inches apart, yet they inch closer on their own. Inside the vacuum, quantum fields flicker as particle‑antiparticle pairs constantly appear and disappear, a restless sea of energy. Between the plates, only waves that fit the gap survive, while outside, countless modes roar. Fewer vibrations inside means lower pressure, so the richer outer sea pushes the plates together. This invisible squeeze, the Casimir Effect, is strong enough to bend micro‑electromechanical switches, letting tiny machines snap shut without a battery. The void isn’t empty—it’s a restless pressure cooker.",
+    "topic": "The Casimir Effect – empty space pushing objects together",
+    "tags": [
+      "Casimir Effect",
+      "quantum physics",
+      "vacuum energy",
+      "nanotechnology",
+      "physics explained"
+    ],
+    "affiliate_program": "",
+    "archetype": "how_does_it_work",
+    "series": "HOW IT WORKS",
+    "episode": 13,
+    "voice": "en-US-BrianMultilingualNeural",
+    "visual_variant": "videos",
+    "hook_score": 8,
+    "word_count": 91,
     "stats_fetched": false
   }
 ]
