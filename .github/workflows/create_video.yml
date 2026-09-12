@@ -121,6 +121,9 @@ jobs:
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
           CEREBRAS_API_KEY: ${{ secrets.CEREBRAS_API_KEY }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          # gh CLI auth for the render archive (gh release upload).
+          # contents: write is already granted to this job.
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PYTHONIOENCODING: utf-8
         run: python you.py ${{ inputs.force == true && '--force' || '' }}
 

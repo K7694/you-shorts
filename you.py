@@ -410,9 +410,57 @@ def _log_upload(video_id: str, script: dict, title: str):
         # checked for whether it actually predicts views or subscribers.
         "hook_score":        script.get("hook_score", 0),
         "word_count":        len(script.get("script", "").split()),
+        # Public URL of the rendered mp4 on the monthly GitHub Release
+        # (None if the archive failed). Read by compilations + cross-post.
+        "render_url":        script.get("render_url"),
         "stats_fetched": False,
     })
     _UPLOADS_LOG.write_text(json.dumps(uploads, indent=2), encoding="utf-8")
+
+
+def _archive_render(video_path: str) -> str | None:
+    """Persist the rendered mp4 to a monthly GitHub Release; return its URL.
+
+    Until 2026-09-12 no rendered Short survived a run: output/ is gitignored,
+    CI runners are ephemeral, and create_video deletes the file after upload.
+    Compilations (Phase 5) and Meta cross-posting (Phase 4, which needs a
+    public video URL) both read from here.
+
+    Non-fatal but loud. The YouTube upload must never be blocked by the
+    archive; the weekly report counts records that are missing render_url.
+    """
+    if not RENDER_ARCHIVE_ENABLED:
+        return None
+    if not shutil.which("gh"):
+        print("   ⚠️  Render archive skipped: gh CLI not on PATH")
+        return None
+    tag = f"renders-{datetime.now().strftime('%Y-%m')}"
+    name = Path(video_path).name
+    repo = ["-R", RENDER_ARCHIVE_REPO]
+    try:
+        if subprocess.run(["gh", "release", "view", tag, *repo],
+                          capture_output=True, text=True, timeout=60).returncode != 0:
+            c = subprocess.run(["gh", "release", "create", tag, *repo,
+                                "--title", f"Renders {tag[8:]}",
+                                "--notes", "Rendered Shorts, archived by the pipeline before the "
+                                           "local file is deleted. Public repo, so these URLs are "
+                                           "stable inputs for compilations and cross-posting."],
+                               capture_output=True, text=True, timeout=60)
+            if c.returncode != 0:
+                print(f"   ⚠️  Render archive: could not create release {tag}: "
+                      f"{c.stderr.strip()[:120]}")
+                return None
+        u = subprocess.run(["gh", "release", "upload", tag, video_path, *repo, "--clobber"],
+                           capture_output=True, text=True, timeout=600)
+        if u.returncode != 0:
+            print(f"   ⚠️  Render archive upload failed: {u.stderr.strip()[:120]}")
+            return None
+    except Exception as e:
+        print(f"   ⚠️  Render archive error: {str(e)[:120]}")
+        return None
+    url = f"https://github.com/{RENDER_ARCHIVE_REPO}/releases/download/{tag}/{name}"
+    print(f"   📦 Archived render: {url}")
+    return url
 
 
 def _uploads_today() -> int:
@@ -2885,6 +2933,9 @@ def create_video(topic: str = None, upload: bool = True) -> dict:
         # ── STEP 5: PUBLISHER ───────────────────────────────
         print("\n  ┌─ 5/5 ── 📤 PUBLISHER ──────────────────────")
         if upload:
+            # Archive BEFORE the upload so the URL is in the record
+            # _log_upload writes, and exists before any cross-post runs.
+            script["render_url"] = _archive_render(video_path)
             r["upload"] = upload_youtube(
                 video_path, script["title"],
                 compliant_desc, script.get("tags", []),

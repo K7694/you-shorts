@@ -244,6 +244,15 @@ MAX_UPLOADS_PER_DAY = 1
 # side of UTC midnight; IST keeps every slot of one day together.
 CADENCE_TZ_OFFSET_HOURS = 5.5
 
+# ── Render archive (2026-09-12, Phase 1.2) ────────────────────────
+# output/ is gitignored, CI runners are ephemeral and create_video deletes
+# the mp4 after upload, so no rendered Short ever survived a run. Each
+# render is now uploaded to a monthly GitHub Release before the delete.
+# Public repo => stable public download URL. Consumers: monthly
+# compilations (Phase 5) and Meta cross-posting (Phase 4, needs a URL).
+RENDER_ARCHIVE_ENABLED = True
+RENDER_ARCHIVE_REPO    = "K7694/you-shorts"
+
 # ── Retention instrumentation (2026-08-23) ───────────────────────
 # The hook was never measurable before this: views/likes say nothing about
 # whether the opening stopped the scroll. analytics.py --backfill records
