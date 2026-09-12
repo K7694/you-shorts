@@ -415,6 +415,34 @@ def _log_upload(video_id: str, script: dict, title: str):
     _UPLOADS_LOG.write_text(json.dumps(uploads, indent=2), encoding="utf-8")
 
 
+def _uploads_today() -> int:
+    """Uploads so far in the channel's local day (CADENCE_TZ_OFFSET_HOURS).
+
+    Used by the cadence guard in main(). Counted in local time, not UTC:
+    the crons are pre-shifted for GitHub's measured ~4.5h queue delay, so
+    a run can execute on either side of UTC midnight and still belong to
+    the same broadcast day.
+    """
+    from datetime import timezone as _tz, timedelta as _td
+    tz = _tz(_td(hours=CADENCE_TZ_OFFSET_HOURS))
+    today = datetime.now(tz).date()
+    n = 0
+    if _UPLOADS_LOG.exists():
+        try:
+            for u in json.loads(_UPLOADS_LOG.read_text(encoding="utf-8")):
+                ts = (u.get("uploaded_at") or "").replace("Z", "+00:00")
+                if not ts:
+                    continue
+                dt = datetime.fromisoformat(ts)
+                if dt.tzinfo is None:
+                    dt = dt.replace(tzinfo=_tz.utc)
+                if dt.astimezone(tz).date() == today:
+                    n += 1
+        except Exception:
+            pass
+    return n
+
+
 # ── Analyzer brief + market intelligence ──────────────────────────
 
 def _load_full_brief() -> dict:
@@ -2990,6 +3018,8 @@ def main():
     parser.add_argument("--autopilot", action="store_true", help="Run forever")
     parser.add_argument("--every", type=int, default=AUTOPILOT_INTERVAL, help="Minutes between runs")
     parser.add_argument("--voices", action="store_true", help="List voices")
+    parser.add_argument("--force", action="store_true",
+                        help="Upload even if today's cadence (MAX_UPLOADS_PER_DAY) is already met")
 
     args = parser.parse_args()
 
@@ -3033,6 +3063,21 @@ def main():
         sys.exit(1)
 
     upload = not args.no_upload
+
+    # ── Cadence guard (slot-aware runs) ──────────────────────
+    # The workflow fires more than once a day so a failed slot gets a
+    # second chance (2026-09-11: apt timeout, day lost). Each slot counts
+    # today's uploads and stands down once MAX_UPLOADS_PER_DAY is met.
+    # Only the default single-video path is gated: --batch and --autopilot
+    # are explicit multi-run intents, --no-upload never counts, and
+    # --force is the deliberate override.
+    if upload and not args.force and not args.autopilot and not args.batch:
+        done = _uploads_today()
+        if done >= MAX_UPLOADS_PER_DAY:
+            print(f"\n  ⏭️  Already at cadence: {done}/{MAX_UPLOADS_PER_DAY} upload(s) today "
+                  f"(UTC{CADENCE_TZ_OFFSET_HOURS:+g}). Standing down.")
+            print("     (pass --force to upload anyway)\n")
+            return
 
     # ── Run ──────────────────────────────────────────────────
     if args.autopilot:

@@ -18,7 +18,8 @@ name: YOU — Weekly Long-Form
 
 on:
   schedule:
-    - cron: '47 4 * * 0'   # Sundays, 10:17 IST nominal (off the :30 mark, see create_video.yml)
+    - cron: '7 0 * * 0'    # Sundays. Nominal 00:07 UTC lands ~04:47 UTC ~ 10:17 IST after
+                            # GitHub's measured ~4.5h queue delay (see create_video.yml).
   workflow_dispatch:
 
 jobs:

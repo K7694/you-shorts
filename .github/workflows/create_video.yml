@@ -8,12 +8,25 @@ on:
   # re-tripping the "spam volume" signal on a recovering channel.
   # Diagnostic batch: 6 videos over ~7 days, then read the verdict.
   schedule:
-    - cron: '47 2 * * *'   # 08:17 IST nominal. Off the :00/:30 marks GitHub's
-                            # scheduler deprioritises — measured 4.5-12h late
-                            # on the old '30 3' (2026-08-27..09-06)
+    # Slot A. Nominal 22:37 UTC lands ~03:17 UTC ~ 08:47 IST after the
+    # +4h35m..+4h47m queue delay measured every day 2026-09-07..12. Moving
+    # off :30 (Sep 6) did not change the delay at all - it is GitHub's
+    # queue, not the minute - so the crons are pre-shifted instead.
+    # Re-measure at the new hour; the delay may differ.
+    - cron: '37 22 * * *'
+    # Retry slot, 3h later. you.py counts today's uploads (IST) and stands
+    # down if MAX_UPLOADS_PER_DAY is met, so this only produces a video
+    # when slot A failed (2026-09-11 lost a day to an apt timeout).
+    - cron: '37 1 * * *'
 
-  # Manual trigger always available
+  # Manual trigger always available. The guard applies here too: a
+  # dispatch after today's upload stands down unless force is ticked.
   workflow_dispatch:
+    inputs:
+      force:
+        description: "Upload even if today's cadence is already met"
+        type: boolean
+        default: false
 
 jobs:
   create-video:
@@ -109,7 +122,7 @@ jobs:
           CEREBRAS_API_KEY: ${{ secrets.CEREBRAS_API_KEY }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           PYTHONIOENCODING: utf-8
-        run: python you.py
+        run: python you.py ${{ inputs.force == true && '--force' || '' }}
 
       # ── 8c. Record hook retention for finished videos ─────────
       #    Views and likes say nothing about whether the opening stopped

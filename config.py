@@ -233,6 +233,17 @@ CAPTION_WORDS_PER_LINE = 3
 # the writing instead. Set False to generate in one pass with no editing.
 CRITIQUE_AND_REVISE = True
 
+# ── Cadence: slot-aware runs (2026-09-12) ─────────────────────────
+# The workflow fires MORE THAN ONCE a day. Each run counts today's uploads
+# and stands down once this number is met, so a slot that failed (Sep 11:
+# apt timeout, day lost) gets a second chance for free. Raise to 2 for the
+# Phase 2 cadence test — same mechanism, nothing else changes.
+MAX_UPLOADS_PER_DAY = 1
+# "Today" is counted in the channel's local day, not UTC. Crons are
+# pre-shifted for GitHub's ~4.5h queue delay and can execute on either
+# side of UTC midnight; IST keeps every slot of one day together.
+CADENCE_TZ_OFFSET_HOURS = 5.5
+
 # ── Retention instrumentation (2026-08-23) ───────────────────────
 # The hook was never measurable before this: views/likes say nothing about
 # whether the opening stopped the scroll. analytics.py --backfill records
