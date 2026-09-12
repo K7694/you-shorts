@@ -263,6 +263,52 @@ because it is proven. Measurable in ~3 weeks now that retention is logged.
 else does, suspect the measurement before believing the result. Both times
 the "finding" was the shape of my own bug.
 
+## 3f. Fourteen green runs, zero data (2026-08-24 to 09-06)
+
+The retention backfill step was `continue-on-error` so a transient
+Analytics failure could not redden a run whose video had already shipped.
+Right call. But nothing read the step's output, and it failed every day
+for two weeks — 14 green runs, 14 lost days of data.
+
+Root cause was ours: `_upload_to_youtube` loaded the token with a
+hardcoded 2-scope list, google-auth set `creds.scopes` to that list, and
+the refresh writeback serialised the NARROWED token over the file before
+the analytics step read it. Never reproduced locally because
+`--no-upload` skips the whole upload path.
+
+**Fixes:** load the token with its own scopes (never pass a list); and
+`report.py` reads step OUTPUTS weekly — cohorts, coverage, archive hits —
+not step statuses. **A green run proves the job exited 0, nothing more.
+If a step is allowed to fail, something must read what it printed.**
+
+## 3g. Free models get retired without notice (2026-09-06)
+
+OpenRouter's `nemotron-nano-9b-v2:free` started returning 404. With
+Cerebras still 402, the four-provider chain had silently been two
+providers for ~2 weeks — the exact shape of the Aug 18-21 outage — and
+CI stayed green only because neither survivor happened to fail.
+**Probe the whole chain through the production code path at every
+session open.** Re-pinned `nemotron-3-super-120b-a12b:free`; backup
+verified `minimax/minimax-m2.7:free`.
+
+## 3h. Cron drift is GitHub's queue, not the minute (2026-09-12)
+
+Moving both crons off `:30` (Sep 6) changed nothing: every scheduled run
+Sep 7-12 still started +4h35m to +4h47m late, as before. Off-peak
+minutes are folklore. **Treat the delay as a measured constant and
+pre-shift the cron.** Also: one slow apt mirror (Sep 11) hit a 5-minute
+step cap with no retry and the day's upload simply never existed —
+retry the install, and let a second cron slot re-run a failed day
+(`MAX_UPLOADS_PER_DAY` guard).
+
+## 3i. `MONETIZATION_ENABLED` is a content switch, not a CTA switch
+
+It looks like "turn affiliate features on". It also switches script
+generation to the product-first flow that dropped views 312 -> 10 in May.
+Any CTA work gets its own flag (`CTA_ENABLED`). Left here because a
+planning session that had read the whole codebase description still
+proposed "repurpose MONETIZATION_ENABLED" — the name invites it.
+
 ## 4. Process lessons
 
 - **Change one thing per batch.** The clean Phase 0 vs Phase 1 comparison
