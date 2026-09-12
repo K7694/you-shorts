@@ -253,6 +253,74 @@ def backfill_retention(days: int = 90, refresh: bool = False) -> int:
     return done
 
 
+# ── Audience geography ────────────────────────────────────────────
+# Decides three things downstream (IMPLEMENTATION_2026_09_12.md Phase 1.1):
+# which Amazon programme goes on the landing page (.in vs .com), which
+# niche the clone targets (India- vs US-finance), and where the cron slots
+# sit. Nothing about the audience's location was ever measured before.
+
+GEO_FILE = BASE_DIR / "analyzer" / "geo.json"
+
+
+def geography(days: int = 90) -> dict:
+    """Views and watch-minutes by country, written to analyzer/geo.json."""
+    creds = _creds()
+    if not creds:
+        return {}
+    from googleapiclient.discovery import build
+    from datetime import datetime, timezone
+    yta = build("youtubeAnalytics", "v2", credentials=creds)
+    end = date.today()
+    start = end - timedelta(days=days)
+    try:
+        resp = yta.reports().query(
+            ids="channel==MINE",
+            startDate=start.isoformat(), endDate=end.isoformat(),
+            metrics="views,estimatedMinutesWatched,subscribersGained",
+            dimensions="country", sort="-views", maxResults=50,
+        ).execute()
+    except Exception as e:
+        print(f"❌ Geography query failed: {str(e)[:300]}")
+        return {}
+    cols = [h["name"] for h in resp.get("columnHeaders", [])]
+    rows = [dict(zip(cols, r)) for r in resp.get("rows", [])]
+    tv = sum(int(r.get("views", 0)) for r in rows) or 1
+    tm = sum(int(r.get("estimatedMinutesWatched", 0)) for r in rows) or 1
+    out = {
+        "fetched_at": datetime.now(timezone.utc).isoformat(),
+        "days": days,
+        "total_views": tv,
+        "total_minutes": tm,
+        "countries": [
+            {"country": r.get("country", "??"),
+             "views": int(r.get("views", 0)),
+             "views_pct": round(int(r.get("views", 0)) / tv * 100, 1),
+             "minutes": int(r.get("estimatedMinutesWatched", 0)),
+             "minutes_pct": round(int(r.get("estimatedMinutesWatched", 0)) / tm * 100, 1),
+             "subs": int(r.get("subscribersGained", 0))}
+            for r in rows
+        ],
+    }
+    # One-line summary the report and the landing page key off.
+    top = out["countries"][0]["country"] if out["countries"] else "??"
+    india = next((c["views_pct"] for c in out["countries"] if c["country"] == "IN"), 0.0)
+    us_uk = sum(c["views_pct"] for c in out["countries"] if c["country"] in ("US", "GB", "CA", "AU"))
+    out["summary"] = {"top_country": top, "india_pct": india, "us_uk_ca_au_pct": round(us_uk, 1)}
+
+    GEO_FILE.parent.mkdir(parents=True, exist_ok=True)
+    GEO_FILE.write_text(json.dumps(out, indent=2), encoding="utf-8")
+
+    print(f"\n=== AUDIENCE GEOGRAPHY — last {days} days ===")
+    print(f"{'country':8}{'views':>8}{'%':>7}{'minutes':>9}{'%':>7}{'subs':>6}")
+    print("-" * 46)
+    for c in out["countries"][:12]:
+        print(f"{c['country']:8}{c['views']:>8,}{c['views_pct']:>6.1f}%"
+              f"{c['minutes']:>9,}{c['minutes_pct']:>6.1f}%{c['subs']:>6}")
+    print("-" * 46)
+    print(f"India {india:.1f}% of views · US+UK+CA+AU {us_uk:.1f}% · saved to {GEO_FILE.name}")
+    return out
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description="YOU — retention analytics")
     ap.add_argument("--days", type=int, default=30)
@@ -260,7 +328,12 @@ def main() -> int:
                     help="Record per-video hook retention into feedback/uploaded.json and exit")
     ap.add_argument("--refresh", action="store_true",
                     help="With --backfill: re-fetch videos already recorded")
+    ap.add_argument("--geo", action="store_true",
+                    help="Views/minutes by country -> analyzer/geo.json and exit")
     args = ap.parse_args()
+
+    if args.geo:
+        return 0 if geography(days=max(args.days, 90)) else 1
 
     if args.backfill:
         backfill_retention(days=max(args.days, 90), refresh=args.refresh)
