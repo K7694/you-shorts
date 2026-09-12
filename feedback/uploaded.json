@@ -9160,6 +9160,20 @@
       "description": "Why do plasma arcs glow and twist in air? The secret behind Tesla coils and lightning is still unsolved.\n\n▶ FULL DOCUMENTARY: The Unsolved Mysteries That Could Rewrite Physics\nhttps://youtube.com/watch?v=tOhlrlu7720\n\n📺 UNSOLVED — One unsolved mystery, every day.\nSubscribe for a new episode every day",
       "duration_secs": 36,
       "thumbnail": "https://i.ytimg.com/vi/eIf1h4iMkF8/hqdefault.jpg"
+    },
+    "retention": {
+      "awr_hook": 1.5486,
+      "rrp_hook": 0.5587,
+      "rrp_all": 0.6445,
+      "rrp_thirds": [
+        0.5126,
+        0.5577,
+        0.8557
+      ],
+      "hook_window_s": 3.0,
+      "duration_est_s": 39.4,
+      "points": 100,
+      "fetched_at": "2026-09-12T07:24:08.661982+00:00"
     }
   },
   {
@@ -9239,7 +9253,38 @@
     "visual_variant": "photos",
     "hook_score": 5,
     "word_count": 85,
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "RBmPx5p1hUs",
+      "title": "UNSOLVED #30 | 🔴 Red Sky Warning: The Untold Science Behind Stormy Sunsets",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-09-09T07:38:17Z",
+      "views": 96,
+      "likes": 2,
+      "comments": 1,
+      "engagement_rate": 3.125,
+      "views_per_day": 48,
+      "tags": [
+        "atmospheric mystery",
+        "curiosity",
+        "did you know",
+        "facts",
+        "light scattering",
+        "mindblown",
+        "physics",
+        "red sky",
+        "science",
+        "shorts",
+        "space",
+        "storm warning",
+        "universe",
+        "unsolved science"
+      ],
+      "description": "Why does the horizon blaze red moments before a storm? The answer may be a hidden alarm.\n\n▶ FULL DOCUMENTARY: The Unsolved Mysteries That Could Rewrite Physics\nhttps://youtube.com/watch?v=tOhlrlu7720\n\n📺 UNSOLVED — One unsolved mystery, every day.\nSubscribe for a new episode every day, plus a full de",
+      "duration_secs": 37,
+      "thumbnail": "https://i.ytimg.com/vi/RBmPx5p1hUs/hqdefault.jpg"
+    }
   },
   {
     "id": "B3uUzgyd36I",
@@ -9263,6 +9308,30 @@
     "visual_variant": "videos",
     "hook_score": 8,
     "word_count": 91,
+    "stats_fetched": false
+  },
+  {
+    "id": "Tn4xf4h7AXs",
+    "title": "UNSOLVED #31 | 🚗🕒 Why Crashes Make Time Freeze – The Brain’s Hidden Speed",
+    "uploaded_at": "2026-09-12T07:23:50.675496+00:00",
+    "hook": "Your brain hits pause the second metal meets the wall.",
+    "script": "Your brain hits pause the second metal meets the wall. In that instant, adrenaline spikes, the amygdala fires, and dopamine floods the brain, squeezing time and magnifying every feeling. A tiny burst of tachycardia forces the visual cortex to record frames at double speed, so a 0.2‑second impact feels like a lifetime. Yet scientists can’t agree if it’s pure neurochemistry or a hidden quantum‑like processing glitch in consciousness—our perception warps, but the exact mechanism remains a mystery.",
+    "topic": "Why time feels slower in a car crash",
+    "tags": [
+      "car crash",
+      "time perception",
+      "brain science",
+      "adrenaline",
+      "unsolved mystery"
+    ],
+    "affiliate_program": "",
+    "archetype": "unsolved_mystery",
+    "series": "UNSOLVED",
+    "episode": 31,
+    "voice": "en-US-ChristopherNeural",
+    "visual_variant": "videos",
+    "hook_score": 9,
+    "word_count": 77,
     "stats_fetched": false
   }
 ]
