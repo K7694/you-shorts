@@ -9284,6 +9284,20 @@
       "description": "Why does the horizon blaze red moments before a storm? The answer may be a hidden alarm.\n\n▶ FULL DOCUMENTARY: The Unsolved Mysteries That Could Rewrite Physics\nhttps://youtube.com/watch?v=tOhlrlu7720\n\n📺 UNSOLVED — One unsolved mystery, every day.\nSubscribe for a new episode every day, plus a full de",
       "duration_secs": 37,
       "thumbnail": "https://i.ytimg.com/vi/RBmPx5p1hUs/hqdefault.jpg"
+    },
+    "retention": {
+      "awr_hook": 1.0444,
+      "rrp_hook": 0.2407,
+      "rrp_all": 0.1505,
+      "rrp_thirds": [
+        0.1368,
+        0.0553,
+        0.2506
+      ],
+      "hook_window_s": 3.0,
+      "duration_est_s": 37.0,
+      "points": 100,
+      "fetched_at": "2026-09-12T09:01:11.551283+00:00"
     }
   },
   {
