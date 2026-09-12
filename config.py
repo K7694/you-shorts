@@ -253,6 +253,21 @@ CADENCE_TZ_OFFSET_HOURS = 5.5
 RENDER_ARCHIVE_ENABLED = True
 RENDER_ARCHIVE_REPO    = "K7694/you-shorts"
 
+# ── Milestones (2026-09-12, Phase 1.3) ────────────────────────────
+# The date each owner-flagged change went live. report.py starts watching
+# the matching falsifier (PLAN_2026_09_06.md F1-F9) the day a date is set,
+# splitting 48h cohorts into the 30 uploads before and the 30 after.
+# ISO date strings; None = not started. Set by hand when a phase ships.
+MILESTONES = {
+    "cron_shift":    "2026-09-12",  # crons pre-shifted; queue delay re-measured from here
+    "cadence_2x":    None,          # Phase 2 -> F1
+    "cta_on":        None,          # Phase 3 -> F2
+    "meta_live":     None,          # Phase 4 -> F6
+    "compilation_1": None,          # Phase 5 -> F5
+    "clone_launch":  None,          # Phase 6 -> F4
+    "kit_launch":    None,          # Phase 7 -> F3
+}
+
 # ── Retention instrumentation (2026-08-23) ───────────────────────
 # The hook was never measurable before this: views/likes say nothing about
 # whether the opening stopped the scroll. analytics.py --backfill records
