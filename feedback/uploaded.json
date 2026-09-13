@@ -9229,6 +9229,20 @@
       "description": "Discover how Einstein's theory hides in every turn of your GPS and why the universe still guards its true clock.\n\n▶ FULL DOCUMENTARY: The Unsolved Mysteries That Could Rewrite Physics\nhttps://youtube.com/watch?v=tOhlrlu7720\n\n📺 UNSOLVED — One unsolved mystery, every day.\nSubscribe for a new episode e",
       "duration_secs": 37,
       "thumbnail": "https://i.ytimg.com/vi/MVRZxQfxQ6c/hqdefault.jpg"
+    },
+    "retention": {
+      "awr_hook": 1.2527,
+      "rrp_hook": 0.5428,
+      "rrp_all": 0.6621,
+      "rrp_thirds": [
+        0.4926,
+        0.5531,
+        0.9317
+      ],
+      "hook_window_s": 3.0,
+      "duration_est_s": 39.0,
+      "points": 100,
+      "fetched_at": "2026-09-13T00:15:33.859599+00:00"
     }
   },
   {
@@ -9346,6 +9360,31 @@
     "visual_variant": "videos",
     "hook_score": 9,
     "word_count": 77,
+    "stats_fetched": false
+  },
+  {
+    "id": "vB7n2APhSjc",
+    "title": "UNSOLVED #32 | 🗿 The Silent Stone City That Vanished | Great Zimbabwe Mystery",
+    "uploaded_at": "2026-09-13T00:15:16.535384+00:00",
+    "hook": "A city of stone rises from the African savanna, built without mortar, and its architects vanished.",
+    "script": "A city of stone rises from the African savanna, built without mortar, and its architects vanished. Massive granite walls of Great Zimbabwe interlock like puzzle pieces, each block weighing up to 70 tons, yet no trace of quarries or iron tools remains. Archaeologists date the ruins to the 11th‑15th centuries, see trade beads from China, but no written record names the builders. Ideas range from local Shona kingdoms to distant colonies, yet none explain the massive stonework or its sudden desertion. Who raised this silent citadel, and why did they disappear without a trace?",
+    "topic": "The vanished builders of Great Zimbabwe",
+    "tags": [
+      "Great Zimbabwe",
+      "lost civilization",
+      "archaeology mystery",
+      "ancient engineering",
+      "unsolved history"
+    ],
+    "affiliate_program": "",
+    "archetype": "unsolved_mystery",
+    "series": "UNSOLVED",
+    "episode": 32,
+    "voice": "en-US-ChristopherNeural",
+    "visual_variant": "photos",
+    "hook_score": 6,
+    "word_count": 94,
+    "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-09/20260913_001326_unsolved_32_the_silent_stone_city_that_vanished_gr.mp4",
     "stats_fetched": false
   }
 ]
