@@ -1,10 +1,10 @@
-# YOU — Weekly Report · 2026-09-12 09:06 UTC
+# YOU — Weekly Report · 2026-09-13 05:39 UTC
 
 Read the **Falsifiers** table first. Everything else is context.
 
 ## Channel
-- **56 subs** · 51,531 views · 140 videos (lifetime)
-- last 30 d Shorts: **12,877 views** · 21 subs · **1.63 subs/1k**
+- **57 subs** · 51,650 views · 141 videos (lifetime)
+- last 30 d Shorts: **12,802 views** · 21 subs · **1.64 subs/1k**
 
 ## Shorts — views at 48 h (equal-age cohorts)
 | cohort | n | median | mean | ≥50 | max | window |
@@ -21,19 +21,19 @@ last 10 uploads: 09-01 **982** HOW IT WORKS · 09-02 **817** HOW IT WORKS · 09-
 - US 70.0% · PH 9.5% · IN 4.9% · GB 3.2% · DE 3.0%
 
 ## Retention (peer-relative, 0.50 = median comparable video)
-- recorded **82 / 168** eligible (≥72 h old)
-- last 30 recorded: opening 0.368 · middle **0.379** · final 0.59 · overall 0.448 (n=30)
+- recorded **83 / 168** eligible (≥72 h old)
+- last 30 recorded: opening 0.371 · middle **0.383** · final 0.602 · overall 0.454 (n=30)
 
 ## Long-form
-- 8 uploads · 30 d: 406 views · **11.3 watch-hours** (of 4,000)
-  - 2026-08-23 What the Universe Hides: Six Unsolved Mysteries Th
+- 9 uploads · 30 d: 408 views · **11.6 watch-hours** (of 4,000)
   - 2026-08-30 The Unsolved Mysteries That Could Rewrite Physics
   - 2026-09-06 The Unsolved Mysteries That Could Rewrite Physics
+  - 2026-09-13 What the Universe Hides: 6 Unsolved Mysteries That
 
 ## Pipeline
-- CI last 7: 09-12 ✅ (manual) · 09-12 ✅ · 09-11 ❌ failure · 09-10 ✅ · 09-09 ✅ · 09-08 ✅ · 09-07 ✅
-- scheduled start delay: no scheduled runs since the cron shift yet (measures from the day after `MILESTONES.cron_shift`)
-- render archive: **0 / 0** of records since the archive shipped have a URL
+- CI last 7: 09-13 ✅ · 09-12 ✅ (manual) · 09-12 ✅ · 09-11 ❌ failure · 09-10 ✅ · 09-09 ✅ · 09-08 ✅
+- scheduled start delay vs nominal cron: min 1h35 · median **1h35** · max 1h35
+- render archive: **1 / 1** of records since the archive shipped have a URL
 - LLM chain: groq → gemini → cerebras → openrouter (Cerebras 402 — billing; probe at session open)
 
 ## Falsifiers
@@ -43,7 +43,7 @@ last 10 uploads: 09-01 **982** HOW IT WORKS · 09-02 **817** HOW IT WORKS · 09-
 | F2 | CTA overlay does not repeat May | 30 videos post-overlay | — | not started |
 | F3 | The kit is sellable | 30 d post-launch | sales not tracked here | not started |
 | F4 | Clone reaches like the original | clone week 8 | other repo | not started |
-| F5 | Compilations get watched | after 3 monthly uploads | long-form 30d views 406 | not started |
+| F5 | Compilations get watched | after 3 monthly uploads | long-form 30d views 408 | not started |
 | F6 | Meta reach worth the engineering | day 60 | not live | not started |
 | F7 | Portfolio can become income | month 6 | cash not tracked here | manual |
 | F8 | No termination exposure | continuous | CI failures last 7: 1 | manual — check Studio for notices |
