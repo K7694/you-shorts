@@ -238,6 +238,15 @@ CRITIQUE_AND_REVISE = True
 # and stands down once this number is met, so a slot that failed (Sep 11:
 # apt timeout, day lost) gets a second chance for free. Raise to 2 for the
 # Phase 2 cadence test — same mechanism, nothing else changes.
+# ── Long-form pause (2026-09-14) ──────────────────────────────────
+# Paused on the owner's decision. 9 uploads, 5.6 public watch hours in a
+# year against the 4,000 needed, and the topic picker had started repeating
+# itself (two duplicate titles, now unlisted) - a channel-level policy risk.
+# False = longform.py exits immediately (the Sunday workflow still runs so
+# REPORT.md keeps generating), and Shorts stop linking to / promising a
+# Sunday documentary. Re-enable only with a fixed picker.
+LONGFORM_ENABLED = False
+
 MAX_UPLOADS_PER_DAY = 1
 # "Today" is counted in the channel's local day, not UTC. Crons are
 # pre-shifted for GitHub's ~4.5h queue delay and can execute on either

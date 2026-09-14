@@ -1045,6 +1045,8 @@ _LONGFORM_LOG = BASE_DIR / "feedback" / "longform.json"
 
 def _latest_longform() -> dict | None:
     """Most recent published long-form video, for the Shorts bridge."""
+    if not LONGFORM_ENABLED:
+        return None  # paused: never send Shorts viewers to a stale or duplicate documentary
     try:
         entries = json.loads(_LONGFORM_LOG.read_text(encoding="utf-8"))
     except Exception:
@@ -2905,8 +2907,8 @@ def create_video(topic: str = None, upload: bool = True) -> dict:
                     pass
                 if series:
                     parts.append(f"📺 {series} — {promise}\n"
-                                 f"Subscribe for a new episode every day, "
-                                 f"plus a full deep dive every Sunday.")
+                                 f"Subscribe for a new episode every day"
+                                 + (", plus a full deep dive every Sunday." if LONGFORM_ENABLED else "."))
             parts.append(" ".join(tags))
             return "\n\n".join(p for p in parts if p).strip()
 

@@ -529,7 +529,15 @@ def main() -> int:
     ap = argparse.ArgumentParser(description="YOU — long-form builder")
     ap.add_argument("--no-upload", action="store_true")
     ap.add_argument("--topic", default=None, help="override the auto-picked topic")
+    ap.add_argument("--force", action="store_true",
+                    help="build even while config.LONGFORM_ENABLED is False")
     args = ap.parse_args()
+
+    import config as _cfg
+    if not getattr(_cfg, "LONGFORM_ENABLED", True) and not args.force:
+        print("  Long-form is PAUSED (config.LONGFORM_ENABLED = False). Nothing built.")
+        print("  Pass --force to build anyway.")
+        return 0
 
     print("\n" + "=" * 52)
     print("  YOU — LONG-FORM BUILDER")
