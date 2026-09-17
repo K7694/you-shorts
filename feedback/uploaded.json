@@ -9615,7 +9615,38 @@
     "hook_score": 6,
     "word_count": 95,
     "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-09/20260915_005206_what_if_6_when_black_holes_kiss_earth.mp4",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "SoV_hEkRHT4",
+      "title": "WHAT IF #6 | 🌌 When Black Holes Kiss Earth 🌍",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-09-15T00:54:23Z",
+      "views": 421,
+      "likes": 12,
+      "comments": 0,
+      "engagement_rate": 2.85,
+      "views_per_day": 210,
+      "tags": [
+        "LIGO",
+        "black holes",
+        "cosmic ripples",
+        "curiosity",
+        "did you know",
+        "facts",
+        "gravitational waves",
+        "mindblown",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "space physics",
+        "universe"
+      ],
+      "description": "A black‑hole merger sent ripples that literally stretched our planet. Discover the cosmic tremor.\n\n📺 WHAT IF — Impossible scenarios, real physics.\nSubscribe for a new episode every day.\n\n#shorts #science #mindblown",
+      "duration_secs": 38,
+      "thumbnail": "https://i.ytimg.com/vi/SoV_hEkRHT4/hqdefault.jpg"
+    }
   },
   {
     "id": "Z0tdPyRI5Gg",
