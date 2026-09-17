@@ -9576,6 +9576,20 @@
       "description": "Discover the physics behind the eerie hum of sand dunes and why they only sing under perfect conditions.\n\n▶ FULL DOCUMENTARY: What the Universe Hides: 6 Unsolved Mysteries That Defy Science\nhttps://youtube.com/watch?v=HdUMJJS9ReA\n\n📺 HOW IT WORKS — The hidden mechanics of everyday things.\nSubscribe f",
       "duration_secs": 30,
       "thumbnail": "https://i.ytimg.com/vi/Uv02s2Y1wNE/hqdefault.jpg"
+    },
+    "retention": {
+      "awr_hook": 1.1951,
+      "rrp_hook": 0.4483,
+      "rrp_all": 0.4607,
+      "rrp_thirds": [
+        0.3259,
+        0.3522,
+        0.6915
+      ],
+      "hook_window_s": 3.0,
+      "duration_est_s": 37.8,
+      "points": 100,
+      "fetched_at": "2026-09-17T00:53:43.875520+00:00"
     }
   },
   {
@@ -9626,6 +9640,31 @@
     "hook_score": 7,
     "word_count": 84,
     "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-09/20260916_004503_unsolved_33_one_drop_stops_a_tornado_lab_mystery_r.mp4",
+    "stats_fetched": false
+  },
+  {
+    "id": "eOEowhaggyE",
+    "title": "UNSOLVED #34 | 🔍 The 7‑Fold Paper Mystery: Why You Can't Fold Past Seven!",
+    "uploaded_at": "2026-09-17T00:53:21.934682+00:00",
+    "hook": "You think you can fold paper forever? Think again – there’s a math limit!",
+    "script": "A hand slams a sheet, folds, folds, and the seventh crease snaps into place. The paper suddenly locks up, refusing any further bends no matter how hard you push. Each fold doubles the thickness, so after seven folds the stack is 128 layers thick—about the width of a thumb. The area you can grip shrinks exponentially, and the force required skyrockets beyond human strength. Yet no one has proved a universal law that forbids the eighth fold; some claim exotic paper or a hydraulic press could break it. The mystery remains: is the seven‑fold barrier a true physical law or just a practical illusion?",
+    "topic": "The 7‑Fold Paper Problem – why folding stops at seven",
+    "tags": [
+      "paper folding",
+      "physics mystery",
+      "exponential growth",
+      "unsolved science",
+      "mindblowing facts"
+    ],
+    "affiliate_program": "",
+    "archetype": "unsolved_mystery",
+    "series": "UNSOLVED",
+    "episode": 34,
+    "voice": "en-US-ChristopherNeural",
+    "visual_variant": "photos",
+    "hook_score": 8,
+    "word_count": 104,
+    "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-09/20260917_005125_unsolved_34_the_7fold_paper_mystery_why_you_cant_f.mp4",
     "stats_fetched": false
   }
 ]
