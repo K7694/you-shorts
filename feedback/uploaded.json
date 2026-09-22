@@ -9964,7 +9964,38 @@
     "hook_score": 5,
     "word_count": 91,
     "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-09/20260920_002059_how_it_works_15_floating_coffee_cup_the_hidden_pow.mp4",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "p5KN9sJGRDM",
+      "title": "HOW IT WORKS #15 | ☕️ Floating Coffee Cup – The Hidden Power of Magnets!",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-09-20T00:23:20Z",
+      "views": 167,
+      "likes": 1,
+      "comments": 0,
+      "engagement_rate": 0.599,
+      "views_per_day": 84,
+      "tags": [
+        "DIY science",
+        "curiosity",
+        "diamagnetism",
+        "did you know",
+        "facts",
+        "floating cup",
+        "magnetic levitation",
+        "mindblown",
+        "neodymium magnet",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "universe"
+      ],
+      "description": "A coffee cup levitates using diamagnetism. Learn the science and try it at home with a cheap magnet.\n\n📺 HOW IT WORKS — The hidden mechanics of everyday things.\nSubscribe for a new episode every day.\n\n#shorts #science #mindblown",
+      "duration_secs": 37,
+      "thumbnail": "https://i.ytimg.com/vi/p5KN9sJGRDM/hqdefault.jpg"
+    }
   },
   {
     "id": "kYbQqPNXY1c",
