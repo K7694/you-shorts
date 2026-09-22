@@ -9786,6 +9786,20 @@
       "description": "A single sheet of paper seems simple, until the seventh fold reveals a baffling limit. Is it physics or myth? #shorts\n\n📺 UNSOLVED — One unsolved mystery, every day.\nSubscribe for a new episode every day.\n\n#shorts #science #mindblown",
       "duration_secs": 41,
       "thumbnail": "https://i.ytimg.com/vi/eOEowhaggyE/hqdefault.jpg"
+    },
+    "retention": {
+      "awr_hook": 1.05,
+      "rrp_hook": 0.3587,
+      "rrp_all": 0.2316,
+      "rrp_thirds": [
+        0.1828,
+        0.0628,
+        0.4406
+      ],
+      "hook_window_s": 3.0,
+      "duration_est_s": 44.6,
+      "points": 100,
+      "fetched_at": "2026-09-22T01:08:02.532297+00:00"
     }
   },
   {
@@ -9911,6 +9925,20 @@
       "description": "What keeps a smoke ring intact for seconds? The hidden vortex physics you never saw.\n\n📺 UNSOLVED — One unsolved mystery, every day.\nSubscribe for a new episode every day.\n\n#shorts #science #mindblown",
       "duration_secs": 34,
       "thumbnail": "https://i.ytimg.com/vi/_Rla-DNe8PM/hqdefault.jpg"
+    },
+    "retention": {
+      "awr_hook": 1.3662,
+      "rrp_hook": 0.5386,
+      "rrp_all": 0.5794,
+      "rrp_thirds": [
+        0.5042,
+        0.4979,
+        0.7266
+      ],
+      "hook_window_s": 3.0,
+      "duration_est_s": 36.2,
+      "points": 100,
+      "fetched_at": "2026-09-22T01:08:02.896335+00:00"
     }
   },
   {
@@ -9961,6 +9989,31 @@
     "hook_score": 9,
     "word_count": 90,
     "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-09/20260921_002736_how_it_works_16_the_universes_first_photo_you_cant.mp4",
+    "stats_fetched": false
+  },
+  {
+    "id": "BzcwbcLih3Y",
+    "title": "UNSOLVED #37 | 🪶⚒️ Feather vs. Hammer in Space – The Unsolved Shock!",
+    "uploaded_at": "2026-09-22T01:07:43.382995+00:00",
+    "hook": "A feather shatters a hammer in the void of space.",
+    "script": "A feather shatters a hammer in the void of space. In a vacuum chamber we reverse Galileo’s feather‑and‑hammer drop—no air, no drag, just pure gravity. The hammer and feather accelerate identically, but when the feather strikes the sensor first, its tiny mass transfers momentum so fast it registers as a louder “smash” than the massive hammer’s slower impact. Scientists can measure the micro‑shock, yet why the feather’s hit feels more violent remains a paradox of perception versus physics, and what that reveals about how we measure force in a vacuum. The unanswered question: does emptiness amplify the lightest strike?",
+    "topic": "Why a feather can beat a hammer in a vacuum",
+    "tags": [
+      "feather",
+      "hammer",
+      "vacuum",
+      "physics",
+      "paradox"
+    ],
+    "affiliate_program": "",
+    "archetype": "unsolved_mystery",
+    "series": "UNSOLVED",
+    "episode": 37,
+    "voice": "en-US-ChristopherNeural",
+    "visual_variant": "videos",
+    "hook_score": 7,
+    "word_count": 99,
+    "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-09/20260922_010539_unsolved_37_feather_vs_hammer_in_space_the_unsolve.mp4",
     "stats_fetched": false
   }
 ]
