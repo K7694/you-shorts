@@ -9995,6 +9995,20 @@
       "description": "A coffee cup levitates using diamagnetism. Learn the science and try it at home with a cheap magnet.\n\n📺 HOW IT WORKS — The hidden mechanics of everyday things.\nSubscribe for a new episode every day.\n\n#shorts #science #mindblown",
       "duration_secs": 37,
       "thumbnail": "https://i.ytimg.com/vi/p5KN9sJGRDM/hqdefault.jpg"
+    },
+    "retention": {
+      "awr_hook": 1.0153,
+      "rrp_hook": 0.2008,
+      "rrp_all": 0.0984,
+      "rrp_thirds": [
+        0.1201,
+        0.0541,
+        0.117
+      ],
+      "hook_window_s": 3.0,
+      "duration_est_s": 39.4,
+      "points": 100,
+      "fetched_at": "2026-09-23T00:55:47.770576+00:00"
     }
   },
   {
@@ -10045,6 +10059,31 @@
     "hook_score": 7,
     "word_count": 99,
     "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-09/20260922_010539_unsolved_37_feather_vs_hammer_in_space_the_unsolve.mp4",
+    "stats_fetched": false
+  },
+  {
+    "id": "K46F9rq_SLc",
+    "title": "UNSOLVED #38 | ⚡️ Laser vs. Steel: The Flash That Cuts Metal 🔥",
+    "uploaded_at": "2026-09-23T00:55:32.455960+00:00",
+    "hook": "A bolt of pure light can cleave a steel rod in the blink of an eye.",
+    "script": "A bolt of pure light can cleave a steel rod in the blink of an eye. The pulse lasts less than a nanosecond, yet its intensity vaporizes metal faster than any saw, creating a super‑heated plasma that expands, blasting the surrounding material apart. Photons carry momentum, but the real punch comes from the rapid ionisation of atoms, turning solid iron into a cloud of charged particles that explode outward. Even after measuring the cut, scientists still argue how the pulse can pack enough energy to turn a laser pointer into a tiny plasma cannon in one flash.",
+    "topic": "Laser slicing steel in a single flash",
+    "tags": [
+      "laser",
+      "plasma",
+      "steel cutting",
+      "unsolved mystery",
+      "physics"
+    ],
+    "affiliate_program": "",
+    "archetype": "unsolved_mystery",
+    "series": "UNSOLVED",
+    "episode": 38,
+    "voice": "en-US-ChristopherNeural",
+    "visual_variant": "photos",
+    "hook_score": 7,
+    "word_count": 97,
+    "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-09/20260923_005353_unsolved_38_laser_vs_steel_the_flash_that_cuts_met.mp4",
     "stats_fetched": false
   }
 ]
