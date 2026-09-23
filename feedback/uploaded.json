@@ -10034,7 +10034,36 @@
     "hook_score": 9,
     "word_count": 90,
     "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-09/20260921_002736_how_it_works_16_the_universes_first_photo_you_cant.mp4",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "kYbQqPNXY1c",
+      "title": "HOW IT WORKS #16 | 🔭 The Universe’s First Photo You Can’t See 🌌",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-09-21T00:29:35Z",
+      "views": 700,
+      "likes": 12,
+      "comments": 0,
+      "engagement_rate": 1.714,
+      "views_per_day": 350,
+      "tags": [
+        "BigBang",
+        "CMB",
+        "cosmology",
+        "curiosity",
+        "did you know",
+        "facts",
+        "mindblown",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "universe"
+      ],
+      "description": "Discover why the Cosmic Microwave Background is the invisible baby picture of the Big Bang.\n\n📺 HOW IT WORKS — The hidden mechanics of everyday things.\nSubscribe for a new episode every day.\n\n#shorts #science #mindblown",
+      "duration_secs": 34,
+      "thumbnail": "https://i.ytimg.com/vi/kYbQqPNXY1c/hqdefault.jpg"
+    }
   },
   {
     "id": "BzcwbcLih3Y",
