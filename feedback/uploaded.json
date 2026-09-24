@@ -10102,7 +10102,37 @@
     "hook_score": 7,
     "word_count": 99,
     "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-09/20260922_010539_unsolved_37_feather_vs_hammer_in_space_the_unsolve.mp4",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "BzcwbcLih3Y",
+      "title": "UNSOLVED #37 | 🪶⚒️ Feather vs. Hammer in Space – The Unsolved Shock!",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-09-22T01:08:11Z",
+      "views": 613,
+      "likes": 2,
+      "comments": 0,
+      "engagement_rate": 0.326,
+      "views_per_day": 306,
+      "tags": [
+        "curiosity",
+        "did you know",
+        "facts",
+        "feather",
+        "hammer",
+        "mindblown",
+        "paradox",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "universe",
+        "vacuum"
+      ],
+      "description": "A feather out‑smashes a hammer in a vacuum. The mystery behind the impact will blow your mind.\n\n📺 UNSOLVED — One unsolved mystery, every day.\nSubscribe for a new episode every day.\n\n#shorts #science #mindblown",
+      "duration_secs": 40,
+      "thumbnail": "https://i.ytimg.com/vi/BzcwbcLih3Y/hqdefault.jpg"
+    }
   },
   {
     "id": "K46F9rq_SLc",
