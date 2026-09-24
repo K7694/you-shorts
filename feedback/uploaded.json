@@ -10063,6 +10063,20 @@
       "description": "Discover why the Cosmic Microwave Background is the invisible baby picture of the Big Bang.\n\n📺 HOW IT WORKS — The hidden mechanics of everyday things.\nSubscribe for a new episode every day.\n\n#shorts #science #mindblown",
       "duration_secs": 34,
       "thumbnail": "https://i.ytimg.com/vi/kYbQqPNXY1c/hqdefault.jpg"
+    },
+    "retention": {
+      "awr_hook": 1.1597,
+      "rrp_hook": 0.4333,
+      "rrp_all": 0.5024,
+      "rrp_thirds": [
+        0.3662,
+        0.4378,
+        0.693
+      ],
+      "hook_window_s": 3.0,
+      "duration_est_s": 39.0,
+      "points": 100,
+      "fetched_at": "2026-09-24T00:53:45.229625+00:00"
     }
   },
   {
@@ -10113,6 +10127,31 @@
     "hook_score": 7,
     "word_count": 97,
     "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-09/20260923_005353_unsolved_38_laser_vs_steel_the_flash_that_cuts_met.mp4",
+    "stats_fetched": false
+  },
+  {
+    "id": "JVgRM0up_qg",
+    "title": "UNSOLVED #39 | 🔫💧 When a Bullet Turns Water Into a Bubble…",
+    "uploaded_at": "2026-09-24T00:53:20.237104+00:00",
+    "hook": "A bullet hits water and creates a perfect sphere in a microsecond.",
+    "script": "A bullet strikes a tank of water at Mach‑speed, and in a flash the liquid erupts into a flawless, glowing bubble that expands faster than a hummingbird's wingbeat. The impact creates a shock wave that drives pressure below the vapor pressure of water, instantaneously boiling a tiny pocket into steam—yet the bubble's size, shape, and longevity defy every textbook model. Even ultra‑slow‑motion footage can’t capture how shock, tensile stress, and micro‑cavities dance together. Did you know naval sonar pulses rely on these same fleeting cavities, yet we still can't predict them with certainty?",
+    "topic": "Bullet‑induced cavitation bubbles in water",
+    "tags": [
+      "bullet physics",
+      "cavitation",
+      "fluid dynamics",
+      "naval sonar",
+      "unsolved science"
+    ],
+    "affiliate_program": "",
+    "archetype": "unsolved_mystery",
+    "series": "UNSOLVED",
+    "episode": 39,
+    "voice": "en-US-ChristopherNeural",
+    "visual_variant": "videos",
+    "hook_score": 6,
+    "word_count": 93,
+    "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-09/20260924_005035_unsolved_39_when_a_bullet_turns_water_into_a_bubbl.mp4",
     "stats_fetched": false
   }
 ]
