@@ -10327,6 +10327,20 @@
       "description": "Discover why the Northern Lights sometimes hiss and crackle—science behind the hidden sound.\n\n📺 HOW IT WORKS — The hidden mechanics of everyday things.\nSubscribe for a new episode every day.\n\n#shorts #science #mindblown",
       "duration_secs": 34,
       "thumbnail": "https://i.ytimg.com/vi/AuF5ouuFTkY/hqdefault.jpg"
+    },
+    "retention": {
+      "awr_hook": 1.3408,
+      "rrp_hook": 0.5359,
+      "rrp_all": 0.6021,
+      "rrp_thirds": [
+        0.4718,
+        0.5182,
+        0.8081
+      ],
+      "hook_window_s": 3.0,
+      "duration_est_s": 38.6,
+      "points": 100,
+      "fetched_at": "2026-09-28T01:09:43.700392+00:00"
     }
   },
   {
@@ -10377,6 +10391,31 @@
     "hook_score": 7,
     "word_count": 100,
     "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-09/20260927_005014_unsolved_40_teslas_secret_death_ray_fact_or_fictio.mp4",
+    "stats_fetched": false
+  },
+  {
+    "id": "wOs27J5V80k",
+    "title": "UNSOLVED #41 | 🔊 Whisper on the Moon? The Silent Secret NASA Missed",
+    "uploaded_at": "2026-09-28T01:09:23.009793+00:00",
+    "hook": "A whisper on the Moon could travel farther than you think.",
+    "script": "A barren, silent plain stretches under a black sky, dust swirling in a gentle wind that never reaches you. A lone breath pressed into the dusty regolith can't travel through air, yet the ground shivers with its tremor. On Earth, sound needs a medium; on the Moon it would become a seismic wave, spreading like a ripple through rock and dust. NASA left seismometers that recorded moonquakes, yet they never caught a human voice. Does the lunar surface hide a hidden pathway for whispers, or is the silence absolute?",
+    "topic": "Could a whisper be heard on the Moon?",
+    "tags": [
+      "Moon",
+      "lunar",
+      "seismic",
+      "NASA",
+      "unsolved"
+    ],
+    "affiliate_program": "",
+    "archetype": "unsolved_mystery",
+    "series": "UNSOLVED",
+    "episode": 41,
+    "voice": "en-US-ChristopherNeural",
+    "visual_variant": "videos",
+    "hook_score": 8,
+    "word_count": 89,
+    "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-09/20260928_010726_unsolved_41_whisper_on_the_moon_the_silent_secret_.mp4",
     "stats_fetched": false
   }
 ]
