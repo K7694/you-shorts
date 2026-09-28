@@ -10366,7 +10366,38 @@
     "hook_score": 9,
     "word_count": 91,
     "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-09/20260926_005017_how_it_works_18_why_your_recorded_voice_makes_you_.mp4",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "wKqJL4x3ALQ",
+      "title": "HOW IT WORKS #18 | 👂 Why Your Recorded Voice Makes You Cringe 🤯",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-09-26T00:52:16Z",
+      "views": 1004,
+      "likes": 9,
+      "comments": 0,
+      "engagement_rate": 0.896,
+      "views_per_day": 502,
+      "tags": [
+        "brain",
+        "cognitive bias",
+        "curiosity",
+        "did you know",
+        "facts",
+        "mindblown",
+        "physics",
+        "psychology",
+        "science",
+        "self awareness",
+        "shorts",
+        "space",
+        "universe",
+        "voice perception"
+      ],
+      "description": "Discover the hidden brain trick that makes your own voice sound terrible—and why it matters.\n\n📺 HOW IT WORKS — The hidden mechanics of everyday things.\nSubscribe for a new episode every day.\n\n#shorts #science #mindblown",
+      "duration_secs": 34,
+      "thumbnail": "https://i.ytimg.com/vi/wKqJL4x3ALQ/hqdefault.jpg"
+    }
   },
   {
     "id": "hJuSwx0s4I8",
