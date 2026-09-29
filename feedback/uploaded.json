@@ -10397,6 +10397,20 @@
       "description": "Discover the hidden brain trick that makes your own voice sound terrible—and why it matters.\n\n📺 HOW IT WORKS — The hidden mechanics of everyday things.\nSubscribe for a new episode every day.\n\n#shorts #science #mindblown",
       "duration_secs": 34,
       "thumbnail": "https://i.ytimg.com/vi/wKqJL4x3ALQ/hqdefault.jpg"
+    },
+    "retention": {
+      "awr_hook": 1.0843,
+      "rrp_hook": 0.3086,
+      "rrp_all": 0.3161,
+      "rrp_thirds": [
+        0.2091,
+        0.2149,
+        0.5111
+      ],
+      "hook_window_s": 3.0,
+      "duration_est_s": 39.4,
+      "points": 100,
+      "fetched_at": "2026-09-29T02:18:15.242816+00:00"
     }
   },
   {
@@ -10447,6 +10461,31 @@
     "hook_score": 8,
     "word_count": 89,
     "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-09/20260928_010726_unsolved_41_whisper_on_the_moon_the_silent_secret_.mp4",
+    "stats_fetched": false
+  },
+  {
+    "id": "tS1UOywxp3M",
+    "title": "HOW IT WORKS #19 | 🚄 How Maglev Trains Defy Gravity (The Real Secret)",
+    "uploaded_at": "2026-09-29T02:17:46.836492+00:00",
+    "hook": "A train hovers above the rails, never touching the track.",
+    "script": "A train hovers above the rails, never touching the track. Inside its belly, niobium‑tin coils are dunked in liquid nitrogen, cooling them to –269 °C until they become superconductors. When a powerful electric current flows, the coils generate a magnetic field that repels the specially designed aluminum rails, creating a cushion of invisible force. Sensors constantly adjust the current, keeping the gap at a few millimetres and propelling the train forward at breakneck speed. That invisible cushion is why the ride feels like gliding on air.",
+    "topic": "How magnetic levitation trains truly float",
+    "tags": [
+      "maglev",
+      "levitation",
+      "superconductors",
+      "train technology",
+      "physics"
+    ],
+    "affiliate_program": "",
+    "archetype": "how_does_it_work",
+    "series": "HOW IT WORKS",
+    "episode": 19,
+    "voice": "en-US-BrianMultilingualNeural",
+    "visual_variant": "photos",
+    "hook_score": 7,
+    "word_count": 86,
+    "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-09/20260929_021537_how_it_works_19_how_maglev_trains_defy_gravity_the.mp4",
     "stats_fetched": false
   }
 ]
