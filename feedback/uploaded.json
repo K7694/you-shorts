@@ -10436,7 +10436,38 @@
     "hook_score": 7,
     "word_count": 100,
     "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-09/20260927_005014_unsolved_40_teslas_secret_death_ray_fact_or_fictio.mp4",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "hJuSwx0s4I8",
+      "title": "UNSOLVED #40 | ⚡ Tesla's Secret Death Ray – Fact or Fiction?",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-09-27T00:52:18Z",
+      "views": 248,
+      "likes": 2,
+      "comments": 0,
+      "engagement_rate": 0.806,
+      "views_per_day": 124,
+      "tags": [
+        "Tesla",
+        "curiosity",
+        "death ray",
+        "did you know",
+        "facts",
+        "history",
+        "mindblown",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "technology",
+        "universe",
+        "unsolved mystery"
+      ],
+      "description": "Did Nikola Tesla truly create a weapon that could vaporize targets from a mile away? The mystery endures.\n\n📺 UNSOLVED — One unsolved mystery, every day.\nSubscribe for a new episode every day.\n\n#shorts #science #mindblown",
+      "duration_secs": 42,
+      "thumbnail": "https://i.ytimg.com/vi/hJuSwx0s4I8/hqdefault.jpg"
+    }
   },
   {
     "id": "wOs27J5V80k",
