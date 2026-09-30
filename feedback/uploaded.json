@@ -10467,6 +10467,20 @@
       "description": "Did Nikola Tesla truly create a weapon that could vaporize targets from a mile away? The mystery endures.\n\n📺 UNSOLVED — One unsolved mystery, every day.\nSubscribe for a new episode every day.\n\n#shorts #science #mindblown",
       "duration_secs": 42,
       "thumbnail": "https://i.ytimg.com/vi/hJuSwx0s4I8/hqdefault.jpg"
+    },
+    "retention": {
+      "awr_hook": 1.1855,
+      "rrp_hook": 0.4807,
+      "rrp_all": 0.489,
+      "rrp_thirds": [
+        0.3518,
+        0.3925,
+        0.7126
+      ],
+      "hook_window_s": 3.0,
+      "duration_est_s": 43.0,
+      "points": 100,
+      "fetched_at": "2026-09-30T01:32:13.680758+00:00"
     }
   },
   {
@@ -10517,6 +10531,31 @@
     "hook_score": 7,
     "word_count": 86,
     "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-09/20260929_021537_how_it_works_19_how_maglev_trains_defy_gravity_the.mp4",
+    "stats_fetched": false
+  },
+  {
+    "id": "aiz-lYWfB4w",
+    "title": "UNSOLVED #42 | 🤯 The Brain’s Unsolved Time Loop: Why Déjà Vu Haunts Us",
+    "uploaded_at": "2026-09-30T01:31:44.048677+00:00",
+    "hook": "You’ve felt it—walking into a room, convinced you’ve lived this moment before, yet it never occurred.",
+    "script": "That fleeting illusion, a brain glitch that convinces you a brand‑new experience is a recycled memory, has haunted scientists for centuries; neurologists recorded it in patients, pilots report it mid‑flight, and strangers share identical moments on strangers’ forums. Scientists have proposed everything from misfiring temporal‑lobe circuits to hidden memory traces, yet every test only reproduces the feeling, never the cause, and brain scans show no consistent pattern. As we stare into the mirror of our own minds, the question remains: what hidden mechanism tricks consciousness into replaying a future that never existed?",
+    "topic": "The Unexplained Mystery of Déjà Vu",
+    "tags": [
+      "déjà vu",
+      "psychology mystery",
+      "brain glitch",
+      "consciousness",
+      "unsolved science"
+    ],
+    "affiliate_program": "",
+    "archetype": "unsolved_mystery",
+    "series": "UNSOLVED",
+    "episode": 42,
+    "voice": "en-US-ChristopherNeural",
+    "visual_variant": "videos",
+    "hook_score": 7,
+    "word_count": 92,
+    "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-09/20260930_012951_unsolved_42_the_brains_unsolved_time_loop_why_dj_v.mp4",
     "stats_fetched": false
   }
 ]
