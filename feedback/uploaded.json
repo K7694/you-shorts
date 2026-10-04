@@ -10732,6 +10732,20 @@
       "description": "Watch a skill snap into place and discover the unsolved mystery of ultra‑fast brain plasticity.\n\n📺 UNSOLVED — One unsolved mystery, every day.\nSubscribe for a new episode every day.\n\n#shorts #science #mindblown",
       "duration_secs": 34,
       "thumbnail": "https://i.ytimg.com/vi/UG95xSryLrM/hqdefault.jpg"
+    },
+    "retention": {
+      "awr_hook": 1.2315,
+      "rrp_hook": 0.4862,
+      "rrp_all": 0.5584,
+      "rrp_thirds": [
+        0.4539,
+        0.4954,
+        0.7168
+      ],
+      "hook_window_s": 3.0,
+      "duration_est_s": 37.0,
+      "points": 100,
+      "fetched_at": "2026-10-04T02:00:24.149246+00:00"
     }
   },
   {
@@ -10782,6 +10796,31 @@
     "hook_score": 6,
     "word_count": 86,
     "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-10/20261003_012306_how_it_works_21_the_atom_that_rules_every_clock_on.mp4",
+    "stats_fetched": false
+  },
+  {
+    "id": "heynkCMDCms",
+    "title": "MIND BENDER #5 | 🪱 The Male Anglerfish That Lives Inside Her 😱",
+    "uploaded_at": "2026-10-04T02:00:03.903492+00:00",
+    "hook": "A male anglerfish lives inside a female's stomach for life.",
+    "script": "A male anglerfish lives inside a female's stomach for life. In the abyss, the tiny male, barely a centimeter, finds a mate, bites her, and his jaws fuse, turning his body into a blood‑draining organ that supplies sperm whenever she spawns. He sheds his eyes, stomach, and brain, turning into a mere sperm‑producing appendage. Meanwhile the female glows with a bioluminescent lure, hunting prey the size of a shark, while her husband watches from within, never leaving her side. The ultimate partnership is a literal body‑snatcher.",
+    "topic": "Parasitic male deep‑sea anglerfish",
+    "tags": [
+      "anglerfish",
+      "deep sea",
+      "parasitic male",
+      "ocean oddities",
+      "biology"
+    ],
+    "affiliate_program": "",
+    "archetype": "mind_blowing_fact",
+    "series": "MIND BENDER",
+    "episode": 5,
+    "voice": "en-US-AndrewMultilingualNeural",
+    "visual_variant": "videos",
+    "hook_score": 6,
+    "word_count": 86,
+    "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-10/20261004_015753_mind_bender_5_the_male_anglerfish_that_lives_insid.mp4",
     "stats_fetched": false
   }
 ]
