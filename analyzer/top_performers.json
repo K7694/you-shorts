@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-03T07:02:18.628238",
+  "updated": "2026-10-04T07:21:34.286943",
   "performers": [
     {
       "id": "IuMAB2-l_lU",
@@ -24,6 +24,17 @@
       "performance_score": 650.50128
     },
     {
+      "id": "HZfKVk5lx6w",
+      "title": "HOW IT WORKS #20 | 🔭 Gold Mirror Reveals the Universe’s First Light!",
+      "hook": "A 20‑kilogram gold mirror peers back 13 billion years.",
+      "script": "A 20‑kilogram gold mirror peers back 13 billion years. JWST’s 18 hexagonal segments are coated in a thin layer of gold, turning invisible infrared photons into bright reflections. The reflected light races through a chilled instrument suite to detectors that turn ancient heat signatures into images. Each photon carries the universe’s earliest glow, stretched by expansion into the infrared we can now capture. A crystal‑clear snapshot of the cosmos when it was only a few hundred million years old, the baby picture of everything we see today.",
+      "topic": "James Webb Telescope's gold-coated mirror and early galaxies",
+      "views": 1158,
+      "engagement_rate": 1.382,
+      "views_per_day": 579,
+      "performance_score": 587.0017799999999
+    },
+    {
       "id": "NTnrH-edhAU",
       "title": "🔢 The Collatz Enigma",
       "hook": "Multiply by 3 and add 1",
@@ -44,17 +55,6 @@
       "engagement_rate": 0.642,
       "views_per_day": 545,
       "performance_score": 548.4989
-    },
-    {
-      "id": "II_RLe12oxg",
-      "title": "UNSOLVED #5 | 🌎 Birds' Hidden Compass",
-      "hook": "Birds migrate thousands of miles with a hidden compass",
-      "script": "Birds migrate thousands of miles with a hidden compass. Scientists have observed that some birds can detect the Earth's magnetic field, but the exact mechanism remains unknown. Research suggests that quantum coherence might play a role, allowing birds to sense the magnetic field and navigate with incredible precision. But how do they achieve this? Birds migrate thousands of miles with a hidden compass",
-      "topic": "Quantum Coherence in Bird Migration",
-      "views": 1085,
-      "engagement_rate": 0.553,
-      "views_per_day": 542,
-      "performance_score": 544.99726
     }
   ]
 }

@@ -10771,7 +10771,38 @@
     "hook_score": 9,
     "word_count": 87,
     "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-10/20261002_014807_how_it_works_20_gold_mirror_reveals_the_universes_.mp4",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "HZfKVk5lx6w",
+      "title": "HOW IT WORKS #20 | 🔭 Gold Mirror Reveals the Universe’s First Light!",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-10-02T01:50:25Z",
+      "views": 1158,
+      "likes": 16,
+      "comments": 0,
+      "engagement_rate": 1.382,
+      "views_per_day": 579,
+      "tags": [
+        "Early Galaxies",
+        "Gold Mirror",
+        "Infrared Astronomy",
+        "James Webb Telescope",
+        "Space Science",
+        "curiosity",
+        "did you know",
+        "facts",
+        "mindblown",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "universe"
+      ],
+      "description": "How JWST’s gold‑coated mirror lets us see galaxies born 13 billion years ago.\n\n📺 HOW IT WORKS — The hidden mechanics of everyday things.\nSubscribe for a new episode every day.\n\n#shorts #science #mindblown",
+      "duration_secs": 33,
+      "thumbnail": "https://i.ytimg.com/vi/HZfKVk5lx6w/hqdefault.jpg"
+    }
   },
   {
     "id": "q-RIY0moC5Q",
