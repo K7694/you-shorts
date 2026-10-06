@@ -10871,6 +10871,20 @@
       "description": "Discover how a single cesium atom defines the second and synchronizes the world.\n\n📺 HOW IT WORKS — The hidden mechanics of everyday things.\nSubscribe for a new episode every day.\n\n#shorts #science #mindblown",
       "duration_secs": 38,
       "thumbnail": "https://i.ytimg.com/vi/q-RIY0moC5Q/hqdefault.jpg"
+    },
+    "retention": {
+      "awr_hook": 1.1535,
+      "rrp_hook": 0.4264,
+      "rrp_all": 0.4377,
+      "rrp_thirds": [
+        0.323,
+        0.3259,
+        0.6552
+      ],
+      "hook_window_s": 3.0,
+      "duration_est_s": 37.4,
+      "points": 100,
+      "fetched_at": "2026-10-06T02:31:41.396047+00:00"
     }
   },
   {
@@ -10921,6 +10935,31 @@
     "hook_score": 8,
     "word_count": 77,
     "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-10/20261005_011252_unsolved_44_the_vtol_flying_saucer_that_disappeare.mp4",
+    "stats_fetched": false
+  },
+  {
+    "id": "9gPbz0Zr5KM",
+    "title": "WHAT IF #7 | ✈️ Tiny Donut Tires: The Secret That Stops Runways From Melting 🔥",
+    "uploaded_at": "2026-10-06T02:31:21.928725+00:00",
+    "hook": "Airplane tires look like tiny donuts, but one mis‑sized wheel could melt the runway.",
+    "script": "When a 747 slams onto the strip, each tire must soak up the energy of a 300‑ton beast in a split second; a single inch of extra rubber would double the contact patch, turning the tire into a heat‑sponge that boils air inside and boils the tarmac. First, the tire’s pressure—up to 200 psi—creates a tiny, rigid sphere that concentrates force into a microscopic area, preventing the aircraft’s weight from flattening the wheel. The thin tread lets the tire compress a few millimetres, turning the aircraft’s kinetic energy into heat that escapes before the hub overheats. Third, the compact size limits the volume of air, so any excess heat bursts out as steam, keeping the runway from turning into a molten slab. The result: a donut‑shaped miracle that lets massive jets land safely, time after time.",
+    "topic": "Why airplane tires are tiny – physics of landing shock",
+    "tags": [
+      "airplane tires",
+      "physics",
+      "landing gear",
+      "aviation",
+      "shock absorption"
+    ],
+    "affiliate_program": "",
+    "archetype": "what_if",
+    "series": "WHAT IF",
+    "episode": 7,
+    "voice": "en-GB-RyanNeural",
+    "visual_variant": "videos",
+    "hook_score": 6,
+    "word_count": 136,
+    "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-10/20261006_022853_what_if_7_tiny_donut_tires_the_secret_that_stops_r.mp4",
     "stats_fetched": false
   }
 ]
