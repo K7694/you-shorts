@@ -11011,6 +11011,20 @@
       "description": "The 1963 Hiller X‑18 lifted off and then vanished. What really happened?\n\n📺 UNSOLVED — One unsolved mystery, every day.\nSubscribe for a new episode every day.\n\n#shorts #science #mindblown",
       "duration_secs": 35,
       "thumbnail": "https://i.ytimg.com/vi/BSuwybwAfk0/hqdefault.jpg"
+    },
+    "retention": {
+      "awr_hook": 1.2446,
+      "rrp_hook": 0.4911,
+      "rrp_all": 0.5372,
+      "rrp_thirds": [
+        0.42,
+        0.4386,
+        0.7433
+      ],
+      "hook_window_s": 3.0,
+      "duration_est_s": 33.8,
+      "points": 100,
+      "fetched_at": "2026-10-08T02:17:58.440753+00:00"
     }
   },
   {
@@ -11061,6 +11075,31 @@
     "hook_score": 6,
     "word_count": 107,
     "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-10/20261007_014644_how_it_works_22_wormhole_timetravel_science_vs_sci.mp4",
+    "stats_fetched": false
+  },
+  {
+    "id": "6YC1agfbOGI",
+    "title": "MIND BENDER #6 | 💥 Neutron Star Crushes Everest Faster Than You Blink!",
+    "uploaded_at": "2026-10-08T02:17:35.681019+00:00",
+    "hook": "A single neutron star could flatten Everest in the time it takes you to blink.",
+    "script": "A single neutron star could flatten Everest in the time it takes you to blink. Its core crams a teaspoon of matter into a billion tons, a density of 10^18 kg/m³—so dense an atom would fill a grain of sand. Gravity at its surface is a trillion times Earth’s, so the pressure at the star’s edge reaches 10^34 pascals. Drop a mountain onto that surface and the crushing force vaporizes rock faster than light can travel across a human hand. That's more power than all of humanity’s nukes in a single heartbeat.",
+    "topic": "Neutron star crushing a mountain instantly",
+    "tags": [
+      "neutron star",
+      "mountain",
+      "space physics",
+      "extreme density",
+      "mindblowing facts"
+    ],
+    "affiliate_program": "",
+    "archetype": "mind_blowing_fact",
+    "series": "MIND BENDER",
+    "episode": 6,
+    "voice": "en-US-AndrewMultilingualNeural",
+    "visual_variant": "videos",
+    "hook_score": 9,
+    "word_count": 92,
+    "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-10/20261008_021425_mind_bender_6_neutron_star_crushes_everest_faster_.mp4",
     "stats_fetched": false
   }
 ]
