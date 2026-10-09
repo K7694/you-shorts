@@ -11080,6 +11080,20 @@
       "description": "Discover why aircraft wheels are tiny and how they prevent runways from turning into lava.\n\n📺 WHAT IF — Impossible scenarios, real physics.\nSubscribe for a new episode every day.\n\n#shorts #science #mindblown",
       "duration_secs": 50,
       "thumbnail": "https://i.ytimg.com/vi/9gPbz0Zr5KM/hqdefault.jpg"
+    },
+    "retention": {
+      "awr_hook": 1.1495,
+      "rrp_hook": 0.45,
+      "rrp_all": 0.4987,
+      "rrp_thirds": [
+        0.3671,
+        0.4517,
+        0.67
+      ],
+      "hook_window_s": 3.0,
+      "duration_est_s": 57.4,
+      "points": 100,
+      "fetched_at": "2026-10-09T02:33:32.476055+00:00"
     }
   },
   {
@@ -11130,6 +11144,31 @@
     "hook_score": 9,
     "word_count": 92,
     "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-10/20261008_021425_mind_bender_6_neutron_star_crushes_everest_faster_.mp4",
+    "stats_fetched": false
+  },
+  {
+    "id": "gb7W37Zwuj0",
+    "title": "MIND BENDER #7 | 🌙 The Desert's Secret Night Song Revealed!",
+    "uploaded_at": "2026-10-09T02:33:15.622915+00:00",
+    "hook": "The desert can hum like a ghostly choir after sundown.",
+    "script": "When the wind slides over the dunes of Qatar or Peru, millions of sand grains collide at just the right speed, creating a collective vibration that rises through the night like a low‑pitched cello; the secret is the sand’s uniform grain size—about 200 microns—and the steady breeze of 5‑15 m/s, which lets the grains lock together and oscillate as one resonant surface, much like a violin string forced to sing by the breath of the desert, turning silence into an eerie, audible tide.",
+    "topic": "Why desert dunes sing at night",
+    "tags": [
+      "sand dunes",
+      "acoustic resonance",
+      "desert physics",
+      "nature sounds",
+      "science facts"
+    ],
+    "affiliate_program": "",
+    "archetype": "mind_blowing_fact",
+    "series": "MIND BENDER",
+    "episode": 7,
+    "voice": "en-US-AndrewMultilingualNeural",
+    "visual_variant": "photos",
+    "hook_score": 6,
+    "word_count": 83,
+    "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-10/20261009_023135_mind_bender_7_the_deserts_secret_night_song_reveal.mp4",
     "stats_fetched": false
   }
 ]
