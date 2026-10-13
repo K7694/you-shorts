@@ -11385,7 +11385,37 @@
     "hook_score": 10,
     "word_count": 81,
     "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-10/20261011_011309_mind_bender_8_your_memories_are_not_real_they_chan.mp4",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "1VUtS78Ey_s",
+      "title": "MIND BENDER #8 | 🧠 Your Memories ARE NOT Real – They Change Every Time You Recall Them!",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-10-11T01:15:35Z",
+      "views": 119,
+      "likes": 3,
+      "comments": 0,
+      "engagement_rate": 2.521,
+      "views_per_day": 60,
+      "tags": [
+        "brain",
+        "curiosity",
+        "did you know",
+        "facts",
+        "memory",
+        "mindblown",
+        "neuroscience",
+        "physics",
+        "psychology",
+        "science",
+        "shorts",
+        "space",
+        "universe"
+      ],
+      "description": "Every recollection remodels your past. Discover the mind‑bending truth behind memory reconstruction.\n\n📺 MIND BENDER — A fact that breaks your brain, daily.\nSubscribe for a new episode every day.\n\n#shorts #science #mindblown",
+      "duration_secs": 35,
+      "thumbnail": "https://i.ytimg.com/vi/1VUtS78Ey_s/hqdefault.jpg"
+    }
   },
   {
     "id": "kY2uWV3DNdk",
