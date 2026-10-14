@@ -11360,6 +11360,20 @@
       "description": "A Carrington‑class flare strikes now. Power grids, satellites, auroras—can we survive the unknown?\n\n📺 UNSOLVED — One unsolved mystery, every day.\nSubscribe for a new episode every day.\n\n#shorts #science #mindblown",
       "duration_secs": 32,
       "thumbnail": "https://i.ytimg.com/vi/ruUwpbbgC9I/hqdefault.jpg"
+    },
+    "retention": {
+      "awr_hook": 1.1324,
+      "rrp_hook": 0.3816,
+      "rrp_all": 0.2093,
+      "rrp_thirds": [
+        0.2254,
+        0.0814,
+        0.3125
+      ],
+      "hook_window_s": 3.0,
+      "duration_est_s": 35.0,
+      "points": 100,
+      "fetched_at": "2026-10-14T01:24:35.846230+00:00"
     }
   },
   {
@@ -11415,6 +11429,20 @@
       "description": "Every recollection remodels your past. Discover the mind‑bending truth behind memory reconstruction.\n\n📺 MIND BENDER — A fact that breaks your brain, daily.\nSubscribe for a new episode every day.\n\n#shorts #science #mindblown",
       "duration_secs": 35,
       "thumbnail": "https://i.ytimg.com/vi/1VUtS78Ey_s/hqdefault.jpg"
+    },
+    "retention": {
+      "awr_hook": 1.3125,
+      "rrp_hook": 0.5291,
+      "rrp_all": 0.6401,
+      "rrp_thirds": [
+        0.4975,
+        0.5191,
+        0.8944
+      ],
+      "hook_window_s": 3.0,
+      "duration_est_s": 35.4,
+      "points": 100,
+      "fetched_at": "2026-10-14T01:24:36.165093+00:00"
     }
   },
   {
@@ -11440,6 +11468,31 @@
     "hook_score": 8,
     "word_count": 61,
     "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-10/20261012_014158_mind_bender_9_your_childhood_memories_are_lies.mp4",
+    "stats_fetched": false
+  },
+  {
+    "id": "6ETI0Ciab00",
+    "title": "MIND BENDER #10 | 🌌 The Cosmic River That Spans a Tenth of the Universe",
+    "uploaded_at": "2026-10-14T01:24:11.799571+00:00",
+    "hook": "A single structure of galaxies stretches a tenth of the observable universe.",
+    "script": "A single structure of galaxies stretches a tenth of the observable universe. Astronomers mapping gamma‑ray bursts discovered the Hercules‑Corona Borealis Great Wall, a filament of matter 10 billion light‑years long, 3 billion wide, and 1 billion thick. It holds roughly a thousand Milky Way‑sized galaxy counts, yet it fades into the dark void. It threads together galaxy clusters like beads on a string, defying the notion that the cosmos is uniformly scattered. Our tiny planet spins inside a pocket of a structure so vast we can barely comprehend its scale.",
+    "topic": "The colossal galaxy super‑structure spanning billions of light‑years",
+    "tags": [
+      "galaxy wall",
+      "cosmic structure",
+      "great wall",
+      "astronomy",
+      "space"
+    ],
+    "affiliate_program": "",
+    "archetype": "mind_blowing_fact",
+    "series": "MIND BENDER",
+    "episode": 10,
+    "voice": "en-US-AndrewMultilingualNeural",
+    "visual_variant": "videos",
+    "hook_score": 7,
+    "word_count": 90,
+    "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-10/20261014_012151_mind_bender_10_the_cosmic_river_that_spans_a_tenth.mp4",
     "stats_fetched": false
   }
 ]
