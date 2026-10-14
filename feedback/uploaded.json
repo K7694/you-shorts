@@ -11468,7 +11468,38 @@
     "hook_score": 8,
     "word_count": 61,
     "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-10/20261012_014158_mind_bender_9_your_childhood_memories_are_lies.mp4",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "kY2uWV3DNdk",
+      "title": "MIND BENDER #9 | 🧠 Your Childhood Memories Are Lies!",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-10-12T01:43:46Z",
+      "views": 1060,
+      "likes": 8,
+      "comments": 0,
+      "engagement_rate": 0.755,
+      "views_per_day": 530,
+      "tags": [
+        "brain",
+        "cognitive science",
+        "curiosity",
+        "did you know",
+        "facts",
+        "false memories",
+        "memory",
+        "mindblown",
+        "physics",
+        "psychology",
+        "science",
+        "shorts",
+        "space",
+        "universe"
+      ],
+      "description": "Discover why most of what you remember from childhood never actually happened. #mindblown\n\n📺 MIND BENDER — A fact that breaks your brain, daily.\nSubscribe for a new episode every day.\n\n#shorts #science #mindblown",
+      "duration_secs": 26,
+      "thumbnail": "https://i.ytimg.com/vi/kY2uWV3DNdk/hqdefault.jpg"
+    }
   },
   {
     "id": "6ETI0Ciab00",
