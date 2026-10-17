@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-16T06:18:31.834202",
+  "updated": "2026-10-17T06:04:10.132815",
   "performers": [
     {
       "id": "IuMAB2-l_lU",
@@ -24,6 +24,17 @@
       "performance_score": 650.50128
     },
     {
+      "id": "3vRUTgNBxSM",
+      "title": "UNSOLVED #46 | 🚨 Green Skies Before Tornadoes: Nature’s Unsolved Alarm 🌪️",
+      "hook": "The sky turning green isn’t magic—it’s a warning sign you can’t ignore!",
+      "script": "When a supercell loads massive hail, the cloud becomes a dense, water‑filled curtain that scatters sunlight, stripping away longer wavelengths and leaving an eerie green flash like a natural alarm. Meteorologists say the green hue warns of the fiercest tornadoes, but why it shows green instead of yellow or blue is still unknown. As the vortex draws near, the green glow swells, then vanishes in the roar—take cover instantly, watch the sky!",
+      "topic": "Why the sky turns green before a tornado",
+      "views": 1180,
+      "engagement_rate": 1.78,
+      "views_per_day": 590,
+      "performance_score": 600.5020000000001
+    },
+    {
       "id": "HZfKVk5lx6w",
       "title": "HOW IT WORKS #20 | 🔭 Gold Mirror Reveals the Universe’s First Light!",
       "hook": "A 20‑kilogram gold mirror peers back 13 billion years.",
@@ -44,17 +55,6 @@
       "engagement_rate": 0.792,
       "views_per_day": 568,
       "performance_score": 572.49856
-    },
-    {
-      "id": "NsA1K7XQGGE",
-      "title": "HOW IT WORKS #1 | 🚂 Train in a Vacuum 🌀",
-      "hook": "Ride a train through a mountain and you're in a vacuum",
-      "script": "Ride a train through a mountain and you're in a vacuum. Air is removed to reduce friction. The train accelerates, using less energy. In the tunnel, pressure is low, and air would expand dangerously. So, a vacuum is created, reducing air resistance. Ride a train through a mountain and you're in a vacuum",
-      "topic": "Vacuum Sealed Train Tunnels",
-      "views": 1090,
-      "engagement_rate": 0.642,
-      "views_per_day": 545,
-      "performance_score": 548.4989
     }
   ]
 }
