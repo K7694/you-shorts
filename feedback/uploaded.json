@@ -11777,6 +11777,20 @@
       "description": "A hummingbird's 80‑beat‑per‑second hover still puzzles scientists. The answer may be closer than we think.\n\n📺 UNSOLVED — One unsolved mystery, every day.\nSubscribe for a new episode every day.\n\n#shorts #science #mindblown",
       "duration_secs": 35,
       "thumbnail": "https://i.ytimg.com/vi/tGYD-Nm4zFU/hqdefault.jpg"
+    },
+    "retention": {
+      "awr_hook": 1.2722,
+      "rrp_hook": 0.5071,
+      "rrp_all": 0.5591,
+      "rrp_thirds": [
+        0.4333,
+        0.4508,
+        0.7827
+      ],
+      "hook_window_s": 3.0,
+      "duration_est_s": 37.4,
+      "points": 100,
+      "fetched_at": "2026-10-20T01:16:00.061125+00:00"
     }
   },
   {
@@ -11827,6 +11841,31 @@
     "hook_score": 9,
     "word_count": 91,
     "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-10/20261019_002621_how_it_works_23_why_your_fingers_never_actually_to.mp4",
+    "stats_fetched": false
+  },
+  {
+    "id": "3RNsXxhKHrY",
+    "title": "HOW IT WORKS #24 | 🕳️ Black Hole's Event Horizon: Not a Wall, But a Stretchy Fabric!",
+    "uploaded_at": "2026-10-20T01:15:41.892069+00:00",
+    "hook": "A black hole doesn’t swallow like a vacuum—it ripples space itself.",
+    "script": "A black hole doesn’t swallow like a vacuum—it ripples space itself. Imagine a rubber sheet stretched tight; the more mass you drop, the deeper the dip. The event horizon is where the dip gets so steep that every possible path turns back toward the black hole. No solid barrier, just extreme curvature—space itself is stretched to the limit. Cross that curve and you’re no longer moving through space; you’re being pulled apart by the fabric you’re riding on. The horizon is a stretch, not a wall, and it tears you into the unknown.",
+    "topic": "Why a black hole’s event horizon isn’t a wall",
+    "tags": [
+      "black hole",
+      "event horizon",
+      "space physics",
+      "general relativity",
+      "cosmology"
+    ],
+    "affiliate_program": "",
+    "archetype": "how_does_it_work",
+    "series": "HOW IT WORKS",
+    "episode": 24,
+    "voice": "en-US-BrianMultilingualNeural",
+    "visual_variant": "videos",
+    "hook_score": 7,
+    "word_count": 93,
+    "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-10/20261020_011302_how_it_works_24_black_holes_event_horizon_not_a_wa.mp4",
     "stats_fetched": false
   }
 ]
