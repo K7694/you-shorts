@@ -11816,7 +11816,38 @@
     "hook_score": 8,
     "word_count": 90,
     "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-10/20261018_001442_unsolved_49_the_unsolved_secret_behind_cats_gravit.mp4",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "ZWGA_lvFl_U",
+      "title": "UNSOLVED #49 | 🐱 The Unsolved Secret Behind Cats' Gravity‑Defying Flips",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-10-18T00:16:50Z",
+      "views": 1092,
+      "likes": 15,
+      "comments": 0,
+      "engagement_rate": 1.374,
+      "views_per_day": 546,
+      "tags": [
+        "animal biomechanics",
+        "cat physics",
+        "curiosity",
+        "did you know",
+        "facts",
+        "mindblown",
+        "physics",
+        "righting reflex",
+        "science",
+        "science short",
+        "shorts",
+        "space",
+        "universe",
+        "unsolved mystery"
+      ],
+      "description": "Cats land on their feet every time—discover the mystery of their lightning‑fast righting reflex and why it still baffles scientists.\n\n📺 UNSOLVED — One unsolved mystery, every day.\nSubscribe for a new episode every day.\n\n#shorts #science #mindblown",
+      "duration_secs": 34,
+      "thumbnail": "https://i.ytimg.com/vi/ZWGA_lvFl_U/hqdefault.jpg"
+    }
   },
   {
     "id": "hYHBWvYLIms",
