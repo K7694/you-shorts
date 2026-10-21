@@ -11847,6 +11847,20 @@
       "description": "Cats land on their feet every time—discover the mystery of their lightning‑fast righting reflex and why it still baffles scientists.\n\n📺 UNSOLVED — One unsolved mystery, every day.\nSubscribe for a new episode every day.\n\n#shorts #science #mindblown",
       "duration_secs": 34,
       "thumbnail": "https://i.ytimg.com/vi/ZWGA_lvFl_U/hqdefault.jpg"
+    },
+    "retention": {
+      "awr_hook": 1.0922,
+      "rrp_hook": 0.316,
+      "rrp_all": 0.3386,
+      "rrp_thirds": [
+        0.2193,
+        0.2476,
+        0.5355
+      ],
+      "hook_window_s": 3.0,
+      "duration_est_s": 39.0,
+      "points": 100,
+      "fetched_at": "2026-10-21T00:52:38.358543+00:00"
     }
   },
   {
@@ -11897,6 +11911,31 @@
     "hook_score": 7,
     "word_count": 93,
     "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-10/20261020_011302_how_it_works_24_black_holes_event_horizon_not_a_wa.mp4",
+    "stats_fetched": false
+  },
+  {
+    "id": "VGAlyBjrN6M",
+    "title": "UNSOLVED #50 | 🧠 Why Unfinished Stories Hijack Your Brain",
+    "uploaded_at": "2026-10-21T00:52:13.400106+00:00",
+    "hook": "Your brain lights up like fireworks when a story cuts off.",
+    "script": "Your brain lights up like fireworks when a story cuts off. Psychologists have recorded spikes in dopamine and activity in the prefrontal cortex the moment a narrative stops at a crucial moment, and millions of binge‑watchers stay glued to the “next episode?” button. Yet no theory explains why an unfinished plot hijacks our attention longer than any other stimulus, even when the payoff is unknown. The paradox persists: we crave closure, but the very lack of it fuels our obsession. The cliffhanger still holds us hostage—its grip remains a mystery.",
+    "topic": "The unsolved grip of cliffhangers on the human mind",
+    "tags": [
+      "psychology",
+      "cliffhanger",
+      "dopamine",
+      "brain",
+      "unsolved"
+    ],
+    "affiliate_program": "",
+    "archetype": "unsolved_mystery",
+    "series": "UNSOLVED",
+    "episode": 50,
+    "voice": "en-US-ChristopherNeural",
+    "visual_variant": "photos",
+    "hook_score": 10,
+    "word_count": 90,
+    "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-10/20261021_005101_unsolved_50_why_unfinished_stories_hijack_your_bra.mp4",
     "stats_fetched": false
   }
 ]
