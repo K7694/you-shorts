@@ -11956,7 +11956,38 @@
     "hook_score": 7,
     "word_count": 93,
     "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-10/20261020_011302_how_it_works_24_black_holes_event_horizon_not_a_wa.mp4",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "3RNsXxhKHrY",
+      "title": "HOW IT WORKS #24 | 🕳️ Black Hole's Event Horizon: Not a Wall, But a Stretchy Fabric!",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-10-20T01:16:06Z",
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "engagement_rate": 0.0,
+      "views_per_day": 0,
+      "tags": [
+        "black hole",
+        "cosmology",
+        "curiosity",
+        "did you know",
+        "event horizon",
+        "facts",
+        "general relativity",
+        "mindblown",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "space physics",
+        "universe"
+      ],
+      "description": "Discover why a black hole’s event horizon is a warped stretch of space, not a solid barrier. #shorts #science #mindblown\n\n📺 HOW IT WORKS — The hidden mechanics of everyday things.\nSubscribe for a new episode every day.\n\n#shorts #science #mindblown",
+      "duration_secs": 32,
+      "thumbnail": "https://i.ytimg.com/vi/3RNsXxhKHrY/hqdefault.jpg"
+    }
   },
   {
     "id": "VGAlyBjrN6M",
