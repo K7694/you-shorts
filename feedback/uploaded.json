@@ -11917,6 +11917,20 @@
       "description": "Discover the invisible gap between your fingertips and how your brain creates the feeling of touch.\n\n📺 HOW IT WORKS — The hidden mechanics of everyday things.\nSubscribe for a new episode every day.\n\n#shorts #science #mindblown",
       "duration_secs": 34,
       "thumbnail": "https://i.ytimg.com/vi/hYHBWvYLIms/hqdefault.jpg"
+    },
+    "retention": {
+      "awr_hook": 1.0827,
+      "rrp_hook": 0.322,
+      "rrp_all": 0.4697,
+      "rrp_thirds": [
+        0.3125,
+        0.4119,
+        0.6719
+      ],
+      "hook_window_s": 3.0,
+      "duration_est_s": 39.4,
+      "points": 100,
+      "fetched_at": "2026-10-22T00:54:01.200032+00:00"
     }
   },
   {
@@ -11967,6 +11981,31 @@
     "hook_score": 10,
     "word_count": 90,
     "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-10/20261021_005101_unsolved_50_why_unfinished_stories_hijack_your_bra.mp4",
+    "stats_fetched": false
+  },
+  {
+    "id": "u1J4RbzQm4c",
+    "title": "UNSOLVED #51 | ❄️ Microwave Ice Trick Scientists Can’t Explain! 🔥",
+    "uploaded_at": "2026-10-22T00:53:31.107814+00:00",
+    "hook": "A steaming mug freezes solid in the blink of a microwave timer.",
+    "script": "The timer dings, a clear glass of boiling water shatters into a crystal slab—no frost, no pause, just instant ice. Scientists call it a twisted Mpemba effect: hotter water sometimes cools faster, but turning liquid to solid in a single second defies every textbook. Some labs see tiny bubbles appear under microwaves, others call it a glitch; no theory explains how the energy disappears in an instant. The experiment works, the physics refuses to explain, and the question remains—how does a microwave rewrite the rules of cooling?",
+    "topic": "Instant ice from a microwave mystery",
+    "tags": [
+      "microwave",
+      "ice",
+      "Mpemba effect",
+      "unsolved science",
+      "physics mystery"
+    ],
+    "affiliate_program": "",
+    "archetype": "unsolved_mystery",
+    "series": "UNSOLVED",
+    "episode": 51,
+    "voice": "en-US-ChristopherNeural",
+    "visual_variant": "videos",
+    "hook_score": 7,
+    "word_count": 87,
+    "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-10/20261022_005143_unsolved_51_microwave_ice_trick_scientists_cant_ex.mp4",
     "stats_fetched": false
   }
 ]
