@@ -120,7 +120,11 @@ OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "")
 # single-point-of-failure shape behind the Aug 18-21 outage. Re-verified
 # through you._call_openai_compatible: super-120b OK 2.8s, minimax-m2.7 OK
 # 2.3s, both gemma-4 variants 429. Pinned the same vendor family, larger.
-OPENROUTER_MODEL   = "nvidia/nemotron-3-super-120b-a12b:free"
+# 2026-10-25: nemotron-3-super-120b-a12b:free stopped serving (404 "Provider
+# returned error") — second free-model retirement in 7 weeks. Re-probed via
+# the production path: nemotron-3.5-super-vl OK 2.4s, nemotron-3.5-lightning
+# OK 2.3s, nemotron-3-ultra-550b OK 4.0s, both gemma-4 variants 429.
+OPENROUTER_MODEL   = "nvidia/nemotron-3.5-super-vl:free"
 
 # Fallback chain, tried in order. Entries without a key are skipped, so the
 # pipeline keeps working before any backup key is added.
