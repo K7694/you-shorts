@@ -12277,7 +12277,38 @@
     "hook_score": 8,
     "word_count": 94,
     "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-10/20261025_003013_unsolved_53_the_1977_wow_signal_alien_hello_or_cos.mp4",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "kVqfp2tvVDg",
+      "title": "UNSOLVED #53 | 👽 The 1977 Wow! Signal – Alien Hello or Cosmic Coincidence?",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-10-25T00:31:54Z",
+      "views": 480,
+      "likes": 8,
+      "comments": 0,
+      "engagement_rate": 1.667,
+      "views_per_day": 240,
+      "tags": [
+        "AlienLife",
+        "RadioAstronomy",
+        "SETI",
+        "UnsolvedMysteries",
+        "WowSignal",
+        "curiosity",
+        "did you know",
+        "facts",
+        "mindblown",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "universe"
+      ],
+      "description": "A 72‑second radio burst still haunts scientists. Was it a message? The mystery endures.\n\n📺 UNSOLVED — One unsolved mystery, every day.\nSubscribe for a new episode every day.\n\n#shorts #science #mindblown",
+      "duration_secs": 39,
+      "thumbnail": "https://i.ytimg.com/vi/kVqfp2tvVDg/hqdefault.jpg"
+    }
   },
   {
     "id": "i9FnBs0a-KY",
