@@ -12308,6 +12308,20 @@
       "description": "A 72‑second radio burst still haunts scientists. Was it a message? The mystery endures.\n\n📺 UNSOLVED — One unsolved mystery, every day.\nSubscribe for a new episode every day.\n\n#shorts #science #mindblown",
       "duration_secs": 39,
       "thumbnail": "https://i.ytimg.com/vi/kVqfp2tvVDg/hqdefault.jpg"
+    },
+    "retention": {
+      "awr_hook": 3.0605,
+      "rrp_hook": 0.5939,
+      "rrp_all": 0.705,
+      "rrp_thirds": [
+        0.5559,
+        0.6302,
+        0.9216
+      ],
+      "hook_window_s": 3.0,
+      "duration_est_s": 40.6,
+      "points": 100,
+      "fetched_at": "2026-10-28T01:40:44.623953+00:00"
     }
   },
   {
@@ -12358,6 +12372,31 @@
     "hook_score": 8,
     "word_count": 97,
     "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-10/20261027_013618_how_it_works_26_why_you_cant_boil_water_on_everest.mp4",
+    "stats_fetched": false
+  },
+  {
+    "id": "ibMnvDtJpio",
+    "title": "UNSOLVED #55 | 🔱 JWST’s Gold Mirror & the Mystery of the First Galaxies",
+    "uploaded_at": "2026-10-28T01:40:19.301272+00:00",
+    "hook": "A thin layer of gold lets us stare at the Universe's first light.",
+    "script": "A thin layer of gold lets us stare at the Universe's first light. JWST’s 18‑meter mirror is bathed in a nanometer‑thin gold film, a material that reflects infrared— the wavelength stretched from the Big Bang’s infant photons. Only gold can capture those ancient heat signatures without turning them into ordinary heat. The telescope then peers through cosmic fog, unveiling fuzzy clumps that may be the very first galaxies, yet we cannot confirm their true nature or how they assembled. The golden shield shows us the dawn, but the story of those primordial structures remains unfinished.",
+    "topic": "JWST gold‑coated mirror reveals first galaxies",
+    "tags": [
+      "JWST",
+      "gold mirror",
+      "first galaxies",
+      "infrared astronomy",
+      "unsolved mystery"
+    ],
+    "affiliate_program": "",
+    "archetype": "unsolved_mystery",
+    "series": "UNSOLVED",
+    "episode": 55,
+    "voice": "en-US-ChristopherNeural",
+    "visual_variant": "videos",
+    "hook_score": 10,
+    "word_count": 95,
+    "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-10/20261028_013746_unsolved_55_jwsts_gold_mirror_the_mystery_of_the_f.mp4",
     "stats_fetched": false
   }
 ]
