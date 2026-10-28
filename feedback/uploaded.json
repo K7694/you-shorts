@@ -12347,7 +12347,37 @@
     "hook_score": 10,
     "word_count": 93,
     "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-10/20261026_003936_unsolved_54_battery_that_never_dies_the_forever_po.mp4",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "i9FnBs0a-KY",
+      "title": "UNSOLVED #54 | ⚡️Battery That Never Dies? The Forever Power Mystery",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-10-26T00:41:25Z",
+      "views": 1104,
+      "likes": 12,
+      "comments": 0,
+      "engagement_rate": 1.087,
+      "views_per_day": 552,
+      "tags": [
+        "battery",
+        "curiosity",
+        "did you know",
+        "energy",
+        "facts",
+        "mindblown",
+        "perpetual",
+        "physics",
+        "redox",
+        "science",
+        "shorts",
+        "space",
+        "universe"
+      ],
+      "description": "A dead phone, a dream of endless charge—why the ultimate battery still eludes us.\n\n📺 UNSOLVED — One unsolved mystery, every day.\nSubscribe for a new episode every day.\n\n#shorts #science #mindblown",
+      "duration_secs": 37,
+      "thumbnail": "https://i.ytimg.com/vi/i9FnBs0a-KY/hqdefault.jpg"
+    }
   },
   {
     "id": "c-Lt76KRowI",
