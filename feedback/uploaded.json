@@ -12416,7 +12416,37 @@
     "hook_score": 8,
     "word_count": 97,
     "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-10/20261027_013618_how_it_works_26_why_you_cant_boil_water_on_everest.mp4",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "c-Lt76KRowI",
+      "title": "HOW IT WORKS #26 | 🔥 Why You Can’t Boil Water on Everest 🏔️",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-10-27T01:37:57Z",
+      "views": 1107,
+      "likes": 9,
+      "comments": 0,
+      "engagement_rate": 0.813,
+      "views_per_day": 554,
+      "tags": [
+        "Everest",
+        "boiling point",
+        "curiosity",
+        "did you know",
+        "facts",
+        "high altitude cooking",
+        "mindblown",
+        "physics",
+        "pressure",
+        "science",
+        "shorts",
+        "space",
+        "universe"
+      ],
+      "description": "Discover the hidden physics that stops water from boiling on the world’s highest peak—and how climbers cheat the system.\n\n📺 HOW IT WORKS — The hidden mechanics of everyday things.\nSubscribe for a new episode every day.\n\n#shorts #science #mindblown",
+      "duration_secs": 34,
+      "thumbnail": "https://i.ytimg.com/vi/c-Lt76KRowI/hqdefault.jpg"
+    }
   },
   {
     "id": "ibMnvDtJpio",
