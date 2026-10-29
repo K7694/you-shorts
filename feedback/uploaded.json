@@ -12377,6 +12377,20 @@
       "description": "A dead phone, a dream of endless charge—why the ultimate battery still eludes us.\n\n📺 UNSOLVED — One unsolved mystery, every day.\nSubscribe for a new episode every day.\n\n#shorts #science #mindblown",
       "duration_secs": 37,
       "thumbnail": "https://i.ytimg.com/vi/i9FnBs0a-KY/hqdefault.jpg"
+    },
+    "retention": {
+      "awr_hook": 1.1307,
+      "rrp_hook": 0.3894,
+      "rrp_all": 0.4015,
+      "rrp_thirds": [
+        0.2701,
+        0.298,
+        0.6237
+      ],
+      "hook_window_s": 3.0,
+      "duration_est_s": 40.2,
+      "points": 100,
+      "fetched_at": "2026-10-29T01:58:40.421021+00:00"
     }
   },
   {
@@ -12427,6 +12441,31 @@
     "hook_score": 10,
     "word_count": 95,
     "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-10/20261028_013746_unsolved_55_jwsts_gold_mirror_the_mystery_of_the_f.mp4",
+    "stats_fetched": false
+  },
+  {
+    "id": "3zpgy8MhvGI",
+    "title": "HOW IT WORKS #27 | ⚡️Sun Blinks for 10 Seconds – What Happens?⚡️",
+    "uploaded_at": "2026-10-29T01:58:09.625933+00:00",
+    "hook": "The Sun vanishes for ten seconds—everything on Earth freezes in an instant.",
+    "script": "The Sun vanishes for ten seconds—everything on Earth freezes in an instant. For those ten seconds the sun's rays cease, the sky turns black, and the air cools just enough to make exposed skin shiver. Satellites lose solar power, their batteries dip, and GPS signals wobble before backup kicks in. Human eyes, adapted to daylight, see a momentary night, triggering a brief surge of melatonin that makes you feel drowsy. Yet the Sun's inertia keeps its fusion alive; when light returns, the world snaps back, unaware that a cosmic blink ever happened.",
+    "topic": "Sun disappears for 10 seconds",
+    "tags": [
+      "sun blackout",
+      "solar eclipse",
+      "space physics",
+      "earth effects",
+      "science short"
+    ],
+    "affiliate_program": "",
+    "archetype": "how_does_it_work",
+    "series": "HOW IT WORKS",
+    "episode": 27,
+    "voice": "en-US-BrianMultilingualNeural",
+    "visual_variant": "photos",
+    "hook_score": 7,
+    "word_count": 92,
+    "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-10/20261029_015621_how_it_works_27_sun_blinks_for_10_seconds_what_hap.mp4",
     "stats_fetched": false
   }
 ]
