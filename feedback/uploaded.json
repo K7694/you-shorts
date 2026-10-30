@@ -12446,6 +12446,20 @@
       "description": "Discover the hidden physics that stops water from boiling on the world’s highest peak—and how climbers cheat the system.\n\n📺 HOW IT WORKS — The hidden mechanics of everyday things.\nSubscribe for a new episode every day.\n\n#shorts #science #mindblown",
       "duration_secs": 34,
       "thumbnail": "https://i.ytimg.com/vi/c-Lt76KRowI/hqdefault.jpg"
+    },
+    "retention": {
+      "awr_hook": 1.3023,
+      "rrp_hook": 0.5256,
+      "rrp_all": 0.5738,
+      "rrp_thirds": [
+        0.4501,
+        0.4751,
+        0.7862
+      ],
+      "hook_window_s": 3.0,
+      "duration_est_s": 41.8,
+      "points": 100,
+      "fetched_at": "2026-10-30T02:09:36.573829+00:00"
     }
   },
   {
@@ -12496,6 +12510,31 @@
     "hook_score": 7,
     "word_count": 92,
     "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-10/20261029_015621_how_it_works_27_sun_blinks_for_10_seconds_what_hap.mp4",
+    "stats_fetched": false
+  },
+  {
+    "id": "fTPFMgn5h3I",
+    "title": "UNSOLVED #56 | 🔥 Why Sunrise Looks Like Fire – The Hidden Sky Mystery",
+    "uploaded_at": "2026-10-30T02:09:00.776952+00:00",
+    "hook": "The sky ignites every morning—what’s really burning the horizon?",
+    "script": "The sun’s first rays plunge through a thin veil of air, and the atmosphere becomes a colossal prism that shoves the short‑wave blues sideways, letting the long, smoldering reds flood our eyes. In cities choked with soot, the same scattering flips, turning dawn into a hazy orange furnace that never quite reaches true crimson. Scientists can model the physics, but the exact threshold where clean air turns toxic fire‑sky remains a moving target, hidden in the ever‑changing breath of our planet.",
+    "topic": "Why sunrise looks like fire",
+    "tags": [
+      "sunrise",
+      "Rayleigh scattering",
+      "atmosphere",
+      "pollution",
+      "unsolved mystery"
+    ],
+    "affiliate_program": "",
+    "archetype": "unsolved_mystery",
+    "series": "UNSOLVED",
+    "episode": 56,
+    "voice": "en-US-ChristopherNeural",
+    "visual_variant": "videos",
+    "hook_score": 6,
+    "word_count": 81,
+    "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-10/20261030_020724_unsolved_56_why_sunrise_looks_like_fire_the_hidden.mp4",
     "stats_fetched": false
   }
 ]
