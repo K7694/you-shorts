@@ -12485,7 +12485,38 @@
     "hook_score": 10,
     "word_count": 95,
     "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-10/20261028_013746_unsolved_55_jwsts_gold_mirror_the_mystery_of_the_f.mp4",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "ibMnvDtJpio",
+      "title": "UNSOLVED #55 | 🔱 JWST’s Gold Mirror & the Mystery of the First Galaxies",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-10-28T01:40:47Z",
+      "views": 1,
+      "likes": 0,
+      "comments": 0,
+      "engagement_rate": 0.0,
+      "views_per_day": 0,
+      "tags": [
+        "JWST",
+        "curiosity",
+        "did you know",
+        "facts",
+        "first galaxies",
+        "gold mirror",
+        "infrared astronomy",
+        "mindblown",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "universe",
+        "unsolved mystery"
+      ],
+      "description": "Why does a gold‑coated mirror let JWST see the Universe's earliest light? The answer hides a deeper cosmic puzzle.\n\n📺 UNSOLVED — One unsolved mystery, every day.\nSubscribe for a new episode every day.\n\n#shorts #science #mindblown",
+      "duration_secs": 38,
+      "thumbnail": "https://i.ytimg.com/vi/ibMnvDtJpio/hqdefault.jpg"
+    }
   },
   {
     "id": "3zpgy8MhvGI",
