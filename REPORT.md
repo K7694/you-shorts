@@ -1,38 +1,38 @@
-# YOU — Weekly Report · 2026-10-25 04:30 UTC
+# YOU — Weekly Report · 2026-11-01 05:50 UTC
 
 Read the **Falsifiers** table first. Everything else is context.
 
 ## Channel
-- **81 subs** · 74,519 views · 182 videos (lifetime)
-- last 30 d Shorts: **15,249 views** · 16 subs · **1.05 subs/1k**
+- **86 subs** · 78,700 views · 189 videos (lifetime)
+- last 30 d Shorts: **16,139 views** · 18 subs · **1.12 subs/1k**
 
 ## Shorts — views at 48 h (equal-age cohorts)
 | cohort | n | median | mean | ≥50 | max | window |
 |---|---|---|---|---|---|---|
-| last 30 | 30 | **579** | 560 | 25 | 1180 | 2026-09-22 → 2026-10-22 |
-| prior 30 | 30 | 328 | 449 | 24 | 1023 | 2026-08-23 → 2026-09-21 |
+| last 30 | 30 | **586** | 611 | 26 | 1180 | 2026-09-29 → 2026-10-29 |
+| prior 30 | 30 | 314 | 421 | 24 | 1023 | 2026-08-30 → 2026-09-28 |
 
-last/prior median ratio: **×1.77** (the falsifier bar is ×0.53; anything between 0.53 and 1.88 is noise at n=30)
+last/prior median ratio: **×1.87** (the falsifier bar is ×0.53; anything between 0.53 and 1.88 is noise at n=30)
 
-last 10 uploads: 10-12 **1060** MIND BENDER · 10-14 **305** MIND BENDER · 10-15 **1180** UNSOLVED · 10-16 **626** UNSOLVED · 10-17 **952** UNSOLVED · 10-18 **1092** UNSOLVED · 10-19 **304** HOW IT WORKS · 10-20 **0** HOW IT WORKS · 10-21 **32** UNSOLVED · 10-22 **961** UNSOLVED
+last 10 uploads: 10-20 **0** HOW IT WORKS · 10-21 **32** UNSOLVED · 10-22 **961** UNSOLVED · 10-23 **328** UNSOLVED · 10-24 **1008** HOW IT WORKS · 10-25 **480** UNSOLVED · 10-26 **1104** UNSOLVED · 10-27 **1107** HOW IT WORKS · 10-28 **1** UNSOLVED · 10-29 **995** HOW IT WORKS
 
 ## Geography (90 d)
 - top: **US** · US+UK+CA+AU **76.5%** · India 4.9% · fetched 2026-09-12
 - US 70.0% · PH 9.5% · IN 4.9% · GB 3.2% · DE 3.0%
 
 ## Retention (peer-relative, 0.50 = median comparable video)
-- recorded **119 / 209** eligible (≥72 h old)
-- last 30 recorded: opening 0.38 · middle **0.395** · final 0.667 · overall 0.483 (n=30)
+- recorded **125 / 216** eligible (≥72 h old)
+- last 30 recorded: opening 0.399 · middle **0.424** · final 0.712 · overall 0.515 (n=30)
 
 ## Long-form
-- 9 uploads · 30 d: 6 views · **0.1 watch-hours** (of 4,000)
+- 9 uploads · 30 d: 3 views · **0.0 watch-hours** (of 4,000)
   - 2026-08-30 The Unsolved Mysteries That Could Rewrite Physics
   - 2026-09-06 The Unsolved Mysteries That Could Rewrite Physics
   - 2026-09-13 What the Universe Hides: 6 Unsolved Mysteries That
 
 ## Pipeline
-- CI last 7: 10-25 ✅ · 10-24 ✅ · 10-24 ✅ · 10-23 ✅ · 10-23 ✅ · 10-22 ✅ · 10-22 ✅
-- scheduled start delay vs nominal cron: min 1h48 · median **5h09** · max 8h05
+- CI last 7: 11-01 ✅ · 10-31 ✅ · 10-31 ✅ · 10-30 ✅ · 10-30 ✅ · 10-29 ✅ · 10-29 ✅
+- scheduled start delay vs nominal cron: min 2h02 · median **5h46** · max 9h04
 - render archive: **30 / 30** of records since the archive shipped have a URL
 - LLM chain: groq → gemini → cerebras → openrouter (Cerebras 402 — billing; probe at session open)
 
@@ -43,7 +43,7 @@ last 10 uploads: 10-12 **1060** MIND BENDER · 10-14 **305** MIND BENDER · 10-1
 | F2 | CTA overlay does not repeat May | 30 videos post-overlay | — | not started |
 | F3 | The kit is sellable | 30 d post-launch | sales not tracked here | not started |
 | F4 | Clone reaches like the original | clone week 8 | other repo | not started |
-| F5 | Compilations get watched | after 3 monthly uploads | long-form 30d views 6 | not started |
+| F5 | Compilations get watched | after 3 monthly uploads | long-form 30d views 3 | not started |
 | F6 | Meta reach worth the engineering | day 60 | not live | not started |
 | F7 | Portfolio can become income | month 6 | cash not tracked here | manual |
 | F8 | No termination exposure | continuous | CI failures last 7: 0 | manual — check Studio for notices |
