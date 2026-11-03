@@ -12712,6 +12712,20 @@
       "description": "A tiny creature survives a nuclear explosion—what's the science behind its indestructible DNA?\n\n📺 UNSOLVED — One unsolved mystery, every day.\nSubscribe for a new episode every day.\n\n#shorts #science #mindblown",
       "duration_secs": 39,
       "thumbnail": "https://i.ytimg.com/vi/dV1VMKkxbac/hqdefault.jpg"
+    },
+    "retention": {
+      "awr_hook": 1.1765,
+      "rrp_hook": 0.4403,
+      "rrp_all": 0.4602,
+      "rrp_thirds": [
+        0.3454,
+        0.3345,
+        0.689
+      ],
+      "hook_window_s": 3.0,
+      "duration_est_s": 37.0,
+      "points": 100,
+      "fetched_at": "2026-11-03T03:42:47.929743+00:00"
     }
   },
   {
@@ -12762,6 +12776,31 @@
     "hook_score": 9,
     "word_count": 114,
     "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-11/20261102_014549_unsolved_58_the_auroras_secret_song_can_you_hear_i.mp4",
+    "stats_fetched": false
+  },
+  {
+    "id": "28RPpbhj4UA",
+    "title": "UNSOLVED #59 | 🚗💥 Why a Crash Feels Like an Eternal Moment",
+    "uploaded_at": "2026-11-03T03:42:17.429710+00:00",
+    "hook": "The crash hits, and suddenly a second stretches into eternity.",
+    "script": "The crash hits, and suddenly a second stretches into eternity. Metal shatters, glass flies, and your brain floods with adrenaline, firing neurons at lightning speed. The adrenaline hijacks the brain’s clock, cranking up senses while the body’s time‑keeper drags, making every crash fragment feel magnified. Physics says the collision lasts milliseconds, yet our perception stretches it into a cinematic freeze‑frame. Scientists can measure the force, but they can’t explain why our mind rewrites milliseconds into minutes. The mystery remains: what hidden mechanism makes a split‑second feel like forever in the blink of disaster for every survivor?",
+    "topic": "Why time seems to slow down during a car crash",
+    "tags": [
+      "car crash",
+      "time perception",
+      "adrenaline",
+      "brain science",
+      "unsolved mystery"
+    ],
+    "affiliate_program": "",
+    "archetype": "unsolved_mystery",
+    "series": "UNSOLVED",
+    "episode": 59,
+    "voice": "en-US-ChristopherNeural",
+    "visual_variant": "videos",
+    "hook_score": 6,
+    "word_count": 96,
+    "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-11/20261103_034045_unsolved_59_why_a_crash_feels_like_an_eternal_mome.mp4",
     "stats_fetched": false
   }
 ]
