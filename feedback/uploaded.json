@@ -12821,7 +12821,37 @@
     "hook_score": 9,
     "word_count": 114,
     "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-11/20261102_014549_unsolved_58_the_auroras_secret_song_can_you_hear_i.mp4",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "2wYeDPMYzYE",
+      "title": "UNSOLVED #58 | 🔊 The Aurora’s Secret Song – Can You Hear It?",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-11-02T01:48:18Z",
+      "views": 700,
+      "likes": 19,
+      "comments": 1,
+      "engagement_rate": 2.857,
+      "views_per_day": 350,
+      "tags": [
+        "audioexperiment",
+        "aurora",
+        "curiosity",
+        "did you know",
+        "facts",
+        "mindblown",
+        "northernlights",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "universe",
+        "unsolvedmystery"
+      ],
+      "description": "Timelapse, audio, and a simple radio test—discover the mystery of the Northern Lights’ hidden sound.\n\n📺 UNSOLVED — One unsolved mystery, every day.\nSubscribe for a new episode every day.\n\n#shorts #science #mindblown",
+      "duration_secs": 44,
+      "thumbnail": "https://i.ytimg.com/vi/2wYeDPMYzYE/hqdefault.jpg"
+    }
   },
   {
     "id": "28RPpbhj4UA",
