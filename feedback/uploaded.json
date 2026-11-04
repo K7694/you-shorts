@@ -12782,6 +12782,20 @@
       "description": "Discover how bone conduction warps your recordings and the quick fix to sound like yourself again.\n\n📺 WHAT IF — Impossible scenarios, real physics.\nSubscribe for a new episode every day.\n\n#shorts #science #mindblown",
       "duration_secs": 32,
       "thumbnail": "https://i.ytimg.com/vi/jarqQnbvoW8/hqdefault.jpg"
+    },
+    "retention": {
+      "awr_hook": 1.1364,
+      "rrp_hook": 0.3892,
+      "rrp_all": 0.3554,
+      "rrp_thirds": [
+        0.2541,
+        0.2339,
+        0.5652
+      ],
+      "hook_window_s": 3.0,
+      "duration_est_s": 38.6,
+      "points": 100,
+      "fetched_at": "2026-11-04T02:41:08.264814+00:00"
     }
   },
   {
@@ -12832,6 +12846,31 @@
     "hook_score": 6,
     "word_count": 96,
     "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-11/20261103_034045_unsolved_59_why_a_crash_feels_like_an_eternal_mome.mp4",
+    "stats_fetched": false
+  },
+  {
+    "id": "OyGnYR8lxOg",
+    "title": "UNSOLVED #60 | 🔍 One Grain of Sand vs. A Tsunami – The Unsolved Paradox",
+    "uploaded_at": "2026-11-04T02:40:37.851080+00:00",
+    "hook": "A single grain of sand can stop a tsunami – here’s how! 🏖️",
+    "script": "A single grain of sand can stop a tsunami – here’s how! As a giant wave hits a narrow strip of ultra‑fine sand, the water squeezes the grains into a solid‑like wall, cutting the wave height by 90% in just a few centimeters. Real‑world experiments on Japan’s coast and California’s breakwaters show the effect, yet no one knows why such a tiny amount of material can dissipate energy that would otherwise flatten cities, leaving the ultimate question unsolved: how does a microscopic sand layer wield planetary power?",
+    "topic": "How a single grain of sand can stop a tsunami",
+    "tags": [
+      "tsunami",
+      "sand barrier",
+      "coastal engineering",
+      "wave energy",
+      "unsolved science"
+    ],
+    "affiliate_program": "",
+    "archetype": "unsolved_mystery",
+    "series": "UNSOLVED",
+    "episode": 60,
+    "voice": "en-US-ChristopherNeural",
+    "visual_variant": "photos",
+    "hook_score": 7,
+    "word_count": 87,
+    "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-11/20261104_023924_unsolved_60_one_grain_of_sand_vs_a_tsunami_the_uns.mp4",
     "stats_fetched": false
   }
 ]
