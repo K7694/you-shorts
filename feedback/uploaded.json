@@ -12851,6 +12851,20 @@
       "description": "Timelapse, audio, and a simple radio test—discover the mystery of the Northern Lights’ hidden sound.\n\n📺 UNSOLVED — One unsolved mystery, every day.\nSubscribe for a new episode every day.\n\n#shorts #science #mindblown",
       "duration_secs": 44,
       "thumbnail": "https://i.ytimg.com/vi/2wYeDPMYzYE/hqdefault.jpg"
+    },
+    "retention": {
+      "awr_hook": 1.3402,
+      "rrp_hook": 0.5869,
+      "rrp_all": 0.6077,
+      "rrp_thirds": [
+        0.5288,
+        0.5425,
+        0.7464
+      ],
+      "hook_window_s": 3.0,
+      "duration_est_s": 48.6,
+      "points": 100,
+      "fetched_at": "2026-11-05T02:46:18.044888+00:00"
     }
   },
   {
@@ -12901,6 +12915,31 @@
     "hook_score": 7,
     "word_count": 87,
     "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-11/20261104_023924_unsolved_60_one_grain_of_sand_vs_a_tsunami_the_uns.mp4",
+    "stats_fetched": false
+  },
+  {
+    "id": "KQyaWJiHMvQ",
+    "title": "UNSOLVED #61 | 🤯 The Silent Cue That Makes Strangers Mirror You",
+    "uploaded_at": "2026-11-05T02:45:46.668536+00:00",
+    "hook": "Walk into a room and strangers instantly mirror your posture.",
+    "script": "Walk into a room and strangers instantly mirror your posture. Scientists have caught cameras showing people unconsciously copying each other's gestures within seconds, even when they don’t know each other. Our brains flare up in mirror‑neuron hotspots, yet we still don’t know why we mimic strangers, especially when negotiations get tense. Every study hits a wall: the why remains hidden, a silent social algorithm we can feel but never see. So the question lingers—what invisible cue forces us to become each other’s reflection?",
+    "topic": "The mysterious human chameleon effect",
+    "tags": [
+      "psychology",
+      "mirror neurons",
+      "social behavior",
+      "unsolved mystery",
+      "human brain"
+    ],
+    "affiliate_program": "",
+    "archetype": "unsolved_mystery",
+    "series": "UNSOLVED",
+    "episode": 61,
+    "voice": "en-US-ChristopherNeural",
+    "visual_variant": "videos",
+    "hook_score": 8,
+    "word_count": 83,
+    "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-11/20261105_024400_unsolved_61_the_silent_cue_that_makes_strangers_mi.mp4",
     "stats_fetched": false
   }
 ]
