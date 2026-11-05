@@ -12890,7 +12890,38 @@
     "hook_score": 6,
     "word_count": 96,
     "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-11/20261103_034045_unsolved_59_why_a_crash_feels_like_an_eternal_mome.mp4",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "28RPpbhj4UA",
+      "title": "UNSOLVED #59 | 🚗💥 Why a Crash Feels Like an Eternal Moment",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-11-03T03:42:46Z",
+      "views": 199,
+      "likes": 1,
+      "comments": 0,
+      "engagement_rate": 0.503,
+      "views_per_day": 100,
+      "tags": [
+        "adrenaline",
+        "brain science",
+        "car crash",
+        "curiosity",
+        "did you know",
+        "facts",
+        "mindblown",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "time perception",
+        "universe",
+        "unsolved mystery"
+      ],
+      "description": "A split‑second crash feels like forever—discover the brain’s hidden time warp.\n\n📺 UNSOLVED — One unsolved mystery, every day.\nSubscribe for a new episode every day.\n\n#shorts #science #mindblown",
+      "duration_secs": 42,
+      "thumbnail": "https://i.ytimg.com/vi/28RPpbhj4UA/hqdefault.jpg"
+    }
   },
   {
     "id": "OyGnYR8lxOg",
