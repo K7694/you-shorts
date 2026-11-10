@@ -13173,6 +13173,20 @@
       "description": "A simple marble mimics the quantum double‑slit—watch the impossible unfold in seconds.\n\n📺 MIND BENDER — A fact that breaks your brain, daily.\nSubscribe for a new episode every day.\n\n#shorts #science #mindblown",
       "duration_secs": 36,
       "thumbnail": "https://i.ytimg.com/vi/X61YxPLYiC4/hqdefault.jpg"
+    },
+    "retention": {
+      "awr_hook": 1.1686,
+      "rrp_hook": 0.4457,
+      "rrp_all": 0.5199,
+      "rrp_thirds": [
+        0.394,
+        0.4567,
+        0.6994
+      ],
+      "hook_window_s": 3.0,
+      "duration_est_s": 39.4,
+      "points": 100,
+      "fetched_at": "2026-11-10T04:23:51.350730+00:00"
     }
   },
   {
@@ -13223,6 +13237,31 @@
     "hook_score": 6,
     "word_count": 86,
     "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-11/20261109_015545_how_it_works_29_how_vikings_saw_the_sun_through_fo.mp4",
+    "stats_fetched": false
+  },
+  {
+    "id": "KdI0P8115kE",
+    "title": "HOW IT WORKS #30 | 🌪️ Green Sky = Tornado Warning! The Secret Explained",
+    "uploaded_at": "2026-11-10T04:23:30.319426+00:00",
+    "hook": "A green sky isn’t magic—it's nature’s tornado alarm.",
+    "script": "A green sky isn’t magic—it's nature’s tornado alarm. When a supercell packs thunderous hail and massive water droplets, the cloud turns into a dense, liquid curtain that swallows red and yellow light, leaving only green wavelengths to reach our eyes. That eerie glow signals the storm’s most violent core, where updrafts slam hailstones at 100 mph and a vortex can spin into a tornado. Meteorologists read the hue as a warning: green means the worst is coming. If you see it, drop everything and seek shelter now.",
+    "topic": "Why the sky turns green before a tornado",
+    "tags": [
+      "tornado",
+      "green sky",
+      "storm warning",
+      "weather science",
+      "severe weather"
+    ],
+    "affiliate_program": "",
+    "archetype": "how_does_it_work",
+    "series": "HOW IT WORKS",
+    "episode": 30,
+    "voice": "en-US-BrianMultilingualNeural",
+    "visual_variant": "photos",
+    "hook_score": 6,
+    "word_count": 87,
+    "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-11/20261110_042145_how_it_works_30_green_sky_tornado_warning_the_secr.mp4",
     "stats_fetched": false
   }
 ]
