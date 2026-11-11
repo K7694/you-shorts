@@ -13281,7 +13281,38 @@
     "hook_score": 6,
     "word_count": 86,
     "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-11/20261109_015545_how_it_works_29_how_vikings_saw_the_sun_through_fo.mp4",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "2Edi0WQP9pA",
+      "title": "HOW IT WORKS #29 | 🧭 How Vikings Saw the Sun Through Fog – The Sunstone Secret",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-11-09T01:58:28Z",
+      "views": 108,
+      "likes": 8,
+      "comments": 1,
+      "engagement_rate": 8.333,
+      "views_per_day": 54,
+      "tags": [
+        "Vikings",
+        "ancient tech",
+        "curiosity",
+        "did you know",
+        "facts",
+        "history mystery",
+        "mindblown",
+        "navigation",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "sunstone",
+        "universe"
+      ],
+      "description": "Discover the crystal trick that let Vikings navigate on the darkest seas.\n\n📺 HOW IT WORKS — The hidden mechanics of everyday things.\nSubscribe for a new episode every day.\n\n#shorts #science #mindblown",
+      "duration_secs": 32,
+      "thumbnail": "https://i.ytimg.com/vi/2Edi0WQP9pA/hqdefault.jpg"
+    }
   },
   {
     "id": "KdI0P8115kE",
