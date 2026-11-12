@@ -13312,6 +13312,20 @@
       "description": "Discover the crystal trick that let Vikings navigate on the darkest seas.\n\n📺 HOW IT WORKS — The hidden mechanics of everyday things.\nSubscribe for a new episode every day.\n\n#shorts #science #mindblown",
       "duration_secs": 32,
       "thumbnail": "https://i.ytimg.com/vi/2Edi0WQP9pA/hqdefault.jpg"
+    },
+    "retention": {
+      "awr_hook": 1.2557,
+      "rrp_hook": 0.539,
+      "rrp_all": 0.4036,
+      "rrp_thirds": [
+        0.4339,
+        0.279,
+        0.4903
+      ],
+      "hook_window_s": 3.0,
+      "duration_est_s": 37.4,
+      "points": 100,
+      "fetched_at": "2026-11-12T03:21:18.459937+00:00"
     }
   },
   {
@@ -13362,6 +13376,31 @@
     "hook_score": 6,
     "word_count": 75,
     "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-11/20261111_021208_how_it_works_31_how_polarized_sunglasses_turn_wate.mp4",
+    "stats_fetched": false
+  },
+  {
+    "id": "43uF9hZ_5_Q",
+    "title": "UNSOLVED #62 | ⚡️ Earth's Invisible Shield vs Solar Fury 🌌",
+    "uploaded_at": "2026-11-12T03:20:58.029345+00:00",
+    "hook": "A billion‑ton solar storm slams Earth every day—and we never feel it.",
+    "script": "A billion‑ton solar storm slams Earth every day—and we never feel it. Charged particles roar from the Sun, collide with our magnetic field, and are forced into giant, glowing arches that dance around the poles. The magnetosphere bends the solar wind into the Van Allen belts, where radiation stays trapped for years. Yet the belts still let deadly bursts punch through, frying satellites and knocking out power grids. Scientists can map the field, but they can't predict why the shield sometimes tears, exposing us to the Sun's raw fury. The question remains: what triggers those sudden, catastrophic breaches?",
+    "topic": "Earth's magnetic shield vs solar storms",
+    "tags": [
+      "magnetosphere",
+      "solar storm",
+      "Van Allen belts",
+      "space weather",
+      "unsolved science"
+    ],
+    "affiliate_program": "",
+    "archetype": "unsolved_mystery",
+    "series": "UNSOLVED",
+    "episode": 62,
+    "voice": "en-US-ChristopherNeural",
+    "visual_variant": "photos",
+    "hook_score": 10,
+    "word_count": 98,
+    "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-11/20261112_031919_unsolved_62_earths_invisible_shield_vs_solar_fury.mp4",
     "stats_fetched": false
   }
 ]
