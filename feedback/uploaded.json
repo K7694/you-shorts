@@ -13477,7 +13477,38 @@
     "hook_score": 10,
     "word_count": 98,
     "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-11/20261112_031919_unsolved_62_earths_invisible_shield_vs_solar_fury.mp4",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "43uF9hZ_5_Q",
+      "title": "UNSOLVED #62 | ⚡️ Earth's Invisible Shield vs Solar Fury 🌌",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-11-12T03:21:20Z",
+      "views": 3,
+      "likes": 0,
+      "comments": 0,
+      "engagement_rate": 0.0,
+      "views_per_day": 2,
+      "tags": [
+        "Van Allen belts",
+        "curiosity",
+        "did you know",
+        "facts",
+        "magnetosphere",
+        "mindblown",
+        "physics",
+        "science",
+        "shorts",
+        "solar storm",
+        "space",
+        "space weather",
+        "universe",
+        "unsolved science"
+      ],
+      "description": "Our planet's magnetic field deflects solar storms—until it doesn't. The mystery behind sudden breaches revealed.\n\n📺 UNSOLVED — One unsolved mystery, every day.\nSubscribe for a new episode every day.\n\n#shorts #science #mindblown",
+      "duration_secs": 41,
+      "thumbnail": "https://i.ytimg.com/vi/43uF9hZ_5_Q/hqdefault.jpg"
+    }
   },
   {
     "id": "GCVeE7B_MYM",
