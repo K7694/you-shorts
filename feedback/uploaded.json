@@ -13438,6 +13438,20 @@
       "description": "Discover the secret science that lets polarized lenses reveal underwater life in seconds.\n\n📺 HOW IT WORKS — The hidden mechanics of everyday things.\nSubscribe for a new episode every day.\n\n#shorts #science #mindblown",
       "duration_secs": 28,
       "thumbnail": "https://i.ytimg.com/vi/p_ZJLQzvWsw/hqdefault.jpg"
+    },
+    "retention": {
+      "awr_hook": 1.0988,
+      "rrp_hook": 0.3868,
+      "rrp_all": 0.1955,
+      "rrp_thirds": [
+        0.248,
+        0.0994,
+        0.2352
+      ],
+      "hook_window_s": 3.0,
+      "duration_est_s": 33.0,
+      "points": 100,
+      "fetched_at": "2026-11-14T02:43:38.572429+00:00"
     }
   },
   {
@@ -13488,6 +13502,31 @@
     "hook_score": 7,
     "word_count": 96,
     "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-11/20261113_025247_unsolved_63_teslas_secret_death_ray_fact_or_forgot.mp4",
+    "stats_fetched": false
+  },
+  {
+    "id": "Ee-129pyecs",
+    "title": "WHAT IF #10 | ⚡️Why Thunder Waits for Lightning – The Shocking Truth!",
+    "uploaded_at": "2026-11-14T02:43:22.172188+00:00",
+    "hook": "A lightning bolt strikes five miles away, yet thunder arrives fifteen seconds later.",
+    "script": "The flash blazes across the sky, traveling at 300,000 kilometers per second—instant to our eyes. Your brain starts a silent countdown as the sound begins its slow trek, limited to roughly 340 meters per second in air. Colder air slows sound, widening the delay between flash and roar. Multiply the distance by that sluggish pace, and the roar finally catches up, echoing the flash you just saw. That lag isn’t a mystery; it’s physics measuring the distance between sight and sound.",
+    "topic": "Why thunder lags behind lightning",
+    "tags": [
+      "thunder",
+      "lightning",
+      "sound speed",
+      "physics",
+      "storm"
+    ],
+    "affiliate_program": "",
+    "archetype": "what_if",
+    "series": "WHAT IF",
+    "episode": 10,
+    "voice": "en-GB-RyanNeural",
+    "visual_variant": "photos",
+    "hook_score": 7,
+    "word_count": 81,
+    "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-11/20261114_024144_what_if_10_why_thunder_waits_for_lightning_the_sho.mp4",
     "stats_fetched": false
   }
 ]
