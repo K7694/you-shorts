@@ -13382,6 +13382,20 @@
       "description": "Discover why a green sky warns of deadly tornadoes and what to do when it appears.\n\n📺 HOW IT WORKS — The hidden mechanics of everyday things.\nSubscribe for a new episode every day.\n\n#shorts #science #mindblown",
       "duration_secs": 34,
       "thumbnail": "https://i.ytimg.com/vi/KdI0P8115kE/hqdefault.jpg"
+    },
+    "retention": {
+      "awr_hook": 1.0317,
+      "rrp_hook": 0.2652,
+      "rrp_all": 0.1519,
+      "rrp_thirds": [
+        0.1361,
+        0.0534,
+        0.2576
+      ],
+      "hook_window_s": 3.0,
+      "duration_est_s": 37.8,
+      "points": 100,
+      "fetched_at": "2026-11-15T02:07:45.255452+00:00"
     }
   },
   {
@@ -13558,6 +13572,31 @@
     "hook_score": 7,
     "word_count": 81,
     "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-11/20261114_024144_what_if_10_why_thunder_waits_for_lightning_the_sho.mp4",
+    "stats_fetched": false
+  },
+  {
+    "id": "SIa5NgqNZ48",
+    "title": "UNSOLVED #64 | 🕳️ The Mountain‑Sized Black Hole That Breaks Physics",
+    "uploaded_at": "2026-11-15T02:07:31.690906+00:00",
+    "hook": "A black hole the size of a mountain lurks in a distant galaxy.",
+    "script": "Astronomers peering at the dwarf galaxy Leo I spotted a point of X‑ray fire that pulsed like a dying star, then vanished—revealing a black hole with only three Earth masses, its event horizon a mere 9 centimetres across, smaller than a house. Scientists thought a black hole required at least five solar masses to form, yet this tiny monster breaks that rule, pointing to a primordial origin or unknown physics. How can something so tiny warp spacetime so fiercely, and what does it mean for the rules that govern the cosmos?",
+    "topic": "The tiniest black hole ever discovered",
+    "tags": [
+      "black hole",
+      "astronomy",
+      "unexplained",
+      "physics",
+      "space mystery"
+    ],
+    "affiliate_program": "",
+    "archetype": "unsolved_mystery",
+    "series": "UNSOLVED",
+    "episode": 64,
+    "voice": "en-US-ChristopherNeural",
+    "visual_variant": "videos",
+    "hook_score": 6,
+    "word_count": 91,
+    "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-11/20261115_020553_unsolved_64_the_mountainsized_black_hole_that_brea.mp4",
     "stats_fetched": false
   }
 ]
