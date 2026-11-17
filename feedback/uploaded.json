@@ -13646,6 +13646,20 @@
       "description": "Discover the real reason thunder trails lightning and how temperature changes the delay.\n\n📺 WHAT IF — Impossible scenarios, real physics.\nSubscribe for a new episode every day.\n\n#shorts #science #mindblown",
       "duration_secs": 32,
       "thumbnail": "https://i.ytimg.com/vi/Ee-129pyecs/hqdefault.jpg"
+    },
+    "retention": {
+      "awr_hook": 1.2031,
+      "rrp_hook": 0.4603,
+      "rrp_all": 0.3588,
+      "rrp_thirds": [
+        0.3023,
+        0.2411,
+        0.5272
+      ],
+      "hook_window_s": 3.0,
+      "duration_est_s": 35.4,
+      "points": 100,
+      "fetched_at": "2026-11-17T04:46:37.504425+00:00"
     }
   },
   {
@@ -13671,7 +13685,37 @@
     "hook_score": 6,
     "word_count": 91,
     "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-11/20261115_020553_unsolved_64_the_mountainsized_black_hole_that_brea.mp4",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "SIa5NgqNZ48",
+      "title": "UNSOLVED #64 | 🕳️ The Mountain‑Sized Black Hole That Breaks Physics",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-11-15T02:07:52Z",
+      "views": 1057,
+      "likes": 30,
+      "comments": 0,
+      "engagement_rate": 2.838,
+      "views_per_day": 528,
+      "tags": [
+        "astronomy",
+        "black hole",
+        "curiosity",
+        "did you know",
+        "facts",
+        "mindblown",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "space mystery",
+        "unexplained",
+        "universe"
+      ],
+      "description": "A three‑Earth‑mass black hole smaller than a house challenges everything we thought we knew about black holes. #shorts\n\n📺 UNSOLVED — One unsolved mystery, every day.\nSubscribe for a new episode every day.\n\n#shorts #science #mindblown",
+      "duration_secs": 34,
+      "thumbnail": "https://i.ytimg.com/vi/SIa5NgqNZ48/hqdefault.jpg"
+    }
   },
   {
     "id": "1z5LaSRqf7U",
@@ -13696,6 +13740,31 @@
     "hook_score": 7,
     "word_count": 99,
     "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-11/20261116_022241_unsolved_65_the_hidden_physics_that_lets_cats_defy.mp4",
+    "stats_fetched": false
+  },
+  {
+    "id": "NmknMUKCXTI",
+    "title": "UNSOLVED #66 | 🗺️ The Map That Knew Antarctica Before It Was Discovered",
+    "uploaded_at": "2026-11-17T04:46:20.059945+00:00",
+    "hook": "A 16th‑century map shows a coastline no one could have seen.",
+    "script": "A 1513 Ottoman chart, drawn by cartographer Piri Reis, depicts a jagged southern shore that matches Antarctica’s ice‑free outline, yet the continent was officially discovered centuries later. It traces back to even older sources—rumored Phoenician voyages and secret Roman surveys—each asserting they knew a frozen land. Modern analyses prove the coastline is strikingly accurate, but no surviving logs, artifacts, or climate data confirm any pre‑modern expedition ever reached those latitudes. How could a map inked before the age of exploration sketch a frozen continent that humanity had yet to witness?",
+    "topic": "The Piri Reis map's mysterious Antarctic coastline",
+    "tags": [
+      "Piri Reis",
+      "Antarctica",
+      "lost map",
+      "historical mystery",
+      "ancient navigation"
+    ],
+    "affiliate_program": "",
+    "archetype": "unsolved_mystery",
+    "series": "UNSOLVED",
+    "episode": 66,
+    "voice": "en-US-ChristopherNeural",
+    "visual_variant": "videos",
+    "hook_score": 8,
+    "word_count": 90,
+    "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-11/20261117_044441_unsolved_66_the_map_that_knew_antarctica_before_it.mp4",
     "stats_fetched": false
   }
 ]
