@@ -13715,6 +13715,20 @@
       "description": "A three‑Earth‑mass black hole smaller than a house challenges everything we thought we knew about black holes. #shorts\n\n📺 UNSOLVED — One unsolved mystery, every day.\nSubscribe for a new episode every day.\n\n#shorts #science #mindblown",
       "duration_secs": 34,
       "thumbnail": "https://i.ytimg.com/vi/SIa5NgqNZ48/hqdefault.jpg"
+    },
+    "retention": {
+      "awr_hook": 2.0024,
+      "rrp_hook": 0.5686,
+      "rrp_all": 0.6336,
+      "rrp_thirds": [
+        0.5213,
+        0.5394,
+        0.8319
+      ],
+      "hook_window_s": 3.0,
+      "duration_est_s": 39.4,
+      "points": 100,
+      "fetched_at": "2026-11-18T03:52:15.492188+00:00"
     }
   },
   {
@@ -13740,7 +13754,38 @@
     "hook_score": 7,
     "word_count": 99,
     "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-11/20261116_022241_unsolved_65_the_hidden_physics_that_lets_cats_defy.mp4",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "1z5LaSRqf7U",
+      "title": "UNSOLVED #65 | 🐱 The Hidden Physics That Lets Cats Defy Gravity!",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-11-16T02:24:33Z",
+      "views": 185,
+      "likes": 2,
+      "comments": 1,
+      "engagement_rate": 1.622,
+      "views_per_day": 92,
+      "tags": [
+        "angular momentum",
+        "cat physics",
+        "curiosity",
+        "did you know",
+        "facts",
+        "mindblown",
+        "physics",
+        "righting reflex",
+        "robotics inspiration",
+        "science",
+        "shorts",
+        "space",
+        "universe",
+        "unsolved mystery"
+      ],
+      "description": "Why do cats always land on their feet? Unravel the baffling physics and the mystery that could inspire gravity‑defying robots.\n\n📺 UNSOLVED — One unsolved mystery, every day.\nSubscribe for a new episode every day.\n\n#shorts #science #mindblown",
+      "duration_secs": 37,
+      "thumbnail": "https://i.ytimg.com/vi/1z5LaSRqf7U/hqdefault.jpg"
+    }
   },
   {
     "id": "NmknMUKCXTI",
@@ -13765,6 +13810,31 @@
     "hook_score": 8,
     "word_count": 90,
     "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-11/20261117_044441_unsolved_66_the_map_that_knew_antarctica_before_it.mp4",
+    "stats_fetched": false
+  },
+  {
+    "id": "FHL7IQ1g0Aw",
+    "title": "UNSOLVED #67 | 🧠 Why Your Dreams Disappear the Second You Wake Up",
+    "uploaded_at": "2026-11-18T03:51:51.043055+00:00",
+    "hook": "Your mind erases the night’s story the instant you open your eyes.",
+    "script": "A swirling vortex of neon clouds, the feeling of flying over a neon city, then—silence. You sit up, the scene dissolves like mist. A sudden dip in acetylcholine as we wake shuts the hippocampal gateway that holds fresh dream bits. Yet the exact switch, and why it wipes the narrative before it can be written, remains hidden. The next time you stare at the ceiling, try a quick notebook—maybe you’ll catch the ghost before it fades.",
+    "topic": "Why dreams vanish upon waking",
+    "tags": [
+      "dreams",
+      "sleep",
+      "brain",
+      "neuroscience",
+      "memory"
+    ],
+    "affiliate_program": "",
+    "archetype": "unsolved_mystery",
+    "series": "UNSOLVED",
+    "episode": 67,
+    "voice": "en-US-ChristopherNeural",
+    "visual_variant": "photos",
+    "hook_score": 8,
+    "word_count": 76,
+    "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-11/20261118_035013_unsolved_67_why_your_dreams_disappear_the_second_y.mp4",
     "stats_fetched": false
   }
 ]
