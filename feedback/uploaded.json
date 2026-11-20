@@ -13824,7 +13824,52 @@
     "hook_score": 8,
     "word_count": 90,
     "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-11/20261117_044441_unsolved_66_the_map_that_knew_antarctica_before_it.mp4",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "NmknMUKCXTI",
+      "title": "UNSOLVED #66 | 🗺️ The Map That Knew Antarctica Before It Was Discovered",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-11-17T04:46:42Z",
+      "views": 406,
+      "likes": 0,
+      "comments": 0,
+      "engagement_rate": 0.0,
+      "views_per_day": 135,
+      "tags": [
+        "Antarctica",
+        "Piri Reis",
+        "ancient navigation",
+        "curiosity",
+        "did you know",
+        "facts",
+        "historical mystery",
+        "lost map",
+        "mindblown",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "universe"
+      ],
+      "description": "A 1513 map draws Antarctica's coast—how did they know? The mystery endures.\n\n📺 UNSOLVED — One unsolved mystery, every day.\nSubscribe for a new episode every day.\n\n#shorts #science #mindblown",
+      "duration_secs": 39,
+      "thumbnail": "https://i.ytimg.com/vi/NmknMUKCXTI/hqdefault.jpg"
+    },
+    "retention": {
+      "awr_hook": 2.3959,
+      "rrp_hook": 0.5679,
+      "rrp_all": 0.6201,
+      "rrp_thirds": [
+        0.519,
+        0.525,
+        0.8082
+      ],
+      "hook_window_s": 3.0,
+      "duration_est_s": 39.0,
+      "points": 100,
+      "fetched_at": "2026-11-20T09:08:13.947772+00:00"
+    }
   },
   {
     "id": "FHL7IQ1g0Aw",
@@ -13849,7 +13894,38 @@
     "hook_score": 8,
     "word_count": 76,
     "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-11/20261118_035013_unsolved_67_why_your_dreams_disappear_the_second_y.mp4",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "FHL7IQ1g0Aw",
+      "title": "UNSOLVED #67 | 🧠 Why Your Dreams Disappear the Second You Wake Up",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-11-18T03:52:24Z",
+      "views": 33,
+      "likes": 0,
+      "comments": 0,
+      "engagement_rate": 0.0,
+      "views_per_day": 16,
+      "tags": [
+        "brain",
+        "curiosity",
+        "did you know",
+        "dreams",
+        "facts",
+        "memory",
+        "mindblown",
+        "neuroscience",
+        "physics",
+        "science",
+        "shorts",
+        "sleep",
+        "space",
+        "universe"
+      ],
+      "description": "The brain's secret switch erases dreams in an instant—discover the mystery and a tip to remember them.\n\n📺 UNSOLVED — One unsolved mystery, every day.\nSubscribe for a new episode every day.\n\n#shorts #science #mindblown",
+      "duration_secs": 30,
+      "thumbnail": "https://i.ytimg.com/vi/FHL7IQ1g0Aw/hqdefault.jpg"
+    }
   },
   {
     "id": "1VvF5WRSEho",
@@ -13874,6 +13950,31 @@
     "hook_score": 6,
     "word_count": 86,
     "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-11/20261119_034821_how_it_works_32_the_shrimp_that_fires_a_sunhot_bub.mp4",
+    "stats_fetched": false
+  },
+  {
+    "id": "ASPZEH0EWgQ",
+    "title": "UNSOLVED #68 | 🚫 The Untouchable Secret of Magnets 🔍",
+    "uploaded_at": "2026-11-20T09:07:54.107063+00:00",
+    "hook": "Two magnets push apart—no matter how hard you try, they never truly touch.",
+    "script": "Two magnets push apart—no matter how hard you try, they never truly touch. As they close, invisible force lines flare, spiraling north to south, and like‑poles shout repulsion, holding a nanoscopic gap between the metal. Those field lines are not just a model; they are the manifestation of countless electron spins refusing to align, a quantum handshake that never completes. Even maglev trains glide on this silent barrier, hovering miles above rails. Yet physics can map the field, but it cannot explain why that infinitesimal gap persists, why the universe guards that space.",
+    "topic": "Why two magnets can never touch",
+    "tags": [
+      "magnetism",
+      "physics mystery",
+      "maglev",
+      "magnetic fields",
+      "unsolved science"
+    ],
+    "affiliate_program": "",
+    "archetype": "unsolved_mystery",
+    "series": "UNSOLVED",
+    "episode": 68,
+    "voice": "en-US-ChristopherNeural",
+    "visual_variant": "photos",
+    "hook_score": 9,
+    "word_count": 93,
+    "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-11/20261120_090607_unsolved_68_the_untouchable_secret_of_magnets.mp4",
     "stats_fetched": false
   }
 ]
