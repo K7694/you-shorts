@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-20T09:06:01.201355",
+  "updated": "2026-11-21T08:43:33.914702",
   "performers": [
     {
       "id": "IuMAB2-l_lU",
@@ -35,6 +35,17 @@
       "performance_score": 600.5020000000001
     },
     {
+      "id": "1VvF5WRSEho",
+      "title": "HOW IT WORKS #32 | 💥 The Shrimp That Fires a Sun‑Hot Bubble!",
+      "hook": "A shrimp can fire a bubble that burns hotter than the surface of the sun.",
+      "script": "When the pistol shrimp snaps its claw, a rapid water jet creates a vapor cavity that collapses in microseconds, forming a shock wave that reaches 210 dB. The collapse super‑heats the gas to 5,000 °C, ionizing it and emitting a flash of blue light—a phenomenon called sonoluminescence. The shock knocks the prey unconscious, and the flash blinds them, leaving no chance to flee. In seconds, the shrimp's tiny claw becomes a weapon of sound and fire, turning a simple pond into a battlefield of invisible blasts.",
+      "topic": "The pistol shrimp's bubble‑shock and flash",
+      "views": 1190,
+      "engagement_rate": 0.84,
+      "views_per_day": 595,
+      "performance_score": 599.9979999999999
+    },
+    {
       "id": "HZfKVk5lx6w",
       "title": "HOW IT WORKS #20 | 🔭 Gold Mirror Reveals the Universe’s First Light!",
       "hook": "A 20‑kilogram gold mirror peers back 13 billion years.",
@@ -44,17 +55,6 @@
       "engagement_rate": 1.382,
       "views_per_day": 579,
       "performance_score": 587.0017799999999
-    },
-    {
-      "id": "NTnrH-edhAU",
-      "title": "🔢 The Collatz Enigma",
-      "hook": "Multiply by 3 and add 1",
-      "script": "Multiply by 3 and add 1. Numbers collapse. Patterns emerge. But what happens next? The Collatz Conjecture remains unsolved. Multiply by 3 and add 1.",
-      "topic": "The Collatz Conjecture Mystery",
-      "views": 1137,
-      "engagement_rate": 0.792,
-      "views_per_day": 568,
-      "performance_score": 572.49856
     }
   ]
 }
