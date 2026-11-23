@@ -1,5 +1,31 @@
 {
-  "checked": "2026-11-22T08:43:29.589629",
+  "checked": "2026-11-23T09:45:06.907559",
   "threshold": 5000,
-  "alerts": []
+  "alerts": [
+    {
+      "id": "9WCbrriN8sU",
+      "title": "Airplanes That Run on... Algae? #science",
+      "channel": "SciShow",
+      "channel_id": "UCZYTClx2T1of7BRZ86-8fow",
+      "published": "2026-11-23T00:00:16Z",
+      "views": 26431,
+      "likes": 812,
+      "comments": 32,
+      "engagement_rate": 3.193,
+      "views_per_day": 26431,
+      "tags": [
+        "SciShow",
+        "science",
+        "Hank",
+        "Green",
+        "education",
+        "learn",
+        "complexly",
+        "hank green"
+      ],
+      "description": "Algae can do a lot, but soon we might be able to use algae to produce jet fuel.\n\nSavannah Geary (they/them): Host\nAngela Reed: Writer\nKeren Turton: Fact Checker\nMadelyn Leembruggen: Script Editor\nMadison Lynn: Videographer\nSabrina Mata: Script Supervisor\nSavannah Geary: Editor\nSabrina Mata: Associat",
+      "duration_secs": 32,
+      "thumbnail": "https://i.ytimg.com/vi/9WCbrriN8sU/hqdefault.jpg"
+    }
+  ]
 }

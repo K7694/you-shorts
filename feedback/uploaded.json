@@ -14034,7 +14034,52 @@
     "hook_score": 9,
     "word_count": 93,
     "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-11/20261120_090607_unsolved_68_the_untouchable_secret_of_magnets.mp4",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "ASPZEH0EWgQ",
+      "title": "UNSOLVED #68 | 🚫 The Untouchable Secret of Magnets 🔍",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-11-20T09:08:13Z",
+      "views": 162,
+      "likes": 0,
+      "comments": 0,
+      "engagement_rate": 0.0,
+      "views_per_day": 54,
+      "tags": [
+        "curiosity",
+        "did you know",
+        "facts",
+        "maglev",
+        "magnetic fields",
+        "magnetism",
+        "mindblown",
+        "physics",
+        "physics mystery",
+        "science",
+        "shorts",
+        "space",
+        "universe",
+        "unsolved science"
+      ],
+      "description": "Two magnets never meet—discover the invisible barrier that keeps them apart and the mystery that still haunts physics.\n\n📺 UNSOLVED — One unsolved mystery, every day.\nSubscribe for a new episode every day.\n\n#shorts #science #mindblown",
+      "duration_secs": 39,
+      "thumbnail": "https://i.ytimg.com/vi/ASPZEH0EWgQ/hqdefault.jpg"
+    },
+    "retention": {
+      "awr_hook": 1.2523,
+      "rrp_hook": 0.5048,
+      "rrp_all": 0.629,
+      "rrp_thirds": [
+        0.4517,
+        0.5177,
+        0.9078
+      ],
+      "hook_window_s": 3.0,
+      "duration_est_s": 40.2,
+      "points": 100,
+      "fetched_at": "2026-11-23T09:45:30.663859+00:00"
+    }
   },
   {
     "id": "LP4m3guqahM",
@@ -14059,7 +14104,38 @@
     "hook_score": 6,
     "word_count": 90,
     "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-11/20261121_032518_unsolved_69_photon_punches_metal_the_quantum_myste.mp4",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "LP4m3guqahM",
+      "title": "UNSOLVED #69 | 🔬 Photon Punches Metal – The Quantum Mystery 🕳️",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-11-21T03:27:27Z",
+      "views": 295,
+      "likes": 0,
+      "comments": 0,
+      "engagement_rate": 0.0,
+      "views_per_day": 148,
+      "tags": [
+        "curiosity",
+        "did you know",
+        "facts",
+        "future tech",
+        "metal foil",
+        "mindblown",
+        "photon",
+        "physics",
+        "quantum tunneling",
+        "science",
+        "shorts",
+        "space",
+        "universe",
+        "unsolved physics"
+      ],
+      "description": "A single photon tunnels through metal. Why does it happen and what could it mean for future tech?\n\n📺 UNSOLVED — One unsolved mystery, every day.\nSubscribe for a new episode every day.\n\n#shorts #science #mindblown",
+      "duration_secs": 36,
+      "thumbnail": "https://i.ytimg.com/vi/LP4m3guqahM/hqdefault.jpg"
+    }
   },
   {
     "id": "cRJNPQ4h4ss",
