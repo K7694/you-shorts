@@ -14135,6 +14135,20 @@
       "description": "A single photon tunnels through metal. Why does it happen and what could it mean for future tech?\n\n📺 UNSOLVED — One unsolved mystery, every day.\nSubscribe for a new episode every day.\n\n#shorts #science #mindblown",
       "duration_secs": 36,
       "thumbnail": "https://i.ytimg.com/vi/LP4m3guqahM/hqdefault.jpg"
+    },
+    "retention": {
+      "awr_hook": 1.2404,
+      "rrp_hook": 0.4909,
+      "rrp_all": 0.5362,
+      "rrp_thirds": [
+        0.4015,
+        0.4189,
+        0.7772
+      ],
+      "hook_window_s": 3.0,
+      "duration_est_s": 39.0,
+      "points": 100,
+      "fetched_at": "2026-11-24T06:22:35.545377+00:00"
     }
   },
   {
@@ -14160,7 +14174,38 @@
     "hook_score": 9,
     "word_count": 83,
     "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-11/20261122_023640_unsolved_70_the_oceans_unsolved_50db_roar_what_liv.mp4",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "cRJNPQ4h4ss",
+      "title": "UNSOLVED #70 | 🔊 The Ocean's Unsolved 50‑dB Roar – What Lives Below?",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-11-22T02:38:32Z",
+      "views": 1079,
+      "likes": 11,
+      "comments": 0,
+      "engagement_rate": 1.019,
+      "views_per_day": 540,
+      "tags": [
+        "Bloop",
+        "curiosity",
+        "deep sea",
+        "did you know",
+        "facts",
+        "mindblown",
+        "mystery",
+        "ocean sound",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "universe",
+        "unsolved"
+      ],
+      "description": "A mysterious 50‑decibel sound echoes from the deep sea. Scientists still can't explain its source. 🌊\n\n📺 UNSOLVED — One unsolved mystery, every day.\nSubscribe for a new episode every day.\n\n#shorts #science #mindblown",
+      "duration_secs": 34,
+      "thumbnail": "https://i.ytimg.com/vi/cRJNPQ4h4ss/hqdefault.jpg"
+    }
   },
   {
     "id": "AbUqUX9kF88",
@@ -14185,6 +14230,31 @@
     "hook_score": 6,
     "word_count": 103,
     "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-11/20261123_030221_how_it_works_33_the_moons_dark_secret_nasa_cant_se.mp4",
+    "stats_fetched": false
+  },
+  {
+    "id": "qLn5ZSs-tBc",
+    "title": "UNSOLVED #71 | 🚀 Algae‑Powered Planes? The Green Flight Mystery 🌿",
+    "uploaded_at": "2026-11-24T06:22:18.769231+00:00",
+    "hook": "Imagine a jet soaring on nothing but pond water.",
+    "script": "Imagine a jet soaring on nothing but pond water. Inside a glass tower, algae turn sunlight into hydrogen‑rich bio‑fuel, but no commercial plane has ever lifted off with it; prototypes spark, lift a few kilograms, then stall, and scientists can’t pinpoint whether conversion loss, storage stability, or engine integration is the fatal flaw. The world watches drones humming above algae farms, while the question lingers: can green life truly replace jet fuel, or is the sky forever out of reach?",
+    "topic": "Algae-powered aircraft mystery",
+    "tags": [
+      "algae",
+      "green aviation",
+      "biofuel",
+      "unsolved mystery",
+      "future tech"
+    ],
+    "affiliate_program": "",
+    "archetype": "unsolved_mystery",
+    "series": "UNSOLVED",
+    "episode": 71,
+    "voice": "en-US-ChristopherNeural",
+    "visual_variant": "photos",
+    "hook_score": 6,
+    "word_count": 80,
+    "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-11/20261124_062046_unsolved_71_algaepowered_planes_the_green_flight_m.mp4",
     "stats_fetched": false
   }
 ]
