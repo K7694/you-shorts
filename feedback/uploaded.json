@@ -14205,6 +14205,20 @@
       "description": "A mysterious 50‑decibel sound echoes from the deep sea. Scientists still can't explain its source. 🌊\n\n📺 UNSOLVED — One unsolved mystery, every day.\nSubscribe for a new episode every day.\n\n#shorts #science #mindblown",
       "duration_secs": 34,
       "thumbnail": "https://i.ytimg.com/vi/cRJNPQ4h4ss/hqdefault.jpg"
+    },
+    "retention": {
+      "awr_hook": 1.6216,
+      "rrp_hook": 0.5814,
+      "rrp_all": 0.636,
+      "rrp_thirds": [
+        0.5434,
+        0.5556,
+        0.802
+      ],
+      "hook_window_s": 3.0,
+      "duration_est_s": 36.2,
+      "points": 100,
+      "fetched_at": "2026-11-25T05:03:07.849526+00:00"
     }
   },
   {
@@ -14230,7 +14244,38 @@
     "hook_score": 6,
     "word_count": 103,
     "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-11/20261123_030221_how_it_works_33_the_moons_dark_secret_nasa_cant_se.mp4",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "AbUqUX9kF88",
+      "title": "HOW IT WORKS #33 | 🌑 The Moon’s Dark Secret NASA Can’t See!",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-11-23T03:05:04Z",
+      "views": 3,
+      "likes": 0,
+      "comments": 0,
+      "engagement_rate": 0.0,
+      "views_per_day": 2,
+      "tags": [
+        "Moon",
+        "NASA",
+        "South Pole Aitken",
+        "Space Exploration",
+        "Water Ice",
+        "curiosity",
+        "did you know",
+        "facts",
+        "mindblown",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "universe"
+      ],
+      "description": "Discover the massive, permanently shadowed scar on the Moon that may hide water ice for future bases.\n\n📺 HOW IT WORKS — The hidden mechanics of everyday things.\nSubscribe for a new episode every day.\n\n#shorts #science #mindblown",
+      "duration_secs": 36,
+      "thumbnail": "https://i.ytimg.com/vi/AbUqUX9kF88/hqdefault.jpg"
+    }
   },
   {
     "id": "qLn5ZSs-tBc",
@@ -14255,6 +14300,31 @@
     "hook_score": 6,
     "word_count": 80,
     "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-11/20261124_062046_unsolved_71_algaepowered_planes_the_green_flight_m.mp4",
+    "stats_fetched": false
+  },
+  {
+    "id": "-zOccBGioYY",
+    "title": "HOW IT WORKS #34 | 🔮 Taste the Color Blue? The Secret Brain Wiring Revealed",
+    "uploaded_at": "2026-11-25T05:02:48.841332+00:00",
+    "hook": "Blue tastes like blueberry to her, red burns like cinnamon.",
+    "script": "Blue tastes like blueberry to her, red burns like cinnamon. That's synesthesia—when your brain cross‑wires the senses. In the visual cortex, color signals spill into the gustatory area, so a violet sunrise can taste sweet. Take a pianist who hears notes as chocolate shades, or a chef who smells music as citrus. The crossover happens because neurons share overlapping pathways during development, and for about 4% of people those shortcuts stay open. Imagine a world where every song is a flavor, every painting a snack—your mind is just one wiring away.",
+    "topic": "Why some people can taste colors – synesthesia explained",
+    "tags": [
+      "synesthesia",
+      "brain",
+      "senses",
+      "neuroscience",
+      "psychology"
+    ],
+    "affiliate_program": "",
+    "archetype": "how_does_it_work",
+    "series": "HOW IT WORKS",
+    "episode": 34,
+    "voice": "en-US-BrianMultilingualNeural",
+    "visual_variant": "videos",
+    "hook_score": 6,
+    "word_count": 91,
+    "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-11/20261125_050040_how_it_works_34_taste_the_color_blue_the_secret_br.mp4",
     "stats_fetched": false
   }
 ]
