@@ -14300,7 +14300,38 @@
     "hook_score": 6,
     "word_count": 80,
     "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-11/20261124_062046_unsolved_71_algaepowered_planes_the_green_flight_m.mp4",
-    "stats_fetched": false
+    "stats_fetched": true,
+    "stats": {
+      "id": "qLn5ZSs-tBc",
+      "title": "UNSOLVED #71 | \ud83d\ude80 Algae\u2011Powered Planes? The Green Flight Mystery \ud83c\udf3f",
+      "channel": "KnowMore-Dailyday",
+      "channel_id": "UCHtbCqWS1GArvFdRQr4vifA",
+      "published": "2026-11-24T06:22:59Z",
+      "views": 433,
+      "likes": 2,
+      "comments": 0,
+      "engagement_rate": 0.462,
+      "views_per_day": 216,
+      "tags": [
+        "algae",
+        "biofuel",
+        "curiosity",
+        "did you know",
+        "facts",
+        "future tech",
+        "green aviation",
+        "mindblown",
+        "physics",
+        "science",
+        "shorts",
+        "space",
+        "universe",
+        "unsolved mystery"
+      ],
+      "description": "Could pond algae ever power a commercial jet? The unsolved science behind green aviation.\n\n\ud83d\udcfa UNSOLVED \u2014 One unsolved mystery, every day.\nSubscribe for a new episode every day.\n\n#shorts #science #mindblown",
+      "duration_secs": 33,
+      "thumbnail": "https://i.ytimg.com/vi/qLn5ZSs-tBc/hqdefault.jpg"
+    }
   },
   {
     "id": "-zOccBGioYY",
@@ -14350,6 +14381,31 @@
     "hook_score": 8,
     "word_count": 96,
     "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-11/20261126_041937_unsolved_72_the_dj_vu_paradox_why_our_minds_timetr.mp4",
+    "stats_fetched": false
+  },
+  {
+    "id": "nK1xDzWqHFI",
+    "title": "UNSOLVED #73 | One Drop That Can Shut Down a Nuclear Reactor! \ud83d\ude31\ud83d\udca7",
+    "uploaded_at": "2026-11-27T04:31:26.815546+00:00",
+    "hook": "A single drop of water can halt a nuclear power plant in seconds.",
+    "script": "A lone droplet slides from a cracked pipe into the heart of a glowing reactor core, and the neutron storm sputters to silence. Engineers flood the core with boron\u2011rich water because boron\u2019s atoms gobble free neutrons, snuffing the chain reaction like a fire extinguisher on a blaze. Just a few milliliters of the borated water can shut the reactor down, but the exact amount and timing are sealed behind strict safety protocols. Tiny, but deadly enough to power\u2011down a reactor in seconds.",
+    "topic": "A single drop of water can shut down a nuclear reactor",
+    "tags": [
+      "nuclear reactor",
+      "boron neutron capture",
+      "unsolved science",
+      "energy safety",
+      "atomic power"
+    ],
+    "affiliate_program": "",
+    "archetype": "unsolved_mystery",
+    "series": "UNSOLVED",
+    "episode": 73,
+    "voice": "en-US-ChristopherNeural",
+    "visual_variant": "videos",
+    "hook_score": 6,
+    "word_count": 82,
+    "render_url": "https://github.com/K7694/you-shorts/releases/download/renders-2026-11/20261127_042948_unsolved_73_one_drop_that_can_shut_down_a_nuclear_.mp4",
     "stats_fetched": false
   }
 ]
